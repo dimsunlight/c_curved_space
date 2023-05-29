@@ -1,0 +1,3 @@
+/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/rebuild_cache.dir
+/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/edit_cache.dir
+/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/simple_mesh.dir
