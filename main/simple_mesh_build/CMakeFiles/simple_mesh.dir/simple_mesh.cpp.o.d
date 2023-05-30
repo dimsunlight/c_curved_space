@@ -1,9 +1,9 @@
 CMakeFiles/simple_mesh.dir/simple_mesh.cpp.o: \
  /home/toler/projects/CGAL_curvature/main/simple_mesh/simple_mesh.cpp \
- /usr/include/stdc-predef.h /usr/include/CGAL/Simple_cartesian.h \
- /usr/include/CGAL/Cartesian/Cartesian_base.h /usr/include/CGAL/basic.h \
- /usr/include/CGAL/config.h /usr/include/boost/config.hpp \
- /usr/include/boost/config/user.hpp \
+ /usr/include/stdc-predef.h \
+ /usr/include/CGAL/Surface_mesh_default_triangulation_3.h \
+ /usr/include/CGAL/license/Surface_mesher.h /usr/include/CGAL/config.h \
+ /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
  /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/9/cstddef \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -312,8 +312,11 @@ CMakeFiles/simple_mesh.dir/simple_mesh.cpp.o: \
  /usr/include/c++/9/bits/unordered_map.h /usr/include/c++/9/functional \
  /usr/include/c++/9/bits/refwrap.h /usr/include/c++/9/bits/std_function.h \
  /usr/include/CGAL/license/lgpl.h /usr/include/CGAL/license.h \
- /usr/include/c++/9/iostream /usr/include/CGAL/result_of.h \
  /usr/include/CGAL/disable_warnings.h \
+ /usr/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
+ /usr/include/CGAL/Simple_cartesian.h \
+ /usr/include/CGAL/Cartesian/Cartesian_base.h /usr/include/CGAL/basic.h \
+ /usr/include/c++/9/iostream /usr/include/CGAL/result_of.h \
  /usr/include/boost/utility/result_of.hpp \
  /usr/include/boost/preprocessor/cat.hpp \
  /usr/include/boost/preprocessor/config/config.hpp \
@@ -1364,27 +1367,194 @@ CMakeFiles/simple_mesh.dir/simple_mesh.cpp.o: \
  /usr/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
  /usr/include/CGAL/Kernel/Type_equality_wrapper.h \
  /usr/include/CGAL/Kernel/interface_macros.h \
- /usr/include/CGAL/Surface_mesh.h \
- /usr/include/CGAL/license/Surface_mesh.h \
- /usr/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
- /usr/include/CGAL/Surface_mesh/Surface_mesh.h \
- /usr/include/CGAL/property_map.h /usr/include/CGAL/value_type_traits.h \
- /usr/include/boost/property_map/property_map.hpp \
- /usr/include/boost/concept_archetype.hpp \
- /usr/include/boost/property_map/vector_property_map.hpp \
- /usr/include/CGAL/tuple.h /usr/include/CGAL/Cartesian_converter_fwd.h \
- /usr/include/CGAL/Iterator_range.h /usr/include/boost/foreach.hpp \
- /usr/include/boost/foreach_fwd.hpp /usr/include/CGAL/circulator.h \
- /usr/include/CGAL/circulator_bases.h \
- /usr/include/CGAL/Surface_mesh/Properties.h \
- /usr/include/CGAL/boost/graph/graph_traits_Surface_mesh.h \
- /usr/include/CGAL/boost/graph/Named_function_parameters.h \
- /usr/include/CGAL/boost/graph/parameters_interface.h \
- /usr/include/boost/graph/graph_traits.hpp \
- /usr/include/boost/pending/property.hpp \
- /usr/include/boost/type_traits.hpp \
+ /usr/include/CGAL/Filtered_kernel.h \
+ /usr/include/CGAL/Filtered_kernel_fwd.h \
+ /usr/include/CGAL/Filtered_predicate.h \
+ /usr/include/CGAL/Cartesian_converter.h \
+ /usr/include/CGAL/Cartesian_converter_fwd.h \
+ /usr/include/CGAL/NT_converter.h /usr/include/CGAL/Enum_converter.h \
+ /usr/include/CGAL/Kernel/Type_mapper.h /usr/include/boost/mpl/remove.hpp \
+ /usr/include/CGAL/Exact_kernel_selector.h \
+ /usr/include/CGAL/Simple_homogeneous.h \
+ /usr/include/CGAL/Homogeneous/Homogeneous_base.h \
+ /usr/include/CGAL/Homogeneous/Aff_transformationH2.h \
+ /usr/include/CGAL/Homogeneous/DirectionH2.h \
+ /usr/include/CGAL/Homogeneous/predicates_on_directionsH2.h \
+ /usr/include/CGAL/Homogeneous/PointH2.h \
+ /usr/include/CGAL/Homogeneous/VectorH2.h \
+ /usr/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
+ /usr/include/CGAL/Quotient.h \
+ /usr/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
+ /usr/include/CGAL/Homogeneous/Iso_rectangleH2.h \
+ /usr/include/CGAL/Homogeneous/LineH2.h \
+ /usr/include/CGAL/Homogeneous/Weighted_point_2.h \
+ /usr/include/CGAL/Homogeneous/Data_accessorH2.h \
+ /usr/include/CGAL/Homogeneous/ConicHPA2.h \
+ /usr/include/CGAL/Homogeneous/Aff_transformationH3.h \
+ /usr/include/CGAL/Homogeneous/DirectionH3.h \
+ /usr/include/CGAL/Homogeneous/Iso_cuboidH3.h \
+ /usr/include/CGAL/Homogeneous/PlaneH3.h \
+ /usr/include/CGAL/Homogeneous/PointH3.h \
+ /usr/include/CGAL/Homogeneous/Weighted_point_3.h \
+ /usr/include/CGAL/Homogeneous/RayH3.h \
+ /usr/include/CGAL/Homogeneous/SphereH3.h \
+ /usr/include/CGAL/Homogeneous/predicates_on_pointsH3.h \
+ /usr/include/CGAL/Homogeneous/VectorH3.h \
+ /usr/include/CGAL/Homogeneous/basic_constructionsH2.h \
+ /usr/include/CGAL/Homogeneous/distance_predicatesH2.h \
+ /usr/include/CGAL/Homogeneous/basic_constructionsH3.h \
+ /usr/include/CGAL/Homogeneous/distance_predicatesH3.h \
+ /usr/include/CGAL/Homogeneous/function_objects.h \
+ /usr/include/CGAL/internal/Exact_type_selector.h \
+ /usr/include/CGAL/MP_Float.h /usr/include/CGAL/Sqrt_extension.h \
+ /usr/include/CGAL/Sqrt_extension/Sqrt_extension_type.h \
+ /usr/include/CGAL/Interval_arithmetic.h \
+ /usr/include/CGAL/Sqrt_extension_fwd.h \
+ /usr/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h \
+ /usr/include/CGAL/Sqrt_extension/Real_embeddable_traits.h \
+ /usr/include/CGAL/Sqrt_extension/Fraction_traits.h \
+ /usr/include/CGAL/Sqrt_extension/Coercion_traits.h \
+ /usr/include/CGAL/Sqrt_extension/Modular_traits.h \
+ /usr/include/CGAL/Residue.h \
+ /usr/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
+ /usr/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
+ /usr/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
+ /usr/include/CGAL/Chinese_remainder_traits.h \
+ /usr/include/CGAL/extended_euclidean_algorithm.h \
+ /usr/include/CGAL/Sqrt_extension/io.h \
+ /usr/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
+ /usr/include/CGAL/Get_arithmetic_kernel.h \
+ /usr/include/CGAL/Sqrt_extension/convert_to_bfi.h \
+ /usr/include/CGAL/convert_to_bfi.h /usr/include/CGAL/Cache.h \
+ /usr/include/CGAL/function_objects.h \
+ /usr/include/CGAL/Sqrt_extension/Wang_traits.h \
+ /usr/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
+ /usr/include/CGAL/MP_Float_impl.h \
+ /usr/include/CGAL/MP_Float_arithmetic_kernel.h \
+ /usr/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
+ /usr/include/CGAL/Lazy_exact_nt.h /usr/include/CGAL/Handle.h \
+ /usr/include/CGAL/Lazy.h /usr/include/CGAL/min_max_n.h \
+ /usr/include/CGAL/Default.h /usr/include/CGAL/is_iterator.h \
+ /usr/include/CGAL/transforming_iterator.h /usr/include/CGAL/boost_mp.h \
+ /usr/include/boost/multiprecision/number.hpp \
+ /usr/include/boost/mpl/max.hpp \
+ /usr/include/boost/type_traits/is_complex.hpp \
+ /usr/include/boost/multiprecision/detail/precision.hpp \
+ /usr/include/boost/multiprecision/traits/is_variable_precision.hpp \
+ /usr/include/boost/multiprecision/detail/number_base.hpp \
+ /usr/include/boost/multiprecision/detail/digits.hpp \
+ /usr/include/boost/multiprecision/detail/generic_interconvert.hpp \
+ /usr/include/boost/multiprecision/detail/default_ops.hpp \
+ /usr/include/boost/math/special_functions/hypot.hpp \
+ /usr/include/boost/multiprecision/detail/functions/constants.hpp \
+ /usr/include/boost/multiprecision/detail/functions/pow.hpp \
+ /usr/include/boost/multiprecision/detail/functions/trig.hpp \
+ /usr/include/boost/multiprecision/detail/no_et_ops.hpp \
+ /usr/include/boost/multiprecision/detail/et_ops.hpp \
+ /usr/include/boost/multiprecision/detail/min_max.hpp \
+ /usr/include/boost/multiprecision/traits/is_backend.hpp \
+ /usr/include/boost/multiprecision/detail/number_compare.hpp \
+ /usr/include/boost/multiprecision/traits/is_restricted_conversion.hpp \
+ /usr/include/boost/multiprecision/traits/explicit_conversion.hpp \
+ /usr/include/boost/multiprecision/detail/ublas_interop.hpp \
  /usr/include/boost/type_traits/common_type.hpp \
  /usr/include/boost/type_traits/detail/mp_defer.hpp \
+ /usr/include/boost/multiprecision/cpp_int.hpp \
+ /usr/include/boost/multiprecision/detail/integer_ops.hpp \
+ /usr/include/boost/multiprecision/detail/rebind.hpp \
+ /usr/include/boost/core/empty_value.hpp \
+ /usr/include/boost/multiprecision/cpp_int/cpp_int_config.hpp \
+ /usr/include/boost/multiprecision/rational_adaptor.hpp \
+ /usr/include/boost/rational.hpp \
+ /usr/include/boost/integer/common_factor_rt.hpp \
+ /usr/include/boost/multiprecision/traits/is_byte_container.hpp \
+ /usr/include/boost/integer/static_min_max.hpp \
+ /usr/include/boost/type_traits/make_signed.hpp \
+ /usr/include/boost/multiprecision/cpp_int/checked.hpp \
+ /usr/include/boost/multiprecision/cpp_int/value_pack.hpp \
+ /usr/include/boost/multiprecision/cpp_int/comparison.hpp \
+ /usr/include/boost/multiprecision/cpp_int/add.hpp \
+ /usr/include/boost/multiprecision/cpp_int/multiply.hpp \
+ /usr/include/boost/multiprecision/cpp_int/divide.hpp \
+ /usr/include/boost/multiprecision/cpp_int/bitwise.hpp \
+ /usr/include/boost/multiprecision/cpp_int/misc.hpp \
+ /usr/include/boost/multiprecision/detail/bitscan.hpp \
+ /usr/include/boost/multiprecision/cpp_int/limits.hpp \
+ /usr/include/boost/multiprecision/cpp_int/literals.hpp \
+ /usr/include/boost/multiprecision/cpp_int/serialize.hpp \
+ /usr/include/boost/multiprecision/cpp_int/import_export.hpp \
+ /usr/include/boost/multiprecision/gmp.hpp \
+ /usr/include/boost/multiprecision/debug_adaptor.hpp \
+ /usr/include/boost/multiprecision/traits/extract_exponent_type.hpp \
+ /usr/include/boost/multiprecision/detail/big_lanczos.hpp \
+ /usr/include/boost/math/bindings/detail/big_lanczos.hpp \
+ /usr/include/boost/math/special_functions/lanczos.hpp \
+ /usr/include/boost/math/tools/big_constant.hpp \
+ /usr/include/boost/math/special_functions/detail/lanczos_sse2.hpp \
+ /usr/include/boost/math/special_functions/asinh.hpp \
+ /usr/include/boost/math/special_functions/sqrt1pm1.hpp \
+ /usr/include/boost/math/special_functions/log1p.hpp \
+ /usr/include/boost/math/tools/series.hpp \
+ /usr/include/boost/math/special_functions/expm1.hpp \
+ /usr/include/boost/math/constants/constants.hpp \
+ /usr/include/boost/math/tools/convert_from_string.hpp \
+ /usr/include/boost/math/constants/calculate_constants.hpp \
+ /usr/include/boost/math/special_functions/acosh.hpp \
+ /usr/include/boost/math/special_functions/atanh.hpp \
+ /usr/include/boost/math/special_functions/gamma.hpp \
+ /usr/include/boost/math/tools/fraction.hpp \
+ /usr/include/boost/math/tools/complex.hpp \
+ /usr/include/boost/math/special_functions/powm1.hpp \
+ /usr/include/boost/math/special_functions/detail/igamma_large.hpp \
+ /usr/include/boost/math/special_functions/detail/unchecked_factorial.hpp \
+ /usr/include/boost/math/special_functions/detail/lgamma_small.hpp \
+ /usr/include/boost/math/special_functions/bernoulli.hpp \
+ /usr/include/boost/math/special_functions/detail/unchecked_bernoulli.hpp \
+ /usr/include/boost/math/special_functions/detail/bernoulli_details.hpp \
+ /usr/include/boost/detail/lightweight_mutex.hpp \
+ /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
+ /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
+ /usr/include/boost/math/tools/atomic.hpp \
+ /usr/include/boost/math/tools/toms748_solve.hpp \
+ /usr/include/boost/math/special_functions/zeta.hpp \
+ /usr/include/boost/math/special_functions/factorials.hpp \
+ /usr/include/boost/math/special_functions/sin_pi.hpp \
+ /usr/include/boost/math/special_functions/detail/igamma_inverse.hpp \
+ /usr/include/boost/math/tools/tuple.hpp \
+ /usr/include/boost/math/tools/roots.hpp \
+ /usr/include/boost/math/special_functions/detail/gamma_inva.hpp \
+ /usr/include/boost/math/special_functions/erf.hpp \
+ /usr/include/boost/math/special_functions/detail/erf_inv.hpp \
+ /usr/include/x86_64-linux-gnu/gmp.h /usr/include/mpfr.h \
+ /usr/include/CGAL/BOOST_MP_arithmetic_kernel.h /usr/include/CGAL/Gmpz.h \
+ /usr/include/CGAL/Gmp_coercion_traits.h \
+ /usr/include/CGAL/GMP/Gmpz_type.h /usr/include/CGAL/gmp.h \
+ /usr/include/CGAL/GMP/Gmpzf_type.h /usr/include/CGAL/GMP/Gmpfr_type.h \
+ /usr/include/CGAL/ipower.h /usr/include/CGAL/GMP/Gmpfr_type_static.h \
+ /usr/include/CGAL/GMP/Gmpq_type.h /usr/include/CGAL/Gmpq.h \
+ /usr/include/CGAL/Gmpzf.h /usr/include/CGAL/GMP_arithmetic_kernel.h \
+ /usr/include/CGAL/Mpzf.h /usr/include/CGAL/Homogeneous_converter.h \
+ /usr/include/CGAL/internal/Static_filters/Static_filters.h \
+ /usr/include/CGAL/internal/Static_filters/tools.h \
+ /usr/include/CGAL/internal/Static_filters/Orientation_2.h \
+ /usr/include/CGAL/internal/Static_filters/Static_filter_error.h \
+ /usr/include/CGAL/internal/Static_filters/Orientation_3.h \
+ /usr/include/CGAL/internal/Static_filters/Collinear_3.h \
+ /usr/include/CGAL/internal/Static_filters/Equal_3.h \
+ /usr/include/CGAL/internal/Static_filters/Equal_2.h \
+ /usr/include/CGAL/internal/Static_filters/Compare_x_2.h \
+ /usr/include/CGAL/internal/Static_filters/Compare_y_2.h \
+ /usr/include/CGAL/internal/Static_filters/Is_degenerate_3.h \
+ /usr/include/CGAL/internal/Static_filters/Angle_3.h \
+ /usr/include/CGAL/internal/Static_filters/Do_intersect_3.h \
+ /usr/include/CGAL/internal/Static_filters/Do_intersect_2.h \
+ /usr/include/CGAL/internal/Static_filters/Compare_y_at_x_2.h \
+ /usr/include/CGAL/internal/Static_filters/Side_of_oriented_circle_2.h \
+ /usr/include/CGAL/internal/Static_filters/Side_of_oriented_sphere_3.h \
+ /usr/include/CGAL/internal/Static_filters/Compare_squared_radius_3.h \
+ /usr/include/CGAL/internal/Static_filters/Compare_weighted_squared_radius_3.h \
+ /usr/include/CGAL/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h \
+ /usr/include/boost/type_traits.hpp \
  /usr/include/boost/type_traits/extent.hpp \
  /usr/include/boost/type_traits/floating_point_promotion.hpp \
  /usr/include/boost/type_traits/has_bit_and.hpp \
@@ -1424,7 +1594,6 @@ CMakeFiles/simple_mesh.dir/simple_mesh.cpp.o: \
  /usr/include/boost/type_traits/has_unary_minus.hpp \
  /usr/include/boost/type_traits/has_unary_plus.hpp \
  /usr/include/boost/type_traits/has_virtual_destructor.hpp \
- /usr/include/boost/type_traits/is_complex.hpp \
  /usr/include/boost/type_traits/is_compound.hpp \
  /usr/include/boost/type_traits/is_fundamental.hpp \
  /usr/include/boost/type_traits/is_copy_assignable.hpp \
@@ -1437,41 +1606,654 @@ CMakeFiles/simple_mesh.dir/simple_mesh.cpp.o: \
  /usr/include/boost/type_traits/is_polymorphic.hpp \
  /usr/include/boost/type_traits/is_union.hpp \
  /usr/include/boost/type_traits/is_virtual_base_of.hpp \
- /usr/include/boost/type_traits/make_signed.hpp \
  /usr/include/boost/type_traits/rank.hpp \
  /usr/include/boost/type_traits/remove_all_extents.hpp \
  /usr/include/boost/type_traits/remove_cv_ref.hpp \
  /usr/include/boost/type_traits/integral_promotion.hpp \
  /usr/include/boost/type_traits/promote.hpp \
- /usr/include/boost/pending/detail/property.hpp \
- /usr/include/boost/graph/properties.hpp \
- /usr/include/boost/graph/property_maps/constant_property_map.hpp \
- /usr/include/boost/graph/property_maps/null_property_map.hpp \
- /usr/include/CGAL/boost/graph/properties_Surface_mesh.h \
- /usr/include/CGAL/boost/graph/properties.h \
- /usr/include/CGAL/Dynamic_property_map.h \
- /usr/include/boost/unordered_map.hpp \
- /usr/include/boost/unordered/unordered_map.hpp \
- /usr/include/boost/unordered/detail/map.hpp \
+ /usr/include/CGAL/Triangulation_structural_filtering_traits.h \
+ /usr/include/CGAL/Robust_circumcenter_traits_3.h \
+ /usr/include/CGAL/Robust_construction.h \
+ /usr/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
+ /usr/include/CGAL/Lazy_kernel.h \
+ /usr/include/CGAL/Static_filtered_predicate.h \
+ /usr/include/CGAL/Epic_converter.h \
+ /usr/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
+ /usr/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
+ /usr/include/CGAL/Delaunay_triangulation_3.h \
+ /usr/include/CGAL/license/Triangulation_3.h \
+ /usr/include/CGAL/Delaunay_triangulation_cell_base_3.h \
+ /usr/include/CGAL/triangulation_assertions.h \
+ /usr/include/CGAL/Triangulation_cell_base_3.h \
+ /usr/include/CGAL/Triangulation_ds_cell_base_3.h \
+ /usr/include/CGAL/license/TDS_3.h \
+ /usr/include/CGAL/internal/Dummy_tds_3.h \
+ /usr/include/CGAL/Triangulation_3.h /usr/include/c++/9/stack \
+ /usr/include/c++/9/bits/stl_stack.h /usr/include/CGAL/Unique_hash_map.h \
+ /usr/include/CGAL/Handle_hash_function.h \
+ /usr/include/CGAL/Tools/chained_map.h \
+ /usr/include/CGAL/Triangulation_utils_3.h \
+ /usr/include/CGAL/Triangulation_data_structure_3.h \
+ /usr/include/boost/unordered_set.hpp \
+ /usr/include/boost/unordered/unordered_set.hpp \
+ /usr/include/boost/unordered/detail/set.hpp \
  /usr/include/boost/unordered/detail/implementation.hpp \
  /usr/include/boost/core/pointer_traits.hpp \
  /usr/include/boost/unordered/detail/fwd.hpp \
+ /usr/include/boost/unordered/unordered_set_fwd.hpp \
+ /usr/include/CGAL/utility.h /usr/include/CGAL/iterator.h \
+ /usr/include/CGAL/circulator.h /usr/include/CGAL/circulator_bases.h \
+ /usr/include/CGAL/Iterator_range.h /usr/include/CGAL/tuple.h \
+ /usr/include/boost/foreach.hpp /usr/include/boost/foreach_fwd.hpp \
+ /usr/include/CGAL/internal/Has_member_visited.h \
+ /usr/include/CGAL/Concurrent_compact_container.h \
+ /usr/include/CGAL/Compact_container.h /usr/include/CGAL/CC_safe_handle.h \
+ /usr/include/CGAL/Time_stamper.h /usr/include/CGAL/Has_timestamp.h \
+ /usr/include/CGAL/atomic.h /usr/include/CGAL/Small_unordered_map.h \
+ /usr/include/CGAL/Triangulation_ds_vertex_base_3.h \
+ /usr/include/CGAL/Triangulation_simplex_3.h \
+ /usr/include/CGAL/internal/Triangulation_ds_iterators_3.h \
+ /usr/include/CGAL/internal/Triangulation_ds_circulators_3.h \
+ /usr/include/CGAL/Triangulation_vertex_base_3.h \
+ /usr/include/CGAL/spatial_sort.h /usr/include/CGAL/hilbert_sort.h \
+ /usr/include/CGAL/Hilbert_policy_tags.h \
+ /usr/include/CGAL/Hilbert_sort_2.h \
+ /usr/include/CGAL/Hilbert_sort_median_2.h \
+ /usr/include/CGAL/Hilbert_sort_base.h \
+ /usr/include/CGAL/Hilbert_sort_middle_2.h \
+ /usr/include/CGAL/Hilbert_sort_middle_base.h \
+ /usr/include/CGAL/Polygon_2_algorithms.h \
+ /usr/include/CGAL/Polygon_2/polygon_assertions.h \
+ /usr/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+ /usr/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+ /usr/include/CGAL/Hilbert_sort_3.h \
+ /usr/include/CGAL/Hilbert_sort_median_3.h \
+ /usr/include/CGAL/Hilbert_sort_middle_3.h \
+ /usr/include/CGAL/Hilbert_sort_d.h \
+ /usr/include/CGAL/Hilbert_sort_median_d.h \
+ /usr/include/CGAL/Hilbert_sort_middle_d.h \
+ /usr/include/CGAL/Multiscale_sort.h \
+ /usr/include/CGAL/Spatial_sort_traits_adapter_3.h \
+ /usr/include/CGAL/property_map.h /usr/include/CGAL/value_type_traits.h \
+ /usr/include/boost/property_map/property_map.hpp \
+ /usr/include/boost/concept_archetype.hpp \
+ /usr/include/boost/property_map/vector_property_map.hpp \
+ /usr/include/CGAL/Iterator_project.h \
+ /usr/include/CGAL/internal/boost/function_property_map.hpp \
+ /usr/include/CGAL/Spatial_lock_grid_3.h /usr/include/boost/bind.hpp \
+ /usr/include/boost/bind/bind.hpp /usr/include/boost/mem_fn.hpp \
+ /usr/include/boost/bind/mem_fn.hpp /usr/include/boost/get_pointer.hpp \
+ /usr/include/boost/bind/mem_fn_template.hpp \
+ /usr/include/boost/bind/mem_fn_cc.hpp \
+ /usr/include/boost/is_placeholder.hpp /usr/include/boost/bind/arg.hpp \
+ /usr/include/boost/visit_each.hpp /usr/include/boost/core/is_same.hpp \
+ /usr/include/boost/bind/storage.hpp /usr/include/boost/bind/bind_cc.hpp \
+ /usr/include/boost/bind/bind_mf_cc.hpp \
+ /usr/include/boost/bind/bind_mf2_cc.hpp \
+ /usr/include/boost/bind/placeholders.hpp \
+ /usr/include/boost/unordered_map.hpp \
+ /usr/include/boost/unordered/unordered_map.hpp \
+ /usr/include/boost/unordered/detail/map.hpp \
  /usr/include/boost/unordered/unordered_map_fwd.hpp \
- /usr/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h \
- /usr/include/CGAL/boost/graph/properties_Surface_mesh_features.h \
- /usr/include/CGAL/boost/graph/iterator.h \
- /usr/include/CGAL/boost/graph/internal/helpers.h \
- /usr/include/CGAL/boost/graph/copy_face_graph.h \
- /usr/include/CGAL/iterator.h /usr/include/CGAL/Cartesian_converter.h \
- /usr/include/CGAL/NT_converter.h /usr/include/CGAL/Enum_converter.h \
- /usr/include/CGAL/Kernel/Type_mapper.h /usr/include/boost/mpl/remove.hpp \
+ /usr/include/boost/container/small_vector.hpp \
+ /usr/include/boost/container/detail/config_begin.hpp \
+ /usr/include/boost/container/detail/workaround.hpp \
+ /usr/include/boost/container/vector.hpp \
+ /usr/include/boost/container/allocator_traits.hpp \
+ /usr/include/boost/container/detail/mpl.hpp \
+ /usr/include/boost/intrusive/detail/mpl.hpp \
+ /usr/include/boost/intrusive/detail/config_begin.hpp \
+ /usr/include/boost/intrusive/detail/config_end.hpp \
+ /usr/include/boost/container/detail/config_end.hpp \
+ /usr/include/boost/container/detail/type_traits.hpp \
+ /usr/include/boost/container/detail/placement_new.hpp \
+ /usr/include/boost/intrusive/pointer_traits.hpp \
+ /usr/include/boost/intrusive/detail/workaround.hpp \
+ /usr/include/boost/intrusive/pointer_rebind.hpp \
+ /usr/include/boost/intrusive/detail/has_member_function_callable_with.hpp \
+ /usr/include/boost/move/detail/fwd_macros.hpp \
+ /usr/include/boost/container/new_allocator.hpp \
+ /usr/include/boost/container/throw_exception.hpp \
+ /usr/include/boost/container/options.hpp \
+ /usr/include/boost/intrusive/pack_options.hpp \
+ /usr/include/boost/container/detail/advanced_insert_int.hpp \
+ /usr/include/boost/container/detail/copy_move_algo.hpp \
+ /usr/include/boost/container/detail/iterator.hpp \
+ /usr/include/boost/intrusive/detail/iterator.hpp \
+ /usr/include/boost/intrusive/detail/std_fwd.hpp \
+ /usr/include/boost/container/detail/construct_in_place.hpp \
+ /usr/include/boost/container/detail/iterators.hpp \
+ /usr/include/boost/container/detail/value_init.hpp \
+ /usr/include/boost/intrusive/detail/reverse_iterator.hpp \
+ /usr/include/boost/container/detail/variadic_templates_tools.hpp \
+ /usr/include/boost/container/detail/destroyers.hpp \
+ /usr/include/boost/container/detail/version_type.hpp \
+ /usr/include/boost/container/detail/algorithm.hpp \
+ /usr/include/boost/intrusive/detail/algorithm.hpp \
+ /usr/include/boost/container/detail/alloc_helpers.hpp \
+ /usr/include/boost/container/detail/allocation_type.hpp \
+ /usr/include/boost/container/detail/next_capacity.hpp \
+ /usr/include/boost/container/detail/min_max.hpp \
+ /usr/include/boost/container/detail/value_functors.hpp \
+ /usr/include/boost/move/detail/move_helpers.hpp \
+ /usr/include/boost/move/algo/adaptive_merge.hpp \
+ /usr/include/boost/move/algo/detail/adaptive_sort_merge.hpp \
+ /usr/include/boost/move/detail/reverse_iterator.hpp \
+ /usr/include/boost/move/algo/detail/merge.hpp \
+ /usr/include/boost/move/algo/detail/basic_op.hpp \
+ /usr/include/boost/move/detail/destruct_n.hpp \
+ /usr/include/boost/move/algo/predicate.hpp \
+ /usr/include/boost/move/algo/detail/insertion_sort.hpp \
+ /usr/include/boost/move/detail/placement_new.hpp \
+ /usr/include/boost/move/algo/detail/merge_sort.hpp \
+ /usr/include/boost/move/algo/detail/heap_sort.hpp \
+ /usr/include/boost/move/algo/detail/is_sorted.hpp \
+ /usr/include/boost/move/algo/unique.hpp \
+ /usr/include/boost/move/algo/detail/set_difference.hpp \
+ /usr/include/CGAL/internal/info_check.h \
+ /usr/include/boost/iterator/zip_iterator.hpp \
+ /usr/include/boost/iterator/minimum_category.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple.hpp \
+ /usr/include/boost/fusion/support/config.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/tag_of.hpp \
+ /usr/include/boost/fusion/support/tag_of_fwd.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/is_view_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/is_sequence_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/category_of_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/boost_tuple_iterator.hpp \
+ /usr/include/boost/fusion/iterator/iterator_facade.hpp \
+ /usr/include/boost/fusion/support/iterator_base.hpp \
+ /usr/include/boost/fusion/iterator/detail/advance.hpp \
+ /usr/include/boost/fusion/iterator/next.hpp \
+ /usr/include/boost/fusion/support/tag_of.hpp \
+ /usr/include/boost/fusion/support/detail/is_mpl_sequence.hpp \
+ /usr/include/boost/fusion/support/detail/is_native_fusion_sequence.hpp \
+ /usr/include/boost/fusion/support/sequence_base.hpp \
+ /usr/include/boost/config/no_tr1/utility.hpp \
+ /usr/include/boost/fusion/iterator/prior.hpp \
+ /usr/include/boost/fusion/iterator/detail/distance.hpp \
+ /usr/include/boost/fusion/iterator/equal_to.hpp \
+ /usr/include/boost/fusion/support/is_iterator.hpp \
+ /usr/include/boost/fusion/support/category_of.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/end_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/size_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/at_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/value_at_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/convert_impl.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/detail/build_cons.hpp \
+ /usr/include/boost/fusion/iterator/value_of.hpp \
+ /usr/include/boost/fusion/iterator/deref.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/begin.hpp \
+ /usr/include/boost/mpl/empty_base.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic_fwd.hpp \
+ /usr/include/boost/fusion/support/is_sequence.hpp \
+ /usr/include/boost/fusion/support/is_segmented.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin_impl.hpp \
+ /usr/include/boost/fusion/container/list/cons_fwd.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/detail/segmented_end_impl.hpp \
+ /usr/include/boost/fusion/support/detail/segmented_fold_until_impl.hpp \
+ /usr/include/boost/fusion/support/void.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/segments.hpp \
+ /usr/include/boost/fusion/iterator/segmented_iterator.hpp \
+ /usr/include/boost/fusion/iterator/detail/segmented_iterator.hpp \
+ /usr/include/boost/fusion/iterator/deref_data.hpp \
+ /usr/include/boost/fusion/iterator/key_of.hpp \
+ /usr/include/boost/fusion/iterator/value_of_data.hpp \
+ /usr/include/boost/fusion/iterator/detail/segmented_equal_to.hpp \
+ /usr/include/boost/fusion/iterator/detail/segmented_next_impl.hpp \
+ /usr/include/boost/fusion/container/list/cons.hpp \
+ /usr/include/boost/fusion/support/detail/enabler.hpp \
+ /usr/include/boost/fusion/support/detail/access.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/end.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/detail/segmented_end.hpp \
+ /usr/include/boost/fusion/container/list/nil.hpp \
+ /usr/include/boost/fusion/container/list/cons_iterator.hpp \
+ /usr/include/boost/fusion/container/list/detail/deref_impl.hpp \
+ /usr/include/boost/fusion/container/list/detail/next_impl.hpp \
+ /usr/include/boost/fusion/container/list/detail/value_of_impl.hpp \
+ /usr/include/boost/fusion/container/list/detail/equal_to_impl.hpp \
+ /usr/include/boost/fusion/container/list/list_fwd.hpp \
+ /usr/include/boost/fusion/container/list/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/container/list/detail/end_impl.hpp \
+ /usr/include/boost/fusion/container/list/detail/at_impl.hpp \
+ /usr/include/boost/fusion/container/list/detail/value_at_impl.hpp \
+ /usr/include/boost/fusion/container/list/detail/empty_impl.hpp \
+ /usr/include/boost/fusion/view/iterator_range.hpp \
+ /usr/include/boost/fusion/view/iterator_range/iterator_range.hpp \
+ /usr/include/boost/fusion/iterator/distance.hpp \
+ /usr/include/boost/fusion/iterator/mpl/convert_iterator.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/end_impl.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/at_impl.hpp \
+ /usr/include/boost/fusion/iterator/advance.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/size_impl.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/value_at_impl.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/is_segmented_impl.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/segments_impl.hpp \
+ /usr/include/boost/fusion/view/iterator_range/detail/segmented_iterator_range.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/push_back.hpp \
+ /usr/include/boost/fusion/support/detail/as_fusion_element.hpp \
+ /usr/include/boost/fusion/view/joint_view/joint_view.hpp \
+ /usr/include/boost/fusion/view/joint_view/joint_view_fwd.hpp \
+ /usr/include/boost/fusion/support/is_view.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/size.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/detail/segmented_size.hpp \
+ /usr/include/boost/fusion/mpl/begin.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/mpl_iterator.hpp \
+ /usr/include/boost/fusion/support/detail/mpl_iterator_category.hpp \
+ /usr/include/boost/mpl/begin.hpp \
+ /usr/include/boost/fusion/iterator/mpl/fusion_iterator.hpp \
+ /usr/include/boost/fusion/mpl/end.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/end_impl.hpp \
+ /usr/include/boost/mpl/end.hpp \
+ /usr/include/boost/fusion/view/joint_view/joint_view_iterator.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/deref_impl.hpp \
+ /usr/include/boost/fusion/iterator/detail/adapt_deref_traits.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/next_impl.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/value_of_impl.hpp \
+ /usr/include/boost/fusion/iterator/detail/adapt_value_traits.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/deref_data_impl.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/value_of_data_impl.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/key_of_impl.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/view/joint_view/detail/end_impl.hpp \
+ /usr/include/boost/mpl/inherit.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/inherit.hpp \
+ /usr/include/boost/fusion/view/single_view/single_view.hpp \
+ /usr/include/boost/fusion/view/single_view/single_view_iterator.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/deref_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/next_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/prior_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/advance_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/distance_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/equal_to_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/value_of_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/at_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/end_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/size_impl.hpp \
+ /usr/include/boost/fusion/view/single_view/detail/value_at_impl.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/value_at.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/push_front.hpp \
+ /usr/include/boost/fusion/container/list/detail/reverse_cons.hpp \
+ /usr/include/boost/fusion/iterator/detail/segment_sequence.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/empty.hpp \
+ /usr/include/boost/fusion/adapted/boost_tuple/mpl/clear.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/for_each.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/detail/for_each.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/detail/segmented_for_each.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/for_each_fwd.hpp \
+ /usr/include/boost/fusion/support/segmented_fold_until.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/transform.hpp \
+ /usr/include/boost/fusion/view/transform_view/transform_view.hpp \
+ /usr/include/boost/fusion/view/transform_view/transform_view_iterator.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/deref_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/next_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/prior_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/value_of_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/advance_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/distance_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/equal_to_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/transform_view_fwd.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/end_impl.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/at_impl.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/at.hpp \
+ /usr/include/boost/fusion/view/transform_view/detail/value_at_impl.hpp \
+ /usr/include/boost/fusion/view/detail/strictest_traversal.hpp \
+ /usr/include/boost/fusion/mpl.hpp \
+ /usr/include/boost/fusion/iterator/mpl.hpp \
+ /usr/include/boost/fusion/adapted/mpl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/is_sequence_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/size_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/value_at_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/at_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/has_key_impl.hpp \
+ /usr/include/boost/mpl/has_key.hpp \
+ /usr/include/boost/mpl/has_key_fwd.hpp \
+ /usr/include/boost/mpl/aux_/has_key_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/category_of_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/is_view_impl.hpp \
+ /usr/include/boost/fusion/adapted/mpl/detail/empty_impl.hpp \
+ /usr/include/boost/fusion/mpl/at.hpp \
+ /usr/include/boost/fusion/mpl/back.hpp /usr/include/boost/mpl/back.hpp \
+ /usr/include/boost/mpl/aux_/back_impl.hpp \
+ /usr/include/boost/fusion/mpl/clear.hpp \
+ /usr/include/boost/fusion/mpl/detail/clear.hpp \
+ /usr/include/boost/fusion/container/vector/vector_fwd.hpp \
+ /usr/include/boost/fusion/container/vector/detail/config.hpp \
+ /usr/include/boost/fusion/container/map/map_fwd.hpp \
+ /usr/include/boost/fusion/container/set/set_fwd.hpp \
+ /usr/include/boost/fusion/container/deque/deque_fwd.hpp \
+ /usr/include/boost/fusion/mpl/empty.hpp \
+ /usr/include/boost/fusion/mpl/erase.hpp /usr/include/boost/mpl/erase.hpp \
+ /usr/include/boost/mpl/erase_fwd.hpp \
+ /usr/include/boost/mpl/aux_/erase_impl.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/erase.hpp \
+ /usr/include/boost/fusion/sequence/convert.hpp \
+ /usr/include/boost/fusion/mpl/erase_key.hpp \
+ /usr/include/boost/mpl/erase_key.hpp \
+ /usr/include/boost/mpl/erase_key_fwd.hpp \
+ /usr/include/boost/mpl/aux_/erase_key_impl.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/erase_key.hpp \
+ /usr/include/boost/fusion/algorithm/query/find.hpp \
+ /usr/include/boost/fusion/algorithm/query/find_if_fwd.hpp \
+ /usr/include/boost/fusion/algorithm/query/detail/find_if.hpp \
+ /usr/include/boost/fusion/algorithm/query/detail/segmented_find.hpp \
+ /usr/include/boost/fusion/algorithm/query/find_fwd.hpp \
+ /usr/include/boost/fusion/mpl/front.hpp \
+ /usr/include/boost/fusion/mpl/has_key.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/has_key.hpp \
+ /usr/include/boost/fusion/mpl/insert.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/insert.hpp \
+ /usr/include/boost/fusion/mpl/insert_range.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/insert_range.hpp \
+ /usr/include/boost/fusion/mpl/pop_back.hpp \
+ /usr/include/boost/mpl/pop_back.hpp \
+ /usr/include/boost/mpl/aux_/pop_back_impl.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/pop_back.hpp \
+ /usr/include/boost/fusion/iterator/iterator_adapter.hpp \
+ /usr/include/boost/fusion/mpl/pop_front.hpp \
+ /usr/include/boost/mpl/pop_front.hpp \
+ /usr/include/boost/mpl/aux_/pop_front_impl.hpp \
+ /usr/include/boost/fusion/algorithm/transformation/pop_front.hpp \
+ /usr/include/boost/fusion/mpl/push_back.hpp \
+ /usr/include/boost/fusion/mpl/push_front.hpp \
+ /usr/include/boost/fusion/mpl/size.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/fold.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/fold_fwd.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/detail/preprocessed/fold.hpp \
+ /usr/include/boost/fusion/algorithm/iteration/detail/segmented_fold.hpp \
+ /usr/include/boost/fusion/container/vector/vector10.hpp \
+ /usr/include/boost/fusion/container/vector/vector.hpp \
+ /usr/include/boost/fusion/support/detail/and.hpp \
+ /usr/include/boost/fusion/support/detail/index_sequence.hpp \
+ /usr/include/boost/fusion/container/vector/detail/at_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/value_at_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/begin_impl.hpp \
+ /usr/include/boost/fusion/container/vector/vector_iterator.hpp \
+ /usr/include/boost/fusion/container/vector/detail/deref_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/value_of_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/next_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/prior_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/equal_to_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/distance_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/advance_impl.hpp \
+ /usr/include/boost/fusion/container/vector/detail/end_impl.hpp \
+ /usr/include/boost/fusion/sequence/intrinsic/at_c.hpp \
+ /usr/include/boost/fusion/sequence/comparison/equal_to.hpp \
+ /usr/include/boost/fusion/sequence/comparison/detail/equal_to.hpp \
+ /usr/include/boost/fusion/support/as_const.hpp \
+ /usr/include/boost/fusion/sequence/comparison/enable_comparison.hpp \
+ /usr/include/CGAL/Location_policy.h /usr/include/CGAL/Complexity_tags.h \
+ /usr/include/CGAL/internal/Delaunay_triangulation_hierarchy_3.h \
+ /usr/include/CGAL/Triangulation_hierarchy_3.h \
+ /usr/include/CGAL/internal/Has_nested_type_Bare_point.h \
+ /usr/include/CGAL/Triangulation_hierarchy_vertex_base_3.h \
+ /usr/include/CGAL/Surface_mesh_vertex_base_3.h \
+ /usr/include/CGAL/Complex_2_in_triangulation_vertex_base_3.h \
+ /usr/include/CGAL/Surface_mesh_cell_base_3.h \
+ /usr/include/CGAL/Complex_2_in_triangulation_cell_base_3.h \
+ /usr/include/CGAL/Delaunay_triangulation_cell_base_with_circumcenter_3.h \
+ /usr/include/CGAL/Complex_2_in_triangulation_3.h \
+ /usr/include/CGAL/Union_find.h /usr/include/boost/format.hpp \
+ /usr/include/boost/format/detail/compat_workarounds.hpp \
+ /usr/include/boost/format/detail/config_macros.hpp \
+ /usr/include/boost/format/detail/workarounds_gcc-2_95.hpp \
+ /usr/include/boost/format/detail/workarounds_stlport.hpp \
+ /usr/include/boost/format/format_fwd.hpp \
+ /usr/include/boost/format/internals_fwd.hpp \
+ /usr/include/boost/format/internals.hpp \
+ /usr/include/boost/core/ignore_unused.hpp \
+ /usr/include/boost/format/alt_sstream.hpp \
+ /usr/include/boost/format/alt_sstream_impl.hpp \
+ /usr/include/boost/format/format_class.hpp \
+ /usr/include/boost/format/exceptions.hpp \
+ /usr/include/boost/format/format_implementation.hpp \
+ /usr/include/boost/format/group.hpp \
+ /usr/include/boost/format/feed_args.hpp \
+ /usr/include/boost/format/detail/msvc_disambiguater.hpp \
+ /usr/include/boost/format/parsing.hpp \
+ /usr/include/boost/format/free_funcs.hpp \
+ /usr/include/boost/format/detail/unset_macros.hpp \
+ /usr/include/CGAL/make_surface_mesh.h \
+ /usr/include/CGAL/Surface_mesher_generator.h \
+ /usr/include/CGAL/Surface_mesher/Surface_mesher.h \
+ /usr/include/CGAL/Mesher_level.h \
+ /usr/include/CGAL/Mesher_level_visitors.h \
+ /usr/include/CGAL/Mesher_level_default_implementations.h \
+ /usr/include/CGAL/Meshes/Triangulation_mesher_level_traits_3.h \
+ /usr/include/CGAL/Double_map.h /usr/include/CGAL/boost/bimap.hpp \
+ /usr/include/boost/bimap.hpp /usr/include/boost/bimap/bimap.hpp \
+ /usr/include/boost/bimap/detail/user_interface_config.hpp \
+ /usr/include/boost/serialization/nvp.hpp \
+ /usr/include/boost/serialization/level.hpp \
+ /usr/include/boost/serialization/level_enum.hpp \
+ /usr/include/boost/serialization/tracking.hpp \
+ /usr/include/boost/serialization/tracking_enum.hpp \
+ /usr/include/boost/serialization/type_info_implementation.hpp \
+ /usr/include/boost/serialization/traits.hpp \
+ /usr/include/boost/serialization/split_member.hpp \
+ /usr/include/boost/serialization/access.hpp \
+ /usr/include/boost/serialization/base_object.hpp \
+ /usr/include/boost/serialization/force_include.hpp \
+ /usr/include/boost/serialization/void_cast_fwd.hpp \
+ /usr/include/boost/serialization/wrapper.hpp \
+ /usr/include/boost/bimap/detail/bimap_core.hpp \
+ /usr/include/boost/multi_index_container.hpp \
+ /usr/include/boost/multi_index_container_fwd.hpp \
+ /usr/include/boost/multi_index/identity.hpp \
+ /usr/include/boost/multi_index/identity_fwd.hpp \
+ /usr/include/boost/multi_index/indexed_by.hpp \
+ /usr/include/boost/preprocessor/control/expr_if.hpp \
+ /usr/include/boost/multi_index/ordered_index_fwd.hpp \
+ /usr/include/boost/multi_index/detail/ord_index_args.hpp \
+ /usr/include/boost/multi_index/tag.hpp \
+ /usr/include/boost/multi_index/detail/no_duplicate_tags.hpp \
+ /usr/include/boost/mpl/set/set0.hpp \
+ /usr/include/boost/mpl/set/aux_/at_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/has_key_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/tag.hpp \
+ /usr/include/boost/mpl/aux_/overload_names.hpp \
+ /usr/include/boost/mpl/aux_/ptr_to_ref.hpp \
+ /usr/include/boost/mpl/aux_/config/operators.hpp \
+ /usr/include/boost/mpl/set/aux_/clear_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/set0.hpp \
+ /usr/include/boost/mpl/set/aux_/size_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/empty_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/insert_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/item.hpp /usr/include/boost/mpl/base.hpp \
+ /usr/include/boost/mpl/set/aux_/insert_range_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/erase_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/erase_key_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/key_type_impl.hpp \
+ /usr/include/boost/mpl/key_type_fwd.hpp \
+ /usr/include/boost/mpl/set/aux_/value_type_impl.hpp \
+ /usr/include/boost/mpl/value_type_fwd.hpp \
+ /usr/include/boost/mpl/set/aux_/begin_end_impl.hpp \
+ /usr/include/boost/mpl/set/aux_/iterator.hpp \
+ /usr/include/boost/multi_index/detail/ord_index_impl_fwd.hpp \
+ /usr/include/boost/multi_index/detail/access_specifier.hpp \
+ /usr/include/boost/multi_index/detail/adl_swap.hpp \
+ /usr/include/boost/multi_index/detail/allocator_traits.hpp \
+ /usr/include/boost/multi_index/detail/base_type.hpp \
+ /usr/include/boost/multi_index/detail/index_base.hpp \
+ /usr/include/boost/multi_index/detail/copy_map.hpp \
+ /usr/include/boost/multi_index/detail/auto_space.hpp \
+ /usr/include/boost/multi_index/detail/raw_ptr.hpp \
+ /usr/include/boost/multi_index/detail/do_not_copy_elements_tag.hpp \
+ /usr/include/boost/multi_index/detail/node_type.hpp \
+ /usr/include/boost/mpl/reverse_iter_fold.hpp \
+ /usr/include/boost/mpl/aux_/reverse_iter_fold_impl.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_iter_fold_impl.hpp \
+ /usr/include/boost/multi_index/detail/header_holder.hpp \
+ /usr/include/boost/multi_index/detail/index_node_base.hpp \
+ /usr/include/boost/archive/archive_exception.hpp \
+ /usr/include/boost/archive/detail/decl.hpp \
+ /usr/include/boost/archive/detail/abi_prefix.hpp \
+ /usr/include/boost/config/abi_prefix.hpp \
+ /usr/include/boost/archive/detail/abi_suffix.hpp \
+ /usr/include/boost/config/abi_suffix.hpp \
+ /usr/include/boost/multi_index/detail/ignore_wstrict_aliasing.hpp \
+ /usr/include/boost/multi_index/detail/restore_wstrict_aliasing.hpp \
+ /usr/include/boost/multi_index/detail/is_index_list.hpp \
+ /usr/include/boost/multi_index/detail/vartempl_support.hpp \
+ /usr/include/boost/multi_index/detail/index_loader.hpp \
+ /usr/include/boost/multi_index/detail/index_saver.hpp \
+ /usr/include/boost/multi_index/detail/index_matcher.hpp \
+ /usr/include/boost/multi_index/detail/converter.hpp \
+ /usr/include/boost/multi_index/detail/has_tag.hpp \
+ /usr/include/boost/multi_index/detail/safe_mode.hpp \
+ /usr/include/boost/multi_index/detail/scope_guard.hpp \
+ /usr/include/boost/multi_index/detail/archive_constructed.hpp \
+ /usr/include/boost/serialization/serialization.hpp \
+ /usr/include/boost/serialization/strong_typedef.hpp \
+ /usr/include/boost/multi_index/detail/serialization_version.hpp \
+ /usr/include/boost/serialization/version.hpp \
+ /usr/include/boost/serialization/collection_size_type.hpp \
+ /usr/include/boost/serialization/split_free.hpp \
+ /usr/include/boost/serialization/is_bitwise_serializable.hpp \
+ /usr/include/boost/multi_index/member.hpp \
+ /usr/include/boost/bimap/relation/mutant_relation.hpp \
+ /usr/include/boost/functional/hash/hash.hpp \
+ /usr/include/boost/bimap/tags/tagged.hpp \
+ /usr/include/boost/bimap/tags/support/default_tagged.hpp \
+ /usr/include/boost/bimap/tags/support/tag_of.hpp \
+ /usr/include/boost/bimap/detail/debug/static_error.hpp \
+ /usr/include/boost/bimap/tags/support/value_type_of.hpp \
+ /usr/include/boost/bimap/relation/member_at.hpp \
+ /usr/include/boost/bimap/relation/detail/mutant.hpp \
+ /usr/include/boost/bimap/relation/structured_pair.hpp \
+ /usr/include/boost/bimap/relation/pair_layout.hpp \
+ /usr/include/boost/bimap/relation/symmetrical_base.hpp \
+ /usr/include/boost/bimap/relation/support/get.hpp \
+ /usr/include/boost/bimap/relation/support/value_type_of.hpp \
+ /usr/include/boost/bimap/relation/detail/metadata_access_builder.hpp \
+ /usr/include/boost/bimap/relation/support/is_tag_of_member_at.hpp \
+ /usr/include/boost/bimap/relation/support/member_with_tag.hpp \
+ /usr/include/boost/bimap/relation/detail/access_builder.hpp \
+ /usr/include/boost/bimap/relation/support/data_extractor.hpp \
+ /usr/include/boost/bimap/detail/manage_bimap_key.hpp \
+ /usr/include/boost/bimap/detail/is_set_type_of.hpp \
+ /usr/include/boost/bimap/detail/concept_tags.hpp \
+ /usr/include/boost/bimap/set_of.hpp \
+ /usr/include/boost/bimap/detail/generate_index_binder.hpp \
+ /usr/include/boost/bimap/detail/generate_view_binder.hpp \
+ /usr/include/boost/bimap/detail/generate_relation_binder.hpp \
+ /usr/include/boost/multi_index/ordered_index.hpp \
+ /usr/include/boost/multi_index/detail/ord_index_impl.hpp \
+ /usr/include/boost/multi_index/detail/bidir_node_iterator.hpp \
+ /usr/include/boost/multi_index/detail/modify_key_adaptor.hpp \
+ /usr/include/boost/multi_index/detail/ord_index_node.hpp \
+ /usr/include/boost/multi_index/detail/uintptr_type.hpp \
+ /usr/include/boost/multi_index/detail/ord_index_ops.hpp \
+ /usr/include/boost/multi_index/detail/promotes_arg.hpp \
+ /usr/include/boost/multi_index/detail/is_transparent.hpp \
+ /usr/include/boost/multi_index/detail/unbounded.hpp \
+ /usr/include/boost/multi_index/detail/value_compare.hpp \
+ /usr/include/boost/multi_index/detail/duplicates_iterator.hpp \
+ /usr/include/boost/bimap/views/map_view.hpp \
+ /usr/include/boost/bimap/container_adaptor/map_adaptor.hpp \
+ /usr/include/boost/bimap/container_adaptor/ordered_associative_container_adaptor.hpp \
+ /usr/include/boost/bimap/container_adaptor/associative_container_adaptor.hpp \
+ /usr/include/boost/bimap/container_adaptor/detail/identity_converters.hpp \
+ /usr/include/boost/bimap/container_adaptor/container_adaptor.hpp \
+ /usr/include/boost/bimap/container_adaptor/detail/functor_bag.hpp \
+ /usr/include/boost/mpl/inherit_linearly.hpp \
+ /usr/include/boost/mpl/copy.hpp \
+ /usr/include/boost/bimap/container_adaptor/detail/comparison_adaptor.hpp \
+ /usr/include/boost/bimap/detail/map_view_base.hpp \
+ /usr/include/boost/bimap/relation/support/get_pair_functor.hpp \
+ /usr/include/boost/bimap/relation/support/pair_by.hpp \
+ /usr/include/boost/bimap/relation/support/pair_type_by.hpp \
+ /usr/include/boost/bimap/relation/detail/to_mutable_relation_functor.hpp \
+ /usr/include/boost/bimap/container_adaptor/support/iterator_facade_converters.hpp \
+ /usr/include/boost/bimap/relation/support/opposite_tag.hpp \
+ /usr/include/boost/bimap/support/key_type_by.hpp \
+ /usr/include/boost/bimap/support/data_type_by.hpp \
+ /usr/include/boost/bimap/support/value_type_by.hpp \
+ /usr/include/boost/bimap/detail/modifier_adaptor.hpp \
+ /usr/include/boost/bimap/detail/map_view_iterator.hpp \
+ /usr/include/boost/bimap/relation/detail/static_access_builder.hpp \
+ /usr/include/boost/bimap/views/set_view.hpp \
+ /usr/include/boost/bimap/container_adaptor/set_adaptor.hpp \
+ /usr/include/boost/bimap/detail/set_view_base.hpp \
+ /usr/include/boost/bimap/detail/set_view_iterator.hpp \
+ /usr/include/boost/bimap/detail/manage_additional_parameters.hpp \
+ /usr/include/boost/bimap/unconstrained_set_of.hpp \
+ /usr/include/boost/bimap/views/unconstrained_map_view.hpp \
+ /usr/include/boost/bimap/views/unconstrained_set_view.hpp \
+ /usr/include/boost/bimap/support/map_type_by.hpp \
+ /usr/include/boost/bimap/support/map_by.hpp \
+ /usr/include/boost/bimap/support/iterator_type_by.hpp \
+ /usr/include/boost/bimap/multiset_of.hpp \
+ /usr/include/boost/bimap/views/multimap_view.hpp \
+ /usr/include/boost/bimap/container_adaptor/multimap_adaptor.hpp \
+ /usr/include/boost/bimap/container_adaptor/detail/non_unique_container_helper.hpp \
+ /usr/include/boost/bimap/detail/non_unique_views_helper.hpp \
+ /usr/include/boost/bimap/views/multiset_view.hpp \
+ /usr/include/boost/bimap/container_adaptor/multiset_adaptor.hpp \
+ /usr/include/CGAL/Timer.h /usr/include/CGAL/Timer_impl.h \
+ /usr/include/x86_64-linux-gnu/sys/resource.h \
+ /usr/include/x86_64-linux-gnu/bits/resource.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h \
+ /usr/include/CGAL/Surface_mesher/Verbose_flag.h \
+ /usr/include/CGAL/Surface_mesher/Types_generators.h \
+ /usr/include/CGAL/Surface_mesher/Profile_counter.h \
+ /usr/include/CGAL/Surface_mesher/Profile_timer.h \
+ /usr/include/CGAL/Profile_timer.h \
+ /usr/include/CGAL/Surface_mesher/Surface_mesher_manifold.h \
+ /usr/include/CGAL/Surface_mesher/Surface_mesher_regular_edges.h \
+ /usr/include/CGAL/Surface_mesher/Surface_mesher_edges_level.h \
+ /usr/include/CGAL/Mesh_2/Output_stream.h \
+ /usr/include/CGAL/Meshes/Simple_map_container.h \
+ /usr/include/CGAL/Surface_mesher/Surface_mesher_visitor.h \
+ /usr/include/CGAL/Surface_mesher/Surface_mesher_edges_level_visitor.h \
+ /usr/include/CGAL/Surface_mesh_traits_generator_3.h \
+ /usr/include/CGAL/Surface_mesher/Sphere_oracle_3.h \
+ /usr/include/CGAL/Surface_mesher/Null_oracle_visitor.h \
+ /usr/include/CGAL/point_generators_3.h /usr/include/CGAL/generators.h \
+ /usr/include/CGAL/Random.h /usr/include/CGAL/Random_impl.h \
+ /usr/include/CGAL/point_generators_2.h \
+ /usr/include/CGAL/internal/Generic_random_point_generator.h \
+ /usr/include/CGAL/boost/graph/property_maps.h \
+ /usr/include/CGAL/boost/graph/properties.h \
+ /usr/include/boost/graph/properties.hpp \
+ /usr/include/boost/pending/property.hpp \
+ /usr/include/boost/pending/detail/property.hpp \
+ /usr/include/boost/graph/property_maps/constant_property_map.hpp \
+ /usr/include/boost/graph/property_maps/null_property_map.hpp \
+ /usr/include/boost/graph/graph_traits.hpp \
+ /usr/include/CGAL/Dynamic_property_map.h \
+ /usr/include/CGAL/Surface_mesh_complex_2_in_triangulation_3.h \
+ /usr/include/CGAL/Surface_mesh_default_criteria_3.h \
+ /usr/include/CGAL/Surface_mesher/Standard_criteria.h \
+ /usr/include/CGAL/Implicit_surface_3.h \
+ /usr/include/CGAL/Surface_mesher/Implicit_surface_oracle_3.h \
+ /usr/include/c++/9/queue /usr/include/c++/9/bits/stl_queue.h \
+ /usr/include/CGAL/IO/facets_in_complex_2_to_triangle_mesh.h \
  /usr/include/CGAL/boost/graph/Euler_operations.h \
  /usr/include/CGAL/boost/graph/helpers.h \
+ /usr/include/CGAL/boost/graph/iterator.h \
+ /usr/include/CGAL/boost/graph/internal/helpers.h \
  /usr/include/CGAL/boost/graph/internal/Has_member_clear.h \
- /usr/include/CGAL/function_objects.h \
  /usr/include/CGAL/IO/Verbose_ostream.h \
- /usr/include/CGAL/boost/graph/generators.h /usr/include/CGAL/Random.h \
- /usr/include/CGAL/Random_impl.h \
+ /usr/include/CGAL/boost/graph/generators.h \
+ /usr/include/CGAL/Surface_mesh.h \
+ /usr/include/CGAL/license/Surface_mesh.h \
+ /usr/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
+ /usr/include/CGAL/Surface_mesh/Surface_mesh.h \
+ /usr/include/CGAL/Surface_mesh/Properties.h \
+ /usr/include/CGAL/boost/graph/graph_traits_Surface_mesh.h \
+ /usr/include/CGAL/boost/graph/Named_function_parameters.h \
+ /usr/include/CGAL/boost/graph/parameters_interface.h \
+ /usr/include/CGAL/boost/graph/properties_Surface_mesh.h \
+ /usr/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h \
+ /usr/include/CGAL/boost/graph/properties_Surface_mesh_features.h \
+ /usr/include/CGAL/boost/graph/copy_face_graph.h \
  /usr/include/CGAL/boost/graph/named_params_helper.h \
  /usr/include/boost/function_output_iterator.hpp \
  /usr/include/boost/iterator/function_output_iterator.hpp \
@@ -1483,4 +2265,7 @@ CMakeFiles/simple_mesh.dir/simple_mesh.cpp.o: \
  /usr/include/CGAL/IO/File_header_OFF_impl.h \
  /usr/include/CGAL/IO/File_scanner_OFF_impl.h \
  /usr/include/CGAL/Surface_mesh/IO/PLY.h /usr/include/CGAL/IO/PLY.h \
- /usr/include/CGAL/Handle_hash_function.h
+ /usr/include/c++/9/fstream \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
+ /usr/include/c++/9/bits/fstream.tcc
