@@ -20,29 +20,24 @@ typedef CGAL::Implicit_surface_3<GT, Function> Surface_3;
 typedef CGAL::Surface_mesh<Point_3> Surface_mesh;
 
 //height function acting as utility to define the underlying surface
-//double height(double x, double y) {
-//  return (sin(x)+sin(y))/2.0;
-//}
+double height(double x, double y) {
+  return (sin(x)+sin(y))/2.0;
+}
 
 //we can define our surface implicitly via a constraint -- mirroring sphere example
 FT heightmap_function(Point_3 p) {
   const FT x = p.x(), y = p.y(), z = p.z();
-  return z - (sin(x) + sin(y))/2;
-}
-
-FT sphere_function (Point_3 p) {
-  const FT x2=p.x()*p.x(), y2=p.y()*p.y(), z2=p.z()*p.z();
-  return x2+y2+z2-1;
+  return z - height(x,y);
 }
 
 int main() {
   Tr tr;            // 3D-Delaunay triangulation
   C2t3 c2t3 (tr);   // 2D-complex in 3D-Delaunay triangulation
   // defining the surface
-  Surface_3 surface(sphere_function,             // pointer to function
+  Surface_3 surface(heightmap_function,             // pointer to function
                     Sphere_3(CGAL::ORIGIN, 4.)); // bounding sphere
-  // Note that "2." above is the *squared* radius of the bounding sphere!
-  // defining meshing criteria
+  // Note that "4." above is the *squared* radius of the bounding sphere, which
+  // I believe defines the domain of the surface
   CGAL::Surface_mesh_default_criteria_3<Tr> criteria(30.,  // angular bound
                                                      0.1,  // radius bound
                                                      0.1); // distance bound
@@ -50,7 +45,7 @@ int main() {
   CGAL::make_surface_mesh(c2t3, surface, criteria, CGAL::Non_manifold_tag());
   Surface_mesh sm;
   CGAL::facets_in_complex_2_to_triangle_mesh(c2t3, sm);
-  std::ofstream out("sphere.off");
+  std::ofstream out("heightmap.off");
   out << sm << std::endl;
   std::cout << "Final number of points: " << tr.number_of_vertices() << "\n";
 }
