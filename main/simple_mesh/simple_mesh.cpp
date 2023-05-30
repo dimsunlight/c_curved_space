@@ -26,8 +26,8 @@ typedef CGAL::Surface_mesh<Point_3> Surface_mesh;
 
 //we can define our surface implicitly via a constraint -- mirroring sphere example
 FT heightmap_function(Point_3 p) {
-  const FT x = p.x, y = p.y, z = p.z;
-  return z - ((sin(x)+sin(y)/2+1);
+  const FT x = p.x(), y = p.y(), z = p.z();
+  return z - (sin(x) + sin(y))/2;
 }
 
 FT sphere_function (Point_3 p) {
@@ -39,7 +39,7 @@ int main() {
   Tr tr;            // 3D-Delaunay triangulation
   C2t3 c2t3 (tr);   // 2D-complex in 3D-Delaunay triangulation
   // defining the surface
-  Surface_3 surface(heightmap_function,             // pointer to function
+  Surface_3 surface(sphere_function,             // pointer to function
                     Sphere_3(CGAL::ORIGIN, 4.)); // bounding sphere
   // Note that "2." above is the *squared* radius of the bounding sphere!
   // defining meshing criteria
