@@ -25,7 +25,8 @@ class Simulation{
     void generateDisplacements(forces);
     void updatePositions(dr);
     void convertToBary();
-    void convertToXYZ(); 
+    void convertToXYZ();
+    
   private: 
     Surface_mesh underlying_mesh;
     double[] baryPositions;
