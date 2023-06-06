@@ -1,11 +1,13 @@
-cmake_minimum_required(VERSION 3.20)
+# Created by the script cgal_create_CMakeLists
+# This is the CMake script for compiling a set of CGAL applications.
 
-project(Simple_Mesh)
+cmake_minimum_required(VERSION 3.1...3.23)
 
-message("Generated with config types: ${CMAKE_CONFIGURATION_TYPES}")
+project( simple_mesh )
 
-set(CMAKE_BUILD_TYPE Release)
+# CGAL and its components
 
 find_package(CGAL)
-add_executable(simple_mesh simple_mesh.cpp)
-target_link_libraries(simple_mesh CGAL::CGAL)
+
+create_single_source_cgal_program("heightmap_mesh.cpp")
+create_single_source_cgal_program("torus_mesh.cpp")
