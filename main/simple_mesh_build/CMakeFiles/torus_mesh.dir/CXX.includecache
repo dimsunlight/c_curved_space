@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/toler/CGAL-5.5.2/include/CGAL/Aff_transformation_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Aff_transformation_2.h
 CGAL/config.h
 -
 CGAL/Dimension.h
@@ -14,7 +14,7 @@ CGAL/Dimension.h
 CGAL/aff_transformation_tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Aff_transformation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Aff_transformation_3.h
 CGAL/Dimension.h
 -
 CGAL/aff_transformation_tags.h
@@ -24,7 +24,7 @@ ostream
 istream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Algebraic_extension_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Algebraic_extension_traits.h
 numeric
 -
 CGAL/tags.h
@@ -32,7 +32,7 @@ CGAL/tags.h
 CGAL/Algebraic_structure_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Algebraic_structure_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Algebraic_structure_traits.h
 functional
 -
 CGAL/tags.h
@@ -46,11 +46,11 @@ CGAL/assertions.h
 CGAL/use.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h
 CGAL/tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/BOOST_MP_arithmetic_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/BOOST_MP_arithmetic_kernel.h
 CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h
 -
 CGAL/Get_arithmetic_kernel.h
@@ -58,7 +58,7 @@ CGAL/Get_arithmetic_kernel.h
 CGAL/boost_mp.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Bbox_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Bbox_2.h
 CGAL/config.h
 -
 CGAL/kernel_assertions.h
@@ -72,7 +72,7 @@ CGAL/array.h
 boost/math/special_functions/next.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Bbox_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Bbox_3.h
 CGAL/config.h
 -
 CGAL/kernel_assertions.h
@@ -86,15 +86,15 @@ CGAL/array.h
 boost/math/special_functions/next.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Bigfloat_interval_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Bigfloat_interval_traits.h
 CGAL/basic.h
 -
 CGAL/assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/CC_safe_handle.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/CC_safe_handle.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cache.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cache.h
 CGAL/basic.h
 -
 CGAL/function_objects.h
@@ -102,7 +102,7 @@ CGAL/function_objects.h
 map
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_2.h
 cmath
 -
 CGAL/Handle_for_virtual.h
@@ -118,7 +118,7 @@ CGAL/Cartesian/Scaling_rep_2.h
 CGAL/Cartesian/Reflection_rep_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_3.h
 cmath
 -
 CGAL/Handle_for_virtual.h
@@ -130,7 +130,7 @@ CGAL/Cartesian/Translation_rep_3.h
 CGAL/Cartesian/Scaling_rep_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_2.h
 CGAL/determinant.h
 -
 CGAL/Handle_for_virtual.h
@@ -138,13 +138,13 @@ CGAL/Handle_for_virtual.h
 CGAL/Cartesian/Aff_transformation_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_3.h
 ostream
 -
 CGAL/determinant.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Cartesian_base.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Cartesian_base.h
 CGAL/basic.h
 -
 CGAL/basic_classes.h
@@ -224,33 +224,33 @@ CGAL/Cartesian/function_objects.h
 CGAL/Uncertain.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Circle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Circle_2.h
 CGAL/Cartesian/predicates_on_points_2.h
 -
 boost/tuple/tuple.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Circle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Circle_3.h
 CGAL/Interval_nt.h
 -
 boost/tuple/tuple.hpp
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/boost/tuple/tuple.hpp
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/boost/tuple/tuple.hpp
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ConicCPA2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/ConicCPA2.h
 CGAL/Kernel/Conic_misc.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Data_accessor_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Data_accessor_2.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Direction_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Direction_2.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Direction_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Direction_3.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
@@ -258,7 +258,7 @@ CGAL/Handle_for.h
 CGAL/predicates/kernel_ftC3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Iso_cuboid_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Iso_cuboid_3.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
@@ -266,11 +266,11 @@ CGAL/Handle_for.h
 CGAL/Cartesian/predicates_on_points_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Iso_rectangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Iso_rectangle_2.h
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Line_2.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
@@ -278,11 +278,11 @@ CGAL/Handle_for.h
 CGAL/predicates/kernel_ftC2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Line_3.h
 CGAL/Handle_for.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Plane_3.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
@@ -292,49 +292,49 @@ CGAL/Cartesian/solve_3.h
 CGAL/Cartesian/plane_constructions_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Point_2.h
 CGAL/Origin.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Point_3.h
 CGAL/Origin.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Ray_2.h
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Ray_3.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Reflection_rep_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Reflection_rep_2.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Rotation_rep_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Rotation_rep_2.h
 CGAL/rational_rotation.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_2.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_3.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Segment_2.h
 CGAL/array.h
 -
 CGAL/Cartesian/predicates_on_points_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Segment_3.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Sphere_3.h
 CGAL/Handle_for.h
 -
 CGAL/Interval_nt.h
@@ -344,7 +344,7 @@ boost/tuple/tuple.hpp
 CGAL/Kernel/global_functions_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Tetrahedron_3.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
@@ -356,25 +356,25 @@ vector
 functional
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_2.h
 CGAL/Cartesian/Aff_transformation_rep_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_3.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_2.h
 CGAL/Cartesian/predicates_on_points_2.h
 -
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_3.h
 CGAL/Handle_for.h
 -
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Vector_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Vector_2.h
 CGAL/Origin.h
 -
 CGAL/array.h
@@ -384,7 +384,7 @@ CGAL/constant.h
 CGAL/Handle_for.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Vector_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Vector_3.h
 CGAL/Origin.h
 -
 CGAL/array.h
@@ -392,7 +392,7 @@ CGAL/array.h
 CGAL/constant.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_2.h
 CGAL/Handle_for.h
 -
 CGAL/Origin.h
@@ -402,7 +402,7 @@ boost/tuple/tuple.hpp
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_3.h
 CGAL/Handle_for.h
 -
 CGAL/Origin.h
@@ -412,7 +412,7 @@ boost/tuple/tuple.hpp
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_2.h
 CGAL/Cartesian/point_constructions_2.h
 -
 CGAL/Cartesian/line_constructions_2.h
@@ -420,7 +420,7 @@ CGAL/Cartesian/line_constructions_2.h
 CGAL/Cartesian/ft_constructions_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_3.h
 CGAL/Cartesian/point_constructions_3.h
 -
 CGAL/Cartesian/plane_constructions_3.h
@@ -428,9 +428,9 @@ CGAL/Cartesian/plane_constructions_3.h
 CGAL/Cartesian/ft_constructions_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_2.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_3.h
 CGAL/Cartesian/Point_3.h
 -
 CGAL/Cartesian/Vector_3.h
@@ -440,7 +440,7 @@ CGAL/Cartesian/Plane_3.h
 CGAL/constructions/kernel_ftC3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/function_objects.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/function_objects.h
 CGAL/Kernel/function_objects.h
 -
 CGAL/predicates/kernel_ftC2.h
@@ -458,7 +458,7 @@ CGAL/Distance_3/Point_3_Point_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/line_constructions_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/line_constructions_2.h
 CGAL/Cartesian/Point_2.h
 -
 CGAL/Cartesian/Line_2.h
@@ -466,7 +466,7 @@ CGAL/Cartesian/Line_2.h
 CGAL/Cartesian/Direction_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/plane_constructions_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/plane_constructions_3.h
 CGAL/Cartesian/Point_3.h
 -
 CGAL/Cartesian/Direction_3.h
@@ -474,43 +474,43 @@ CGAL/Cartesian/Direction_3.h
 CGAL/constructions/kernel_ftC3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_2.h
 CGAL/Cartesian/Point_2.h
 -
 CGAL/Cartesian/Line_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_3.h
 CGAL/Cartesian/Point_3.h
 -
 CGAL/constructions/kernel_ftC3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_directions_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_directions_2.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_planes_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_planes_3.h
 CGAL/predicates/kernel_ftC3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_2.h
 CGAL/Cartesian/Point_2.h
 -
 CGAL/predicates/kernel_ftC2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_3.h
 CGAL/predicates/kernel_ftC3.h
 -
 CGAL/Cartesian/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/solve_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian/solve_3.h
 CGAL/Kernel/solve.h
 -
 CGAL/Cartesian/Vector_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian_converter.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian_converter.h
 CGAL/Cartesian_converter_fwd.h
 -
 CGAL/basic.h
@@ -546,9 +546,9 @@ type_traits
 CGAL/Kernel/interface_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian_converter_fwd.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Cartesian_converter_fwd.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Chinese_remainder_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Chinese_remainder_traits.h
 CGAL/basic.h
 -
 vector
@@ -556,7 +556,7 @@ vector
 CGAL/extended_euclidean_algorithm.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Circle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Circle_2.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -570,7 +570,7 @@ CGAL/Dimension.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Circle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Circle_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -584,7 +584,7 @@ CGAL/representation_tags.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Coercion_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Coercion_traits.h
 iterator
 -
 CGAL/boost/iterator/transform_iterator.hpp
@@ -594,7 +594,7 @@ boost/type_traits/is_same.hpp
 CGAL/tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Compact_container.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Compact_container.h
 CGAL/disable_warnings.h
 -
 CGAL/config.h
@@ -634,7 +634,7 @@ boost/mpl/if.hpp
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Complex_2_in_triangulation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Complex_2_in_triangulation_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -656,7 +656,7 @@ boost/format.hpp
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Complex_2_in_triangulation_cell_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Complex_2_in_triangulation_cell_base_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Delaunay_triangulation_cell_base_3.h
@@ -666,15 +666,15 @@ bitset
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Complex_2_in_triangulation_vertex_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Complex_2_in_triangulation_vertex_base_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Triangulation_vertex_base_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Complexity_tags.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Complexity_tags.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Concurrent_compact_container.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Concurrent_compact_container.h
 CGAL/disable_warnings.h
 -
 CGAL/basic.h
@@ -712,7 +712,7 @@ boost/mpl/if.hpp
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Conic_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Conic_2.h
 CGAL/Point_2.h
 -
 CGAL/Kernel/Conic_misc.h
@@ -720,7 +720,7 @@ CGAL/Kernel/Conic_misc.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Container_helper.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Container_helper.h
 CGAL/array.h
 -
 CGAL/Has_member.h
@@ -734,9 +734,9 @@ boost/utility/enable_if.hpp
 cstddef
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Default.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Default.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/disable_warnings.h
@@ -782,7 +782,7 @@ CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_cell_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_cell_base_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/assertions.h
@@ -796,7 +796,7 @@ CGAL/Triangulation_cell_base_3.h
 boost/type_traits/is_same.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_cell_base_with_circumcenter_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_cell_base_with_circumcenter_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/basic.h
@@ -806,7 +806,7 @@ CGAL/triangulation_assertions.h
 CGAL/Delaunay_triangulation_cell_base_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Dimension.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Dimension.h
 CGAL/config.h
 -
 CGAL/Kernel_traits.h
@@ -818,7 +818,7 @@ limits
 Eigen/Core
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Direction_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Direction_2.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -834,7 +834,7 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Direction_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Direction_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -850,7 +850,7 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Line_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Kernel/global_functions.h
@@ -858,7 +858,7 @@ CGAL/Kernel/global_functions.h
 CGAL/Line_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Triangle_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/enum.h
@@ -868,7 +868,7 @@ CGAL/Line_2.h
 CGAL/Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Line_2.h
 CGAL/Rational_traits.h
 -
 CGAL/number_utils.h
@@ -880,11 +880,11 @@ CGAL/Line_2.h
 CGAL/Point_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Point_2.h
 CGAL/Point_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Ray_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Line_2.h
@@ -894,7 +894,7 @@ CGAL/Point_2.h
 CGAL/Ray_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Segment_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Point_2.h
@@ -902,7 +902,7 @@ CGAL/Point_2.h
 CGAL/Segment_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Triangle_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Point_2.h
@@ -910,7 +910,7 @@ CGAL/Point_2.h
 CGAL/Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Line_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Line_2.h
@@ -918,7 +918,7 @@ CGAL/Line_2.h
 CGAL/Ray_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Ray_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Ray_2.h
@@ -926,7 +926,7 @@ CGAL/Distance_2/Point_2_Ray_2.h
 CGAL/Ray_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Triangle_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Triangle_2.h
@@ -936,7 +936,7 @@ CGAL/Ray_2.h
 CGAL/Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Line_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Line_2.h
@@ -952,7 +952,7 @@ CGAL/Line_2.h
 CGAL/Segment_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Ray_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Line_2.h
@@ -966,7 +966,7 @@ CGAL/Segment_2.h
 CGAL/Ray_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Segment_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Line_2.h
@@ -982,7 +982,7 @@ CGAL/tags.h
 CGAL/Segment_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Triangle_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Triangle_2.h
@@ -992,7 +992,7 @@ CGAL/Segment_2.h
 CGAL/Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Triangle_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/Triangle_2_Triangle_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Distance_2/Point_2_Point_2.h
@@ -1002,7 +1002,7 @@ CGAL/Distance_2/Point_2_Triangle_2.h
 CGAL/Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/internal/squared_distance_utils_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_2/internal/squared_distance_utils_2.h
 CGAL/determinant.h
 -
 CGAL/number_utils.h
@@ -1010,13 +1010,13 @@ CGAL/number_utils.h
 CGAL/wmult.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Line_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Line_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Plane_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Line_3.h
@@ -1024,13 +1024,13 @@ CGAL/Line_3.h
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Plane_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Plane_3_Plane_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Line_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Line_3.h
@@ -1038,7 +1038,7 @@ CGAL/Line_3.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Plane_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Point_3.h
@@ -1046,11 +1046,11 @@ CGAL/Point_3.h
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Point_3.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Ray_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Point_3.h
@@ -1058,7 +1058,7 @@ CGAL/Point_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Segment_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Distance_3/Point_3_Point_3.h
@@ -1068,7 +1068,7 @@ CGAL/Point_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h
 CGAL/Distance_3/Point_3_Triangle_3.h
 -
 CGAL/Point_3.h
@@ -1076,7 +1076,7 @@ CGAL/Point_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Triangle_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Distance_3/Point_3_Segment_3.h
@@ -1086,7 +1086,7 @@ CGAL/Point_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Weighted_point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Weighted_point_3.h
 CGAL/Distance_3/Point_3_Point_3.h
 -
 CGAL/Point_3.h
@@ -1094,7 +1094,7 @@ CGAL/Point_3.h
 CGAL/Weighted_point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Line_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Line_3.h
@@ -1102,7 +1102,7 @@ CGAL/Line_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Plane_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/number_utils.h
@@ -1112,7 +1112,7 @@ CGAL/Plane_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Ray_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Ray_3.h
@@ -1120,7 +1120,7 @@ CGAL/Ray_3.h
 CGAL/Vector_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Line_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Line_3.h
@@ -1128,7 +1128,7 @@ CGAL/Line_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Plane_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Segment_3.h
@@ -1136,7 +1136,7 @@ CGAL/Segment_3.h
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Ray_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Segment_3.h
@@ -1144,7 +1144,7 @@ CGAL/Segment_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Segment_3.h
 CGAL/Distance_3/internal/squared_distance_utils_3.h
 -
 CGAL/Segment_3.h
@@ -1152,7 +1152,7 @@ CGAL/Segment_3.h
 boost/algorithm/clamp.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Triangle_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Triangle_3_Triangle_3.h
 CGAL/Distance_3/Point_3_Point_3.h
 -
 CGAL/Distance_3/Segment_3_Segment_3.h
@@ -1160,11 +1160,11 @@ CGAL/Distance_3/Segment_3_Segment_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h
 CGAL/Weighted_point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/internal/squared_distance_utils_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Distance_3/internal/squared_distance_utils_3.h
 CGAL/determinant.h
 -
 CGAL/enum.h
@@ -1176,7 +1176,7 @@ CGAL/Rational_traits.h
 CGAL/wmult.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Double_map.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Double_map.h
 CGAL/disable_warnings.h
 -
 map
@@ -1198,7 +1198,7 @@ boost/bimap/multiset_of.hpp
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Dynamic_property_map.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Dynamic_property_map.h
 boost/graph/graph_traits.hpp
 -
 boost/graph/properties.hpp
@@ -1216,19 +1216,19 @@ boost/mpl/if.hpp
 unordered_map
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Enum_converter.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Enum_converter.h
 CGAL/basic.h
 -
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Epic_converter.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Epic_converter.h
 CGAL/config.h
 -
 CGAL/Exact_predicates_inexact_constructions_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Exact_kernel_selector.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Exact_kernel_selector.h
 CGAL/Simple_cartesian.h
 -
 CGAL/Simple_homogeneous.h
@@ -1242,7 +1242,7 @@ CGAL/Cartesian_converter.h
 CGAL/Homogeneous_converter.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_exact_constructions_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Exact_predicates_exact_constructions_kernel.h
 CGAL/Simple_cartesian.h
 -
 CGAL/Filtered_kernel.h
@@ -1256,7 +1256,7 @@ CGAL/Number_types/internal/Exact_type_selector.h
 CGAL/Lazy_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_inexact_constructions_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Exact_predicates_inexact_constructions_kernel.h
 CGAL/Simple_cartesian.h
 -
 CGAL/Filtered_kernel.h
@@ -1264,7 +1264,7 @@ CGAL/Filtered_kernel.h
 CGAL/Triangulation_structural_filtering_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/FPU.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/FPU.h
 CGAL/assertions.h
 -
 CGAL/use.h
@@ -1298,7 +1298,7 @@ immintrin.h
 CGAL/test_FPU_rounding_mode_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel.h
 CGAL/Filtered_kernel_fwd.h
 -
 CGAL/basic.h
@@ -1326,7 +1326,7 @@ boost/type_traits.hpp
 CGAL/Kernel/interface_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h
 cstddef
 -
 iterator
@@ -1334,7 +1334,7 @@ iterator
 boost/variant.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h
 cstddef
 -
 iterator
@@ -1342,7 +1342,7 @@ iterator
 boost/variant.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h
 CGAL/Bbox_3.h
 -
 CGAL/Profile_counter.h
@@ -1356,7 +1356,7 @@ cmath
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
@@ -1366,7 +1366,7 @@ CGAL/Filtered_kernel/internal/Static_filters/tools.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/tools.h
@@ -1376,7 +1376,7 @@ cmath
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
@@ -1384,7 +1384,7 @@ CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
@@ -1394,7 +1394,7 @@ CGAL/Filtered_kernel/internal/Static_filters/tools.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h
 CGAL/Bbox_2.h
 -
 CGAL/Profile_counter.h
@@ -1406,7 +1406,7 @@ cmath
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h
 CGAL/Bbox_2.h
 -
 CGAL/Profile_counter.h
@@ -1418,7 +1418,7 @@ cmath
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
@@ -1426,13 +1426,13 @@ CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
 CGAL/algorithm.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h
 CGAL/Bbox_3.h
 -
 CGAL/Profile_counter.h
@@ -1446,7 +1446,7 @@ CGAL/Intersections_3/Bbox_3_Segment_3.h
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h
 CGAL/Bbox_2.h
 -
 CGAL/Profile_counter.h
@@ -1458,7 +1458,7 @@ cmath
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h
 CGAL/Bbox_3.h
 -
 CGAL/Profile_counter.h
@@ -1470,9 +1470,9 @@ cmath
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h
 CGAL/Profile_counter.h
 -
 CGAL/determinant.h
@@ -1482,7 +1482,7 @@ CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
@@ -1492,7 +1492,7 @@ cmath
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
@@ -1502,7 +1502,7 @@ CGAL/Filtered_kernel/internal/Static_filters/tools.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
@@ -1510,13 +1510,13 @@ CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h
 CGAL/Profile_counter.h
 -
 CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h
 CGAL/config.h
 -
 CGAL/FPU.h
@@ -1524,7 +1524,7 @@ CGAL/FPU.h
 boost/math/special_functions/next.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h
 CGAL/config.h
 -
 CGAL/Kernel/function_objects.h
@@ -1572,7 +1572,7 @@ CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere
 CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h
 CGAL/config.h
 -
 CGAL/function_objects.h
@@ -1580,11 +1580,11 @@ CGAL/function_objects.h
 boost/mpl/has_xxx.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel_fwd.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_kernel_fwd.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_predicate.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Filtered_predicate.h
 string
 -
 CGAL/config.h
@@ -1596,11 +1596,11 @@ CGAL/Uncertain.h
 CGAL/Profile_counter.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Fraction_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Fraction_traits.h
 CGAL/tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfi_type.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP/Gmpfi_type.h
 CGAL/config.h
 -
 CGAL/gmp.h
@@ -1628,9 +1628,9 @@ algorithm
 CGAL/GMP/Gmpfi_type_static.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfi_type_static.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP/Gmpfi_type_static.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type.h
 CGAL/disable_warnings.h
 -
 CGAL/gmp.h
@@ -1658,9 +1658,9 @@ CGAL/GMP/Gmpfr_type_static.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type_static.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type_static.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpq_type.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP/Gmpq_type.h
 CGAL/disable_warnings.h
 -
 CGAL/basic.h
@@ -1688,7 +1688,7 @@ CGAL/Profile_counter.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpz_type.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP/Gmpz_type.h
 CGAL/basic.h
 -
 CGAL/IO/io.h
@@ -1706,7 +1706,7 @@ string
 locale
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpzf_type.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP/Gmpzf_type.h
 CGAL/basic.h
 -
 CGAL/tss.h
@@ -1734,7 +1734,7 @@ string
 utility
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMPXX_arithmetic_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMPXX_arithmetic_kernel.h
 CGAL/config.h
 -
 CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h
@@ -1744,7 +1744,7 @@ CGAL/Get_arithmetic_kernel.h
 CGAL/gmpxx.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP_arithmetic_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/GMP_arithmetic_kernel.h
 CGAL/config.h
 -
 CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h
@@ -1760,7 +1760,7 @@ CGAL/Gmpfr.h
 CGAL/Gmpfi.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Generator/internal/Generic_random_point_generator.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Generator/internal/Generic_random_point_generator.h
 CGAL/assertions.h
 -
 CGAL/Iterator_range.h
@@ -1774,9 +1774,9 @@ CGAL/property_map.h
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Gmp_coercion_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Gmp_coercion_traits.h
 CGAL/number_type_basic.h
 -
 CGAL/GMP/Gmpz_type.h
@@ -1790,7 +1790,7 @@ CGAL/GMP/Gmpq_type.h
 CGAL/Coercion_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpfi.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Gmpfi.h
 CGAL/config.h
 -
 CGAL/GMP/Gmpfi_type.h
@@ -1808,7 +1808,7 @@ CGAL/GMP/Gmpfi_type.h
 CGAL/GMP_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpfr.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Gmpfr.h
 CGAL/number_type_basic.h
 -
 CGAL/mpfr_coercion_traits.h
@@ -1818,7 +1818,7 @@ CGAL/GMP/Gmpfr_type.h
 CGAL/GMP_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpq.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Gmpq.h
 CGAL/number_type_basic.h
 -
 CGAL/Gmpz.h
@@ -1832,7 +1832,7 @@ CGAL/Gmpzf.h
 CGAL/GMP_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpz.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Gmpz.h
 CGAL/config.h
 -
 CGAL/number_type_basic.h
@@ -1854,7 +1854,7 @@ CGAL/Gmpzf.h
 CGAL/GMP_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpzf.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Gmpzf.h
 CGAL/number_type_basic.h
 -
 CGAL/Gmp_coercion_traits.h
@@ -1868,7 +1868,7 @@ CGAL/Gmpz.h
 CGAL/Gmpq.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Handle.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Handle.h
 cstddef
 -
 atomic
@@ -1878,7 +1878,7 @@ CGAL/Handle_for.h
 CGAL/assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Handle_for.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Handle_for.h
 CGAL/disable_warnings.h
 -
 CGAL/config.h
@@ -1898,7 +1898,7 @@ atomic
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Handle_for_virtual.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Handle_for_virtual.h
 CGAL/config.h
 -
 typeinfo
@@ -1906,21 +1906,21 @@ typeinfo
 cstddef
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Handle_hash_function.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Handle_hash_function.h
 CGAL/config.h
 -
 cstddef
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Has_member.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Has_member.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Has_timestamp.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Has_timestamp.h
 boost/mpl/has_xxx.hpp
 -
 CGAL/tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hash_map/internal/chained_map.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hash_map/internal/chained_map.h
 CGAL/memory.h
 -
 iostream
@@ -1928,9 +1928,9 @@ iostream
 limits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_policy_tags.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_policy_tags.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_2.h
 CGAL/Hilbert_policy_tags.h
 -
 CGAL/Hilbert_sort_median_2.h
@@ -1938,7 +1938,7 @@ CGAL/Hilbert_sort_median_2.h
 CGAL/Hilbert_sort_middle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_3.h
 CGAL/Hilbert_policy_tags.h
 -
 CGAL/Hilbert_sort_median_3.h
@@ -1946,7 +1946,7 @@ CGAL/Hilbert_sort_median_3.h
 CGAL/Hilbert_sort_middle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_base.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_base.h
 CGAL/config.h
 -
 algorithm
@@ -1956,7 +1956,7 @@ CGAL/algorithm.h
 CGAL/use.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_d.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_d.h
 CGAL/Hilbert_policy_tags.h
 -
 CGAL/Hilbert_sort_median_d.h
@@ -1964,7 +1964,7 @@ CGAL/Hilbert_sort_median_d.h
 CGAL/Hilbert_sort_middle_d.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_2.h
 CGAL/assertions.h
 -
 CGAL/config.h
@@ -1982,7 +1982,7 @@ functional
 cstddef
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_3.h
 CGAL/config.h
 -
 CGAL/tags.h
@@ -1998,7 +1998,7 @@ boost/type_traits/is_convertible.hpp
 tbb/parallel_invoke.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_d.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_d.h
 CGAL/config.h
 -
 functional
@@ -2012,7 +2012,7 @@ vector
 CGAL/Hilbert_sort_base.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_2.h
 CGAL/config.h
 -
 functional
@@ -2024,7 +2024,7 @@ CGAL/Hilbert_sort_middle_base.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_3.h
 CGAL/config.h
 -
 functional
@@ -2034,13 +2034,13 @@ cstddef
 CGAL/Hilbert_sort_middle_base.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_base.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_base.h
 CGAL/config.h
 -
 algorithm
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_d.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_d.h
 CGAL/config.h
 -
 functional
@@ -2052,7 +2052,7 @@ vector
 CGAL/Hilbert_sort_middle_base.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH2.h
 CGAL/Handle_for_virtual.h
 -
 CGAL/rational_rotation.h
@@ -2060,7 +2060,7 @@ CGAL/rational_rotation.h
 CGAL/Origin.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH3.h
 CGAL/Handle_for_virtual.h
 -
 CGAL/determinant.h
@@ -2070,15 +2070,15 @@ CGAL/aff_transformation_tags.h
 ostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/ConicHPA2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/ConicHPA2.h
 CGAL/Kernel/Conic_misc.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Data_accessorH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Data_accessorH2.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH2.h
 CGAL/array.h
 -
 CGAL/Handle_for.h
@@ -2090,7 +2090,7 @@ CGAL/number_type_basic.h
 CGAL/Homogeneous/predicates_on_directionsH2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH3.h
 CGAL/kernel_config.h
 -
 CGAL/array.h
@@ -2100,7 +2100,7 @@ CGAL/Handle_for.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Homogeneous_base.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Homogeneous_base.h
 CGAL/config.h
 -
 CGAL/basic_classes.h
@@ -2186,7 +2186,7 @@ CGAL/Kernel_d/Cartesian_const_iterator_d.h
 CGAL/Kernel/interface_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_cuboidH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_cuboidH3.h
 CGAL/array.h
 -
 CGAL/enum.h
@@ -2196,21 +2196,21 @@ CGAL/kernel_config.h
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_rectangleH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_rectangleH2.h
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/LineH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/LineH2.h
 CGAL/kernel_config.h
 -
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PlaneH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/PlaneH3.h
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/PointH2.h
 CGAL/Origin.h
 -
 boost/utility/enable_if.hpp
@@ -2222,7 +2222,7 @@ boost/mpl/and.hpp
 boost/mpl/logical.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/PointH3.h
 CGAL/Origin.h
 -
 boost/utility/enable_if.hpp
@@ -2232,7 +2232,7 @@ boost/mpl/and.hpp
 boost/mpl/logical.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/RayH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/RayH3.h
 utility
 -
 CGAL/kernel_config.h
@@ -2242,7 +2242,7 @@ CGAL/assertions.h
 CGAL/Origin.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/SphereH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/SphereH3.h
 CGAL/Interval_nt.h
 -
 CGAL/Homogeneous/predicates_on_pointsH3.h
@@ -2252,7 +2252,7 @@ boost/tuple/tuple.hpp
 CGAL/Kernel/global_functions_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH2.h
 CGAL/Origin.h
 -
 CGAL/array.h
@@ -2264,7 +2264,7 @@ CGAL/Handle_for.h
 boost/next_prior.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH3.h
 CGAL/Origin.h
 -
 CGAL/array.h
@@ -2274,7 +2274,7 @@ CGAL/Kernel_d/Cartesian_const_iterator_d.h
 boost/next_prior.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_2.h
 CGAL/Handle_for.h
 -
 CGAL/Origin.h
@@ -2284,7 +2284,7 @@ boost/tuple/tuple.hpp
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_3.h
 CGAL/Handle_for.h
 -
 CGAL/Origin.h
@@ -2294,25 +2294,25 @@ boost/tuple/tuple.hpp
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH2.h
 CGAL/Homogeneous/PointH2.h
 -
 CGAL/Homogeneous/LineH2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH3.h
 CGAL/Cartesian/Point_3.h
 -
 CGAL/Cartesian/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH2.h
 CGAL/determinant.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH3.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/function_objects.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/function_objects.h
 CGAL/Kernel/function_objects.h
 -
 CGAL/Cartesian/function_objects.h
@@ -2326,7 +2326,7 @@ CGAL/Homogeneous/predicates_on_pointsH2.h
 CGAL/Homogeneous/predicates_on_pointsH3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_directionsH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_directionsH2.h
 CGAL/Homogeneous/PointH2.h
 -
 CGAL/Homogeneous/VectorH2.h
@@ -2336,17 +2336,17 @@ CGAL/Homogeneous/DirectionH2.h
 CGAL/Homogeneous/predicates_on_pointsH2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH2.h
 CGAL/Homogeneous/PointH2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH3.h
 CGAL/Homogeneous/PointH3.h
 -
 CGAL/predicates/kernel_ftC3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous_converter.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Homogeneous_converter.h
 CGAL/basic.h
 -
 CGAL/NT_converter.h
@@ -2362,13 +2362,13 @@ CGAL/Origin.h
 type_traits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IEEE_754_unions.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IEEE_754_unions.h
 iomanip
 -
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/3MF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/3MF.h
 CGAL/IO/3MF/read_3mf.h
 -
 CGAL/IO/3MF/write_3mf.h
@@ -2394,7 +2394,7 @@ string
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/3MF/read_3mf.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/3MF/read_3mf.h
 CGAL/IO/Color.h
 -
 CGAL/Kernel_traits.h
@@ -2414,7 +2414,7 @@ string
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/3MF/write_3mf.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/3MF/write_3mf.h
 CGAL/IO/Color.h
 -
 CGAL/boost/graph/iterator.h
@@ -2428,7 +2428,7 @@ vector
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/Color.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/Color.h
 CGAL/config.h
 -
 CGAL/array.h
@@ -2440,7 +2440,7 @@ cstdlib
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/GOCAD.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/GOCAD.h
 CGAL/IO/helpers.h
 -
 CGAL/IO/io.h
@@ -2468,7 +2468,7 @@ iostream
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/Generic_writer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/Generic_writer.h
 CGAL/Named_function_parameters.h
 -
 CGAL/boost/graph/named_params_helper.h
@@ -2480,7 +2480,7 @@ iterator
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OBJ.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OBJ.h
 CGAL/IO/OBJ/File_writer_wavefront.h
 -
 CGAL/IO/Generic_writer.h
@@ -2508,7 +2508,7 @@ string
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OBJ/File_writer_wavefront.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OBJ/File_writer_wavefront.h
 CGAL/IO/io.h
 -
 fstream
@@ -2516,7 +2516,7 @@ fstream
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF.h
 CGAL/IO/OFF/Scanner_OFF.h
 -
 CGAL/IO/OFF/File_scanner_OFF.h
@@ -2552,7 +2552,7 @@ iostream
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF.h
 CGAL/IO/OFF/File_header_extended_OFF.h
 -
 iostream
@@ -2560,7 +2560,7 @@ iostream
 CGAL/IO/OFF/File_header_OFF_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF_impl.h
 CGAL/basic.h
 -
 CGAL/IO/binary_file_io.h
@@ -2580,7 +2580,7 @@ cstring
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF.h
 CGAL/config.h
 -
 iostream
@@ -2590,7 +2590,7 @@ string
 CGAL/IO/OFF/File_header_extended_OFF_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h
 CGAL/IO/OFF/File_header_extended_OFF.h
 -
 CGAL/basic.h
@@ -2608,7 +2608,7 @@ sstream
 algorithm
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_scanner_OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/File_scanner_OFF.h
 CGAL/config.h
 -
 CGAL/IO/binary_file_io.h
@@ -2630,7 +2630,7 @@ sstream
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_writer_OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/File_writer_OFF.h
 CGAL/IO/binary_file_io.h
 -
 CGAL/IO/OFF/File_header_OFF.h
@@ -2640,7 +2640,7 @@ iostream
 cstddef
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/Scanner_OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/Scanner_OFF.h
 CGAL/basic.h
 -
 CGAL/IO/OFF/File_scanner_OFF.h
@@ -2654,7 +2654,7 @@ utility
 limits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/generic_copy_OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OFF/generic_copy_OFF.h
 CGAL/IO/OFF/File_header_OFF.h
 -
 CGAL/IO/OFF/File_scanner_OFF.h
@@ -2664,19 +2664,19 @@ cstddef
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OI.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OI.h
 CGAL/IO/OI/File_writer_inventor.h
 -
 CGAL/IO/OI/Inventor_ostream.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OI/File_writer_inventor.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OI/File_writer_inventor.h
 CGAL/IO/OI/Inventor_ostream.h
 -
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OI/Inventor_ostream.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/OI/Inventor_ostream.h
 CGAL/basic.h
 -
 iostream
@@ -2684,7 +2684,7 @@ iostream
 CGAL/boost/graph/named_params_helper.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/PLY.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/PLY.h
 CGAL/IO/PLY/PLY_reader.h
 -
 CGAL/IO/PLY/PLY_writer.h
@@ -2718,7 +2718,7 @@ utility
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_reader.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_reader.h
 CGAL/Container_helper.h
 -
 CGAL/IO/io.h
@@ -2746,11 +2746,11 @@ utility
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_writer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_writer.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/STL.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/STL.h
 CGAL/IO/STL/STL_reader.h
 -
 CGAL/IO/helpers.h
@@ -2772,7 +2772,7 @@ fstream
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/STL/STL_reader.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/STL/STL_reader.h
 CGAL/IO/io.h
 -
 CGAL/IO/helpers.h
@@ -2792,7 +2792,7 @@ string
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/VRML.h
 CGAL/IO/VRML/File_writer_VRML_2.h
 -
 CGAL/IO/VRML/VRML_1_ostream.h
@@ -2800,7 +2800,7 @@ CGAL/IO/VRML/VRML_1_ostream.h
 CGAL/IO/VRML/VRML_2_ostream.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/File_writer_VRML_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/VRML/File_writer_VRML_2.h
 CGAL/basic.h
 -
 CGAL/IO/VRML/VRML_2_ostream.h
@@ -2810,13 +2810,13 @@ cstddef
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_1_ostream.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_1_ostream.h
 CGAL/IO/OI.h
 -
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_2_ostream.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_2_ostream.h
 CGAL/basic.h
 -
 iostream
@@ -2824,7 +2824,7 @@ iostream
 CGAL/boost/graph/named_params_helper.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VTK.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/VTK.h
 CGAL/IO/VTK/VTK_reader.h
 -
 CGAL/IO/VTK/VTK_writer.h
@@ -2846,7 +2846,7 @@ vtkPointSet.h
 vtkPolyData.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_reader.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_reader.h
 vtkSmartPointer.h
 -
 vtkCommand.h
@@ -2854,7 +2854,7 @@ vtkCommand.h
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_writer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_writer.h
 fstream
 -
 iostream
@@ -2862,11 +2862,11 @@ iostream
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/Verbose_ostream.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/Verbose_ostream.h
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/binary_file_io.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/binary_file_io.h
 CGAL/config.h
 -
 CGAL/assertions.h
@@ -2878,7 +2878,7 @@ cstdint
 limits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/facets_in_complex_2_to_triangle_mesh.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/facets_in_complex_2_to_triangle_mesh.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -2894,7 +2894,7 @@ stack
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/helpers.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/helpers.h
 CGAL/array.h
 -
 CGAL/assertions.h
@@ -2914,7 +2914,7 @@ boost/mpl/has_xxx.hpp
 boost/range/has_range_iterator.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/io.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/io.h
 CGAL/disable_warnings.h
 -
 CGAL/IO/io_tags.h
@@ -2940,13 +2940,13 @@ iostream
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/io_tags.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/IO/io_tags.h
 cstddef
 -
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Implicit_surface_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Implicit_surface_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -2962,9 +2962,9 @@ functional
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Installation/internal/enable_third_party_libraries.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Installation/internal/enable_third_party_libraries.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersection_traits.h
 CGAL/Kernel_traits.h
 -
 CGAL/Object.h
@@ -2978,7 +2978,7 @@ boost/type_traits/is_same.hpp
 boost/variant.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersection_traits_2.h
 CGAL/Intersection_traits.h
 -
 CGAL/Bbox_2.h
@@ -2990,7 +2990,7 @@ boost/optional.hpp
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersection_traits_3.h
 CGAL/Intersection_traits.h
 -
 CGAL/Bbox_3.h
@@ -3002,7 +3002,7 @@ boost/variant.hpp
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Circle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Circle_2.h
 CGAL/Bbox_2.h
 -
 CGAL/Circle_2.h
@@ -3010,7 +3010,7 @@ CGAL/Circle_2.h
 CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Line_2.h
 CGAL/Bbox_2.h
 -
 CGAL/Line_2.h
@@ -3018,7 +3018,7 @@ CGAL/Line_2.h
 CGAL/Intersections_2/Iso_rectangle_2_Line_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Point_2.h
 CGAL/Bbox_2.h
 -
 CGAL/Point_2.h
@@ -3026,7 +3026,7 @@ CGAL/Point_2.h
 CGAL/Intersections_2/Iso_rectangle_2_Point_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Ray_2.h
 CGAL/Bbox_2.h
 -
 CGAL/Ray_2.h
@@ -3034,7 +3034,7 @@ CGAL/Ray_2.h
 CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Circle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Circle_2.h
 CGAL/Distance_2/Point_2_Point_2.h
 -
 CGAL/Intersection_traits_2.h
@@ -3042,7 +3042,7 @@ CGAL/Intersection_traits_2.h
 CGAL/Circle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h
 CGAL/Circle_2.h
 -
 CGAL/Iso_rectangle_2.h
@@ -3050,7 +3050,7 @@ CGAL/Iso_rectangle_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Line_2.h
 CGAL/Distance_2/Point_2_Line_2.h
 -
 CGAL/Intersection_traits_2.h
@@ -3060,7 +3060,7 @@ CGAL/Circle_2.h
 CGAL/Line_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Point_2.h
 CGAL/Circle_2.h
 -
 CGAL/Point_2.h
@@ -3068,7 +3068,7 @@ CGAL/Point_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Ray_2.h
 CGAL/Distance_2/Point_2_Ray_2.h
 -
 CGAL/Intersection_traits_2.h
@@ -3078,7 +3078,7 @@ CGAL/Circle_2.h
 CGAL/Ray_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Segment_2.h
 CGAL/Distance_2/Point_2_Segment_2.h
 -
 CGAL/Intersection_traits_2.h
@@ -3088,7 +3088,7 @@ CGAL/Circle_2.h
 CGAL/Segment_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Triangle_2.h
 CGAL/Distance_2/Point_2_Point_2.h
 -
 CGAL/Distance_2/Point_2_Triangle_2.h
@@ -3100,13 +3100,13 @@ CGAL/Circle_2.h
 CGAL/Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h
 CGAL/Iso_rectangle_2.h
 -
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h
 CGAL/disable_warnings.h
 -
 CGAL/Line_2.h
@@ -3122,7 +3122,7 @@ CGAL/Intersection_traits_2.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h
 CGAL/Iso_rectangle_2.h
 -
 CGAL/Point_2.h
@@ -3130,7 +3130,7 @@ CGAL/Point_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h
 CGAL/disable_warnings.h
 -
 CGAL/Iso_rectangle_2.h
@@ -3146,7 +3146,7 @@ CGAL/Intersection_traits_2.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h
 CGAL/disable_warnings.h
 -
 CGAL/Iso_rectangle_2.h
@@ -3162,7 +3162,7 @@ CGAL/Intersection_traits_2.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h
 CGAL/Triangle_2.h
 -
 CGAL/Iso_rectangle_2.h
@@ -3178,7 +3178,7 @@ vector
 list
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Line_2.h
 CGAL/config.h
 -
 CGAL/Line_2.h
@@ -3190,7 +3190,7 @@ CGAL/number_utils.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Point_2.h
 CGAL/Line_2.h
 -
 CGAL/Point_2.h
@@ -3198,7 +3198,7 @@ CGAL/Point_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Ray_2.h
 CGAL/Line_2.h
 -
 CGAL/Ray_2.h
@@ -3214,7 +3214,7 @@ CGAL/Intersections_2/Line_2_Line_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Segment_2.h
 CGAL/Line_2.h
 -
 CGAL/Segment_2.h
@@ -3228,7 +3228,7 @@ CGAL/Intersections_2/Line_2_Line_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Triangle_2.h
 CGAL/Line_2.h
 -
 CGAL/Segment_2.h
@@ -3246,13 +3246,13 @@ CGAL/number_utils.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Point_2.h
 CGAL/Point_2.h
 -
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Ray_2.h
 CGAL/Ray_2.h
 -
 CGAL/Point_2.h
@@ -3260,7 +3260,7 @@ CGAL/Point_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Segment_2.h
 CGAL/Segment_2.h
 -
 CGAL/Point_2.h
@@ -3268,7 +3268,7 @@ CGAL/Point_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Triangle_2.h
 CGAL/Point_2.h
 -
 CGAL/Triangle_2.h
@@ -3280,7 +3280,7 @@ CGAL/number_utils.h
 CGAL/Intersections_2/internal/Straight_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Ray_2.h
 CGAL/Ray_2.h
 -
 CGAL/Segment_2.h
@@ -3296,7 +3296,7 @@ CGAL/Intersections_2/Line_2_Line_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Segment_2.h
 CGAL/Ray_2.h
 -
 CGAL/Segment_2.h
@@ -3314,7 +3314,7 @@ CGAL/Intersections_2/Line_2_Line_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Triangle_2.h
 CGAL/Ray_2.h
 -
 CGAL/Triangle_2.h
@@ -3328,7 +3328,7 @@ CGAL/Intersections_2/internal/Straight_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Segment_2.h
 CGAL/Segment_2.h
 -
 CGAL/Point_2.h
@@ -3348,7 +3348,7 @@ CGAL/Uncertain.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Triangle_2.h
 CGAL/Segment_2.h
 -
 CGAL/Triangle_2.h
@@ -3362,13 +3362,13 @@ CGAL/Intersections_2/internal/Straight_2.h
 CGAL/Intersection_traits_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h
 CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h
 -
 CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Straight_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Straight_2.h
 CGAL/Distance_2/internal/squared_distance_utils_2.h
 -
 CGAL/Intersections_2/Line_2_Line_2.h
@@ -3376,13 +3376,13 @@ CGAL/Intersections_2/Line_2_Line_2.h
 CGAL/Kernel/global_functions_internal_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h
 CGAL/Intersection_traits.h
 -
 CGAL/Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h
 CGAL/Triangle_2.h
 -
 CGAL/kernel_assertions.h
@@ -3400,7 +3400,7 @@ CGAL/Algebraic_structure_traits.h
 CGAL/Kernel/global_functions_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Bbox_3.h
@@ -3412,7 +3412,7 @@ boost/variant.hpp
 utility
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h
@@ -3424,7 +3424,7 @@ CGAL/Bbox_3.h
 CGAL/Iso_cuboid_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Line_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h
@@ -3436,7 +3436,7 @@ CGAL/Bbox_3.h
 CGAL/Line_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Plane_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h
@@ -3448,7 +3448,7 @@ CGAL/Bbox_3.h
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Point_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/Iso_cuboid_3_Point_3.h
@@ -3460,7 +3460,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Ray_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h
@@ -3472,7 +3472,7 @@ CGAL/Bbox_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Segment_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h
@@ -3484,7 +3484,7 @@ CGAL/Bbox_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h
 CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h
 -
 CGAL/Bbox_3.h
@@ -3492,7 +3492,7 @@ CGAL/Bbox_3.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h
 CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h
 -
 CGAL/Bbox_3.h
@@ -3500,7 +3500,7 @@ CGAL/Bbox_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h
 CGAL/Bbox_3.h
 -
 CGAL/Triangle_3.h
@@ -3510,7 +3510,7 @@ CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h
 CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h
@@ -3520,7 +3520,7 @@ CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h
 CGAL/Iso_cuboid_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h
@@ -3532,7 +3532,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Line_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h
@@ -3544,7 +3544,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h
@@ -3556,7 +3556,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h
@@ -3568,7 +3568,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h
@@ -3580,7 +3580,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h
@@ -3590,7 +3590,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h
@@ -3600,7 +3600,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h
 CGAL/Intersection_traits.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h
@@ -3612,7 +3612,7 @@ CGAL/Iso_cuboid_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Line_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h
@@ -3622,7 +3622,7 @@ CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h
 CGAL/Line_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Plane_3.h
 CGAL/Intersection_traits.h
 -
 CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h
@@ -3636,7 +3636,7 @@ CGAL/Plane_3.h
 boost/optional.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Point_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h
@@ -3648,7 +3648,7 @@ CGAL/Line_3.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Ray_3.h
 CGAL/Intersection_traits.h
 -
 CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h
@@ -3660,7 +3660,7 @@ CGAL/Line_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Segment_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h
@@ -3672,7 +3672,7 @@ CGAL/Line_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Sphere_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h
@@ -3682,7 +3682,7 @@ CGAL/Line_3.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h
@@ -3694,7 +3694,7 @@ CGAL/Line_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Triangle_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h
@@ -3706,7 +3706,7 @@ CGAL/Line_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h
@@ -3716,7 +3716,7 @@ CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h
@@ -3726,7 +3726,7 @@ CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h
 CGAL/Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Point_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h
@@ -3738,7 +3738,7 @@ CGAL/Plane_3.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Ray_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h
@@ -3750,7 +3750,7 @@ CGAL/Plane_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Segment_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h
@@ -3762,7 +3762,7 @@ CGAL/Plane_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Sphere_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h
@@ -3774,7 +3774,7 @@ CGAL/Plane_3.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h
@@ -3786,7 +3786,7 @@ CGAL/Plane_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Triangle_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h
@@ -3798,7 +3798,7 @@ CGAL/Plane_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Point_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h
@@ -3808,7 +3808,7 @@ CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Ray_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
@@ -3820,7 +3820,7 @@ CGAL/Point_3.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Segment_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h
@@ -3832,7 +3832,7 @@ CGAL/Point_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Sphere_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h
@@ -3844,7 +3844,7 @@ CGAL/Point_3.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h
@@ -3856,7 +3856,7 @@ CGAL/Tetrahedron_3.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Triangle_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h
@@ -3868,7 +3868,7 @@ CGAL/Point_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Ray_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h
@@ -3878,7 +3878,7 @@ CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h
 CGAL/Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Segment_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h
@@ -3890,7 +3890,7 @@ CGAL/Ray_3.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Sphere_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h
@@ -3900,7 +3900,7 @@ CGAL/Ray_3.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h
@@ -3912,7 +3912,7 @@ CGAL/Ray_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Triangle_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h
@@ -3924,7 +3924,7 @@ CGAL/Ray_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Segment_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h
@@ -3934,7 +3934,7 @@ CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h
 CGAL/Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Sphere_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h
@@ -3944,7 +3944,7 @@ CGAL/Segment_3.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h
@@ -3956,7 +3956,7 @@ CGAL/Segment_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Triangle_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h
@@ -3968,7 +3968,7 @@ CGAL/Segment_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h
@@ -3978,7 +3978,7 @@ CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h
 CGAL/Sphere_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h
@@ -3988,7 +3988,7 @@ CGAL/Sphere_3.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h
@@ -3998,7 +3998,7 @@ CGAL/Sphere_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h
@@ -4006,7 +4006,7 @@ CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h
 CGAL/Tetrahedron_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h
@@ -4018,7 +4018,7 @@ CGAL/Tetrahedron_3.h
 CGAL/Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h
 CGAL/Triangle_3.h
 -
 CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h
@@ -4026,7 +4026,7 @@ CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h
 CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h
 CGAL/Bbox_3.h
 -
 CGAL/enum.h
@@ -4034,7 +4034,7 @@ CGAL/enum.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h
@@ -4042,7 +4042,7 @@ CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h
 CGAL/Bbox_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h
 CGAL/Bbox_3.h
 -
 CGAL/Coercion_traits.h
@@ -4052,7 +4052,7 @@ CGAL/enum.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h
@@ -4062,19 +4062,19 @@ CGAL/Bbox_3.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h
 CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h
 -
 CGAL/Bbox_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h
 CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h
 -
 CGAL/Bbox_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h
@@ -4084,7 +4084,7 @@ CGAL/Bbox_3.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h
 CGAL/Coercion_traits.h
 -
 CGAL/double.h
@@ -4100,7 +4100,7 @@ CGAL/kernel_assertions.h
 boost/type_traits/is_same.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Bbox_3.h
@@ -4112,13 +4112,13 @@ boost/optional.hpp
 boost/variant.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h
 CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h
 -
 CGAL/Bbox_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h
 -
 CGAL/Bbox_3.h
@@ -4126,7 +4126,7 @@ CGAL/Bbox_3.h
 CGAL/Uncertain.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h
 CGAL/Triangle_3.h
 -
 CGAL/Bbox_3.h
@@ -4138,9 +4138,9 @@ CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/enum.h
@@ -4148,7 +4148,7 @@ CGAL/enum.h
 CGAL/wmult.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h
 CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h
 -
 CGAL/kernel_assertions.h
@@ -4156,7 +4156,7 @@ CGAL/kernel_assertions.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/kernel_assertions.h
@@ -4164,13 +4164,13 @@ CGAL/kernel_assertions.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/Uncertain.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h
 CGAL/enum.h
 -
 CGAL/kernel_basic.h
@@ -4186,9 +4186,9 @@ vector
 array
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h
@@ -4196,7 +4196,7 @@ CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h
 CGAL/Ray_3.h
 -
 CGAL/Iso_cuboid_3.h
@@ -4204,17 +4204,17 @@ CGAL/Iso_cuboid_3.h
 CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h
 CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/kernel_assertions.h
@@ -4222,7 +4222,7 @@ CGAL/kernel_assertions.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h
 CGAL/Coercion_traits.h
 -
 CGAL/number_utils.h
@@ -4230,15 +4230,15 @@ CGAL/number_utils.h
 CGAL/Uncertain.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h
 CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h
 CGAL/kernel_basic.h
 -
 CGAL/intersections.h
@@ -4250,9 +4250,9 @@ list
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/number_utils.h
@@ -4260,31 +4260,31 @@ CGAL/number_utils.h
 CGAL/Uncertain.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h
 CGAL/wmult.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/wmult.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h
 CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
 -
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h
@@ -4292,7 +4292,7 @@ CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h
 CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h
 CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h
 -
 CGAL/enum.h
@@ -4300,39 +4300,39 @@ CGAL/enum.h
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h
 CGAL/Rational_traits.h
 -
 CGAL/Distance_3/Point_3_Line_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h
 CGAL/Intersections_3/Line_3_Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h
 CGAL/determinant.h
 -
 CGAL/number_utils.h
@@ -4340,7 +4340,7 @@ CGAL/number_utils.h
 CGAL/rank.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h
@@ -4352,37 +4352,37 @@ boost/optional.hpp
 boost/variant.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
@@ -4392,21 +4392,21 @@ CGAL/kernel_assertions.h
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h
 CGAL/kernel_basic.h
 -
 CGAL/intersections.h
@@ -4416,13 +4416,13 @@ CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h
 set
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
@@ -4432,57 +4432,57 @@ CGAL/enum.h
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h
 CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h
 -
 CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
@@ -4490,13 +4490,13 @@ CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h
 CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h
 -
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h
 CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h
 -
 CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
@@ -4504,7 +4504,7 @@ CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
@@ -4512,17 +4512,17 @@ CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h
 CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h
 CGAL/Rational_traits.h
 -
 CGAL/Distance_3/Point_3_Ray_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h
@@ -4530,13 +4530,13 @@ CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h
 CGAL/kernel_basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
@@ -4546,29 +4546,29 @@ CGAL/enum.h
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h
 CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h
 -
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h
 CGAL/Rational_traits.h
 -
 CGAL/Distance_3/Point_3_Segment_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h
@@ -4576,13 +4576,13 @@ CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h
 CGAL/kernel_basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/kernel_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
@@ -4592,11 +4592,11 @@ CGAL/enum.h
 CGAL/kernel_basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h
 CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h
@@ -4604,17 +4604,17 @@ CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h
 CGAL/Rational_traits.h
 -
 CGAL/Distance_3/Point_3_Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h
 CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h
 -
 CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h
@@ -4630,15 +4630,15 @@ CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h
 CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h
 CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h
 CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h
 -
 CGAL/kernel_basic.h
@@ -4656,7 +4656,7 @@ vector
 bitset
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h
 CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h
 -
 CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h
@@ -4666,7 +4666,7 @@ CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h
 CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h
 CGAL/enum.h
 -
 CGAL/kernel_assertions.h
@@ -4674,7 +4674,7 @@ CGAL/kernel_assertions.h
 CGAL/Uncertain.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h
@@ -4694,7 +4694,7 @@ map
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h
 CGAL/Intersection_traits_3.h
 -
 CGAL/kernel_basic.h
@@ -4708,11 +4708,11 @@ utility
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Interval_arithmetic.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Interval_arithmetic.h
 CGAL/Interval_nt.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Interval_nt.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Interval_nt.h
 utility
 -
 CGAL/number_type_config.h
@@ -4738,7 +4738,7 @@ iostream
 boost/operators.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Interval_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Interval_traits.h
 CGAL/config.h
 -
 CGAL/tags.h
@@ -4748,7 +4748,7 @@ boost/type_traits/is_same.hpp
 boost/utility/enable_if.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Iso_cuboid_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Iso_cuboid_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -4760,7 +4760,7 @@ CGAL/Bbox_3.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Iso_rectangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Iso_rectangle_2.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -4772,11 +4772,11 @@ CGAL/Bbox_2.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Iterator_project.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Iterator_project.h
 iterator
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Iterator_range.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Iterator_range.h
 CGAL/tuple.h
 -
 utility
@@ -4784,7 +4784,7 @@ utility
 boost/foreach.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Conic_misc.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/Conic_misc.h
 cmath
 -
 CGAL/number_utils.h
@@ -4794,21 +4794,21 @@ CGAL/kernel_assertions.h
 boost/math/special_functions/cbrt.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Return_base_tag.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/Return_base_tag.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Same_uncertainty.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/Same_uncertainty.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Type_equality_wrapper.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/Type_equality_wrapper.h
 CGAL/user_classes.h
 -
 CGAL/Kernel/interface_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Type_mapper.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/Type_mapper.h
 CGAL/basic.h
 -
 vector
@@ -4840,7 +4840,7 @@ boost/preprocessor/repetition/enum.hpp
 CGAL/Kernel/interface_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Wutils.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/Wutils.h
 CGAL/representation_tags.h
 -
 CGAL/determinant.h
@@ -4850,7 +4850,7 @@ CGAL/Point_2.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/function_objects.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/function_objects.h
 CGAL/Origin.h
 -
 CGAL/Bbox_2.h
@@ -4872,7 +4872,7 @@ CGAL/Kernel/global_functions_3.h
 cmath
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/global_functions.h
 CGAL/Kernel/global_functions_2.h
 -
 CGAL/Kernel/global_functions_3.h
@@ -4880,7 +4880,7 @@ CGAL/Kernel/global_functions_3.h
 CGAL/Kernel/hash_functions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/global_functions_2.h
 CGAL/user_classes.h
 -
 CGAL/Kernel/global_functions_internal_2.h
@@ -4888,7 +4888,7 @@ CGAL/Kernel/global_functions_internal_2.h
 CGAL/Kernel/mpl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/global_functions_3.h
 CGAL/user_classes.h
 -
 CGAL/Kernel/global_functions_internal_3.h
@@ -4896,7 +4896,7 @@ CGAL/Kernel/global_functions_internal_3.h
 CGAL/Kernel/mpl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_2.h
 CGAL/basic.h
 -
 CGAL/Dimension.h
@@ -4904,13 +4904,13 @@ CGAL/Dimension.h
 boost/utility/enable_if.hpp
 -
 boost/mpl/equal_to.hpp
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/boost/mpl/equal_to.hpp
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/boost/mpl/equal_to.hpp
 boost/mpl/int.hpp
 -
 boost/mpl/integral_c.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_3.h
 CGAL/basic.h
 -
 CGAL/Dimension.h
@@ -4922,21 +4922,21 @@ boost/mpl/equal_to.hpp
 boost/mpl/integral_c.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/hash_functions.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/hash_functions.h
 boost/functional/hash.hpp
 -
 type_traits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/interface_macros.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/interface_macros.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/mpl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/mpl.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/solve.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel/solve.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h
 CGAL/basic.h
 -
 CGAL/Quotient.h
@@ -4944,7 +4944,7 @@ CGAL/Quotient.h
 iterator
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel_traits.h
 CGAL/Kernel_traits_fwd.h
 -
 boost/mpl/has_xxx.hpp
@@ -4952,9 +4952,9 @@ boost/mpl/has_xxx.hpp
 boost/mpl/if.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_traits_fwd.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Kernel_traits_fwd.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/LEDA_arithmetic_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/LEDA_arithmetic_kernel.h
 CGAL/basic.h
 -
 CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h
@@ -4972,13 +4972,13 @@ CGAL/leda_real.h
 CGAL/leda_bigfloat_interval.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/LEDA_basic.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/LEDA_basic.h
 CGAL/config.h
 -
 LEDA/system/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Lazy.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Lazy.h
 CGAL/disable_warnings.h
 -
 CGAL/basic.h
@@ -5062,7 +5062,7 @@ CGAL/Kernel/interface_macros.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Lazy_exact_nt.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Lazy_exact_nt.h
 CGAL/number_type_basic.h
 -
 CGAL/assertions.h
@@ -5102,7 +5102,7 @@ CGAL/type_traits.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Lazy_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Lazy_kernel.h
 CGAL/basic.h
 -
 CGAL/Static_filtered_predicate.h
@@ -5140,7 +5140,7 @@ boost/type_traits/remove_cv.hpp
 CGAL/Kernel/interface_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Line_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Line_2.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5154,7 +5154,7 @@ CGAL/IO/io.h
 CGAL/Kernel/mpl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Line_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Line_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5166,11 +5166,11 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Location_policy.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Location_policy.h
 CGAL/Complexity_tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/MP_Float.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/MP_Float.h
 CGAL/disable_warnings.h
 -
 CGAL/number_type_basic.h
@@ -5204,7 +5204,7 @@ CGAL/MP_Float_arithmetic_kernel.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/MP_Float_arithmetic_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/MP_Float_arithmetic_kernel.h
 CGAL/basic.h
 -
 CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h
@@ -5216,7 +5216,7 @@ CGAL/MP_Float.h
 CGAL/Quotient.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/MP_Float_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/MP_Float_impl.h
 CGAL/basic.h
 -
 CGAL/Quotient.h
@@ -5228,11 +5228,11 @@ cmath
 CGAL/MP_Float.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Mesh_2/Output_stream.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Mesh_2/Output_stream.h
 CGAL/IO/Verbose_ostream.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Mesh_3/Profiling_tools.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Mesh_3/Profiling_tools.h
 CGAL/license/Mesh_3.h
 -
 tbb/tick_count.h
@@ -5240,7 +5240,7 @@ tbb/tick_count.h
 CGAL/Real_timer.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Mesher_level.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Mesher_level.h
 string
 -
 CGAL/Mesher_level_visitors.h
@@ -5248,7 +5248,7 @@ CGAL/Mesher_level_visitors.h
 CGAL/Mesher_level_default_implementations.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Mesher_level_default_implementations.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Mesher_level_default_implementations.h
 CGAL/disable_warnings.h
 -
 CGAL/Mesher_level.h
@@ -5256,17 +5256,17 @@ CGAL/Mesher_level.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Mesher_level_visitors.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Mesher_level_visitors.h
 CGAL/disable_warnings.h
 -
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Meshes/Simple_map_container.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Meshes/Simple_map_container.h
 map
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Meshes/Triangulation_mesher_level_traits_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Meshes/Triangulation_mesher_level_traits_3.h
 CGAL/disable_warnings.h
 -
 vector
@@ -5280,7 +5280,7 @@ CGAL/tags.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Modular_arithmetic/Residue_type.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Modular_arithmetic/Residue_type.h
 CGAL/tss.h
 -
 CGAL/FPU.h
@@ -5298,11 +5298,11 @@ cmath
 boost/operators.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Modular_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Modular_traits.h
 CGAL/tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Mpzf.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Mpzf.h
 cstdlib
 -
 algorithm
@@ -5348,7 +5348,7 @@ boost/detail/workaround.hpp
 boost/version.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Multiscale_sort.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Multiscale_sort.h
 CGAL/config.h
 -
 CGAL/assertions.h
@@ -5358,7 +5358,7 @@ iterator
 cstddef
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/NT_converter.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/NT_converter.h
 CGAL/number_type_config.h
 -
 CGAL/number_utils.h
@@ -5366,7 +5366,7 @@ CGAL/number_utils.h
 functional
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Named_function_parameters.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Named_function_parameters.h
 CGAL/basic.h
 -
 CGAL/tags.h
@@ -5386,7 +5386,7 @@ CGAL/STL_Extension/internal/parameters_interface.h
 CGAL/STL_Extension/internal/parameters_interface.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Needs_parens_as_product.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Needs_parens_as_product.h
 CGAL/disable_warnings.h
 -
 CGAL/IO/io.h
@@ -5394,7 +5394,7 @@ CGAL/IO/io.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Number_types/internal/Exact_type_selector.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Number_types/internal/Exact_type_selector.h
 CGAL/number_type_basic.h
 -
 CGAL/MP_Float.h
@@ -5422,7 +5422,7 @@ CGAL/leda_rational.h
 CGAL/leda_real.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Object.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Object.h
 CGAL/config.h
 -
 CGAL/assertions.h
@@ -5440,15 +5440,15 @@ boost/any.hpp
 memory
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Origin.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Origin.h
 CGAL/config.h
 -
 CGAL/Origin_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Origin_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Origin_impl.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Plane_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Plane_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5460,7 +5460,7 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Point_2.h
 CGAL/Origin.h
 -
 CGAL/Bbox_2.h
@@ -5476,7 +5476,7 @@ CGAL/representation_tags.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Point_3.h
 CGAL/Origin.h
 -
 CGAL/representation_tags.h
@@ -5492,7 +5492,7 @@ CGAL/Bbox_3.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Profile_counter.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Profile_counter.h
 CGAL/config.h
 -
 iostream
@@ -5510,11 +5510,11 @@ atomic
 CGAL/disable_warnings.h
 -
 tbb/concurrent_hash_map.h
-/home/toler/CGAL-5.5.2/include/CGAL/tbb/concurrent_hash_map.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/tbb/concurrent_hash_map.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Profile_timer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Profile_timer.h
 CGAL/config.h
 -
 iostream
@@ -5530,7 +5530,7 @@ CGAL/disable_warnings.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Quotient.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Quotient.h
 utility
 -
 istream
@@ -5544,9 +5544,9 @@ boost/operators.hpp
 boost/multiprecision/cpp_int.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Quotient_fwd.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Quotient_fwd.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Random.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Random.h
 string
 -
 utility
@@ -5570,7 +5570,7 @@ boost/random/variate_generator.hpp
 CGAL/Random_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Random_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Random_impl.h
 ctime
 -
 iostream
@@ -5578,7 +5578,7 @@ iostream
 sstream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Rational_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Rational_traits.h
 CGAL/number_type_basic.h
 -
 CGAL/Fraction_traits.h
@@ -5588,7 +5588,7 @@ CGAL/is_convertible.h
 boost/utility/enable_if.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Ray_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Ray_2.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5604,7 +5604,7 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Ray_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Ray_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5618,11 +5618,11 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Real_embeddable_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Real_embeddable_traits.h
 CGAL/Algebraic_structure_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Real_timer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Real_timer.h
 CGAL/config.h
 -
 CGAL/assertions.h
@@ -5632,7 +5632,7 @@ cfloat
 CGAL/Real_timer_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Real_timer_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Real_timer_impl.h
 sys/timeb.h
 -
 sys/types.h
@@ -5644,7 +5644,7 @@ sys/types.h
 sys/time.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Residue.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Residue.h
 CGAL/Modular_arithmetic/Residue_type.h
 -
 CGAL/Coercion_traits.h
@@ -5654,7 +5654,7 @@ CGAL/int.h
 CGAL/Algebraic_structure_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Robust_circumcenter_traits_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Robust_circumcenter_traits_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/number_utils_classes.h
@@ -5666,31 +5666,31 @@ CGAL/Robust_construction.h
 CGAL/Exact_predicates_exact_constructions_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Robust_construction.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Robust_construction.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_member_visited.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_member_visited.h
 boost/mpl/has_xxx.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h
 boost/mpl/has_xxx.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/info_check.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/STL_Extension/internal/info_check.h
 boost/mpl/has_xxx.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/parameters_interface.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/STL_Extension/internal/parameters_interface.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Scalar_factor_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Scalar_factor_traits.h
 CGAL/assertions.h
 -
 CGAL/Algebraic_structure_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Segment_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Segment_2.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5704,7 +5704,7 @@ CGAL/Dimension.h
 CGAL/kernel_config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Segment_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Segment_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5720,7 +5720,7 @@ CGAL/Bbox_3.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Simple_cartesian.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Simple_cartesian.h
 CGAL/Cartesian/Cartesian_base.h
 -
 CGAL/Handle_for.h
@@ -5730,7 +5730,7 @@ CGAL/Kernel/Type_equality_wrapper.h
 CGAL/Kernel/interface_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Simple_homogeneous.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Simple_homogeneous.h
 CGAL/Homogeneous/Homogeneous_base.h
 -
 CGAL/Handle_for.h
@@ -5740,13 +5740,13 @@ CGAL/Kernel/Type_equality_wrapper.h
 CGAL/Quotient.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Small_unordered_map.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Small_unordered_map.h
 array
 -
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_lock_grid_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Spatial_lock_grid_3.h
 CGAL/Bbox_3.h
 -
 atomic
@@ -5760,13 +5760,13 @@ algorithm
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_sort_traits_adapter_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Spatial_sort_traits_adapter_3.h
 boost/call_traits.hpp
 -
 CGAL/property_map.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sphere_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sphere_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -5780,7 +5780,7 @@ CGAL/representation_tags.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension.h
 CGAL/number_type_basic.h
 -
 CGAL/Sqrt_extension/Sqrt_extension_type.h
@@ -5812,15 +5812,15 @@ CGAL/Sqrt_extension/Wang_traits.h
 CGAL/Sqrt_extension/Eigen_NumTraits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h
 CGAL/basic.h
 -
 CGAL/Chinese_remainder_traits.h
@@ -5828,23 +5828,23 @@ CGAL/Chinese_remainder_traits.h
 CGAL/Sqrt_extension/Sqrt_extension_type.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Coercion_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Coercion_traits.h
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Eigen_NumTraits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Eigen_NumTraits.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Fraction_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Fraction_traits.h
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h
 CGAL/basic.h
 -
 CGAL/Get_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Modular_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Modular_traits.h
 CGAL/basic.h
 -
 CGAL/Residue.h
@@ -5852,15 +5852,15 @@ CGAL/Residue.h
 CGAL/Modular_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Real_embeddable_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Real_embeddable_traits.h
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Scalar_factor_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Scalar_factor_traits.h
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Sqrt_extension_type.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Sqrt_extension_type.h
 CGAL/disable_warnings.h
 -
 CGAL/number_type_basic.h
@@ -5880,13 +5880,13 @@ CGAL/NT_converter.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Wang_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/Wang_traits.h
 CGAL/basic.h
 -
 CGAL/Sqrt_extension/Sqrt_extension_type.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/convert_to_bfi.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/convert_to_bfi.h
 CGAL/basic.h
 -
 CGAL/convert_to_bfi.h
@@ -5900,7 +5900,7 @@ CGAL/assertions.h
 CGAL/tss.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/io.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension/io.h
 sstream
 -
 CGAL/basic.h
@@ -5908,15 +5908,15 @@ CGAL/basic.h
 CGAL/Sqrt_extension/Sqrt_extension_type.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension_fwd.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Sqrt_extension_fwd.h
 CGAL/tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Static_filtered_predicate.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Static_filtered_predicate.h
 CGAL/Epic_converter.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/Surface_mesh/Surface_mesh_fwd.h
@@ -5924,7 +5924,7 @@ CGAL/Surface_mesh/Surface_mesh_fwd.h
 CGAL/Surface_mesh/Surface_mesh.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh/IO.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/Surface_mesh/Surface_mesh_fwd.h
@@ -5940,7 +5940,7 @@ CGAL/boost/graph/io.h
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/3MF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/3MF.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/Surface_mesh/Surface_mesh_fwd.h
@@ -5954,7 +5954,7 @@ string
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/OFF.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/Surface_mesh/Surface_mesh_fwd.h
@@ -5972,7 +5972,7 @@ iostream
 tuple
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/PLY.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/PLY.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/Surface_mesh/Surface_mesh_fwd.h
@@ -5986,7 +5986,7 @@ CGAL/boost/graph/named_params_helper.h
 CGAL/IO/PLY.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Properties.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh/Properties.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/assertions.h
@@ -6002,7 +6002,7 @@ typeinfo
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/disable_warnings.h
@@ -6064,9 +6064,9 @@ vector
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh_fwd.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh_fwd.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_cell_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh_cell_base_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Complex_2_in_triangulation_cell_base_3.h
@@ -6078,7 +6078,7 @@ string
 bitset
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_complex_2_in_triangulation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh_complex_2_in_triangulation_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -6088,7 +6088,7 @@ CGAL/Complex_2_in_triangulation_3.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_default_criteria_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh_default_criteria_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Surface_mesher/Standard_criteria.h
@@ -6096,7 +6096,7 @@ CGAL/Surface_mesher/Standard_criteria.h
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_default_triangulation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh_default_triangulation_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -6116,13 +6116,13 @@ CGAL/Delaunay_triangulation_cell_base_with_circumcenter_3.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_traits_generator_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh_traits_generator_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Surface_mesher/Sphere_oracle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_vertex_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesh_vertex_base_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Triangulation_vertex_base_3.h
@@ -6130,7 +6130,7 @@ CGAL/Triangulation_vertex_base_3.h
 CGAL/Complex_2_in_triangulation_vertex_base_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Implicit_surface_oracle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Implicit_surface_oracle_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -6164,21 +6164,21 @@ boost/format.hpp
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Null_oracle_visitor.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Null_oracle_visitor.h
 CGAL/license/Surface_mesher.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Profile_counter.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Profile_counter.h
 CGAL/Profile_counter.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Profile_timer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Profile_timer.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Profile_timer.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Sphere_oracle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Sphere_oracle_3.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -6196,7 +6196,7 @@ boost/tuple/tuple.hpp
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Standard_criteria.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Standard_criteria.h
 CGAL/license/Surface_mesher.h
 -
 cmath
@@ -6206,7 +6206,7 @@ vector
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -6242,7 +6242,7 @@ CGAL/use.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_edges_level.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_edges_level.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Mesh_2/Output_stream.h
@@ -6268,13 +6268,13 @@ set
 boost/format.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_edges_level_visitor.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_edges_level_visitor.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Meshes/Triangulation_mesher_level_traits_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_manifold.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_manifold.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -6284,7 +6284,7 @@ CGAL/Surface_mesher/Surface_mesher_regular_edges.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_regular_edges.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_regular_edges.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/disable_warnings.h
@@ -6302,23 +6302,23 @@ vector
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_visitor.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Surface_mesher_visitor.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Meshes/Triangulation_mesher_level_traits_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Types_generators.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Types_generators.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Meshes/Triangulation_mesher_level_traits_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher/Verbose_flag.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher/Verbose_flag.h
 CGAL/license/Surface_mesher.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesher_generator.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Surface_mesher_generator.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Surface_mesher/Surface_mesher.h
@@ -6340,11 +6340,11 @@ CGAL/Surface_mesher/Verbose_flag.h
 CGAL/Surface_mesher/Types_generators.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Dummy_tds_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/TDS_3/internal/Dummy_tds_3.h
 CGAL/license/TDS_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h
 CGAL/license/TDS_3.h
 -
 CGAL/triangulation_assertions.h
@@ -6354,7 +6354,7 @@ CGAL/Triangulation_utils_3.h
 CGAL/circulator_bases.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h
 CGAL/license/TDS_3.h
 -
 utility
@@ -6364,7 +6364,7 @@ CGAL/triangulation_assertions.h
 CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Tetrahedron_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Tetrahedron_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -6376,11 +6376,11 @@ CGAL/Bbox_3.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Time_stamper.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Time_stamper.h
 CGAL/Has_timestamp.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Timer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Timer.h
 CGAL/config.h
 -
 CGAL/assertions.h
@@ -6388,7 +6388,7 @@ CGAL/assertions.h
 CGAL/Timer_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Timer_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Timer_impl.h
 climits
 -
 unistd.h
@@ -6400,7 +6400,7 @@ ctime
 cfloat
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangle_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangle_2.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -6414,7 +6414,7 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangle_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangle_3.h
 CGAL/assertions.h
 -
 boost/type_traits/is_same.hpp
@@ -6426,7 +6426,7 @@ CGAL/Bbox_3.h
 CGAL/Dimension.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/disable_warnings.h
@@ -6510,17 +6510,17 @@ tbb/scalable_allocator.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/Triangulation_hierarchy_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h
 CGAL/license/Triangulation_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_cell_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_cell_base_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/basic.h
@@ -6530,7 +6530,7 @@ CGAL/triangulation_assertions.h
 CGAL/Triangulation_ds_cell_base_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_data_structure_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_data_structure_3.h
 CGAL/license/TDS_3.h
 -
 CGAL/disable_warnings.h
@@ -6588,7 +6588,7 @@ type_traits
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_cell_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_ds_cell_base_3.h
 CGAL/license/TDS_3.h
 -
 CGAL/basic.h
@@ -6598,7 +6598,7 @@ CGAL/triangulation_assertions.h
 CGAL/TDS_3/internal/Dummy_tds_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_vertex_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_ds_vertex_base_3.h
 CGAL/license/TDS_3.h
 -
 CGAL/basic.h
@@ -6606,7 +6606,7 @@ CGAL/basic.h
 CGAL/TDS_3/internal/Dummy_tds_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/basic.h
@@ -6650,13 +6650,13 @@ array
 CGAL/array.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_vertex_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_vertex_base_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_segment_traverser_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_segment_traverser_3.h
 CGAL/license/Triangulation_3.h
 -
 iostream
@@ -6680,7 +6680,7 @@ CGAL/Triangulation_simplex_3.h
 CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_simplex_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_simplex_3.h
 CGAL/license/TDS_3.h
 -
 CGAL/assertions.h
@@ -6688,11 +6688,11 @@ CGAL/assertions.h
 algorithm
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_structural_filtering_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_structural_filtering_traits.h
 CGAL/tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_utils_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_utils_3.h
 CGAL/license/TDS_3.h
 -
 CGAL/basic.h
@@ -6700,7 +6700,7 @@ CGAL/basic.h
 CGAL/triangulation_assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_3.h
 CGAL/license/Triangulation_3.h
 -
 CGAL/basic.h
@@ -6708,7 +6708,7 @@ CGAL/basic.h
 CGAL/Triangulation_ds_vertex_base_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Uncertain.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Uncertain.h
 CGAL/config.h
 -
 CGAL/assertions.h
@@ -6722,7 +6722,7 @@ stdexcept
 typeinfo
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Union_find.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Union_find.h
 CGAL/basic.h
 -
 CGAL/memory.h
@@ -6730,7 +6730,7 @@ CGAL/memory.h
 cstddef
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Unique_hash_map.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Unique_hash_map.h
 CGAL/disable_warnings.h
 -
 CGAL/config.h
@@ -6746,7 +6746,7 @@ cstddef
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Vector_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Vector_2.h
 CGAL/Origin.h
 -
 CGAL/Kernel/mpl.h
@@ -6766,7 +6766,7 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Vector_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Vector_3.h
 CGAL/Origin.h
 -
 CGAL/Kernel/mpl.h
@@ -6786,7 +6786,7 @@ CGAL/Dimension.h
 CGAL/IO/io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Weighted_point_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Weighted_point_2.h
 CGAL/Origin.h
 -
 CGAL/representation_tags.h
@@ -6804,7 +6804,7 @@ CGAL/Dimension.h
 CGAL/Point_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/Weighted_point_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/Weighted_point_3.h
 CGAL/Origin.h
 -
 CGAL/representation_tags.h
@@ -6822,15 +6822,15 @@ CGAL/Dimension.h
 CGAL/Point_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/aff_transformation_tags.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/aff_transformation_tags.h
 CGAL/config.h
 -
 CGAL/aff_transformation_tags_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/aff_transformation_tags_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/aff_transformation_tags_impl.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/algorithm.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/algorithm.h
 CGAL/config.h
 -
 CGAL/utils.h
@@ -6852,7 +6852,7 @@ boost/random.hpp
 boost/random/linear_congruential.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/array.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/array.h
 CGAL/config.h
 -
 array
@@ -6860,7 +6860,7 @@ array
 utility
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/assertions.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/assertions.h
 CGAL/config.h
 -
 CGAL/export/CGAL.h
@@ -6870,11 +6870,11 @@ CGAL/Uncertain.h
 CGAL/assertions_impl.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/assertions_behaviour.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/assertions_behaviour.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/assertions_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/assertions_impl.h
 CGAL/config.h
 -
 CGAL/assertions.h
@@ -6888,19 +6888,19 @@ cstdlib
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/auto_link/CGAL.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/auto_link/CGAL.h
 CGAL/config.h
 -
 CGAL/auto_link/auto_link.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/auto_link/auto_link.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/auto_link/auto_link.h
 boost/config.hpp
 -
 CGAL/version.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/basic.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/basic.h
 CGAL/config.h
 -
 iostream
@@ -6918,7 +6918,7 @@ CGAL/IO/io.h
 CGAL/kernel_basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/basic_classes.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/basic_classes.h
 CGAL/Origin.h
 -
 CGAL/Bbox_2.h
@@ -6930,13 +6930,13 @@ CGAL/representation_tags.h
 CGAL/aff_transformation_tags.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/bimap.hpp
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/bimap.hpp
 boost/config.hpp
 -
 boost/bimap.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/Euler_operations.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/Euler_operations.h
 stdexcept
 -
 algorithm
@@ -6960,7 +6960,7 @@ CGAL/boost/graph/named_params_helper.h
 boost/container/small_vector.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/3MF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/3MF.h
 CGAL/IO/3MF.h
 -
 CGAL/IO/helpers.h
@@ -6978,7 +6978,7 @@ unordered_map
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/GOCAD.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/GOCAD.h
 CGAL/IO/GOCAD.h
 -
 CGAL/assertions.h
@@ -7000,7 +7000,7 @@ iostream
 utility
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h
 CGAL/boost/graph/Euler_operations.h
 -
 CGAL/boost/graph/named_params_helper.h
@@ -7012,7 +7012,7 @@ string
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h
 CGAL/assertions.h
 -
 CGAL/boost/graph/iterator.h
@@ -7030,7 +7030,7 @@ string
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/INP.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/INP.h
 CGAL/boost/graph/iterator.h
 -
 CGAL/Named_function_parameters.h
@@ -7044,7 +7044,7 @@ fstream
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/OBJ.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/OBJ.h
 CGAL/IO/OBJ.h
 -
 CGAL/boost/graph/IO/Generic_facegraph_builder.h
@@ -7072,7 +7072,7 @@ utility
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/OFF.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/OFF.h
 CGAL/IO/OFF.h
 -
 CGAL/IO/helpers.h
@@ -7098,7 +7098,7 @@ iostream
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/PLY.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/PLY.h
 CGAL/IO/PLY.h
 -
 CGAL/IO/helpers.h
@@ -7116,7 +7116,7 @@ fstream
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/STL.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/STL.h
 CGAL/boost/graph/IO/Generic_facegraph_builder.h
 -
 CGAL/IO/STL.h
@@ -7134,7 +7134,7 @@ iostream
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/VTK.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/VTK.h
 CGAL/IO/VTK.h
 -
 CGAL/boost/graph/Euler_operations.h
@@ -7160,7 +7160,7 @@ vtkPointSet.h
 vtkPolyData.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/WRL.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/WRL.h
 CGAL/IO/VRML.h
 -
 CGAL/boost/graph/IO/Generic_facegraph_printer.h
@@ -7174,7 +7174,7 @@ fstream
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/polygon_mesh_io.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/IO/polygon_mesh_io.h
 CGAL/boost/graph/IO/3MF.h
 -
 CGAL/boost/graph/IO/GOCAD.h
@@ -7200,7 +7200,7 @@ fstream
 string
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/copy_face_graph.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/copy_face_graph.h
 CGAL/config.h
 -
 CGAL/iterator.h
@@ -7228,7 +7228,7 @@ boost/iterator/function_output_iterator.hpp
 unordered_map
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/generators.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/generators.h
 CGAL/boost/graph/iterator.h
 -
 CGAL/boost/graph/properties.h
@@ -7246,7 +7246,7 @@ vector
 CGAL/boost/graph/Euler_operations.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/graph_traits_Surface_mesh.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/graph_traits_Surface_mesh.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/Named_function_parameters.h
@@ -7266,7 +7266,7 @@ CGAL/Surface_mesh.h
 CGAL/assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/helpers.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/helpers.h
 CGAL/boost/graph/iterator.h
 -
 CGAL/boost/graph/properties.h
@@ -7282,9 +7282,9 @@ boost/range/empty.hpp
 CGAL/boost/graph/generators.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/Has_member_clear.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/internal/Has_member_clear.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/helpers.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/internal/helpers.h
 boost/graph/graph_traits.hpp
 -
 boost/optional.hpp
@@ -7292,7 +7292,7 @@ boost/optional.hpp
 CGAL/boost/graph/iterator.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h
 CGAL/assertions.h
 -
 CGAL/Named_function_parameters.h
@@ -7308,7 +7308,7 @@ vector
 type_traits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/io.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/io.h
 CGAL/boost/graph/IO/3MF.h
 -
 CGAL/boost/graph/IO/GOCAD.h
@@ -7330,7 +7330,7 @@ CGAL/boost/graph/IO/WRL.h
 CGAL/boost/graph/IO/polygon_mesh_io.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/iterator.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/iterator.h
 stdexcept
 -
 boost/graph/graph_traits.hpp
@@ -7346,7 +7346,7 @@ CGAL/circulator_bases.h
 CGAL/boost/graph/internal/helpers.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/named_params_helper.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/named_params_helper.h
 CGAL/boost/graph/internal/initialized_index_maps_helpers.h
 -
 CGAL/boost/graph/properties.h
@@ -7376,7 +7376,7 @@ iterator
 type_traits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/properties.h
 CGAL/property_map.h
 -
 CGAL/Dynamic_property_map.h
@@ -7394,7 +7394,7 @@ vector
 type_traits
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh.h
 CGAL/license/Surface_mesh.h
 -
 CGAL/assertions.h
@@ -7418,19 +7418,19 @@ CGAL/boost/graph/properties_Surface_mesh_time_stamp.h
 CGAL/boost/graph/properties_Surface_mesh_features.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_features.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_features.h
 CGAL/Surface_mesh.h
 -
 set
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h
 CGAL/Surface_mesh.h
 -
 set
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/property_maps.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/graph/property_maps.h
 CGAL/property_map.h
 -
 CGAL/boost/graph/properties.h
@@ -7442,19 +7442,19 @@ boost/mpl/if.hpp
 boost/type_traits/remove_const.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/iterator/counting_iterator.hpp
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/iterator/counting_iterator.hpp
 boost/config.hpp
 -
 boost/iterator/counting_iterator.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/iterator/transform_iterator.hpp
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost/iterator/transform_iterator.hpp
 boost/config.hpp
 -
 boost/iterator/transform_iterator.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost_mp.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/boost_mp.h
 CGAL/config.h
 -
 CGAL/number_utils.h
@@ -7484,7 +7484,7 @@ mpfr.h
 CGAL/BOOST_MP_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/circulator.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/circulator.h
 CGAL/config.h
 -
 CGAL/circulator_bases.h
@@ -7504,13 +7504,13 @@ iterator
 boost/type_traits/is_convertible.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/circulator_bases.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/circulator_bases.h
 cstddef
 -
 iterator
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/config.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/config.h
 windows.h
 -
 vld.h
@@ -7572,13 +7572,13 @@ fstream
 iostream
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/constant.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/constant.h
 CGAL/config.h
 -
 CGAL/tss.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC2.h
 CGAL/determinant.h
 -
 CGAL/number_utils.h
@@ -7586,13 +7586,13 @@ CGAL/number_utils.h
 boost/type_traits/is_integral.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC3.h
 CGAL/determinant.h
 -
 CGAL/number_utils.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/convert_to_bfi.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/convert_to_bfi.h
 CGAL/basic.h
 -
 CGAL/Get_arithmetic_kernel.h
@@ -7600,15 +7600,15 @@ CGAL/Get_arithmetic_kernel.h
 CGAL/Cache.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/determinant.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/determinant.h
 CGAL/kernel_config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/disable_warnings.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/disable_warnings.h
 boost/config.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/double.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/double.h
 CGAL/utils.h
 -
 CGAL/utils_classes.h
@@ -7632,11 +7632,11 @@ cfloat
 CGAL/IEEE_754_unions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/enable_warnings.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/enable_warnings.h
 boost/config.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/enum.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/enum.h
 CGAL/config.h
 -
 CGAL/Kernel/Same_uncertainty.h
@@ -7644,7 +7644,7 @@ CGAL/Kernel/Same_uncertainty.h
 CGAL/Origin.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/exceptions.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/exceptions.h
 CGAL/config.h
 -
 stdexcept
@@ -7654,21 +7654,21 @@ string
 boost/lexical_cast.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/export/CGAL.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/export/CGAL.h
 CGAL/config.h
 -
 CGAL/export/helpers.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/export/helpers.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/export/helpers.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/extended_euclidean_algorithm.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/extended_euclidean_algorithm.h
 CGAL/basic.h
 -
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/float.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/float.h
 CGAL/utils.h
 -
 CGAL/Algebraic_structure_traits.h
@@ -7680,15 +7680,15 @@ cmath
 CGAL/IEEE_754_unions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/function_objects.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/function_objects.h
 functional
 -
 CGAL/enum.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/functional.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/functional.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/generators.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/generators.h
 CGAL/disable_warnings.h
 -
 CGAL/basic.h
@@ -7708,7 +7708,7 @@ CGAL/Random.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/gmp.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/gmp.h
 CGAL/config.h
 -
 CGAL/disable_warnings.h
@@ -7718,7 +7718,7 @@ gmp.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/gmpxx.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/gmpxx.h
 cstring
 -
 gmpxx.h
@@ -7734,7 +7734,7 @@ CGAL/gmpxx_coercion_traits.h
 CGAL/GMPXX_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/gmpxx_coercion_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/gmpxx_coercion_traits.h
 CGAL/Coercion_traits.h
 -
 cstring
@@ -7744,7 +7744,7 @@ gmpxx.h
 mpfr.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/hilbert_sort.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/hilbert_sort.h
 CGAL/config.h
 -
 CGAL/Hilbert_policy_tags.h
@@ -7766,7 +7766,7 @@ boost/random/linear_congruential.hpp
 algorithm
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/int.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/int.h
 CGAL/Interval_nt.h
 -
 CGAL/Modular_traits.h
@@ -7774,7 +7774,7 @@ CGAL/Modular_traits.h
 CGAL/Modular_arithmetic/Residue_type.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/intersection_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/intersection_2.h
 CGAL/Intersections_2/Bbox_2_Circle_2.h
 -
 CGAL/Intersections_2/Bbox_2_Line_2.h
@@ -7840,7 +7840,7 @@ CGAL/Intersections_2/Segment_2_Triangle_2.h
 CGAL/Intersections_2/Triangle_2_Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/intersection_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/intersection_3.h
 CGAL/Intersections_3/Bbox_3_Bbox_3.h
 -
 CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h
@@ -7954,17 +7954,17 @@ CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h
 CGAL/Intersections_3/Triangle_3_Triangle_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/intersections.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/intersections.h
 CGAL/intersection_2.h
 -
 CGAL/intersection_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/ipower.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/ipower.h
 CGAL/assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/is_convertible.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/is_convertible.h
 boost/type_traits/integral_constant.hpp
 -
 boost/type_traits/is_convertible.hpp
@@ -7972,7 +7972,7 @@ boost/type_traits/is_convertible.hpp
 gmpxx.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/is_iterator.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/is_iterator.h
 boost/type_traits/is_convertible.hpp
 -
 boost/type_traits/is_pointer.hpp
@@ -7988,7 +7988,7 @@ boost/mpl/logical.hpp
 iterator
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/iterator.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/iterator.h
 CGAL/disable_warnings.h
 -
 CGAL/assertions.h
@@ -8016,11 +8016,11 @@ utility
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/kernel_assertions.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/kernel_assertions.h
 CGAL/assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/kernel_basic.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/kernel_basic.h
 CGAL/kernel_config.h
 -
 CGAL/kernel_assertions.h
@@ -8034,9 +8034,9 @@ CGAL/Object.h
 CGAL/Kernel_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/kernel_config.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/kernel_config.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/leda_bigfloat.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/leda_bigfloat.h
 CGAL/basic.h
 -
 utility
@@ -8058,7 +8058,7 @@ CGAL/leda_real.h
 CGAL/LEDA_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/leda_bigfloat_interval.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/leda_bigfloat_interval.h
 CGAL/basic.h
 -
 CGAL/LEDA_basic.h
@@ -8082,7 +8082,7 @@ CGAL/leda_real.h
 CGAL/leda_bigfloat.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/leda_coercion_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/leda_coercion_traits.h
 CGAL/number_type_basic.h
 -
 CGAL/LEDA_basic.h
@@ -8096,7 +8096,7 @@ LEDA/numbers/rational.h
 LEDA/numbers/real.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/leda_integer.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/leda_integer.h
 CGAL/number_type_basic.h
 -
 utility
@@ -8124,7 +8124,7 @@ CGAL/leda_real.h
 CGAL/LEDA_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/leda_rational.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/leda_rational.h
 CGAL/IO/io.h
 -
 CGAL/number_type_basic.h
@@ -8156,7 +8156,7 @@ CGAL/leda_real.h
 CGAL/LEDA_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/leda_real.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/leda_real.h
 CGAL/number_type_basic.h
 -
 CGAL/leda_coercion_traits.h
@@ -8180,45 +8180,45 @@ CGAL/leda_bigfloat.h
 CGAL/LEDA_arithmetic_kernel.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/license.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/license.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Mesh_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/license/Mesh_3.h
 CGAL/config.h
 -
 CGAL/license.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesh.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/license/Surface_mesh.h
 CGAL/config.h
 -
 CGAL/license.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesher.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/license/Surface_mesher.h
 CGAL/config.h
 -
 CGAL/license.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/TDS_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/license/TDS_3.h
 CGAL/config.h
 -
 CGAL/license.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Triangulation_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/license/Triangulation_3.h
 CGAL/config.h
 -
 CGAL/license.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/lgpl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/license/lgpl.h
 CGAL/config.h
 -
 CGAL/license.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/long_double.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/long_double.h
 utility
 -
 cmath
@@ -8232,13 +8232,13 @@ CGAL/assertions.h
 CGAL/functional.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/long_long.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/long_long.h
 CGAL/number_type_basic.h
 -
 CGAL/Interval_nt.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/make_surface_mesh.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/make_surface_mesh.h
 CGAL/license/Surface_mesher.h
 -
 CGAL/Surface_mesher_generator.h
@@ -8256,15 +8256,15 @@ CGAL/iterator.h
 CGAL/Surface_mesher/Verbose_flag.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/memory.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/memory.h
 memory
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/min_max_n.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/min_max_n.h
 CGAL/basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/mpfi_coercion_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/mpfi_coercion_traits.h
 CGAL/config.h
 -
 CGAL/number_type_basic.h
@@ -8276,7 +8276,7 @@ CGAL/GMP/Gmpfi_type.h
 CGAL/Coercion_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/mpfr_coercion_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/mpfr_coercion_traits.h
 CGAL/config.h
 -
 CGAL/number_type_basic.h
@@ -8286,7 +8286,7 @@ CGAL/GMP/Gmpfr_type.h
 CGAL/Coercion_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/mpq_class.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/mpq_class.h
 CGAL/Algebraic_structure_traits.h
 -
 CGAL/Real_embeddable_traits.h
@@ -8308,7 +8308,7 @@ CGAL/mpz_class.h
 CGAL/Fraction_traits.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/mpz_class.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/mpz_class.h
 CGAL/number_type_config.h
 -
 CGAL/functional.h
@@ -8340,7 +8340,7 @@ CGAL/Modular_traits.h
 CGAL/Quotient.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/number_type_basic.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/number_type_basic.h
 CGAL/number_type_config.h
 -
 CGAL/basic.h
@@ -8398,11 +8398,11 @@ CGAL/number_utils.h
 CGAL/number_utils_classes.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/number_type_config.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/number_type_config.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/number_utils.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/number_utils.h
 CGAL/number_type_config.h
 -
 CGAL/Algebraic_structure_traits.h
@@ -8412,7 +8412,7 @@ CGAL/Real_embeddable_traits.h
 CGAL/Kernel/Same_uncertainty.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/number_utils_classes.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/number_utils_classes.h
 CGAL/Real_embeddable_traits.h
 -
 CGAL/Algebraic_structure_traits.h
@@ -8422,7 +8422,7 @@ algorithm
 utility
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/point_generators_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/point_generators_2.h
 CGAL/disable_warnings.h
 -
 CGAL/generators.h
@@ -8438,7 +8438,7 @@ iterator
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/point_generators_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/point_generators_3.h
 CGAL/disable_warnings.h
 -
 CGAL/generators.h
@@ -8454,7 +8454,7 @@ CGAL/boost/graph/property_maps.h
 CGAL/enable_warnings.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC2.h
 CGAL/algorithm.h
 -
 CGAL/number_utils.h
@@ -8464,7 +8464,7 @@ CGAL/predicates/sign_of_determinant.h
 CGAL/constructions/kernel_ftC2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC3.h
 CGAL/predicates/sign_of_determinant.h
 -
 CGAL/predicates/kernel_ftC2.h
@@ -8472,7 +8472,7 @@ CGAL/predicates/kernel_ftC2.h
 CGAL/constructions/kernel_ftC3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/predicates/sign_of_determinant.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/predicates/sign_of_determinant.h
 CGAL/determinant.h
 -
 CGAL/number_utils_classes.h
@@ -8480,9 +8480,9 @@ CGAL/number_utils_classes.h
 CGAL/number_type_basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/predicates_on_points_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/predicates_on_points_2.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/property_map.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/property_map.h
 CGAL/value_type_traits.h
 -
 boost/version.hpp
@@ -8518,17 +8518,17 @@ utility
 vector
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/rank.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/rank.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/rational_rotation.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/rational_rotation.h
 algorithm
 -
 CGAL/number_type_basic.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/representation_tags.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/representation_tags.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/spatial_sort.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/spatial_sort.h
 CGAL/config.h
 -
 CGAL/hilbert_sort.h
@@ -8546,7 +8546,7 @@ boost/random/linear_congruential.hpp
 algorithm
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/squared_distance_2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/squared_distance_2.h
 CGAL/Distance_2/Point_2_Point_2.h
 -
 CGAL/Distance_2/Point_2_Segment_2.h
@@ -8578,7 +8578,7 @@ CGAL/Distance_2/Line_2_Triangle_2.h
 CGAL/Distance_2/Triangle_2_Triangle_2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/squared_distance_3.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/squared_distance_3.h
 CGAL/Distance_3/Point_3_Point_3.h
 -
 CGAL/Distance_3/Point_3_Weighted_point_3.h
@@ -8620,21 +8620,21 @@ CGAL/Distance_3/Triangle_3_Triangle_3.h
 CGAL/Distance_3/Plane_3_Plane_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/sse2.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/sse2.h
 emmintrin.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/tags.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/tags.h
 CGAL/IO/io_tags.h
 -
 boost/mpl/integral_c.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/test_FPU_rounding_mode_impl.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/test_FPU_rounding_mode_impl.h
 CGAL/assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/transforming_iterator.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/transforming_iterator.h
 boost/iterator/iterator_adaptor.hpp
 -
 boost/type_traits/is_empty.hpp
@@ -8652,19 +8652,19 @@ CGAL/Default.h
 utility
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/triangulation_assertions.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/triangulation_assertions.h
 CGAL/assertions.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/tss.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/tss.h
 CGAL/config.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/tuple.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/tuple.h
 tuple
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/type_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/type_traits.h
 boost/type_traits/is_same.hpp
 -
 boost/type_traits/is_base_and_derived.hpp
@@ -8672,9 +8672,9 @@ boost/type_traits/is_base_and_derived.hpp
 boost/mpl/or.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/use.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/use.h
 
-/home/toler/CGAL-5.5.2/include/CGAL/user_classes.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/user_classes.h
 CGAL/Point_2.h
 -
 CGAL/Weighted_point_2.h
@@ -8728,7 +8728,7 @@ CGAL/Circle_3.h
 CGAL/Aff_transformation_3.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/utility.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/utility.h
 CGAL/config.h
 -
 utility
@@ -8740,11 +8740,11 @@ type_traits
 boost/functional/hash.hpp
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/utils.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/utils.h
 CGAL/utils_classes.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/utils_classes.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/utils_classes.h
 CGAL/config.h
 -
 functional
@@ -8754,23 +8754,23 @@ algorithm
 CGAL/sse2.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/value_type_traits.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/value_type_traits.h
 iterator
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/version.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/version.h
 CGAL/version_macros.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/version_macros.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/version_macros.h
 CGAL/version.h
 -
 
-/home/toler/CGAL-5.5.2/include/CGAL/wmult.h
+/home/twebb8/projects/cgal/CGAL-5.5.2/include/CGAL/wmult.h
 CGAL/Kernel/Wutils.h
 -
 
-/home/toler/projects/CGAL_curvature/main/simple_mesh/torus_mesh.cpp
+/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh/torus_mesh.cpp
 CGAL/Surface_mesh_default_triangulation_3.h
 -
 CGAL/Complex_2_in_triangulation_3.h

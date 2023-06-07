@@ -50,8 +50,24 @@ int main(int argc, char** argv)
   std::vector<Point_3> points;
   shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second,
                         		  std::back_inserter(points));
+  //std::back_inserter above fills points by inserting point by point at the end for each
   
-  /* How the other program creates a polylines file: 
+  // Compute the shortest distance between the source and the target
+  std::cout << "distance: " << std::endl;
+  std::cout << std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)) << std::endl;
+
+
+  // Print the points
+  std::cout << points.size() << " ";
+  for (std::size_t i = 0; i < points.size(); ++i)
+    std::cout << " " << points[i];
+  std::cout << std::endl;
+  return EXIT_SUCCESS;
+  // Print the distance
+  
+}
+
+/* How the other program creates a polylines file:
    * std::ofstream output("shortest_paths_with_id.polylines.txt");
   vertex_iterator vit, vit_end;
   for ( boost::tie(vit, vit_end) = vertices(tmesh);
@@ -66,10 +82,3 @@ int main(int argc, char** argv)
     output << std::endl;
   }*/
 
-  // Print the points
-  std::cout << points.size() << " ";
-  for (std::size_t i = 0; i < points.size(); ++i)
-    std::cout << " " << points[i];
-  std::cout << std::endl;
-  return EXIT_SUCCESS;
-}

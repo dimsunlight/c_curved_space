@@ -4,19 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/toler/projects/CGAL_curvature/main/simple_mesh/heightmap_mesh.cpp" "/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/heightmap_mesh.dir/heightmap_mesh.cpp.o"
+  "/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh/heightmap_mesh.cpp" "/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/heightmap_mesh.dir/heightmap_mesh.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "BOOST_ALL_NO_LIB"
-  "CGAL_DATA_DIR=\"/home/toler/CGAL-5.5.2/data\""
+  "CGAL_DATA_DIR=\"/home/twebb8/projects/cgal/CGAL-5.5.2/data\""
+  "CGAL_USE_GMPXX=1"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/toler/CGAL-5.5.2/include"
+  "/home/twebb8/projects/cgal/CGAL-5.5.2/include"
   )
 
 # Targets to which this target links.

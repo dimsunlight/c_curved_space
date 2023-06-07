@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/toler/projects/CGAL_curvature/main/simple_mesh
+CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/toler/projects/CGAL_curvature/main/simple_mesh_build
+CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build
 
 # Utility rule file for ALL_CGAL_TARGETS.
 
@@ -67,6 +67,6 @@ CMakeFiles/ALL_CGAL_TARGETS.dir/clean:
 .PHONY : CMakeFiles/ALL_CGAL_TARGETS.dir/clean
 
 CMakeFiles/ALL_CGAL_TARGETS.dir/depend:
-	cd /home/toler/projects/CGAL_curvature/main/simple_mesh_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/toler/projects/CGAL_curvature/main/simple_mesh /home/toler/projects/CGAL_curvature/main/simple_mesh /home/toler/projects/CGAL_curvature/main/simple_mesh_build /home/toler/projects/CGAL_curvature/main/simple_mesh_build /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/ALL_CGAL_TARGETS.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/ALL_CGAL_TARGETS.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ALL_CGAL_TARGETS.dir/depend
 

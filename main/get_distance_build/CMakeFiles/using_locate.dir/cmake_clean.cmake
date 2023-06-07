@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/using_locate.dir/using_locate.cpp.o"
-  "CMakeFiles/using_locate.dir/using_locate.cpp.o.d"
   "using_locate"
   "using_locate.pdb"
 )

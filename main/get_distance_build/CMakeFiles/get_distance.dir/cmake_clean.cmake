@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/get_distance.dir/get_distance.cpp.o"
-  "CMakeFiles/get_distance.dir/get_distance.cpp.o.d"
   "get_distance"
   "get_distance.pdb"
 )
