@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/shortest_paths.dir/shortest_paths.cpp.o -o shortest_paths  /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so 
+/usr/bin/c++  -g   CMakeFiles/shortest_paths.dir/shortest_paths.cpp.o  -o shortest_paths  /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 

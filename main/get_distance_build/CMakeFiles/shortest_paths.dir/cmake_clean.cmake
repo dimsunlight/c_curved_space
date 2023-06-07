@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/shortest_paths.dir/shortest_paths.cpp.o"
-  "CMakeFiles/shortest_paths.dir/shortest_paths.cpp.o.d"
   "shortest_paths"
   "shortest_paths.pdb"
 )

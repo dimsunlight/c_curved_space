@@ -67,8 +67,8 @@ CMAKE_BINARY_DIR = /home/toler/projects/CGAL_curvature/main/get_distance_build
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named shortest_paths
-
-# Build rule for target.
-shortest_paths: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shortest_paths
-.PHONY : shortest_paths
-
-# fast build rule for target.
-shortest_paths/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/shortest_paths.dir/build.make CMakeFiles/shortest_paths.dir/build
-.PHONY : shortest_paths/fast
-
-#=============================================================================
 # Target rules for targets named cgal_check_build_system
 
 # Build rule for target.
@@ -156,65 +143,41 @@ ALL_CGAL_TARGETS/fast:
 .PHONY : ALL_CGAL_TARGETS/fast
 
 #=============================================================================
-# Target rules for targets named multipoint_distance
+# Target rules for targets named get_distance
 
 # Build rule for target.
-multipoint_distance: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multipoint_distance
-.PHONY : multipoint_distance
+get_distance: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 get_distance
+.PHONY : get_distance
 
 # fast build rule for target.
-multipoint_distance/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multipoint_distance.dir/build.make CMakeFiles/multipoint_distance.dir/build
-.PHONY : multipoint_distance/fast
+get_distance/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_distance.dir/build.make CMakeFiles/get_distance.dir/build
+.PHONY : get_distance/fast
 
-multipoint_distance.o: multipoint_distance.cpp.o
-.PHONY : multipoint_distance.o
-
-# target to build an object file
-multipoint_distance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multipoint_distance.dir/build.make CMakeFiles/multipoint_distance.dir/multipoint_distance.cpp.o
-.PHONY : multipoint_distance.cpp.o
-
-multipoint_distance.i: multipoint_distance.cpp.i
-.PHONY : multipoint_distance.i
-
-# target to preprocess a source file
-multipoint_distance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multipoint_distance.dir/build.make CMakeFiles/multipoint_distance.dir/multipoint_distance.cpp.i
-.PHONY : multipoint_distance.cpp.i
-
-multipoint_distance.s: multipoint_distance.cpp.s
-.PHONY : multipoint_distance.s
-
-# target to generate assembly for a file
-multipoint_distance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multipoint_distance.dir/build.make CMakeFiles/multipoint_distance.dir/multipoint_distance.cpp.s
-.PHONY : multipoint_distance.cpp.s
-
-shortest_paths.o: shortest_paths.cpp.o
-.PHONY : shortest_paths.o
+get_distance.o: get_distance.cpp.o
+.PHONY : get_distance.o
 
 # target to build an object file
-shortest_paths.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/shortest_paths.dir/build.make CMakeFiles/shortest_paths.dir/shortest_paths.cpp.o
-.PHONY : shortest_paths.cpp.o
+get_distance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_distance.dir/build.make CMakeFiles/get_distance.dir/get_distance.cpp.o
+.PHONY : get_distance.cpp.o
 
-shortest_paths.i: shortest_paths.cpp.i
-.PHONY : shortest_paths.i
+get_distance.i: get_distance.cpp.i
+.PHONY : get_distance.i
 
 # target to preprocess a source file
-shortest_paths.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/shortest_paths.dir/build.make CMakeFiles/shortest_paths.dir/shortest_paths.cpp.i
-.PHONY : shortest_paths.cpp.i
+get_distance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_distance.dir/build.make CMakeFiles/get_distance.dir/get_distance.cpp.i
+.PHONY : get_distance.cpp.i
 
-shortest_paths.s: shortest_paths.cpp.s
-.PHONY : shortest_paths.s
+get_distance.s: get_distance.cpp.s
+.PHONY : get_distance.s
 
 # target to generate assembly for a file
-shortest_paths.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/shortest_paths.dir/build.make CMakeFiles/shortest_paths.dir/shortest_paths.cpp.s
-.PHONY : shortest_paths.cpp.s
+get_distance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_distance.dir/build.make CMakeFiles/get_distance.dir/get_distance.cpp.s
+.PHONY : get_distance.cpp.s
 
 # Help Target
 help:
@@ -226,14 +189,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ALL_CGAL_TARGETS"
 	@echo "... cgal_check_build_system"
-	@echo "... multipoint_distance"
-	@echo "... shortest_paths"
-	@echo "... multipoint_distance.o"
-	@echo "... multipoint_distance.i"
-	@echo "... multipoint_distance.s"
-	@echo "... shortest_paths.o"
-	@echo "... shortest_paths.i"
-	@echo "... shortest_paths.s"
+	@echo "... get_distance"
+	@echo "... get_distance.o"
+	@echo "... get_distance.i"
+	@echo "... get_distance.s"
 .PHONY : help
 
 
