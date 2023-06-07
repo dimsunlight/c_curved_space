@@ -78,6 +78,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/using_locate.dir/DependInfo.cmake"
   "CMakeFiles/cgal_check_build_system.dir/DependInfo.cmake"
   "CMakeFiles/ALL_CGAL_TARGETS.dir/DependInfo.cmake"
   "CMakeFiles/get_distance.dir/DependInfo.cmake"

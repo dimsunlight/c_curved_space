@@ -1,5 +1,5 @@
-CMakeFiles/get_distance.dir/get_distance.cpp.o: \
- /home/toler/projects/CGAL_curvature/main/get_distance/get_distance.cpp \
+CMakeFiles/using_locate.dir/using_locate.cpp.o: \
+ /home/toler/projects/CGAL_curvature/main/get_distance/using_locate.cpp \
  /usr/include/stdc-predef.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Simple_cartesian.h \
@@ -2115,4 +2115,10 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/boost/parameter/aux_/pack/tag_template_keyword_arg.hpp \
  /usr/include/boost/heap/heap_merge.hpp \
  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h \
- /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/function_objects.h
+ /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/function_objects.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/AABB_face_graph_triangle_primitive.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/AABB_primitive.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/property_maps.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/AABB_traits.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/Kernel_23/internal/Has_boolean_tags.h

@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named using_locate
+
+# Build rule for target.
+using_locate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 using_locate
+.PHONY : using_locate
+
+# fast build rule for target.
+using_locate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/using_locate.dir/build.make CMakeFiles/using_locate.dir/build
+.PHONY : using_locate/fast
+
+#=============================================================================
 # Target rules for targets named cgal_check_build_system
 
 # Build rule for target.
@@ -179,6 +192,30 @@ get_distance.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_distance.dir/build.make CMakeFiles/get_distance.dir/get_distance.cpp.s
 .PHONY : get_distance.cpp.s
 
+using_locate.o: using_locate.cpp.o
+.PHONY : using_locate.o
+
+# target to build an object file
+using_locate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/using_locate.dir/build.make CMakeFiles/using_locate.dir/using_locate.cpp.o
+.PHONY : using_locate.cpp.o
+
+using_locate.i: using_locate.cpp.i
+.PHONY : using_locate.i
+
+# target to preprocess a source file
+using_locate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/using_locate.dir/build.make CMakeFiles/using_locate.dir/using_locate.cpp.i
+.PHONY : using_locate.cpp.i
+
+using_locate.s: using_locate.cpp.s
+.PHONY : using_locate.s
+
+# target to generate assembly for a file
+using_locate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/using_locate.dir/build.make CMakeFiles/using_locate.dir/using_locate.cpp.s
+.PHONY : using_locate.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -190,9 +227,13 @@ help:
 	@echo "... ALL_CGAL_TARGETS"
 	@echo "... cgal_check_build_system"
 	@echo "... get_distance"
+	@echo "... using_locate"
 	@echo "... get_distance.o"
 	@echo "... get_distance.i"
 	@echo "... get_distance.s"
+	@echo "... using_locate.o"
+	@echo "... using_locate.i"
+	@echo "... using_locate.s"
 .PHONY : help
 
 

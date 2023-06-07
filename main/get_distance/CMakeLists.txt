@@ -11,8 +11,9 @@ find_package(CGAL QUIET)
 
 if ( CGAL_FOUND )
 
-  create_single_source_cgal_program( "get_distance.cpp")
-  
+  create_single_source_cgal_program("get_distance.cpp")
+  create_single_source_cgal_program("using_locate.cpp")
+
 else()
 
     message(STATUS "This program requires the CGAL library, and will not be compiled.")

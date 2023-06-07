@@ -15,6 +15,9 @@ typedef Graph_traits::vertex_iterator vertex_iterator;
 typedef Graph_traits::face_iterator face_iterator;
 int main(int argc, char** argv)
 {
+  //argc is the number of arguments passed via the command line, while argv is the vector of arguments
+  //below: if an argument has been passed, use that as filename; if not, use torus.off. So the ability
+  //to use your own custom mesh is built in :) 
   const std::string filename = (argc>1) ? argv[1] : CGAL::data_file_path("sims_project/torus.off");
   Triangle_mesh tmesh;
   if(!CGAL::IO::read_polygon_mesh(filename, tmesh) ||
@@ -23,10 +26,11 @@ int main(int argc, char** argv)
     std::cerr << "Invalid input file." << std::endl;
     return EXIT_FAILURE;
   }
-  // pick up a random face
+  // either use given face index or pick a random face if none is given
   const unsigned int randSeed = argc > 2 ? boost::lexical_cast<unsigned int>(argv[2]) : 7915421;
   CGAL::Random rand(randSeed);
   const int target_face_index = rand.get_int(0, static_cast<int>(num_faces(tmesh)));
+  
   face_iterator face_it = faces(tmesh).first;
   std::advance(face_it,target_face_index);
   // ... and define a barycentric coordinates inside the face
