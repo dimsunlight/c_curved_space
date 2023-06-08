@@ -58,13 +58,14 @@ int main(int argc, char** argv)
 
 
   // Print the points
-  std::cout << points.size() << " ";
-  for (std::size_t i = 0; i < points.size(); ++i)
-    std::cout << " " << points[i];
+  std::cout << "num points: " << points.size() << std::endl;
+
+  for (std::size_t i = 0; i < points.size(); ++i) {
+    std::cout << " " << points[i] << std::endl;
+  }
   std::cout << std::endl;
   return EXIT_SUCCESS;
-  // Print the distance
-  
+
 }
 
 /* How the other program creates a polylines file:
