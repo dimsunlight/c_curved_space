@@ -989,6 +989,8 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
   /home/toler/CGAL-5.5.2/include/CGAL/Fraction_traits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Rational_traits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/is_convertible.h \
+  /usr/include/gmpxx.h \
+  /usr/include/x86_64-linux-gnu/gmp.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Scalar_factor_traits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Algebraic_extension_traits.h \
   /usr/include/c++/9/numeric \
@@ -1020,6 +1022,16 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
   /home/toler/CGAL-5.5.2/include/CGAL/Modular_arithmetic/Residue_type.h \
   /home/toler/CGAL-5.5.2/include/CGAL/tss.h \
   /home/toler/CGAL-5.5.2/include/CGAL/long_long.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/gmpxx.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/mpz_class.h \
+  /usr/include/mpfr.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/gmpxx_coercion_traits.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/Residue.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/Quotient.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/mpq_class.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/GMPXX_arithmetic_kernel.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h \
   /home/toler/CGAL-5.5.2/include/CGAL/number_utils_classes.h \
   /home/toler/CGAL-5.5.2/include/CGAL/kernel_basic.h \
   /home/toler/CGAL-5.5.2/include/CGAL/kernel_config.h \
@@ -1647,7 +1659,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
   /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH2.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH2.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Quotient.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_rectangleH2.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/LineH2.h \
@@ -1680,7 +1691,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Fraction_traits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Coercion_traits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Modular_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Residue.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
@@ -1688,7 +1698,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
   /home/toler/CGAL-5.5.2/include/CGAL/extended_euclidean_algorithm.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/io.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/convert_to_bfi.h \
   /home/toler/CGAL-5.5.2/include/CGAL/convert_to_bfi.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Cache.h \
@@ -1697,7 +1706,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
   /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
   /home/toler/CGAL-5.5.2/include/CGAL/MP_Float_impl.h \
   /home/toler/CGAL-5.5.2/include/CGAL/MP_Float_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Lazy_exact_nt.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Handle.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Lazy.h \
@@ -1798,8 +1806,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
   /usr/include/boost/math/special_functions/detail/gamma_inva.hpp \
   /usr/include/boost/math/special_functions/erf.hpp \
   /usr/include/boost/math/special_functions/detail/erf_inv.hpp \
-  /usr/include/x86_64-linux-gnu/gmp.h \
-  /usr/include/mpfr.h \
   /home/toler/CGAL-5.5.2/include/CGAL/BOOST_MP_arithmetic_kernel.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Gmpz.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Gmp_coercion_traits.h \
@@ -2313,8 +2319,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/parameter/name.hpp:
 
-/usr/include/boost/heap/detail/stable_heap.hpp:
-
 /usr/include/boost/heap/heap_concepts.hpp:
 
 /usr/include/boost/lambda/detail/member_ptr.hpp:
@@ -2785,8 +2789,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Scalar_factor_traits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Residue.h:
-
 /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension_fwd.h:
@@ -3017,10 +3019,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /home/toler/CGAL-5.5.2/include/CGAL/intersection_3.h:
 
-/usr/include/boost/parameter/aux_/pack/make_items.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h:
-
 /usr/include/boost/parameter/aux_/preprocessor/qualifier.hpp:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Triangle_2.h:
@@ -3160,14 +3158,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_3.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/function_objects.h:
-
-/usr/include/x86_64-linux-gnu/gmp.h:
-
-/usr/include/boost/mpl/max.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_3.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/plane_constructions_3.h:
 
@@ -3675,6 +3665,34 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/type_traits/has_nothrow_constructor.hpp:
 
+/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h:
+
+/usr/include/boost/mp11/list.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Segment_3.h:
+
+/usr/include/boost/type_traits/has_trivial_destructor.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Point_container.h:
+
+/usr/include/boost/type_traits/has_trivial_constructor.hpp:
+
+/usr/include/boost/integer/integer_log2.hpp:
+
+/usr/include/boost/type_traits/is_stateless.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Vector_2.h:
+
+/usr/include/boost/type_traits/is_empty.hpp:
+
+/usr/include/boost/type_traits/type_with_alignment.hpp:
+
+/usr/include/boost/type_traits/alignment_of.hpp:
+
+/usr/include/boost/container/detail/is_container.hpp:
+
+/usr/include/boost/type_traits/aligned_storage.hpp:
+
 /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
 
 /usr/include/boost/type_traits/is_abstract.hpp:
@@ -3803,15 +3821,17 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
 
+/usr/include/boost/mp11/detail/mp_void.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h:
+
+/usr/include/boost/detail/templated_streams.hpp:
+
+/usr/include/boost/preprocessor/config/config.hpp:
+
 /usr/include/c++/9/initializer_list:
 
 /usr/include/boost/mpl/aux_/integral_wrapper.hpp:
-
-/usr/include/boost/type_traits/has_negate.hpp:
-
-/usr/include/mpfr.h:
-
-/usr/include/boost/mpl/aux_/na_fwd.hpp:
 
 /usr/include/boost/mpl/aux_/na.hpp:
 
@@ -3933,10 +3953,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/move/utility.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Point_container.h:
-
-/usr/include/boost/type_traits/has_trivial_constructor.hpp:
-
 /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous_converter.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/license.h:
@@ -3958,10 +3974,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /usr/include/c++/9/bits/unordered_map.h:
 
 /usr/include/boost/preprocessor/logical/compl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h:
-
-/usr/include/boost/predef/os/vms.h:
 
 /usr/include/c++/9/bits/uses_allocator.h:
 
@@ -4244,6 +4256,12 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h:
 
 /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp:
+
+/usr/include/boost/type_traits/has_negate.hpp:
+
+/usr/include/boost/mpl/aux_/na_fwd.hpp:
+
+/usr/include/mpfr.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_3.h:
 
@@ -4745,10 +4763,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/preprocessor/repetition/for.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Vector_2.h:
-
-/usr/include/boost/type_traits/is_empty.hpp:
-
 /usr/include/boost/variant/detail/std_hash.hpp:
 
 /home/toler/CGAL-5.5.2/include/CGAL/version_macros.h:
@@ -5041,9 +5055,9 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Line_3.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/boost/blank.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp:
 
@@ -5080,10 +5094,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /usr/include/boost/predef/library/std/cxx.h:
 
 /usr/include/boost/predef/compiler/metrowerks.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Segment_2.h:
-
-/usr/include/boost/predef/hardware/simd/x86_amd/versions.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Interval_nt.h:
 
@@ -5457,8 +5467,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/mpl/clear_fwd.hpp:
 
-/usr/include/boost/type_traits/alignment_of.hpp:
-
 /usr/include/c++/9/bits/stl_relops.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Segment_2.h:
@@ -5480,6 +5488,10 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /home/toler/CGAL-5.5.2/include/CGAL/Line_3.h:
 
 /usr/include/boost/move/detail/meta_utils.hpp:
+
+/usr/include/boost/type_traits/has_trivial_copy.hpp:
+
+/usr/include/boost/preprocessor/variadic/elem.hpp:
 
 /usr/include/boost/predef/detail/test.h:
 
@@ -5518,6 +5530,12 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_3.h:
 
 /usr/include/boost/range/empty.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Segment_2.h:
+
+/usr/include/boost/predef/hardware/simd/x86_amd/versions.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/mpz_class.h:
 
 /usr/include/boost/container_hash/hash_fwd.hpp:
 
@@ -5805,6 +5823,8 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/concept/detail/has_constraints.hpp:
 
+/home/toler/CGAL-5.5.2/include/CGAL/gmpxx_coercion_traits.h:
+
 /usr/include/c++/9/bits/locale_facets.h:
 
 /usr/include/boost/type_traits/conversion_traits.hpp:
@@ -5967,11 +5987,13 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/lexical_cast/bad_lexical_cast.hpp:
 
+/home/toler/CGAL-5.5.2/include/CGAL/gmpxx.h:
+
 /usr/include/boost/current_function.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Quotient.h:
-
 /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Quotient.h:
 
 /usr/include/boost/lexical_cast/try_lexical_convert.hpp:
 
@@ -6085,9 +6107,9 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h:
-
 /usr/include/boost/mpl/aux_/config/gcc.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h:
 
 /usr/include/boost/numeric/conversion/bounds.hpp:
 
@@ -6237,14 +6259,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/mpl/push_back_fwd.hpp:
 
-/usr/include/boost/mp11/detail/mp_void.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h:
-
-/usr/include/boost/preprocessor/config/config.hpp:
-
-/usr/include/boost/detail/templated_streams.hpp:
-
 /usr/include/boost/mpl/front_fwd.hpp:
 
 /usr/include/boost/mpl/list/aux_/clear.hpp:
@@ -6370,10 +6384,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /usr/include/boost/mpl/vector/aux_/at.hpp:
 
 /usr/include/boost/mpl/aux_/config/typeof.hpp:
-
-/usr/include/boost/preprocessor/variadic/elem.hpp:
-
-/usr/include/boost/type_traits/has_trivial_copy.hpp:
 
 /usr/include/boost/multiprecision/traits/is_variable_precision.hpp:
 
@@ -6547,6 +6557,20 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /home/toler/CGAL-5.5.2/include/CGAL/is_convertible.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h:
+
+/usr/include/boost/predef/os/vms.h:
+
+/usr/include/gmpxx.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/function_objects.h:
+
+/usr/include/boost/mpl/max.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_3.h:
+
+/usr/include/x86_64-linux-gnu/gmp.h:
+
 /usr/include/boost/optional/detail/optional_factory_support.hpp:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Needs_parens_as_product.h:
@@ -6584,6 +6608,18 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /usr/include/boost/mpl/aux_/arity.hpp:
 
 /home/toler/CGAL-5.5.2/include/CGAL/long_long.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Residue.h:
+
+/usr/include/boost/parameter/aux_/pack/make_items.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/mpq_class.h:
+
+/usr/include/boost/heap/detail/stable_heap.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/GMPXX_arithmetic_kernel.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/kernel_config.h:
 
@@ -6697,10 +6733,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 
 /usr/include/boost/variant/static_visitor.hpp:
 
-/usr/include/boost/container/detail/is_container.hpp:
-
-/usr/include/boost/type_traits/aligned_storage.hpp:
-
 /usr/include/boost/variant/apply_visitor.hpp:
 
 /usr/include/boost/utility/declval.hpp:
@@ -6720,17 +6752,3 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: /home/toler/projects/CGAL_curvat
 /usr/include/c++/9/ext/alloc_traits.h:
 
 /usr/include/boost/detail/no_exceptions_support.hpp:
-
-/usr/include/boost/type_traits/type_with_alignment.hpp:
-
-/usr/include/boost/integer/integer_log2.hpp:
-
-/usr/include/boost/type_traits/is_stateless.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h:
-
-/usr/include/boost/mp11/list.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Segment_3.h:
-
-/usr/include/boost/type_traits/has_trivial_destructor.hpp:

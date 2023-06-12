@@ -29,7 +29,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/boost/config/detail/select_platform_config.hpp \
  /usr/include/boost/config/platform/linux.hpp /usr/include/c++/9/cstdlib \
@@ -57,15 +56,12 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/9/bits/std_abs.h \
  /usr/include/boost/config/detail/posix_features.hpp \
  /usr/include/boost/config/detail/suffix.hpp \
@@ -246,7 +242,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/9/bits/char_traits.h /usr/include/c++/9/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -285,10 +280,9 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/9/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/9/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/9/bits/functional_hash.h \
@@ -562,10 +556,8 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/boost/range/detail/implementation_help.hpp \
  /usr/include/boost/range/detail/common.hpp \
  /usr/include/boost/range/detail/sfinae.hpp /usr/include/string.h \
- /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /usr/include/boost/range/size.hpp /usr/include/boost/range/size_type.hpp \
+ /usr/include/strings.h /usr/include/boost/range/size.hpp \
+ /usr/include/boost/range/size_type.hpp \
  /usr/include/boost/range/difference_type.hpp \
  /usr/include/boost/range/has_range_iterator.hpp \
  /usr/include/boost/utility/enable_if.hpp \
@@ -691,7 +683,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h \
  /usr/include/boost/numeric/conversion/detail/converter.hpp \
  /usr/include/boost/numeric/conversion/bounds.hpp \
  /usr/include/boost/numeric/conversion/detail/bounds.hpp \
@@ -887,6 +878,7 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/Fraction_traits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Rational_traits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/is_convertible.h \
+ /usr/include/gmpxx.h /usr/include/x86_64-linux-gnu/gmp.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Scalar_factor_traits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Algebraic_extension_traits.h \
  /usr/include/c++/9/numeric /usr/include/c++/9/bits/stl_numeric.h \
@@ -898,7 +890,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/utils.h \
  /home/toler/CGAL-5.5.2/include/CGAL/FPU.h /usr/include/c++/9/fenv.h \
  /usr/include/fenv.h /usr/include/x86_64-linux-gnu/bits/fenv.h \
- /usr/include/x86_64-linux-gnu/bits/fenvinline.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
@@ -916,6 +907,15 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/Modular_arithmetic/Residue_type.h \
  /home/toler/CGAL-5.5.2/include/CGAL/tss.h \
  /home/toler/CGAL-5.5.2/include/CGAL/long_long.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/gmpxx.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/mpz_class.h /usr/include/mpfr.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/gmpxx_coercion_traits.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/Residue.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/Quotient.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/mpq_class.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/GMPXX_arithmetic_kernel.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
+ /home/toler/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h \
  /home/toler/CGAL-5.5.2/include/CGAL/number_utils_classes.h \
  /home/toler/CGAL-5.5.2/include/CGAL/kernel_basic.h \
  /home/toler/CGAL-5.5.2/include/CGAL/kernel_config.h \
@@ -1526,7 +1526,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH2.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH2.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
- /home/toler/CGAL-5.5.2/include/CGAL/Quotient.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_rectangleH2.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/LineH2.h \
@@ -1559,7 +1558,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Fraction_traits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Coercion_traits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Modular_traits.h \
- /home/toler/CGAL-5.5.2/include/CGAL/Residue.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
@@ -1567,7 +1565,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/extended_euclidean_algorithm.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/io.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
- /home/toler/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/convert_to_bfi.h \
  /home/toler/CGAL-5.5.2/include/CGAL/convert_to_bfi.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Cache.h \
@@ -1576,7 +1573,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
  /home/toler/CGAL-5.5.2/include/CGAL/MP_Float_impl.h \
  /home/toler/CGAL-5.5.2/include/CGAL/MP_Float_arithmetic_kernel.h \
- /home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Lazy_exact_nt.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Handle.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Lazy.h \
@@ -1676,7 +1672,6 @@ CMakeFiles/get_distance.dir/get_distance.cpp.o: \
  /usr/include/boost/math/special_functions/detail/gamma_inva.hpp \
  /usr/include/boost/math/special_functions/erf.hpp \
  /usr/include/boost/math/special_functions/detail/erf_inv.hpp \
- /usr/include/x86_64-linux-gnu/gmp.h /usr/include/mpfr.h \
  /home/toler/CGAL-5.5.2/include/CGAL/BOOST_MP_arithmetic_kernel.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Gmpz.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Gmp_coercion_traits.h \

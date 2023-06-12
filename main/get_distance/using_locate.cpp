@@ -23,7 +23,7 @@ typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_fac
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
 int main(int argc, char** argv)
 {
-  const std::string filename = (argc>1) ? argv[1] : CGAL::data_file_path("sims_project/torus.off");
+  const std::string filename = (argc>1) ? argv[1] : CGAL::data_file_path("sims_project/torusrb80.off");
   Triangle_mesh tmesh;
   if(!CGAL::IO::read_polygon_mesh(filename, tmesh) ||
      !CGAL::is_triangle_mesh(tmesh))
