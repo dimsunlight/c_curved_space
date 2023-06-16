@@ -36,13 +36,13 @@ int main() {
   // Note that "20." above is the *squared* radius of the bounding sphere!
   // defining meshing criteria
   CGAL::Surface_mesh_default_criteria_3<Tr> criteria(30.,  // angular bound
-                                                     0.80,  // radius bound
+                                                     0.05,  // radius bound
                                                      0.1); // distance bound
   // meshing surface
   CGAL::make_surface_mesh(c2t3, surface, criteria, CGAL::Non_manifold_tag());
   Surface_mesh sm;
   CGAL::facets_in_complex_2_to_triangle_mesh(c2t3, sm);
-  std::ofstream out("torusrb80.off");
+  std::ofstream out("torusrb05.off");
   out << sm << std::endl;
   std::cout << "Final number of points: " << tr.number_of_vertices() << "\n";
 }

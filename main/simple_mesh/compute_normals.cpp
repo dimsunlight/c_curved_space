@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
   
   PMP::compute_normals (mesh,vnormals,fnormals);
 
-  std::string outputFilename = filename.substr(0, filename.size()-4)+".xyz";
+  std::string outputFilename = filename.substr(0, filename.size()-4)+"normals.txt";
   std::ofstream out(outputFilename);
   for(vertex_descriptor vd: vertices(mesh))
     out << vnormals[vd] << "\n";
