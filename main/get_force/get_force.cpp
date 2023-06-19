@@ -4,6 +4,7 @@
 
 //includes:
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h>
 #include <CGAL/Surface_mesh.h>
 #include <CGAL/Surface_mesh_shortest_path.h>
 #include <CGAL/AABB_face_graph_triangle_primitive.h>
@@ -12,9 +13,11 @@
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
+#include <cmath>
 
 //typedefs:
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             Kernel;
+typedef CGAL::Exact_predicates_exact_constructions_kernel_with_sqrt     KernelWithSqrt;
 typedef Kernel::Point_3                                                 Point_3;
 typedef Kernel::Vector_3                                                Vector_3;
 typedef Kernel::Ray_3                                                   Ray_3;
@@ -36,9 +39,7 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
   Surface_mesh_shortest_path shortest_paths(mesh);
   AABB_tree tree;
   shortest_paths.build_aabb_tree(tree);
-
-  // The source point is a 3D point. We must convert it to a face location (that is,
-  // a face ID and three barycentric coordinates)
+  //convert source point to barycentric coordinates via locate
   const Point_3 source_pt = source;
   Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt);
   shortest_paths.add_source_point(source_loc.first,source_loc.second);
@@ -83,15 +84,31 @@ std::pair<double,Vector_3> calcTangentandDistance (Triangle_mesh mesh, Point_3 s
   return std::make_pair(distance,tangent);
 }
 
-/*
-calcTangents (path) {
-  return pair(tangent1,tangent2);
+auto normalize(Vector_3 v)
+{
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  auto const d = CGAL::approximate_sqrt(slen);
+  return v / d;
 }
 
-forceFunction (int argc, char* argv[]) {
+auto forceFunction (float dist, Vector_3 tangent) { 
+  //once again, a=1 and c=3
+  const float epsilon = 1;
+  const float sigma = 1; //i know, large particles
+  Vector_3 normalizedTangent = normalize(tangent);
+
+  //lennard-jones potential is 
+  //4 epsilon((sigma/r)^12 - (sigma/r)^6) 
+  //associated force is 
+  //4 epsilon (12 sigma^12 / r^13 - 6 sigma ^6 / r^7)nabla(r)
+  //where r is the distance function on the surface 
+  
+  Vector_3 force = 4*epsilon*(12*pow(sigma,12)/pow(dist,13)-6*pow(sigma,6)/pow(dist,7))*normalizedTangent;
+
   return force;
 }
-*/
+
+
 
 int main(int argc, char* argv[]) {
  //get input mesh from command line argument
@@ -117,6 +134,9 @@ int main(int argc, char* argv[]) {
  std::pair<double, Vector_3> oneCalc = calcTangentandDistance (tmesh, source_pt, target_pt);
  std::cout << oneCalc.first << std::endl;
  std::cout << oneCalc.second << std::endl;
+ 
+ Vector_3 force = forceFunction(oneCalc.first, oneCalc.second);
+ std::cout << "The force is " << force << std::endl;
 
  return 0;
 }

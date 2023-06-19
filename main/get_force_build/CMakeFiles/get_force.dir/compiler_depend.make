@@ -1901,6 +1901,48 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
   /usr/include/boost/type_traits/integral_promotion.hpp \
   /usr/include/boost/type_traits/promote.hpp \
   /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_structural_filtering_traits.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE_Expr.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE_coercion_traits.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CORE.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Config.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/auto_link/CORE.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/export/CORE.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/MemoryPool.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Timer.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloatRep.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigRat.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigInt.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/RefCount.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/ExprRep.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Real.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/RealRep.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Real_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Filter.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Sturm.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Promote.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.tcc \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreIO_impl.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE_BigInt.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE_BigRat.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE_BigFloat.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/Bigfloat_interval_traits.h \
+  /home/toler/CGAL-5.5.2/include/CGAL/CORE_arithmetic_kernel.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh.h \
   /home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesh.h \
   /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
@@ -2367,8 +2409,6 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /home/toler/CGAL-5.5.2/include/CGAL/Has_timestamp.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CC_safe_handle.h:
-
 /home/toler/CGAL-5.5.2/include/CGAL/Compact_container.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Plane_separator.h:
@@ -2577,6 +2617,42 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE_arithmetic_kernel.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE_BigRat.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE_BigInt.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CC_safe_handle.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Filter.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Real_impl.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/RefCount.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigInt.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloatRep.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux_impl.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/MemoryPool.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Config.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Impl.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h:
+
 /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/OFF.h:
 
 /usr/include/boost/type_traits/promote.hpp:
@@ -2682,6 +2758,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /home/toler/CGAL-5.5.2/include/CGAL/ipower.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Real.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpzf_type.h:
 
@@ -3493,6 +3571,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/boost/parameter/aux_/pack/insert_tagged.hpp:
 
+/home/toler/CGAL-5.5.2/include/CGAL/export/CORE.h:
+
 /usr/include/boost/random/extreme_value_distribution.hpp:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Aff_transformation_2.h:
@@ -3602,6 +3682,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/variant/visitor_ptr.hpp:
 
 /usr/include/boost/variant/detail/element_index.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs_impl.h:
 
 /usr/include/boost/variant/get.hpp:
 
@@ -3779,6 +3861,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/boost/mpl/pair.hpp:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/ExprRep.h:
+
 /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
 
 /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
@@ -3786,6 +3870,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/range/detail/extract_optional_type.hpp:
 
 /usr/include/boost/mpl/pop_back_fwd.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE_Expr.h:
 
 /usr/include/boost/multiprecision/cpp_int/value_pack.hpp:
 
@@ -3927,6 +4013,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr_impl.h:
+
 /usr/include/pthread.h:
 
 /usr/include/boost/math/constants/constants.hpp:
@@ -3938,6 +4026,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/c++/9/list:
 
 /usr/include/boost/predef/architecture/z.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat_impl.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/RayH3.h:
 
@@ -3964,6 +4054,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/preprocessor/arithmetic/inc.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE_BigFloat.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PlaneH3.h:
 
@@ -4065,6 +4157,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/errno.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/CORE.h:
+
 /usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
 /usr/include/boost/type_traits/add_pointer.hpp:
@@ -4158,6 +4252,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/boost/intrusive/detail/std_fwd.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/Bigfloat_interval_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
@@ -4279,6 +4375,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/mpfr.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Promote.h:
+
 /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_3.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
@@ -4349,6 +4447,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/c++/9/bits/predefined_ops.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.tcc:
+
 /usr/include/boost/predef/library/std/_prefix.h:
 
 /usr/include/boost/iterator/iterator_categories.hpp:
@@ -4404,6 +4504,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/random/bernoulli_distribution.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Timer.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -4583,6 +4685,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/boost/mpl/aux_/static_cast.hpp:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp_impl.h:
+
 /usr/include/c++/9/bits/basic_string.tcc:
 
 /home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesh.h:
@@ -4632,6 +4736,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/c++/9/bits/functional_hash.h:
 
 /usr/include/boost/predef/os/ios.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/RealRep.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
 
@@ -4870,6 +4976,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.h:
 
 /usr/include/boost/predef/compiler/mpw.h:
 
@@ -5169,6 +5277,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/c++/9/bits/exception_ptr.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/auto_link/CORE.h:
+
 /usr/include/boost/predef/os/hpux.h:
 
 /usr/include/boost/predef/library/c/cloudabi.h:
@@ -5237,6 +5347,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/c++/9/bits/exception_defines.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigRat.h:
+
 /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH3.h:
 
 /usr/include/boost/iterator/detail/facade_iterator_category.hpp:
@@ -5288,6 +5400,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/preprocessor/repetition/enum_params.hpp:
 
 /usr/include/boost/heap/detail/heap_comparison.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Sturm.h:
 
 /usr/include/c++/9/bits/nested_exception.h:
 
@@ -5561,6 +5675,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat.h:
+
 /usr/include/c++/9/bits/stl_numeric.h:
 
 /usr/include/boost/mpl/identity.hpp:
@@ -5604,6 +5720,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/mpl/aux_/preprocessor/params.hpp:
 
 /usr/include/boost/mpl/aux_/arithmetic_op.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE_coercion_traits.h:
 
 /usr/include/boost/predef/hardware/simd/x86.h:
 
@@ -6111,6 +6229,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 
 /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h:
 
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux.h:
+
 /usr/include/boost/random/negative_binomial_distribution.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
@@ -6278,6 +6398,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/mpl/front_fwd.hpp:
 
 /usr/include/boost/mpl/list/aux_/clear.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreIO_impl.h:
 
 /home/toler/CGAL-5.5.2/include/CGAL/Sphere_3.h:
 
@@ -6744,6 +6866,8 @@ CMakeFiles/get_force.dir/get_force.cpp.o: /home/toler/projects/CGAL_curvature/ma
 /usr/include/boost/move/detail/std_ns_begin.hpp:
 
 /usr/include/boost/variant/detail/over_sequence.hpp:
+
+/home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong_impl.h:
 
 /usr/include/boost/variant/detail/cast_storage.hpp:
 
