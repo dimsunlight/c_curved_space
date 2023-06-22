@@ -14,6 +14,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <ctime>
 
 //typedefs:
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             Kernel;
@@ -121,20 +122,23 @@ int main(int argc, char* argv[]) {
    return EXIT_FAILURE;
  }
 
+ clock_t t;
+
  Point_3 source_pt(3.51033,1.91770,0.000000);
  Point_3 target_pt(2.08546,1.66027,0.942445);
  Point_3 target_pts[] = {target_pt};
 
- std::pair<std::vector<double>,std::vector<Vector_3>> distTang = calcTangentsAndDistances(tmesh,source_pt,target_pts, sizeof(target_pts)/sizeof(target_pts[0]));
- std::cout << distTang.first[0] << std::endl;
- std::cout << distTang.second[0] << std::endl;
- 
- std::cout << "with alternate function" << std::endl;
+ std::cout << "with single-pair function" << std::endl;
 
+ t=clock();
  std::pair<double, Vector_3> oneCalc = calcTangentandDistance (tmesh, source_pt, target_pt);
- std::cout << oneCalc.first << std::endl;
- std::cout << oneCalc.second << std::endl;
- 
+ clock_t timeTaken = ( clock() -t);
+
+ std::cout << "Distance:" << oneCalc.first << std::endl;
+ std::cout << "Force Grad: " << oneCalc.second << std::endl;
+ std::cout << "Clocks per second: " << CLOCKS_PER_SEC << std::endl;;
+ std::cout << "Time taken: " << timeTaken << " clicks and "  << timeTaken/CLOCKS_PER_SEC << " seconds." << std::endl;
+
  Vector_3 force = forceFunction(oneCalc.first, oneCalc.second);
  std::cout << "The force is " << force << std::endl;
 
