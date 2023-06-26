@@ -35,6 +35,9 @@ typedef PMP::Face_location<Triangle_mesh, FT>                                   
 
 //function definitions
 auto overEdge(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
+  Face_location oldPosLocation = PMP::locate(pos,mesh);
+  Vector_3 oldNormal = PMP::compute_face_normal(oldPosLocation.first,mesh);
+
   return Point_3(0.0,0.0,0.0);
 }
 
@@ -44,10 +47,13 @@ auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
 
   Point_3 trialNewPos = pos + move;
   Face_location oldPosLocation = PMP::locate(pos, mesh);
+
   std::cout << oldPosLocation.first << std::endl;
+  std::cout << oldPosLocation.second[1] << " " << oldPosLocation.second[2] << " "<<oldPosLocation.second[3] << std::endl;
 
   Face_location newPosLocation = PMP::locate(trialNewPos,mesh);
   std::cout << newPosLocation.first << std::endl;
+  std::cout << newPosLocation.second[1] << " " << newPosLocation.second[2] << " "<< newPosLocation.second[3] << std::endl;
 
   bool withinTriangle=true;
 
@@ -69,7 +75,7 @@ auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
 int main(int argc, char* argv[]) {
  
  //get input mesh from command line argument
- const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("sims_project/torusrb12.off");
+ const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("sims_project/torusrb30.off");
  Triangle_mesh tmesh;
  if(!CGAL::IO::read_polygon_mesh(filename, tmesh) ||
    !CGAL::is_triangle_mesh(tmesh))
