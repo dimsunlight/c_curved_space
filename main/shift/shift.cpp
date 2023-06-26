@@ -35,6 +35,21 @@ typedef PMP::Barycentric_coordinates<FT>                                Barycent
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 
 //function definitions
+auto getVertexPositions(Triangle_mesh mesh, Triangle_mesh::face_index fIndex) {
+   
+  Triangle_mesh::Halfedge_index hf = mesh.halfedge(fIndex);
+  std::vector<Point_3> vertices; //I think we can say 3 because we know it's a triangle mesh
+
+  for(Triangle_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh))
+  {
+    Triangle_mesh::Vertex_index vi = target(hi, mesh);
+    vertices.push_back( mesh.point(vi)); //working with xyz points rather than indices --
+                                         //don't need to alter base mesh, so points fine
+  }
+  
+  return vertices;
+}
+
 auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move) {
   Face_location oldPosLocation = PMP::locate(pos,mesh);
   //compute normals are unit normals, so we shouldn't need additional normalization
@@ -45,10 +60,16 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   FT oldDotNew = CGAL::scalar_product(oldNormal,newNormal);
   double angle = acos(oldDotNew);
   //angle within expectations 
-  if (angle > double 0.5) {
+  if (angle > 0.5) {
     std::cout << "Angle over 0.5!" << std::endl;
   }
+
+  std::vector<Point_3> vertices1 = getVertexPositions(mesh, f1.first);
+  std::vector<Point_3> vertices2 = getVertexPositions(mesh, f2.first);
+  for (Point_3 i: vertices1) std::cout << i << std::endl;
+  for (Point_3 i: vertices2) std::cout << i << std::endl;
   //task deconstruction for unfolding --essentially very simple version of geodesic finder
+  //vertices1,vertices2 = getVertexPositions(f1),getVertexPositions(f2);
   //sharedEdge = getSharedEdge(f1,f2);
   //vertexToRotate = getRotatedVertexCoordinates(f1, f2, sharedEdge);
   //newVertexLocation = rotateVertexAboutSharedAxis(vertexToRotate, sharedEdge);
@@ -56,7 +77,7 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   //baryCoordinatesInNewFace = getBaryCoordinates(tempFace,pos+move); //coordinates tempFace are the same as those in f2
   //newXYZCoordinates = getXYZCoordinates(mesh,baryCoordinatesInNewFace,f2);
   //and done. 
-
+  
   return Point_3(0.0,0.0,0.0);
 }
 
