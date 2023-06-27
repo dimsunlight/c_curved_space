@@ -34,6 +34,14 @@ namespace PMP = CGAL::Polygon_mesh_processing;
 typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 
+//utility functions
+auto normalize(Vector_3 v)
+{
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  auto const d = CGAL::approximate_sqrt(slen);
+  return v / d;
+}
+
 //function definitions
 auto getVertexPositions(Triangle_mesh mesh, Triangle_mesh::face_index fIndex) {
    
@@ -50,6 +58,44 @@ auto getVertexPositions(Triangle_mesh mesh, Triangle_mesh::face_index fIndex) {
   return vertices;
 }
 
+auto getSharedEdge(std::vector<Point_3> vs1, std::vector<Point_3> vs2) {
+  //common element finder for shared edge; 
+  //from https://www.includehelp.com/stl/find-common-elements-between-two-vectors.aspx#:~:text=To%20find%20common%20elements%20between%20two%20vectors%2C%20we%20can%20use,to%20the%20end%20of%20the 
+  
+  /*
+  std::vector<Point_3> sharedElements(vs1.size()+vs2.size());//triangle mesh means at most three of the same vertices
+  std::vector<Point_3>::iterator it, end;
+  end = set_intersection(
+        vs1.begin(), vs1.end(),
+        vs2.begin(), vs2.end(),
+        sharedElements.begin());
+
+  std::cout << "Common elements:" << std::endl;
+  for (it = sharedElements.begin(); it != end; it++) std::cout << *it << " ";
+  //for (Point_3 i: sharedElements) std::cout << i << " ";
+  std::cout << std::endl;
+  */
+  //this is bad practice, but because I know these will be small vectors it should be perfectly fine/fast anyway
+  std::vector<Point_3> sharedElements;
+  std::cout << "Shared vertex locations: " << std::endl;
+  for (Point_3 i: vs1) {
+    for (Point_3 j: vs2) {
+      if (i == j) {
+        sharedElements.push_back(i);
+	std::cout << i << std::endl;
+      }
+    }
+  }
+  
+  return sharedElements;
+}
+
+auto getRotatedVertexCoordinates(Face_location face1, Face_location face2, std::vector<Point_3> sharedEdge) {
+  int a= 1;
+  return 0;
+}
+
+
 auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move) {
   Face_location oldPosLocation = PMP::locate(pos,mesh);
   //compute normals are unit normals, so we shouldn't need additional normalization
@@ -59,18 +105,18 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
 
   FT oldDotNew = CGAL::scalar_product(oldNormal,newNormal);
   double angle = acos(oldDotNew);
-  //angle within expectations 
+  //angle within expectations unit test 
   if (angle > 0.5) {
     std::cout << "Angle over 0.5!" << std::endl;
   }
-
+  std::cout << "face 1: " << f1.first << std::endl;
+  std::cout << "face 2: " << f2.first << std::endl;
+  //task deconstruction for unfolding --essentially very simple version of geodesic finder
   std::vector<Point_3> vertices1 = getVertexPositions(mesh, f1.first);
-  std::vector<Point_3> vertices2 = getVertexPositions(mesh, f2.first);
+  std::vector<Point_3> vertices2 = getVertexPositions(mesh, f2.first); 
   for (Point_3 i: vertices1) std::cout << i << std::endl;
   for (Point_3 i: vertices2) std::cout << i << std::endl;
-  //task deconstruction for unfolding --essentially very simple version of geodesic finder
-  //vertices1,vertices2 = getVertexPositions(f1),getVertexPositions(f2);
-  //sharedEdge = getSharedEdge(f1,f2);
+  std::vector<Point_3> sharedEdge = getSharedEdge(vertices1,vertices2); //by using Point_3 objects i'm opening myself up to numerical precision errors
   //vertexToRotate = getRotatedVertexCoordinates(f1, f2, sharedEdge);
   //newVertexLocation = rotateVertexAboutSharedAxis(vertexToRotate, sharedEdge);
   //tempFace = Face(f2.v1,f2.v2, newVertexLocation);
@@ -93,6 +139,7 @@ auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   
   if (withinTriangle) {
     //could also return bary coordinates; PMP::locate(trialNewPos,mesh)
+    std::cout << trialNewPos << std::endl;
     return trialNewPos;
   }
 
@@ -109,7 +156,7 @@ auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
 int main(int argc, char* argv[]) {
  
  //get input mesh from command line argument
- const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("sims_project/torusrb12.off");
+ const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("sims_project/torusrb20.off");
  Triangle_mesh tmesh;
  if(!CGAL::IO::read_polygon_mesh(filename, tmesh) ||
    !CGAL::is_triangle_mesh(tmesh))
@@ -118,7 +165,7 @@ int main(int argc, char* argv[]) {
    return EXIT_FAILURE;
  }
 
- Vector_3 forceDisplacement = Vector_3(-0.0145553, 0.0453073, 0.176461);
+ Vector_3 forceDisplacement = -0.1*Vector_3(-0.0145553, 0.0453073, 0.176461); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
  Point_3 pointToMove = Point_3(3.51033, 1.9177, 0);
  
 
