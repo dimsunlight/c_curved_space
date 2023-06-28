@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/shift.dir/shift.cpp.o"
-  "CMakeFiles/shift.dir/shift.cpp.o.d"
   "shift"
   "shift.pdb"
 )

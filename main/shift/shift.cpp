@@ -89,8 +89,17 @@ auto getVertexToRotate(std::vector<Point_3> vs2, std::vector<Point_3> sEdge) {
 }
 
 auto rotateAboutSharedAxis(Point_3  target, std::vector<Point_3> axis, double angle) {
+  //assumes that the shared axis is represented by a shared edge, rather than a vertex
+  Vector_3 axisVector = normalize(Vector_3(axis[0],axis[1]));
+  Point_3 shiftedTarget = target - Vector_3({0,0,0}, axis[0]);//can subtract vectors from points, but not points themselves
+  std::cout << "target shifted for rotation to " << shiftedTarget << std::endl;
+  /*
+  double Identity[3][3] = {{1.0,0.0,0.0},{0.0,1.0,0.0},{0.0,0.0,1.0}};
+  double crossMatrix[3][3] = {{},{},{}};
+  double tensorProduct[3][3] = {{},{},{}};
+
   double formula = 1;
-	
+  */	
   return 0;
 }
 
@@ -124,8 +133,13 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   for (Point_3 i: sharedEdge) std::cout << i << std::endl;
   std::vector<Point_3> vertexToRotate = getVertexToRotate(vertices2, sharedEdge);
   std::cout << "target vertex coordinates to rotate" << std::endl;
-  for (Point_3 i: vertexToRotate) std::cout << i << std::endl;
-  //newVertexLocation = rotateVertexAboutSharedAxis(vertexToRotate, sharedEdge);
+  Point_3 vtr;
+  for (Point_3 i: vertexToRotate){
+	  std::cout << i << std::endl;
+	  std::cout << typeid(i).name() << std::endl;
+	  vtr = i;
+  }
+  //Point_3 newVertexLocation = rotateAboutSharedAxis(vtr, sharedEdge, angle);
   //tempFace = Face(f2.v1,f2.v2, newVertexLocation);
   //baryCoordinatesInNewFace = getBaryCoordinates(tempFace,pos+move); //coordinates tempFace are the same as those in f2
   //newXYZCoordinates = getXYZCoordinates(mesh,baryCoordinatesInNewFace,f2);
