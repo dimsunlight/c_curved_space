@@ -59,30 +59,14 @@ auto getVertexPositions(Triangle_mesh mesh, Triangle_mesh::face_index fIndex) {
 }
 
 auto getSharedEdge(std::vector<Point_3> vs1, std::vector<Point_3> vs2) {
-  //common element finder for shared edge; 
-  //from https://www.includehelp.com/stl/find-common-elements-between-two-vectors.aspx#:~:text=To%20find%20common%20elements%20between%20two%20vectors%2C%20we%20can%20use,to%20the%20end%20of%20the 
-  
-  /*
-  std::vector<Point_3> sharedElements(vs1.size()+vs2.size());//triangle mesh means at most three of the same vertices
-  std::vector<Point_3>::iterator it, end;
-  end = set_intersection(
-        vs1.begin(), vs1.end(),
-        vs2.begin(), vs2.end(),
-        sharedElements.begin());
-
-  std::cout << "Common elements:" << std::endl;
-  for (it = sharedElements.begin(); it != end; it++) std::cout << *it << " ";
-  //for (Point_3 i: sharedElements) std::cout << i << " ";
-  std::cout << std::endl;
-  */
-  //this is bad practice, but because I know these will be small vectors it should be perfectly fine/fast anyway
-  std::vector<Point_3> sharedElements;
-  std::cout << "Shared vertex locations: " << std::endl;
+  //common element finder for shared edge; double for loop is slow, but
+  //that's fine given guaranteed small size. We could use set intersection finder, 
+  //but that needs a sorted vector and I can't sort Point_3 objects!
+  std::vector<Point_3> sharedElements; 
   for (Point_3 i: vs1) {
     for (Point_3 j: vs2) {
       if (i == j) {
         sharedElements.push_back(i);
-	std::cout << i << std::endl;
       }
     }
   }
@@ -90,18 +74,33 @@ auto getSharedEdge(std::vector<Point_3> vs1, std::vector<Point_3> vs2) {
   return sharedElements;
 }
 
-auto getRotatedVertexCoordinates(Face_location face1, Face_location face2, std::vector<Point_3> sharedEdge) {
-  int a= 1;
-  return 0;
+auto getVertexToRotate(std::vector<Point_3> vs2, std::vector<Point_3> sEdge) {
+  //assuming second face includes the vertex we want to rotate
+  std::vector<Point_3> oddVertex;
+  
+  for (Point_3 i: vs2) {
+    if (std::find(sEdge.begin(), sEdge.end(), i) != sEdge.end()) {}
+    else {
+      oddVertex.push_back(i);
+    }
+  }
+
+  return oddVertex;
 }
 
+auto rotateAboutSharedAxis(Point_3  target, std::vector<Point_3> axis, double angle) {
+  double formula = 1;
+	
+  return 0;
+}
 
 auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move) {
   Face_location oldPosLocation = PMP::locate(pos,mesh);
   //compute normals are unit normals, so we shouldn't need additional normalization
   Vector_3 oldNormal = PMP::compute_face_normal(f1.first,mesh);
   Vector_3 newNormal = PMP::compute_face_normal(f2.first,mesh);
-  //normals compute fine
+  //normals compute fine (verified via print) 
+  std::cout << "Original face normal is " << oldNormal << std::endl;//to test if shift is orthogonal
 
   FT oldDotNew = CGAL::scalar_product(oldNormal,newNormal);
   double angle = acos(oldDotNew);
@@ -109,15 +108,23 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   if (angle > 0.5) {
     std::cout << "Angle over 0.5!" << std::endl;
   }
+  std::cout << "Angle: " << angle << std::endl;
   std::cout << "face 1: " << f1.first << std::endl;
   std::cout << "face 2: " << f2.first << std::endl;
   //task deconstruction for unfolding --essentially very simple version of geodesic finder
   std::vector<Point_3> vertices1 = getVertexPositions(mesh, f1.first);
-  std::vector<Point_3> vertices2 = getVertexPositions(mesh, f2.first); 
+  std::vector<Point_3> vertices2 = getVertexPositions(mesh, f2.first);
+  std::cout << "face 1 vertices: " << std::endl; 
   for (Point_3 i: vertices1) std::cout << i << std::endl;
+  std::cout << "face 2 vertices: " << std::endl;
   for (Point_3 i: vertices2) std::cout << i << std::endl;
-  std::vector<Point_3> sharedEdge = getSharedEdge(vertices1,vertices2); //by using Point_3 objects i'm opening myself up to numerical precision errors
-  //vertexToRotate = getRotatedVertexCoordinates(f1, f2, sharedEdge);
+  std::vector<Point_3> sharedEdge = getSharedEdge(vertices1,vertices2); 
+  //by using Point_3 objects i'm opening myself up to numerical precision errors
+  std::cout << "vertices of shared edge: " << std::endl;
+  for (Point_3 i: sharedEdge) std::cout << i << std::endl;
+  std::vector<Point_3> vertexToRotate = getVertexToRotate(vertices2, sharedEdge);
+  std::cout << "target vertex coordinates to rotate" << std::endl;
+  for (Point_3 i: vertexToRotate) std::cout << i << std::endl;
   //newVertexLocation = rotateVertexAboutSharedAxis(vertexToRotate, sharedEdge);
   //tempFace = Face(f2.v1,f2.v2, newVertexLocation);
   //baryCoordinatesInNewFace = getBaryCoordinates(tempFace,pos+move); //coordinates tempFace are the same as those in f2
