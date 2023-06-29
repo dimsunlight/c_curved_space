@@ -17,7 +17,7 @@
 #include <fstream>
 #include <cmath>
 #include <ctime>
-#include <math.h>
+#include <math.h> //including this to do simple cos and sine, but maybe imprecise compared to cgal-originating routines
 //types and names
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             K;
 typedef K::FT                                                           FT;
@@ -88,19 +88,32 @@ auto getVertexToRotate(std::vector<Point_3> vs2, std::vector<Point_3> sEdge) {
   return oddVertex;
 }
 
-auto rotateAboutSharedAxis(Point_3  target, std::vector<Point_3> axis, double angle) {
+auto rotateAboutSharedAxis(Point_3 target, std::vector<Point_3> axis, double rotAngle) {
   //assumes that the shared axis is represented by a shared edge, rather than a vertex
   Vector_3 axisVector = normalize(Vector_3(axis[0],axis[1]));
   Point_3 shiftedTarget = target - Vector_3({0,0,0}, axis[0]);//can subtract vectors from points, but not points themselves
   std::cout << "target shifted for rotation to " << shiftedTarget << std::endl;
-  /*
-  double Identity[3][3] = {{1.0,0.0,0.0},{0.0,1.0,0.0},{0.0,0.0,1.0}};
-  double crossMatrix[3][3] = {{},{},{}};
-  double tensorProduct[3][3] = {{},{},{}};
-
-  double formula = 1;
-  */	
-  return 0;
+  double u1 = axisVector.x(), u2 = axisVector.y(), u3=axisVector.z();
+  
+  double c = cos(rotAngle);
+  double s = sin(rotAngle);
+  double C = 1-c;
+  double Identity[3][3] = {{c,0.0,0.0},{0.0,c,0.0},{0.0,0.0,c}};
+  double crossMatrix[3][3] = {{0,-s*u3,s*u2},{s*u3,0,-s*u1},{-s*u2,s*u1,0}};
+  double tensorProduct[3][3] = {{C*u1*u1,C*u1*u2,C*u1*u3},{C*u2*u1,C*u2*u2,C*u2*u3},{C*u3*u1,C*u3*u2,C*u3*u3}};
+  
+  double rMatrix[3][3];
+  //this double loop to define the rotation matrix is probably a place where it'd be easy to speed things up
+  //with more c++ knowledge
+  for (std::size_t i = 0; i < 3; i++) {
+    for (std::size_t j = 0; j < 3; j++) {
+	    rMatrix[i][j] = Identity[i][j] + crossMatrix[i][j] + tensorProduct[i][j];
+	    std::cout << rMatrix[i][j] << " "; 
+    }
+    std::cout << std::endl;
+  }
+  	
+  return shiftedTarget;
 }
 
 auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move) {
@@ -133,13 +146,10 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   for (Point_3 i: sharedEdge) std::cout << i << std::endl;
   std::vector<Point_3> vertexToRotate = getVertexToRotate(vertices2, sharedEdge);
   std::cout << "target vertex coordinates to rotate" << std::endl;
-  Point_3 vtr;
   for (Point_3 i: vertexToRotate){
 	  std::cout << i << std::endl;
-	  std::cout << typeid(i).name() << std::endl;
-	  vtr = i;
   }
-  //Point_3 newVertexLocation = rotateAboutSharedAxis(vtr, sharedEdge, angle);
+  Point_3 newVertexLocation = rotateAboutSharedAxis(vertexToRotate[0], sharedEdge, angle);
   //tempFace = Face(f2.v1,f2.v2, newVertexLocation);
   //baryCoordinatesInNewFace = getBaryCoordinates(tempFace,pos+move); //coordinates tempFace are the same as those in f2
   //newXYZCoordinates = getXYZCoordinates(mesh,baryCoordinatesInNewFace,f2);
