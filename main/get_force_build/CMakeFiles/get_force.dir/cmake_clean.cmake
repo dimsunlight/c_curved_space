@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/get_force.dir/get_force.cpp.o"
+  "CMakeFiles/get_force.dir/get_force.cpp.o.d"
   "get_force"
   "get_force.pdb"
 )

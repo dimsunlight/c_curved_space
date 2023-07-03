@@ -95,9 +95,9 @@ auto rotateAboutSharedAxis(Point_3 target, std::vector<Point_3> axis, double rot
   std::cout << "target shifted for rotation to " << shiftedTarget << std::endl;
   double u1 = axisVector.x(), u2 = axisVector.y(), u3=axisVector.z();
   
-  double c = cos(rotAngle);
-  double s = sin(rotAngle);
+  double c = cos(rotAngle), s = sin(rotAngle);
   double C = 1-c;
+  //unfortunately, I believe I have to multiply element wise in C++
   double Identity[3][3] = {{c,0.0,0.0},{0.0,c,0.0},{0.0,0.0,c}};
   double crossMatrix[3][3] = {{0,-s*u3,s*u2},{s*u3,0,-s*u1},{-s*u2,s*u1,0}};
   double tensorProduct[3][3] = {{C*u1*u1,C*u1*u2,C*u1*u3},{C*u2*u1,C*u2*u2,C*u2*u3},{C*u3*u1,C*u3*u2,C*u3*u3}};
@@ -105,6 +105,7 @@ auto rotateAboutSharedAxis(Point_3 target, std::vector<Point_3> axis, double rot
   double rMatrix[3][3];
   //this double loop to define the rotation matrix is probably a place where it'd be easy to speed things up
   //with more c++ knowledge
+  std::cout << "Rotation matrix: " << std::endl;
   for (std::size_t i = 0; i < 3; i++) {
     for (std::size_t j = 0; j < 3; j++) {
 	    rMatrix[i][j] = Identity[i][j] + crossMatrix[i][j] + tensorProduct[i][j];
@@ -112,8 +113,24 @@ auto rotateAboutSharedAxis(Point_3 target, std::vector<Point_3> axis, double rot
     }
     std::cout << std::endl;
   }
-  	
-  return shiftedTarget;
+  
+  double rotatedStorage[3];
+  double targetStorage[3] = {shiftedTarget.x(),shiftedTarget.y(),shiftedTarget.z()};
+  
+  for (std::size_t i = 0; i < 3; i++) {
+    double product = 0;
+    for (std::size_t j = 0; j < 3; j++) {
+      product += rMatrix[i][j]*targetStorage[j];
+    }
+    rotatedStorage[i] = product; 
+  }
+  Point_3 rotatedTarget = Point_3(rotatedStorage[0],rotatedStorage[1],rotatedStorage[2]);
+
+  std::cout << "The post-rotation target is " << rotatedTarget << std::endl;
+  
+  rotatedTarget = rotatedTarget + Vector_3({0,0,0}, axis[0]);
+
+  return rotatedTarget;
 }
 
 auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move) {
@@ -149,7 +166,19 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   for (Point_3 i: vertexToRotate){
 	  std::cout << i << std::endl;
   }
-  Point_3 newVertexLocation = rotateAboutSharedAxis(vertexToRotate[0], sharedEdge, angle);
+  Point_3 newVertexLocation = rotateAboutSharedAxis(vertexToRotate[0], sharedEdge, -angle);
+  std::cout << "After changing origin, rotating, and moving back to original origin, vertex is at "<< std::endl;
+  std::cout << newVertexLocation << std::endl;
+  std::cout << "So ``new'' face is" << newVertexLocation << " " << sharedEdge[0] << " " << sharedEdge[1] << std::endl;
+
+  Triangle_mesh tempMesh;
+  //problem: vertex order will not be guaranteed the same as it originally was, so bary coordinates 
+  //won't match...
+  vertex_descriptor u = tempMesh.add_vertex(newVertexLocation);
+  vertex_descriptor v = tempMesh.add_vertex(sharedEdge[0]);
+  vertex_descriptor w = tempMesh.add_vertex(sharedEdge[1]);
+  face_descriptor tFace = tempMesh.add_face(u,v,w);
+  std::cout << "temp face normal = " << PMP::compute_face_normal(tFace,tempMesh) << std::endl;
   //tempFace = Face(f2.v1,f2.v2, newVertexLocation);
   //baryCoordinatesInNewFace = getBaryCoordinates(tempFace,pos+move); //coordinates tempFace are the same as those in f2
   //newXYZCoordinates = getXYZCoordinates(mesh,baryCoordinatesInNewFace,f2);
@@ -162,9 +191,13 @@ auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   //first: check if we will be in our out of triangle after naive shift
   //then: do the simple shift if we will, unfold shift if we won't 
 
-  Point_3 trialNewPos = pos + move;
   Face_location oldPosLocation = PMP::locate(pos, mesh);
+  Point_3 meshPos = PMP::construct_point(oldPosLocation, mesh);
+  std::cout << "original position off-mesh: " << pos << std::endl;
+  std::cout << "point location on mesh: " <<meshPos << std::endl;
+  Point_3 trialNewPos = meshPos + move;
   Face_location newPosLocation = PMP::locate(trialNewPos,mesh);
+  std::cout << "Trial new position is: " << trialNewPos << std::endl;
 
   bool withinTriangle= oldPosLocation.first == newPosLocation.first;
   
@@ -175,7 +208,7 @@ auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   }
 
   if (!withinTriangle) {
-    return overEdge(mesh, oldPosLocation, newPosLocation, pos, move);
+    return overEdge(mesh, oldPosLocation, newPosLocation, meshPos, move);
   }
 
   std::cout << "neither in or out of triangle...?" << std::endl;
@@ -196,9 +229,8 @@ int main(int argc, char* argv[]) {
    return EXIT_FAILURE;
  }
 
- Vector_3 forceDisplacement = -0.1*Vector_3(-0.0145553, 0.0453073, 0.176461); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
+ Vector_3 forceDisplacement = -0.12*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
  Point_3 pointToMove = Point_3(3.51033, 1.9177, 0);
- 
 
 
  Point_3 newPos = shift(tmesh, pointToMove, forceDisplacement);

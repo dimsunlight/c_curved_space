@@ -78,7 +78,9 @@ std::pair<double,Vector_3> calcTangentandDistance (Triangle_mesh mesh, Point_3 s
   
   double distance;
   Vector_3 tangent;
-
+  
+  std::cout << "interpolation point 1: " << points[points.size()-2] << std::endl;
+  std::cout << "interpolation point 2: " << points[points.size()-1] << std::endl;
   distance = std::get<0>(shortest_paths.shortest_distance_to_source_points(target_loc.first,target_loc.second));
   tangent = Vector_3(points[points.size()-2],points[points.size()-1]);
 
