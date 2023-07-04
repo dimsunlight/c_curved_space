@@ -183,7 +183,7 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   Point_3 newVertexLocation = rotateAboutSharedAxis(vertexToRotate[0], sharedEdge, -angle);
   std::cout << "After changing origin, rotating, and moving back to original origin, vertex is at "<< std::endl;
   std::cout << newVertexLocation << std::endl;
-  std::cout << "So ``new'' face is" << newVertexLocation << " " << sharedEdge[0] << " " << sharedEdge[1] << std::endl;
+  std::cout << "New face vertices " << "(" <<newVertexLocation << "), (" << sharedEdge[0] << "), (" << sharedEdge[1] << ")" <<std::endl;
   
   //get original index locations -- fact that we always use second face is important here
   int ind1 = findIndex(sharedEdge[0],vertices2);
@@ -225,11 +225,13 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
 
   std::cout << "temp bary coords: " << "(" <<b_weights[0] << ", " << b_weights[1] << ", "<<  b_weights[2] << ")" <<std::endl;
 
+  Face_location frankenLocation = std::make_pair(f2.first,b_weights);
+  
+  Point_3 newXYZLocation = PMP::construct_point(frankenLocation, mesh);
   //baryCoordinatesInNewFace = getBaryCoordinates(tempFace,pos+move); //coordinates tempFace are the same as those in f2
   //newXYZCoordinates = getXYZCoordinates(mesh,baryCoordinatesInNewFace,f2);
   //and done. 
-  
-  return Point_3(0.0,0.0,0.0);
+  return newXYZLocation;
 }
 
 auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
@@ -280,7 +282,7 @@ int main(int argc, char* argv[]) {
 
 
  Point_3 newPos = shift(tmesh, pointToMove, forceDisplacement);
-
+ std::cout << "The post-shift XYZ location is " << newPos << std::endl;
  return 0;
 }
 
