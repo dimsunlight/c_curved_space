@@ -42,6 +42,19 @@ auto normalize(Vector_3 v)
   return v / d;
 }
 
+int findIndex(Point_3 loc,std::vector<Point_3> vec) {
+  auto it = find(vec.begin(), vec.end(), loc);
+  int index;
+  if (it != vec.end()) {
+    index = it - vec.begin();
+  }
+  else {
+    std::cout << "could not find index for entry (" << loc << ")" << std::endl;
+    index = -1; 
+  }
+  return index;
+}  
+
 //function definitions
 auto getVertexPositions(Triangle_mesh mesh, Triangle_mesh::face_index fIndex) {
    
@@ -134,6 +147,7 @@ auto rotateAboutSharedAxis(Point_3 target, std::vector<Point_3> axis, double rot
 }
 
 auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move) {
+  std::cout << "Beginning over edge routine" << std::endl;
   Face_location oldPosLocation = PMP::locate(pos,mesh);
   //compute normals are unit normals, so we shouldn't need additional normalization
   Vector_3 oldNormal = PMP::compute_face_normal(f1.first,mesh);
@@ -170,16 +184,47 @@ auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 po
   std::cout << "After changing origin, rotating, and moving back to original origin, vertex is at "<< std::endl;
   std::cout << newVertexLocation << std::endl;
   std::cout << "So ``new'' face is" << newVertexLocation << " " << sharedEdge[0] << " " << sharedEdge[1] << std::endl;
+  
+  //get original index locations -- fact that we always use second face is important here
+  int ind1 = findIndex(sharedEdge[0],vertices2);
+  int ind2 = findIndex(sharedEdge[1],vertices2); 
+  std::cout << "indices of entries are: " << ind1 << " " << ind2 << std::endl;
+  //then, index of rotated vertex will be whichever of these is not included, so we create 
+  //a phony index array to pick out the right one -- essentially just looks at the indices
+  //1 and 2 and identifies which number between 0, 1, and 2 is not included
+  int possibleIndices[3] = {0,1,2};
+  possibleIndices[ind1] = -1;
+  possibleIndices[ind2] = -1;
+  int rIndex;
+  for (int ind: possibleIndices) {
+    if (ind != -1) {
+      rIndex = ind;
+    }  
+  } 
+  std::cout << "rotated vertex index is: " << rIndex << std::endl;
+
+  //finally, tempTrio uses the found original indices to rearrange vertices into original order 
+  Point_3 tempTrio[3];
+  tempTrio[ind1] = sharedEdge[0];
+  tempTrio[ind2] = sharedEdge[1];
+  tempTrio[rIndex] = newVertexLocation;
 
   Triangle_mesh tempMesh;
-  //problem: vertex order will not be guaranteed the same as it originally was, so bary coordinates 
-  //won't match...
-  vertex_descriptor u = tempMesh.add_vertex(newVertexLocation);
-  vertex_descriptor v = tempMesh.add_vertex(sharedEdge[0]);
-  vertex_descriptor w = tempMesh.add_vertex(sharedEdge[1]);
+  //through above tricky index manipulation, we should be able to guarantee that indices match
+  //this creates a new mesh of a single face; barycentric weights in that face should match
+  //the bary coordinates of the same face in the original mesh if the vertex order is the same. 
+  vertex_descriptor u = tempMesh.add_vertex(tempTrio[0]);
+  vertex_descriptor v = tempMesh.add_vertex(tempTrio[1]);
+  vertex_descriptor w = tempMesh.add_vertex(tempTrio[2]);
   face_descriptor tFace = tempMesh.add_face(u,v,w);
   std::cout << "temp face normal = " << PMP::compute_face_normal(tFace,tempMesh) << std::endl;
-  //tempFace = Face(f2.v1,f2.v2, newVertexLocation);
+
+  Face_location tempLocation= PMP::locate(pos+move,tempMesh);
+  Barycentric_coordinates b_weights = tempLocation.second;
+  std::cout << tempLocation.first << std::endl;
+
+  std::cout << "temp bary coords: " << "(" <<b_weights[0] << ", " << b_weights[1] << ", "<<  b_weights[2] << ")" <<std::endl;
+
   //baryCoordinatesInNewFace = getBaryCoordinates(tempFace,pos+move); //coordinates tempFace are the same as those in f2
   //newXYZCoordinates = getXYZCoordinates(mesh,baryCoordinatesInNewFace,f2);
   //and done. 
@@ -199,6 +244,7 @@ auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   Face_location newPosLocation = PMP::locate(trialNewPos,mesh);
   std::cout << "Trial new position is: " << trialNewPos << std::endl;
 
+  std::cout << "trial bary coords: " << "(" << newPosLocation.second[0] << ", "<<  newPosLocation.second[1] << ", "<< newPosLocation.second[2]<< ")"<< std::endl;
   bool withinTriangle= oldPosLocation.first == newPosLocation.first;
   
   if (withinTriangle) {
