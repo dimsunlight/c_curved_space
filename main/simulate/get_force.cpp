@@ -104,36 +104,3 @@ auto force_on_source (Triangle_mesh mesh, Point_3 source, Point_3 targets[], std
   return force;
 }
 
-int main(int argc, char* argv[]) {
- //get input mesh from command line argument
- const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("sims_project/heightmap.off");
- Triangle_mesh tmesh;
- if(!CGAL::IO::read_polygon_mesh(filename, tmesh) ||
-   !CGAL::is_triangle_mesh(tmesh))
- {
-   std::cerr << "Invalid input file." << std::endl;
-   return EXIT_FAILURE;
- }
-
- clock_t t;
-
- Point_3 source_pt(3.51033,1.91770,0.000000);
- Point_3 target_pt(2.08546,1.66027,0.942445);
- Point_3 target_pts[] = {target_pt};
-
- std::cout << "with single-pair function" << std::endl;
-
- t=clock();
- std::pair<double, Vector_3> oneCalc = calcTangentandDistance (tmesh, source_pt, target_pt);
- clock_t timeTaken = ( clock() -t);
-
- std::cout << "Distance:" << oneCalc.first << std::endl;
- std::cout << "Force Grad: " << oneCalc.second << std::endl;
- std::cout << "Clocks per second: " << CLOCKS_PER_SEC << std::endl;;
- std::cout << "Time taken: " << timeTaken << " clicks and "  << timeTaken/CLOCKS_PER_SEC << " seconds." << std::endl;
-
- Vector_3 force = forceFunction(oneCalc.first, oneCalc.second);
- std::cout << "The force is " << force << std::endl;
-
- return 0;
-}
