@@ -6,7 +6,8 @@
 //includes
 #include <CGAL>
 #include <get_force.h>
-
+#include "shift.h"
+#include "get_force.h"
 
 int main () {
   //have defaults for both loading functionalities below
