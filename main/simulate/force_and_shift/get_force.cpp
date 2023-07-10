@@ -95,8 +95,9 @@ auto force_on_source (Triangle_mesh mesh, Point_3 source, Point_3 targets[], std
   //L-J parameters
   double epsilon = 1;
   double sigma = 1;
-  double force=0; //initialize to zero to avoid redefinition
-
+  Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
+                                   //also handles case of no neighbors
+				   
   for (std::size_t i = 0; i < distances.size(); i++) {
     force+= forceFunction(distances[i],tangents[i], epsilon, sigma);    
   } 

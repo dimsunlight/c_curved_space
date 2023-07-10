@@ -9,9 +9,4 @@ auto rotateAboutSharedAxis(Point_3 target, std::vector<Point_3> axis, double rot
 auto overEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move);
 auto shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move);
 
-
-
-
-
-
 #endif
