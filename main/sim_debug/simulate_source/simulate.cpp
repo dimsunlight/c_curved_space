@@ -11,30 +11,39 @@
 #include <CGAL/AABB_face_graph_triangle_primitive.h>
 #include <CGAL/AABB_traits.h>
 #include <CGAL/AABB_tree.h>
+#include <CGAL/Point_set_3/IO/XYZ.h>
+#include <CGAL/Polygon_mesh_processing/locate.h>
+#include <CGAL/Polygon_mesh_processing/triangulate_faces.h>
+#include <CGAL/boost/graph/helpers.h>
+#include <CGAL/Dynamic_property_map.h>
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include <cmath>
 #include <ctime>
-#include "shift.h"
-#include "get_force.h"
 
-typedef CGAL::Exact_predicates_inexact_constructions_kernel             Kernel;
-typedef CGAL::Exact_predicates_exact_constructions_kernel_with_sqrt     KernelWithSqrt;
-typedef Kernel::Point_3                                                 Point_3;
-typedef Kernel::Vector_3                                                Vector_3;
-typedef Kernel::Point_set_3                                             Point_set_3;
+typedef CGAL::Exact_predicates_inexact_constructions_kernel             K;
+typedef CGAL::Exact_predicates_exact_constructions_kernel_with_sqrt     KWithSqrt;
+typedef K::FT                                                           FT;
+typedef K::Point_2                                                      Point_2;
+typedef K::Ray_2                                                        Ray_2;
+typedef K::Point_3                                                      Point_3;
+typedef K::Vector_3                                                     Vector_3;
+typedef K::Ray_3                                                        Ray_3;
+typedef K::Point_set_3                                               Point_set_3;
 typedef CGAL::Surface_mesh<Point_3>                                     Triangle_mesh;
-typedef CGAL::Surface_mesh_shortest_path_traits<Kernel, Triangle_mesh>  Traits;
+typedef CGAL::Surface_mesh_shortest_path_traits<K, Triangle_mesh>       Traits;
 typedef CGAL::Surface_mesh_shortest_path<Traits>                        Surface_mesh_shortest_path;
 typedef boost::graph_traits<Triangle_mesh>                              Graph_traits;
 typedef Graph_traits::vertex_iterator                                   vertex_iterator;
 typedef Graph_traits::face_iterator                                     face_iterator;
-typedef typename Surface_mesh_shortest_path::Barycentric_coordinates    Barycentric_coordinates;
-typedef typename Surface_mesh_shortest_path::Face_location              Face_location;
 typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_face_graph_primitive;
-typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
+typedef CGAL::AABB_traits<K, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
+namespace CP = CGAL::parameters;
+namespace PMP = CGAL::Polygon_mesh_processing;
+typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
+typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 
 //utility functions
 
