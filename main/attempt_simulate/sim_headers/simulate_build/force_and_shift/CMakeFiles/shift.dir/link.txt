@@ -1,0 +1,2 @@
+/usr/bin/ar qc libshift.a  CMakeFiles/shift.dir/shift.cpp.o
+/usr/bin/ranlib libshift.a
