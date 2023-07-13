@@ -81,7 +81,7 @@ Vector_3 forceFunction (float dist, Vector_3 tangent, double epsilon, double sig
   //where r is the distance function on the surface 
   
   Vector_3 force = 4*epsilon*(12*pow(sigma,12)/pow(dist,13)-6*pow(sigma,6)/pow(dist,7))*normalizedTangent;
-
+  
   return force;
 }
 
@@ -94,7 +94,7 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = 1;
+  double sigma = .8;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   

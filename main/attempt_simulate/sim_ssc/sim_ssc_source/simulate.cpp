@@ -110,29 +110,64 @@ int main (int argc, char* argv[]) {
   }
 
   const std::string loc_filename = (argc > 2) ? argv[2] : CGAL::data_file_path("sims_project/default_pos.xyz");
-  std::vector<Point_3> particle_locations = create_particles_from_xyz(loc_filename);
 
   //have defaults for both loading functionalities below
-  particle_locations = create_particles_from_xyz(loc_filename); 
-  std::vector<Point_3> location_buffer;
+  std::vector<Point_3> particle_locations = create_particles_from_xyz(loc_filename);
+  std::cout << "Original locations:" << std::endl;
+  for (Point_3 location: particle_locations) std::cout << location << std::endl;
+ 
+  //simulation time parameters -- too-large step sizes can break shift!
+  std::size_t timesteps = 10000; //hard defining this now rather than input-defining to avoid extra debugging 
+  double      stepsize = .0001;
 
-  std::vector<std::pair<Point_3,std::vector<Point_3>>> particles_with_neighbors = get_neighbors(particle_locations,5);
-  
-  //can make this multi-step simply by enclosing into timestep loop
+  //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
+  std::vector<Point_3> location_buffer;
+  std::cout << "Running simulation with " << particle_locations.size() << " particles and " << timesteps << " timesteps." << std::endl;
+  std::cout << "Timestep size " << stepsize << std::endl;
+  double neighbor_cutoff = 5;
+  std::vector<std::pair<Point_3,std::vector<Point_3>>> particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
   std::pair<Point_3,std::vector<Point_3>> particle_and_neighbors;
   Vector_3 f_on_p;
-  for (std::size_t i = 0; i < particle_locations.size();i++) {
-    particle_and_neighbors = particles_with_neighbors[i];
-    f_on_p = force_on_source(mesh,particle_and_neighbors.first,particle_and_neighbors.second,
-		    particle_and_neighbors.second.size()); //CHANGE FORCE_ON_SOURCE TO USE VECTOR FOR SECOND INSTEAD OF ARRAY 
-    location_buffer.push_back(shift(mesh, particle_and_neighbors.first, .1*f_on_p));
+  
+  //write trajectory data to file
+  const std::string trajectory_filename = "positions.txt";
+  std::ofstream trajectory_file(trajectory_filename);
+  if (trajectory_file.is_open()){
+    trajectory_file << particle_locations.size();
+    trajectory_file << "\n";
   }
-  //here, we could store location_buffers in a std::vector to use them
-  //for animation later
-  particle_locations = location_buffer;
-  
+  //main simulation loop
+  for (std::size_t j = 0; j < timesteps; j++) {
+    std::cout << "timestep " << j << " locations: " << std::endl;
+    for (Point_3 location: particle_locations) std::cout << location << std::endl;
+    particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
+    
+    //find forces and do shift
+    for (std::size_t i = 0; i < particle_locations.size();i++) {
+      particle_and_neighbors = particles_with_neighbors[i];
+      //std::cout << "current particle: " <<particle_and_neighbors.first << std::endl;
+      f_on_p = force_on_source(mesh,particle_and_neighbors.first,particle_and_neighbors.second,
+		    particle_and_neighbors.second.size()); 
+      //std::cout << "The force on the particle at " << particle_and_neighbors.first << " is " << f_on_p << std::endl; 
+      location_buffer.push_back(shift(mesh, particle_and_neighbors.first, stepsize*f_on_p));
 
-  
+    }
+
+    //location buffer housekeeping
+
+    particle_locations.clear();
+    
+    for (Point_3 location: location_buffer) {
+      particle_locations.push_back(location);
+      trajectory_file << location;
+      trajectory_file << "\n"; 
+    }
+    location_buffer.clear();
+    trajectory_file << "\n";
+  }
+  trajectory_file.close();
+  for (Point_3 location: particle_locations) std::cout << location << std::endl;
+
   return 0;
 }
 
