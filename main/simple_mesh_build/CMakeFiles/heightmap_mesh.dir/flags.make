@@ -6,5 +6,5 @@ CXX_DEFINES = -DBOOST_ALL_NO_LIB -DCGAL_DATA_DIR=\"/home/toler/CGAL-5.5.2/data\"
 
 CXX_INCLUDES = -isystem /home/toler/CGAL-5.5.2/include
 
-CXX_FLAGS = -frounding-math -pthread
+CXX_FLAGS = -O3 -DNDEBUG -frounding-math -pthread
 

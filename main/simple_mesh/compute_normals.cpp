@@ -30,8 +30,8 @@ int main(int argc, char* argv[]) {
 
   std::string outputFilename = filename.substr(0, filename.size()-4)+"normals.txt";
   std::ofstream out(outputFilename);
-  for(vertex_descriptor vd: vertices(mesh))
-    out << vnormals[vd] << "\n";
+  for(face_descriptor fd: faces(mesh))
+    out << fnormals[fd] << "\n";
 
   out.close();
   return 0;
