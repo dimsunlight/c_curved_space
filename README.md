@@ -1,6 +1,7 @@
 This repo stores code meant to execute curved space simulations primarily with the help of CGAL. 
 
 TODO
+
 -improve shift routine to work not only for shifts within a face and shifts into faces with two 
  shared vertices, but also shifts into faces with only one shared vertex
  
