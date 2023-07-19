@@ -5,7 +5,6 @@
 #include <CGAL/IO/facets_in_complex_2_to_triangle_mesh.h>
 #include <CGAL/Surface_mesh.h>
 #include <math.h>
-#include <string.h>
 #include <fstream>
 // default triangulation for Surface_mesher
 typedef CGAL::Surface_mesh_default_triangulation_3 Tr;
@@ -36,22 +35,14 @@ int main() {
                     Sphere_3(CGAL::ORIGIN, 20.)); // bounding sphere
   // Note that "20." above is the *squared* radius of the bounding sphere!
   // defining meshing criteria
-  int abound = 1;
-  int rbound = 12;
-  double real_rbound = rbound/100.0;
-  double real_abound = abound/1000.0;
-  std::cout << "real rbound is " << real_rbound << std::endl;
-  std::string output_file_name = "torusrb" + std::to_string(rbound) + "ab000" + std::to_string(abound) + ".off";  
-  CGAL::Surface_mesh_default_criteria_3<Tr> criteria(real_abound,  // angular bound
-                                                     real_rbound,  // radius bound
+  CGAL::Surface_mesh_default_criteria_3<Tr> criteria(30.,  // angular bound
+                                                     0.05,  // radius bound
                                                      0.1); // distance bound
   // meshing surface
-  std::cout << "creating mesh with angular bound " << real_abound << " and radius bound " << real_rbound << "." << std::endl;
   CGAL::make_surface_mesh(c2t3, surface, criteria, CGAL::Non_manifold_tag());
   Surface_mesh sm;
   CGAL::facets_in_complex_2_to_triangle_mesh(c2t3, sm);
-  std::cout << "Writing to output file " << output_file_name << std::endl;
-  std::ofstream out(output_file_name);
+  std::ofstream out("torusrb05.off");
   out << sm << std::endl;
   std::cout << "Final number of points: " << tr.number_of_vertices() << "\n";
 }
