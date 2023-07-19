@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/compute_normals.dir/compute_normals.cpp.o"
-  "CMakeFiles/compute_normals.dir/compute_normals.cpp.o.d"
   "compute_normals"
   "compute_normals.pdb"
 )
