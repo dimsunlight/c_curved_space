@@ -112,9 +112,50 @@ auto forceFunction (float dist, Vector_3 tangent) {
 }
 
 
+struct pointdatabase {
+  Point_3 array[21][2];
+};
+
+struct pointdatabase pathEndpointDatabase () {
+  
+  struct pointdatabase pathEndpoints;	
+  pathEndpoints.array = {{Point_3(4.,0.,0.),Point_3(2.16121,3.36588,0.)},
+  {Point_3(3.98769,0.,0.156434),Point_3(2.17237,3.35625,-0.064079)},
+  {Point_3(3.95106,0.,0.309017),Point_3(2.20543,3.32834,-0.120505)},
+  {Point_3(3.89101,0.,0.453990),Point_3(2.25906,3.28499,-0.162016)},
+  {Point_3(3.80902,0.,0.587785),Point_3(2.33067,3.23026,-0.182028)},
+  {Point_3(3.70711,0.,0.707107),Point_3(2.41598,3.16861,-0.174817)},
+  {Point_3(3.58779,0.,0.809017),Point_3(2.50848,3.10381,-0.135697)},
+  {Point_3(3.45399,0.,0.891007),Point_3(2.59900,3.03811,-0.0614595)},
+  {Point_3(3.30902,0.,0.951057),Point_3(2.67585,2.97159,0.0487022)},
+  {Point_3(3.15643,0.,0.987688),Point_3(2.72561,2.9022,0.191874)},
+  {Point_3(3.,0.,1.)           ,Point_3(2.73487,2.82632,0.360174)},
+  {Point_3(2.84357,0.,0.987688),Point_3(2.69261,2.73984,0.540303)},
+  {Point_3(2.69098,0.,0.951057),Point_3(2.59273,2.63931,0.714381)},
+  {Point_3(2.54601,0.,0.891007),Point_3(2.43577,2.52291,0.862032)},
+  {Point_3(2.41221,0.,0.809017),Point_3(2.2295,2.39104,0.963081)},
+  {Point_3(2.29289,0.,0.707107),Point_3(1.98836,2.24654,1.)},
+  {Point_3(2.19098,0.,0.587785),Point_3(1.73217,2.09499,0.959514)},
+  {Point_3(2.10899,0.,0.45399),Point_3(1.48513,1.9456,0.833607)},
+  {Point_3(2.04894,0.,0.309017),Point_3(1.27512,1.81296,0.621361)},
+  {Point_3(2.01231,0.,0.156434),Point_3(1.13184,1.71801,0.333723)},
+  {Point_3(2.,0.,0.),Point_3(1.0806,1.68294,0.)}};
+
+
+
+  return pathEndpoints;
+}
+
 
 int main(int argc, char* argv[]) {
+ struct pointdatabase endpoints;
+ endpoints = pathEndpointDatabase();
+
+ std::cout << endpoints[1][1] << std::endl;
+ std::cout << endpoints[7][2] << std::endl;
+ std::cout << endpoints[20][2] <<std::endl;
  //get input mesh from command line argument
+ /*
  const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("sims_project/heightmap.off");
  Triangle_mesh tmesh;
  if(!CGAL::IO::read_polygon_mesh(filename, tmesh) ||
@@ -143,6 +184,6 @@ int main(int argc, char* argv[]) {
 
  Vector_3 force = forceFunction(oneCalc.first, oneCalc.second);
  std::cout << "The force is " << force << std::endl;
-
+ */
  return 0;
 }
