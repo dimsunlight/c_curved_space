@@ -36,10 +36,10 @@ int main() {
                     Sphere_3(CGAL::ORIGIN, 20.)); // bounding sphere
   // Note that "20." above is the *squared* radius of the bounding sphere!
   // defining meshing criteria
-  int abound = 1;
-  int rbound = 40;
+  int abound = 30;
+  int rbound = 100;
   double real_rbound = rbound/100.0;
-  double real_abound = abound/1000000.0;
+  double real_abound = abound/1.0;
   std::cout << "real rbound is " << real_rbound << std::endl;
   std::string output_file_name = "torusrb" + std::to_string(rbound) + "ab" + std::to_string(abound) + ".off";  
   CGAL::Surface_mesh_default_criteria_3<Tr> criteria(real_abound,  // angular bound
