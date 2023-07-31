@@ -37,6 +37,7 @@ endif()
 # ############################
 
 add_executable( simulate  get_force.cpp shift.cpp simulate.cpp )
+add_executable( new_shift u_shift.cpp)
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS simulate )
 
