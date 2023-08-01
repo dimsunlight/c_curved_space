@@ -27,6 +27,7 @@ typedef K::Point_3                                                      Point_3;
 typedef K::Vector_3                                                     Vector_3;
 typedef K::Ray_3                                                        Ray_3;
 typedef K::Segment_3                                                    Segment_3;
+typedef K::Intersect_3                                                  Intersect_3;
 typedef CGAL::Surface_mesh<Point_3>                                     Triangle_mesh;
 typedef typename boost::graph_traits<Triangle_mesh>::vertex_descriptor  vertex_descriptor;
 typedef typename boost::graph_traits<Triangle_mesh>::face_descriptor    face_descriptor;
@@ -253,57 +254,72 @@ Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   return Point_3(0.0,0.0,0.0);
 }
 
+//functions needing definitions
+double vectorMagnitude(Vector_3 v);
 
-/*PLANNING VERSION OF NEW SHIFT
- * Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
- *   oldPosLocation = PMP::locate(pos, mesh); //original position is fine
- *   //big departure from original -- we can't say anything about the new position until we've drawn the ray of length (len(move)) and learned about whether it does or doesn't intersect with an edge
- *   double TravelLength = vectorMagnitude(move);
- *   //now we need to see if the line segment from the original position to the position + the vector move (guaranteed to be in the tangent plane of the face) intersects any edges.
- *   //it's important that we use CGAL's version of the intersection routine here, rather than my own algebraic one. In three dimensions, homebrewed approaches are insufficiently
- *   //robust -- small numerical errors in heading will be detected as missed intersections. However, we *could* rewrite this whole setup as a two-dimensional one,
- *   //as all the pieces are really two-dimensional, and then try to do it from there with Segment_2 objects...      
- *   //oldPosLocation.first is the face the particle starts in.   
- *
- *   //we will eventually draw all vertex/edge segments of current face and store in lists; 
- *   std::vector<Point_3>    vertexList;
- *   std::vector<Segment_3> edgesList;
- *
- *   //create unfolded mesh structure to store faces as we unfold them 
- *   Triangle_mesh unfoldedMesh = createTemporaryMesh(vertexList);
- *   Face_descriptor currentFace = unfoldedMesh[0]; //should be only face of unfoldedMesh for now
- *   bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
- *   Segment_3 checkSegment = Segment_3(pos, pos+move); //now we define segment to be checked against... neat redefinitions later
- *   double lengthToSharedElement;
- *
- *   while(intersection){
- *     vertexList = getVertices(oldPosLocation.first);
- *     edgesList  = createEdgeSegments(vertexList);
- *     
- *     for (Point_3 vert: vertexList) {
- *       if (intersects(checkSegment,vert) {
- *         connectedFace = sharedFaces(vertex, oldPosLocation.first, face_list);
- *         std::vector<Point_3> ssvu = singleSharedVertexUnfolding(face1);
- *         currentFace = unfoldedMesh.add_face(ssvu[0],ssvu[1],ssvu[2]) //need to make sure these are in the original order!!!;
- *         move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
- *         checkSegment = Segment_3(intersection_point, intersection_point+move); 
- *         continue; // skip the rest of the for & while loop once we've found an intersection, if possible
- *       }
- *     }
- *
- *     for (Segment_3 edge: edgesList) {
- *       if (intersects(checkSegment,edge) {
- *         connectedFace = sharedFace(edge, oldPosLocation.first, original_mesh_faces);
- *         std::vector<Point_3> seu = sharedEdgeUnfolding(currentFace,connectedFace,mesh); //mostly does what overEdge currently does
- *         currentFace = unfoldedMesh.add_face(seu[0],seu[1],seu[2]) //need to make sure these are in the original order!!!;
- *         move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
- *         checkSegment = Segment_3(intersection_point, intersection_point+move); 
- *         continue; // skip the rest of the for & while loop once we've found an intersection, if possible
- *       }
- *     } 
- *  }
- * }
- */ 
+std::vector<Point_3> singleSharedVertexUnfolding(Face_descriptor f, Point_3 vertex);
+std::vector<Point_3> sharedEdgeUnfolding(face1,face2,mesh);
+
+Vector_3 reduceMove(move,length);
+
+bool intersects; //maybe also need to get out the intersection *point* 
+
+
+Point_3 shift_n(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
+  oldPosLocation = PMP::locate(pos, mesh); //original position is fine
+  //big departure from original -- we can't say anything about the new position until we've drawn the ray of length
+  //(len(move)) and learned about whether it does or doesn't intersect with an edge
+  double TravelLength = vectorMagnitude(move);
+   
+  //oldPosLocation.first is the face the particle starts in.   
+
+  //we will eventually draw all vertex/edge segments of current face and store in lists; 
+  std::vector<Point_3>    vertexList;
+  std::vector<Segment_3> edgesList;
+
+  //create unfolded mesh structure to store faces as we unfold them 
+  Triangle_mesh unfoldedMesh = createTemporaryMesh(vertexList);
+  Face_descriptor currentFace = unfoldedMesh[0]; //should be only face of unfoldedMesh for now
+  bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
+  Segment_3 checkSegment = Segment_3(pos, pos+move); //now we define segment to be checked against... neat redefinitions later
+  double lengthToSharedElement;
+  bool skip; //set this so we can ignore the remainder of a while loop once we've found an intersection
+
+  while(intersection){
+    vertexList = getVertices(oldPosLocation.first);
+    edgesList  = createEdgeSegments(vertexList);
+    skip = false;
+    for (Point_3 vert: vertexList) {
+      auto result = intersection(checkSegment,vert); //give point of intersection if there is one   
+      if (result) {
+        connectedFace = sharedFaces(vertex, oldPosLocation.first, face_list);
+        std::vector<Point_3> ssvu = singleSharedVertexUnfolding(face1);
+        currentFace = unfoldedMesh.add_face(ssvu[0],ssvu[1],ssvu[2]) //need to make sure these are in the original order!!!;
+        move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
+        checkSegment = Segment_3(intersection_point, intersection_point+move);
+        skip = true; 
+        continue; // skip the rest of the for & while loop once we've found an intersection, if possible
+      }
+    }
+    if (skip) continue;
+
+    for (Segment_3 edge: edgesList) {
+      auto result = intersection(checkSegment,vert);
+      if (intersects(checkSegment,edge) {
+        connectedFace = sharedFace(edge, oldPosLocation.first, original_mesh_faces);
+        std::vector<Point_3> seu = sharedEdgeUnfolding(currentFace,connectedFace,mesh); //mostly does what overEdge currently does
+        currentFace = unfoldedMesh.add_face(seu[0],seu[1],seu[2]) //need to make sure these are in the original order!!!;
+        move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
+        checkSegment = Segment_3(intersection_point, intersection_point+move);
+        skip = true;	
+        continue; // skip the rest of the for & while loop once we've found an intersection, if possible
+      }
+    } 
+    if (skip) continue;
+    intersection = false; //if we haven't found an intersection, there is no intersection. 
+  }
+}
+  
 
 
 
