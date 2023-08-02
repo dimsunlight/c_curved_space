@@ -37,10 +37,15 @@ typedef PMP::Barycentric_coordinates<FT>                                Barycent
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 
 //utility functions
+auto vectorMagnitude(Vector_3 v) {
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  auto d = CGAL::approximate_sqrt(slen);
+  return d; 
+}
+
 auto normalizer(Vector_3 v)
 {
-  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
-  auto const d = CGAL::approximate_sqrt(slen);
+  auto const d = vectorMagnitude(v);
   return v / d;
 }
 
@@ -254,13 +259,44 @@ Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   return Point_3(0.0,0.0,0.0);
 }
 
+std::vector<Point_3> sharedEdgeUnfolding(face1,face2,mesh) {
+  //already have all the functionality for this in overEdge, just need to execute. 
+  double faceAngle = angleBetween(face1,face2,mesh);
+  std::vector<Point_3> vertices1 = getVertexPositions(mesh, f1.first), vertices2 = getVertexPositions(mesh, f2.first);
+  std::vector<Point_3> sharedEdge = getSharedEdge(vertices1,vertices2);
+
+  std::vector<Point_3> vertexToRotate = getVertexToRotate(vertices2,sharedEdge);
+
+  Point_3 rotatedVertexLocation = rotateAboutSharedAxis(vertexToRotate[0],sharedEdge,-angle);
+
+  return verticesForUnfoldedFace(sharedEdge,vertices2);
+}
+
+Vector_3 reduceMove(Vector_3 move, double reduceBy) {
+  //utility function for "new" shift function
+  //reduces length of a vector by an amountreduceBy
+  Vector_3 unitLength = normalize(move); 
+  double   magnitude  = vectorMagnitude(move);
+  double   newMagnitude = magnitude-reduceBy;
+  return unitLength*newMagnitude;
+}
+
 //functions needing definitions
-double vectorMagnitude(Vector_3 v);
+
+
 
 std::vector<Point_3> singleSharedVertexUnfolding(Face_descriptor f, Point_3 vertex);
-std::vector<Point_3> sharedEdgeUnfolding(face1,face2,mesh);
-Face_descriptor sharedFaces(Point_3 vertex, Triangle_mesh::face_index findex, )
-Vector_3 reduceMove(move,length);
+
+Face_descriptor sharedFaces(Point_3 vertex, Triangle_mesh::face_index findex, Triangle_mesh mesh) {
+  //we want to find what face we're going into when traveling through a vertex
+  //to that end -- determine what face the path most directly goes toward...
+  //come to think of it, faces that share a vertex are not unique, so we've got a 
+  //small collection of problems to solve here. 
+   
+  
+}
+
+
 
 
 Point_3 shift_n(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
@@ -294,8 +330,8 @@ Point_3 shift_n(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
     for (Point_3 vert: vertexList) {
       auto result = intersection(checkSegment,vert); //give point of intersection if there is one   
       if (result) {
-        connectedFace = sharedFaces(vertex, oldPosLocation.first, face_list);
-        std::vector<Point_3> ssvu = singleSharedVertexUnfolding(face1);
+        connectedFace = sharedFaces(vertex, oldPosLocation.first, mesh);
+        std::vector<Point_3> ssvu = singleSharedVertexUnfolding(connectedFace);
         currentFace = unfoldedMesh.add_face(ssvu[0],ssvu[1],ssvu[2]) //need to make sure these are in the original order!!!;
         move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
         checkSegment = Segment_3(intersection_point, intersection_point+move);
