@@ -276,7 +276,7 @@ int main(int argc, char* argv[]) {
    std::cerr << "Invalid input file." << std::endl;
    return EXIT_FAILURE;
  }
-
+ std::cout << typeid(tmesh.faces()).name() << std::endl;
  Vector_3 forceDisplacement = -0.12*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
  Point_3 pointToMove = Point_3(3.51033, 1.9177, 0);
 

@@ -259,10 +259,8 @@ double vectorMagnitude(Vector_3 v);
 
 std::vector<Point_3> singleSharedVertexUnfolding(Face_descriptor f, Point_3 vertex);
 std::vector<Point_3> sharedEdgeUnfolding(face1,face2,mesh);
-
+Face_descriptor sharedFaces(Point_3 vertex, Triangle_mesh::face_index findex, )
 Vector_3 reduceMove(move,length);
-
-bool intersects; //maybe also need to get out the intersection *point* 
 
 
 Point_3 shift_n(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
@@ -277,13 +275,17 @@ Point_3 shift_n(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   std::vector<Point_3>    vertexList;
   std::vector<Segment_3> edgesList;
 
-  //create unfolded mesh structure to store faces as we unfold them 
-  Triangle_mesh unfoldedMesh = createTemporaryMesh(vertexList);
-  Face_descriptor currentFace = unfoldedMesh[0]; //should be only face of unfoldedMesh for now
-  bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
-  Segment_3 checkSegment = Segment_3(pos, pos+move); //now we define segment to be checked against... neat redefinitions later
+  //initializations
+   Face_descriptor connectedFace;
   double lengthToSharedElement;
   bool skip; //set this so we can ignore the remainder of a while loop once we've found an intersection
+
+  //useful items for loop w/definition
+  bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
+  Segment_3 checkSegment = Segment_3(pos, pos+move); //now we define segment to be checked against... neat redefinitions later
+  Triangle_mesh unfoldedMesh = createTemporaryMesh(vertexList);
+  Face_descriptor currentFace = unfoldedMesh[0]; //should be only face of unfoldedMesh for now
+
 
   while(intersection){
     vertexList = getVertices(oldPosLocation.first);
