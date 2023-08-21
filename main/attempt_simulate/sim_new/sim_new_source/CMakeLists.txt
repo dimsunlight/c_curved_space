@@ -40,6 +40,8 @@ add_executable( simulate  get_force.cpp shift.cpp simulate.cpp )
 add_executable( new_shift u_shift.cpp)
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS simulate )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS new_shift )
 
 # Link the executable to CGAL and third-party libraries
-target_link_libraries(simulate PRIVATE CGAL::CGAL )
+target_link_libraries(simulate  PRIVATE CGAL::CGAL )
+target_link_libraries(new_shift PRIVATE CGAL::CGAL ) 

@@ -102,7 +102,7 @@ auto getUnsharedElements(std::vector<Point_3> vertices, std::vector<Point_3> sha
  
   std::vector<Point_3> oddElements;
   
-  for (Point_3 i: vs2) {
+  for (Point_3 i: vertices) {
     if (std::find(shared.begin(), shared.end(), i) != shared.end()) {}
     else {
       oddElements.push_back(i);
@@ -112,7 +112,7 @@ auto getUnsharedElements(std::vector<Point_3> vertices, std::vector<Point_3> sha
   return oddElements;
 }
 
-double angleBetween(Face_location f1, Face_location f2, mesh) {
+double angleBetween(Face_location f1, Face_location f2, Triangle_mesh mesh) {
   //generate normals -- compute_face_normal gives unit normals by default
   Vector_3 oldNormal = PMP::compute_face_normal(f1.first,mesh), newNormal = PMP::compute_face_normal(f2.first,mesh);
   //normals compute fine (verified via print) 
@@ -134,7 +134,7 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
   std::vector<Point_3> shiftedTargets; 
 
   for (Point_3 target: targets) {
-    shiftedTargets.push_back(target - Vector_3({0,0,0}, axis[0]);
+    shiftedTargets.push_back(target - Vector_3({0,0,0}, axis[0]));
   }
   std::cout << "targets shifted for rotation to " << std::endl;
   for (Point_3 shiftedTarget: shiftedTargets) std::cout << shiftedTarget << std::endl;
@@ -159,7 +159,7 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
   
   std::vector<Point_3> rotatedTargets;
   double rotatedStorage[3];
-  double targetStorage[3];
+  std::vector<double> targetStorage;
   
   //rotate and shift back all targets
   for (Point_3 shiftedTarget: shiftedTargets) {
@@ -286,7 +286,7 @@ auto unfold(Triangle_mesh mesh, Face_loation f1, Face_location f2, Point_3 pos, 
 }
 
 
-Point_3 shift_n(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
+Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   oldPosLocation = PMP::locate(pos, mesh); //original position is fine
   //big departure from original -- we can't say anything about the new position until we've drawn the ray of length
   //(len(move)) and learned about whether it does or doesn't intersect with an edge

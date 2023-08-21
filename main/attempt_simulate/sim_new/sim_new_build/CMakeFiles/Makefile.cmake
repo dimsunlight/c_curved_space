@@ -32,7 +32,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.20.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.20.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.20.0/CMakeSystem.cmake"
-  "/home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_source/CMakeLists.txt"
+  "/home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_source/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config-version.cmake"
@@ -78,5 +78,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/new_shift.dir/DependInfo.cmake"
   "CMakeFiles/simulate.dir/DependInfo.cmake"
   )

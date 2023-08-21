@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_source
+CMAKE_SOURCE_DIR = /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_build
+CMAKE_BINARY_DIR = /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_build/CMakeFiles /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build/CMakeFiles /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -115,6 +115,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named new_shift
+
+# Build rule for target.
+new_shift: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 new_shift
+.PHONY : new_shift
+
+# fast build rule for target.
+new_shift/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shift.dir/build.make CMakeFiles/new_shift.dir/build
+.PHONY : new_shift/fast
 
 #=============================================================================
 # Target rules for targets named simulate
@@ -201,6 +214,30 @@ simulate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/simulate.cpp.s
 .PHONY : simulate.cpp.s
 
+u_shift.o: u_shift.cpp.o
+.PHONY : u_shift.o
+
+# target to build an object file
+u_shift.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shift.dir/build.make CMakeFiles/new_shift.dir/u_shift.cpp.o
+.PHONY : u_shift.cpp.o
+
+u_shift.i: u_shift.cpp.i
+.PHONY : u_shift.i
+
+# target to preprocess a source file
+u_shift.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shift.dir/build.make CMakeFiles/new_shift.dir/u_shift.cpp.i
+.PHONY : u_shift.cpp.i
+
+u_shift.s: u_shift.cpp.s
+.PHONY : u_shift.s
+
+# target to generate assembly for a file
+u_shift.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_shift.dir/build.make CMakeFiles/new_shift.dir/u_shift.cpp.s
+.PHONY : u_shift.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,6 +246,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... new_shift"
 	@echo "... simulate"
 	@echo "... get_force.o"
 	@echo "... get_force.i"
@@ -219,6 +257,9 @@ help:
 	@echo "... simulate.o"
 	@echo "... simulate.i"
 	@echo "... simulate.s"
+	@echo "... u_shift.o"
+	@echo "... u_shift.i"
+	@echo "... u_shift.s"
 .PHONY : help
 
 
