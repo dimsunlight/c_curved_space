@@ -201,7 +201,7 @@ auto verticesForUnfoldedFace(std::vector<Point_3> sharedEdge, std::vector<Point_
   } 
 
   //finally, tempTrio uses the found original indices to rearrange vertices into original order 
-  std::vector<Point_3> tempTrio = {0,0,0};
+  std::vector<Point_3> tempTrio = {Point_3(0,0,0),Point_3(0,0,0),Point_3(0,0,0)};//null points for init. so we can have size 3
   tempTrio[ind1] = sharedEdge[0];
   tempTrio[ind2] = sharedEdge[1];
   tempTrio[rIndex] = newLocations[0];
@@ -211,20 +211,20 @@ auto verticesForUnfoldedFace(std::vector<Point_3> sharedEdge, std::vector<Point_
 
 auto createTemporaryMesh(std::vector<Point_3> vertexTrio) {
   Triangle_mesh tempMesh;
-  vertex_descriptor u = tempMesh.add_vertex(tempTrio[0]);
-  vertex_descriptor v = tempMesh.add_vertex(tempTrio[1]);
-  vertex_descriptor w = tempMesh.add_vertex(tempTrio[2]);
+  vertex_descriptor u = tempMesh.add_vertex(vertexTrio[0]);
+  vertex_descriptor v = tempMesh.add_vertex(vertexTrio[1]);
+  vertex_descriptor w = tempMesh.add_vertex(vertexTrio[2]);
   face_descriptor tFace = tempMesh.add_face(u,v,w);
   std::cout << "temp face normal = " << PMP::compute_face_normal(tFace,tempMesh) << std::endl;
   return tempMesh;
 }
 
-Point_3 getNewXYZLocation(Point_3 flatLocation, Triangle_mesh tempMesh, Face_location f2) {
-  Face_location tempLocation= PMP::locate(pos+move,tempMesh);
-  Barycentric_coordinates b_weights = tempLocation.second;
-  Face_location frankenLocation = std::make_pair(f2.first,b_weights);
-  Point_3 newXYZLocation = PMP::construct_point(frankenLocation, mesh);
-
+Point_3 getNewXYZLocation(Point_3 flatLocation, Triangle_mesh originalMesh, Triangle_mesh tempMesh, Face_location f2) {
+  Face_location tempLocation= PMP::locate(flatLocation,tempMesh);//get bary location in temporary mesh
+  Barycentric_coordinates b_weights = tempLocation.second;//export bary location as set of bary weights
+  Face_location frankenLocation = std::make_pair(f2.first,b_weights); //create location object from original face index + bary weights
+  Point_3 newXYZLocation = PMP::construct_point(frankenLocation, originalMesh); //use new location object to find location in original mesh
+  return newXYZLocation;
 }
 
 
@@ -238,13 +238,13 @@ auto sharedEdge(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 
   
   std::vector<Point_3> vertexToRotate = getUnsharedElements(vertices2, shared);
 
-  Point_3 newVertexLocation = rotateAboutAxis(vertexToRotate[0], shared, -angle);
+  Point_3 newVertexLocation = rotateAboutAxis(vertexToRotate[0], shared, -faceAngle);
   
   std::vector<Point_3> tempTrio = verticesForUnfoldedFace(sharedEdge, vertices2, newVertexLocation);
 
   Triangle_mesh tempMesh = createTemporaryMesh(tempTrio);
 
-  return getNewXYZLocation(pos+move,tempMesh, f2);
+  return getNewXYZLocation(pos+move, mesh, tempMesh, f2);
 }
 
 auto sharedVertex(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move,
@@ -257,20 +257,21 @@ auto sharedVertex(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_
   std::vector<Point_3> verticesToRotate = getUnsharedElements(vertices2,shared); //two vertices to rotate from new face...
   
   std::vector<Point_3> unsharedEdge = getUnsharedElements(vertices1,shared); //are rotated around the axis of the two unshared vertices from the original. 
-
-  std::vector<Point_3> newVertexLocations = rotateAboutAxis(verticesToRotate, unsharedEdge, angle); 
+  //!!! flagging here in case I missed something
+  std::vector<Point_3> newVertexLocations = rotateAboutAxis(verticesToRotate, unsharedEdge, -faceAngle); //should this be -faceangle? 
   
-  !!!std::vector<Point_3> tempTrio = verticesForUnfoldedFace(shared, vertices2, newVertexLocations)!!!;
+  std::vector<Point_3> tempTrio = verticesForUnfoldedFace(shared, vertices2, newVertexLocations);
   
   Triangle_mesh tempMesh = createTemporaryMesh(tempTrio); 
  
-  return getNewXYZLocation(pos+move, tempMesh, f2); 
+  return getNewXYZLocation(pos+move, mesh, tempMesh, f2); 
 
 }
 
-auto unfold(Triangle_mesh mesh, Face_loation f1, Face_location f2, Point_3 pos, Vector_3 move) {
-  //folding function that calls either sharedEdge or sharedVertex depending on the output of getSharedElements
-
+auto unfold(Triangle_mesh mesh, Face_location f1, Face_location f2, Point_3 pos, Vector_3 move) {
+  //folding function that calls either sharedEdge or sharedVertex depending on the output of getSharedElements.
+  //Returns the new Point_3 location after moving into the appropriate new face.  
+  
   //grab the positions of the vertices for the two faces
   std::vector<Point_3> vertices1 = getVertexPositions(mesh, f1.first), vertices2 = getVertexPositions(mesh, f2.first);
   
@@ -285,9 +286,13 @@ auto unfold(Triangle_mesh mesh, Face_loation f1, Face_location f2, Point_3 pos, 
   }
 }
 
+Face_index sharedFace(Segment_3 edge, face_index currentSourceFace, Triangle_mesh mesh_face_list) {
+  //goal is to find the face that shares the intersecting edge with the original face 
+  
+}
+
 
 Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
-  oldPosLocation = PMP::locate(pos, mesh); //original position is fine
   //big departure from original -- we can't say anything about the new position until we've drawn the ray of length
   //(len(move)) and learned about whether it does or doesn't intersect with an edge
   double TravelLength = vectorMagnitude(move);
@@ -295,11 +300,10 @@ Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   //oldPosLocation.first is the face the particle starts in.   
 
   //we will eventually draw all vertex/edge segments of current face and store in lists; 
-  std::vector<Point_3>    vertexList;
-  std::vector<Segment_3> edgesList;
+  Face_location currentSourceLocation = PMP::locate(pos, mesh);
 
   //initializations
-   Face_descriptor connectedFace;
+  face_descriptor connectedFace;
   double lengthToSharedElement;
   bool skip; //set this so we can ignore the remainder of a while loop once we've found an intersection
 
@@ -310,16 +314,68 @@ Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
   Face_descriptor currentFace = unfoldedMesh[0]; //should be only face of unfoldedMesh for now
 
   while(intersection){
-    edgesList  = createEdgeSegments(vertexList);
+    std::vector<Segment_3> edgesList = createEdgeSegments(vertexList);
+    skip = false; //this will continue to be redefined true as long as there is an intersection
+
+    for (Segment_3 edge: edgesList) {
+      auto result = CGAL::intersection(checkSegment,edge);
+
+      if (intersects(checkSegment,edge)) {
+       
+	move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
+        checkSegment = Segment_3(result, result+move);
+	      
+        Face_location connectedFace = sharedFace(edge, currentSourceLocation.first, original_mesh_faces); //technically, this can only give a face index, and we have to construct the face location using the updatedPos
+
+	Point_3 updatedPos = unfold(mesh, f1, f2, pos, move); //this will spit out the location in the new face, so long as we 
+	                                                      //trim the movement length ourselves and clarify which two faces we care about
+
+	currentSourceLocation = connectedFace;
+
+        skip = true;	
+        continue; // skip the rest of the for loop once we've found an intersection, if possible
+      }
+    } 
+    if (skip) continue; //just avoiding last statement
+    intersection = false; //if we haven't found an intersection, there is no intersection. 
+  }
+}
+
+Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
+  Face_location oldPosLocation = PMP::locate(pos, mesh); //original position is fine
+  //big departure from original -- we can't say anything about the new position until we've drawn the ray of length
+  //(len(move)) and learned about whether it does or doesn't intersect with an edge
+  double TravelLength = vectorMagnitude(move);
+   
+  //oldPosLocation.first is the face the particle starts in.   
+
+  //we will eventually draw all vertex/edge segments of current face and store in lists; 
+  std::vector<Point_3>   vertexList;
+  std::vector<Segment_3> edgesList;
+
+  vertexList = getVertexPositions(mesh)
+  //initializations
+  face_descriptor connectedFace;
+  double lengthToSharedElement;
+  bool skip; //set this so we can ignore the remainder of a while loop once we've found an intersection
+
+  //useful items for loop w/definition
+  bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
+  Segment_3 checkSegment = Segment_3(pos, pos+move); //now we define segment to be checked against... redefine later
+  Triangle_mesh unfoldedMesh = createTemporaryMesh(vertexList);
+  Face_descriptor currentFace = unfoldedMesh[0]; //should be only face of unfoldedMesh for now
+
+  while(intersection){
+    std::vector<Segment_3> edgesList = createEdgeSegments(vertexList);
     skip = false;
 
     for (Segment_3 edge: edgesList) {
-      auto result = intersection(checkSegment,vert);
+      auto result = CGAL::intersection(checkSegment,edge);
 
-      if (intersects(checkSegment,edge) {
+      if (intersects(checkSegment,edge)) {
         connectedFace = sharedFace(edge, oldPosLocation.first, original_mesh_faces);
         std::vector<Point_3> seu = sharedEdgeUnfolding(currentFace,connectedFace,mesh); //mostly does what overEdge currently does
-        currentFace = unfoldedMesh.add_face(seu[0],seu[1],seu[2]) //need to make sure these are in the original order!!!;
+        currentFace = unfoldedMesh.add_face(seu[0],seu[1],seu[2]); //need to make sure these are in the original order!!!;
         move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
         checkSegment = Segment_3(intersection_point, intersection_point+move);
         skip = true;	
