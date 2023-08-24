@@ -1,5 +1,5 @@
 CMakeFiles/simulate.dir/shift.cpp.o: \
- /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_source/shift.cpp \
+ /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_source/shift.cpp \
  /usr/include/stdc-predef.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Simple_cartesian.h \

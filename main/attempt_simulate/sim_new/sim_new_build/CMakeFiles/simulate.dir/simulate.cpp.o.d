@@ -1,5 +1,5 @@
 CMakeFiles/simulate.dir/simulate.cpp.o: \
- /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_source/simulate.cpp \
+ /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_source/simulate.cpp \
  /usr/include/stdc-predef.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Simple_cartesian.h \
@@ -2542,5 +2542,5 @@ CMakeFiles/simulate.dir/simulate.cpp.o: \
  /home/toler/CGAL-5.5.2/include/CGAL/draw_point_set_3.h \
  /home/toler/CGAL-5.5.2/include/CGAL/Qt/Basic_viewer_qt.h \
  /home/toler/CGAL-5.5.2/include/CGAL/license/GraphicsView.h \
- /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_source/shift.h \
- /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_ssc/sim_ssc_source/get_force.h
+ /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_source/shift.h \
+ /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_source/get_force.h

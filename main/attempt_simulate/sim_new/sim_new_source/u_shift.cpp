@@ -65,7 +65,7 @@ int findIndex(Point_3 loc,std::vector<Point_3> vec) {
 
 
 //function definitions
-auto getVertexPositions(Triangle_mesh mesh, face_descriptor fIndex) {
+std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, face_descriptor fIndex) {
    
   Triangle_mesh::Halfedge_index hf = mesh.halfedge(fIndex);
   std::vector<Point_3> vertices; //I think we can say 3 because we know it's a triangle mesh
@@ -178,6 +178,7 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
     //undo shift at the end
     rotatedTargets.push_back(rotatedTarget + Vector_3({0,0,0}, axis[0]));
   }
+
   return rotatedTargets;
 }
 
@@ -213,8 +214,11 @@ auto sharedEdge(Triangle_mesh mesh, Triangle_mesh unfolded_mesh, face_descriptor
   int rotatedIndex = findIndex(vertexToRotate[0],vertices2);
   int edgeIndex1 = findIndex(shared[0],vertices2);
   int edgeIndex2 = findIndex(shared[1], vertices2);
-
-  Point_3 newVertexLocation = rotateAboutAxis(vertexToRotate, shared, -faceAngle);
+  
+  //rotateAboutAxis is expanded to handle multiple targets for rotation, so 
+  //it returns a std::vector -- that will be length 1 here and we can just pull the first element
+  Point_3 newVertexLocation = rotateAboutAxis(vertexToRotate, shared, -faceAngle)[0];
+  
 
   std::vector<Point_3> tempTrio = {Point_3(0,0,0),Point_3(0,0,0), Point_3(0,0,0)};
 
@@ -366,14 +370,13 @@ Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
 							      //eg: ifLineIntersection(checkSegment,edge) can handle both moving along the
 							      //edge but within its length and moving along the edge and past an endpoint 
       if (result) {
-
-        if (const Point_3* edge_intersection = boost::get<Point_3>(&*result)) {
-          std::cout << "POINT INTERSECTION" << *edge_intersection << std::endl;
-        } else {
-          const Segment_3* intersection_segment = boost::get<Segment_3>(&*result);
+        if(const Segment_3* intersection_segment = boost::get<Segment_3>(&*result)) {
           std::cout << "SEGMENT INTERSECTION, EXITING"  << std::endl;
 	  break;
         }
+	
+	const Point_3* edge_intersection = boost::get<Point_3>(&*result);
+       
         	
         for (Point_3 vert: vertexList) {
 	  if(CGAL::intersection(checkSegment,vert)) {
