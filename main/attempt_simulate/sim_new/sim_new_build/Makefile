@@ -130,6 +130,19 @@ new_shift/fast:
 .PHONY : new_shift/fast
 
 #=============================================================================
+# Target rules for targets named pathbend_shift
+
+# Build rule for target.
+pathbend_shift: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pathbend_shift
+.PHONY : pathbend_shift
+
+# fast build rule for target.
+pathbend_shift/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/build
+.PHONY : pathbend_shift/fast
+
+#=============================================================================
 # Target rules for targets named simulate
 
 # Build rule for target.
@@ -165,6 +178,30 @@ get_force.s: get_force.cpp.s
 get_force.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/get_force.cpp.s
 .PHONY : get_force.cpp.s
+
+pathbend_shift.o: pathbend_shift.cpp.o
+.PHONY : pathbend_shift.o
+
+# target to build an object file
+pathbend_shift.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/pathbend_shift.cpp.o
+.PHONY : pathbend_shift.cpp.o
+
+pathbend_shift.i: pathbend_shift.cpp.i
+.PHONY : pathbend_shift.i
+
+# target to preprocess a source file
+pathbend_shift.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/pathbend_shift.cpp.i
+.PHONY : pathbend_shift.cpp.i
+
+pathbend_shift.s: pathbend_shift.cpp.s
+.PHONY : pathbend_shift.s
+
+# target to generate assembly for a file
+pathbend_shift.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/pathbend_shift.cpp.s
+.PHONY : pathbend_shift.cpp.s
 
 shift.o: shift.cpp.o
 .PHONY : shift.o
@@ -247,10 +284,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... new_shift"
+	@echo "... pathbend_shift"
 	@echo "... simulate"
 	@echo "... get_force.o"
 	@echo "... get_force.i"
 	@echo "... get_force.s"
+	@echo "... pathbend_shift.o"
+	@echo "... pathbend_shift.i"
+	@echo "... pathbend_shift.s"
 	@echo "... shift.o"
 	@echo "... shift.i"
 	@echo "... shift.s"

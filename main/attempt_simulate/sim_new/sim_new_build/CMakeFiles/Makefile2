@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim
 
 # The main recursive "all" target.
 all: CMakeFiles/new_shift.dir/all
+all: CMakeFiles/pathbend_shift.dir/all
 all: CMakeFiles/simulate.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/new_shift.dir/clean
+clean: CMakeFiles/pathbend_shift.dir/clean
 clean: CMakeFiles/simulate.dir/clean
 .PHONY : clean
 
@@ -103,13 +105,39 @@ CMakeFiles/new_shift.dir/clean:
 .PHONY : CMakeFiles/new_shift.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/pathbend_shift.dir
+
+# All Build rule for target.
+CMakeFiles/pathbend_shift.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build/CMakeFiles --progress-num=3,4 "Built target pathbend_shift"
+.PHONY : CMakeFiles/pathbend_shift.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pathbend_shift.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pathbend_shift.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build/CMakeFiles 0
+.PHONY : CMakeFiles/pathbend_shift.dir/rule
+
+# Convenience name for target.
+pathbend_shift: CMakeFiles/pathbend_shift.dir/rule
+.PHONY : pathbend_shift
+
+# clean rule for target.
+CMakeFiles/pathbend_shift.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/clean
+.PHONY : CMakeFiles/pathbend_shift.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/simulate.dir
 
 # All Build rule for target.
 CMakeFiles/simulate.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build/CMakeFiles --progress-num=3,4,5,6 "Built target simulate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/toler/projects/CGAL_curvature/main/attempt_simulate/sim_new/sim_new_build/CMakeFiles --progress-num=5,6,7,8 "Built target simulate"
 .PHONY : CMakeFiles/simulate.dir/all
 
 # Build rule for subdir invocation for target.
