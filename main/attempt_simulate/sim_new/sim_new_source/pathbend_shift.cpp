@@ -19,7 +19,7 @@
 #include <ctime>
 #include <math.h> //including this to do simple cos and sine, but maybe imprecise compared to cgal-originating routines
 //types and names
-typedef CGAL::Exact_predicates_exact_constructions_kernel               K;
+typedef CGAL::Exact_predicates_inexact_constructions_kernel             K;
 typedef K::FT                                                           FT;
 typedef K::Point_2                                                      Point_2;
 typedef K::Ray_2                                                        Ray_2;
@@ -48,7 +48,7 @@ auto vectorMagnitude(Vector_3 v) {
 }
 
 auto vectorMagnitude(Vector_2 v) {
-  auto const slen = v.x()*v.x() + v.y()*v.y*();
+  auto const slen = v.x()*v.x() + v.y()*v.y();
   auto d = CGAL::approximate_sqrt(slen);
   return d;
 }
@@ -265,36 +265,71 @@ Vector_3 projectMoveDown(Point_3 source, Vector_3 targetFaceNormal, Vector_3 mov
   return Vector_3(source, source+inFaceVector); 
 }
 
-bool make2DIntersectionTest(Segment_3 segment1, Segment_3 segment2) {
+Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
   //force two line segments into the same plane to look for their intersection. 
   //actual procedure -- rotate segments to segments of the same length existing in the xy plane.
-  //can do the rotation essentially by projecting down. We can also do a pure rotation... technically
-  //the best thing to do is to remove the element of the normal from the current face -- as that would
-  //give perfectly accurate results -- but i don't trust that to remove numerical errors without rotating
-  //into xy flat space anyway. 
+  //can do the rotation essentially by projecting down. 
+  double s1Length = sqrt(segment1.squared_length());
+  double s2Length = sqrt(segment2.squared_length());
+  //pull original source and target in r3
+  Point_3 s1Source = segment1.source();
+  Point_3 s2Source = segment2.source();
+  Point_3 s1Target = segment1.target();
+  Point_3 s2Target = segment2.target();
+
   Vector_3 vector1 = segment1.to_vector();
   Vector_3 vector2 = segment2.to_vector();
-  double mag1 = vectorMagnitude(vector1);
-  double mag2 = vectorMagnitude(vector2);
-  
-  //implicit shift so that we use origin-centered coordinates -- remove z component and rescale to original 
-  //length to rotate into xy plane. This approach should be functionally immune from numerical errors for the
-  //rotation, and vulnerable to them only in regard to vector length -- which, to be fair, sqrts are inexact in 
-  //cgal...
-  xyVector1 = mag1*normalizer(Vector_2(vector1.x(),vector1.y));
-  xyVector2 = mag3*normalizer(Vector_2(vector2.x(),vector2.y));
+  //set both sources into the same plane
+  Vector_3 vecBetweenSources = Vector_3(s1Source,s2Source); 
+  double distanceBetween = vectorMagnitude(vecBetweenSources);
+  Point_3 flatSource2 = s1Source+distanceBetween*normalizer(Vector_3(s1Source,Point_3(s2Source.x(),s2Source.y(),s1Source.z()))); 
+                                                    //hovering above the xy plane at the same height as source 1. 
+  Point_3 flatTarget2 = flatSource2 + vector1;
+
+  //remove z component now that both sources have the same z component 
+  //and are the correct distance from each other, we can move the sources
+  //into flat space... 
+  Point_2 xys1s = Point_2(s1Source.x(), s1Source.y());
+  Point_2 xys2s = Point_2(flatSource2.x(), flatSource2.y());
+  //and then rotate the targets into that flat space. 
+  Point_2 xys1t = Point_2(s1Target.x(), s1Target.y());
+  Point_2 xys2t = Point_2(flatTarget2.x(), flatTarget2.y());
+  //create segments in 2D
+  Segment_2 segment1_2D = Segment_2(xys1s,xys1t);
+  Segment_2 segment2_2D = Segment_2(xys2s, xys2t); 
+  //rescale length, holding source points fixed -- this should be a very minor adjustment --
+  //and then check for the intersection
+  Vector_2 v1 = segment1_2D.to_vector();
+  Vector_2 v2 = segment2_2D.to_vector();
+  v1 = s1Length*normalizer(v1);
+  v2 = s2Length*normalizer(v2);
+  segment1_2D = Segment_2(xys1s, xys1s+v1);
+  segment2_2D = Segment_2(xys2s, xys2s+v2);
  
-  //now check for intersection again
-  Point_2 origin = Point_2(0,0);
-  Point_2 v1end  = Point_2(xyVector1.x(),xyVector1.y());
-  Point_2 v2end  = Point_2(xyVector2.x(),xyVector2.y()); 
+  //maybe some redundancy above 
 
-  2dsegment1 = Segment_2(origin, v1end);
-  2dsegment2 = Segment_2(origin, v2end); 
-
-  const auto result = CGAL::intersection(2dsegment1,2dsegment2);
-   
-  return result; 
+  const auto result = CGAL::intersection(segment1_2D,segment2_2D);
+  
+  const Point_2* intersection_point = boost::get<Point_2>(&*result);
+  if (result) {
+    if(intersection_point) {
+      std::cout << "found intersection in 2d!" << std::endl;
+      //now -- find distance to intersection, along the edge (which will be the 
+      //first segment), and use the distance to find the equivalent point along the 
+      //edge in the non-rotated space. 
+      Vector_2 to_intersection = Vector_2(xys1s, *intersection_point);
+      double lengthToIntersection = vectorMagnitude(to_intersection);
+      Vector_3 vector_to_intersection = lengthToIntersection*normalizer(vector1); 
+      std::cout << "intersection point" << s1Source+vector_to_intersection;
+      return s1Source+vector_to_intersection;
+    } else {
+      std::cout << "line intersection" << std::endl;
+      return Point_3(0,0,0);
+    }
+  } else {
+    std::cout << "no intersection." << std::endl;
+    return Point_3(0,0,0);
+  }
 }
 
 Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
@@ -333,7 +368,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     for (Segment_3 edge: edgesList) {
       std::cout << "searching for intersection... " << std::endl;
       const auto result = CGAL::intersection(checkSegment,edge);    
-
+      check2DIntersection(edge,checkSegment);  
       if (result) {
 	
 	const Point_3* edge_intersection = boost::get<Point_3>(&*result);
