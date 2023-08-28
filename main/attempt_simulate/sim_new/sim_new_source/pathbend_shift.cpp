@@ -228,6 +228,10 @@ std::vector<Segment_3> createEdgeSegments(std::vector<Point_3> vs) {
       j += 1;
     }
   }
+  //std::cout << " printing edges in edge list" << std::endl;
+  //for (Segment_3 edge: edges) std::cout << edge << std::endl;
+
+
   return edges;
 }
 
@@ -268,7 +272,16 @@ Vector_3 projectMoveDown(Point_3 source, Vector_3 targetFaceNormal, Vector_3 mov
 Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
   //force two line segments into the same plane to look for their intersection. 
   //actual procedure -- rotate segments to segments of the same length existing in the xy plane.
-  //can do the rotation essentially by projecting down. 
+  //can do the rotation essentially by projecting down.
+  
+  //debug statements	
+  std::cout << " " << std::endl;
+  std::cout << "calling 2d intersection test with edge segment " << std::endl;
+  std::cout << segment1 << std::endl;
+  std::cout << "and check segment" << std::endl;
+  std::cout << segment2 << std::endl;
+  std::cout << " " << std::endl;
+
   double s1Length = sqrt(segment1.squared_length());
   double s2Length = sqrt(segment2.squared_length());
   //pull original source and target in r3
@@ -282,9 +295,14 @@ Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
   //set both sources into the same plane
   Vector_3 vecBetweenSources = Vector_3(s1Source,s2Source); 
   double distanceBetween = vectorMagnitude(vecBetweenSources);
-  Point_3 flatSource2 = s1Source+distanceBetween*normalizer(Vector_3(s1Source,Point_3(s2Source.x(),s2Source.y(),s1Source.z()))); 
+  Point_3 flatSource2 = s1Source+distanceBetween*normalizer(Vector_3(s1Source, Point_3(s2Source.x(),s2Source.y(),s1Source.z()))); 
                                                     //hovering above the xy plane at the same height as source 1. 
-  Point_3 flatTarget2 = flatSource2 + vector1;
+  Point_3 flatTarget2 = flatSource2 + vector2;
+
+  std::cout << "post initial rotation (into same plane)" << std::endl;
+  std::cout << "edge source: " << s1Source << " edge target: " << s1Target << std::endl;
+  std::cout << "check source: " << flatSource2 << " check target: " << flatTarget2 << std::endl; 
+  
 
   //remove z component now that both sources have the same z component 
   //and are the correct distance from each other, we can move the sources
@@ -296,7 +314,7 @@ Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
   Point_2 xys2t = Point_2(flatTarget2.x(), flatTarget2.y());
   //create segments in 2D
   Segment_2 segment1_2D = Segment_2(xys1s,xys1t);
-  Segment_2 segment2_2D = Segment_2(xys2s, xys2t); 
+  Segment_2 segment2_2D = Segment_2(xys2s,xys2t); 
   //rescale length, holding source points fixed -- this should be a very minor adjustment --
   //and then check for the intersection
   Vector_2 v1 = segment1_2D.to_vector();
@@ -305,7 +323,9 @@ Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
   v2 = s2Length*normalizer(v2);
   segment1_2D = Segment_2(xys1s, xys1s+v1);
   segment2_2D = Segment_2(xys2s, xys2s+v2);
- 
+  std::cout << "2d edge is " << xys1s << " to " << xys1s+v1 << std::endl; 
+  std::cout << "2d checksegment is " << xys2s << " to " << xys2s+v2 << std::endl;
+
   //maybe some redundancy above 
 
   const auto result = CGAL::intersection(segment1_2D,segment2_2D);
