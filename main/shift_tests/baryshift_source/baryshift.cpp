@@ -47,7 +47,7 @@ auto vector_magnitude(Vector_3 v) {
 double triangle_area(Point_3 v1, Point_3 v2, Point_3 v3) {
   Vector_3 side1 = Vector_3(v1, v2);
   Vector_3 side2 = Vector_3(v1, v3);
-  return vector_magnitude(CGAL::cross_product(side1,side2)); 
+  return vector_magnitude(CGAL::cross_product(side1,side2))/2; 
 }
 
 Point_3 project_to_face(std::vector<Point_3> vertices, Point_3 query) {
@@ -76,22 +76,64 @@ std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, face_descriptor fInd
   return vertices;
 }
 
+
+Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target, Face_location source_mesh_coords, std::vector<Point_3> faceVertices, Triangle_mesh tmesh) {
+  Point_3 sourceDown = project_to_face(faceVertices, source);
+  Point_3 query = project_to_face(faceVertices, target);
+  std::array<double, 3> source_bary = PMP::barycentric_coordinates(faceVertices[0],faceVertices[1],faceVertices[2], sourceDown);
+  std::array<double, 3> query_bary = PMP::barycentric_coordinates(faceVertices[0],faceVertices[1],faceVertices[2], query);
+  Vector_3 source_bary_vector = Vector_3(source_bary[0],source_bary[1],source_bary[2]); //define as vectors so we can manipulate them via addition/subtraction/etc
+  Vector_3 query_bary_vector  = Vector_3(query_bary[0], query_bary[1] , query_bary[2]);
+  Vector_3 displacement = query_bary_vector - source_bary_vector;
+  //defining bary components as constants for easy manipulation
+  double const b11 = source_bary_vector[0];
+  double const b12 = source_bary_vector[1];
+  double const b13 = source_bary_vector[2];
+  //each entry of intersection_values is the first point along the coordinate component of the line in that barycentric coordinate
+  //where the barycentric coordinate reaches 0; when a barycentric coordinate reaches 0, we've intersected an edge. The first one
+  //(the smallest intersection_value) is the first time we hit an edge, and should therefore be the intersection point.The others 
+  //will indicate how far we'd need to travel along the displacement vector before another coordinate became 0 (and we'd intersect a "phantom" edge) 
+  std::vector<double> intersection_values = {-b11/displacement[0], -b12/displacement[1], -b13/displacement[2]};
+  //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
+  //results which correspond to that. 
+  double toIntersect = intersection_values[0];
+  for(double val: intersection_values) {
+    if (val < toIntersect and val > 0) toIntersect = val;
+  }
+  std::cout << "toIntersect is " << toIntersect << std::endl;
+  if (toIntersect < 0) {
+    std::cout << "distance along displacement is " << toIntersect << ". Is your source point correct?" << std::endl;
+  }
+  if (toIntersect < 1) {
+    std::cout << "found intersection. " << std::endl;
+    Point_3 min_intersection;
+    min_intersection = Point_3(b11,b12,b13);
+    min_intersection = min_intersection+toIntersect*displacement;
+    std::cout << "barycentric intersection point " << min_intersection << std::endl;
+    Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z())+ min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z());
+    std::cout << "xyz intersection point (in f_i) " << xyz_intersection << std::endl;
+    std::cout << " " << std::endl;
+    Point_3 intersection_Point_3 = Point_3(0,0,0) + xyz_intersection;  
+    return intersection_Point_3; // this version returns the barycentric intersection point
+  }
+  else {
+    std::cout << "No intersection. Returning filler point.";
+    return Point_3(1000,1000,1000);
+  }
+  return Point_3(10000,1000,1000); //default return
+}
+
 Point_3 find_intersection(Vector_3 source_bary, Vector_3 query_bary, std::vector<Point_3> vertexList) {
   //returns barycentric coordinates of an edge intersection, if there is one
   Vector_3 displacement = query_bary - source_bary;
   double b11 = source_bary[0];
   double b12 = source_bary[1];
   double b13 = source_bary[2];
-  std::cout << " " << std::endl;
-  std::cout << "inside find_intersection, source bary coords " << b11 << " " << b12 << " " << b13 << std::endl;
   std::vector<double> intersection_values = {-b11/displacement[0], -b12/displacement[1], -b13/displacement[2]}; 
-  std::cout << "intersection vals: " << std::endl;
-  for (double val: intersection_values) std::cout <<" " << val << std::endl;
   //all entries should by definition be positive, unless the source started outside of the triangle. 
   double toIntersect = intersection_values[0];
   for(double val: intersection_values) {
     if (val < toIntersect and val > 0) toIntersect = val;
-    std::cout << "toIntersect is currently " << toIntersect <<std::endl; 
   }
   std::cout << "toIntersect is " << toIntersect << std::endl; 
   if (toIntersect < 0) {
@@ -106,7 +148,7 @@ Point_3 find_intersection(Vector_3 source_bary, Vector_3 query_bary, std::vector
     Vector_3 xyz_intersection = min_intersection[0]*Vector_3(vertexList[0].x(),vertexList[0].y(),vertexList[0].z()) + min_intersection[1]*Vector_3(vertexList[1].x(),vertexList[1].y(),vertexList[1].z())+ min_intersection[2]*Vector_3(vertexList[2].x(),vertexList[2].y(),vertexList[2].z());
     std::cout << "xyz intersection point (in f_i) " << xyz_intersection << std::endl;
     std::cout << " " << std::endl;
-    return min_intersection;
+    return min_intersection; // this version returns the barycentric intersection point 
   }
   else {
     std::cout << "No intersection. Returning filler point."; 
@@ -167,6 +209,8 @@ int main(int argc, char* argv[]) {
  std::cout << " " << std::endl;
 
  move(movedOntoMesh,movedOntoMesh+forceDisplacement, onMesh, faceVertices, tmesh);
-
+ 
+ Point_3 xyzIntersectPoint = find_intersection_baryroutine(movedOntoMesh,movedOntoMesh+forceDisplacement, onMesh, faceVertices, tmesh);
+ std::cout << "outputted xyz intersect point from big function " << xyzIntersectPoint << std::endl; 
  return 0;
 }

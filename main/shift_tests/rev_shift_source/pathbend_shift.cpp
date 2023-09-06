@@ -239,17 +239,13 @@ std::vector<Segment_3> createEdgeSegments(std::vector<Point_3> vs) {
 
 
 
-face_descriptor getTargetFace(Segment_3 edge, Point_3 pos, Vector_3 toIntersection, face_descriptor currentSourceFace, Triangle_mesh mesh, bool throughVertex) {
+face_descriptor getTargetFace(Point_3 pos, Vector_3 toIntersection, face_descriptor currentSourceFace, Triangle_mesh mesh) {
  //goal is to find the face we're moving into. this is very easy if we share an edge, and harder if we only share a vertex. 
  //easy if we share an edge because we can just look for faces which share those vertices;
  //hard if we only share a vertex because the faces that share a vertex are not limited to the source and target.
- //maybe we can determine if we've gone through a vertex in advance. 
- if (throughVertex) {
-   std::cout << "picking face -- through vertex..." << std::endl;
-
- }
+ 
  //big search function will be too slow... maybe?
- double moveEpsilon = 1.3; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
+ double moveEpsilon = 1.6; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
 
  return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
                                                                //But it should identify things just fine most of the time. 
@@ -271,39 +267,71 @@ Vector_3 projectMoveDown(Point_3 source, Vector_3 targetFaceNormal, Vector_3 mov
   return Vector_3(source, source+inFaceVector); 
 }
 
-/*
-Point_3 check2DIntersection(std::vector<Point_3> vertices, Segment_3 check segment) {
-  
-  Point_3 segment_source = check_segment.source();
-  Vector_3 segment_vector = check_segment.to_vector();
-  
-  
-
-
-  const auto result = CGAL::intersection(edge_segment,check_segment_2d);
-  
-  const Point_2* intersection_point = boost::get<Point_2>(&*result);
-  if (result) {
-    if(intersection_point) {
-      std::cout << "INTERSECTION FOUND IN 2D" << std::endl;
-      //now -- find distance to intersection, along the edge (which will be the 
-      //first segment), and use the distance to find the equivalent point along the 
-      //edge in the non-rotated space. 
-      Vector_2 to_intersection = Vector_2(xys1s, *intersection_point);
-      double lengthToIntersection = vectorMagnitude(to_intersection);
-      Vector_3 vector_to_intersection = lengthToIntersection*normalizer(vector1); 
-      std::cout << "Intersection Point: " << s1Source+vector_to_intersection << std::endl;
-      return s1Source+vector_to_intersection;
-    } else {
-      std::cout << "line intersection" << std::endl;
-      return Point_3(0,0,0);
-    }
-  } else {
-    std::cout << "no intersection." << std::endl;
-    return Point_3(0,0,0);
-  }
+double triangle_area(Point_3 v1, Point_3 v2, Point_3 v3) {
+  Vector_3 side1 = Vector_3(v1, v2);
+  Vector_3 side2 = Vector_3(v1, v3);
+  return vectorMagnitude(CGAL::cross_product(side1,side2))/2;
 }
-*/
+
+Point_3 project_to_face(std::vector<Point_3> vertices, Point_3 query) {
+  Point_3 projectedQuery;
+  Vector_3 side1, side2, normal, toQuery;
+  side1 = Vector_3(vertices[0],vertices[1]);
+  side2 = Vector_3(vertices[0],vertices[2]);
+  normal = CGAL::cross_product(side1, side2); //don't need to worry about direction due to dot
+  toQuery = Vector_3(vertices[0], query);
+  projectedQuery = vertices[0] + (toQuery-CGAL::scalar_product(toQuery,normal)*normal);
+  return projectedQuery;
+}
+
+
+Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vector<Point_3> faceVertices) {
+  //use the barycentric coordinates of a point in order to determine the R3 coordinates of its intersection with an edge of the current face, if such an intersection exists.
+  //takes only the r3 positions of the source and prospective target along with the vertices of the current face; intersection test exists independent of the mesh.  
+  Point_3 sourceDown = project_to_face(faceVertices, source);
+  Point_3 query = project_to_face(faceVertices, target);
+  std::array<double, 3> source_bary = PMP::barycentric_coordinates(faceVertices[0],faceVertices[1],faceVertices[2], sourceDown);
+  std::array<double, 3> query_bary = PMP::barycentric_coordinates(faceVertices[0],faceVertices[1],faceVertices[2], query);
+  Vector_3 source_bary_vector = Vector_3(source_bary[0],source_bary[1],source_bary[2]); //define as vectors so we can manipulate them via addition/subtraction/etc
+  Vector_3 query_bary_vector  = Vector_3(query_bary[0], query_bary[1] , query_bary[2]);
+  Vector_3 displacement = query_bary_vector - source_bary_vector;
+  //defining bary components as constants for easy manipulation
+  double const b11 = source_bary_vector[0];
+  double const b12 = source_bary_vector[1];
+  double const b13 = source_bary_vector[2];
+  //each entry of intersection_values is the first point along the coordinate component of the line in that barycentric coordinate
+  //where the barycentric coordinate reaches 0; when a barycentric coordinate reaches 0, we've intersected an edge. The first one
+  //(the smallest intersection_value) is the first time we hit an edge, and should therefore be the intersection point.The others
+  //will indicate how far we'd need to travel along the displacement vector before another coordinate became 0 (and we'd intersect a "phantom" edge)
+  std::vector<double> intersection_values = {-b11/displacement[0], -b12/displacement[1], -b13/displacement[2]};
+  //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
+  //results which correspond to that.
+  double toIntersect = intersection_values[0];
+  double tol = 0.0001;
+  //min function with a max of 1. if we don't find something less than 1, no intersection.  
+  for(double val: intersection_values) {
+    if (val < toIntersect and val > tol) toIntersect = val;
+  }
+
+  std::cout << "toIntersect is " << toIntersect << std::endl;
+  if (toIntersect < 1 and toIntersect > 0) {
+    std::cout << "found intersection. " << std::endl;
+    Point_3 min_intersection;
+    min_intersection = Point_3(b11,b12,b13);
+    min_intersection = min_intersection+toIntersect*displacement;
+    std::cout << "barycentric intersection point " << min_intersection << std::endl;
+    Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z())+ min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); //construct point from definition of barycentric to xyz conversion
+    std::cout << "xyz intersection point (in f_i) " << xyz_intersection << std::endl;
+    std::cout << " " << std::endl;
+    Point_3 intersection_Point_3 = Point_3(0,0,0) + xyz_intersection;
+    return intersection_Point_3; // this version returns the barycentric intersection point
+  }
+  else {
+    std::cout << "No intersection. Returning filler point.";
+    return Point_3(1000,1000,1000);
+  }
+  return Point_3(10000,1000,1000); //default return
+}
 
 Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   double travelLength = vectorMagnitude(move);
@@ -321,67 +349,48 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   Vector_3 currentTargetFaceNormal;
   double lengthToSharedElement;
   std::vector<face_descriptor> faceIndexList; //store face indices here so we know where to look later
-  bool throughVertexFlag;
-  bool skip; //set this so we can ignore the remainder of a while loop once we've found an intersection
 
   //useful items for loop w/definition
   bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
-  Segment_3 checkSegment = Segment_3(source_point, source_point+current_move); //check for edge intersections with this segment 
-  std::cout << "Initial checksegment is " << checkSegment <<std::endl;
-
+  std::size_t counter = 0;
+  //find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vector<Point_3> faceVertices) finds the intersection point on an edge
   while(intersection){
+    counter += 1;
     vertexList = getVertexPositions(mesh,currentSourceFace);
     edgesList = createEdgeSegments(vertexList);
-    skip = false; //this will continue to be redefined true as long as there is an intersection
-    if (throughVertexFlag) throughVertexFlag = false;
+    //may need to add a check to see if we're going through a vertex later when finding target face 
     
-    for (Segment_3 edge: edgesList) {
-      
-      std::cout << "searching for intersection with edge " << edge << std::endl;
-      const auto result = CGAL::intersection(checkSegment,edge);    
+    Point_3 intersection_point = find_intersection_baryroutine(source_point, source_point+current_move, vertexList); 
 
-      if (result) {
-	
-	const Point_3* edge_intersection = boost::get<Point_3>(&*result);
-        	
-        for (Point_3 vert: vertexList) {
-	  if(CGAL::intersection(checkSegment,vert)) {
-	    throughVertexFlag=true;
-	    std::cout << "going through a vertex! hold on!" << std::endl;
-	    continue;
-	  }
-	}
-        std::cout << "Intersection, bending path" << std::endl;
-	
-	Vector_3 vector_to_intersection = Vector_3(source_point, *edge_intersection);
-        double lengthToSharedElement = vectorMagnitude(vector_to_intersection); //how far we've traveled
-        current_move = reduceMove(current_move, lengthToSharedElement); //decrease move size by length to intersected vertex/edge --
-						       //effectively the step where we "walk" to that intersection
-
-        source_point = *edge_intersection;//update source to be the most recent intersection point, as we have finished walking there
-                                          //maybe need to pmp::locate -->pmp::construct point to make sure we stay on the mesh through numerical errors. Should be a tiny approximation at worst. 
-
-        currentTargetFace = getTargetFace(edge, source_point, current_move, currentSourceFace, mesh, throughVertexFlag); //face we're about to walk into;
-															 //works much better for smoother meshes
-        currentTargetFaceNormal = PMP::compute_face_normal(currentTargetFace,mesh);
-	std::cout << "bending the path" << std::endl;
+    if (intersection_point == Point_3(1000,1000,1000)) {
+      intersection = false;
+      std::cout << "no intersection found after " << counter << " iterations." << std::endl; 
+      break; 
+    }
     
-        current_move = projectMoveDown(source_point, currentTargetFaceNormal, normalizer(current_move), vectorMagnitude(current_move)); //bend the path we are about to walk into the plane of the current face
-        std::cout<< "Current move is " << current_move << std::endl;	
-        checkSegment = Segment_3(source_point,source_point+current_move); //look ahead to see if we will intersect anything when we walk
+    std::cout << "intersection point at " << intersection_point << std::endl;
+    Vector_3 vector_to_intersection = Vector_3(source_point, intersection_point);
+    double lengthToSharedElement = vectorMagnitude(vector_to_intersection); //how far we've traveled
+    current_move = reduceMove(current_move, lengthToSharedElement);         //decrease move size by length to intersected vertex/edge --
+                                                                            //effectively the step where we "walk" to that intersection
 
-        skip = true;	
-        continue; // skip the rest of the for loop once we've found an intersection, if possible
-      }
-    } 
-    if (skip) continue; //just avoiding last statement
-    std::cout << "No intersection found. Shifting as if flat." << std::endl;
-    intersection = false; //if we haven't found an intersection, there is no intersection. 
+    source_point = intersection_point;//update source to be the most recent intersection point, as we have finished walking there
+                                      //maybe need to pmp::locate -->pmp::construct point to make sure we stay on the mesh through numerical errors. Should be a tiny approximation at worst.
+
+    currentTargetFace = getTargetFace(source_point, current_move, currentSourceFace, mesh); //face we're about to walk into;
+                                                                                                                         //works much better for smoother meshes
+    currentTargetFaceNormal = PMP::compute_face_normal(currentTargetFace,mesh);
+    std::cout << "bending the path" << std::endl;
+
+    current_move = projectMoveDown(source_point, currentTargetFaceNormal, normalizer(current_move), vectorMagnitude(current_move)); //bend the path we are about to walk into the plane of the current face
+    std::cout<< "Current move is " << current_move << std::endl;
+
+    currentSourceFace = currentTargetFace;
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 
   //be the location in the unfolded mesh if there were intersections (from an edge intersection to a spot
   //within a face)  
-  return source_point+current_move; //might need some locating/more closely tying this to the mesh, but this should in principle be completely correct 
+  return source_point+current_move; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
 
 }
 
@@ -398,7 +407,7 @@ int main(int argc, char* argv[]) {
    return EXIT_FAILURE;
  }
 
- Vector_3 forceDisplacement = -2*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
+ Vector_3 forceDisplacement = -20*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
  Point_3 pointToMove = Point_3(3.51033, 1.9177, 0);
 
 
