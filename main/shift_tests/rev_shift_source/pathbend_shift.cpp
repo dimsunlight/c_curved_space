@@ -245,7 +245,7 @@ face_descriptor getTargetFace(Point_3 pos, Vector_3 toIntersection, face_descrip
  //hard if we only share a vertex because the faces that share a vertex are not limited to the source and target.
  
  //big search function will be too slow... maybe?
- double moveEpsilon = 1.6; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
+ double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
 
  return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
                                                                //But it should identify things just fine most of the time. 
@@ -309,12 +309,16 @@ Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vect
   double toIntersect = intersection_values[0];
   double tol = 0.0001;
   //min function with a max of 1. if we don't find something less than 1, no intersection.  
+  std::cout << " calling intersection finder. " << std::endl;
+  std::cout << "intersection values are: " << std::endl;
   for(double val: intersection_values) {
+    std::cout << val << std::endl;
     if (val < toIntersect and val > tol) toIntersect = val;
+
   }
 
   std::cout << "toIntersect is " << toIntersect << std::endl;
-  if (toIntersect < 1 and toIntersect > 0) {
+  if (toIntersect < 1 and toIntersect > tol) {
     std::cout << "found intersection. " << std::endl;
     Point_3 min_intersection;
     min_intersection = Point_3(b11,b12,b13);
@@ -359,7 +363,9 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     vertexList = getVertexPositions(mesh,currentSourceFace);
     edgesList = createEdgeSegments(vertexList);
     //may need to add a check to see if we're going through a vertex later when finding target face 
-    
+    std::cout << "current vertices are: " << std::endl; 
+    for (Point_3 vert: vertexList) std::cout << vert << std::endl;  
+
     Point_3 intersection_point = find_intersection_baryroutine(source_point, source_point+current_move, vertexList); 
 
     if (intersection_point == Point_3(1000,1000,1000)) {
@@ -377,7 +383,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     source_point = intersection_point;//update source to be the most recent intersection point, as we have finished walking there
                                       //maybe need to pmp::locate -->pmp::construct point to make sure we stay on the mesh through numerical errors. Should be a tiny approximation at worst.
 
-    currentTargetFace = getTargetFace(source_point, current_move, currentSourceFace, mesh); //face we're about to walk into;
+    currentTargetFace = getTargetFace(source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
                                                                                                                          //works much better for smoother meshes
     currentTargetFaceNormal = PMP::compute_face_normal(currentTargetFace,mesh);
     std::cout << "bending the path" << std::endl;
