@@ -273,15 +273,7 @@ Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
   //force two line segments into the same plane to look for their intersection. 
   //actual procedure -- rotate segments to segments of the same length existing in the xy plane.
   //can do the rotation essentially by projecting down.
-  
-  //debug statements	
-  std::cout << " " << std::endl;
-  std::cout << "calling 2d intersection test with edge segment " << std::endl;
-  std::cout << segment1 << std::endl;
-  std::cout << "and check segment" << std::endl;
-  std::cout << segment2 << std::endl;
-  std::cout << " " << std::endl;
-
+  std::cout << "Finding 2D intersection." << std::endl;
   double s1Length = sqrt(segment1.squared_length());
   double s2Length = sqrt(segment2.squared_length());
   //pull original source and target in r3
@@ -289,55 +281,34 @@ Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
   Point_3 s2Source = segment2.source();
   Point_3 s1Target = segment1.target();
   Point_3 s2Target = segment2.target();
-
   Vector_3 vector1 = segment1.to_vector();
   Vector_3 vector2 = segment2.to_vector();
-  //set both sources into the same plane
-  Vector_3 vecBetweenSources = Vector_3(s1Source,s2Source); 
-  double distanceBetween = vectorMagnitude(vecBetweenSources);
-  Point_3 flatSource2 = s1Source+distanceBetween*normalizer(Vector_3(s1Source, Point_3(s2Source.x(),s2Source.y(),s1Source.z()))); 
-                                                    //hovering above the xy plane at the same height as source 1. 
-  Point_3 flatTarget2 = flatSource2 + vector2;
-
-  std::cout << "post initial rotation (into same plane)" << std::endl;
-  std::cout << "edge source: " << s1Source << " edge target: " << s1Target << std::endl;
-  std::cout << "check source: " << flatSource2 << " check target: " << flatTarget2 << std::endl; 
-  
-
-  //remove z component now that both sources have the same z component 
-  //and are the correct distance from each other, we can move the sources
-  //into flat space... 
-  Point_2 xys1s = Point_2(s1Source.x(), s1Source.y());
-  Point_2 xys2s = Point_2(flatSource2.x(), flatSource2.y());
-  //and then rotate the targets into that flat space. 
-  Point_2 xys1t = Point_2(s1Target.x(), s1Target.y());
-  Point_2 xys2t = Point_2(flatTarget2.x(), flatTarget2.y());
-  //create segments in 2D
-  Segment_2 segment1_2D = Segment_2(xys1s,xys1t);
-  Segment_2 segment2_2D = Segment_2(xys2s,xys2t); 
-  //rescale length, holding source points fixed -- this should be a very minor adjustment --
-  //and then check for the intersection
-  Vector_2 v1 = segment1_2D.to_vector();
-  Vector_2 v2 = segment2_2D.to_vector();
-  v1 = s1Length*normalizer(v1);
-  v2 = s2Length*normalizer(v2);
-  segment1_2D = Segment_2(xys1s, xys1s+v1);
-  segment2_2D = Segment_2(xys2s, xys2s+v2);
-  std::cout << "2d edge is " << xys1s << " to " << xys1s+v1 << std::endl; 
-  std::cout << "2d checksegment is " << xys2s << " to " << xys2s+v2 << std::endl;
-
-  //maybe some redundancy above 
-
-  const auto result = CGAL::intersection(segment1_2D,segment2_2D);
-  
+  std::cout << "created sources, targets, and vectors" << std::endl;
+  //"dumb" version -- let's just project directly down to the 
+  //xy plane and look for an overlap. With xy coordinates acquired, 
+  //can use original edge segment line eqn to grab intersection
+  Segment_2 straightDownS1 = Segment_2(Point_2(s1Source.x(),s1Source.y()), Point_2(s1Target.x(),s1Target.y()));
+  Segment_2 straightDownS2 = Segment_2(Point_2(s2Source.x(),s2Source.y()), Point_2(s2Target.x(),s2Target.y()));
+  std::cout << "projected segments " << std::endl;
+  std::cout << straightDownS1 << std::endl;
+  std::cout << straightDownS2 << std::endl;
+  //this specifically might not work when the face normal has no z-component/has a negligible z-component-- 
+  //resulting projections can overlap completely even though they have a finite intersection point in 
+  //real space.  
+  std::cout <<"created 2-D segments, searching for intersection" << std::endl;
+  const auto result = CGAL::intersection(straightDownS1,straightDownS2);
+  if (result) {
+    std::cout << "intersection generated, creating intersection point" << std::endl;
+  }
   const Point_2* intersection_point = boost::get<Point_2>(&*result);
+  std::cout << "intersection at xy: " << intersection_point << std::endl;
   if (result) {
     if(intersection_point) {
       std::cout << "found intersection in 2d!" << std::endl;
       //now -- find distance to intersection, along the edge (which will be the 
       //first segment), and use the distance to find the equivalent point along the 
       //edge in the non-rotated space. 
-      Vector_2 to_intersection = Vector_2(xys1s, *intersection_point);
+      Vector_2 to_intersection = Vector_2(Point_2(s1Source.x(),s1Source.y()), *intersection_point);
       double lengthToIntersection = vectorMagnitude(to_intersection);
       Vector_3 vector_to_intersection = lengthToIntersection*normalizer(vector1); 
       std::cout << "intersection point" << s1Source+vector_to_intersection;
@@ -351,6 +322,7 @@ Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
     return Point_3(0,0,0);
   }
 }
+
 
 Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   double travelLength = vectorMagnitude(move);
@@ -387,7 +359,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     
     for (Segment_3 edge: edgesList) {
       std::cout << "searching for intersection... " << std::endl;
-      const auto result = CGAL::intersection(checkSegment,edge);    
+      const auto result = CGAL::intersection(edge,checkSegment);    
       check2DIntersection(edge,checkSegment);  
       if (result) {
 	
@@ -447,7 +419,7 @@ int main(int argc, char* argv[]) {
    return EXIT_FAILURE;
  }
 
- Vector_3 forceDisplacement = -10*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
+ Vector_3 forceDisplacement = .2*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
  Point_3 pointToMove = Point_3(3.51033, 1.9177, 0);
 
 
@@ -456,82 +428,70 @@ int main(int argc, char* argv[]) {
  return 0;
 }
 
-
 /*
-auto verticesForUnfoldedFace(std::vector<Point_3> shared, std::vector<Point_3> vertices2, std::vector<Point_3> newLocations ) {
-  //defunct function for getting vertices in original order 
-  std::vector<int> indices; 
-  for (Point_3 sharedVertex: shared) {
-    indices.push_back(findIndex(sharedVertex,vertices2); 
-    //first element of shared will have index indices[0], second will have index indices[1], etc. 
+Point_3 check2DIntersection(Segment_3 segment1, Segment_3 segment2) {
+  //force two line segments into the same plane to look for their intersection. 
+  //actual procedure -- rotate segments to segments of the same length existing in the xy plane.
+  //can do the rotation essentially by projecting down.
+  double s1Length = sqrt(segment1.squared_length());
+  double s2Length = sqrt(segment2.squared_length());
+  //pull original source and target in r3
+  Point_3 s1Source = segment1.source();
+  Point_3 s2Source = segment2.source();
+  Point_3 s1Target = segment1.target();
+  Point_3 s2Target = segment2.target();
+  Vector_3 vector1 = segment1.to_vector();
+  Vector_3 vector2 = segment2.to_vector();
+  //set both sources into the same plane
+  Vector_3 vecBetweenSources = Vector_3(s1Source,s2Source); 
+  double distanceBetween = vectorMagnitude(vecBetweenSources);
+  Point_3 flatSource2 = s1Source+distanceBetween*normalizer(Vector_3(s1Source, Point_3(s2Source.x(),s2Source.y(),s1Source.z()))); 
+                                                    //hovering above the xy plane at the same height as source 1. 
+  Point_3 flatTarget2 = flatSource2 + vector2;
+  //in same z coord and are the correct distance from each other, we can move the sources
+  //into flat space... 
+  Point_2 xys1s = Point_2(s1Source.x(), s1Source.y());
+  Point_2 xys2s = Point_2(flatSource2.x(), flatSource2.y());
+  //and then rotate the targets into that flat space. 
+  Point_2 xys1t = Point_2(s1Target.x(), s1Target.y());
+  Point_2 xys2t = Point_2(flatTarget2.x(), flatTarget2.y());
+  //create segments in 2D
+  Segment_2 segment1_2D = Segment_2(xys1s,xys1t);
+  Segment_2 segment2_2D = Segment_2(xys2s,xys2t); 
+  //rescale length, holding source points fixed -- this should be a very minor adjustment --
+  //and then check for the intersection
+  Vector_2 v1 = segment1_2D.to_vector();
+  Vector_2 v2 = segment2_2D.to_vector();
+  v1 = s1Length*normalizer(v1);
+  v2 = s2Length*normalizer(v2);
+  segment1_2D = Segment_2(xys1s, xys1s+v1);
+  segment2_2D = Segment_2(xys2s, xys2s+v2);
+  std::cout << "2d edge is " << xys1s << " to " << xys1s+v1 << std::endl; 
+  std::cout << "2d checksegment is " << xys2s << " to " << xys2s+v2 << std::endl;
+
+  //check redundancy above 
+
+  const auto result = CGAL::intersection(segment1_2D,segment2_2D);
+  
+  const Point_2* intersection_point = boost::get<Point_2>(&*result);
+  if (result) {
+    if(intersection_point) {
+      std::cout << "found intersection in 2d!" << std::endl;
+      //now -- find distance to intersection, along the edge (which will be the 
+      //first segment), and use the distance to find the equivalent point along the 
+      //edge in the non-rotated space. 
+      Vector_2 to_intersection = Vector_2(xys1s, *intersection_point);
+      double lengthToIntersection = vectorMagnitude(to_intersection);
+      Vector_3 vector_to_intersection = lengthToIntersection*normalizer(vector1); 
+      std::cout << "intersection point" << s1Source+vector_to_intersection;
+      return s1Source+vector_to_intersection;
+    } else {
+      std::cout << "line intersection" << std::endl;
+      return Point_3(0,0,0);
+    }
+  } else {
+    std::cout << "no intersection." << std::endl;
+    return Point_3(0,0,0);
   }
-
-  //to handle case where we've rotated w/only one shared element, we can't use process of elimination
-  std::vector<int> possibleIndices = {0,1,2};
-  for (int index: indices) possibleIndices[index] = -1; 
-
-  int rIndex;
-  for (int ind: possibleIndices) {
-    if (ind != -1) {
-      rIndex = ind;
-    }  
-  } 
-
-  //finally, tempTrio uses the found original indices to rearrange vertices into original order 
-  std::vector<Point_3> tempTrio = {Point_3(0,0,0),Point_3(0,0,0),Point_3(0,0,0)};//null points for init. so we can have size 3
-  tempTrio[ind1] = sharedEdge[0];
-  tempTrio[ind2] = sharedEdge[1];
-  tempTrio[rIndex] = newLocations[0];
-
-  return tempTrio;
 }
 */
-
-
-/*
-Point_3 shift(Triangle_mesh mesh, Point_3 pos, Vector_3 move) {
-  Face_location oldPosLocation = PMP::locate(pos, mesh); //original position is fine
-  //big departure from original -- we can't say anything about the new position until we've drawn the ray of length
-  //(len(move)) and learned about whether it does or doesn't intersect with an edge
-  double TravelLength = vectorMagnitude(move);
-   
-  //oldPosLocation.first is the face the particle starts in.   
-
-  //we will eventually draw all vertex/edge segments of current face and store in lists; 
-  std::vector<Point_3>   vertexList;
-  std::vector<Segment_3> edgesList;
-
-  vertexList = getVertexPositions(mesh)
-  //initializations
-  face_descriptor connectedFace;
-  double lengthToSharedElement;
-  bool skip; //set this so we can ignore the remainder of a while loop once we've found an intersection
-
-  //useful items for loop w/definition
-  bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
-  Segment_3 checkSegment = Segment_3(pos, pos+move); //now we define segment to be checked against... redefine later
-  Triangle_mesh unfoldedMesh = createTemporaryMesh(vertexList);
-  Face_descriptor currentFace = unfoldedMesh[0]; //should be only face of unfoldedMesh for now
-
-  while(intersection){
-    std::vector<Segment_3> edgesList = createEdgeSegments(vertexList);
-    skip = false;
-
-    for (Segment_3 edge: edgesList) {
-      auto result = CGAL::intersection(checkSegment,edge);
-
-      if (intersects(checkSegment,edge)) {
-        connectedFace = sharedFace(edge, oldPosLocation.first, original_mesh_faces);
-        std::vector<Point_3> seu = sharedEdgeUnfolding(currentFace,connectedFace,mesh); //mostly does what overEdge currently does
-        currentFace = unfoldedMesh.add_face(seu[0],seu[1],seu[2]); //need to make sure these are in the original order!!!;
-        move = reduceMove(move,lengthToSharedElement); //decrease move size by length to intersected vertex/edge. idk how we're getting that yet
-        checkSegment = Segment_3(intersection_point, intersection_point+move);
-        skip = true;	
-        continue; // skip the rest of the for & while loop once we've found an intersection, if possible
-      }
-    } 
-    if (skip) continue; //just avoiding last statement
-    intersection = false; //if we haven't found an intersection, there is no intersection. 
-  }
-}
-*/ 

@@ -308,9 +308,14 @@ Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vect
   //results which correspond to that.
   double toIntersect = intersection_values[0];
   double tol = 0.0001;
+  //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
+  //we check it now. 
+  if (toIntersect < tol) toIntersect = 2;
+
   //min function with a max of 1. if we don't find something less than 1, no intersection.  
   std::cout << " calling intersection finder. " << std::endl;
   std::cout << "intersection values are: " << std::endl;
+
   for(double val: intersection_values) {
     std::cout << val << std::endl;
     if (val < toIntersect and val > tol) toIntersect = val;
@@ -326,7 +331,6 @@ Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vect
     std::cout << "barycentric intersection point " << min_intersection << std::endl;
     Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z())+ min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); //construct point from definition of barycentric to xyz conversion
     std::cout << "xyz intersection point (in f_i) " << xyz_intersection << std::endl;
-    std::cout << " " << std::endl;
     Point_3 intersection_Point_3 = Point_3(0,0,0) + xyz_intersection;
     return intersection_Point_3; // this version returns the barycentric intersection point
   }
@@ -359,6 +363,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   std::size_t counter = 0;
   //find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vector<Point_3> faceVertices) finds the intersection point on an edge
   while(intersection){
+    std::cout << "" <<std::endl;
     counter += 1;
     vertexList = getVertexPositions(mesh,currentSourceFace);
     edgesList = createEdgeSegments(vertexList);
