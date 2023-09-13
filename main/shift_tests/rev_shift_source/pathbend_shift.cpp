@@ -362,6 +362,12 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
   std::size_t counter = 0;
   //find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vector<Point_3> faceVertices) finds the intersection point on an edge
+  
+  const std::string intersections_filename = "intersections.txt";
+  const std::string vertices_filename = "faces_visited.txt";
+  std::ofstream intersections_file(intersections_filename);
+  std::ofstream vertices_file(vertices_filename);
+  
   while(intersection){
     std::cout << "" <<std::endl;
     counter += 1;
@@ -371,6 +377,16 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     std::cout << "current vertices are: " << std::endl; 
     for (Point_3 vert: vertexList) std::cout << vert << std::endl;  
 
+    //write to files
+    if (intersections_file.is_open()){
+      intersections_file << "{" << source_point.x() << ", " << source_point.y() << ", " << source_point.z() << "}";
+      intersections_file << "\n";
+    }
+    if (vertices_file.is_open()) {
+      for (Point_3 vert: vertexList) vertices_file << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}" << "\n";
+      vertices_file << "\n";
+    }
+
     Point_3 intersection_point = find_intersection_baryroutine(source_point, source_point+current_move, vertexList); 
 
     if (intersection_point == Point_3(1000,1000,1000)) {
@@ -378,7 +394,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
       std::cout << "no intersection found after " << counter << " iterations." << std::endl; 
       break; 
     }
-    
+
     std::cout << "intersection point at " << intersection_point << std::endl;
     Vector_3 vector_to_intersection = Vector_3(source_point, intersection_point);
     double lengthToSharedElement = vectorMagnitude(vector_to_intersection); //how far we've traveled
@@ -401,7 +417,12 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   //source_point+move is the location in the original face if there were no intersections, and it will 
   //be the location in the unfolded mesh if there were intersections (from an edge intersection to a spot
   //within a face)  
-  return source_point+current_move; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
+  Point_3 fTarget = source_point+current_move;
+  intersections_file << "{" << fTarget.x() << ", " << fTarget.y() << ", " << fTarget.z() << "}";
+  intersections_file.close();
+  vertices_file.close();
+  
+  return fTarget; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
 
 }
 
