@@ -245,7 +245,7 @@ face_descriptor getTargetFace(Point_3 pos, Vector_3 toIntersection, face_descrip
  //hard if we only share a vertex because the faces that share a vertex are not limited to the source and target.
  
  //big search function will be too slow... maybe?
- double moveEpsilon = 1.15; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
+ double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
 
  return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
                                                                //But it should identify things just fine most of the time. 
@@ -404,11 +404,11 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     current_move = reduceMove(current_move, lengthToSharedElement);         //decrease move size by length to intersected vertex/edge --
                                                                             //effectively the step where we "walk" to that intersection
 
-    source_point = intersection_point;//update source to be the most recent intersection point, as we have finished walking there
-                                      //maybe need to pmp::locate -->pmp::construct point to make sure we stay on the mesh through numerical errors. Should be a tiny approximation at worst.
 
     currentTargetFace = getTargetFace(source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
-                                                                                                      //works much better for smoother meshes
+
+    source_point = intersection_point;//update source to be the most recent intersection point, as we have finished walking there
+
     currentTargetFaceNormal = PMP::compute_face_normal(currentTargetFace,mesh);
     std::cout << "bending the path" << std::endl;
 
