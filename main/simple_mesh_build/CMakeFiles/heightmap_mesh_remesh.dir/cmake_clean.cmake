@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/heightmap_mesh_remesh.dir/heightmap_mesh_remesh.cpp.o"
-  "CMakeFiles/heightmap_mesh_remesh.dir/heightmap_mesh_remesh.cpp.o.d"
   "heightmap_mesh_remesh"
   "heightmap_mesh_remesh.pdb"
 )

@@ -7,6 +7,9 @@
 #include <CGAL/number_utils.h>
 #include <math.h>
 #include <fstream>
+#include <CGAL/Polygon_mesh_processing/corefinement.h>
+#include <CGAL/Polygon_mesh_processing/IO/polygon_mesh_io.h>
+#include <CGAL/Polygon_mesh_processing/remesh.h>
 
 #include <CGAL/Surface_mesh_simplification/edge_collapse.h>
 #include <CGAL/Surface_mesh_simplification/Policies/Edge_collapse/Edge_count_ratio_stop_predicate.h>
@@ -25,7 +28,16 @@ typedef GT::Point_3 Point_3;
 typedef GT::FT FT;
 typedef FT (*Function)(Point_3);
 typedef CGAL::Implicit_surface_3<GT, Function> Surface_3;
-typedef CGAL::Surface_mesh<Point_3> Surface_mesh;
+typedef CGAL::Surface_mesh<Point_3>            Surface_mesh;
+typedef Surface_mesh::Vertex_index             Vertex_index;
+typedef Surface_mesh::Edge_index               Edge_index;
+typedef Surface_mesh::Halfedge_index           Halfedge_index;
+typedef Surface_mesh::Face_range               Face_range;
+
+typedef boost::graph_traits<Surface_mesh>::vertex_descriptor Vertex_descriptor;
+typedef boost::graph_traits<Surface_mesh>::vertex_iterator   Vertex_iterator;
+typedef boost::graph_traits<Surface_mesh>::edge_iterator     Edge_iterator;
+typedef boost::graph_traits<Surface_mesh>::edge_descriptor   Edge_descriptor;
 
 //namespace
 namespace SMS = CGAL::Surface_mesh_simplification;
@@ -45,14 +57,12 @@ FT heightmap_function(Point_3 p) {
 float meanEdgeLength(Surface_mesh mesh){
   float mean = 0, min, max, length;
   int count = 0; bool init = true;
-  Surface_mesh::Edge_range es = mesh.edges();
-  for (Surface_mesh::Edge_range::iterator eIter = es.begin(); eIter != es.end(); ++eIter){
+  Surface_mesh::Halfedge_range es = mesh.halfedges();
+  for (auto  eIter = es.begin(); eIter != es.end(); ++eIter){
+      Halfedge_index e = *eIter; 
 
-      for(Triangle_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh)) {
-        Triangle_mesh::Vertex_index vi = target(hi, mesh);
-        vertices.push_back( mesh.point(vi)); //working with xyz points rather than indices --
-                                         //don't need to alter base mesh, so points fine
-      }
+      Point_3 a = mesh.point(mesh.source(e)); //source yields the source vertex of an edge as a vertex_descriptor
+      Point_3 b = mesh.point(mesh.target(e));  
 
       length = CGAL::sqrt(CGAL::squared_distance(a, b));
       ++count;
@@ -68,7 +78,7 @@ float meanEdgeLength(Surface_mesh mesh){
   }
   mean /= count;
   std::cout << min << " " << max << " " << mean << "\n";
-  return mean; 
+  return mean;
 }
 
 int main() {
@@ -77,7 +87,7 @@ int main() {
   // defining the surface
   Surface_3 surface(heightmap_function,             // pointer to function
                     Sphere_3(CGAL::ORIGIN, 20.)); // bounding sphere
-  // Note that "4." above is the *squared* radius of the bounding sphere, which
+  // Note that "20." above is the *squared* radius of the bounding sphere, which
   // I believe defines the domain of the surface
   CGAL::Surface_mesh_default_criteria_3<Tr> criteria(30.,  // angular bound
                                                      0.1,  // radius bound
@@ -120,15 +130,22 @@ int main() {
 
   */
   //remake surface mesh for testing so we don't use a pre-simplified version
-  CGAL::make_surface_mesh(c2t3, surface, criteria, CGAL::Non_manifold_tag());
+  Tr tr2;
+  C2t3 c2_t3(tr2);
+
+  CGAL::make_surface_mesh(c2_t3, surface, criteria, CGAL::Non_manifold_tag());
   Surface_mesh sm2;
-  CGAL::facets_in_complex_2_to_triangle_mesh(c2t3,sm2);
+  CGAL::facets_in_complex_2_to_triangle_mesh(c2_t3,sm2);
   
   //need typical edge length for isotropic remeshing
   float meanLength = meanEdgeLength(sm2);
-
-  //FaceRange sm2Faces = sm2.faces();
-  //PMP::isotropic_remeshing(sm2faces, )
+  std::cout << "Mean edge length is " << meanLength << std::endl;
+  
+  Face_range sm2Faces = sm2.faces();
+  PMP::isotropic_remeshing(sm2Faces, meanLength, sm2);
+  CGAL::IO::write_polygon_mesh("heightmesh_isotropic_remesh.off", sm2, CGAL::parameters::stream_precision(17));
+ 
+  std::cout << "# points after iso remesh " << tr2.number_of_vertices() << "\n";
 
 
 }
