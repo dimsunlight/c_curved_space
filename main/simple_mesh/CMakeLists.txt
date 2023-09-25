@@ -10,5 +10,6 @@ project( simple_mesh )
 find_package(CGAL)
 
 create_single_source_cgal_program("heightmap_mesh.cpp")
+create_single_source_cgal_program("heightmap_mesh_remesh.cpp")
 create_single_source_cgal_program("torus_mesh.cpp")
 create_single_source_cgal_program("compute_normals.cpp")

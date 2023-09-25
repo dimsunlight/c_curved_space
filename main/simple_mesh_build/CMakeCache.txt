@@ -29,6 +29,11 @@ Boost_INCLUDE_DIR:PATH=/usr/include
 //Link with static Boost libraries
 CGAL_Boost_USE_STATIC_LIBS:BOOL=OFF
 
+//Setting for advanced users that what to change the default number
+// types used in filtered kernels. Some options might not be working
+// depending on how you configured your build.
+CGAL_CMAKE_EXACT_NT_BACKEND:STRING=Default
+
 //Display memory and real time usage at end of CTest test outputs
 CGAL_CTEST_DISPLAY_MEM_AND_TIME:BOOL=OFF
 
@@ -36,7 +41,7 @@ CGAL_CTEST_DISPLAY_MEM_AND_TIME:BOOL=OFF
 CGAL_DEV_MODE:BOOL=OFF
 
 //The directory containing a CMake configuration file for CGAL.
-CGAL_DIR:PATH=/home/toler/CGAL-5.5.2
+CGAL_DIR:PATH=/home/toler/CGAL-5.6
 
 //If set, the ctest command will not skip the tests of the draw
 // functions.
@@ -284,7 +289,9 @@ Boost_DEBUG-ADVANCED:INTERNAL=1
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-CGAL_EXECUTABLE_TARGETS:INTERNAL=heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;torus_mesh;compute_normals
+//STRINGS property for variable: CGAL_CMAKE_EXACT_NT_BACKEND
+CGAL_CMAKE_EXACT_NT_BACKEND-STRINGS:INTERNAL=GMP_BACKEND;GMPXX_BACKEND;BOOST_GMP_BACKEND;BOOST_BACKEND;LEDA_BACKEND;MP_FLOAT_BACKEND;Default
+CGAL_EXECUTABLE_TARGETS:INTERNAL=heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;torus_mesh;compute_normals;heightmap_mesh;heightmap_mesh_remesh;torus_mesh;compute_normals;heightmap_mesh;heightmap_mesh_remesh;torus_mesh;compute_normals;heightmap_mesh;heightmap_mesh_remesh;torus_mesh;compute_normals;heightmap_mesh;heightmap_mesh_remesh;torus_mesh;compute_normals;heightmap_mesh;heightmap_mesh_remesh;torus_mesh;compute_normals
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR

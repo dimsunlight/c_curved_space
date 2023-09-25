@@ -130,6 +130,19 @@ torus_mesh/fast:
 .PHONY : torus_mesh/fast
 
 #=============================================================================
+# Target rules for targets named heightmap_mesh_remesh
+
+# Build rule for target.
+heightmap_mesh_remesh: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heightmap_mesh_remesh
+.PHONY : heightmap_mesh_remesh
+
+# fast build rule for target.
+heightmap_mesh_remesh/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heightmap_mesh_remesh.dir/build.make CMakeFiles/heightmap_mesh_remesh.dir/build
+.PHONY : heightmap_mesh_remesh/fast
+
+#=============================================================================
 # Target rules for targets named cgal_check_build_system
 
 # Build rule for target.
@@ -229,6 +242,30 @@ heightmap_mesh.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/heightmap_mesh.dir/build.make CMakeFiles/heightmap_mesh.dir/heightmap_mesh.cpp.s
 .PHONY : heightmap_mesh.cpp.s
 
+heightmap_mesh_remesh.o: heightmap_mesh_remesh.cpp.o
+.PHONY : heightmap_mesh_remesh.o
+
+# target to build an object file
+heightmap_mesh_remesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heightmap_mesh_remesh.dir/build.make CMakeFiles/heightmap_mesh_remesh.dir/heightmap_mesh_remesh.cpp.o
+.PHONY : heightmap_mesh_remesh.cpp.o
+
+heightmap_mesh_remesh.i: heightmap_mesh_remesh.cpp.i
+.PHONY : heightmap_mesh_remesh.i
+
+# target to preprocess a source file
+heightmap_mesh_remesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heightmap_mesh_remesh.dir/build.make CMakeFiles/heightmap_mesh_remesh.dir/heightmap_mesh_remesh.cpp.i
+.PHONY : heightmap_mesh_remesh.cpp.i
+
+heightmap_mesh_remesh.s: heightmap_mesh_remesh.cpp.s
+.PHONY : heightmap_mesh_remesh.s
+
+# target to generate assembly for a file
+heightmap_mesh_remesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/heightmap_mesh_remesh.dir/build.make CMakeFiles/heightmap_mesh_remesh.dir/heightmap_mesh_remesh.cpp.s
+.PHONY : heightmap_mesh_remesh.cpp.s
+
 torus_mesh.o: torus_mesh.cpp.o
 .PHONY : torus_mesh.o
 
@@ -265,6 +302,7 @@ help:
 	@echo "... cgal_check_build_system"
 	@echo "... compute_normals"
 	@echo "... heightmap_mesh"
+	@echo "... heightmap_mesh_remesh"
 	@echo "... torus_mesh"
 	@echo "... compute_normals.o"
 	@echo "... compute_normals.i"
@@ -272,6 +310,9 @@ help:
 	@echo "... heightmap_mesh.o"
 	@echo "... heightmap_mesh.i"
 	@echo "... heightmap_mesh.s"
+	@echo "... heightmap_mesh_remesh.o"
+	@echo "... heightmap_mesh_remesh.i"
+	@echo "... heightmap_mesh_remesh.s"
 	@echo "... torus_mesh.o"
 	@echo "... torus_mesh.i"
 	@echo "... torus_mesh.s"

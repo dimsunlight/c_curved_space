@@ -307,9 +307,7 @@ Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vect
   //min function with a max of 1. if we don't find something less than 1, no intersection.  
 
   for(double val: intersection_values) {
-    std::cout << val << std::endl;
     if (val < toIntersect and val > tol) toIntersect = val;
-
   }
   
   if (toIntersect < 1 and toIntersect > tol) {
