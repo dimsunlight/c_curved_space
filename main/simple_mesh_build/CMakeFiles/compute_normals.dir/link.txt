@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/compute_normals.dir/compute_normals.cpp.o  -o compute_normals  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/compute_normals.dir/compute_normals.cpp.o  -o compute_normals  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 
