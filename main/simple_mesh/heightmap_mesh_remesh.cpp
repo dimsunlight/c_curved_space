@@ -103,8 +103,8 @@ int main() {
   //simplify mesh
   std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
   // In this example, the simplification stops when the number of undirected edges
-  // drops below 10% of the initial count
-  double stop_ratio = 0.9;
+  // drops below 75% of the initial count
+  double stop_ratio = 0.60;
   SMS::Edge_count_ratio_stop_predicate<Surface_mesh> stop(stop_ratio);
   int r = SMS::edge_collapse(sm, stop);
   std::chrono::steady_clock::time_point end_time = std::chrono::steady_clock::now();
