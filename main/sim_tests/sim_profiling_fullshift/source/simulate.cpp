@@ -27,6 +27,8 @@
 #include "shift.h"
 #include "get_force.h"
 #include <chrono>
+#include <ratio>
+#include <thread>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             Kernel;
 typedef CGAL::Exact_predicates_exact_constructions_kernel_with_sqrt     KernelWithSqrt;
@@ -100,6 +102,18 @@ std::vector<std::pair<Point_3,std::vector<Point_3>>> get_neighbors(std::vector<P
   return particles_neighbors_pairs;
 }
 
+
+std::chrono::milliseconds averageTime(std::vector<std::chrono::milliseconds> times) {
+  std::chrono::milliseconds sum;
+  int n=0;
+  for (std::chrono::milliseconds element: times) {
+    sum += element;
+    n+=1;
+  }
+
+  return sum/n;
+}
+
 int main (int argc, char* argv[]) {
 
   std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
@@ -158,18 +172,20 @@ int main (int argc, char* argv[]) {
     for (std::size_t i = 0; i < particle_locations.size();i++) {
       particle_and_neighbors = particles_with_neighbors[i];
       //std::cout << "current particle: " <<particle_and_neighbors.first << std::endl;
-      start_time = std::chrono::steady_clock::now();
+      auto f_start = std::chrono::high_resolution_clock::now();
       f_on_p = force_on_source(mesh,particle_and_neighbors.first,particle_and_neighbors.second,
 		    particle_and_neighbors.second.size()); 
-      end_time = std::chrono::steady_clock::now();
-      forceTimes.push_back(std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count());
+      auto f_end = std::chrono::high_resolution_clock::now();
+      auto forcetime = std::chrono::duration_cast<std::chrono::milliseconds>(f_end - f_start);; 
+      forceTimes.push_back(forcetime);
 
 
-      start_time = std::chrono::steady_clock::now(); 
+      auto s_start = std::chrono::high_resolution_clock::now(); 
       //std::cout << "The force on the particle at " << particle_and_neighbors.first << " is " << f_on_p << std::endl; 
       location_buffer.push_back(shift(mesh, particle_and_neighbors.first, stepsize*f_on_p));
-      end_time = std::chrono::steady_clock::now(); 
-      shiftTimes.push_back(std::chrono::duration_cast<std::chrono::millisecond>(end_time - start_time).count());
+      auto s_end   = std::chrono::high_resolution_clock::now(); 
+      std::chrono::duration<long, std::milli> shifttime =  std::chrono::duration_cast<std::chrono::milliseconds>(s_end-s_start);
+      shiftTimes.push_back(shifttime);
 
     }
     //location buffer housekeeping
@@ -186,7 +202,10 @@ int main (int argc, char* argv[]) {
   trajectory_file.close();
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
   std::chrono::steady_clock::time_point sim_end = std::chrono::steady_clock::now();
-  std::cout << "Time taken for simulation: " << std::chrono::duration_cast<std::chrono::milliseconds>(sim_start - sim_end).count() << "ms" << std::endl;
+  std::cout << "Time taken for simulation: " << std::chrono::duration_cast<std::chrono::milliseconds>(sim_end - sim_start).count() << "ms" << std::endl;
+  std::cout << "Time for force calculation: " << forceTimes[1] << std::endl;
+  std::cout << "Time for shift calculation: " << shiftTimes[1] << std::endl;
+
 
   return 0;
 }
