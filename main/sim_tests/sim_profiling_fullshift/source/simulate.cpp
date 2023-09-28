@@ -11,6 +11,7 @@
 #include <CGAL/AABB_face_graph_triangle_primitive.h>
 #include <CGAL/AABB_traits.h>
 #include <CGAL/AABB_tree.h>
+#include <CGAL/Polygon_mesh_processing/compute_normal.h>
 #include <CGAL/Polygon_mesh_processing/locate.h>
 #include <CGAL/Polygon_mesh_processing/triangulate_faces.h>
 #include <CGAL/boost/graph/helpers.h>
@@ -134,7 +135,7 @@ int main (int argc, char* argv[]) {
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
   //simulation time parameters -- too-large step sizes can break shift!
-  std::size_t timesteps = 20; //hard defining this now rather than input-defining to avoid extra debugging 
+  std::size_t timesteps = 1000; //hard defining this now rather than input-defining to avoid extra debugging 
   double      stepsize = .01; //slightly larger stepsize so it's more likely we run into weird scenarios
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
@@ -203,8 +204,8 @@ int main (int argc, char* argv[]) {
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
   std::chrono::steady_clock::time_point sim_end = std::chrono::steady_clock::now();
   std::cout << "Time taken for simulation: " << std::chrono::duration_cast<std::chrono::milliseconds>(sim_end - sim_start).count() << "ms" << std::endl;
-  std::cout << "Time for force calculation: " << forceTimes[1] << std::endl;
-  std::cout << "Time for shift calculation: " << shiftTimes[1] << std::endl;
+  std::cout << "Time for force calculation: " << averageTime(forceTimes).count() << "ms" << std::endl;
+  std::cout << "Time for shift calculation: " << averageTime(shiftTimes).count() << "ms" << std::endl;
 
 
   return 0;

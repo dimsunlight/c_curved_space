@@ -8,6 +8,7 @@
 #include <CGAL/AABB_face_graph_triangle_primitive.h>
 #include <CGAL/AABB_traits.h>
 #include <CGAL/AABB_tree.h>
+#include <CGAL/Polygon_mesh_processing/compute_normal.h>
 #include <CGAL/Polygon_mesh_processing/locate.h>
 #include <CGAL/Polygon_mesh_processing/triangulate_faces.h>
 #include <CGAL/boost/graph/helpers.h>
@@ -18,6 +19,7 @@
 #include <cmath>
 #include <ctime>
 #include <math.h> //including this to do simple cos and sine, but maybe imprecise compared to cgal-originating routines
+
 //types and names
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             K;
 typedef K::FT                                                           FT;
