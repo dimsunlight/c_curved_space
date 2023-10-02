@@ -37,8 +37,11 @@ endif()
 # ############################
 
 add_executable( simulate  get_force.cpp shift.cpp simulate.cpp )
+add_executable( force_test force_dist_test.cpp get_force.cpp ) 
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS simulate )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS force_test )
 
 # Link the executable to CGAL and third-party libraries
 target_link_libraries(simulate PRIVATE CGAL::CGAL )
+target_link_libraries(force_test PRIVATE CGAL::CGAL ) 

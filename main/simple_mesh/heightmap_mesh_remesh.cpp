@@ -147,5 +147,4 @@ int main() {
  
   std::cout << "# points after iso remesh " << tr2.number_of_vertices() << "\n";
 
-
 }

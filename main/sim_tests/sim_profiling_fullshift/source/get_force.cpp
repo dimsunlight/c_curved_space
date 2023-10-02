@@ -51,13 +51,13 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
   shortest_paths.build_aabb_tree(tree);
   //convert source point to barycentric coordinates via locate
   const Point_3 source_pt = source;
-  Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt);
+  Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt,tree);
   shortest_paths.add_source_point(source_loc.first,source_loc.second);
 
   std::vector<double> distances;
   std::vector<Vector_3> tangents; 
   for (std::size_t i = 0; i < num_targets; i++) {
-    Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i]);
+    Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
     std::vector<Point_3> points; 
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
     distances.push_back(std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)));

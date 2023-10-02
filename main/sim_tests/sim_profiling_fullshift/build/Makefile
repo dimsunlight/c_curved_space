@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named force_test
+
+# Build rule for target.
+force_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 force_test
+.PHONY : force_test
+
+# fast build rule for target.
+force_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/build
+.PHONY : force_test/fast
+
+#=============================================================================
 # Target rules for targets named simulate
 
 # Build rule for target.
@@ -129,11 +142,36 @@ simulate/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/build
 .PHONY : simulate/fast
 
+force_dist_test.o: force_dist_test.cpp.o
+.PHONY : force_dist_test.o
+
+# target to build an object file
+force_dist_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/force_dist_test.cpp.o
+.PHONY : force_dist_test.cpp.o
+
+force_dist_test.i: force_dist_test.cpp.i
+.PHONY : force_dist_test.i
+
+# target to preprocess a source file
+force_dist_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/force_dist_test.cpp.i
+.PHONY : force_dist_test.cpp.i
+
+force_dist_test.s: force_dist_test.cpp.s
+.PHONY : force_dist_test.s
+
+# target to generate assembly for a file
+force_dist_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/force_dist_test.cpp.s
+.PHONY : force_dist_test.cpp.s
+
 get_force.o: get_force.cpp.o
 .PHONY : get_force.o
 
 # target to build an object file
 get_force.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/get_force.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/get_force.cpp.o
 .PHONY : get_force.cpp.o
 
@@ -142,6 +180,7 @@ get_force.i: get_force.cpp.i
 
 # target to preprocess a source file
 get_force.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/get_force.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/get_force.cpp.i
 .PHONY : get_force.cpp.i
 
@@ -150,6 +189,7 @@ get_force.s: get_force.cpp.s
 
 # target to generate assembly for a file
 get_force.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/get_force.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/get_force.cpp.s
 .PHONY : get_force.cpp.s
 
@@ -209,7 +249,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... force_test"
 	@echo "... simulate"
+	@echo "... force_dist_test.o"
+	@echo "... force_dist_test.i"
+	@echo "... force_dist_test.s"
 	@echo "... get_force.o"
 	@echo "... get_force.i"
 	@echo "... get_force.s"
