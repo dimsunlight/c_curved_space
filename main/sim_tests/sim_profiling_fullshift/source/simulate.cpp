@@ -30,6 +30,7 @@
 #include <chrono>
 #include <ratio>
 #include <thread>
+#include <random>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             Kernel;
 typedef CGAL::Exact_predicates_exact_constructions_kernel_with_sqrt     KernelWithSqrt;
@@ -63,6 +64,58 @@ float distBetween(Point_3 point1,Point_3 point2) {
   
   return sqrt(slength);
 }
+
+
+float random_in_range(float range_min, float range_max)
+{
+  //uses mersenne twister to get a random real #
+  std::random_device                   rand_dev;
+  std::mt19937                         generator(rand_dev());
+  std::uniform_real_distribution<float>  distr(range_min, range_max);
+
+  return distr(generator);
+}
+
+float torus_weight(float a, float c, float u, float v) {
+  //get torus weight for sampling against [0,1] distribution --
+  //so we divide by radius to compare to ``unit'' torus
+  return (c+a*cos(v))/(c+a);
+}
+
+//float sinplane_weight --- look up what differential geometric aspects are needed for rejections ampling
+
+Point_3 torus_sample(float a, float c) {
+  //rejection method sample on a torus; that is, reject anything without the appropriate weight
+  float U;
+  float V;
+  float W;
+  float weight;
+  Point_3 returnPoint = Point_3(NULL,NULL,NULL);
+  while (returnPoint == Point_3(NULL,NULL,NULL)) {
+    U = random_in_range(0.0, 2*M_PI);
+    V = random_in_range(0.0, 2*M_PI);
+    W = random_in_range(0.0, 1.0);
+    weight = torus_weight(a,c,U,V);
+    if (W <= weight) {
+      returnPoint = Point_3((c+a*cos(V))*cos(U), (c+a*cos(V))*sin(U), a*sin(V));
+      return returnPoint;
+    }
+  }
+  //this should never happen, but just to avoid false error messages
+  return Point_3(NULL,NULL,NULL);//filler point to check if we have sampled at all
+}
+
+//Point_3 sinplane_sample() {} ; once weight is defined, write as above
+
+std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
+  //I use std::vectors of point_3 objects for positions, so we loop
+  //to create a similar vector for n random positions
+  std::vector<Point_3> sample_points = {};
+  for (std::size_t i; i < n; i++) {
+    sample_points.push_back(torus_sample(a,c));
+  }	  
+}
+
 
 std::vector<Point_3> create_particles_from_xyz(std::string locations_file) {
   Point_set_3 locations;
@@ -127,7 +180,8 @@ int main (int argc, char* argv[]) {
   }
 
   const std::string loc_filename = (argc > 2) ? argv[2] : CGAL::data_file_path("sims_project/default_pos.xyz");
-
+  //it would be nice to be able to either feed in a locations file name or a # of sample points n for below
+  std::vector<Point_3> torus_sample = n_torus_sample_points(n, 1, 3);
 
   //have defaults for both loading functionalities below
   std::vector<Point_3> particle_locations = create_particles_from_xyz(loc_filename);

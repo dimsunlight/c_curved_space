@@ -99,7 +99,7 @@ int main(int argc, char* argv[]) {
   std::pair<std::vector<double>,std::vector<Vector_3>> dist_and_tang; 
   std::size_t targetcount = 1;
   
-  const std::string dist_and_time_filename = "dist_and_time.txt";
+  const std::string dist_and_time_filename = "dist_and_time.csv";
   std::ofstream dist_and_time_file(dist_and_time_filename);
  
   for (int i = 0; i < 1000; i++) {
@@ -112,7 +112,7 @@ int main(int argc, char* argv[]) {
     f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
     dist_and_tang = calcTangentsAndDistances (mesh, point1, point2, targetcount);
     if (dist_and_time_file.is_open()){
-      dist_and_time_file << dist_and_tang.first[0] << " " <<  f_time.count();
+      dist_and_time_file << dist_and_tang.first[0] << ", " <<  f_time.count();
       dist_and_time_file << "\n";
     }
   }
