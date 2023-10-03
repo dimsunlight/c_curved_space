@@ -76,6 +76,10 @@ float random_in_range(float range_min, float range_max)
   return distr(generator);
 }
 
+float sinplane_weight(float x, float y) {
+  return 1/sqrt(1+cos(x)*cos(x));
+}
+
 float torus_weight(float a, float c, float u, float v) {
   //get torus weight for sampling against [0,1] distribution --
   //so we divide by radius to compare to ``unit'' torus
@@ -83,6 +87,24 @@ float torus_weight(float a, float c, float u, float v) {
 }
 
 //float sinplane_weight --- look up what differential geometric aspects are needed for rejections ampling
+Point_3 sinplane_sample() {
+  float X;
+  float Y;
+  float W;
+  float weight;
+  Point_3 returnPoint = Point_3(NULL,NULL,NULL);
+  while (returnPoint == Point_3(NULL,NULL,NULL)) {
+    X = random_in_range(-1.0,1.0);
+    Y = random_in_range(-1.0,1.0);
+    W = random_in_range(0,1.0);
+    weight = sinplane_weight(X,Y);
+    if (W <= weight) {
+      returnPoint = Point_3(X,Y,sin(x));
+      return returnPoint;
+    }
+  }
+  return returnPoint;
+}
 
 Point_3 torus_sample(float a, float c) {
   //rejection method sample on a torus; that is, reject anything without the appropriate weight
@@ -105,8 +127,6 @@ Point_3 torus_sample(float a, float c) {
   return Point_3(NULL,NULL,NULL);//filler point to check if we have sampled at all
 }
 
-//Point_3 sinplane_sample() {} ; once weight is defined, write as above
-
 std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
   //I use std::vectors of point_3 objects for positions, so we loop
   //to create a similar vector for n random positions
@@ -117,7 +137,13 @@ std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
   return sample_points;  
 }
 
-
+std::vector<Point_3> n_sinplane_sample_points(std::size_t n) {
+  std::vector<Point-3> sample_points = {};
+  for (std::size_t i=0; i < n; i++) {
+    sample_points.push_back(sinplane_sample());
+  }
+  return sample_points;
+}
 std::vector<Point_3> create_particles_from_xyz(std::string locations_file) {
   Point_set_3 locations;
   CGAL::IO::read_XYZ(locations_file,locations);
