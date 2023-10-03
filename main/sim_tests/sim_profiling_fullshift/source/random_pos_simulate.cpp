@@ -179,12 +179,11 @@ int main (int argc, char* argv[]) {
     return EXIT_FAILURE;
   }
 
-  const std::string loc_filename = (argc > 2) ? argv[2] : CGAL::data_file_path("sims_project/default_pos.xyz");
-  //it would be nice to be able to either feed in a locations file name or a # of sample points n for below
-  //std::vector<Point_3> torus_sample = n_torus_sample_points(n, 1, 3);
+  //take particle number as input 
+  const int n = (argc > 2) ? argv[2] : 10;
+  std::vector<Point_3> particle_locations = n_torus_sample_points(n, 1, 3);
 
   //have defaults for both loading functionalities below
-  std::vector<Point_3> particle_locations = create_particles_from_xyz(loc_filename);
   std::cout << "Original locations:" << std::endl;
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
