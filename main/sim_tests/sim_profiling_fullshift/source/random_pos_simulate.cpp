@@ -111,9 +111,10 @@ std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
   //I use std::vectors of point_3 objects for positions, so we loop
   //to create a similar vector for n random positions
   std::vector<Point_3> sample_points = {};
-  for (std::size_t i; i < n; i++) {
+  for (std::size_t i=0; i < n; i++) {
     sample_points.push_back(torus_sample(a,c));
-  }	  
+  }
+  return sample_points;  
 }
 
 
@@ -157,12 +158,13 @@ std::vector<std::pair<Point_3,std::vector<Point_3>>> get_neighbors(std::vector<P
 }
 
 
-std::chrono::milliseconds averageTime(std::vector<std::chrono::milliseconds> times) {
-  std::chrono::milliseconds sum;
-  int n=0;
+float averageTime(std::vector<std::chrono::milliseconds> times,std::size_t timesteps) {
+  int sum = 0;
+  float n=0.0;
   for (std::chrono::milliseconds element: times) {
-    sum += element;
-    n+=1;
+    sum += element.count();
+    n+= 1.0/timesteps; //scaled as the length of 1 millisecond relative to a second 
+            //(n+=1 would be adding a second to the division instead of a millisecond)
   }
 
   return sum/n;
@@ -179,87 +181,69 @@ int main (int argc, char* argv[]) {
     return EXIT_FAILURE;
   }
 
-  //take particle number as input 
-  const int n = (argc > 2) ? argv[2] : 10;
-  std::vector<Point_3> particle_locations = n_torus_sample_points(n, 1, 3);
+  std::size_t timesteps = 10;
+  double      stepsize  =.001;
+  double  neighbor_cutoff = 8;
+  std::size_t n_simulations = 50;
 
-  //have defaults for both loading functionalities below
-  std::cout << "Original locations:" << std::endl;
-  for (Point_3 location: particle_locations) std::cout << location << std::endl;
- 
-  //simulation time parameters -- too-large step sizes can break shift!
-  std::size_t timesteps = 100; //hard defining this now rather than input-defining to avoid extra debugging 
-  double      stepsize = .01; //slightly larger stepsize so it's more likely we run into weird scenarios
-
-  //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
+  std::size_t num_particles;
+  std::vector<Point_3> particle_locations;
   std::vector<Point_3> location_buffer;
-  std::cout << "Running simulation with " << particle_locations.size() << " particles and " << timesteps << " timesteps." << std::endl;
-  std::cout << "Timestep size " << stepsize << std::endl;
-  double neighbor_cutoff = 5;
-  std::vector<std::pair<Point_3,std::vector<Point_3>>> particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
+  std::vector<std::chrono::milliseconds> timestep_costs;
+  std::vector<std::pair<Point_3,std::vector<Point_3>>> particles_with_neighbors;
   std::pair<Point_3,std::vector<Point_3>> particle_and_neighbors;
+  std::chrono::steady_clock::time_point sim_start;
+  std::chrono::steady_clock::time_point sim_end;
+  std::chrono::steady_clock::time_point timestep_start;
+  std::chrono::steady_clock::time_point timestep_end;
   Vector_3 f_on_p;
-  
-  //write trajectory data to file
-  const std::string trajectory_filename = "positions.txt";
-  std::ofstream trajectory_file(trajectory_filename);
-  if (trajectory_file.is_open()){
-    trajectory_file << particle_locations.size();
-    trajectory_file << "\n";
-  }
 
+  const std::string times_filename = "torus_times.txt";
+  std::ofstream times_file(times_filename);
+  std::cout << "Making simulations, timestep size " << stepsize << " for " << timesteps << "timesteps." <<  std::endl;
+  
+  for (std::size_t iter = 0; iter < n_simulations; iter++) {
+    std::cout << "run number: " << iter << std::endl;
+    num_particles = 2+iter*4;  
+    particle_locations = n_torus_sample_points(num_particles, 1, 3);
 
-  std::chrono::steady_clock::time_point end_time = std::chrono::steady_clock::now();
-  
-  std::cout << "Time taken for setup: " << std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count() << "ms" << std::endl;
-  
-  std::vector<std::chrono::milliseconds> forceTimes = {};
-  std::vector<std::chrono::milliseconds> shiftTimes = {};
-  std::chrono::steady_clock::time_point sim_start = std::chrono::steady_clock::now();
-  //main simulation loop
-  for (std::size_t j = 0; j < timesteps; j++) {
-    std::cout << "timestep " << j << " locations: " << std::endl;
-    for (Point_3 location: particle_locations) std::cout << location << std::endl;
+    //std::cout << "printing locations: " << std::endl;
+    //for (Point_3 location: particle_locations) std::cout << "(" <<location << ")"  << std::endl;
+
     particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
+  
+    sim_start = std::chrono::steady_clock::now();
+    //main simulation loop
+    for (std::size_t j = 0; j < timesteps; j++) {
+      
+      timestep_start = std::chrono::steady_clock::now();
+      particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
     
-    //find forces and do shift
-    for (std::size_t i = 0; i < particle_locations.size();i++) {
-      particle_and_neighbors = particles_with_neighbors[i];
-      //std::cout << "current particle: " <<particle_and_neighbors.first << std::endl;
-      auto f_start = std::chrono::high_resolution_clock::now();
-      f_on_p = force_on_source(mesh,particle_and_neighbors.first,particle_and_neighbors.second,
+      //find forces and do shift
+      for (std::size_t i = 0; i < particle_locations.size();i++) {
+        particle_and_neighbors = particles_with_neighbors[i];
+        f_on_p = force_on_source(mesh,particle_and_neighbors.first,particle_and_neighbors.second,
 		    particle_and_neighbors.second.size()); 
-      auto f_end = std::chrono::high_resolution_clock::now();
-      auto forcetime = std::chrono::duration_cast<std::chrono::milliseconds>(f_end - f_start);; 
-      forceTimes.push_back(forcetime);
-
-
-      auto s_start = std::chrono::high_resolution_clock::now(); 
-      //std::cout << "The force on the particle at " << particle_and_neighbors.first << " is " << f_on_p << std::endl; 
-      location_buffer.push_back(shift(mesh, particle_and_neighbors.first, stepsize*f_on_p));
-      auto s_end   = std::chrono::high_resolution_clock::now(); 
-      std::chrono::duration<long, std::milli> shifttime =  std::chrono::duration_cast<std::chrono::milliseconds>(s_end-s_start);
-      shiftTimes.push_back(shifttime);
-
+        location_buffer.push_back(shift(mesh, particle_and_neighbors.first, stepsize*f_on_p));
+      }
+      //location buffer housekeeping
+      particle_locations.clear();
+      for (Point_3 location: location_buffer) {
+        particle_locations.push_back(location);
+      }
+      location_buffer.clear();
+      timestep_end = std::chrono::steady_clock::now();
+      // std::cout << "Timestep cost: " << std::chrono::duration_cast<std::chrono::milliseconds>(timestep_end-timestep_start).count() << "ms" << std::endl; 
+      timestep_costs.push_back(std::chrono::duration_cast<std::chrono::milliseconds>(timestep_end-timestep_start));  
     }
-    //location buffer housekeeping
-    particle_locations.clear();
-    
-    for (Point_3 location: location_buffer) {
-      particle_locations.push_back(location);
-      trajectory_file << location;
-      trajectory_file << "\n"; 
-    }
-    location_buffer.clear();
-    trajectory_file << "\n";
+       
+    sim_end = std::chrono::steady_clock::now();
+
+    std::cout << "Time taken for simulation with "<< num_particles << " particles: " << std::chrono::duration_cast<std::chrono::milliseconds>(sim_end - sim_start).count() << "ms" << std::endl;
+    std::cout << "Average time taken per timestep: " << averageTime(timestep_costs,timesteps)/timesteps << "ms" <<  std::endl;
+    times_file << num_particles << ", " << averageTime(timestep_costs,timesteps)/timesteps << std::endl;
+    timestep_costs.clear();
   }
-  trajectory_file.close();
-  for (Point_3 location: particle_locations) std::cout << location << std::endl;
-  std::chrono::steady_clock::time_point sim_end = std::chrono::steady_clock::now();
-  std::cout << "Time taken for simulation: " << std::chrono::duration_cast<std::chrono::milliseconds>(sim_end - sim_start).count() << "ms" << std::endl;
-  std::cout << "Time for force calculation: " << averageTime(forceTimes).count() << "ms" << std::endl;
-  std::cout << "Time for shift calculation: " << averageTime(shiftTimes).count() << "ms" << std::endl;
-
 
   return 0;
 }

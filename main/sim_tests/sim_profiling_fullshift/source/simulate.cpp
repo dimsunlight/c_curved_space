@@ -113,7 +113,8 @@ std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
   std::vector<Point_3> sample_points = {};
   for (std::size_t i; i < n; i++) {
     sample_points.push_back(torus_sample(a,c));
-  }	  
+  }
+  return sample_points;  
 }
 
 
