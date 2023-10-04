@@ -65,6 +65,7 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
     std::cout << "calculating shortest distance" << std::endl;
     distances.push_back(std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)));
+    std::cout << "distance calculated." << std::endl;
     //path goes from target to source -- so if we want to know path tangent at 
     //source for force calculation, we must use the *end* of points[]
     tangents.push_back(Vector_3(points[points.size()-2],points[points.size()-1]));

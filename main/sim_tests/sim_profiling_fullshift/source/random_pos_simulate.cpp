@@ -77,7 +77,7 @@ float random_in_range(float range_min, float range_max)
 }
 
 float sinplane_weight(float x, float y) {
-  return 1/sqrt(1+cos(x)*cos(x));
+  return 1/sqrt(1+cos(x)*cos(x)/4.0 + cos(y)*cos(y)/4.0);
 }
 
 float torus_weight(float a, float c, float u, float v) {
@@ -86,7 +86,6 @@ float torus_weight(float a, float c, float u, float v) {
   return (c+a*cos(v))/(c+a);
 }
 
-//float sinplane_weight --- look up what differential geometric aspects are needed for rejections ampling
 Point_3 sinplane_sample() {
   float X;
   float Y;
@@ -99,7 +98,7 @@ Point_3 sinplane_sample() {
     W = random_in_range(0,1.0);
     weight = sinplane_weight(X,Y);
     if (W <= weight) {
-      returnPoint = Point_3(X,Y,sin(x));
+      returnPoint = Point_3(X,Y,sin(X));
       return returnPoint;
     }
   }
@@ -138,7 +137,7 @@ std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
 }
 
 std::vector<Point_3> n_sinplane_sample_points(std::size_t n) {
-  std::vector<Point-3> sample_points = {};
+  std::vector<Point_3> sample_points = {};
   for (std::size_t i=0; i < n; i++) {
     sample_points.push_back(sinplane_sample());
   }
