@@ -100,7 +100,7 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = .8;
+  double sigma = .05;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   

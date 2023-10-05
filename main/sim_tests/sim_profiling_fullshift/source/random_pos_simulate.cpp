@@ -114,8 +114,9 @@ Point_3 torus_sample(float a, float c, int seed) {
   float W;
   float weight;
   Point_3 returnPoint = Point_3(NULL,NULL,NULL);
-  int seedChanger = 0; //modifies the seed to avoid infinite loops with no sample
-  		       //without sacrificing repeatability
+  int seedChanger = 1000; //modifies the seed to avoid infinite loops with no sample
+  		          //without sacrificing repeatability. 1000 so we avoid (though not completely) 
+			  //accidentally resampling the same point later on 
   while (returnPoint == Point_3(NULL,NULL,NULL)) {
     U = random_in_range(0.0, 2*M_PI, seed+seedChanger);
     V = random_in_range(0.0, 2*M_PI, seed+seedChanger);
@@ -150,6 +151,7 @@ std::vector<Point_3> n_sinplane_sample_points(std::size_t n) {
   }
   return sample_points;
 }
+
 std::vector<Point_3> create_particles_from_xyz(std::string locations_file) {
   Point_set_3 locations;
   CGAL::IO::read_XYZ(locations_file,locations);
