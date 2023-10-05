@@ -66,11 +66,13 @@ float distBetween(Point_3 point1,Point_3 point2) {
 }
 
 
-float random_in_range(float range_min, float range_max)
+float random_in_range(float range_min, float range_max, int seed)
 {
-  //uses mersenne twister to get a random real #
+  //uses mersenne twister to get a random real # 
+
   std::random_device                   rand_dev;
   std::mt19937                         generator(rand_dev());
+  generator.seed(seed); //seeded for reproducibility -- make sure we use the same sequence every time :)  
   std::uniform_real_distribution<float>  distr(range_min, range_max);
 
   return distr(generator);
@@ -86,16 +88,16 @@ float torus_weight(float a, float c, float u, float v) {
   return (c+a*cos(v))/(c+a);
 }
 
-Point_3 sinplane_sample() {
+Point_3 sinplane_sample(int seed) {
   float X;
   float Y;
   float W;
   float weight;
   Point_3 returnPoint = Point_3(NULL,NULL,NULL);
   while (returnPoint == Point_3(NULL,NULL,NULL)) {
-    X = random_in_range(-1.0,1.0);
-    Y = random_in_range(-1.0,1.0);
-    W = random_in_range(0,1.0);
+    X = random_in_range(-1.0,1.0,seed);
+    Y = random_in_range(-1.0,1.0,seed);
+    W = random_in_range(0,1.0,seed);
     weight = sinplane_weight(X,Y);
     if (W <= weight) {
       returnPoint = Point_3(X,Y,sin(X));
@@ -105,22 +107,25 @@ Point_3 sinplane_sample() {
   return returnPoint;
 }
 
-Point_3 torus_sample(float a, float c) {
+Point_3 torus_sample(float a, float c, int seed) {
   //rejection method sample on a torus; that is, reject anything without the appropriate weight
   float U;
   float V;
   float W;
   float weight;
   Point_3 returnPoint = Point_3(NULL,NULL,NULL);
+  int seedChanger = 0; //modifies the seed to avoid infinite loops with no sample
+  		       //without sacrificing repeatability
   while (returnPoint == Point_3(NULL,NULL,NULL)) {
-    U = random_in_range(0.0, 2*M_PI);
-    V = random_in_range(0.0, 2*M_PI);
-    W = random_in_range(0.0, 1.0);
+    U = random_in_range(0.0, 2*M_PI, seed+seedChanger);
+    V = random_in_range(0.0, 2*M_PI, seed+seedChanger);
+    W = random_in_range(0.0, 1.0, seed+seedChanger);
     weight = torus_weight(a,c,U,V);
     if (W <= weight) {
       returnPoint = Point_3((c+a*cos(V))*cos(U), (c+a*cos(V))*sin(U), a*sin(V));
       return returnPoint;
     }
+    seedChanger++;
   }
   //this should never happen, but just to avoid false error messages
   return Point_3(NULL,NULL,NULL);//filler point to check if we have sampled at all
@@ -130,16 +135,18 @@ std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
   //I use std::vectors of point_3 objects for positions, so we loop
   //to create a similar vector for n random positions
   std::vector<Point_3> sample_points = {};
+  int seedStart = 1997;
   for (std::size_t i=0; i < n; i++) {
-    sample_points.push_back(torus_sample(a,c));
+    sample_points.push_back(torus_sample(a,c, seedStart+i));
   }
   return sample_points;  
 }
 
 std::vector<Point_3> n_sinplane_sample_points(std::size_t n) {
   std::vector<Point_3> sample_points = {};
+  int seedStart = 1997;
   for (std::size_t i=0; i < n; i++) {
-    sample_points.push_back(sinplane_sample());
+    sample_points.push_back(sinplane_sample(seedStart+i));
   }
   return sample_points;
 }
