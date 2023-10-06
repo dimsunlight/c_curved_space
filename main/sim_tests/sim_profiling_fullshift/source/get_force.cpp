@@ -61,11 +61,11 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
   for (std::size_t i = 0; i < num_targets; i++) {
     std::cout << "iteration point " << i+1 << ", at position " << targets[i] <<  "; calling locate" << std::endl;
     Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
-    std::cout << "target loc elements: " << target_loc.first << "--" << target_loc.second[0] << " " << target_loc.second[1] << " " << target_loc.second[2] << std::endl;
+    //std::cout << "target loc elements: " << target_loc.first << "--" << target_loc.second[0] << " " << target_loc.second[1] << " " << target_loc.second[2] << std::endl;
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
-    std::cout << "calculating shortest distance" << std::endl;
+    //std::cout << "calculating shortest distance" << std::endl;
     distances.push_back(std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)));
-    std::cout << "distance calculated." << std::endl;
+    //std::cout << "distance calculated." << std::endl;
     //path goes from target to source -- so if we want to know path tangent at 
     //source for force calculation, we must use the *end* of points[]
     tangents.push_back(Vector_3(points[points.size()-2],points[points.size()-1]));
@@ -100,7 +100,7 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = .05;
+  double sigma = .02;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   

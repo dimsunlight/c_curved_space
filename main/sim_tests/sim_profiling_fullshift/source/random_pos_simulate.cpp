@@ -215,7 +215,7 @@ int main (int argc, char* argv[]) {
     return EXIT_FAILURE;
   }
 
-  std::size_t timesteps = 10;
+  std::size_t timesteps = 50;
   double      stepsize  =.001;
   double  neighbor_cutoff = 8;
   std::size_t n_simulations = 50;
@@ -235,17 +235,26 @@ int main (int argc, char* argv[]) {
   const std::string times_filename = "torus_times.txt";
   std::ofstream times_file(times_filename);
   std::cout << "Making simulations, timestep size " << stepsize << " for " << timesteps << "timesteps." <<  std::endl;
-  
+  /*
   for (std::size_t iter = 0; iter < n_simulations; iter++) {
     std::cout << "run number: " << iter << std::endl;
     num_particles = 2+iter*4;  
     particle_locations = n_torus_sample_points(num_particles, 1, 3);
-
+  */
     //std::cout << "printing locations: " << std::endl;
     //for (Point_3 location: particle_locations) std::cout << "(" <<location << ")"  << std::endl;
-
+    num_particles = 198;
+    particle_locations = n_torus_sample_points(num_particles,1,3);
+    const std::string trajectory_filename = "random_position_trajectory.txt";
+    std::ofstream trajectory_file(trajectory_filename);
+    if (trajectory_file.is_open()){
+      trajectory_file << particle_locations.size();
+      trajectory_file << "\n";
+    }
     particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
-  
+    //for evaluating the evolution of a SPECIFIC particle number (comment out loop)
+    
+
     sim_start = std::chrono::steady_clock::now();
     //main simulation loop
     for (std::size_t j = 0; j < timesteps; j++) {
@@ -264,20 +273,23 @@ int main (int argc, char* argv[]) {
       particle_locations.clear();
       for (Point_3 location: location_buffer) {
         particle_locations.push_back(location);
+	trajectory_file << location;
+	trajectory_file << "\n";
       }
       location_buffer.clear();
+      trajectory_file << "\n";
       timestep_end = std::chrono::steady_clock::now();
       // std::cout << "Timestep cost: " << std::chrono::duration_cast<std::chrono::milliseconds>(timestep_end-timestep_start).count() << "ms" << std::endl; 
       timestep_costs.push_back(std::chrono::duration_cast<std::chrono::milliseconds>(timestep_end-timestep_start));  
     }
-       
+    trajectory_file.close();   
     sim_end = std::chrono::steady_clock::now();
 
     std::cout << "Time taken for simulation with "<< num_particles << " particles: " << std::chrono::duration_cast<std::chrono::milliseconds>(sim_end - sim_start).count() << "ms" << std::endl;
     std::cout << "Average time taken per timestep: " << averageTime(timestep_costs,timesteps)/timesteps << "ms" <<  std::endl;
     times_file << num_particles << ", " << averageTime(timestep_costs,timesteps)/timesteps << std::endl;
     timestep_costs.clear();
-  }
+  //}
 
   return 0;
 }
