@@ -260,6 +260,17 @@ Vector_3 reduceMove(Vector_3 moveVector, double reduceLengthBy) {
   return reducedMove;
 }
 
+Point_3 project_to_face(std::vector<Point_3> vertices, Point_3 query) {
+  Point_3 projectedQuery;
+  Vector_3 side1, side2, normal, toQuery;
+  side1 = Vector_3(vertices[0],vertices[1]);
+  side2 = Vector_3(vertices[0],vertices[2]);
+  normal = CGAL::cross_product(side1, side2); //don't need to worry about direction due to dot
+  toQuery = Vector_3(vertices[0], query);
+  projectedQuery = vertices[0] + (toQuery-CGAL::scalar_product(toQuery,normal)*normal);
+  return projectedQuery;
+}
+
 Vector_3 projectMoveDown(Point_3 source, Vector_3 targetFaceNormal, Vector_3 moveDirection, double remainingDistance) {
   //takes as input a source point, face normal, movement direction vector, and distance left to travel,
   //and returns a new movement vector from the source point along the surface of the current face. 
@@ -272,17 +283,6 @@ double triangle_area(Point_3 v1, Point_3 v2, Point_3 v3) {
   Vector_3 side1 = Vector_3(v1, v2);
   Vector_3 side2 = Vector_3(v1, v3);
   return vectorMagnitude(CGAL::cross_product(side1,side2))/2;
-}
-
-Point_3 project_to_face(std::vector<Point_3> vertices, Point_3 query) {
-  Point_3 projectedQuery;
-  Vector_3 side1, side2, normal, toQuery;
-  side1 = Vector_3(vertices[0],vertices[1]);
-  side2 = Vector_3(vertices[0],vertices[2]);
-  normal = CGAL::cross_product(side1, side2); //don't need to worry about direction due to dot
-  toQuery = Vector_3(vertices[0], query);
-  projectedQuery = vertices[0] + (toQuery-CGAL::scalar_product(toQuery,normal)*normal);
-  return projectedQuery;
 }
 
 
@@ -335,10 +335,15 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   face_descriptor currentSourceFace = sourceLocation.first;
   //initializations
   std::vector<Point_3> vertexList;
+  std::vector<Point_3> targetVertices;
+  std::vector<Point_3> sharedEdge;
+  std::vector<Point_3> forRotation;
+  Point_3 target; 
   std::vector<Segment_3> edgesList; 
   face_descriptor currentTargetFace;
   Vector_3 currentTargetFaceNormal;
   double lengthToSharedElement;
+  double rotationAngle; 
   std::vector<face_descriptor> faceIndexList; //store face indices here so we know where to look later
 
   //useful items for loop w/definition
@@ -364,13 +369,24 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     current_move = reduceMove(current_move, lengthToSharedElement);         //decrease move size by length to intersected vertex/edge --
                                                                             //effectively the step where we "walk" to that intersection
 
+    target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
     currentTargetFace = getTargetFace(source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
 
     source_point = intersection_point;//update source to be the most recent intersection point, as we have finished walking there
 
     currentTargetFaceNormal = PMP::compute_face_normal(currentTargetFace,mesh);
 
-    current_move = projectMoveDown(source_point, currentTargetFaceNormal, normalizer(current_move), vectorMagnitude(current_move)); //bend the path we are about to walk into the plane of the current face
+    //old: current_move = projectMoveDown(source_point, currentTargetFaceNormal, normalizer(current_move), vectorMagnitude(current_move)); //bend the path we are about to walk into the plane of the current face
+
+    //determine axis as the edge we pass through
+    //housekeeping task: clean this sequence up into a subordinate function to reduce number of defines above
+    targetVertices = getVertexPositions(mesh, currentTargetFace);
+    sharedEdge = getSharedElements(vertexList, targetVertices);
+    forRotation = {target}; //setting up a vector for rotateAboutAxis, just housekeeping
+    rotationAngle = angleBetween(currentSourceFace,currentTargetFace, mesh); 
+    target = rotateAboutAxis(forRotation,sharedEdge,rotationAngle)[0]; //replace "placeholder" target with real new move endpoint
+
+    current_move = Vector_3(source_point, target);//source is now intersection
 
     currentSourceFace = currentTargetFace;
   }
@@ -381,4 +397,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   return fTarget; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
 
 }
+
+
 

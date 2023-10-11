@@ -66,6 +66,13 @@ float distBetween(Point_3 point1,Point_3 point2) {
 }
 
 
+auto vmOther(Vector_3 v)
+{
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  return CGAL::approximate_sqrt(slen);
+}
+
+
 float random_in_range(float range_min, float range_max, int seed)
 {
   //uses mersenne twister to get a random real # 
@@ -114,13 +121,12 @@ Point_3 torus_sample(float a, float c, int seed) {
   float W;
   float weight;
   Point_3 returnPoint = Point_3(NULL,NULL,NULL);
-  int seedChanger = 1000; //modifies the seed to avoid infinite loops with no sample
-  		          //without sacrificing repeatability. 1000 so we avoid (though not completely) 
-			  //accidentally resampling the same point later on 
+  int seedChanger = 11; //modifies the seed to avoid infinite loops with no sample
+  		        //without sacrificing repeatability. 
   while (returnPoint == Point_3(NULL,NULL,NULL)) {
-    U = random_in_range(0.0, 2*M_PI, seed+seedChanger);
-    V = random_in_range(0.0, 2*M_PI, seed+seedChanger);
-    W = random_in_range(0.0, 1.0, seed+seedChanger);
+    U = random_in_range(0.0, 2*M_PI, seed*seedChanger);
+    V = random_in_range(0.0, 2*M_PI, seed*seedChanger);
+    W = random_in_range(0.0, 1.0, seed*seedChanger);
     weight = torus_weight(a,c,U,V);
     if (W <= weight) {
       returnPoint = Point_3((c+a*cos(V))*cos(U), (c+a*cos(V))*sin(U), a*sin(V));
@@ -231,6 +237,7 @@ int main (int argc, char* argv[]) {
   std::chrono::steady_clock::time_point timestep_start;
   std::chrono::steady_clock::time_point timestep_end;
   Vector_3 f_on_p;
+  std::vector<double> forceMagnitudes; 
 
   const std::string times_filename = "torus_times.txt";
   std::ofstream times_file(times_filename);
@@ -266,7 +273,8 @@ int main (int argc, char* argv[]) {
       for (std::size_t i = 0; i < particle_locations.size();i++) {
         particle_and_neighbors = particles_with_neighbors[i];
         f_on_p = force_on_source(mesh,particle_and_neighbors.first,particle_and_neighbors.second,
-		    particle_and_neighbors.second.size()); 
+		    particle_and_neighbors.second.size());
+        forceMagnitudes.push_back(vmOther(f_on_p));	
         location_buffer.push_back(shift(mesh, particle_and_neighbors.first, stepsize*f_on_p));
       }
       //location buffer housekeeping
@@ -289,6 +297,9 @@ int main (int argc, char* argv[]) {
     std::cout << "Average time taken per timestep: " << averageTime(timestep_costs,timesteps)/timesteps << "ms" <<  std::endl;
     times_file << num_particles << ", " << averageTime(timestep_costs,timesteps)/timesteps << std::endl;
     timestep_costs.clear();
+    std::cout << "outputting force magnitudes from simulation." << std::endl;
+    for (double item: forceMagnitudes) std::cout << item << ", ";
+
   //}
 
   return 0;

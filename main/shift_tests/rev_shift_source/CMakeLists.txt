@@ -37,10 +37,13 @@ endif()
 # ############################
 add_executable( new_shift u_shift.cpp)
 add_executable( pathbend_shift pathbend_shift.cpp)
+add_executable( rot_shift rot_shift.cpp) 
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS new_shift )
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS new_shift)
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS pathbend_shift)
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS rot_shift)
 
 # Link the executable to CGAL and third-party libraries
 target_link_libraries(new_shift PRIVATE CGAL::CGAL ) 
 target_link_libraries(pathbend_shift PRIVATE CGAL::CGAL ) 
+target_link_libraries(rot_shift PRIVATE CGAL::CGAL ) 

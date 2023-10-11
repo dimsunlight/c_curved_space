@@ -369,7 +369,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   std::ofstream vertices_file(vertices_filename);
   
   while(intersection){
-    std::cout << "" <<std::endl;
     counter += 1;
     std::cout << "" << std::endl;
     std::cout << "ITERATION: " << counter << std::endl;

@@ -1,24 +1,16 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp" "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles/random_simulate.dir/get_force.cpp.o"
-  "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/random_pos_simulate.cpp" "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles/random_simulate.dir/random_pos_simulate.cpp.o"
-  "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/shift.cpp" "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles/random_simulate.dir/shift.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "BOOST_ALL_NO_LIB"
-  "CGAL_USE_GMPXX=1"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/twebb8/projects/cgal/CGAL-5.6/include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/toler/projects/CGAL_curvature/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp" "CMakeFiles/random_simulate.dir/get_force.cpp.o" "gcc" "CMakeFiles/random_simulate.dir/get_force.cpp.o.d"
+  "/home/toler/projects/CGAL_curvature/main/sim_tests/sim_profiling_fullshift/source/random_pos_simulate.cpp" "CMakeFiles/random_simulate.dir/random_pos_simulate.cpp.o" "gcc" "CMakeFiles/random_simulate.dir/random_pos_simulate.cpp.o.d"
+  "/home/toler/projects/CGAL_curvature/main/sim_tests/sim_profiling_fullshift/source/shift.cpp" "CMakeFiles/random_simulate.dir/shift.cpp.o" "gcc" "CMakeFiles/random_simulate.dir/shift.cpp.o.d"
   )
 
 # Targets to which this target links.

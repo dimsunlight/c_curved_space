@@ -42,6 +42,11 @@ auto normalize(Vector_3 v)
   return v / d;
 }
 
+auto vectorMag(Vector_3 v) 
+{
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  return CGAL::approximate_sqrt(slen);
+}
 
 //primary functions
 std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
@@ -100,14 +105,14 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = .02;
+  double sigma = .0002;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   
   for (std::size_t i = 0; i < distances.size(); i++) {
     force+= forceFunction(distances[i],tangents[i], epsilon, sigma);    
   } 
-
+  std::cout << "Calculated force magnitude is " << vectorMag(force) << std::endl; 
   return force;
 }
 

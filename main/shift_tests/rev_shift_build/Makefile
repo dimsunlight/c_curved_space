@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named rot_shift
+
+# Build rule for target.
+rot_shift: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rot_shift
+.PHONY : rot_shift
+
+# fast build rule for target.
+rot_shift/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rot_shift.dir/build.make CMakeFiles/rot_shift.dir/build
+.PHONY : rot_shift/fast
+
+#=============================================================================
 # Target rules for targets named pathbend_shift
 
 # Build rule for target.
@@ -166,6 +179,30 @@ pathbend_shift.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pathbend_shift.dir/build.make CMakeFiles/pathbend_shift.dir/pathbend_shift.cpp.s
 .PHONY : pathbend_shift.cpp.s
 
+rot_shift.o: rot_shift.cpp.o
+.PHONY : rot_shift.o
+
+# target to build an object file
+rot_shift.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rot_shift.dir/build.make CMakeFiles/rot_shift.dir/rot_shift.cpp.o
+.PHONY : rot_shift.cpp.o
+
+rot_shift.i: rot_shift.cpp.i
+.PHONY : rot_shift.i
+
+# target to preprocess a source file
+rot_shift.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rot_shift.dir/build.make CMakeFiles/rot_shift.dir/rot_shift.cpp.i
+.PHONY : rot_shift.cpp.i
+
+rot_shift.s: rot_shift.cpp.s
+.PHONY : rot_shift.s
+
+# target to generate assembly for a file
+rot_shift.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rot_shift.dir/build.make CMakeFiles/rot_shift.dir/rot_shift.cpp.s
+.PHONY : rot_shift.cpp.s
+
 u_shift.o: u_shift.cpp.o
 .PHONY : u_shift.o
 
@@ -200,9 +237,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... new_shift"
 	@echo "... pathbend_shift"
+	@echo "... rot_shift"
 	@echo "... pathbend_shift.o"
 	@echo "... pathbend_shift.i"
 	@echo "... pathbend_shift.s"
+	@echo "... rot_shift.o"
+	@echo "... rot_shift.i"
+	@echo "... rot_shift.s"
 	@echo "... u_shift.o"
 	@echo "... u_shift.i"
 	@echo "... u_shift.s"
