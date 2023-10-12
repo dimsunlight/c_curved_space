@@ -221,7 +221,7 @@ int main (int argc, char* argv[]) {
     return EXIT_FAILURE;
   }
 
-  std::size_t timesteps = 50;
+  std::size_t timesteps = 2;
   double      stepsize  =.001;
   double  neighbor_cutoff = 8;
   std::size_t n_simulations = 50;

@@ -306,11 +306,13 @@ Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vect
   if (toIntersect < tol) toIntersect = 2;
 
   //min function with a max of 1. if we don't find something less than 1, no intersection.  
-
+  std::cout << "printing intersection values " << std::endl;
   for(double val: intersection_values) {
+    std::cout << val << std::endl;
     if (val < toIntersect and val > tol) toIntersect = val;
+    
   }
-  
+   
   if (toIntersect < 1 and toIntersect > tol) {
     Point_3 min_intersection;
     min_intersection = Point_3(b11,b12,b13);
@@ -362,6 +364,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     std::cout << "ITERATION: " << counter << std::endl;
     std::cout << "current source face is " << currentSourceFace << std::endl;
     vertexList = getVertexPositions(mesh,currentSourceFace);
+    std::cout << "vertices " << vertexList[0] << ", " << vertexList[1] << ", " << vertexList[2] << std::endl;
     edgesList = createEdgeSegments(vertexList);
     //may need to add a check to see if we're going through a vertex later when finding target face 
 
@@ -373,11 +376,14 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
       for (Point_3 vert: vertexList) vertices_file << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}" << "\n";
       vertices_file << "\n";
     }
-
+    std::cout << "current current_move vector is " << current_move << std::endl;
     Point_3 intersection_point = find_intersection_baryroutine(source_point, source_point+current_move, vertexList); 
 
     if (intersection_point == Point_3(1000,1000,1000)) {
       intersection = false;
+      
+      std::cout << "no intersection, breaking loop" << std::endl;
+      std::cout << "current source " << source_point << std::endl;
       break; 
     }
 
@@ -385,7 +391,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     double lengthToSharedElement = vectorMagnitude(vector_to_intersection); //how far we've traveled
     current_move = reduceMove(current_move, lengthToSharedElement);         //decrease move size by length to intersected vertex/edge --
                                                                             //effectively the step where we "walk" to that intersection
-
+    std::cout << "pre rotation vector magnitude " << vectorMagnitude(current_move) << std::endl;
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
     currentTargetFace = getTargetFace(source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
 
@@ -400,11 +406,14 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     targetVertices = getVertexPositions(mesh, currentTargetFace);
     sharedEdge = getSharedElements(vertexList, targetVertices);
     forRotation = {target}; //setting up a vector for rotateAboutAxis, just housekeeping
-    rotationAngle = angleBetween(currentSourceFace,currentTargetFace, mesh); 
-    target = rotateAboutAxis(forRotation,sharedEdge,rotationAngle)[0]; //replace "placeholder" target with real new move endpoint
+    rotationAngle = angleBetween(currentSourceFace,currentTargetFace, mesh);
+    std::cout << "rotation angle: " << rotationAngle << std::endl; 
+    target = rotateAboutAxis(forRotation, sharedEdge, rotationAngle)[0]; //replace "placeholder" target with real new move endpoint
     std::cout << "rotated target to " << target << std::endl;
     current_move = Vector_3(source_point, target);//source is now intersection
-
+    //check length of current_move before and after rotation
+    std::cout << "post rotation move magnitude " << vectorMagnitude(current_move) << std::endl;
+    //
     currentSourceFace = currentTargetFace;
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 

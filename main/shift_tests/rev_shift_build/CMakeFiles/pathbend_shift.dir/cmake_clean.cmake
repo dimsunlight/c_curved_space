@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pathbend_shift.dir/pathbend_shift.cpp.o"
-  "CMakeFiles/pathbend_shift.dir/pathbend_shift.cpp.o.d"
   "pathbend_shift"
   "pathbend_shift.pdb"
 )
