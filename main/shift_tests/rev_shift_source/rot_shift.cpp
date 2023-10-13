@@ -138,6 +138,7 @@ double angleBetween(face_descriptor f1, face_descriptor f2, Triangle_mesh mesh) 
 
   FT oldDotNew = CGAL::scalar_product(oldNormal,newNormal);
   double angle = acos(oldDotNew);
+  std::cout << "angle between faces is " << angle << std::endl;
   //angle within expectations unit test 
   if (angle > 1) {
     std::cout << "Angle between normals over 1!" << std::endl;
@@ -346,6 +347,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   Vector_3 currentTargetFaceNormal;
   double lengthToSharedElement;
   double rotationAngle; 
+  double overlap;
   std::vector<face_descriptor> faceIndexList; //store face indices here so we know where to look later
 
   //useful items for loop w/definition
@@ -358,6 +360,12 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   std::ofstream intersections_file(intersections_filename);
   std::ofstream vertices_file(vertices_filename);
 
+  //assuming we've fed in a vector tangent to the source face, we can use
+  //its level of normal overlap as the baseline of normal overlap for rotations
+  Vector_3 sourceNormal = PMP::compute_face_normal(currentSourceFace,mesh); 
+  double baseAgreement = sourceNormal*move;
+  std::cout << "baseline normal overlap is " << baseAgreement <<std::endl;
+  
   while(intersection){
     counter += 1;
     std::cout << "" << std::endl;
@@ -406,14 +414,27 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     targetVertices = getVertexPositions(mesh, currentTargetFace);
     sharedEdge = getSharedElements(vertexList, targetVertices);
     forRotation = {target}; //setting up a vector for rotateAboutAxis, just housekeeping
-    rotationAngle = angleBetween(currentSourceFace,currentTargetFace, mesh);
+    rotationAngle = angleBetween(currentSourceFace, currentTargetFace, mesh);
     std::cout << "rotation angle: " << rotationAngle << std::endl; 
-    target = rotateAboutAxis(forRotation, sharedEdge, rotationAngle)[0]; //replace "placeholder" target with real new move endpoint
+   
+    target = rotateAboutAxis(forRotation, sharedEdge, rotationAngle)[0]; //replace "placeholder" target with real new move endpoint 
+    
     std::cout << "rotated target to " << target << std::endl;
+    //check that we've rotated in the right direction via overlap
     current_move = Vector_3(source_point, target);//source is now intersection
+    std::cout << "for rotation is: " << forRotation[0] << " which should not be the same as post rotation target. " << std::endl;
+    overlap = current_move*currentTargetFaceNormal;
+    if (overlap > baseAgreement+.01) {
+      std::cout << "reversing rotation angle!" << std::endl;
+      target = rotateAboutAxis(forRotation, sharedEdge, -rotationAngle)[0];
+      current_move = Vector_3(source_point, target);
+    }
+
     //check length of current_move before and after rotation
-    std::cout << "post rotation move magnitude " << vectorMagnitude(current_move) << std::endl;
-    //
+    std::cout << "post-rotation move magnitude " << vectorMagnitude(current_move) << std::endl;
+    std::cout << "overlap of current_move with target face normal: " << overlap  << std::endl;
+    
+
     currentSourceFace = currentTargetFace;
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 
