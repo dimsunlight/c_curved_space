@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rot_shift.dir/rot_shift.cpp.o"
+  "CMakeFiles/rot_shift.dir/rot_shift.cpp.o.d"
   "rot_shift"
   "rot_shift.pdb"
 )

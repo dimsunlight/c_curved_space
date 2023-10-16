@@ -138,7 +138,6 @@ double angleBetween(face_descriptor f1, face_descriptor f2, Triangle_mesh mesh) 
 
   FT oldDotNew = CGAL::scalar_product(oldNormal,newNormal);
   double angle = acos(oldDotNew);
-  std::cout << "angle between faces is " << angle << std::endl;
   //angle within expectations unit test 
   if (angle > 1) {
     std::cout << "Angle between normals over 1!" << std::endl;
@@ -156,8 +155,6 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
   for (Point_3 target: targets) {
     shiftedTargets.push_back(target - Vector_3({0,0,0}, axis[0]));
   }
-  std::cout << "targets shifted for rotation to " << std::endl;
-  for (Point_3 shiftedTarget: shiftedTargets) std::cout << shiftedTarget << std::endl;
 
   double u1 = axisVector.x(), u2 = axisVector.y(), u3=axisVector.z();
   
@@ -307,11 +304,8 @@ Point_3 find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vect
   if (toIntersect < tol) toIntersect = 2;
 
   //min function with a max of 1. if we don't find something less than 1, no intersection.  
-  std::cout << "printing intersection values " << std::endl;
   for(double val: intersection_values) {
-    std::cout << val << std::endl;
     if (val < toIntersect and val > tol) toIntersect = val;
-    
   }
    
   if (toIntersect < 1 and toIntersect > tol) {
@@ -342,6 +336,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   std::vector<Point_3> sharedEdge;
   std::vector<Point_3> forRotation;
   Point_3 target; 
+  Point_3 rotatedTarget;
   std::vector<Segment_3> edgesList; 
   face_descriptor currentTargetFace;
   Vector_3 currentTargetFaceNormal;
@@ -374,6 +369,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     vertexList = getVertexPositions(mesh,currentSourceFace);
     std::cout << "vertices " << vertexList[0] << ", " << vertexList[1] << ", " << vertexList[2] << std::endl;
     edgesList = createEdgeSegments(vertexList);
+    std::cout << "current source point is " << source_point << std::endl;
     //may need to add a check to see if we're going through a vertex later when finding target face 
 
     if (intersections_file.is_open()){
@@ -384,14 +380,13 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
       for (Point_3 vert: vertexList) vertices_file << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}" << "\n";
       vertices_file << "\n";
     }
-    std::cout << "current current_move vector is " << current_move << std::endl;
+    //std::cout << "current current_move vector is " << current_move << std::endl;
     Point_3 intersection_point = find_intersection_baryroutine(source_point, source_point+current_move, vertexList); 
 
     if (intersection_point == Point_3(1000,1000,1000)) {
       intersection = false;
       
       std::cout << "no intersection, breaking loop" << std::endl;
-      std::cout << "current source " << source_point << std::endl;
       break; 
     }
 
@@ -399,7 +394,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     double lengthToSharedElement = vectorMagnitude(vector_to_intersection); //how far we've traveled
     current_move = reduceMove(current_move, lengthToSharedElement);         //decrease move size by length to intersected vertex/edge --
                                                                             //effectively the step where we "walk" to that intersection
-    std::cout << "pre rotation vector magnitude " << vectorMagnitude(current_move) << std::endl;
+    //std::cout << "pre rotation vector magnitude " << vectorMagnitude(current_move) << std::endl;
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
     currentTargetFace = getTargetFace(source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
 
@@ -417,18 +412,22 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     rotationAngle = angleBetween(currentSourceFace, currentTargetFace, mesh);
     std::cout << "rotation angle: " << rotationAngle << std::endl; 
    
-    target = rotateAboutAxis(forRotation, sharedEdge, rotationAngle)[0]; //replace "placeholder" target with real new move endpoint 
-    
-    std::cout << "rotated target to " << target << std::endl;
+    std::vector<Point_3> rts = rotateAboutAxis(forRotation, sharedEdge, rotationAngle); //replace "placeholder" target with real new move endpoint 
+    std::cout << "rotated targets: " << std::endl;
+    for (Point_3 p: rts) std::cout << p << std::endl; 
+    rotatedTarget = rts[0]; 
+
+    std::cout << "rotated target to " << rotatedTarget << std::endl;
     //check that we've rotated in the right direction via overlap
-    current_move = Vector_3(source_point, target);//source is now intersection
+    current_move = Vector_3(source_point, rotatedTarget);//source is now intersection
     std::cout << "for rotation is: " << forRotation[0] << " which should not be the same as post rotation target. " << std::endl;
     overlap = current_move*currentTargetFaceNormal;
     if (overlap > baseAgreement+.01) {
       std::cout << "reversing rotation angle!" << std::endl;
-      target = rotateAboutAxis(forRotation, sharedEdge, -rotationAngle)[0];
+      rotatedTarget = rotateAboutAxis(forRotation, sharedEdge, -rotationAngle)[0];
       current_move = Vector_3(source_point, target);
     }
+    std::cout << "final target location " << rotatedTarget << std::endl;
 
     //check length of current_move before and after rotation
     std::cout << "post-rotation move magnitude " << vectorMagnitude(current_move) << std::endl;
