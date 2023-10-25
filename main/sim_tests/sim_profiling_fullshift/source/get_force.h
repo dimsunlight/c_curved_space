@@ -34,5 +34,6 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
 Vector_3 forceFunction (float dist, Vector_3 tangent, double epsilon, double sigma);
 Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets);
 
+
 #endif
 

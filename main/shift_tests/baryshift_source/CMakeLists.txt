@@ -21,4 +21,6 @@ if ( NOT Boost_FOUND )
 
 endif()
 
-create_single_source_cgal_program(baryshift.cpp)
+add_executable(baryshift full_baryshift.cpp utils.cpp)
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS baryshift) 
+target_link_libraries(baryshift PRIVATE CGAL::CGAL)
