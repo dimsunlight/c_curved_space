@@ -70,7 +70,7 @@ std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, face_descriptor fInd
 
   for(Triangle_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh))
   {
-    Triangle_mesh::Vertex_index vi = target(hi, mesh);
+    Triangle_mesh::Vertex_index vi = source(hi, mesh);
     vertices.push_back( mesh.point(vi)); //working with xyz points rather than indices --
                                          //don't need to alter base mesh, so points fine
   }
@@ -85,7 +85,7 @@ std::vector<Vertex_index> getVertexIndices(Triangle_mesh mesh, Face_index fIndex
 
   for(Halfedge_index hi : halfedges_around_face(hf, mesh))
   {
-    Vertex_index vi = target(hi, mesh);
+    Vertex_index vi = source(hi, mesh);
     vertices.push_back(vi);
   }
   
@@ -145,32 +145,43 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection_full(Triangle_mes
     int vertexIndicator = 0;
     std::vector<int> offVertices = {}; //indices of vertices with bary coordinate zero at the intersection
     //would use more economical "erase" for the below, but removing entries will mess up the indices if we have to erase twice
+    std::cout << "bary coordinates of intersection: " << std::endl;
     for (double b: newBaryCoords) {
+      std::cout << b << std::endl;
       if (b < tol) {
         offVertices.push_back(vertexIndicator);
       }
       vertexIndicator+=1;
     }
+    std::cout << std::endl;
 
     std::vector<Vertex_index> intersected = {};
+    bool flag = false;
     for (int i; i < vertexIndices.size(); i++) {
+
       for (int off: offVertices) {
-        if (i==off) continue;
+        if (i==off) flag = true;
       }
+      if (flag == true) {
+        flag = false;
+	continue;
+      }
+
       intersected.push_back(vertexIndices[i]);
     }
 
     Face_location newPosition = std::make_pair(sourceFace,newBaryCoords);
-    std::cout << "printing first cgal mesh.point() of intersection point, then manual reconstruction" << std::endl;
-    std::cout << PMP::construct_point(newPosition,mesh) << std::endl; 
+    Point_3 xyz_intersection = PMP::construct_point(newPosition,mesh);
+    /*
+    //manual reconstruction  
     Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + 
 	                        min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z()) +
 			       	min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); //construct point from definition of barycentric to xyz conversion
-    Point_3 intersection_Point_3 = Point_3(0,0,0) + xyz_intersection;
-    std::cout << intersection_Point_3 << std::endl;
-    std::cout << " " << std::endl;
+    */
+    std::cout << "intersection point " << std::endl;
+    std::cout << xyz_intersection << std::endl; 
 
-    return std::make_pair(intersection_Point_3,intersected); // this version returns the barycentric intersection point
+    return std::make_pair(xyz_intersection,intersected); // this version returns the barycentric intersection point
   }
   //if we don't have an intersection -- FIX CONDITIONALS LATER IN THE CODE
   else {

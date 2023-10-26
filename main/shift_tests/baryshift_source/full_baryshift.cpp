@@ -52,7 +52,7 @@ std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, Face_index fIndex) {
 
   for(Triangle_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh))
   {
-    Triangle_mesh::Vertex_index vi = target(hi, mesh);
+    Triangle_mesh::Vertex_index vi = source(hi, mesh);
     vertices.push_back( mesh.point(vi)); //working with xyz points rather than indices --
                                          //don't need to alter base mesh, so points fine
   }
@@ -67,7 +67,7 @@ std::vector<Vertex_index> getVertexIndices(Triangle_mesh mesh, Face_index fIndex
 
   for(Halfedge_index hi : halfedges_around_face(hf, mesh))
   {
-    Vertex_index vi = target(hi, mesh);
+    Vertex_index vi = source(hi, mesh);
     vertices.push_back(vi);
   }
   
@@ -89,7 +89,6 @@ Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vec
  Face_index provisional_target_face = mesh.face(intersected_edge);
  if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
  return provisional_target_face;
- 
 }
 
 std::vector<double> cramersRule(Point_3 a, Point_3 b, Point_3 c, Point_3 p) {
@@ -110,7 +109,7 @@ std::vector<double> cramersRule(Point_3 a, Point_3 b, Point_3 c, Point_3 p) {
   return baryCoords;
 }
 
-std::pair<Point_3,std::vector<Face_index>> find_intersection_baryroutine(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices) {
+std::pair<Point_3,std::vector<Vertex_index>> find_intersection_full(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices) {
   //use the barycentric coordinates of a point in order to determine the R3 coordinates of its intersection with an edge of the current face, if such an intersection exists.
   //takes only the r3 positions of the source and prospective target along with the vertices of the current face; intersection test exists independent of the mesh.
   
@@ -137,11 +136,11 @@ std::pair<Point_3,std::vector<Face_index>> find_intersection_baryroutine(Triangl
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = 0.0001; //checking for equivalence to zero
+  double tol = 0.0001; //checking for equivalence to zero within reasonable error
 
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 
-  iif (toIntersect < tol) toIntersect = 2;//just needs to be some # greater than 1. 
+  if (toIntersect < tol) toIntersect = 2;//just needs to be some # greater than 1. 
 
   //min function with a max of 1. if we don't find something less than 1, no intersection.  
   for(double val: intersection_values) {
@@ -150,6 +149,9 @@ std::pair<Point_3,std::vector<Face_index>> find_intersection_baryroutine(Triangl
   }
 
   std::cout << "toIntersect is " << toIntersect << std::endl;
+    
+  std::vector<Vertex_index> fillerVector = {}; //for null return later
+  
   if (toIntersect < 1 and toIntersect > tol) {
     Point_3 min_intersection;
     min_intersection = Point_3(b11,b12,b13);
@@ -159,42 +161,54 @@ std::pair<Point_3,std::vector<Face_index>> find_intersection_baryroutine(Triangl
     //off vertices tell us what vertices are *not* part of the intersected edge
     int vertexIndicator = 0;
     std::vector<int> offVertices = {}; //indices of vertices with bary coordinate zero at the intersection
-    //would use more economical "erase" for the below, but removing entries will mess up the indices if we have to erase twice
+    //would use more economical "erase" for the below, but removing entries will mess up the indices if we have to erase twice, 
+    //and we don't know a priori which index is being removed/in what order. 
+    std::cout << "bary coordinates of intersection: " << std::endl;
     for (double b: newBaryCoords) {
+      std::cout << b << std::endl;
       if (b < tol) {
         offVertices.push_back(vertexIndicator);
       }
       vertexIndicator+=1;
     }
+    std::cout << std::endl;
 
-    std::vector<Face_index> intersected = {};
+    std::vector<Vertex_index> intersected = {};
+    bool flag = false;
     for (int i; i < vertexIndices.size(); i++) {
+
       for (int off: offVertices) {
-        if (i==off) continue;
+        if (i==off) flag = true;
       }
+      if (flag == true) {
+        flag = false;
+	continue;
+      }
+
       intersected.push_back(vertexIndices[i]);
     }
 
     Face_location newPosition = std::make_pair(sourceFace,newBaryCoords);
-    std::cout << "printing first cgal mesh.point() of intersection point, then manual reconstruction" << std::endl;
-    std::cout << mesh.point(newPosition) << std::endl; 
+    Point_3 xyz_intersection = PMP::construct_point(newPosition,mesh);
+    /*
+    //manual reconstruction  
     Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + 
 	                        min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z()) +
 			       	min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); //construct point from definition of barycentric to xyz conversion
-    Point_3 intersection_Point_3 = Point_3(0,0,0) + xyz_intersection;
-    std::cout << intersection_Point_3 << std::endl;
-    std::cout << " " << std::endl;
+    */
+    std::cout << "intersection point " << std::endl;
+    std::cout << xyz_intersection << std::endl; 
 
-    return std::make_pair(intersection_Point_3,intersected); // this version returns the barycentric intersection point
+    return std::make_pair(xyz_intersection,intersected); // this version returns the barycentric intersection point
   }
   //if we don't have an intersection -- FIX CONDITIONALS LATER IN THE CODE
-  std::vector<Face_index> fillerVector = {};
   else {
     std::cout << "No intersection. Returning filler point.";
     return std::make_pair(Point_3(1000,1000,1000),fillerVector);
   }
   return std::make_pair(Point_3(10000,1000,1000),fillerVector); //default return
 }
+
 
 
 Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
@@ -213,7 +227,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   Point_3 target;
   Point_3 rotatedTarget;
   std::vector<Segment_3> edgesList;
-  face_descriptor currentTargetFace;
+  Face_index currentTargetFace;
   Vector_3 currentTargetFaceNormal;
   double lengthToSharedElement;
   double rotationAngle;
@@ -254,8 +268,10 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
       for (Point_3 vert: vertexList) vertices_file << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}" << "\n";
       vertices_file << "\n";
     }
-    Point_3 intersection_point = find_intersection_baryroutine(source_point, source_point+current_move, vertexList);
-
+    std::pair<Point_3, std::vector<Vertex_index>> intersection_info = find_intersection_baryroutine(source_point, source_point+current_move, vertexList);
+    Point_3 intersection_point = intersection_info.first;
+    std::vector<Vertex_index> intersected_elements = intersection_info.second;
+    
     if (intersection_point == Point_3(1000,1000,1000)) {
       intersection = false;
 
@@ -270,7 +286,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     //std::cout << "pre rotation vector magnitude " << vectorMagnitude(current_move) << std::endl;
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
 
-    currentTargetFace = getTargetFace(source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
+    currentTargetFace = getTargetFace(intersected_elements, source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
 
     source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there
 
