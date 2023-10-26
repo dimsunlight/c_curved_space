@@ -110,7 +110,7 @@ std::vector<double> cramersRule(Point_3 a, Point_3 b, Point_3 c, Point_3 p) {
   return baryCoords;
 }
 
-Point_3 find_intersection_baryroutine(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices) {
+std::pair<Point_3,std::vector<Face_index>> find_intersection_baryroutine(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices) {
   //use the barycentric coordinates of a point in order to determine the R3 coordinates of its intersection with an edge of the current face, if such an intersection exists.
   //takes only the r3 positions of the source and prospective target along with the vertices of the current face; intersection test exists independent of the mesh.
   
@@ -137,16 +137,16 @@ Point_3 find_intersection_baryroutine(Triangle_mesh mesh, Face_index sourceFace,
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = 0.0001;
+  double tol = 0.0001; //checking for equivalence to zero
+
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 
-  if (toIntersect < tol) toIntersect = 2;//just needs to be some # greater than 1. 
+  iif (toIntersect < tol) toIntersect = 2;//just needs to be some # greater than 1. 
 
   //min function with a max of 1. if we don't find something less than 1, no intersection.  
   for(double val: intersection_values) {
     std::cout << val << std::endl;
     if (val < toIntersect and val > tol) toIntersect = val;
-
   }
 
   std::cout << "toIntersect is " << toIntersect << std::endl;
@@ -155,6 +155,26 @@ Point_3 find_intersection_baryroutine(Triangle_mesh mesh, Face_index sourceFace,
     min_intersection = Point_3(b11,b12,b13);
     min_intersection = min_intersection+toIntersect*displacement;
     std::array<double,3> newBaryCoords = {min_intersection.x(),min_intersection.y(),min_intersection.z()};
+    
+    //off vertices tell us what vertices are *not* part of the intersected edge
+    int vertexIndicator = 0;
+    std::vector<int> offVertices = {}; //indices of vertices with bary coordinate zero at the intersection
+    //would use more economical "erase" for the below, but removing entries will mess up the indices if we have to erase twice
+    for (double b: newBaryCoords) {
+      if (b < tol) {
+        offVertices.push_back(vertexIndicator);
+      }
+      vertexIndicator+=1;
+    }
+
+    std::vector<Face_index> intersected = {};
+    for (int i; i < vertexIndices.size(); i++) {
+      for (int off: offVertices) {
+        if (i==off) continue;
+      }
+      intersected.push_back(vertexIndices[i]);
+    }
+
     Face_location newPosition = std::make_pair(sourceFace,newBaryCoords);
     std::cout << "printing first cgal mesh.point() of intersection point, then manual reconstruction" << std::endl;
     std::cout << mesh.point(newPosition) << std::endl; 
@@ -164,13 +184,16 @@ Point_3 find_intersection_baryroutine(Triangle_mesh mesh, Face_index sourceFace,
     Point_3 intersection_Point_3 = Point_3(0,0,0) + xyz_intersection;
     std::cout << intersection_Point_3 << std::endl;
     std::cout << " " << std::endl;
-    return intersection_Point_3; // this version returns the barycentric intersection point
+
+    return std::make_pair(intersection_Point_3,intersected); // this version returns the barycentric intersection point
   }
+  //if we don't have an intersection -- FIX CONDITIONALS LATER IN THE CODE
+  std::vector<Face_index> fillerVector = {};
   else {
     std::cout << "No intersection. Returning filler point.";
-    return Point_3(1000,1000,1000);
+    return std::make_pair(Point_3(1000,1000,1000),fillerVector);
   }
-  return Point_3(10000,1000,1000); //default return
+  return std::make_pair(Point_3(10000,1000,1000),fillerVector); //default return
 }
 
 
