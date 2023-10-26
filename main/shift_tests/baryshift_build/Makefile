@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /home/toler/projects/CGAL_curvature/main/shift_tests/baryshif
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,6 +74,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,50 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cgal_check_build_system
+# Target rules for targets named test_intersection
 
 # Build rule for target.
-cgal_check_build_system: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cgal_check_build_system
-.PHONY : cgal_check_build_system
+test_intersection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_intersection
+.PHONY : test_intersection
 
 # fast build rule for target.
-cgal_check_build_system/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cgal_check_build_system.dir/build.make CMakeFiles/cgal_check_build_system.dir/build
-.PHONY : cgal_check_build_system/fast
-
-#=============================================================================
-# Target rules for targets named ALL_CGAL_TARGETS
-
-# Build rule for target.
-ALL_CGAL_TARGETS: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ALL_CGAL_TARGETS
-.PHONY : ALL_CGAL_TARGETS
-
-# fast build rule for target.
-ALL_CGAL_TARGETS/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/build
-.PHONY : ALL_CGAL_TARGETS/fast
-
-#=============================================================================
-# Target rules for targets named baryshift
-
-# Build rule for target.
-baryshift: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 baryshift
-.PHONY : baryshift
-
-# fast build rule for target.
-baryshift/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/build
-.PHONY : baryshift/fast
+test_intersection/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intersection.dir/build.make CMakeFiles/test_intersection.dir/build
+.PHONY : test_intersection/fast
 
 baryshift.o: baryshift.cpp.o
 .PHONY : baryshift.o
 
 # target to build an object file
 baryshift.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/baryshift.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intersection.dir/build.make CMakeFiles/test_intersection.dir/baryshift.cpp.o
 .PHONY : baryshift.cpp.o
 
 baryshift.i: baryshift.cpp.i
@@ -168,7 +142,7 @@ baryshift.i: baryshift.cpp.i
 
 # target to preprocess a source file
 baryshift.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/baryshift.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intersection.dir/build.make CMakeFiles/test_intersection.dir/baryshift.cpp.i
 .PHONY : baryshift.cpp.i
 
 baryshift.s: baryshift.cpp.s
@@ -176,7 +150,7 @@ baryshift.s: baryshift.cpp.s
 
 # target to generate assembly for a file
 baryshift.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/baryshift.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_intersection.dir/build.make CMakeFiles/test_intersection.dir/baryshift.cpp.s
 .PHONY : baryshift.cpp.s
 
 # Help Target
@@ -187,9 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ALL_CGAL_TARGETS"
-	@echo "... cgal_check_build_system"
-	@echo "... baryshift"
+	@echo "... test_intersection"
 	@echo "... baryshift.o"
 	@echo "... baryshift.i"
 	@echo "... baryshift.s"

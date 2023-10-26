@@ -21,6 +21,11 @@ if ( NOT Boost_FOUND )
 
 endif()
 
-add_executable(baryshift full_baryshift.cpp utils.cpp)
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS baryshift) 
-target_link_libraries(baryshift PRIVATE CGAL::CGAL)
+#add_executable(baryshift full_baryshift.cpp utils.cpp)
+add_executable(test_intersection baryshift.cpp)
+
+#add_to_cached_list( CGAL_EXECUTABLE_TARGETS baryshift)
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS test_intersection)
+
+#target_link_libraries(baryshift PRIVATE CGAL::CGAL)
+target_link_libraries(test_intersection PRIVATE CGAL::CGAL)
