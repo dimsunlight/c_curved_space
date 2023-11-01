@@ -80,4 +80,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_intersection.dir/DependInfo.cmake"
+  "CMakeFiles/baryshift.dir/DependInfo.cmake"
   )

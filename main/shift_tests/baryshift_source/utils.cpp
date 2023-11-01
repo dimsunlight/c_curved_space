@@ -44,25 +44,25 @@ typedef PMP::Barycentric_coordinates<FT>                                Barycent
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 
 //utility functions
-auto vectorMagnitude(Vector_3 v) {
+double vectorMagnitude(Vector_3 v) {
   auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
   auto d = CGAL::approximate_sqrt(slen);
   return d; 
 }
 
-auto vectorMagnitude(Vector_2 v) {
+double vectorMagnitude(Vector_2 v) {
   auto const slen = v.x()*v.x() + v.y()*v.y();
   auto d = CGAL::approximate_sqrt(slen);
   return d;
 }
 
-auto normalizer(Vector_3 v)
+Vector_3 normalizer(Vector_3 v)
 {
   auto const d = vectorMagnitude(v);
   return v / d;
 }
 
-auto normalizer(Vector_2 v) 
+Vector_2 normalizer(Vector_2 v) 
 {
   auto const d = vectorMagnitude(v);
   return v/d;
@@ -146,7 +146,7 @@ double angleBetween(face_descriptor f1, face_descriptor f2, Triangle_mesh mesh) 
   return angle;
 }
 
-auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, double rotAngle) {
+std::vector<Point_3> rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, double rotAngle) {
   //rotation about an axis named axis; handles rotation of multiple targets at once
   
   Vector_3 axisVector = normalizer(Vector_3(axis[0],axis[1]));
@@ -202,11 +202,11 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
   return rotatedTargets;
 }
 
-auto rotateAboutAxis(Point_3 target, std::vector<Point_3> axis, double rotAngle) {
+Point_3 rotateAboutAxis(Point_3 target, std::vector<Point_3> axis, double rotAngle) {
   //rotation about an axis named axis; handles rotation of multiple targets at once
 
   Vector_3 axisVector = normalizer(Vector_3(axis[0],axis[1]));
-  std::vector<Point_3> shiftedTarget = target-Vector_3({0,0,0},axis[0]);
+  Point_3 shiftedTarget = target-Vector_3({0,0,0},axis[0]);
 
   double u1 = axisVector.x(), u2 = axisVector.y(), u3=axisVector.z();
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/baryshift.dir/baryshift.cpp.o"
-  "CMakeFiles/baryshift.dir/baryshift.cpp.o.d"
+  "CMakeFiles/baryshift.dir/full_baryshift.cpp.o"
+  "CMakeFiles/baryshift.dir/utils.cpp.o"
   "baryshift"
   "baryshift.pdb"
 )

@@ -97,15 +97,15 @@ std::vector<double> cramersRule(Point_3 a, Point_3 b, Point_3 c, Point_3 p) {
   //can also just use PMP::barycentric_coordinates, but I like having this on file.  
   Vector_3 v0 = Vector_3(a,b), v1 = Vector_3(a,c), v2 = Vector_3(a,p);
   //for cgal vector_3 objects, * indicates scalar product
-  d00 = v0*v0;
-  d01 = v0*v1;
-  d11 = v1*v1;
-  d20 = v2*v0;
-  d21 = v2*v1;
-  denom = d00*d01-d01*d01;
-  beta1 = (d11*d20-d01*d21)/denom;
-  beta2 = (d00*d21-d01*d20)/denom;
-  beta3 = 1.0-beta1-beta2;
+  double d00 = v0*v0;
+  double d01 = v0*v1;
+  double d11 = v1*v1;
+  double d20 = v2*v0;
+  double d21 = v2*v1;
+  double denom = d00*d01-d01*d01;
+  double beta1 = (d11*d20-d01*d21)/denom;
+  double beta2 = (d00*d21-d01*d20)/denom;
+  double beta3 = 1.0-beta1-beta2;
   std::vector<double> baryCoords = {beta1,beta2,beta3};
   return baryCoords;
 }
@@ -210,20 +210,80 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection_full(Triangle_mes
   return std::make_pair(Point_3(10000,1000,1000),fillerVector); //default return
 }
 
-Face_location rotateMoveTargetIntoNewFace(Triangle_mesh mesh, Face_index sface, Face_index tface, Point_3 source, Point_3 target) {
-  //returns the barycentric coordinates of the shift vector currently in sface after rotation to the tangent plane of tface.
+Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface,
+	                         	  Face_index tface, Point_3 source, Point_3 target) {
+  //returns the barycentric coordinates of the shift vector currently in sface after
+  //rotation to the tangent plane of tface.
 
-  Vector_3 sNormal = PMP::compute_face_normal(currentSourceFace,mesh);
-  Vector_3 tNormal = PMP::compute_face_normal(currentTargetFace,mesh);
-  double angle = angleBetween(sface,tface); 
-  Vector_3 axisVector = CGAL::cross_product(sNormal,tNormal);
+  Vector_3 sNormal = PMP::compute_face_normal(sface,mesh);
+  Vector_3 tNormal = PMP::compute_face_normal(tface,mesh);
+  double angle = angleBetween(sface,tface, mesh); 
+  Vector_3 axisVector = normalizer(CGAL::cross_product(sNormal,tNormal));
   std::vector<Point_3> axis = {source, source+axisVector};
   Point_3 rotatedT = rotateAboutAxis(target, axis, angle); 
-  tfaceVertices = getVertexPositions(mesh, tface);
-  std::array<double, 3> rotated_barycentric = PMP::barycentric_coordinates(tfaceVertices[0],tfaceVertices[1],tfaceVertices[2],rotatedT);
+  std::vector<Point_3> tfaceVertices = getVertexPositions(mesh, tface);
+  std::array<double, 3> rotated_barycentric = PMP::barycentric_coordinates(tfaceVertices[0],tfaceVertices[1],
+		                                                           tfaceVertices[2],rotatedT);
   Face_location rotatedPosition = std::make_pair(tface,rotated_barycentric);
   return rotatedPosition; 
 }
+
+Face_location fastRotateIntoNewFace(Triangle_mesh mesh, Face_index sface, Face_index tface, Point_3 source, Point_3 target) {
+  //single-line arithmetic operation for new face barycentric coordinates that should be equivalent (or nearly so)
+  //to the output of the function above. 
+	
+  Vector_3 sNormal = PMP::compute_face_normal(sface,mesh);
+  Vector_3 tNormal = PMP::compute_face_normal(tface,mesh);
+  std::vector<Point_3> sFaceVs = getVertexPositions(mesh, sface);
+  std::vector<Point_3> tFaceVs = getVertexPositions(mesh, tface);
+
+  double phi = angleBetween(sface,tface, mesh);
+  Vector_3 axisVector = normalizer(CGAL::cross_product(sNormal,tNormal));
+  double s1 = source[0], s2 = source[1], s3 = source[2]; 
+  double t1 = target[0], t2 = target[1], t3 = target[3];
+  double a1 = axisVector[0], a2 = axisVector[1], a3 = axisVector[2];
+  double p11 = sFaceVs[0][0], p12 = sFaceVs[0][1], p13 = sFaceVs[0][2];
+  double p21 = sFaceVs[1][0], p22 = sFaceVs[1][1], p23 = sFaceVs[1][2];
+  double p31 = sFaceVs[2][0], p32 = sFaceVs[2][1], p33 = sFaceVs[2][2];
+  double q11 = tFaceVs[0][0], q12 = tFaceVs[0][1], q13 = tFaceVs[0][2];
+  double q21 = tFaceVs[1][0], q22 = tFaceVs[1][1], q23 = tFaceVs[1][2];
+  double q31 = tFaceVs[2][0], q32 = tFaceVs[2][1], q33 = tFaceVs[2][2];
+
+  double bary1 = (((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33)) - ((q11 - q21)*(q11 - q21) + (q12 - q22)*(q12 - q22) + (q13 - q23)*(q13 - q23))*((q11 - q31)*(q11 - q31) + (q12 - q32)*(q12 - q32) + (q13 - q33)*(q13 - q33)) - 
+     ((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((-q13 + q23)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+        (-q12 + q22)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+        (-q11 + q21)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi)))) + 
+     ((q11 - q31)*(q11 - q31) + (q12 - q32)*(q12 - q32) + (q13 - q33)*(q13 - q33))*((-q13 + q23)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+        (-q12 + q22)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+        (-q11 + q21)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi)))) - 
+     ((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((-q13 + q33)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+        (-q12 + q32)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+        (-q11 + q31)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi)))) + 
+     ((q11 - q21)*(q11 - q21) + (q12 - q22)*(q12 - q22) + (q13 - q23)*(q13 - q23))*((-q13 + q33)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+        (-q12 + q32)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+        (-q11 + q31)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi)))))/
+   (((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33)) - ((q11 - q21)*(q11 - q21) + (q12 - q22)*(q12 - q22) + (q13 - q23)*(q13 - q23))*((q11 - q31)*(q11 - q31) + (q12 - q32)*(q12 - q32) + (q13 - q33)*(q13 - q33)));
+
+  double bary2 = (((q11 - q31)*(q11 - q31) + (q12 - q32)*(q12 - q32) + (q13 - q33)*(q13 - q33))*((-q13 + q23)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+        (-q12 + q22)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+        (-q11 + q21)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi)))) - 
+     ((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((-q13 + q33)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+        (-q12 + q32)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+        (-q11 + q31)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi)))))/
+   (-(((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))) + ((q11 - q21)*(q11 - q21) + (q12 - q22)*(q12 - q22) + (q13 - q23)*(q13 - q23))*((q11 - q31)*(q11 - q31) + (q12 - q32)*(q12 - q32) + (q13 - q33)*(q13 - q33)));
+
+  double bary3 = (-(((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((-q13 + q23)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+          (-q12 + q22)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+          (-q11 + q21)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi))))) + 
+     ((q11 - q21)*(q11 - q21) + (q12 - q22)*(q12 - q22) + (q13 - q23)*(q13 - q23))*((-q13 + q33)*(-q13 + p13*s1 + p23*s2 + p33*s3 + (p13*t1 + p23*t2 + p33*t3)*(cos(phi) + a3*a3 - cos(phi)*(a3*a3)) + (p12*t1 + p22*t2 + p32*t3)*(a2*a3 - a2*a3*cos(phi) + a1*sin(phi)) - (p11*t1 + p21*t2 + p31*t3)*(-(a1*a3) + a1*a3*cos(phi) + a2*sin(phi))) + 
+        (-q12 + q32)*(-q12 + p12*s1 + p22*s2 + p32*s3 + (p12*t1 + p22*t2 + p32*t3)*(cos(phi) + a2*a2 - cos(phi)*(a2*a2)) - (p13*t1 + p23*t2 + p33*t3)*(-(a2*a3) + a2*a3*cos(phi) + a1*sin(phi)) + (p11*t1 + p21*t2 + p31*t3)*(a1*a2 - a1*a2*cos(phi) + a3*sin(phi))) + 
+        (-q11 + q31)*(-q11 + p11*s1 + p21*s2 + p31*s3 + (p11*t1 + p21*t2 + p31*t3)*(cos(phi) + a1*a1 - cos(phi)*(a1*a1)) + (p13*t1 + p23*t2 + p33*t3)*(a1*a3 - a1*a3*cos(phi) + a2*sin(phi)) - (p12*t1 + p22*t2 + p32*t3)*(-(a1*a2) + a1*a2*cos(phi) + a3*sin(phi)))))/
+   (-(((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))*((q11 - q21)*(q11 - q31) + (q12 - q22)*(q12 - q32) + (q13 - q23)*(q13 - q33))) + ((q11 - q21)*(q11 - q21) + (q12 - q22)*(q12 - q22) + (q13 - q23)*(q13 - q23))*((q11 - q31)*(q11 - q31) + (q12 - q32)*(q12 - q32) + (q13 - q33)*(q13 - q33)));
+
+  std::array<double, 3> rotated_barycentric = {bary1, bary2, bary3};
+  return std::make_pair(tface,rotated_barycentric);
+}
+
 
 
 
@@ -236,7 +296,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   Vector_3 current_move = move;
   face_descriptor currentSourceFace = sourceLocation.first;
   //initializations
-  std::vector<Point_3> vertexList;
+  std::vector<Vertex_index> vertexList;
   std::vector<Point_3> targetVertices;
   std::vector<Point_3> sharedEdge;
   std::vector<Point_3> forRotation;
@@ -272,19 +332,19 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     std::cout << "ITERATION: " << counter << std::endl;
     //vertexList = getVertexPositions(mesh,currentSourceFace);
     vertexList = getVertexIndices(mesh,currentSourceFace);
-   
-    edgesList = createEdgeSegments(vertexList);
-    //may need to add a check to see if we're going through a vertex later when finding target face 
 
     if (intersections_file.is_open()){
       intersections_file << "{" << source_point.x() << ", " << source_point.y() << ", " << source_point.z() << "}";
       intersections_file << "\n";
     }
     if (vertices_file.is_open()) {
-      for (Point_3 vert: vertexList) vertices_file << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}" << "\n";
+      for (Vertex_index vert: vertexList) {
+        Point_3 vPoint = mesh.point(vert);
+        vertices_file << "{" << vPoint.x() << ", " << vPoint.y() << ", " << vPoint.z() << "}" << "\n";
+      }
       vertices_file << "\n";
     }
-    std::pair<Point_3, std::vector<Vertex_index>> intersection_info = find_intersection_baryroutine(source_point, source_point+current_move, vertexList);
+    std::pair<Point_3, std::vector<Vertex_index>> intersection_info = find_intersection_full(mesh, currentSourceFace, source_point, source_point+current_move, vertexList);
     Point_3 intersection_point = intersection_info.first;
     std::vector<Vertex_index> intersected_elements = intersection_info.second;
     
@@ -297,7 +357,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
     Vector_3 vector_to_intersection = Vector_3(source_point, intersection_point);
     double lengthToSharedElement = vectorMagnitude(vector_to_intersection); //how far we've traveled
-    current_move = reduceMove(current_move, lengthToSharedElement);         //decrease move size by length to intersected vertex/edge --
+    current_move = reduceVector(current_move, lengthToSharedElement);         //decrease move size by length to intersected vertex/edge --
                                                                             //effectively the step where we "walk" to that intersection
     //std::cout << "pre rotation vector magnitude " << vectorMagnitude(current_move) << std::endl;
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
@@ -305,21 +365,13 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     currentTargetFace = getTargetFace(intersected_elements, source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
 
     source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there
-    currentSourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
-    currentTargetNormal = PMP::compute_face_normal(currentTargetFace,mesh);
 
-    //determine axis as the edge we pass through
-    //housekeeping task: clean this sequence up into a subordinate function to reduce number of defines above
-    targetVertices = getVertexPositions(mesh, currentTargetFace);
-    sharedEdge = getSharedElements(vertexList, targetVertices);
-    forRotation = {target}; //setting up a vector for rotateAboutAxis, just housekeeping
-    rotationAngle = angleBetween(currentSourceFace, currentTargetFace, mesh);
-    std::cout << "rotation angle: " << rotationAngle << std::endl;
-    std::vector<Point_3> rts = rotateAboutAxis(forRotation, sharedEdge, rotationAngle); //replace "placeholder" target with real new move endpoint 
-
-    rotatedTarget = rts[0];
-
+    Face_location newMoveLocation = rotateIntoNewFace(mesh, currentSourceFace, currentTargetFace, source_point, target);
+    Face_location fastNML   =   fastRotateIntoNewFace(mesh, currentSourceFace, currentTargetFace, source_point, target); 
+    Point_3 rotatedTarget = PMP::construct_point(newMoveLocation,mesh);
+    Point_3 fastRotatedTarget = PMP::construct_point(fastNML,    mesh);
     std::cout << "rotated target to " << rotatedTarget << std::endl;
+    std::cout << "alternative rotation location: " << fastRotatedTarget << std::endl;
     //check that we've rotated in the right direction via overlap
     current_move = Vector_3(source_point, rotatedTarget);//source is now intersection
 
@@ -342,7 +394,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     //check length of current_move before and after rotation
     std::cout << "overlap of current_move with target face normal: " << overlap  << std::endl;
 
-
     currentSourceFace = currentTargetFace;
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 
@@ -352,9 +403,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   return fTarget; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
 
 }
-
-
-
       
 
 int main(int argc, char* argv[]) {

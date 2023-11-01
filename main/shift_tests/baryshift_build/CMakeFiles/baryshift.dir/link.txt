@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/baryshift.dir/baryshift.cpp.o -o baryshift  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/baryshift.dir/full_baryshift.cpp.o CMakeFiles/baryshift.dir/utils.cpp.o  -o baryshift  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 

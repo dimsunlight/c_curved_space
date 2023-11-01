@@ -123,6 +123,19 @@ test_intersection/fast:
 	$(MAKE) -f CMakeFiles/test_intersection.dir/build.make CMakeFiles/test_intersection.dir/build
 .PHONY : test_intersection/fast
 
+#=============================================================================
+# Target rules for targets named baryshift
+
+# Build rule for target.
+baryshift: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 baryshift
+.PHONY : baryshift
+
+# fast build rule for target.
+baryshift/fast:
+	$(MAKE) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/build
+.PHONY : baryshift/fast
+
 baryshift.o: baryshift.cpp.o
 
 .PHONY : baryshift.o
@@ -150,6 +163,60 @@ baryshift.cpp.s:
 	$(MAKE) -f CMakeFiles/test_intersection.dir/build.make CMakeFiles/test_intersection.dir/baryshift.cpp.s
 .PHONY : baryshift.cpp.s
 
+full_baryshift.o: full_baryshift.cpp.o
+
+.PHONY : full_baryshift.o
+
+# target to build an object file
+full_baryshift.cpp.o:
+	$(MAKE) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/full_baryshift.cpp.o
+.PHONY : full_baryshift.cpp.o
+
+full_baryshift.i: full_baryshift.cpp.i
+
+.PHONY : full_baryshift.i
+
+# target to preprocess a source file
+full_baryshift.cpp.i:
+	$(MAKE) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/full_baryshift.cpp.i
+.PHONY : full_baryshift.cpp.i
+
+full_baryshift.s: full_baryshift.cpp.s
+
+.PHONY : full_baryshift.s
+
+# target to generate assembly for a file
+full_baryshift.cpp.s:
+	$(MAKE) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/full_baryshift.cpp.s
+.PHONY : full_baryshift.cpp.s
+
+utils.o: utils.cpp.o
+
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	$(MAKE) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	$(MAKE) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	$(MAKE) -f CMakeFiles/baryshift.dir/build.make CMakeFiles/baryshift.dir/utils.cpp.s
+.PHONY : utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +226,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test_intersection"
+	@echo "... baryshift"
 	@echo "... baryshift.o"
 	@echo "... baryshift.i"
 	@echo "... baryshift.s"
+	@echo "... full_baryshift.o"
+	@echo "... full_baryshift.i"
+	@echo "... full_baryshift.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 
