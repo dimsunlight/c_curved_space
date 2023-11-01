@@ -1,5 +1,0 @@
-/home/twebb8/projects/cgal/c_curved_space/main/baryshift/baryshift_build/CMakeFiles/edit_cache.dir
-/home/twebb8/projects/cgal/c_curved_space/main/baryshift/baryshift_build/CMakeFiles/rebuild_cache.dir
-/home/twebb8/projects/cgal/c_curved_space/main/baryshift/baryshift_build/CMakeFiles/cgal_check_build_system.dir
-/home/twebb8/projects/cgal/c_curved_space/main/baryshift/baryshift_build/CMakeFiles/ALL_CGAL_TARGETS.dir
-/home/twebb8/projects/cgal/c_curved_space/main/baryshift/baryshift_build/CMakeFiles/baryshift.dir

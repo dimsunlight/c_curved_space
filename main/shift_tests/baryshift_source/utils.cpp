@@ -151,6 +151,7 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
   
   Vector_3 axisVector = normalizer(Vector_3(axis[0],axis[1]));
   std::vector<Point_3> shiftedTargets; 
+  shiftedTargets.reserve(3);
 
   for (Point_3 target: targets) {
     shiftedTargets.push_back(target - Vector_3({0,0,0}, axis[0]));
@@ -177,6 +178,7 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
   }
   
   std::vector<Point_3> rotatedTargets;
+  rotatedTargets.reserve(3);
   double rotatedStorage[3];
   std::vector<double> targetStorage;
   
@@ -199,6 +201,54 @@ auto rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, do
 
   return rotatedTargets;
 }
+
+auto rotateAboutAxis(Point_3 target, std::vector<Point_3> axis, double rotAngle) {
+  //rotation about an axis named axis; handles rotation of multiple targets at once
+
+  Vector_3 axisVector = normalizer(Vector_3(axis[0],axis[1]));
+  std::vector<Point_3> shiftedTarget = target-Vector_3({0,0,0},axis[0]);
+
+  double u1 = axisVector.x(), u2 = axisVector.y(), u3=axisVector.z();
+
+  double c = cos(rotAngle), s = sin(rotAngle);
+  double C = 1-c;
+  //unfortunately, I believe I have to multiply element wise in C++
+  double Identity[3][3] = {{c,0.0,0.0},{0.0,c,0.0},{0.0,0.0,c}};
+  double crossMatrix[3][3] = {{0,-s*u3,s*u2},{s*u3,0,-s*u1},{-s*u2,s*u1,0}};
+  double tensorProduct[3][3] = {{C*u1*u1,C*u1*u2,C*u1*u3},{C*u2*u1,C*u2*u2,C*u2*u3},{C*u3*u1,C*u3*u2,C*u3*u3}};
+
+  double rMatrix[3][3];
+  //this double loop to define the rotation matrix is probably a place where it'd be easy to speed things up very slightly
+  //with more c++ knowledge
+  for (std::size_t i = 0; i < 3; i++) {
+    for (std::size_t j = 0; j < 3; j++) {
+            rMatrix[i][j] = Identity[i][j] + crossMatrix[i][j] + tensorProduct[i][j];
+    }
+  }
+
+  Point_3 rotatedTarget;
+  double rotatedStorage[3];
+  std::vector<double> targetStorage;
+
+  //rotate and shift back all targets
+  targetStorage = {shiftedTarget.x(),shiftedTarget.y(),shiftedTarget.z()};
+
+  for (std::size_t i = 0; i < 3; i++) {
+    double product = 0;
+    for (std::size_t j = 0; j < 3; j++) {
+      product += rMatrix[i][j]*targetStorage[j];
+    }
+    rotatedStorage[i] = product;
+  }
+
+  rotatedTarget = Point_3(rotatedStorage[0],rotatedStorage[1],rotatedStorage[2]);
+
+  //undo shift at the end
+  rotatedTarget = rotatedTarget + Vector_3({0,0,0}, axis[0]);
+
+  return rotatedTarget;
+}
+
 
 auto createTemporaryMesh(std::vector<Point_3> vertexTrio) {
   Triangle_mesh tempMesh;

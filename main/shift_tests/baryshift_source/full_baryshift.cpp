@@ -78,8 +78,9 @@ std::vector<Vertex_index> getVertexIndices(Triangle_mesh mesh, Face_index fIndex
 Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
 
- bool throughVertex = if(intersected.size() == 1);
+ bool throughVertex = intersected.size() == 1;
  if (throughVertex) {
+   std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
    double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
    return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
                                                                  //But it should identify things just fine most of the time.
@@ -194,7 +195,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection_full(Triangle_mes
     //manual reconstruction  
     Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + 
 	                        min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z()) +
-			       	min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); //construct point from definition of barycentric to xyz conversion
+			       	min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); 
     */
     std::cout << "intersection point " << std::endl;
     std::cout << xyz_intersection << std::endl; 
@@ -207,6 +208,21 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection_full(Triangle_mes
     return std::make_pair(Point_3(1000,1000,1000),fillerVector);
   }
   return std::make_pair(Point_3(10000,1000,1000),fillerVector); //default return
+}
+
+Face_location rotateMoveTargetIntoNewFace(Triangle_mesh mesh, Face_index sface, Face_index tface, Point_3 source, Point_3 target) {
+  //returns the barycentric coordinates of the shift vector currently in sface after rotation to the tangent plane of tface.
+
+  Vector_3 sNormal = PMP::compute_face_normal(currentSourceFace,mesh);
+  Vector_3 tNormal = PMP::compute_face_normal(currentTargetFace,mesh);
+  double angle = angleBetween(sface,tface); 
+  Vector_3 axisVector = CGAL::cross_product(sNormal,tNormal);
+  std::vector<Point_3> axis = {source, source+axisVector};
+  Point_3 rotatedT = rotateAboutAxis(target, axis, angle); 
+  tfaceVertices = getVertexPositions(mesh, tface);
+  std::array<double, 3> rotated_barycentric = PMP::barycentric_coordinates(tfaceVertices[0],tfaceVertices[1],tfaceVertices[2],rotatedT);
+  Face_location rotatedPosition = std::make_pair(tface,rotated_barycentric);
+  return rotatedPosition; 
 }
 
 
@@ -246,8 +262,8 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
   //assuming we've fed in a vector tangent to the source face, we can use
   //its level of normal overlap as the baseline of normal overlap for rotations
-  Vector_3 sourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
-  double baseAgreement = sourceNormal*move;
+  Vector_3 currentSourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
+  double baseAgreement = currentSourceNormal*move;
   std::cout << "baseline normal overlap is " << baseAgreement <<std::endl;
 
   while(intersection){
@@ -289,8 +305,8 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     currentTargetFace = getTargetFace(intersected_elements, source_point, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
 
     source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there
-
-    currentTargetFaceNormal = PMP::compute_face_normal(currentTargetFace,mesh);
+    currentSourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
+    currentTargetNormal = PMP::compute_face_normal(currentTargetFace,mesh);
 
     //determine axis as the edge we pass through
     //housekeeping task: clean this sequence up into a subordinate function to reduce number of defines above
