@@ -36,8 +36,8 @@ typedef K::Point_2                                                      Point_2;
 typedef K::Vector_2                                                     Vector_2;
 typedef CGAL::Surface_mesh<Point_3>                                     Triangle_mesh;
 typedef Triangle_mesh::Face_index                                       Face_index; 
-typedef typename boost::graph_traits<Triangle_mesh>::vertex_descriptor  vertex_descriptor;
-typedef typename boost::graph_traits<Triangle_mesh>::face_descriptor    face_descriptor;
+typedef Triangle_mesh::Halfedge_index                                   Halfedge_index;
+typedef Triangle_mesh::Vertex_index                                     Vertex_index;
 namespace CP = CGAL::parameters;
 namespace PMP = CGAL::Polygon_mesh_processing;
 typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
@@ -83,20 +83,35 @@ int findIndex(Point_3 loc,std::vector<Point_3> vec) {
 
 
 //function definitions
-std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, face_descriptor fIndex) {
-   
+std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, Face_index fIndex) {
+
   Triangle_mesh::Halfedge_index hf = mesh.halfedge(fIndex);
-  std::vector<Point_3> vertices; //I think we can say 3 because we know it's a triangle mesh
+  std::vector<Point_3> vertices;
 
   for(Triangle_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh))
   {
-    Triangle_mesh::Vertex_index vi = target(hi, mesh);
+    Triangle_mesh::Vertex_index vi = source(hi, mesh);
     vertices.push_back( mesh.point(vi)); //working with xyz points rather than indices --
                                          //don't need to alter base mesh, so points fine
   }
-  
+
   return vertices;
 }
+
+std::vector<Vertex_index> getVertexIndices(Triangle_mesh mesh, Face_index fIndex) {
+
+  Halfedge_index hf = mesh.halfedge(fIndex);
+  std::vector<Vertex_index> vertices;
+
+  for(Halfedge_index hi : halfedges_around_face(hf, mesh))
+  {
+    Vertex_index vi = source(hi, mesh);
+    vertices.push_back(vi);
+  }
+
+  return vertices;
+}
+
 
 auto getSharedElements(std::vector<Point_3> vs1, std::vector<Point_3> vs2) {
   //common element finder for shared edge; double for loop is slow, but
@@ -131,7 +146,7 @@ auto getUnsharedElements(std::vector<Point_3> vertices, std::vector<Point_3> sha
   return oddElements;
 }
 
-double angleBetween(face_descriptor f1, face_descriptor f2, Triangle_mesh mesh) {
+double angleBetween(Face_index f1, Face_index f2, Triangle_mesh mesh) {
   //generate normals -- compute_face_normal gives unit normals by default
   Vector_3 oldNormal = PMP::compute_face_normal(f1,mesh), newNormal = PMP::compute_face_normal(f2,mesh);
   //normals compute fine (verified via print) 
@@ -252,15 +267,15 @@ Point_3 rotateAboutAxis(Point_3 target, std::vector<Point_3> axis, double rotAng
 
 auto createTemporaryMesh(std::vector<Point_3> vertexTrio) {
   Triangle_mesh tempMesh;
-  vertex_descriptor u = tempMesh.add_vertex(vertexTrio[0]);
-  vertex_descriptor v = tempMesh.add_vertex(vertexTrio[1]);
-  vertex_descriptor w = tempMesh.add_vertex(vertexTrio[2]);
-  face_descriptor tFace = tempMesh.add_face(u,v,w);
+  Vertex_index u = tempMesh.add_vertex(vertexTrio[0]);
+  Vertex_index v = tempMesh.add_vertex(vertexTrio[1]);
+  Vertex_index w = tempMesh.add_vertex(vertexTrio[2]);
+  Face_index  tFace = tempMesh.add_face(u,v,w);
   std::cout << "temp face normal = " << PMP::compute_face_normal(tFace,tempMesh) << std::endl;
   return tempMesh;
 }
 
-Point_3 getNewXYZLocation(Point_3 flatLocation, Triangle_mesh originalMesh, Triangle_mesh tempMesh, face_descriptor f2) {
+Point_3 getNewXYZLocation(Point_3 flatLocation, Triangle_mesh originalMesh, Triangle_mesh tempMesh, Face_index f2) {
   Face_location tempLocation= PMP::locate(flatLocation,tempMesh);//get bary location in temporary mesh
   Barycentric_coordinates b_weights = tempLocation.second;//export bary location as set of bary weights
   Face_location frankenLocation = std::make_pair(f2, b_weights); //create location object from original face index + bary weights
@@ -290,7 +305,7 @@ std::vector<Segment_3> createEdgeSegments(std::vector<Point_3> vs) {
 
 
 
-face_descriptor getTargetFace(Point_3 pos, Vector_3 toIntersection, face_descriptor currentSourceFace, Triangle_mesh mesh) {
+Face_index getTargetFace(Point_3 pos, Vector_3 toIntersection, Face_index currentSourceFace, Triangle_mesh mesh) {
  //goal is to find the face we're moving into. this is very easy if we share an edge, and harder if we only share a vertex. 
  //easy if we share an edge because we can just look for faces which share those vertices;
  //hard if we only share a vertex because the faces that share a vertex are not limited to the source and target.

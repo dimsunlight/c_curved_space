@@ -44,37 +44,6 @@ namespace PMP = CGAL::Polygon_mesh_processing;
 typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 
-
-std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, Face_index fIndex) {
-   
-  Triangle_mesh::Halfedge_index hf = mesh.halfedge(fIndex);
-  std::vector<Point_3> vertices; 
-
-  for(Triangle_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh))
-  {
-    Triangle_mesh::Vertex_index vi = source(hi, mesh);
-    vertices.push_back( mesh.point(vi)); //working with xyz points rather than indices --
-                                         //don't need to alter base mesh, so points fine
-  }
-  
-  return vertices;
-}
-
-std::vector<Vertex_index> getVertexIndices(Triangle_mesh mesh, Face_index fIndex) {
-   
-  Halfedge_index hf = mesh.halfedge(fIndex);
-  std::vector<Vertex_index> vertices; 
-
-  for(Halfedge_index hi : halfedges_around_face(hf, mesh))
-  {
-    Vertex_index vi = source(hi, mesh);
-    vertices.push_back(vi);
-  }
-  
-  return vertices;
-}
-
-
 Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
 
@@ -285,8 +254,6 @@ Face_location fastRotateIntoNewFace(Triangle_mesh mesh, Face_index sface, Face_i
 }
 
 
-
-
 Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   double travelLength = vectorMagnitude(move);
 
@@ -294,7 +261,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   Face_location sourceLocation = PMP::locate(pos, mesh);
   Point_3 source_point = PMP::construct_point(sourceLocation, mesh); //xyz point representing current source
   Vector_3 current_move = move;
-  face_descriptor currentSourceFace = sourceLocation.first;
+  Face_index currentSourceFace = sourceLocation.first;
   //initializations
   std::vector<Vertex_index> vertexList;
   std::vector<Point_3> targetVertices;
@@ -308,7 +275,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   double lengthToSharedElement;
   double rotationAngle;
   double overlap;
-  std::vector<face_descriptor> faceIndexList; //store face indices here so we know where to look later
+  std::vector<Face_index> faceIndexList; //store face indices here so we know where to look later
 
   //useful items for loop w/definition
   bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
