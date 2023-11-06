@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/test_intersection.dir/baryshift.cpp.o"
+  "CMakeFiles/test_intersection.dir/baryshift.cpp.o.d"
   "test_intersection"
   "test_intersection.pdb"
 )

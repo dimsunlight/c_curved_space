@@ -1,5 +1,5 @@
-CMakeFiles/test_intersection.dir/baryshift.cpp.o: \
- /home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_source/baryshift.cpp \
+CMakeFiles/baryshift.dir/utils.cpp.o: \
+ /home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_source/utils.cpp \
  /usr/include/stdc-predef.h \
  /home/toler/CGAL-5.6/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
  /home/toler/CGAL-5.6/include/CGAL/Simple_cartesian.h \
@@ -1830,6 +1830,12 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: \
  /home/toler/CGAL-5.6/include/CGAL/CORE_BigFloat.h \
  /home/toler/CGAL-5.6/include/CGAL/Bigfloat_interval_traits.h \
  /home/toler/CGAL-5.6/include/CGAL/CORE_arithmetic_kernel.h \
+ /home/toler/CGAL-5.6/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
+ /home/toler/CGAL-5.6/include/CGAL/Lazy_kernel.h \
+ /home/toler/CGAL-5.6/include/CGAL/Static_filtered_predicate.h \
+ /home/toler/CGAL-5.6/include/CGAL/Epic_converter.h \
+ /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
+ /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh.h \
  /home/toler/CGAL-5.6/include/CGAL/license/Surface_mesh.h \
  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
@@ -2183,6 +2189,8 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: \
  /home/toler/CGAL-5.6/include/CGAL/AABB_traits.h \
  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h \
  /home/toler/CGAL-5.6/include/CGAL/Kernel_23/internal/Has_boolean_tags.h \
+ /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/compute_normal.h \
+ /home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/Compute_normal.h \
  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/locate.h \
  /home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/locate.h \
  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/triangulate_faces.h \

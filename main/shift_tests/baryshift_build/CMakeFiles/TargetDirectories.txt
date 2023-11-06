@@ -1,4 +1,4 @@
-/home/twebb8/projects/cgal/c_curved_space/main/shift_tests/baryshift_build/CMakeFiles/rebuild_cache.dir
-/home/twebb8/projects/cgal/c_curved_space/main/shift_tests/baryshift_build/CMakeFiles/edit_cache.dir
-/home/twebb8/projects/cgal/c_curved_space/main/shift_tests/baryshift_build/CMakeFiles/test_intersection.dir
-/home/twebb8/projects/cgal/c_curved_space/main/shift_tests/baryshift_build/CMakeFiles/baryshift.dir
+/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/rebuild_cache.dir
+/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/edit_cache.dir
+/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/test_intersection.dir
+/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/baryshift.dir
