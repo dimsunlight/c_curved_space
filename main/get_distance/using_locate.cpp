@@ -21,6 +21,9 @@ typedef typename Surface_mesh_shortest_path::Face_location              Face_loc
 typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_face_graph_primitive;
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
+
+
+
 int main(int argc, char** argv)
 {
   const std::string filename = (argc>1) ? argv[1] : CGAL::data_file_path("sims_project/torusrb80.off");

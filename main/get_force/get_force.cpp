@@ -34,27 +34,47 @@ typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_fac
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
 
-//function definitions
+//utilities
+auto normalize(Vector_3 v)
+{
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  auto const d = CGAL::approximate_sqrt(slen);
+  return v / d;
+}
+
+auto vectorMag(Vector_3 v) 
+{
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  return CGAL::approximate_sqrt(slen);
+}
+
+//primary functions
 std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
-		Triangle_mesh mesh, Point_3 source, Point_3 targets[], std::size_t num_targets) {
+		Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
+  std::cout << "calculating tangents and distances for source "<< source << std::endl;
   Surface_mesh_shortest_path shortest_paths(mesh);
   AABB_tree tree;
   shortest_paths.build_aabb_tree(tree);
   //convert source point to barycentric coordinates via locate
   const Point_3 source_pt = source;
-  Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt);
+  Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt,tree);
   shortest_paths.add_source_point(source_loc.first,source_loc.second);
-
+  
   std::vector<double> distances;
-  std::vector<Vector_3> tangents; 
+  std::vector<Vector_3> tangents;
+  std::vector<Point_3> points; 
   for (std::size_t i = 0; i < num_targets; i++) {
-    Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i]);
-    std::vector<Point_3> points; 
+    std::cout << "iteration point " << i+1 << ", at position " << targets[i] <<  "; calling locate" << std::endl;
+    Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
+    //std::cout << "target loc elements: " << target_loc.first << "--" << target_loc.second[0] << " " << target_loc.second[1] << " " << target_loc.second[2] << std::endl;
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
+    //std::cout << "calculating shortest distance" << std::endl;
     distances.push_back(std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)));
+    //std::cout << "distance calculated." << std::endl;
     //path goes from target to source -- so if we want to know path tangent at 
     //source for force calculation, we must use the *end* of points[]
     tangents.push_back(Vector_3(points[points.size()-2],points[points.size()-1]));
+    points.clear();
   }
  
   return std::make_pair(distances,tangents);
@@ -84,20 +104,23 @@ std::pair<double,Vector_3> calcTangentandDistance (Triangle_mesh mesh, Point_3 s
   distance = std::get<0>(shortest_paths.shortest_distance_to_source_points(target_loc.first,target_loc.second));
   tangent = Vector_3(points[points.size()-2],points[points.size()-1]);
 
+  //write path to file for comparison  
+  const std::string path_filename = "geodesic_path.txt";
+  std::ofstream geodesic_file(path_filename);
+
+  for (std::size_t i = 0; i < points.size(); ++i) {
+    std::cout << " " << points[i] << std::endl;
+    geodesic_file << "\n"; 
+    geodesic_file << "{" << points[i].x() << ", " << points[i].y() << ", " << points[i].z() << "}";
+  }
+  geodesic_file.close();
+
   return std::make_pair(distance,tangent);
 }
 
-auto normalize(Vector_3 v)
-{
-  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
-  auto const d = CGAL::approximate_sqrt(slen);
-  return v / d;
-}
 
-auto forceFunction (float dist, Vector_3 tangent) { 
+Vector_3 forceFunction (float dist, Vector_3 tangent, double epsilon, double sigma) { 
   //once again, a=1 and c=3
-  const float epsilon = 1;
-  const float sigma = 1; //i know, large particles
   Vector_3 normalizedTangent = normalize(tangent);
 
   //lennard-jones potential is 
@@ -107,11 +130,29 @@ auto forceFunction (float dist, Vector_3 tangent) {
   //where r is the distance function on the surface 
   
   Vector_3 force = 4*epsilon*(12*pow(sigma,12)/pow(dist,13)-6*pow(sigma,6)/pow(dist,7))*normalizedTangent;
-
+  
   return force;
 }
 
-
+Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
+  //create list of distances and path tangents between the source particle and the targets
+  std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcTangentsAndDistances(mesh, source, targets, num_targets);   
+  std::vector<double> distances = distancesAndTangents.first;
+  std::vector<Vector_3> tangents = distancesAndTangents.second;
+  //we could either do this loop within forceFunction or here -- shouldn't be hugely different
+  
+  //L-J parameters
+  double epsilon = 1;
+  double sigma = .0002;
+  Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
+                                   //also handles case of no neighbors
+				   
+  for (std::size_t i = 0; i < distances.size(); i++) {
+    force+= forceFunction(distances[i],tangents[i], epsilon, sigma);    
+  } 
+  std::cout << "Calculated force magnitude is " << vectorMag(force) << std::endl; 
+  return force;
+}
 
 int main(int argc, char* argv[]) {
  //get input mesh from command line argument
@@ -123,11 +164,12 @@ int main(int argc, char* argv[]) {
    std::cerr << "Invalid input file." << std::endl;
    return EXIT_FAILURE;
  }
-
+ std::cout << "mesh loaded, number of vertices " << tmesh.number_of_vertices() << std::endl;
+ 
  clock_t t;
 
- Point_3 source_pt(3.51033,1.91770,0.000000);
- Point_3 target_pt(2.08546,1.66027,0.942445);
+ Point_3 source_pt(3.50848, 1.91667, -0.000197482);
+ Point_3 target_pt(2.6191, 0.966926, -0.977806000);
  Point_3 target_pts[] = {target_pt};
 
  std::cout << "with single-pair function" << std::endl;
@@ -135,14 +177,10 @@ int main(int argc, char* argv[]) {
  t=clock();
  std::pair<double, Vector_3> oneCalc = calcTangentandDistance (tmesh, source_pt, target_pt);
  clock_t timeTaken = ( clock() -t);
-
+ //currently set up just go grab distance & generate a path
  std::cout << "Distance:" << oneCalc.first << std::endl;
- std::cout << "Force Grad: " << oneCalc.second << std::endl;
  std::cout << "Clocks per second: " << CLOCKS_PER_SEC << std::endl;;
  std::cout << "Time taken: " << timeTaken << " clicks and "  << timeTaken/CLOCKS_PER_SEC << " seconds." << std::endl;
-
- Vector_3 force = forceFunction(oneCalc.first, oneCalc.second);
- std::cout << "The force is " << force << std::endl;
 
  return 0;
 }

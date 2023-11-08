@@ -61,7 +61,7 @@ Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vec
  return provisional_target_face;
 }
 
-std::vector<double> cramersRule(Point_3 a, Point_3 b, Point_3 c, Point_3 p) {
+std::vector<double> baryCoords(Point_3 a, Point_3 b, Point_3 c, Point_3 p) {
   //use cramer's rule to determine the barycentric coordinates of p within the face described by a, b, c.
   //can also just use PMP::barycentric_coordinates, but I like having this on file.  
   Vector_3 v0 = Vector_3(a,b), v1 = Vector_3(a,c), v2 = Vector_3(a,p);
@@ -284,8 +284,10 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
   const std::string intersections_filename = "r_intersections.txt";
   const std::string vertices_filename = "r_faces_visited.txt";
+  const std::string cmove_filename = "current_move_list.txt"; 
   std::ofstream intersections_file(intersections_filename);
   std::ofstream vertices_file(vertices_filename);
+  std::ofstream cmove_file(cmove_filename); 
 
   //assuming we've fed in a vector tangent to the source face, we can use
   //its level of normal overlap as the baseline of normal overlap for rotations
@@ -311,6 +313,11 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
       }
       vertices_file << "\n";
     }
+    if (cmove_file.is_open()) {
+      cmove_file << "{" << current_move.x() << ", " << current_move.y() << ", " << current_move.z() << "}";
+      cmove_file << "\n";
+    }
+
     std::pair<Point_3, std::vector<Vertex_index>> intersection_info = find_intersection_full(mesh, currentSourceFace, source_point, source_point+current_move, vertexList);
     Point_3 intersection_point = intersection_info.first;
     std::vector<Vertex_index> intersected_elements = intersection_info.second;
@@ -365,10 +372,18 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 
   //be the location in the unfolded mesh if there were intersections (from an edge intersection to a spot
-  //within a face)  
+  //within a face)
+  
+  //declare final point & write it to file -- there is always one more path point than move vectors 
   Point_3 fTarget = source_point+current_move;
+  if (intersections_file.is_open()){
+    intersections_file << "{" << fTarget.x() << ", " << fTarget.y() << ", " << fTarget.z() << "}";
+    intersections_file << "\n";
+  }
+  intersections_file.close();
+  vertices_file.close();
+  cmove_file.close();
   return fTarget; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
-
 }
       
 
@@ -384,7 +399,7 @@ int main(int argc, char* argv[]) {
    return EXIT_FAILURE;
  }
 
- Vector_3 forceDisplacement = -20*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
+ Vector_3 forceDisplacement = -10*Vector_3(-0.037457, 0.0330185, 0.177704); //reversing direction because it looks more promising for tests when plotting everything in mathematica 
  Point_3 pointToMove = Point_3(3.51033, 1.9177, 0);
 
 

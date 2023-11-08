@@ -3,11 +3,11 @@
 
 CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_source/baryshift.cpp \
   /usr/include/stdc-predef.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Simple_cartesian.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Cartesian_base.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/basic.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/config.h \
+  /home/toler/CGAL-5.6/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/Simple_cartesian.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Cartesian_base.h \
+  /home/toler/CGAL-5.6/include/CGAL/basic.h \
+  /home/toler/CGAL-5.6/include/CGAL/config.h \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/user.hpp \
   /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -80,14 +80,14 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/config/detail/suffix.hpp \
   /usr/include/boost/config/helper_macros.hpp \
   /usr/include/boost/version.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/version.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/version_macros.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Installation/internal/enable_third_party_libraries.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/export/CGAL.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/export/helpers.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/functional.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/auto_link/CGAL.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/auto_link/auto_link.h \
+  /home/toler/CGAL-5.6/include/CGAL/version.h \
+  /home/toler/CGAL-5.6/include/CGAL/version_macros.h \
+  /home/toler/CGAL-5.6/include/CGAL/Installation/internal/enable_third_party_libraries.h \
+  /home/toler/CGAL-5.6/include/CGAL/export/CGAL.h \
+  /home/toler/CGAL-5.6/include/CGAL/export/helpers.h \
+  /home/toler/CGAL-5.6/include/CGAL/functional.h \
+  /home/toler/CGAL-5.6/include/CGAL/auto_link/CGAL.h \
+  /home/toler/CGAL-5.6/include/CGAL/auto_link/auto_link.h \
   /usr/include/boost/predef.h \
   /usr/include/boost/predef/language.h \
   /usr/include/boost/predef/language/stdc.h \
@@ -394,21 +394,21 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/c++/9/bits/atomic_lockfree_defines.h \
   /usr/include/c++/9/backward/auto_ptr.h \
   /usr/include/c++/9/atomic \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/lgpl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/lgpl.h \
+  /home/toler/CGAL-5.6/include/CGAL/license.h \
   /usr/include/c++/9/fstream \
   /usr/include/c++/9/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
   /usr/include/c++/9/bits/fstream.tcc \
   /usr/include/c++/9/iostream \
-  /home/toler/CGAL-5.5.2/include/CGAL/assertions.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Uncertain.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/enum.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/Same_uncertainty.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Origin.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Origin_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Profile_counter.h \
+  /home/toler/CGAL-5.6/include/CGAL/assertions.h \
+  /home/toler/CGAL-5.6/include/CGAL/Uncertain.h \
+  /home/toler/CGAL-5.6/include/CGAL/enum.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/Same_uncertainty.h \
+  /home/toler/CGAL-5.6/include/CGAL/Origin.h \
+  /home/toler/CGAL-5.6/include/CGAL/Origin_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Profile_counter.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/c++/9/iomanip \
@@ -424,48 +424,52 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/c++/9/bits/stl_tree.h \
   /usr/include/c++/9/bits/stl_map.h \
   /usr/include/c++/9/bits/stl_multimap.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/disable_warnings.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/enable_warnings.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/assertions_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/assertions_behaviour.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/exceptions.h \
-  /usr/include/boost/lexical_cast.hpp \
-  /usr/include/boost/range/iterator_range_core.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/disable_warnings.h \
+  /home/toler/CGAL-5.6/include/CGAL/enable_warnings.h \
+  /home/toler/CGAL-5.6/include/CGAL/assertions_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/assertions_behaviour.h \
+  /home/toler/CGAL-5.6/include/CGAL/exceptions.h \
+  /home/toler/CGAL-5.6/include/CGAL/tags.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/io_tags.h \
+  /usr/include/boost/mpl/integral_c.hpp \
+  /usr/include/boost/mpl/integral_c_fwd.hpp \
+  /usr/include/boost/mpl/aux_/config/workaround.hpp \
   /usr/include/boost/detail/workaround.hpp \
   /usr/include/boost/config/workaround.hpp \
-  /usr/include/boost/assert.hpp \
-  /usr/include/boost/iterator/iterator_traits.hpp \
-  /usr/include/boost/iterator/iterator_facade.hpp \
-  /usr/include/boost/iterator/interoperable.hpp \
-  /usr/include/boost/mpl/bool.hpp \
-  /usr/include/boost/mpl/bool_fwd.hpp \
   /usr/include/boost/mpl/aux_/adl_barrier.hpp \
   /usr/include/boost/mpl/aux_/config/adl.hpp \
   /usr/include/boost/mpl/aux_/config/msvc.hpp \
   /usr/include/boost/mpl/aux_/config/intel.hpp \
   /usr/include/boost/mpl/aux_/config/gcc.hpp \
-  /usr/include/boost/mpl/aux_/config/workaround.hpp \
-  /usr/include/boost/mpl/integral_c_tag.hpp \
+  /usr/include/boost/mpl/aux_/config/ctps.hpp \
   /usr/include/boost/mpl/aux_/config/static_constant.hpp \
-  /usr/include/boost/mpl/or.hpp \
-  /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp \
-  /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/include/boost/mpl/aux_/integral_wrapper.hpp \
+  /usr/include/boost/mpl/integral_c_tag.hpp \
+  /usr/include/boost/mpl/aux_/static_cast.hpp \
+  /usr/include/boost/mpl/aux_/nttp_decl.hpp \
+  /usr/include/boost/mpl/aux_/config/nttp.hpp \
+  /usr/include/boost/preprocessor/cat.hpp \
+  /usr/include/boost/preprocessor/config/config.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/number_type_basic.h \
+  /home/toler/CGAL-5.6/include/CGAL/number_type_config.h \
+  /home/toler/CGAL-5.6/include/CGAL/Quotient_fwd.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/mpl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Coercion_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/iterator/transform_iterator.hpp \
+  /usr/include/boost/iterator/transform_iterator.hpp \
+  /usr/include/boost/iterator/detail/enable_if.hpp \
+  /usr/include/boost/mpl/identity.hpp \
   /usr/include/boost/mpl/aux_/na_spec.hpp \
   /usr/include/boost/mpl/lambda_fwd.hpp \
   /usr/include/boost/mpl/void_fwd.hpp \
   /usr/include/boost/mpl/aux_/na.hpp \
+  /usr/include/boost/mpl/bool.hpp \
+  /usr/include/boost/mpl/bool_fwd.hpp \
   /usr/include/boost/mpl/aux_/na_fwd.hpp \
-  /usr/include/boost/mpl/aux_/config/ctps.hpp \
   /usr/include/boost/mpl/aux_/config/lambda.hpp \
   /usr/include/boost/mpl/aux_/config/ttp.hpp \
   /usr/include/boost/mpl/int.hpp \
   /usr/include/boost/mpl/int_fwd.hpp \
-  /usr/include/boost/mpl/aux_/nttp_decl.hpp \
-  /usr/include/boost/mpl/aux_/config/nttp.hpp \
-  /usr/include/boost/mpl/aux_/integral_wrapper.hpp \
-  /usr/include/boost/mpl/aux_/static_cast.hpp \
-  /usr/include/boost/preprocessor/cat.hpp \
-  /usr/include/boost/preprocessor/config/config.hpp \
   /usr/include/boost/mpl/aux_/lambda_arity_param.hpp \
   /usr/include/boost/mpl/aux_/template_arity_fwd.hpp \
   /usr/include/boost/mpl/aux_/arity.hpp \
@@ -519,10 +523,35 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/mpl/aux_/config/eti.hpp \
   /usr/include/boost/mpl/aux_/config/overload_resolution.hpp \
   /usr/include/boost/mpl/aux_/lambda_support.hpp \
+  /usr/include/boost/iterator/detail/config_def.hpp \
+  /usr/include/boost/iterator/detail/config_undef.hpp \
+  /usr/include/boost/iterator/iterator_adaptor.hpp \
+  /usr/include/boost/static_assert.hpp \
+  /usr/include/boost/core/use_default.hpp \
+  /usr/include/boost/iterator/iterator_categories.hpp \
+  /usr/include/boost/mpl/eval_if.hpp \
+  /usr/include/boost/mpl/if.hpp \
+  /usr/include/boost/mpl/aux_/value_wknd.hpp \
+  /usr/include/boost/mpl/aux_/config/integral.hpp \
+  /usr/include/boost/mpl/placeholders.hpp \
+  /usr/include/boost/mpl/arg.hpp \
+  /usr/include/boost/mpl/arg_fwd.hpp \
+  /usr/include/boost/mpl/aux_/na_assert.hpp \
+  /usr/include/boost/mpl/assert.hpp \
+  /usr/include/boost/mpl/not.hpp \
+  /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/include/boost/mpl/aux_/yes_no.hpp \
+  /usr/include/boost/mpl/aux_/config/arrays.hpp \
+  /usr/include/boost/mpl/aux_/config/gpu.hpp \
+  /usr/include/boost/mpl/aux_/config/pp_counter.hpp \
+  /usr/include/boost/mpl/aux_/arity_spec.hpp \
+  /usr/include/boost/mpl/aux_/arg_typedef.hpp \
+  /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp \
   /usr/include/boost/mpl/aux_/include_preprocessed.hpp \
   /usr/include/boost/mpl/aux_/config/compiler.hpp \
   /usr/include/boost/preprocessor/stringize.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
   /usr/include/boost/type_traits/is_convertible.hpp \
   /usr/include/boost/type_traits/intrinsics.hpp \
   /usr/include/boost/type_traits/detail/config.hpp \
@@ -539,37 +568,18 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
   /usr/include/boost/type_traits/detail/yes_no_type.hpp \
   /usr/include/boost/type_traits/is_array.hpp \
-  /usr/include/boost/static_assert.hpp \
   /usr/include/boost/type_traits/is_arithmetic.hpp \
   /usr/include/boost/type_traits/is_integral.hpp \
   /usr/include/boost/type_traits/is_floating_point.hpp \
   /usr/include/boost/type_traits/is_abstract.hpp \
   /usr/include/boost/type_traits/add_lvalue_reference.hpp \
   /usr/include/boost/type_traits/add_reference.hpp \
-  /usr/include/boost/iterator/detail/config_def.hpp \
-  /usr/include/boost/iterator/detail/config_undef.hpp \
-  /usr/include/boost/iterator/iterator_categories.hpp \
-  /usr/include/boost/mpl/eval_if.hpp \
-  /usr/include/boost/mpl/if.hpp \
-  /usr/include/boost/mpl/aux_/value_wknd.hpp \
-  /usr/include/boost/mpl/aux_/config/integral.hpp \
-  /usr/include/boost/mpl/identity.hpp \
-  /usr/include/boost/mpl/placeholders.hpp \
-  /usr/include/boost/mpl/arg.hpp \
-  /usr/include/boost/mpl/arg_fwd.hpp \
-  /usr/include/boost/mpl/aux_/na_assert.hpp \
-  /usr/include/boost/mpl/assert.hpp \
-  /usr/include/boost/mpl/not.hpp \
-  /usr/include/boost/mpl/aux_/yes_no.hpp \
-  /usr/include/boost/mpl/aux_/config/arrays.hpp \
-  /usr/include/boost/mpl/aux_/config/gpu.hpp \
-  /usr/include/boost/mpl/aux_/config/pp_counter.hpp \
-  /usr/include/boost/mpl/aux_/arity_spec.hpp \
-  /usr/include/boost/mpl/aux_/arg_typedef.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  /usr/include/boost/iterator/iterator_facade.hpp \
+  /usr/include/boost/iterator/interoperable.hpp \
+  /usr/include/boost/mpl/or.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /usr/include/boost/iterator/iterator_traits.hpp \
   /usr/include/boost/iterator/detail/facade_iterator_category.hpp \
-  /usr/include/boost/core/use_default.hpp \
   /usr/include/boost/mpl/and.hpp \
   /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
   /usr/include/boost/type_traits/is_same.hpp \
@@ -584,7 +594,6 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/type_traits/remove_cv.hpp \
   /usr/include/boost/type_traits/remove_pointer.hpp \
   /usr/include/boost/detail/select_type.hpp \
-  /usr/include/boost/iterator/detail/enable_if.hpp \
   /usr/include/boost/core/addressof.hpp \
   /usr/include/boost/type_traits/add_const.hpp \
   /usr/include/boost/type_traits/add_pointer.hpp \
@@ -631,56 +640,39 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
   /usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
   /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  /usr/include/boost/type_traits/function_traits.hpp \
+  /usr/include/boost/utility/result_of.hpp \
+  /usr/include/boost/preprocessor/iteration/iterate.hpp \
+  /usr/include/boost/preprocessor/slot/slot.hpp \
+  /usr/include/boost/preprocessor/slot/detail/def.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_binary_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp \
+  /usr/include/boost/preprocessor/facilities/intercept.hpp \
+  /usr/include/boost/type_traits/conditional.hpp \
+  /usr/include/boost/type_traits/type_identity.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp \
+  /usr/include/boost/preprocessor/slot/detail/shared.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp \
+  /usr/include/boost/utility/detail/result_of_iterate.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/Algebraic_structure_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/type_traits.h \
   /usr/include/boost/type_traits/is_base_and_derived.hpp \
-  /usr/include/boost/range/functions.hpp \
-  /usr/include/boost/range/begin.hpp \
-  /usr/include/boost/range/config.hpp \
-  /usr/include/boost/range/iterator.hpp \
-  /usr/include/boost/range/range_fwd.hpp \
-  /usr/include/boost/range/mutable_iterator.hpp \
-  /usr/include/boost/range/detail/extract_optional_type.hpp \
-  /usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp \
-  /usr/include/boost/range/const_iterator.hpp \
-  /usr/include/boost/range/end.hpp \
-  /usr/include/boost/range/detail/implementation_help.hpp \
-  /usr/include/boost/range/detail/common.hpp \
-  /usr/include/boost/range/detail/sfinae.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/use.h \
+  /home/toler/CGAL-5.6/include/CGAL/Real_embeddable_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Fraction_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Rational_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/is_convertible.h \
+  /usr/include/gmpxx.h \
+  /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
-  /usr/include/boost/range/size.hpp \
-  /usr/include/boost/range/size_type.hpp \
-  /usr/include/boost/range/difference_type.hpp \
-  /usr/include/boost/range/has_range_iterator.hpp \
-  /usr/include/boost/utility/enable_if.hpp \
-  /usr/include/boost/core/enable_if.hpp \
-  /usr/include/boost/range/concepts.hpp \
-  /usr/include/boost/concept_check.hpp \
-  /usr/include/boost/concept/assert.hpp \
-  /usr/include/boost/concept/detail/general.hpp \
-  /usr/include/boost/concept/detail/backward_compatibility.hpp \
-  /usr/include/boost/concept/detail/has_constraints.hpp \
-  /usr/include/boost/type_traits/conditional.hpp \
-  /usr/include/boost/type_traits/conversion_traits.hpp \
-  /usr/include/boost/concept/usage.hpp \
-  /usr/include/boost/concept/detail/concept_def.hpp \
-  /usr/include/boost/preprocessor/seq/for_each_i.hpp \
-  /usr/include/boost/preprocessor/repetition/for.hpp \
-  /usr/include/boost/preprocessor/repetition/detail/for.hpp \
-  /usr/include/boost/preprocessor/seq/seq.hpp \
-  /usr/include/boost/preprocessor/seq/elem.hpp \
-  /usr/include/boost/preprocessor/seq/size.hpp \
-  /usr/include/boost/preprocessor/seq/detail/is_empty.hpp \
-  /usr/include/boost/preprocessor/seq/enum.hpp \
-  /usr/include/boost/concept/detail/concept_undef.hpp \
-  /usr/include/boost/iterator/iterator_concepts.hpp \
-  /usr/include/boost/limits.hpp \
-  /usr/include/boost/range/value_type.hpp \
-  /usr/include/boost/range/detail/misc_concept.hpp \
-  /usr/include/boost/type_traits/make_unsigned.hpp \
-  /usr/include/boost/type_traits/is_signed.hpp \
-  /usr/include/c++/9/climits \
+  /usr/include/c++/9/cfloat \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
+  /usr/include/x86_64-linux-gnu/gmp.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
   /usr/include/limits.h \
@@ -690,90 +682,14 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/boost/type_traits/is_unsigned.hpp \
-  /usr/include/boost/type_traits/add_volatile.hpp \
-  /usr/include/boost/range/detail/has_member_size.hpp \
-  /usr/include/boost/cstdint.hpp \
-  /usr/include/boost/utility.hpp \
-  /usr/include/boost/utility/base_from_member.hpp \
-  /usr/include/boost/preprocessor/repetition/enum_binary_params.hpp \
-  /usr/include/boost/preprocessor/repetition/repeat_from_to.hpp \
-  /usr/include/boost/utility/binary.hpp \
-  /usr/include/boost/preprocessor/control/deduce_d.hpp \
-  /usr/include/boost/preprocessor/seq/cat.hpp \
-  /usr/include/boost/preprocessor/seq/fold_left.hpp \
-  /usr/include/boost/preprocessor/seq/transform.hpp \
-  /usr/include/boost/preprocessor/arithmetic/mod.hpp \
-  /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp \
-  /usr/include/boost/preprocessor/comparison/less_equal.hpp \
-  /usr/include/boost/preprocessor/logical/not.hpp \
-  /usr/include/boost/utility/identity_type.hpp \
-  /usr/include/boost/type_traits/function_traits.hpp \
-  /usr/include/boost/core/checked_delete.hpp \
-  /usr/include/boost/core/noncopyable.hpp \
-  /usr/include/boost/range/distance.hpp \
-  /usr/include/boost/iterator/distance.hpp \
-  /usr/include/boost/range/empty.hpp \
-  /usr/include/boost/range/rbegin.hpp \
-  /usr/include/boost/range/reverse_iterator.hpp \
-  /usr/include/boost/iterator/reverse_iterator.hpp \
-  /usr/include/boost/iterator/iterator_adaptor.hpp \
-  /usr/include/boost/range/rend.hpp \
-  /usr/include/boost/range/algorithm/equal.hpp \
-  /usr/include/boost/range/detail/safe_bool.hpp \
-  /usr/include/boost/next_prior.hpp \
-  /usr/include/boost/type_traits/has_plus.hpp \
-  /usr/include/boost/type_traits/detail/has_binary_operator.hpp \
-  /usr/include/boost/type_traits/make_void.hpp \
-  /usr/include/boost/type_traits/has_plus_assign.hpp \
-  /usr/include/boost/type_traits/has_minus.hpp \
-  /usr/include/boost/type_traits/has_minus_assign.hpp \
-  /usr/include/boost/iterator/advance.hpp \
-  /usr/include/boost/lexical_cast/bad_lexical_cast.hpp \
-  /usr/include/boost/throw_exception.hpp \
-  /usr/include/boost/exception/exception.hpp \
-  /usr/include/boost/current_function.hpp \
-  /usr/include/boost/lexical_cast/try_lexical_convert.hpp \
-  /usr/include/boost/type_traits/type_identity.hpp \
-  /usr/include/boost/lexical_cast/detail/is_character.hpp \
-  /usr/include/boost/lexical_cast/detail/converter_numeric.hpp \
-  /usr/include/boost/type_traits/is_base_of.hpp \
-  /usr/include/boost/type_traits/is_float.hpp \
-  /usr/include/boost/numeric/conversion/cast.hpp \
-  /usr/include/boost/type.hpp \
-  /usr/include/boost/numeric/conversion/converter.hpp \
-  /usr/include/boost/numeric/conversion/conversion_traits.hpp \
-  /usr/include/boost/numeric/conversion/detail/conversion_traits.hpp \
-  /usr/include/boost/numeric/conversion/detail/meta.hpp \
-  /usr/include/boost/mpl/equal_to.hpp \
-  /usr/include/boost/mpl/aux_/comparison_op.hpp \
-  /usr/include/boost/mpl/aux_/numeric_op.hpp \
-  /usr/include/boost/mpl/numeric_cast.hpp \
-  /usr/include/boost/mpl/tag.hpp \
-  /usr/include/boost/mpl/aux_/has_tag.hpp \
-  /usr/include/boost/mpl/aux_/numeric_cast_utils.hpp \
-  /usr/include/boost/mpl/aux_/config/forwarding.hpp \
-  /usr/include/boost/mpl/aux_/msvc_eti_base.hpp \
-  /usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp \
-  /usr/include/boost/numeric/conversion/detail/int_float_mixture.hpp \
-  /usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp \
-  /usr/include/boost/mpl/integral_c.hpp \
-  /usr/include/boost/mpl/integral_c_fwd.hpp \
-  /usr/include/boost/numeric/conversion/detail/sign_mixture.hpp \
-  /usr/include/boost/numeric/conversion/sign_mixture_enum.hpp \
-  /usr/include/boost/numeric/conversion/detail/udt_builtin_mixture.hpp \
-  /usr/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp \
-  /usr/include/boost/numeric/conversion/detail/is_subranged.hpp \
-  /usr/include/boost/mpl/multiplies.hpp \
-  /usr/include/boost/mpl/times.hpp \
-  /usr/include/boost/mpl/aux_/arithmetic_op.hpp \
-  /usr/include/boost/mpl/aux_/largest_int.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp \
-  /usr/include/boost/mpl/less.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/less.hpp \
-  /usr/include/boost/numeric/conversion/converter_policies.hpp \
-  /usr/include/boost/config/no_tr1/cmath.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/Scalar_factor_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Algebraic_extension_traits.h \
+  /usr/include/c++/9/numeric \
+  /usr/include/c++/9/bits/stl_numeric.h \
+  /home/toler/CGAL-5.6/include/CGAL/Needs_parens_as_product.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/io.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/Color.h \
+  /home/toler/CGAL-5.6/include/CGAL/array.h \
   /usr/include/c++/9/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -786,232 +702,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/mathinline.h \
-  /usr/include/boost/numeric/conversion/detail/converter.hpp \
-  /usr/include/boost/numeric/conversion/bounds.hpp \
-  /usr/include/boost/numeric/conversion/detail/bounds.hpp \
-  /usr/include/boost/numeric/conversion/numeric_cast_traits.hpp \
-  /usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp \
-  /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp \
-  /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp \
-  /usr/include/boost/lexical_cast/detail/converter_lexical.hpp \
-  /usr/include/boost/type_traits/has_left_shift.hpp \
-  /usr/include/boost/type_traits/has_right_shift.hpp \
-  /usr/include/boost/detail/lcast_precision.hpp \
-  /usr/include/boost/integer_traits.hpp \
-  /usr/include/boost/lexical_cast/detail/widest_char.hpp \
-  /usr/include/boost/array.hpp \
-  /usr/include/boost/swap.hpp \
-  /usr/include/boost/core/swap.hpp \
-  /usr/include/boost/detail/iterator.hpp \
-  /usr/include/boost/container/container_fwd.hpp \
-  /usr/include/boost/container/detail/std_fwd.hpp \
-  /usr/include/boost/move/detail/std_ns_begin.hpp \
-  /usr/include/boost/move/detail/std_ns_end.hpp \
-  /usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp \
-  /usr/include/c++/9/cstring \
-  /usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp \
-  /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp \
-  /usr/include/boost/noncopyable.hpp \
-  /usr/include/boost/lexical_cast/detail/inf_nan.hpp \
-  /usr/include/boost/math/special_functions/sign.hpp \
-  /usr/include/boost/math/tools/config.hpp \
-  /usr/include/c++/9/cfloat \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
-  /usr/include/boost/math/tools/user.hpp \
-  /usr/include/boost/math/special_functions/math_fwd.hpp \
-  /usr/include/c++/9/vector \
-  /usr/include/c++/9/bits/stl_vector.h \
-  /usr/include/c++/9/bits/stl_bvector.h \
-  /usr/include/c++/9/bits/vector.tcc \
-  /usr/include/boost/math/special_functions/detail/round_fwd.hpp \
-  /usr/include/boost/math/tools/promotion.hpp \
-  /usr/include/boost/math/policies/policy.hpp \
-  /usr/include/boost/mpl/list.hpp \
-  /usr/include/boost/mpl/limits/list.hpp \
-  /usr/include/boost/mpl/list/list20.hpp \
-  /usr/include/boost/mpl/list/list10.hpp \
-  /usr/include/boost/mpl/list/list0.hpp \
-  /usr/include/boost/mpl/long.hpp \
-  /usr/include/boost/mpl/long_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/push_front.hpp \
-  /usr/include/boost/mpl/push_front_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/item.hpp \
-  /usr/include/boost/mpl/list/aux_/tag.hpp \
-  /usr/include/boost/mpl/list/aux_/pop_front.hpp \
-  /usr/include/boost/mpl/pop_front_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/push_back.hpp \
-  /usr/include/boost/mpl/push_back_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/front.hpp \
-  /usr/include/boost/mpl/front_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/clear.hpp \
-  /usr/include/boost/mpl/clear_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/O1_size.hpp \
-  /usr/include/boost/mpl/O1_size_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/size.hpp \
-  /usr/include/boost/mpl/size_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/empty.hpp \
-  /usr/include/boost/mpl/empty_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/begin_end.hpp \
-  /usr/include/boost/mpl/begin_end_fwd.hpp \
-  /usr/include/boost/mpl/list/aux_/iterator.hpp \
-  /usr/include/boost/mpl/iterator_tags.hpp \
-  /usr/include/boost/mpl/deref.hpp \
-  /usr/include/boost/mpl/aux_/msvc_type.hpp \
-  /usr/include/boost/mpl/aux_/lambda_spec.hpp \
-  /usr/include/boost/mpl/list/aux_/include_preprocessed.hpp \
-  /usr/include/boost/mpl/list/aux_/preprocessed/plain/list10.hpp \
-  /usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/list.hpp \
-  /usr/include/boost/mpl/contains.hpp \
-  /usr/include/boost/mpl/contains_fwd.hpp \
-  /usr/include/boost/mpl/sequence_tag.hpp \
-  /usr/include/boost/mpl/sequence_tag_fwd.hpp \
-  /usr/include/boost/mpl/aux_/has_begin.hpp \
-  /usr/include/boost/mpl/aux_/contains_impl.hpp \
-  /usr/include/boost/mpl/begin_end.hpp \
-  /usr/include/boost/mpl/aux_/begin_end_impl.hpp \
-  /usr/include/boost/mpl/aux_/traits_lambda_spec.hpp \
-  /usr/include/boost/mpl/find.hpp \
-  /usr/include/boost/mpl/find_if.hpp \
-  /usr/include/boost/mpl/aux_/find_if_pred.hpp \
-  /usr/include/boost/mpl/aux_/iter_apply.hpp \
-  /usr/include/boost/mpl/iter_fold_if.hpp \
-  /usr/include/boost/mpl/logical.hpp \
-  /usr/include/boost/mpl/pair.hpp \
-  /usr/include/boost/mpl/aux_/iter_fold_if_impl.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp \
-  /usr/include/boost/mpl/same_as.hpp \
-  /usr/include/boost/mpl/remove_if.hpp \
-  /usr/include/boost/mpl/fold.hpp \
-  /usr/include/boost/mpl/O1_size.hpp \
-  /usr/include/boost/mpl/aux_/O1_size_impl.hpp \
-  /usr/include/boost/mpl/aux_/has_size.hpp \
-  /usr/include/boost/mpl/aux_/fold_impl.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp \
-  /usr/include/boost/mpl/reverse_fold.hpp \
-  /usr/include/boost/mpl/aux_/reverse_fold_impl.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp \
-  /usr/include/boost/mpl/aux_/inserter_algorithm.hpp \
-  /usr/include/boost/mpl/back_inserter.hpp \
-  /usr/include/boost/mpl/push_back.hpp \
-  /usr/include/boost/mpl/aux_/push_back_impl.hpp \
-  /usr/include/boost/mpl/inserter.hpp \
-  /usr/include/boost/mpl/front_inserter.hpp \
-  /usr/include/boost/mpl/push_front.hpp \
-  /usr/include/boost/mpl/aux_/push_front_impl.hpp \
-  /usr/include/boost/mpl/clear.hpp \
-  /usr/include/boost/mpl/aux_/clear_impl.hpp \
-  /usr/include/boost/mpl/vector.hpp \
-  /usr/include/boost/mpl/limits/vector.hpp \
-  /usr/include/boost/mpl/vector/vector20.hpp \
-  /usr/include/boost/mpl/vector/vector10.hpp \
-  /usr/include/boost/mpl/vector/vector0.hpp \
-  /usr/include/boost/mpl/vector/aux_/at.hpp \
-  /usr/include/boost/mpl/at_fwd.hpp \
-  /usr/include/boost/mpl/vector/aux_/tag.hpp \
-  /usr/include/boost/mpl/aux_/config/typeof.hpp \
-  /usr/include/boost/mpl/vector/aux_/front.hpp \
-  /usr/include/boost/mpl/vector/aux_/push_front.hpp \
-  /usr/include/boost/mpl/vector/aux_/item.hpp \
-  /usr/include/boost/mpl/vector/aux_/pop_front.hpp \
-  /usr/include/boost/mpl/vector/aux_/push_back.hpp \
-  /usr/include/boost/mpl/vector/aux_/pop_back.hpp \
-  /usr/include/boost/mpl/pop_back_fwd.hpp \
-  /usr/include/boost/mpl/vector/aux_/back.hpp \
-  /usr/include/boost/mpl/back_fwd.hpp \
-  /usr/include/boost/mpl/vector/aux_/clear.hpp \
-  /usr/include/boost/mpl/vector/aux_/vector0.hpp \
-  /usr/include/boost/mpl/vector/aux_/iterator.hpp \
-  /usr/include/boost/mpl/plus.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp \
-  /usr/include/boost/mpl/minus.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp \
-  /usr/include/boost/mpl/advance_fwd.hpp \
-  /usr/include/boost/mpl/distance_fwd.hpp \
-  /usr/include/boost/mpl/prior.hpp \
-  /usr/include/boost/mpl/vector/aux_/O1_size.hpp \
-  /usr/include/boost/mpl/vector/aux_/size.hpp \
-  /usr/include/boost/mpl/vector/aux_/empty.hpp \
-  /usr/include/boost/mpl/vector/aux_/begin_end.hpp \
-  /usr/include/boost/mpl/vector/aux_/include_preprocessed.hpp \
-  /usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp \
-  /usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp \
-  /usr/include/boost/mpl/at.hpp \
-  /usr/include/boost/mpl/aux_/at_impl.hpp \
-  /usr/include/boost/mpl/advance.hpp \
-  /usr/include/boost/mpl/negate.hpp \
-  /usr/include/boost/mpl/aux_/advance_forward.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp \
-  /usr/include/boost/mpl/aux_/advance_backward.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp \
-  /usr/include/boost/mpl/size.hpp \
-  /usr/include/boost/mpl/aux_/size_impl.hpp \
-  /usr/include/boost/mpl/distance.hpp \
-  /usr/include/boost/mpl/iter_fold.hpp \
-  /usr/include/boost/mpl/aux_/iter_fold_impl.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp \
-  /usr/include/boost/mpl/iterator_range.hpp \
-  /usr/include/boost/mpl/comparison.hpp \
-  /usr/include/boost/mpl/not_equal_to.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/not_equal_to.hpp \
-  /usr/include/boost/mpl/greater.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater.hpp \
-  /usr/include/boost/mpl/less_equal.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/less_equal.hpp \
-  /usr/include/boost/mpl/greater_equal.hpp \
-  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp \
-  /usr/include/c++/9/stdlib.h \
-  /usr/include/c++/9/math.h \
-  /usr/include/boost/config/no_tr1/complex.hpp \
-  /usr/include/c++/9/complex \
-  /usr/include/boost/math/special_functions/detail/fp_traits.hpp \
-  /usr/include/boost/math/special_functions/fpclassify.hpp \
-  /usr/include/boost/math/tools/real_cast.hpp \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/quadmath.h \
-  /usr/include/boost/integer.hpp \
-  /usr/include/boost/integer_fwd.hpp \
-  /usr/include/boost/detail/basic_pointerbuf.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/tags.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/io_tags.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/number_type_basic.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/number_type_config.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Quotient_fwd.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/mpl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Coercion_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/iterator/transform_iterator.hpp \
-  /usr/include/boost/iterator/transform_iterator.hpp \
-  /usr/include/boost/utility/result_of.hpp \
-  /usr/include/boost/preprocessor/iteration/iterate.hpp \
-  /usr/include/boost/preprocessor/slot/slot.hpp \
-  /usr/include/boost/preprocessor/slot/detail/def.hpp \
-  /usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp \
-  /usr/include/boost/preprocessor/facilities/intercept.hpp \
-  /usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp \
-  /usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp \
-  /usr/include/boost/preprocessor/slot/detail/shared.hpp \
-  /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp \
-  /usr/include/boost/utility/detail/result_of_iterate.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Algebraic_structure_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/type_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/use.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Real_embeddable_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Fraction_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Rational_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/is_convertible.h \
-  /usr/include/gmpxx.h \
-  /usr/include/x86_64-linux-gnu/gmp.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Scalar_factor_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Algebraic_extension_traits.h \
-  /usr/include/c++/9/numeric \
-  /usr/include/c++/9/bits/stl_numeric.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Needs_parens_as_product.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/io.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/Color.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/array.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/utils_classes.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/utils.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/FPU.h \
+  /home/toler/CGAL-5.6/include/CGAL/utils_classes.h \
+  /home/toler/CGAL-5.6/include/CGAL/utils.h \
+  /home/toler/CGAL-5.6/include/CGAL/FPU.h \
   /usr/include/c++/9/fenv.h \
   /usr/include/fenv.h \
   /usr/include/x86_64-linux-gnu/bits/fenv.h \
@@ -1019,43 +712,48 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
+  /usr/include/c++/9/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/test_FPU_rounding_mode_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/float.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/double.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/number_utils.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/long_double.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Interval_nt.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Interval_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/test_FPU_rounding_mode_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/float.h \
+  /home/toler/CGAL-5.6/include/CGAL/double.h \
+  /home/toler/CGAL-5.6/include/CGAL/number_utils.h \
+  /usr/include/c++/9/math.h \
+  /home/toler/CGAL-5.6/include/CGAL/long_double.h \
+  /home/toler/CGAL-5.6/include/CGAL/Interval_nt.h \
+  /home/toler/CGAL-5.6/include/CGAL/Interval_traits.h \
   /usr/include/boost/operators.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/int.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Modular_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Modular_arithmetic/Residue_type.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/tss.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/long_long.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/gmpxx.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/mpz_class.h \
+  /home/toler/CGAL-5.6/include/CGAL/int.h \
+  /home/toler/CGAL-5.6/include/CGAL/Modular_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Modular_arithmetic/Residue_type.h \
+  /home/toler/CGAL-5.6/include/CGAL/tss.h \
+  /home/toler/CGAL-5.6/include/CGAL/long_long.h \
+  /home/toler/CGAL-5.6/include/CGAL/gmpxx.h \
+  /home/toler/CGAL-5.6/include/CGAL/mpz_class.h \
   /usr/include/mpfr.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/gmpxx_coercion_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Residue.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Quotient.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/mpq_class.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/GMPXX_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/number_utils_classes.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/kernel_basic.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/kernel_config.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/kernel_assertions.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/aff_transformation_tags.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/aff_transformation_tags_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Object.h \
+  /home/toler/CGAL-5.6/include/CGAL/gmpxx_coercion_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Residue.h \
+  /home/toler/CGAL-5.6/include/CGAL/Quotient.h \
+  /home/toler/CGAL-5.6/include/CGAL/mpq_class.h \
+  /home/toler/CGAL-5.6/include/CGAL/GMPXX_arithmetic_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
+  /home/toler/CGAL-5.6/include/CGAL/Get_arithmetic_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/number_utils_classes.h \
+  /home/toler/CGAL-5.6/include/CGAL/kernel_basic.h \
+  /home/toler/CGAL-5.6/include/CGAL/kernel_config.h \
+  /home/toler/CGAL-5.6/include/CGAL/kernel_assertions.h \
+  /home/toler/CGAL-5.6/include/CGAL/aff_transformation_tags.h \
+  /home/toler/CGAL-5.6/include/CGAL/aff_transformation_tags_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Object.h \
   /usr/include/boost/variant.hpp \
   /usr/include/boost/variant/variant.hpp \
   /usr/include/boost/type_index.hpp \
   /usr/include/boost/type_index/stl_type_index.hpp \
   /usr/include/boost/type_index/type_index_facade.hpp \
   /usr/include/boost/container_hash/hash_fwd.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/boost/current_function.hpp \
   /usr/include/boost/core/demangle.hpp \
   /usr/include/c++/9/cxxabi.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/cxxabi_tweaks.h \
@@ -1067,7 +765,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/preprocessor/enum_params.hpp \
   /usr/include/boost/preprocessor/enum_shifted_params.hpp \
   /usr/include/boost/variant/detail/substitute_fwd.hpp \
+  /usr/include/boost/preprocessor/seq/size.hpp \
   /usr/include/boost/variant/detail/backup_holder.hpp \
+  /usr/include/boost/assert.hpp \
   /usr/include/boost/variant/detail/enable_recursive_fwd.hpp \
   /usr/include/boost/variant/detail/forced_return.hpp \
   /usr/include/boost/variant/detail/initializer.hpp \
@@ -1096,6 +796,8 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/move/detail/type_traits.hpp \
   /usr/include/boost/move/iterator.hpp \
   /usr/include/boost/move/detail/iterator_traits.hpp \
+  /usr/include/boost/move/detail/std_ns_begin.hpp \
+  /usr/include/boost/move/detail/std_ns_end.hpp \
   /usr/include/boost/move/algorithm.hpp \
   /usr/include/boost/move/algo/move.hpp \
   /usr/include/boost/move/detail/iterator_to_raw_pointer.hpp \
@@ -1103,7 +805,60 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/move/detail/pointer_element.hpp \
   /usr/include/boost/core/no_exceptions_support.hpp \
   /usr/include/boost/move/adl_move_swap.hpp \
+  /usr/include/boost/mpl/iter_fold.hpp \
+  /usr/include/boost/mpl/begin_end.hpp \
+  /usr/include/boost/mpl/begin_end_fwd.hpp \
+  /usr/include/boost/mpl/aux_/begin_end_impl.hpp \
+  /usr/include/boost/mpl/sequence_tag_fwd.hpp \
+  /usr/include/boost/mpl/aux_/has_begin.hpp \
+  /usr/include/boost/mpl/aux_/traits_lambda_spec.hpp \
+  /usr/include/boost/mpl/sequence_tag.hpp \
+  /usr/include/boost/mpl/aux_/has_tag.hpp \
+  /usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp \
+  /usr/include/boost/mpl/O1_size.hpp \
+  /usr/include/boost/mpl/O1_size_fwd.hpp \
+  /usr/include/boost/mpl/aux_/O1_size_impl.hpp \
+  /usr/include/boost/mpl/long.hpp \
+  /usr/include/boost/mpl/long_fwd.hpp \
+  /usr/include/boost/mpl/aux_/has_size.hpp \
+  /usr/include/boost/mpl/aux_/config/forwarding.hpp \
+  /usr/include/boost/mpl/aux_/iter_fold_impl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp \
+  /usr/include/boost/mpl/deref.hpp \
+  /usr/include/boost/mpl/aux_/msvc_type.hpp \
+  /usr/include/boost/mpl/pair.hpp \
+  /usr/include/boost/mpl/aux_/msvc_eti_base.hpp \
   /usr/include/boost/variant/detail/make_variant_list.hpp \
+  /usr/include/boost/mpl/list.hpp \
+  /usr/include/boost/mpl/limits/list.hpp \
+  /usr/include/boost/mpl/list/list20.hpp \
+  /usr/include/boost/mpl/list/list10.hpp \
+  /usr/include/boost/mpl/list/list0.hpp \
+  /usr/include/boost/mpl/list/aux_/push_front.hpp \
+  /usr/include/boost/mpl/push_front_fwd.hpp \
+  /usr/include/boost/mpl/list/aux_/item.hpp \
+  /usr/include/boost/mpl/list/aux_/tag.hpp \
+  /usr/include/boost/mpl/list/aux_/pop_front.hpp \
+  /usr/include/boost/mpl/pop_front_fwd.hpp \
+  /usr/include/boost/mpl/list/aux_/push_back.hpp \
+  /usr/include/boost/mpl/push_back_fwd.hpp \
+  /usr/include/boost/mpl/list/aux_/front.hpp \
+  /usr/include/boost/mpl/front_fwd.hpp \
+  /usr/include/boost/mpl/list/aux_/clear.hpp \
+  /usr/include/boost/mpl/clear_fwd.hpp \
+  /usr/include/boost/mpl/list/aux_/O1_size.hpp \
+  /usr/include/boost/mpl/list/aux_/size.hpp \
+  /usr/include/boost/mpl/size_fwd.hpp \
+  /usr/include/boost/mpl/list/aux_/empty.hpp \
+  /usr/include/boost/mpl/empty_fwd.hpp \
+  /usr/include/boost/mpl/list/aux_/begin_end.hpp \
+  /usr/include/boost/mpl/list/aux_/iterator.hpp \
+  /usr/include/boost/mpl/iterator_tags.hpp \
+  /usr/include/boost/mpl/aux_/lambda_spec.hpp \
+  /usr/include/boost/mpl/list/aux_/include_preprocessed.hpp \
+  /usr/include/boost/mpl/list/aux_/preprocessed/plain/list10.hpp \
+  /usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/list.hpp \
   /usr/include/boost/variant/detail/over_sequence.hpp \
   /usr/include/boost/variant/detail/visitation_impl.hpp \
   /usr/include/boost/variant/detail/cast_storage.hpp \
@@ -1111,9 +866,30 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/variant/static_visitor.hpp \
   /usr/include/boost/variant/apply_visitor.hpp \
   /usr/include/boost/variant/detail/apply_visitor_unary.hpp \
+  /usr/include/boost/mpl/distance.hpp \
+  /usr/include/boost/mpl/distance_fwd.hpp \
+  /usr/include/boost/mpl/iterator_range.hpp \
+  /usr/include/boost/mpl/tag.hpp \
+  /usr/include/boost/mpl/advance.hpp \
+  /usr/include/boost/mpl/advance_fwd.hpp \
+  /usr/include/boost/mpl/less.hpp \
+  /usr/include/boost/mpl/aux_/comparison_op.hpp \
+  /usr/include/boost/mpl/aux_/numeric_op.hpp \
+  /usr/include/boost/mpl/numeric_cast.hpp \
+  /usr/include/boost/mpl/aux_/numeric_cast_utils.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/less.hpp \
+  /usr/include/boost/mpl/negate.hpp \
+  /usr/include/boost/mpl/aux_/advance_forward.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp \
+  /usr/include/boost/mpl/aux_/advance_backward.hpp \
+  /usr/include/boost/mpl/prior.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp \
+  /usr/include/boost/mpl/size.hpp \
+  /usr/include/boost/mpl/aux_/size_impl.hpp \
   /usr/include/boost/utility/declval.hpp \
   /usr/include/boost/type_traits/copy_cv_ref.hpp \
   /usr/include/boost/type_traits/copy_cv.hpp \
+  /usr/include/boost/type_traits/add_volatile.hpp \
   /usr/include/boost/type_traits/copy_reference.hpp \
   /usr/include/boost/variant/detail/has_result_type.hpp \
   /usr/include/boost/variant/detail/apply_visitor_binary.hpp \
@@ -1133,13 +909,28 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/type_traits/has_trivial_copy.hpp \
   /usr/include/boost/type_traits/has_trivial_destructor.hpp \
   /usr/include/boost/integer/common_factor_ct.hpp \
+  /usr/include/boost/integer_fwd.hpp \
+  /usr/include/c++/9/climits \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/cstdint.hpp \
   /usr/include/boost/type_traits/has_nothrow_constructor.hpp \
   /usr/include/boost/type_traits/is_nothrow_move_assignable.hpp \
   /usr/include/boost/type_traits/has_trivial_move_assign.hpp \
   /usr/include/boost/type_traits/is_assignable.hpp \
   /usr/include/boost/type_traits/has_nothrow_assign.hpp \
+  /usr/include/boost/utility/enable_if.hpp \
   /usr/include/boost/mpl/empty.hpp \
   /usr/include/boost/mpl/aux_/empty_impl.hpp \
+  /usr/include/boost/mpl/find_if.hpp \
+  /usr/include/boost/mpl/aux_/find_if_pred.hpp \
+  /usr/include/boost/mpl/aux_/iter_apply.hpp \
+  /usr/include/boost/mpl/iter_fold_if.hpp \
+  /usr/include/boost/mpl/logical.hpp \
+  /usr/include/boost/mpl/aux_/iter_fold_if_impl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp \
+  /usr/include/boost/mpl/fold.hpp \
+  /usr/include/boost/mpl/aux_/fold_impl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp \
   /usr/include/boost/mpl/front.hpp \
   /usr/include/boost/mpl/aux_/front_impl.hpp \
   /usr/include/boost/mpl/insert_range.hpp \
@@ -1148,12 +939,24 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/mpl/insert.hpp \
   /usr/include/boost/mpl/insert_fwd.hpp \
   /usr/include/boost/mpl/aux_/insert_impl.hpp \
+  /usr/include/boost/mpl/reverse_fold.hpp \
+  /usr/include/boost/mpl/aux_/reverse_fold_impl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp \
+  /usr/include/boost/mpl/clear.hpp \
+  /usr/include/boost/mpl/aux_/clear_impl.hpp \
+  /usr/include/boost/mpl/push_front.hpp \
+  /usr/include/boost/mpl/aux_/push_front_impl.hpp \
   /usr/include/boost/mpl/joint_view.hpp \
   /usr/include/boost/mpl/aux_/joint_iter.hpp \
+  /usr/include/boost/mpl/plus.hpp \
+  /usr/include/boost/mpl/aux_/arithmetic_op.hpp \
+  /usr/include/boost/mpl/aux_/largest_int.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp \
   /usr/include/boost/mpl/aux_/iter_push_front.hpp \
   /usr/include/boost/type_traits/same_traits.hpp \
   /usr/include/boost/mpl/is_sequence.hpp \
   /usr/include/boost/mpl/max_element.hpp \
+  /usr/include/boost/mpl/same_as.hpp \
   /usr/include/boost/mpl/size_t.hpp \
   /usr/include/boost/mpl/size_t_fwd.hpp \
   /usr/include/boost/mpl/sizeof.hpp \
@@ -1161,6 +964,12 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/mpl/pair_view.hpp \
   /usr/include/boost/mpl/iterator_category.hpp \
   /usr/include/boost/mpl/min_max.hpp \
+  /usr/include/boost/mpl/aux_/inserter_algorithm.hpp \
+  /usr/include/boost/mpl/back_inserter.hpp \
+  /usr/include/boost/mpl/push_back.hpp \
+  /usr/include/boost/mpl/aux_/push_back_impl.hpp \
+  /usr/include/boost/mpl/inserter.hpp \
+  /usr/include/boost/mpl/front_inserter.hpp \
   /usr/include/boost/variant/detail/variant_io.hpp \
   /usr/include/boost/variant/recursive_variant.hpp \
   /usr/include/boost/variant/detail/enable_recursive.hpp \
@@ -1169,6 +978,7 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/preprocessor/iterate.hpp \
   /usr/include/boost/variant/recursive_wrapper.hpp \
   /usr/include/boost/checked_delete.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
   /usr/include/boost/mpl/equal.hpp \
   /usr/include/boost/variant/get.hpp \
   /usr/include/boost/utility/addressof.hpp \
@@ -1178,10 +988,13 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/optional.hpp \
   /usr/include/boost/optional/optional.hpp \
   /usr/include/boost/core/explicit_operator_bool.hpp \
+  /usr/include/boost/core/swap.hpp \
   /usr/include/boost/optional/bad_optional_access.hpp \
+  /usr/include/boost/type.hpp \
   /usr/include/boost/type_traits/decay.hpp \
   /usr/include/boost/type_traits/remove_bounds.hpp \
   /usr/include/boost/type_traits/remove_extent.hpp \
+  /usr/include/boost/type_traits/is_base_of.hpp \
   /usr/include/boost/none.hpp \
   /usr/include/boost/none_t.hpp \
   /usr/include/boost/utility/compare_pointees.hpp \
@@ -1194,58 +1007,128 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/optional/detail/optional_relops.hpp \
   /usr/include/boost/optional/detail/optional_swap.hpp \
   /usr/include/boost/any.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel_traits_fwd.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/basic_classes.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Bbox_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Dimension.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel_traits_fwd.h \
+  /home/toler/CGAL-5.6/include/CGAL/basic_classes.h \
+  /home/toler/CGAL-5.6/include/CGAL/Bbox_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Dimension.h \
   /usr/include/boost/math/special_functions/next.hpp \
+  /usr/include/boost/math/special_functions/math_fwd.hpp \
+  /usr/include/c++/9/vector \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/include/boost/math/special_functions/detail/round_fwd.hpp \
+  /usr/include/boost/math/tools/promotion.hpp \
+  /usr/include/boost/math/tools/config.hpp \
+  /usr/include/boost/config/no_tr1/cmath.hpp \
+  /usr/include/boost/math/tools/user.hpp \
+  /usr/include/boost/math/policies/policy.hpp \
+  /usr/include/boost/mpl/contains.hpp \
+  /usr/include/boost/mpl/contains_fwd.hpp \
+  /usr/include/boost/mpl/aux_/contains_impl.hpp \
+  /usr/include/boost/mpl/find.hpp \
+  /usr/include/boost/mpl/remove_if.hpp \
+  /usr/include/boost/mpl/vector.hpp \
+  /usr/include/boost/mpl/limits/vector.hpp \
+  /usr/include/boost/mpl/vector/vector20.hpp \
+  /usr/include/boost/mpl/vector/vector10.hpp \
+  /usr/include/boost/mpl/vector/vector0.hpp \
+  /usr/include/boost/mpl/vector/aux_/at.hpp \
+  /usr/include/boost/mpl/at_fwd.hpp \
+  /usr/include/boost/mpl/vector/aux_/tag.hpp \
+  /usr/include/boost/mpl/aux_/config/typeof.hpp \
+  /usr/include/boost/mpl/vector/aux_/front.hpp \
+  /usr/include/boost/mpl/vector/aux_/push_front.hpp \
+  /usr/include/boost/mpl/vector/aux_/item.hpp \
+  /usr/include/boost/mpl/vector/aux_/pop_front.hpp \
+  /usr/include/boost/mpl/vector/aux_/push_back.hpp \
+  /usr/include/boost/mpl/vector/aux_/pop_back.hpp \
+  /usr/include/boost/mpl/pop_back_fwd.hpp \
+  /usr/include/boost/mpl/vector/aux_/back.hpp \
+  /usr/include/boost/mpl/back_fwd.hpp \
+  /usr/include/boost/mpl/vector/aux_/clear.hpp \
+  /usr/include/boost/mpl/vector/aux_/vector0.hpp \
+  /usr/include/boost/mpl/vector/aux_/iterator.hpp \
+  /usr/include/boost/mpl/minus.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp \
+  /usr/include/boost/mpl/vector/aux_/O1_size.hpp \
+  /usr/include/boost/mpl/vector/aux_/size.hpp \
+  /usr/include/boost/mpl/vector/aux_/empty.hpp \
+  /usr/include/boost/mpl/vector/aux_/begin_end.hpp \
+  /usr/include/boost/mpl/vector/aux_/include_preprocessed.hpp \
+  /usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp \
+  /usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp \
+  /usr/include/boost/mpl/at.hpp \
+  /usr/include/boost/mpl/aux_/at_impl.hpp \
+  /usr/include/boost/mpl/comparison.hpp \
+  /usr/include/boost/mpl/equal_to.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp \
+  /usr/include/boost/mpl/not_equal_to.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/not_equal_to.hpp \
+  /usr/include/boost/mpl/greater.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater.hpp \
+  /usr/include/boost/mpl/less_equal.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/less_equal.hpp \
+  /usr/include/boost/mpl/greater_equal.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp \
+  /usr/include/boost/config/no_tr1/complex.hpp \
+  /usr/include/c++/9/complex \
   /usr/include/boost/math/policies/error_handling.hpp \
   /usr/include/boost/math/tools/precision.hpp \
+  /usr/include/boost/math/special_functions/fpclassify.hpp \
+  /usr/include/boost/math/tools/real_cast.hpp \
+  /usr/include/boost/math/special_functions/detail/fp_traits.hpp \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/quadmath.h \
+  /usr/include/boost/math/special_functions/sign.hpp \
   /usr/include/boost/math/special_functions/trunc.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Bbox_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/representation_tags.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/user_classes.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/Return_base_tag.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Weighted_point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Vector_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Direction_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Iso_rectangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Circle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Conic_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/Conic_misc.h \
+  /home/toler/CGAL-5.6/include/CGAL/Bbox_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/representation_tags.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/user_classes.h \
+  /home/toler/CGAL-5.6/include/CGAL/Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/Return_base_tag.h \
+  /home/toler/CGAL-5.6/include/CGAL/Weighted_point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Vector_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Direction_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Iso_rectangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Circle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Conic_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/Conic_misc.h \
   /usr/include/boost/math/special_functions/cbrt.hpp \
   /usr/include/boost/math/tools/rational.hpp \
+  /usr/include/boost/array.hpp \
+  /usr/include/boost/swap.hpp \
+  /usr/include/boost/detail/iterator.hpp \
   /usr/include/boost/math/tools/detail/polynomial_horner3_20.hpp \
   /usr/include/boost/math/tools/detail/rational_horner1_20.hpp \
   /usr/include/boost/mpl/divides.hpp \
   /usr/include/boost/mpl/aux_/preprocessed/gcc/divides.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Aff_transformation_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Weighted_point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Vector_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Direction_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Iso_cuboid_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Circle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Aff_transformation_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/hash_functions.h \
+  /home/toler/CGAL-5.6/include/CGAL/Aff_transformation_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Weighted_point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Vector_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Direction_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Iso_cuboid_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Circle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Aff_transformation_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_internal_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_internal_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/hash_functions.h \
   /usr/include/boost/functional/hash.hpp \
   /usr/include/boost/container_hash/hash.hpp \
   /usr/include/boost/container_hash/detail/hash_float.hpp \
@@ -1265,10 +1148,10 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/c++/9/bits/stl_set.h \
   /usr/include/c++/9/bits/stl_multiset.h \
   /usr/include/c++/9/bitset \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Handle_for.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/memory.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Weighted_point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Handle_for.h \
+  /home/toler/CGAL-5.6/include/CGAL/memory.h \
   /usr/include/boost/tuple/tuple.hpp \
   /usr/include/boost/ref.hpp \
   /usr/include/boost/core/ref.hpp \
@@ -1277,22 +1160,27 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/type_traits/add_cv.hpp \
   /usr/include/boost/type_traits/remove_volatile.hpp \
   /usr/include/boost/utility/swap.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Vector_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/constant.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Direction_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/algorithm.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Vector_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/constant.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Direction_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/predicates/kernel_ftC2.h \
+  /home/toler/CGAL-5.6/include/CGAL/algorithm.h \
   /usr/include/boost/random/random_number_generator.hpp \
   /usr/include/boost/random/uniform_int_distribution.hpp \
   /usr/include/boost/random/detail/config.hpp \
   /usr/include/boost/random/detail/operators.hpp \
   /usr/include/boost/random/detail/uniform_int_float.hpp \
+  /usr/include/boost/integer.hpp \
+  /usr/include/boost/integer_traits.hpp \
   /usr/include/boost/random/detail/generator_bits.hpp \
   /usr/include/boost/random/detail/disable_warnings.hpp \
   /usr/include/boost/random/detail/enable_warnings.hpp \
   /usr/include/boost/random/detail/signed_unsigned_tools.hpp \
   /usr/include/boost/random/traits.hpp \
+  /usr/include/boost/type_traits/is_signed.hpp \
+  /usr/include/boost/type_traits/make_unsigned.hpp \
+  /usr/include/boost/type_traits/is_unsigned.hpp \
   /usr/include/boost/random.hpp \
   /usr/include/boost/random/additive_combine.hpp \
   /usr/include/boost/random/detail/seed.hpp \
@@ -1321,6 +1209,18 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/random/xor_combine.hpp \
   /usr/include/boost/random/generate_canonical.hpp \
   /usr/include/boost/random/seed_seq.hpp \
+  /usr/include/boost/range/begin.hpp \
+  /usr/include/boost/range/config.hpp \
+  /usr/include/boost/range/iterator.hpp \
+  /usr/include/boost/range/range_fwd.hpp \
+  /usr/include/boost/range/mutable_iterator.hpp \
+  /usr/include/boost/range/detail/extract_optional_type.hpp \
+  /usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp \
+  /usr/include/boost/range/const_iterator.hpp \
+  /usr/include/boost/range/end.hpp \
+  /usr/include/boost/range/detail/implementation_help.hpp \
+  /usr/include/boost/range/detail/common.hpp \
+  /usr/include/boost/range/detail/sfinae.hpp \
   /usr/include/boost/random/variate_generator.hpp \
   /usr/include/boost/random/bernoulli_distribution.hpp \
   /usr/include/boost/random/beta_distribution.hpp \
@@ -1338,8 +1238,48 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/random/fisher_f_distribution.hpp \
   /usr/include/boost/random/geometric_distribution.hpp \
   /usr/include/boost/random/hyperexponential_distribution.hpp \
+  /usr/include/boost/range/size.hpp \
+  /usr/include/boost/range/size_type.hpp \
+  /usr/include/boost/range/difference_type.hpp \
+  /usr/include/boost/range/has_range_iterator.hpp \
+  /usr/include/boost/range/concepts.hpp \
+  /usr/include/boost/concept_check.hpp \
+  /usr/include/boost/concept/assert.hpp \
+  /usr/include/boost/concept/detail/general.hpp \
+  /usr/include/boost/concept/detail/backward_compatibility.hpp \
+  /usr/include/boost/concept/detail/has_constraints.hpp \
+  /usr/include/boost/type_traits/conversion_traits.hpp \
+  /usr/include/boost/concept/usage.hpp \
+  /usr/include/boost/concept/detail/concept_def.hpp \
+  /usr/include/boost/preprocessor/seq/for_each_i.hpp \
+  /usr/include/boost/preprocessor/repetition/for.hpp \
+  /usr/include/boost/preprocessor/repetition/detail/for.hpp \
+  /usr/include/boost/preprocessor/seq/seq.hpp \
+  /usr/include/boost/preprocessor/seq/elem.hpp \
+  /usr/include/boost/preprocessor/seq/detail/is_empty.hpp \
+  /usr/include/boost/preprocessor/seq/enum.hpp \
+  /usr/include/boost/concept/detail/concept_undef.hpp \
+  /usr/include/boost/iterator/iterator_concepts.hpp \
+  /usr/include/boost/range/value_type.hpp \
+  /usr/include/boost/range/detail/misc_concept.hpp \
+  /usr/include/boost/range/detail/has_member_size.hpp \
+  /usr/include/boost/utility.hpp \
+  /usr/include/boost/utility/base_from_member.hpp \
+  /usr/include/boost/preprocessor/repetition/repeat_from_to.hpp \
+  /usr/include/boost/utility/binary.hpp \
+  /usr/include/boost/preprocessor/control/deduce_d.hpp \
+  /usr/include/boost/preprocessor/seq/cat.hpp \
+  /usr/include/boost/preprocessor/seq/fold_left.hpp \
+  /usr/include/boost/preprocessor/seq/transform.hpp \
+  /usr/include/boost/preprocessor/arithmetic/mod.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp \
+  /usr/include/boost/preprocessor/comparison/less_equal.hpp \
+  /usr/include/boost/preprocessor/logical/not.hpp \
+  /usr/include/boost/utility/identity_type.hpp \
+  /usr/include/boost/core/noncopyable.hpp \
   /usr/include/boost/type_traits/has_pre_increment.hpp \
   /usr/include/boost/type_traits/detail/has_prefix_operator.hpp \
+  /usr/include/boost/type_traits/make_void.hpp \
   /usr/include/boost/random/laplace_distribution.hpp \
   /usr/include/boost/random/lognormal_distribution.hpp \
   /usr/include/boost/random/normal_distribution.hpp \
@@ -1356,384 +1296,444 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/random/uniform_on_sphere.hpp \
   /usr/include/boost/random/uniform_smallint.hpp \
   /usr/include/boost/random/weibull_distribution.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/predicates/sign_of_determinant.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/determinant.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Circle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Iso_rectangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Handle_for_virtual.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Rotation_rep_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/rational_rotation.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Reflection_rep_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Data_accessor_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ConicCPA2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_directions_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/line_constructions_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Vector_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Direction_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/solve_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/solve.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/plane_constructions_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Iso_cuboid_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Circle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_planes_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian/function_objects.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/function_objects.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/squared_distance_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/internal/squared_distance_utils_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/wmult.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/Wutils.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Triangle_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/squared_distance_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Weighted_point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/internal/squared_distance_utils_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/predicates/sign_of_determinant.h \
+  /home/toler/CGAL-5.6/include/CGAL/determinant.h \
+  /home/toler/CGAL-5.6/include/CGAL/constructions/kernel_ftC2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_points_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Circle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Iso_rectangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Handle_for_virtual.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_rep_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Translation_rep_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Rotation_rep_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/rational_rotation.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Scaling_rep_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Reflection_rep_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Data_accessor_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/ConicCPA2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_directions_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/basic_constructions_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/point_constructions_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/line_constructions_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/ft_constructions_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Weighted_point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Vector_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Direction_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/predicates/kernel_ftC3.h \
+  /home/toler/CGAL-5.6/include/CGAL/constructions/kernel_ftC3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/solve_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/solve.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/plane_constructions_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Iso_cuboid_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_points_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Circle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_rep_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Translation_rep_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Scaling_rep_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_planes_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/basic_constructions_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/point_constructions_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/ft_constructions_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/function_objects.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/function_objects.h \
+  /home/toler/CGAL-5.6/include/CGAL/squared_distance_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/internal/squared_distance_utils_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/wmult.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/Wutils.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Line_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Line_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_2/Triangle_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/squared_distance_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Weighted_point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/internal/squared_distance_utils_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Segment_3.h \
   /usr/include/boost/algorithm/clamp.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Triangle_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Plane_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/intersection_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Circle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Circle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/predicates_on_points_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Line_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Straight_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Ray_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Segment_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/intersection_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/intersections.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/utility.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Line_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/rank.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Ray_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Segment_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/Type_equality_wrapper.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/interface_macros.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel_fwd.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_predicate.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian_converter.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cartesian_converter_fwd.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/NT_converter.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Enum_converter.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/Type_mapper.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Line_3_Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Line_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Triangle_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Distance_3/Plane_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/intersection_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Circle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersection_traits_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersection_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Circle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Segment_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/predicates_on_points_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Line_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/internal/Straight_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Ray_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Segment_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Segment_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/intersection_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersection_traits_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/intersections.h \
+  /home/toler/CGAL-5.6/include/CGAL/utility.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Line_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/rank.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Ray_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Segment_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
+  /usr/include/boost/next_prior.hpp \
+  /usr/include/boost/type_traits/has_plus.hpp \
+  /usr/include/boost/type_traits/detail/has_binary_operator.hpp \
+  /usr/include/boost/type_traits/has_plus_assign.hpp \
+  /usr/include/boost/type_traits/has_minus.hpp \
+  /usr/include/boost/type_traits/has_minus_assign.hpp \
+  /usr/include/boost/iterator/advance.hpp \
+  /usr/include/boost/iterator/reverse_iterator.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/Type_equality_wrapper.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/interface_macros.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel_fwd.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_predicate.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian_converter.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian_converter_fwd.h \
+  /home/toler/CGAL-5.6/include/CGAL/NT_converter.h \
+  /home/toler/CGAL-5.6/include/CGAL/Enum_converter.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/Type_mapper.h \
   /usr/include/boost/mpl/remove.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Exact_kernel_selector.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Simple_homogeneous.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Homogeneous_base.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_directionsH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_rectangleH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/LineH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Data_accessorH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/ConicHPA2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_cuboidH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PlaneH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/RayH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/SphereH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/function_objects.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Number_types/internal/Exact_type_selector.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/MP_Float.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Sqrt_extension_type.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Interval_arithmetic.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension_fwd.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Real_embeddable_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Fraction_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Coercion_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Modular_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Chinese_remainder_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/extended_euclidean_algorithm.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/io.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/convert_to_bfi.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/convert_to_bfi.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Cache.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/function_objects.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Wang_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/MP_Float_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/MP_Float_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Lazy_exact_nt.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Handle.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Lazy.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/min_max_n.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Default.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/is_iterator.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/transforming_iterator.h \
+  /home/toler/CGAL-5.6/include/CGAL/Exact_kernel_selector.h \
+  /home/toler/CGAL-5.6/include/CGAL/Simple_homogeneous.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Homogeneous_base.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Aff_transformationH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/DirectionH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_directionsH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/PointH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/VectorH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Iso_rectangleH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/LineH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Weighted_point_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Data_accessorH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/ConicHPA2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Aff_transformationH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/DirectionH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Iso_cuboidH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/PlaneH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/PointH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/Weighted_point_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/RayH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/SphereH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_pointsH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/VectorH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/basic_constructionsH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/distance_predicatesH2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/basic_constructionsH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/distance_predicatesH3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous/function_objects.h \
+  /home/toler/CGAL-5.6/include/CGAL/Number_types/internal/Exact_type_selector.h \
+  /home/toler/CGAL-5.6/include/CGAL/MP_Float.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Sqrt_extension_type.h \
+  /home/toler/CGAL-5.6/include/CGAL/Interval_arithmetic.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension_fwd.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Real_embeddable_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Fraction_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Coercion_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Modular_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Chinese_remainder_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/extended_euclidean_algorithm.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/io.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/convert_to_bfi.h \
+  /home/toler/CGAL-5.6/include/CGAL/convert_to_bfi.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cache.h \
+  /home/toler/CGAL-5.6/include/CGAL/function_objects.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Wang_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
+  /home/toler/CGAL-5.6/include/CGAL/MP_Float_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/MP_Float_arithmetic_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/Lazy_exact_nt.h \
+  /home/toler/CGAL-5.6/include/CGAL/Handle.h \
+  /home/toler/CGAL-5.6/include/CGAL/Lazy.h \
+  /home/toler/CGAL-5.6/include/CGAL/min_max_n.h \
+  /home/toler/CGAL-5.6/include/CGAL/Default.h \
+  /home/toler/CGAL-5.6/include/CGAL/type_traits/is_iterator.h \
+  /home/toler/CGAL-5.6/include/CGAL/transforming_iterator.h \
   /usr/include/c++/9/mutex \
   /usr/include/c++/9/bits/std_mutex.h \
   /usr/include/c++/9/bits/unique_lock.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost_mp.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost_mp.h \
   /usr/include/boost/multiprecision/number.hpp \
   /usr/include/boost/mpl/max.hpp \
   /usr/include/boost/type_traits/is_complex.hpp \
   /usr/include/boost/multiprecision/detail/precision.hpp \
   /usr/include/boost/multiprecision/traits/is_variable_precision.hpp \
   /usr/include/boost/multiprecision/detail/number_base.hpp \
+  /usr/include/boost/lexical_cast.hpp \
+  /usr/include/boost/range/iterator_range_core.hpp \
+  /usr/include/boost/range/functions.hpp \
+  /usr/include/boost/range/distance.hpp \
+  /usr/include/boost/iterator/distance.hpp \
+  /usr/include/boost/range/empty.hpp \
+  /usr/include/boost/range/rbegin.hpp \
+  /usr/include/boost/range/reverse_iterator.hpp \
+  /usr/include/boost/range/rend.hpp \
+  /usr/include/boost/range/algorithm/equal.hpp \
+  /usr/include/boost/range/detail/safe_bool.hpp \
+  /usr/include/boost/lexical_cast/bad_lexical_cast.hpp \
+  /usr/include/boost/lexical_cast/try_lexical_convert.hpp \
+  /usr/include/boost/lexical_cast/detail/is_character.hpp \
+  /usr/include/boost/lexical_cast/detail/converter_numeric.hpp \
+  /usr/include/boost/type_traits/is_float.hpp \
+  /usr/include/boost/numeric/conversion/cast.hpp \
+  /usr/include/boost/numeric/conversion/converter.hpp \
+  /usr/include/boost/numeric/conversion/conversion_traits.hpp \
+  /usr/include/boost/numeric/conversion/detail/conversion_traits.hpp \
+  /usr/include/boost/numeric/conversion/detail/meta.hpp \
+  /usr/include/boost/numeric/conversion/detail/int_float_mixture.hpp \
+  /usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp \
+  /usr/include/boost/numeric/conversion/detail/sign_mixture.hpp \
+  /usr/include/boost/numeric/conversion/sign_mixture_enum.hpp \
+  /usr/include/boost/numeric/conversion/detail/udt_builtin_mixture.hpp \
+  /usr/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp \
+  /usr/include/boost/numeric/conversion/detail/is_subranged.hpp \
+  /usr/include/boost/mpl/multiplies.hpp \
+  /usr/include/boost/mpl/times.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp \
+  /usr/include/boost/numeric/conversion/converter_policies.hpp \
+  /usr/include/boost/numeric/conversion/detail/converter.hpp \
+  /usr/include/boost/numeric/conversion/bounds.hpp \
+  /usr/include/boost/numeric/conversion/detail/bounds.hpp \
+  /usr/include/boost/numeric/conversion/numeric_cast_traits.hpp \
+  /usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp \
+  /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp \
+  /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp \
+  /usr/include/boost/lexical_cast/detail/converter_lexical.hpp \
+  /usr/include/boost/type_traits/has_left_shift.hpp \
+  /usr/include/boost/type_traits/has_right_shift.hpp \
+  /usr/include/boost/detail/lcast_precision.hpp \
+  /usr/include/boost/lexical_cast/detail/widest_char.hpp \
+  /usr/include/boost/container/container_fwd.hpp \
+  /usr/include/boost/container/detail/std_fwd.hpp \
+  /usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp \
+  /usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp \
+  /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp \
+  /usr/include/boost/noncopyable.hpp \
+  /usr/include/boost/lexical_cast/detail/inf_nan.hpp \
+  /usr/include/boost/detail/basic_pointerbuf.hpp \
   /usr/include/boost/multiprecision/detail/digits.hpp \
   /usr/include/boost/multiprecision/detail/generic_interconvert.hpp \
   /usr/include/boost/multiprecision/detail/default_ops.hpp \
@@ -1817,43 +1817,44 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/math/special_functions/detail/gamma_inva.hpp \
   /usr/include/boost/math/special_functions/erf.hpp \
   /usr/include/boost/math/special_functions/detail/erf_inv.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/BOOST_MP_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Gmpz.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Gmp_coercion_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpz_type.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/gmp.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpzf_type.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/ipower.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type_static.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpq_type.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Gmpq.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Gmpzf.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/GMP_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Mpzf.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Homogeneous_converter.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/BOOST_MP_arithmetic_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/cpp_float.h \
+  /home/toler/CGAL-5.6/include/CGAL/Gmpz.h \
+  /home/toler/CGAL-5.6/include/CGAL/Gmp_coercion_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/GMP/Gmpz_type.h \
+  /home/toler/CGAL-5.6/include/CGAL/gmp.h \
+  /home/toler/CGAL-5.6/include/CGAL/GMP/Gmpzf_type.h \
+  /home/toler/CGAL-5.6/include/CGAL/GMP/Gmpfr_type.h \
+  /home/toler/CGAL-5.6/include/CGAL/ipower.h \
+  /home/toler/CGAL-5.6/include/CGAL/GMP/Gmpfr_type_static.h \
+  /home/toler/CGAL-5.6/include/CGAL/GMP/Gmpq_type.h \
+  /home/toler/CGAL-5.6/include/CGAL/Gmpq.h \
+  /home/toler/CGAL-5.6/include/CGAL/Gmpzf.h \
+  /home/toler/CGAL-5.6/include/CGAL/GMP_arithmetic_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/Mpzf.h \
+  /home/toler/CGAL-5.6/include/CGAL/Homogeneous_converter.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h \
   /usr/include/boost/type_traits.hpp \
   /usr/include/boost/type_traits/extent.hpp \
   /usr/include/boost/type_traits/floating_point_promotion.hpp \
@@ -1911,91 +1912,77 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/type_traits/remove_cv_ref.hpp \
   /usr/include/boost/type_traits/integral_promotion.hpp \
   /usr/include/boost/type_traits/promote.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_structural_filtering_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE_Expr.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE_coercion_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CORE.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Config.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/auto_link/CORE.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/export/CORE.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/MemoryPool.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Timer.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloatRep.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigRat.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigInt.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/RefCount.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/ExprRep.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Real.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/RealRep.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Real_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Filter.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Sturm.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Promote.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.tcc \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreIO_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE_BigInt.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE_BigRat.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE_BigFloat.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Bigfloat_interval_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CORE_arithmetic_kernel.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesh.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/3MF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/3MF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/3MF/read_3mf.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/3MF/write_3mf.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/helpers.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Container_helper.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Has_member.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/iterator.h \
+  /home/toler/CGAL-5.6/include/CGAL/Converting_construction.h \
+  /home/toler/CGAL-5.6/include/CGAL/Cartesian/Is_trivial_construction.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_structural_filtering_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE_Expr.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE_coercion_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/CORE.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/CoreDefs.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/extLong.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Config.h \
+  /home/toler/CGAL-5.6/include/CGAL/auto_link/CORE.h \
+  /home/toler/CGAL-5.6/include/CGAL/export/CORE.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/MemoryPool.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/CoreAux.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/CoreAux_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/extLong_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/CoreDefs_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Timer.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Expr.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/BigFloat.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/BigFloatRep.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/BigRat.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/BigInt.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Gmp.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Gmp_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/RefCount.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/BigFloat_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/ExprRep.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Real.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/RealRep.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/BigFloat.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Real_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Filter.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/poly/Sturm.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/poly/Poly.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Promote.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/poly/Poly.tcc \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/Expr_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE/CoreIO_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE_BigInt.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE_BigRat.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE_BigFloat.h \
+  /home/toler/CGAL-5.6/include/CGAL/Bigfloat_interval_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/CORE_arithmetic_kernel.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Surface_mesh.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/Surface_mesh.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO/3MF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/3MF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/3MF/read_3mf.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/3MF/write_3mf.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/helpers.h \
+  /home/toler/CGAL-5.6/include/CGAL/Container_helper.h \
+  /home/toler/CGAL-5.6/include/CGAL/Has_member.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/iterator.h \
   /usr/include/boost/graph/graph_traits.hpp \
   /usr/include/boost/pending/property.hpp \
   /usr/include/boost/pending/detail/property.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Iterator_range.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/tuple.h \
+  /home/toler/CGAL-5.6/include/CGAL/Iterator_range.h \
+  /home/toler/CGAL-5.6/include/CGAL/tuple.h \
   /usr/include/boost/foreach.hpp \
   /usr/include/boost/foreach_fwd.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/circulator_bases.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/helpers.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/Scanner_OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_scanner_OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/binary_file_io.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_writer_OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/generic_copy_OFF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/Generic_writer.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Named_function_parameters.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/parameters_interface.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/named_params_helper.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/property_map.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/value_type_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/circulator_bases.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/internal/helpers.h \
+  /home/toler/CGAL-5.6/include/CGAL/iterator.h \
+  /home/toler/CGAL-5.6/include/CGAL/circulator.h \
+  /home/toler/CGAL-5.6/include/CGAL/property_map.h \
+  /home/toler/CGAL-5.6/include/CGAL/value_type_traits.h \
   /usr/include/boost/property_map/property_map.hpp \
   /usr/include/boost/concept_archetype.hpp \
   /usr/include/boost/property_map/vector_property_map.hpp \
@@ -2020,23 +2007,43 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
   /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
   /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/iterator/counting_iterator.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/boost/iterator/counting_iterator.hpp \
   /usr/include/boost/iterator/counting_iterator.hpp \
   /usr/include/boost/detail/numeric_traits.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Dynamic_property_map.h \
+  /home/toler/CGAL-5.6/include/CGAL/Named_function_parameters.h \
+  /home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/mesh_option_classes.h \
+  /home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_features.h \
+  /home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/parameters_interface.h \
+  /home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/mesh_parameters_interface.h \
+  /usr/include/boost/iterator/function_output_iterator.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO/OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/Scanner_OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_scanner_OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/binary_file_io.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_extended_OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_OFF_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_writer_OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OFF/generic_copy_OFF.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/Generic_writer.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/named_params_helper.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/properties.h \
+  /home/toler/CGAL-5.6/include/CGAL/Dynamic_property_map.h \
   /usr/include/boost/graph/properties.hpp \
   /usr/include/boost/graph/property_maps/constant_property_map.hpp \
   /usr/include/boost/graph/property_maps/null_property_map.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/iterator.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/circulator.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/Euler_operations.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/helpers.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/Has_member_clear.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/Verbose_ostream.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/generators.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Random.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Random_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/Euler_operations.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/helpers.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/internal/Has_member_clear.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/Verbose_ostream.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/generators.h \
+  /home/toler/CGAL-5.6/include/CGAL/Random.h \
+  /home/toler/CGAL-5.6/include/CGAL/Random_impl.h \
   /usr/include/boost/container/small_vector.hpp \
   /usr/include/boost/container/detail/config_begin.hpp \
   /usr/include/boost/container/detail/workaround.hpp \
@@ -2092,7 +2099,7 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/move/algo/detail/is_sorted.hpp \
   /usr/include/boost/move/algo/unique.hpp \
   /usr/include/boost/move/algo/detail/set_difference.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h \
   /usr/include/boost/container/flat_map.hpp \
   /usr/include/boost/container/detail/flat_tree.hpp \
   /usr/include/boost/container/detail/pair.hpp \
@@ -2109,77 +2116,76 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/container/detail/container_or_allocator_rebind.hpp \
   /usr/include/boost/container/detail/container_rebind.hpp \
   /usr/include/boost/intrusive/detail/minimal_less_equal_header.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/PLY.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/PLY.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_reader.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_writer.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/io.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/3MF.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/GOCAD.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/GOCAD.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/INP.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/OBJ.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OBJ.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OBJ/File_writer_wavefront.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/PLY.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/STL.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/STL.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/STL/STL_reader.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/VTK.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/VTK.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_reader.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_writer.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/WRL.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/VRML.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/File_writer_VRML_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_2_ostream.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_1_ostream.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OI.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OI/File_writer_inventor.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/IO/OI/Inventor_ostream.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/polygon_mesh_io.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Properties.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/copy_face_graph.h \
-  /usr/include/boost/iterator/function_output_iterator.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/graph_traits_Surface_mesh.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_features.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Handle_hash_function.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesh_shortest_path.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/barycentric.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/internal/Cone_tree.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/internal/Cone_expansion_event.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/internal/misc_functions.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/AABB_tree.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_traversal_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_node.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_search_tree.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Orthogonal_k_neighbor_search.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Spatial_searching.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kd_tree_node.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Splitters.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Point_container.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kd_tree_rectangle.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Plane_separator.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Compact_container.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/CC_safe_handle.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Time_stamper.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Has_timestamp.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/Search_helpers.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kd_tree.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO/PLY.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/PLY.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/PLY/PLY_reader.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/PLY/PLY_writer.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/io.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/3MF.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/GOCAD.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/GOCAD.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/INP.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/OBJ.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OBJ.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OBJ/File_writer_wavefront.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/PLY.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/STL.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/STL.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/STL/STL_reader.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/VTK.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/VTK.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/VTK/VTK_reader.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/VTK/VTK_writer.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/WRL.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/VRML.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/VRML/File_writer_VRML_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/VRML/VRML_2_ostream.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/VRML/VRML_1_ostream.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OI.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OI/File_writer_inventor.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/OI/Inventor_ostream.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/polygon_mesh_io.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh/Properties.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/copy_face_graph.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/graph_traits_Surface_mesh.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh_features.h \
+  /home/toler/CGAL-5.6/include/CGAL/Handle_hash_function.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Surface_mesh_shortest_path.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/barycentric.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/Cone_tree.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/Cone_expansion_event.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/misc_functions.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/AABB_tree.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_traversal_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_node.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_search_tree.h \
+  /home/toler/CGAL-5.6/include/CGAL/Orthogonal_k_neighbor_search.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Spatial_searching.h \
+  /home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kd_tree_node.h \
+  /home/toler/CGAL-5.6/include/CGAL/Splitters.h \
+  /home/toler/CGAL-5.6/include/CGAL/Point_container.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kd_tree_rectangle.h \
+  /home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
+  /home/toler/CGAL-5.6/include/CGAL/Plane_separator.h \
+  /home/toler/CGAL-5.6/include/CGAL/Compact_container.h \
+  /home/toler/CGAL-5.6/include/CGAL/CC_safe_handle.h \
+  /home/toler/CGAL-5.6/include/CGAL/Time_stamper.h \
+  /home/toler/CGAL-5.6/include/CGAL/Has_timestamp.h \
+  /home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/Search_helpers.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kd_tree.h \
   /usr/include/boost/container/deque.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/mutex.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Euclidean_distance.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Search_traits_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/Has_nested_type_Shared_data.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/Primitive_helper.h \
+  /home/toler/CGAL-5.6/include/CGAL/mutex.h \
+  /home/toler/CGAL-5.6/include/CGAL/Euclidean_distance.h \
+  /home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
+  /home/toler/CGAL-5.6/include/CGAL/Search_traits_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/Has_nested_type_Shared_data.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/Primitive_helper.h \
   /usr/include/boost/lambda/lambda.hpp \
   /usr/include/boost/lambda/core.hpp \
   /usr/include/boost/type_traits/transform_traits.hpp \
@@ -2207,7 +2213,7 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/pointee.hpp \
   /usr/include/boost/lambda/detail/operators.hpp \
   /usr/include/boost/lambda/detail/member_ptr.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_ray_intersection.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_ray_intersection.h \
   /usr/include/boost/heap/priority_queue.hpp \
   /usr/include/c++/9/queue \
   /usr/include/c++/9/bits/stl_queue.h \
@@ -2302,58 +2308,78 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/parameter/aux_/pack/tag_keyword_arg.hpp \
   /usr/include/boost/parameter/aux_/pack/tag_template_keyword_arg.hpp \
   /usr/include/boost/heap/heap_merge.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/function_objects.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_face_graph_triangle_primitive.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_primitive.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/boost/graph/property_maps.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_traits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel_23/internal/Has_boolean_tags.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/locate.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/locate.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/named_params_helper.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/core.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/triangulate_faces.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/meshing_hole_filling.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_with_info_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Triangulation_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_vertex_base_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/TDS_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Dummy_tds_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_face_base_with_info_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_face_base_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/triangulation_assertions.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_face_base_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_utils_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Constrained_Delaunay_triangulation_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Constrained_triangulation_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_data_structure_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/function_objects.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_face_graph_triangle_primitive.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_primitive.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/property_maps.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_traits.h \
+  /home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel_23/internal/Has_boolean_tags.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/locate.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/locate.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/triangulate_faces.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/meshing_hole_filling.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/triangulate_hole.h \
+  /home/toler/CGAL-5.6/include/CGAL/bounding_box.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel/Dimension_utils.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polygon_mesh.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polyline.h \
+  /home/toler/CGAL-5.6/include/CGAL/Delaunay_triangulation_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Triangulation_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Delaunay_triangulation_cell_base_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_cell_base_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_cell_base_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/TDS_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/TDS_3/internal/Dummy_tds_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Unique_hash_map.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hash_map/internal/chained_map.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_utils_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_data_structure_3.h \
   /usr/include/c++/9/stack \
   /usr/include/c++/9/bits/stl_stack.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Unique_hash_map.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hash_map/internal/chained_map.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_iterators_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_circulators_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_2/internal/Triangulation_line_face_circulator_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/spatial_sort.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/hilbert_sort.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_policy_tags.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_base.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_base.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_d.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_d.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_d.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Multiscale_sort.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Spatial_sort_traits_adapter_2.h \
+  /usr/include/boost/unordered_set.hpp \
+  /usr/include/boost/unordered/unordered_set.hpp \
+  /usr/include/boost/unordered/detail/set.hpp \
+  /usr/include/boost/unordered/detail/implementation.hpp \
+  /usr/include/boost/core/pointer_traits.hpp \
+  /usr/include/boost/unordered/detail/fwd.hpp \
+  /usr/include/boost/unordered/unordered_set_fwd.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_member_visited.h \
+  /home/toler/CGAL-5.6/include/CGAL/Concurrent_compact_container.h \
+  /home/toler/CGAL-5.6/include/CGAL/Small_unordered_map.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_vertex_base_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_simplex_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/spatial_sort.h \
+  /home/toler/CGAL-5.6/include/CGAL/hilbert_sort.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_policy_tags.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_median_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_base.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_base.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_median_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_d.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_median_d.h \
+  /home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_d.h \
+  /home/toler/CGAL-5.6/include/CGAL/Multiscale_sort.h \
+  /home/toler/CGAL-5.6/include/CGAL/Spatial_sort_traits_adapter_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_segment_traverser_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Iterator_project.h \
+  /home/toler/CGAL-5.6/include/CGAL/Spatial_lock_grid_3.h \
+  /usr/include/boost/property_map/function_property_map.hpp \
+  /usr/include/boost/unordered_map.hpp \
+  /usr/include/boost/unordered/unordered_map.hpp \
+  /usr/include/boost/unordered/detail/map.hpp \
+  /usr/include/boost/unordered/unordered_map_fwd.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/info_check.h \
   /usr/include/boost/iterator/zip_iterator.hpp \
   /usr/include/boost/iterator/minimum_category.hpp \
   /usr/include/boost/fusion/adapted/boost_tuple.hpp \
@@ -2592,180 +2618,704 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
   /usr/include/boost/fusion/sequence/comparison/detail/equal_to.hpp \
   /usr/include/boost/fusion/support/as_const.hpp \
   /usr/include/boost/fusion/sequence/comparison/enable_comparison.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/info_check.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Constrained_triangulation_face_base_2.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Exact_rational.h \
+  /home/toler/CGAL-5.6/include/CGAL/Location_policy.h \
+  /home/toler/CGAL-5.6/include/CGAL/Complexity_tags.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_hierarchy_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_hierarchy_vertex_base_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_with_info_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/centroid.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_with_info_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Triangulation_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_vertex_base_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/TDS_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Dummy_tds_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_face_base_with_info_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_face_base_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_face_base_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_utils_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Constrained_Delaunay_triangulation_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Constrained_triangulation_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_data_structure_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_iterators_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_circulators_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_2/internal/Triangulation_line_face_circulator_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Spatial_sort_traits_adapter_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Constrained_triangulation_face_base_2.h \
+  /home/toler/CGAL-5.6/include/CGAL/Exact_rational.h \
   /usr/include/boost/iterator/filter_iterator.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_2/insert_constraints.h \
+  /home/toler/CGAL-5.6/include/CGAL/Triangulation_2/insert_constraints.h \
   /usr/include/boost/container/flat_set.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Projection_traits_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel_23/internal/Filtered_projection_traits_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel_23/internal/Projection_traits_base_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Profile_timer.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Timer.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Timer_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Projection_traits_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel_23/internal/Filtered_projection_traits_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Kernel_23/internal/Projection_traits_base_3.h \
+  /home/toler/CGAL-5.6/include/CGAL/Profile_timer.h \
+  /home/toler/CGAL-5.6/include/CGAL/Timer.h \
+  /home/toler/CGAL-5.6/include/CGAL/Timer_impl.h \
   /usr/include/x86_64-linux-gnu/sys/resource.h \
   /usr/include/x86_64-linux-gnu/bits/resource.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Filtered_predicate_with_state.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/triangulate_hole.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/bounding_box.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Kernel/Dimension_utils.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polygon_mesh.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polyline.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Triangulation_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_cell_base_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_cell_base_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_cell_base_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/TDS_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Dummy_tds_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_utils_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_data_structure_3.h \
-  /usr/include/boost/unordered_set.hpp \
-  /usr/include/boost/unordered/unordered_set.hpp \
-  /usr/include/boost/unordered/detail/set.hpp \
-  /usr/include/boost/unordered/detail/implementation.hpp \
-  /usr/include/boost/core/pointer_traits.hpp \
-  /usr/include/boost/unordered/detail/fwd.hpp \
-  /usr/include/boost/unordered/unordered_set_fwd.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_member_visited.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Concurrent_compact_container.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Small_unordered_map.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_vertex_base_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_simplex_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Spatial_sort_traits_adapter_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_segment_traverser_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Iterator_project.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Spatial_lock_grid_3.h \
-  /usr/include/boost/property_map/function_property_map.hpp \
-  /usr/include/boost/unordered_map.hpp \
-  /usr/include/boost/unordered/unordered_map.hpp \
-  /usr/include/boost/unordered/detail/map.hpp \
-  /usr/include/boost/unordered/unordered_map_fwd.hpp \
-  /home/toler/CGAL-5.5.2/include/CGAL/Location_policy.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Complexity_tags.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_vertex_base_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_with_info_3.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/centroid.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_2_algorithms.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_2/polygon_assertions.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/refine.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/refine_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/fair.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/fair_impl.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Weights/cotangent_weights.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Weights/utils.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Weights/internal/utils.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/compute_normal.h \
-  /home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/Compute_normal.h
+  /home/toler/CGAL-5.6/include/CGAL/Filtered_predicate_with_state.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_2_algorithms.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/refine.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/refine_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/repair_degeneracies.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/geometric_repair.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/shape_predicates.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/measure.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/measure.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/border.h \
+  /home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/core.h \
+  /usr/include/boost/dynamic_bitset.hpp \
+  /usr/include/boost/dynamic_bitset/dynamic_bitset.hpp \
+  /usr/include/boost/dynamic_bitset/config.hpp \
+  /usr/include/boost/dynamic_bitset_fwd.hpp \
+  /usr/include/boost/dynamic_bitset/detail/dynamic_bitset.hpp \
+  /usr/include/boost/dynamic_bitset/detail/lowest_bit.hpp \
+  /usr/include/boost/functional/hash/hash.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/selection.h \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/Dual.h \
+  /usr/include/boost/graph/filtered_graph.hpp \
+  /usr/include/boost/graph/adjacency_iterator.hpp \
+  /usr/include/boost/graph/detail/set_adaptor.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/boost/graph/alpha_expansion_graphcut.h \
+  /home/toler/CGAL-5.6/include/CGAL/IO/trace.h \
+  /usr/include/boost/graph/adjacency_list.hpp \
+  /usr/include/boost/scoped_ptr.hpp \
+  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+  /usr/include/boost/graph/graph_mutability_traits.hpp \
+  /usr/include/boost/graph/graph_selectors.hpp \
+  /usr/include/boost/graph/detail/edge.hpp \
+  /usr/include/boost/graph/named_graph.hpp \
+  /usr/include/boost/multi_index/hashed_index.hpp \
+  /usr/include/boost/multi_index/detail/access_specifier.hpp \
+  /usr/include/boost/multi_index/detail/allocator_traits.hpp \
+  /usr/include/boost/multi_index/detail/auto_space.hpp \
+  /usr/include/boost/multi_index/detail/adl_swap.hpp \
+  /usr/include/boost/multi_index/detail/bucket_array.hpp \
+  /usr/include/boost/multi_index/detail/hash_index_node.hpp \
+  /usr/include/boost/multi_index/detail/raw_ptr.hpp \
+  /usr/include/boost/archive/archive_exception.hpp \
+  /usr/include/boost/archive/detail/decl.hpp \
+  /usr/include/boost/archive/detail/abi_prefix.hpp \
+  /usr/include/boost/config/abi_prefix.hpp \
+  /usr/include/boost/archive/detail/abi_suffix.hpp \
+  /usr/include/boost/config/abi_suffix.hpp \
+  /usr/include/boost/serialization/access.hpp \
+  /usr/include/boost/multi_index/detail/do_not_copy_elements_tag.hpp \
+  /usr/include/boost/multi_index/detail/hash_index_iterator.hpp \
+  /usr/include/boost/serialization/nvp.hpp \
+  /usr/include/boost/serialization/level.hpp \
+  /usr/include/boost/serialization/level_enum.hpp \
+  /usr/include/boost/serialization/tracking.hpp \
+  /usr/include/boost/serialization/tracking_enum.hpp \
+  /usr/include/boost/serialization/type_info_implementation.hpp \
+  /usr/include/boost/serialization/traits.hpp \
+  /usr/include/boost/serialization/split_member.hpp \
+  /usr/include/boost/serialization/base_object.hpp \
+  /usr/include/boost/serialization/force_include.hpp \
+  /usr/include/boost/serialization/void_cast_fwd.hpp \
+  /usr/include/boost/serialization/wrapper.hpp \
+  /usr/include/boost/serialization/version.hpp \
+  /usr/include/boost/multi_index/detail/index_node_base.hpp \
+  /usr/include/boost/multi_index/detail/ignore_wstrict_aliasing.hpp \
+  /usr/include/boost/multi_index/detail/restore_wstrict_aliasing.hpp \
+  /usr/include/boost/multi_index/detail/modify_key_adaptor.hpp \
+  /usr/include/boost/multi_index/detail/promotes_arg.hpp \
+  /usr/include/boost/multi_index/detail/is_transparent.hpp \
+  /usr/include/boost/multi_index/detail/safe_mode.hpp \
+  /usr/include/boost/multi_index/detail/scope_guard.hpp \
+  /usr/include/boost/multi_index/detail/vartempl_support.hpp \
+  /usr/include/boost/multi_index/hashed_index_fwd.hpp \
+  /usr/include/boost/multi_index/detail/hash_index_args.hpp \
+  /usr/include/boost/multi_index/tag.hpp \
+  /usr/include/boost/multi_index/detail/no_duplicate_tags.hpp \
+  /usr/include/boost/mpl/set/set0.hpp \
+  /usr/include/boost/mpl/set/aux_/at_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/has_key_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/tag.hpp \
+  /usr/include/boost/mpl/aux_/overload_names.hpp \
+  /usr/include/boost/mpl/aux_/ptr_to_ref.hpp \
+  /usr/include/boost/mpl/aux_/config/operators.hpp \
+  /usr/include/boost/mpl/set/aux_/clear_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/set0.hpp \
+  /usr/include/boost/mpl/set/aux_/size_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/empty_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/insert_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/item.hpp \
+  /usr/include/boost/mpl/base.hpp \
+  /usr/include/boost/mpl/set/aux_/insert_range_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/erase_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/erase_key_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/key_type_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/value_type_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/begin_end_impl.hpp \
+  /usr/include/boost/mpl/set/aux_/iterator.hpp \
+  /usr/include/boost/multi_index/member.hpp \
+  /usr/include/boost/multi_index_container.hpp \
+  /usr/include/boost/multi_index_container_fwd.hpp \
+  /usr/include/boost/multi_index/identity.hpp \
+  /usr/include/boost/multi_index/identity_fwd.hpp \
+  /usr/include/boost/multi_index/indexed_by.hpp \
+  /usr/include/boost/preprocessor/control/expr_if.hpp \
+  /usr/include/boost/multi_index/ordered_index_fwd.hpp \
+  /usr/include/boost/multi_index/detail/ord_index_args.hpp \
+  /usr/include/boost/multi_index/detail/ord_index_impl_fwd.hpp \
+  /usr/include/boost/multi_index/detail/base_type.hpp \
+  /usr/include/boost/multi_index/detail/index_base.hpp \
+  /usr/include/boost/multi_index/detail/copy_map.hpp \
+  /usr/include/boost/multi_index/detail/node_type.hpp \
+  /usr/include/boost/mpl/reverse_iter_fold.hpp \
+  /usr/include/boost/mpl/aux_/reverse_iter_fold_impl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_iter_fold_impl.hpp \
+  /usr/include/boost/multi_index/detail/header_holder.hpp \
+  /usr/include/boost/multi_index/detail/is_index_list.hpp \
+  /usr/include/boost/multi_index/detail/index_loader.hpp \
+  /usr/include/boost/multi_index/detail/index_saver.hpp \
+  /usr/include/boost/multi_index/detail/index_matcher.hpp \
+  /usr/include/boost/multi_index/detail/converter.hpp \
+  /usr/include/boost/multi_index/detail/has_tag.hpp \
+  /usr/include/boost/multi_index/detail/archive_constructed.hpp \
+  /usr/include/boost/serialization/serialization.hpp \
+  /usr/include/boost/serialization/strong_typedef.hpp \
+  /usr/include/boost/multi_index/detail/serialization_version.hpp \
+  /usr/include/boost/serialization/collection_size_type.hpp \
+  /usr/include/boost/serialization/split_free.hpp \
+  /usr/include/boost/serialization/is_bitwise_serializable.hpp \
+  /usr/include/boost/pending/container_traits.hpp \
+  /usr/include/boost/graph/detail/adjacency_list.hpp \
+  /usr/include/boost/range/irange.hpp \
+  /usr/include/boost/range/iterator_range.hpp \
+  /usr/include/boost/range/iterator_range_io.hpp \
+  /usr/include/boost/graph/graph_concepts.hpp \
+  /usr/include/boost/graph/numeric_values.hpp \
+  /usr/include/boost/graph/buffer_concepts.hpp \
+  /usr/include/boost/typeof/typeof.hpp \
+  /usr/include/boost/typeof/message.hpp \
+  /usr/include/boost/typeof/decltype.hpp \
+  /usr/include/boost/graph/detail/adj_list_edge_iterator.hpp \
+  /usr/include/boost/graph/compressed_sparse_row_graph.hpp \
+  /usr/include/boost/graph/detail/indexed_properties.hpp \
+  /usr/include/boost/graph/detail/compressed_sparse_row_struct.hpp \
+  /usr/include/boost/graph/detail/histogram_sort.hpp \
+  /usr/include/boost/graph/iteration_macros.hpp \
+  /usr/include/boost/graph/detail/is_distributed_selector.hpp \
+  /usr/include/boost/property_map/transform_value_property_map.hpp \
+  /usr/include/boost/mpl/print.hpp \
+  /usr/include/boost/graph/boykov_kolmogorov_max_flow.hpp \
+  /usr/include/boost/pending/queue.hpp \
+  /usr/include/boost/graph/named_function_params.hpp \
+  /usr/include/boost/preprocessor.hpp \
+  /usr/include/boost/preprocessor/library.hpp \
+  /usr/include/boost/preprocessor/arithmetic.hpp \
+  /usr/include/boost/preprocessor/arithmetic/div.hpp \
+  /usr/include/boost/preprocessor/arithmetic/mul.hpp \
+  /usr/include/boost/preprocessor/array.hpp \
+  /usr/include/boost/preprocessor/array/enum.hpp \
+  /usr/include/boost/preprocessor/array/insert.hpp \
+  /usr/include/boost/preprocessor/array/push_back.hpp \
+  /usr/include/boost/preprocessor/array/detail/get_data.hpp \
+  /usr/include/boost/preprocessor/facilities/is_1.hpp \
+  /usr/include/boost/preprocessor/comparison/not_equal.hpp \
+  /usr/include/boost/preprocessor/array/pop_back.hpp \
+  /usr/include/boost/preprocessor/repetition/deduce_z.hpp \
+  /usr/include/boost/preprocessor/array/pop_front.hpp \
+  /usr/include/boost/preprocessor/array/push_front.hpp \
+  /usr/include/boost/preprocessor/array/remove.hpp \
+  /usr/include/boost/preprocessor/array/replace.hpp \
+  /usr/include/boost/preprocessor/array/reverse.hpp \
+  /usr/include/boost/preprocessor/tuple/reverse.hpp \
+  /usr/include/boost/preprocessor/tuple/size.hpp \
+  /usr/include/boost/preprocessor/array/to_list.hpp \
+  /usr/include/boost/preprocessor/tuple/to_list.hpp \
+  /usr/include/boost/preprocessor/array/to_seq.hpp \
+  /usr/include/boost/preprocessor/tuple/to_seq.hpp \
+  /usr/include/boost/preprocessor/array/to_tuple.hpp \
+  /usr/include/boost/preprocessor/comparison.hpp \
+  /usr/include/boost/preprocessor/comparison/equal.hpp \
+  /usr/include/boost/preprocessor/comparison/greater.hpp \
+  /usr/include/boost/preprocessor/comparison/less.hpp \
+  /usr/include/boost/preprocessor/comparison/greater_equal.hpp \
+  /usr/include/boost/preprocessor/config/limits.hpp \
+  /usr/include/boost/preprocessor/control.hpp \
+  /usr/include/boost/preprocessor/debug.hpp \
+  /usr/include/boost/preprocessor/debug/assert.hpp \
+  /usr/include/boost/preprocessor/debug/line.hpp \
+  /usr/include/boost/preprocessor/facilities.hpp \
+  /usr/include/boost/preprocessor/facilities/apply.hpp \
+  /usr/include/boost/preprocessor/detail/is_unary.hpp \
+  /usr/include/boost/preprocessor/iteration.hpp \
+  /usr/include/boost/preprocessor/iteration/local.hpp \
+  /usr/include/boost/preprocessor/iteration/self.hpp \
+  /usr/include/boost/preprocessor/list.hpp \
+  /usr/include/boost/preprocessor/list/append.hpp \
+  /usr/include/boost/preprocessor/list/at.hpp \
+  /usr/include/boost/preprocessor/list/rest_n.hpp \
+  /usr/include/boost/preprocessor/list/cat.hpp \
+  /usr/include/boost/preprocessor/list/enum.hpp \
+  /usr/include/boost/preprocessor/list/for_each_i.hpp \
+  /usr/include/boost/preprocessor/list/filter.hpp \
+  /usr/include/boost/preprocessor/list/first_n.hpp \
+  /usr/include/boost/preprocessor/list/for_each.hpp \
+  /usr/include/boost/preprocessor/list/for_each_product.hpp \
+  /usr/include/boost/preprocessor/list/to_tuple.hpp \
+  /usr/include/boost/preprocessor/list/size.hpp \
+  /usr/include/boost/preprocessor/list/to_array.hpp \
+  /usr/include/boost/preprocessor/list/to_seq.hpp \
+  /usr/include/boost/preprocessor/list/transform.hpp \
+  /usr/include/boost/preprocessor/logical.hpp \
+  /usr/include/boost/preprocessor/logical/bitnor.hpp \
+  /usr/include/boost/preprocessor/logical/bitor.hpp \
+  /usr/include/boost/preprocessor/logical/bitxor.hpp \
+  /usr/include/boost/preprocessor/logical/nor.hpp \
+  /usr/include/boost/preprocessor/logical/or.hpp \
+  /usr/include/boost/preprocessor/logical/xor.hpp \
+  /usr/include/boost/preprocessor/punctuation.hpp \
+  /usr/include/boost/preprocessor/punctuation/paren.hpp \
+  /usr/include/boost/preprocessor/punctuation/paren_if.hpp \
+  /usr/include/boost/preprocessor/punctuation/remove_parens.hpp \
+  /usr/include/boost/preprocessor/tuple/enum.hpp \
+  /usr/include/boost/preprocessor/repetition.hpp \
+  /usr/include/boost/preprocessor/repetition/deduce_r.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_params_with_a_default.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_params_with_defaults.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_shifted.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_shifted_binary_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_trailing.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_trailing_binary_params.hpp \
+  /usr/include/boost/preprocessor/selection.hpp \
+  /usr/include/boost/preprocessor/selection/max.hpp \
+  /usr/include/boost/preprocessor/selection/min.hpp \
+  /usr/include/boost/preprocessor/seq.hpp \
+  /usr/include/boost/preprocessor/seq/filter.hpp \
+  /usr/include/boost/preprocessor/seq/first_n.hpp \
+  /usr/include/boost/preprocessor/seq/detail/split.hpp \
+  /usr/include/boost/preprocessor/seq/fold_right.hpp \
+  /usr/include/boost/preprocessor/seq/reverse.hpp \
+  /usr/include/boost/preprocessor/seq/for_each.hpp \
+  /usr/include/boost/preprocessor/seq/for_each_product.hpp \
+  /usr/include/boost/preprocessor/seq/insert.hpp \
+  /usr/include/boost/preprocessor/seq/rest_n.hpp \
+  /usr/include/boost/preprocessor/seq/pop_back.hpp \
+  /usr/include/boost/preprocessor/seq/pop_front.hpp \
+  /usr/include/boost/preprocessor/seq/push_back.hpp \
+  /usr/include/boost/preprocessor/seq/push_front.hpp \
+  /usr/include/boost/preprocessor/seq/remove.hpp \
+  /usr/include/boost/preprocessor/seq/replace.hpp \
+  /usr/include/boost/preprocessor/seq/subseq.hpp \
+  /usr/include/boost/preprocessor/seq/to_array.hpp \
+  /usr/include/boost/preprocessor/seq/to_list.hpp \
+  /usr/include/boost/preprocessor/seq/detail/binary_transform.hpp \
+  /usr/include/boost/preprocessor/variadic/detail/is_single_return.hpp \
+  /usr/include/boost/preprocessor/seq/to_tuple.hpp \
+  /usr/include/boost/preprocessor/seq/variadic_seq_to_seq.hpp \
+  /usr/include/boost/preprocessor/slot.hpp \
+  /usr/include/boost/preprocessor/tuple.hpp \
+  /usr/include/boost/preprocessor/tuple/insert.hpp \
+  /usr/include/boost/preprocessor/tuple/to_array.hpp \
+  /usr/include/boost/preprocessor/tuple/pop_back.hpp \
+  /usr/include/boost/preprocessor/tuple/pop_front.hpp \
+  /usr/include/boost/preprocessor/tuple/push_back.hpp \
+  /usr/include/boost/preprocessor/tuple/push_front.hpp \
+  /usr/include/boost/preprocessor/tuple/remove.hpp \
+  /usr/include/boost/preprocessor/tuple/replace.hpp \
+  /usr/include/boost/preprocessor/variadic.hpp \
+  /usr/include/boost/preprocessor/variadic/to_array.hpp \
+  /usr/include/boost/preprocessor/variadic/to_list.hpp \
+  /usr/include/boost/preprocessor/variadic/to_seq.hpp \
+  /usr/include/boost/preprocessor/variadic/to_tuple.hpp \
+  /usr/include/boost/preprocessor/wstringize.hpp \
+  /usr/include/boost/parameter/is_argument_pack.hpp \
+  /usr/include/boost/graph/detail/d_ary_heap.hpp \
+  /usr/include/boost/shared_array.hpp \
+  /usr/include/boost/smart_ptr/shared_array.hpp \
+  /usr/include/boost/property_map/shared_array_property_map.hpp \
+  /usr/include/boost/graph/lookup_edge.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/Union_find.h \
+  /usr/include/boost/algorithm/minmax_element.hpp \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/fair.h \
+  /home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/fair_impl.h \
+  /home/toler/CGAL-5.6/include/CGAL/Weights/cotangent_weights.h \
+  /home/toler/CGAL-5.6/include/CGAL/Weights/utils.h \
+  /home/toler/CGAL-5.6/include/CGAL/Weights/internal/utils.h
 
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/Compute_normal.h:
+/home/toler/CGAL-5.6/include/CGAL/Weights/internal/utils.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/compute_normal.h:
+/home/toler/CGAL-5.6/include/CGAL/Weights/cotangent_weights.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Weights/internal/utils.h:
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/fair_impl.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Weights/cotangent_weights.h:
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/fair.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/fair_impl.h:
+/usr/include/boost/graph/lookup_edge.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/refine.h:
+/usr/include/boost/smart_ptr/shared_array.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_2/Polygon_2_simplicity.h:
+/usr/include/boost/graph/detail/d_ary_heap.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h:
+/usr/include/boost/parameter/is_argument_pack.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_2/polygon_assertions.h:
+/usr/include/boost/preprocessor/wstringize.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_2_algorithms.h:
+/usr/include/boost/preprocessor/variadic/to_tuple.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_with_info_3.h:
+/usr/include/boost/preprocessor/variadic/to_seq.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_vertex_base_3.h:
+/usr/include/boost/preprocessor/variadic/to_list.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h:
+/usr/include/boost/preprocessor/variadic/to_array.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_hierarchy_3.h:
+/usr/include/boost/preprocessor/tuple/replace.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h:
+/usr/include/boost/preprocessor/tuple/push_front.hpp:
 
-/usr/include/boost/unordered/detail/map.hpp:
+/usr/include/boost/preprocessor/tuple/push_back.hpp:
 
-/usr/include/boost/unordered/unordered_map.hpp:
+/usr/include/boost/preprocessor/tuple/pop_front.hpp:
 
-/usr/include/boost/unordered_map.hpp:
+/usr/include/boost/preprocessor/seq/variadic_seq_to_seq.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_lock_grid_3.h:
+/usr/include/boost/preprocessor/seq/detail/binary_transform.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Iterator_project.h:
+/usr/include/boost/preprocessor/seq/pop_front.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_sort_traits_adapter_3.h:
+/usr/include/boost/preprocessor/seq/rest_n.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_3.h:
+/usr/include/boost/preprocessor/seq/for_each_product.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h:
+/usr/include/boost/preprocessor/seq/for_each.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_simplex_3.h:
+/usr/include/boost/preprocessor/seq/detail/split.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_vertex_base_3.h:
+/usr/include/boost/preprocessor/seq.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Small_unordered_map.h:
+/usr/include/boost/preprocessor/selection/min.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Concurrent_compact_container.h:
+/usr/include/boost/preprocessor/selection/max.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/Has_member_visited.h:
+/usr/include/boost/preprocessor/repetition/enum_trailing.hpp:
 
-/usr/include/boost/unordered/detail/fwd.hpp:
+/usr/include/boost/preprocessor/repetition/enum_shifted_binary_params.hpp:
 
-/usr/include/boost/unordered/detail/set.hpp:
+/usr/include/boost/preprocessor/repetition/enum_shifted.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_data_structure_3.h:
+/usr/include/boost/preprocessor/repetition/enum_params_with_defaults.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3.h:
+/usr/include/boost/preprocessor/repetition/enum_params_with_a_default.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/TDS_3.h:
+/usr/include/boost/preprocessor/repetition/deduce_r.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_cell_base_3.h:
+/usr/include/boost/preprocessor/tuple/enum.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Delaunay_triangulation_3.h:
+/usr/include/boost/preprocessor/punctuation/remove_parens.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Dimension_utils.h:
+/usr/include/boost/preprocessor/punctuation/paren_if.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/triangulate_hole.h:
+/usr/include/boost/preprocessor/punctuation/paren.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_predicate_with_state.h:
+/usr/include/boost/preprocessor/logical/or.hpp:
+
+/usr/include/boost/preprocessor/logical/nor.hpp:
+
+/usr/include/boost/preprocessor/logical.hpp:
+
+/usr/include/boost/preprocessor/list/to_array.hpp:
+
+/usr/include/boost/preprocessor/list/to_tuple.hpp:
+
+/usr/include/boost/preprocessor/list/for_each_product.hpp:
+
+/usr/include/boost/preprocessor/list/first_n.hpp:
+
+/usr/include/boost/preprocessor/list/for_each_i.hpp:
+
+/usr/include/boost/preprocessor/list/enum.hpp:
+
+/usr/include/boost/preprocessor/list/cat.hpp:
+
+/usr/include/boost/preprocessor/list/rest_n.hpp:
+
+/usr/include/boost/preprocessor/iteration/self.hpp:
+
+/usr/include/boost/preprocessor/iteration/local.hpp:
+
+/usr/include/boost/preprocessor/iteration.hpp:
+
+/usr/include/boost/preprocessor/detail/is_unary.hpp:
+
+/usr/include/boost/preprocessor/facilities.hpp:
+
+/usr/include/boost/preprocessor/debug/assert.hpp:
+
+/usr/include/boost/preprocessor/control.hpp:
+
+/usr/include/boost/preprocessor/comparison/greater_equal.hpp:
+
+/usr/include/boost/preprocessor/comparison/less.hpp:
+
+/usr/include/boost/preprocessor/comparison/equal.hpp:
+
+/usr/include/boost/preprocessor/comparison.hpp:
+
+/usr/include/boost/preprocessor/tuple/to_seq.hpp:
+
+/usr/include/boost/preprocessor/array/to_list.hpp:
+
+/usr/include/boost/preprocessor/array/replace.hpp:
+
+/usr/include/boost/preprocessor/array/remove.hpp:
+
+/usr/include/boost/preprocessor/array/pop_front.hpp:
+
+/usr/include/boost/preprocessor/comparison/not_equal.hpp:
+
+/usr/include/boost/preprocessor/facilities/is_1.hpp:
+
+/usr/include/boost/preprocessor/array/enum.hpp:
+
+/usr/include/boost/preprocessor/array.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/div.hpp:
+
+/usr/include/boost/preprocessor/library.hpp:
+
+/usr/include/boost/preprocessor.hpp:
+
+/usr/include/boost/property_map/transform_value_property_map.hpp:
+
+/usr/include/boost/graph/iteration_macros.hpp:
+
+/usr/include/boost/graph/detail/histogram_sort.hpp:
+
+/usr/include/boost/graph/detail/compressed_sparse_row_struct.hpp:
+
+/usr/include/boost/graph/compressed_sparse_row_graph.hpp:
+
+/usr/include/boost/typeof/typeof.hpp:
+
+/usr/include/boost/graph/numeric_values.hpp:
+
+/usr/include/boost/graph/graph_concepts.hpp:
+
+/usr/include/boost/range/iterator_range.hpp:
+
+/usr/include/boost/range/irange.hpp:
+
+/usr/include/boost/graph/detail/adjacency_list.hpp:
+
+/usr/include/boost/pending/container_traits.hpp:
+
+/usr/include/boost/serialization/is_bitwise_serializable.hpp:
+
+/usr/include/boost/serialization/split_free.hpp:
+
+/usr/include/boost/serialization/collection_size_type.hpp:
+
+/usr/include/boost/serialization/strong_typedef.hpp:
+
+/usr/include/boost/preprocessor/variadic/detail/is_single_return.hpp:
+
+/usr/include/boost/graph/buffer_concepts.hpp:
+
+/usr/include/boost/serialization/serialization.hpp:
+
+/usr/include/boost/multi_index/detail/index_matcher.hpp:
+
+/usr/include/boost/multi_index/detail/index_loader.hpp:
+
+/usr/include/boost/multi_index/detail/is_index_list.hpp:
+
+/usr/include/boost/multi_index/detail/header_holder.hpp:
+
+/usr/include/boost/mpl/aux_/reverse_iter_fold_impl.hpp:
+
+/usr/include/boost/mpl/reverse_iter_fold.hpp:
+
+/usr/include/boost/multi_index/detail/ord_index_impl_fwd.hpp:
+
+/usr/include/boost/multi_index/detail/ord_index_args.hpp:
+
+/usr/include/boost/preprocessor/control/expr_if.hpp:
+
+/usr/include/boost/multi_index/indexed_by.hpp:
+
+/usr/include/boost/multi_index/identity_fwd.hpp:
+
+/usr/include/boost/multi_index/identity.hpp:
+
+/usr/include/boost/multi_index_container_fwd.hpp:
+
+/usr/include/boost/graph/detail/is_distributed_selector.hpp:
+
+/usr/include/boost/multi_index_container.hpp:
+
+/usr/include/boost/multi_index/member.hpp:
+
+/usr/include/boost/mpl/set/aux_/iterator.hpp:
+
+/usr/include/boost/mpl/set/aux_/begin_end_impl.hpp:
+
+/usr/include/boost/mpl/set/aux_/value_type_impl.hpp:
+
+/usr/include/boost/preprocessor/seq/insert.hpp:
+
+/usr/include/boost/mpl/set/aux_/erase_key_impl.hpp:
+
+/usr/include/boost/mpl/set/aux_/erase_impl.hpp:
+
+/usr/include/boost/mpl/set/aux_/insert_range_impl.hpp:
+
+/usr/include/boost/mpl/base.hpp:
+
+/usr/include/boost/mpl/set/aux_/insert_impl.hpp:
+
+/usr/include/boost/mpl/set/aux_/empty_impl.hpp:
+
+/usr/include/boost/mpl/set/aux_/size_impl.hpp:
+
+/usr/include/boost/mpl/aux_/config/operators.hpp:
+
+/usr/include/boost/mpl/aux_/overload_names.hpp:
+
+/usr/include/boost/mpl/set/aux_/tag.hpp:
+
+/usr/include/boost/mpl/set/aux_/at_impl.hpp:
+
+/usr/include/boost/multi_index/detail/no_duplicate_tags.hpp:
+
+/usr/include/boost/multi_index/detail/hash_index_args.hpp:
+
+/usr/include/boost/multi_index/hashed_index_fwd.hpp:
+
+/usr/include/boost/multi_index/detail/scope_guard.hpp:
+
+/usr/include/boost/multi_index/detail/promotes_arg.hpp:
+
+/usr/include/boost/multi_index/detail/ignore_wstrict_aliasing.hpp:
+
+/usr/include/boost/multi_index/detail/index_node_base.hpp:
+
+/usr/include/boost/serialization/version.hpp:
+
+/usr/include/boost/serialization/wrapper.hpp:
+
+/usr/include/boost/serialization/force_include.hpp:
+
+/usr/include/boost/serialization/traits.hpp:
+
+/usr/include/boost/serialization/tracking_enum.hpp:
+
+/usr/include/boost/serialization/level_enum.hpp:
+
+/usr/include/boost/serialization/level.hpp:
+
+/usr/include/boost/serialization/nvp.hpp:
+
+/usr/include/boost/multi_index/detail/hash_index_iterator.hpp:
+
+/usr/include/boost/serialization/access.hpp:
+
+/usr/include/boost/archive/detail/abi_suffix.hpp:
+
+/usr/include/boost/config/abi_prefix.hpp:
+
+/usr/include/boost/archive/detail/abi_prefix.hpp:
+
+/usr/include/boost/archive/detail/decl.hpp:
+
+/usr/include/boost/archive/archive_exception.hpp:
+
+/usr/include/boost/preprocessor/seq/reverse.hpp:
+
+/usr/include/boost/multi_index/detail/raw_ptr.hpp:
+
+/usr/include/boost/multi_index/detail/bucket_array.hpp:
+
+/usr/include/boost/multi_index/detail/allocator_traits.hpp:
+
+/usr/include/boost/multi_index/detail/access_specifier.hpp:
+
+/usr/include/boost/multi_index/hashed_index.hpp:
+
+/usr/include/boost/scoped_ptr.hpp:
+
+/usr/include/boost/graph/adjacency_list.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/trace.h:
+
+/usr/include/boost/graph/adjacency_iterator.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/Dual.h:
+
+/usr/include/boost/dynamic_bitset/detail/lowest_bit.hpp:
+
+/usr/include/boost/preprocessor/tuple/remove.hpp:
+
+/usr/include/boost/dynamic_bitset/detail/dynamic_bitset.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/repair_degeneracies.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/refine_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_2_algorithms.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h:
 
 /usr/include/x86_64-linux-gnu/bits/resource.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Timer.h:
+/home/toler/CGAL-5.6/include/CGAL/Timer.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Profile_timer.h:
+/home/toler/CGAL-5.6/include/CGAL/Kernel_23/internal/Projection_traits_base_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_23/internal/Projection_traits_base_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Kernel_23/internal/Filtered_projection_traits_3.h:
 
 /usr/include/boost/container/flat_set.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Exact_rational.h:
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_2/insert_constraints.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/info_check.h:
+/home/toler/CGAL-5.6/include/CGAL/Exact_rational.h:
 
-/usr/include/boost/fusion/sequence/comparison/enable_comparison.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Constrained_triangulation_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Constrained_Delaunay_triangulation_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_utils_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_face_base_with_info_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Dummy_tds_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/license/TDS_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_vertex_base_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_with_info_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/centroid.h:
+
+/usr/include/boost/pending/queue.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_hierarchy_vertex_base_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_hierarchy_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Complexity_tags.h:
 
 /usr/include/boost/fusion/container/vector/detail/end_impl.hpp:
-
-/usr/include/boost/fusion/container/vector/detail/distance_impl.hpp:
 
 /usr/include/boost/fusion/container/vector/detail/next_impl.hpp:
 
@@ -2773,9 +3323,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/container/vector/detail/deref_impl.hpp:
 
-/usr/include/boost/fusion/container/vector/vector_iterator.hpp:
+/usr/include/boost/typeof/decltype.hpp:
 
-/usr/include/boost/fusion/container/vector/detail/at_impl.hpp:
+/usr/include/boost/fusion/container/vector/vector_iterator.hpp:
 
 /usr/include/boost/fusion/support/detail/index_sequence.hpp:
 
@@ -2783,11 +3333,7 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/container/vector/vector10.hpp:
 
-/usr/include/boost/fusion/algorithm/iteration/detail/segmented_fold.hpp:
-
 /usr/include/boost/fusion/algorithm/iteration/detail/preprocessed/fold.hpp:
-
-/usr/include/boost/fusion/algorithm/iteration/fold_fwd.hpp:
 
 /usr/include/boost/fusion/algorithm/iteration/fold.hpp:
 
@@ -2795,15 +3341,19 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/mpl/push_back.hpp:
 
+/usr/include/boost/preprocessor/seq/replace.hpp:
+
+/usr/include/boost/fusion/mpl/pop_front.hpp:
+
 /usr/include/boost/fusion/algorithm/transformation/pop_back.hpp:
 
 /usr/include/boost/mpl/aux_/pop_back_impl.hpp:
 
 /usr/include/boost/mpl/pop_back.hpp:
 
-/usr/include/boost/fusion/algorithm/transformation/insert_range.hpp:
-
 /usr/include/boost/fusion/algorithm/transformation/insert.hpp:
+
+/usr/include/boost/fusion/sequence/intrinsic/has_key.hpp:
 
 /usr/include/boost/fusion/mpl/has_key.hpp:
 
@@ -2815,7 +3365,7 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/algorithm/query/detail/find_if.hpp:
 
-/usr/include/boost/fusion/algorithm/query/find.hpp:
+/usr/include/boost/mpl/aux_/ptr_to_ref.hpp:
 
 /usr/include/boost/mpl/aux_/erase_key_impl.hpp:
 
@@ -2829,11 +3379,17 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/erase_fwd.hpp:
 
+/usr/include/boost/multi_index/detail/adl_swap.hpp:
+
 /usr/include/boost/fusion/mpl/erase.hpp:
 
 /usr/include/boost/fusion/mpl/empty.hpp:
 
+/usr/include/boost/fusion/container/deque/deque_fwd.hpp:
+
 /usr/include/boost/fusion/container/vector/detail/config.hpp:
+
+/usr/include/boost/fusion/container/vector/vector_fwd.hpp:
 
 /usr/include/boost/fusion/mpl/detail/clear.hpp:
 
@@ -2847,23 +3403,15 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/mpl/at.hpp:
 
-/usr/include/boost/fusion/adapted/mpl/detail/empty_impl.hpp:
-
 /usr/include/boost/fusion/adapted/mpl/detail/category_of_impl.hpp:
 
 /usr/include/boost/mpl/aux_/has_key_impl.hpp:
 
 /usr/include/boost/fusion/adapted/mpl/detail/has_key_impl.hpp:
 
-/usr/include/boost/fusion/adapted/mpl/detail/at_impl.hpp:
-
 /usr/include/boost/fusion/adapted/mpl/detail/value_at_impl.hpp:
 
 /usr/include/boost/fusion/adapted/mpl/detail/size_impl.hpp:
-
-/usr/include/boost/fusion/adapted/mpl/detail/is_sequence_impl.hpp:
-
-/usr/include/boost/fusion/adapted/mpl.hpp:
 
 /usr/include/boost/fusion/iterator/mpl.hpp:
 
@@ -2871,7 +3419,11 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/view/detail/strictest_traversal.hpp:
 
+/usr/include/boost/fusion/view/transform_view/detail/value_at_impl.hpp:
+
 /usr/include/boost/fusion/sequence/intrinsic/at.hpp:
+
+/usr/include/boost/fusion/view/transform_view/detail/end_impl.hpp:
 
 /usr/include/boost/fusion/view/transform_view/detail/begin_impl.hpp:
 
@@ -2899,8 +3451,6 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/adapted/boost_tuple/mpl/clear.hpp:
 
-/usr/include/boost/fusion/sequence/intrinsic/empty.hpp:
-
 /usr/include/boost/fusion/iterator/detail/segment_sequence.hpp:
 
 /usr/include/boost/fusion/container/list/detail/reverse_cons.hpp:
@@ -2909,13 +3459,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/sequence/intrinsic/value_at.hpp:
 
-/usr/include/boost/fusion/view/single_view/detail/value_at_impl.hpp:
-
 /usr/include/boost/fusion/view/single_view/detail/size_impl.hpp:
 
 /usr/include/boost/fusion/view/single_view/detail/begin_impl.hpp:
-
-/usr/include/boost/fusion/view/single_view/detail/at_impl.hpp:
 
 /usr/include/boost/fusion/view/single_view/detail/distance_impl.hpp:
 
@@ -2937,11 +3483,17 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/view/joint_view/detail/value_of_impl.hpp:
 
+/usr/include/boost/fusion/view/joint_view/detail/next_impl.hpp:
+
 /usr/include/boost/fusion/view/joint_view/detail/deref_impl.hpp:
 
 /usr/include/boost/fusion/view/joint_view/joint_view_iterator.hpp:
 
 /usr/include/boost/fusion/adapted/mpl/detail/end_impl.hpp:
+
+/usr/include/boost/fusion/view/joint_view/detail/key_of_impl.hpp:
+
+/usr/include/boost/fusion/mpl/end.hpp:
 
 /usr/include/boost/fusion/iterator/detail/adapt_value_traits.hpp:
 
@@ -2983,8 +3535,6 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/view/iterator_range/detail/at_impl.hpp:
 
-/usr/include/boost/fusion/view/iterator_range/detail/begin_impl.hpp:
-
 /usr/include/boost/fusion/iterator/mpl/convert_iterator.hpp:
 
 /usr/include/boost/fusion/iterator/distance.hpp:
@@ -2992,8 +3542,6 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 /usr/include/boost/fusion/view/iterator_range/iterator_range.hpp:
 
 /usr/include/boost/fusion/container/list/detail/at_impl.hpp:
-
-/usr/include/boost/fusion/container/list/detail/end_impl.hpp:
 
 /usr/include/boost/fusion/container/list/list_fwd.hpp:
 
@@ -3003,23 +3551,29 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/container/list/detail/deref_impl.hpp:
 
+/usr/include/boost/fusion/container/list/cons_iterator.hpp:
+
 /usr/include/boost/fusion/container/list/nil.hpp:
 
-/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_end.hpp:
-
 /usr/include/boost/fusion/sequence/intrinsic/end.hpp:
+
+/usr/include/boost/fusion/support/detail/access.hpp:
 
 /usr/include/boost/fusion/support/detail/enabler.hpp:
 
 /usr/include/boost/fusion/iterator/detail/segmented_equal_to.hpp:
 
-/usr/include/boost/fusion/iterator/key_of.hpp:
+/usr/include/boost/preprocessor/list/filter.hpp:
 
 /usr/include/boost/fusion/iterator/deref_data.hpp:
 
 /usr/include/boost/fusion/iterator/detail/segmented_iterator.hpp:
 
 /usr/include/boost/fusion/iterator/segmented_iterator.hpp:
+
+/usr/include/boost/fusion/sequence/intrinsic/segments.hpp:
+
+/usr/include/boost/fusion/support/void.hpp:
 
 /usr/include/boost/fusion/sequence/intrinsic/detail/segmented_end_impl.hpp:
 
@@ -3037,19 +3591,31 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/empty_base.hpp:
 
+/usr/include/boost/fusion/sequence/intrinsic/begin.hpp:
+
 /usr/include/boost/fusion/iterator/value_of.hpp:
 
 /usr/include/boost/fusion/adapted/boost_tuple/detail/convert_impl.hpp:
 
 /usr/include/boost/fusion/adapted/boost_tuple/detail/value_at_impl.hpp:
 
+/usr/include/boost/fusion/algorithm/iteration/detail/segmented_for_each.hpp:
+
+/usr/include/boost/fusion/adapted/boost_tuple/detail/size_impl.hpp:
+
 /usr/include/boost/fusion/adapted/boost_tuple/detail/end_impl.hpp:
+
+/usr/include/boost/fusion/support/is_iterator.hpp:
 
 /usr/include/boost/fusion/iterator/detail/distance.hpp:
 
 /usr/include/boost/fusion/iterator/prior.hpp:
 
 /usr/include/boost/config/no_tr1/utility.hpp:
+
+/usr/include/boost/fusion/support/sequence_base.hpp:
+
+/usr/include/boost/preprocessor/tuple/insert.hpp:
 
 /usr/include/boost/fusion/support/tag_of.hpp:
 
@@ -3058,6 +3624,8 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 /usr/include/boost/fusion/iterator/detail/advance.hpp:
 
 /usr/include/boost/fusion/support/iterator_base.hpp:
+
+/usr/include/boost/fusion/iterator/iterator_facade.hpp:
 
 /usr/include/boost/fusion/adapted/boost_tuple/boost_tuple_iterator.hpp:
 
@@ -3071,13 +3639,533 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/support/tag_of_fwd.hpp:
 
+/usr/include/boost/fusion/support/config.hpp:
+
+/usr/include/boost/fusion/adapted/boost_tuple.hpp:
+
+/usr/include/boost/iterator/minimum_category.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/info_check.h:
+
+/usr/include/boost/unordered/unordered_map_fwd.hpp:
+
+/usr/include/boost/unordered/detail/map.hpp:
+
+/usr/include/boost/unordered/unordered_map.hpp:
+
+/usr/include/boost/unordered_map.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Spatial_lock_grid_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Iterator_project.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Spatial_sort_traits_adapter_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Multiscale_sort.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_d.h:
+
+/usr/include/boost/preprocessor/debug.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_median_d.h:
+
+/usr/include/boost/preprocessor/debug/line.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_d.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_median_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_base.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Circle_2.h:
+
+/usr/include/boost/random/inversive_congruential.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_2/internal/Triangulation_line_face_circulator_2.h:
+
+/usr/include/boost/fusion/adapted/mpl/detail/at_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Ray_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Direction_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersection_traits_2.h:
+
+/usr/include/boost/container/detail/min_max.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/representation_tags.h:
+
+/usr/include/boost/math/tools/real_cast.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/core.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/boost/math/special_functions/fpclassify.hpp:
+
+/usr/include/boost/predef/detail/os_detected.h:
+
+/usr/include/boost/preprocessor/seq/subseq.hpp:
+
+/usr/include/boost/preprocessor/array/to_seq.hpp:
+
+/usr/include/boost/math/tools/precision.hpp:
+
+/usr/include/boost/math/policies/error_handling.hpp:
+
+/usr/include/boost/type_traits/is_complete.hpp:
+
+/usr/include/c++/9/complex:
+
+/usr/include/boost/mpl/greater_equal.hpp:
+
+/usr/include/boost/utility/detail/result_of_iterate.hpp:
+
+/usr/include/boost/fusion/support/as_const.hpp:
+
+/usr/include/boost/parameter/keyword.hpp:
+
+/usr/include/boost/predef/language/stdc.h:
+
+/usr/include/boost/preprocessor/repetition.hpp:
+
+/usr/include/c++/9/bits/basic_ios.tcc:
+
+/usr/include/stdint.h:
+
+/usr/include/boost/mpl/vector/aux_/include_preprocessed.hpp:
+
+/usr/include/boost/container/detail/advanced_insert_int.hpp:
+
+/usr/include/boost/mpl/vector/aux_/O1_size.hpp:
+
+/usr/include/boost/preprocessor/enum_shifted_params.hpp:
+
+/usr/include/c++/9/bits/stl_stack.h:
+
+/usr/include/boost/mpl/vector/aux_/iterator.hpp:
+
+/usr/include/boost/mpl/back_fwd.hpp:
+
+/usr/include/boost/mpl/vector/aux_/push_back.hpp:
+
+/usr/include/boost/mpl/next.hpp:
+
+/usr/include/boost/graph/graph_selectors.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h:
+
+/usr/include/boost/mpl/limits/vector.hpp:
+
+/usr/include/boost/serialization/base_object.hpp:
+
+/usr/include/boost/mpl/aux_/contains_impl.hpp:
+
+/usr/include/boost/mpl/contains.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/function_objects.h:
+
+/usr/include/boost/preprocessor/seq/filter.hpp:
+
+/usr/include/boost/type_traits/decay.hpp:
+
+/usr/include/boost/predef/version_number.h:
+
+/usr/include/boost/math/special_functions/math_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_middle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/basic_classes.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel_traits_fwd.h:
+
+/usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp:
+
+/usr/include/boost/pointee.hpp:
+
+/usr/include/boost/any.hpp:
+
+/usr/include/boost/mpl/aux_/config/ttp.hpp:
+
+/usr/include/boost/intrusive/detail/config_begin.hpp:
+
+/usr/include/boost/fusion/iterator/equal_to.hpp:
+
+/usr/include/boost/optional/detail/optional_relops.hpp:
+
+/usr/include/boost/optional/detail/optional_reference_spec.hpp:
+
+/usr/include/boost/preprocessor/debug/error.hpp:
+
+/usr/include/boost/multiprecision/cpp_int/value_pack.hpp:
+
+/usr/include/boost/optional/bad_optional_access.hpp:
+
+/usr/include/boost/mpl/set/set0.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_cell_base_3.h:
+
+/usr/include/boost/core/swap.hpp:
+
+/usr/include/boost/type_traits/has_left_shift.hpp:
+
+/usr/include/boost/core/explicit_operator_bool.hpp:
+
+/usr/include/boost/math/special_functions/detail/fp_traits.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/greater.hpp:
+
+/usr/include/boost/multi_index/detail/safe_mode.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Lazy.h:
+
+/home/toler/CGAL-5.6/include/CGAL/exceptions.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:
+
+/usr/include/boost/multi_index/detail/auto_space.hpp:
+
+/usr/include/boost/smart_ptr/detail/shared_count.hpp:
+
+/usr/include/boost/variant/detail/enable_recursive.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/shape_predicates.h:
+
+/usr/include/boost/preprocessor/facilities/intercept.hpp:
+
+/usr/include/boost/variant/detail/variant_io.hpp:
+
+/usr/include/boost/mpl/vector/aux_/item.hpp:
+
+/usr/include/boost/mpl/inserter.hpp:
+
+/usr/include/boost/detail/iterator.hpp:
+
+/usr/include/boost/type_traits/function_traits.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/Wutils.h:
+
+/usr/include/boost/mpl/back_inserter.hpp:
+
+/usr/include/boost/predef/library/std/msl.h:
+
+/usr/include/boost/type_traits/is_base_of.hpp:
+
+/usr/include/boost/type_traits/detail/mp_defer.hpp:
+
+/usr/include/boost/mpl/min_max.hpp:
+
+/usr/include/boost/fusion/support/detail/is_mpl_sequence.hpp:
+
+/usr/include/c++/9/bits/memoryfwd.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/Color.h:
+
+/usr/include/boost/fusion/sequence/comparison/detail/equal_to.hpp:
+
+/usr/include/boost/mpl/transform.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Point_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Number_types/internal/Exact_type_selector.h:
+
+/home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/meshing_hole_filling.h:
+
+/usr/include/boost/container/vector.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Weighted_point_2.h:
+
+/usr/include/boost/mpl/same_as.hpp:
+
+/usr/include/boost/parameter/aux_/template_keyword.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/CC_safe_handle.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Ray_2.h:
+
+/usr/include/boost/mpl/plus.hpp:
+
+/usr/include/boost/mpl/aux_/joint_iter.hpp:
+
+/usr/include/boost/mpl/joint_view.hpp:
+
+/usr/include/boost/mpl/vector/aux_/vector0.hpp:
+
+/usr/include/boost/mpl/aux_/push_front_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Vector_2.h:
+
+/usr/include/boost/mpl/set/aux_/has_key_impl.hpp:
+
+/usr/include/boost/iterator/detail/config_def.hpp:
+
+/usr/include/boost/preprocessor/punctuation.hpp:
+
+/usr/include/boost/config/user.hpp:
+
+/usr/include/boost/mpl/push_front.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h:
+
+/usr/include/boost/mpl/reverse_fold.hpp:
+
+/usr/include/boost/functional/hash/hash.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Rotation_rep_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/user_classes.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Algebraic_structure_traits.h:
+
+/usr/include/boost/parameter/name.hpp:
+
+/usr/include/boost/mpl/insert.hpp:
+
+/usr/include/boost/preprocessor/tuple/to_list.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Spatial_sort_traits_adapter_2.h:
+
+/usr/include/boost/variant/variant_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Container_helper.h:
+
+/usr/include/boost/mpl/aux_/insert_range_impl.hpp:
+
+/usr/include/boost/mpl/insert_range.hpp:
+
+/usr/include/boost/mpl/front.hpp:
+
+/usr/include/boost/mpl/at.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp:
+
+/usr/include/boost/mpl/fold.hpp:
+
+/usr/include/c++/9/bits/hash_bytes.h:
+
+/usr/include/boost/move/algo/adaptive_merge.hpp:
+
+/usr/include/boost/mpl/logical.hpp:
+
+/usr/include/boost/fusion/container/list/detail/value_at_impl.hpp:
+
+/usr/include/boost/intrusive/detail/iterator.hpp:
+
+/usr/include/boost/container/detail/algorithm.hpp:
+
+/usr/include/boost/cstdint.hpp:
+
+/usr/include/boost/mpl/list/list0.hpp:
+
+/usr/include/boost/preprocessor/stringize.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/basic_constructions_3.h:
+
+/usr/include/boost/type_traits/has_trivial_destructor.hpp:
+
+/usr/include/boost/mpl/aux_/config/typeof.hpp:
+
+/usr/include/boost/type_traits/has_trivial_copy.hpp:
+
+/usr/include/boost/preprocessor/variadic/elem.hpp:
+
+/usr/include/boost/integer/integer_log2.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h:
+
+/usr/include/boost/type_traits/type_with_alignment.hpp:
+
+/usr/include/boost/type_traits/has_trivial_move_assign.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Cartesian_base.h:
+
+/usr/include/boost/detail/no_exceptions_support.hpp:
+
+/usr/include/c++/9/ext/alloc_traits.h:
+
+/usr/include/boost/variant/detail/has_result_type.hpp:
+
+/usr/include/boost/type_traits/copy_reference.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/usr/include/boost/mpl/size.hpp:
+
+/usr/include/boost/preprocessor/logical/xor.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp:
+
+/usr/include/boost/preprocessor/slot/detail/shared.hpp:
+
+/usr/include/boost/mpl/prior.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/fenvinline.h:
+
+/usr/include/boost/mpl/aux_/front_impl.hpp:
+
+/usr/include/boost/mpl/aux_/advance_forward.hpp:
+
+/usr/include/boost/lambda/detail/ret.hpp:
+
+/usr/include/boost/mpl/negate.hpp:
+
+/usr/include/c++/9/iterator:
+
+/usr/include/boost/mpl/aux_/comparison_op.hpp:
+
+/usr/include/boost/mpl/vector/aux_/push_front.hpp:
+
+/usr/include/boost/type_traits/has_post_increment.hpp:
+
+/usr/include/boost/mpl/tag.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Circle_2.h:
+
+/usr/include/boost/mpl/iterator_range.hpp:
+
+/usr/include/boost/mpl/distance.hpp:
+
+/usr/include/boost/mpl/vector/vector0.hpp:
+
+/usr/include/boost/variant/apply_visitor.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h:
+
+/usr/include/boost/container/detail/is_container.hpp:
+
+/usr/include/boost/preprocessor/seq/pop_back.hpp:
+
+/usr/include/boost/config/abi_suffix.hpp:
+
 /usr/include/boost/variant/static_visitor.hpp:
 
 /usr/include/boost/type_index/stl_type_index.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong_impl.h:
+/home/toler/CGAL-5.6/include/CGAL/TDS_3/internal/Dummy_tds_3.h:
 
 /usr/include/boost/move/detail/std_ns_begin.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/Cone_expansion_event.h:
+
+/usr/include/boost/mpl/list/aux_/preprocessed/plain/list10.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_base.h:
+
+/usr/include/boost/move/adl_move_swap.hpp:
+
+/usr/include/boost/none.hpp:
+
+/usr/include/boost/unordered/detail/set.hpp:
+
+/usr/include/boost/mpl/list/aux_/begin_end.hpp:
+
+/usr/include/boost/mpl/empty_fwd.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/BigFloatRep.h:
+
+/usr/include/boost/mpl/size_fwd.hpp:
+
+/usr/include/boost/type_traits/has_nothrow_copy.hpp:
+
+/usr/include/boost/core/noncopyable.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h:
+
+/usr/include/boost/mpl/list/aux_/size.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/config.h:
+
+/usr/include/boost/mpl/list/aux_/clear.hpp:
+
+/usr/include/boost/detail/templated_streams.hpp:
+
+/usr/include/boost/mpl/push_back_fwd.hpp:
+
+/usr/include/boost/mpl/aux_/config/nttp.hpp:
+
+/usr/include/boost/mpl/pop_front_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE_BigFloat.h:
+
+/usr/include/boost/mpl/list/aux_/pop_front.hpp:
+
+/usr/include/boost/preprocessor/list/append.hpp:
+
+/usr/include/c++/9/bits/hashtable_policy.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/graph_traits_Surface_mesh.h:
+
+/usr/include/boost/preprocessor/variadic/size.hpp:
+
+/usr/include/boost/mpl/list/list10.hpp:
+
+/usr/include/boost/move/detail/meta_utils_core.hpp:
+
+/usr/include/boost/variant/detail/make_variant_list.hpp:
+
+/usr/include/boost/type_traits/is_stateless.hpp:
+
+/usr/include/boost/mpl/sizeof.hpp:
+
+/usr/include/boost/mpl/aux_/msvc_eti_base.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp:
+
+/usr/include/boost/mpl/minus.hpp:
+
+/usr/include/endian.h:
+
+/usr/include/boost/parameter/aux_/has_nested_template_fn.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Kd_tree_rectangle.h:
+
+/usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp:
+
+/usr/include/boost/type_traits/detail/yes_no_type.hpp:
+
+/usr/include/boost/preprocessor/seq/transform.hpp:
+
+/usr/include/boost/mpl/aux_/iter_fold_impl.hpp:
+
+/usr/include/boost/mpl/aux_/has_size.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp:
+
+/usr/include/boost/mpl/long.hpp:
+
+/usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
+
+/usr/include/boost/mpl/aux_/has_begin.hpp:
+
+/usr/include/boost/mpl/vector/aux_/tag.hpp:
+
+/usr/include/boost/type_traits/is_virtual_base_of.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/BigFloat_impl.h:
+
+/usr/include/boost/predef/os/haiku.h:
+
+/usr/include/boost/fusion/container/vector/detail/at_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_planes_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/selection.h:
+
+/usr/include/boost/mpl/aux_/begin_end_impl.hpp:
 
 /usr/include/boost/fusion/view/joint_view/detail/deref_data_impl.hpp:
 
@@ -3087,51 +4175,85 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/move/algo/move.hpp:
 
+/usr/include/boost/move/detail/std_ns_end.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/OFF.h:
+
+/usr/include/boost/mpl/vector/aux_/size.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Segment_3.h:
+
 /usr/include/boost/move/iterator.hpp:
 
 /usr/include/boost/move/detail/type_traits.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC3.h:
-
-/usr/include/boost/move/detail/meta_utils_core.hpp:
-
-/usr/include/boost/mpl/list/list10.hpp:
-
-/usr/include/boost/move/detail/config_end.hpp:
+/usr/include/c++/9/string:
 
 /usr/include/boost/multiprecision/cpp_int/cpp_int_config.hpp:
 
+/usr/include/boost/predef/architecture/alpha.h:
+
+/usr/include/c++/9/bits/stringfwd.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Fraction_traits.h:
+
+/usr/include/boost/fusion/algorithm/transformation/pop_front.hpp:
+
+/usr/include/boost/move/detail/to_raw_pointer.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/mul.hpp:
+
 /usr/include/boost/move/move.hpp:
+
+/usr/include/boost/optional/detail/optional_aligned_storage.hpp:
+
+/usr/include/boost/preprocessor/identity.hpp:
+
+/usr/include/boost/multi_index/detail/has_tag.hpp:
 
 /usr/include/boost/variant/recursive_wrapper_fwd.hpp:
 
-/usr/include/boost/type_traits/is_destructible.hpp:
+/usr/include/boost/mpl/vector/aux_/pop_front.hpp:
 
-/usr/include/boost/type_traits/add_rvalue_reference.hpp:
+/usr/include/boost/multiprecision/traits/is_variable_precision.hpp:
 
-/usr/include/boost/type_traits/add_cv.hpp:
+/usr/include/boost/container/container_fwd.hpp:
 
-/usr/include/boost/parameter/aux_/parameter_requirements.hpp:
+/usr/include/boost/type_traits/is_default_constructible.hpp:
 
-/usr/include/boost/lexical_cast/detail/widest_char.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Line_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Point_2.h:
+
+/usr/include/boost/multiprecision/gmp.hpp:
+
+/usr/include/boost/type_traits/is_constructible.hpp:
 
 /usr/include/boost/predef/platform/windows_phone.h:
 
+/usr/include/boost/lexical_cast/detail/widest_char.hpp:
+
 /usr/include/boost/foreach.hpp:
 
-/usr/include/boost/detail/reference_content.hpp:
+/home/toler/CGAL-5.6/include/CGAL/enable_warnings.h:
 
 /usr/include/boost/preprocessor/control/deduce_d.hpp:
 
-/usr/include/boost/detail/call_traits.hpp:
+/usr/include/boost/range/detail/safe_bool.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h:
+/usr/include/boost/mpl/find_if.hpp:
 
-/usr/include/boost/variant/detail/substitute_fwd.hpp:
+/usr/include/boost/variant/detail/forced_return.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h:
+
+/usr/include/boost/type_traits/has_minus_assign.hpp:
+
+/usr/include/boost/preprocessor/repetition/enum.hpp:
 
 /usr/include/boost/variant/detail/config.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Ray_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/cxxabi_tweaks.h:
 
@@ -3139,503 +4261,173 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Line_2.h:
+/usr/include/boost/preprocessor/array/pop_back.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpzf.h:
+/usr/include/boost/variant/detail/element_index.hpp:
 
-/usr/include/boost/type_index.hpp:
+/usr/include/boost/current_function.hpp:
 
-/usr/include/c++/9/cerrno:
-
-/usr/include/boost/random/detail/disable_warnings.hpp:
-
-/usr/include/boost/variant.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/kernel_assertions.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/kernel_config.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_23/internal/Filtered_projection_traits_3.h:
-
-/usr/include/boost/heap/detail/stable_heap.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Residue.h:
-
-/usr/include/boost/move/detail/pointer_element.hpp:
-
-/usr/include/boost/mpl/aux_/arity.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Modular_traits.h:
-
-/usr/include/boost/multiprecision/cpp_int/comparison.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/long_double.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/fenvinline.h:
-
-/usr/include/boost/mpl/prior.hpp:
-
-/usr/include/boost/mpl/aux_/front_impl.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/fenv.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/Primitive_helper.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Needs_parens_as_product.h:
-
-/usr/include/x86_64-linux-gnu/gmp.h:
-
-/usr/include/boost/mpl/max.hpp:
-
-/usr/include/gmpxx.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h:
-
-/usr/include/boost/variant/detail/make_variant_list.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Algebraic_structure_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC2.h:
-
-/usr/include/boost/type_traits/is_array.hpp:
-
-/usr/include/boost/variant/detail/apply_visitor_delayed.hpp:
-
-/usr/include/boost/random/detail/signed_unsigned_tools.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h:
-
-/usr/include/boost/integer.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/boost/math/special_functions/fpclassify.hpp:
-
-/usr/include/boost/predef/detail/os_detected.h:
-
-/usr/include/c++/9/complex:
-
-/usr/include/boost/mpl/greater_equal.hpp:
-
-/usr/include/boost/fusion/support/as_const.hpp:
-
-/usr/include/boost/parameter/keyword.hpp:
-
-/usr/include/boost/predef/language/stdc.h:
-
-/usr/include/c++/9/bits/basic_ios.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/boost/mpl/iterator_range.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp:
-
-/usr/include/endian.h:
-
-/usr/include/boost/mpl/distance.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h:
-
-/usr/include/boost/preprocessor/slot/detail/shared.hpp:
-
-/usr/include/boost/mpl/aux_/advance_forward.hpp:
-
-/usr/include/boost/lambda/detail/ret.hpp:
-
-/usr/include/boost/mpl/negate.hpp:
-
-/usr/include/stdint.h:
-
-/usr/include/boost/mpl/vector/aux_/size.hpp:
-
-/usr/include/boost/mpl/vector/aux_/O1_size.hpp:
-
-/usr/include/boost/preprocessor/enum_shifted_params.hpp:
-
-/usr/include/c++/9/bits/stl_stack.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h:
-
-/usr/include/boost/mpl/plus.hpp:
-
-/usr/include/boost/mpl/vector/aux_/iterator.hpp:
-
-/usr/include/boost/mpl/back_fwd.hpp:
-
-/usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Iso_cuboid_3.h:
-
-/usr/include/boost/math/tools/complex.hpp:
-
-/usr/include/boost/mpl/vector/aux_/back.hpp:
-
-/usr/include/boost/mpl/next.hpp:
-
-/usr/include/boost/parameter/aux_/has_nested_template_fn.hpp:
-
-/usr/include/boost/type_traits/is_default_constructible.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Dimension.h:
-
-/usr/include/boost/mpl/vector/aux_/pop_front.hpp:
-
-/usr/include/boost/container/container_fwd.hpp:
-
-/usr/include/boost/mpl/aux_/config/typeof.hpp:
-
-/usr/include/boost/variant/apply_visitor.hpp:
-
-/usr/include/boost/mpl/vector/vector0.hpp:
-
-/usr/include/boost/mpl/limits/vector.hpp:
-
-/usr/include/boost/mpl/aux_/push_front_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Conic_2.h:
-
-/usr/include/boost/mpl/aux_/inserter_algorithm.hpp:
-
-/usr/include/boost/predef/library/std/msl.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Simple_cartesian.h:
-
-/usr/include/boost/mpl/reverse_fold.hpp:
-
-/usr/include/boost/mpl/at.hpp:
-
-/usr/include/boost/mpl/aux_/has_size.hpp:
-
-/usr/include/boost/mpl/O1_size.hpp:
-
-/usr/include/boost/mpl/fold.hpp:
-
-/usr/include/c++/9/bits/hash_bytes.h:
-
-/usr/include/boost/move/algo/adaptive_merge.hpp:
-
-/usr/include/boost/mpl/same_as.hpp:
-
-/usr/include/boost/parameter/aux_/template_keyword.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/not_equal_to.hpp:
-
-/usr/include/boost/type_traits/is_float.hpp:
-
-/usr/include/boost/mpl/aux_/iter_fold_if_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_cell_base_3.h:
-
-/usr/include/boost/move/adl_move_swap.hpp:
-
-/usr/include/boost/mpl/list/aux_/preprocessed/plain/list10.hpp:
-
-/usr/include/boost/none.hpp:
-
-/usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
-
-/usr/include/boost/mpl/aux_/begin_end_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_ray_intersection.h:
-
-/usr/include/boost/mpl/aux_/contains_impl.hpp:
-
-/usr/include/boost/mpl/aux_/has_begin.hpp:
-
-/usr/include/boost/predef/os/haiku.h:
-
-/usr/include/boost/mpl/contains.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Lazy_exact_nt.h:
-
-/usr/include/boost/type_traits/detail/yes_no_type.hpp:
-
-/usr/include/boost/mpl/list/aux_/begin_end.hpp:
-
-/usr/include/boost/mpl/empty_fwd.hpp:
-
-/usr/include/boost/unordered/unordered_set.hpp:
-
-/usr/include/boost/mpl/aux_/at_impl.hpp:
-
-/usr/include/boost/core/noncopyable.hpp:
-
-/usr/include/boost/mpl/list/aux_/size.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreIO_impl.h:
-
-/usr/include/boost/mpl/front_fwd.hpp:
-
-/usr/include/boost/mpl/push_back_fwd.hpp:
-
-/usr/include/boost/mpl/aux_/config/nttp.hpp:
-
-/usr/include/boost/mpl/pop_front_fwd.hpp:
-
-/usr/include/boost/mpl/list/aux_/pop_front.hpp:
-
-/usr/include/c++/9/bits/hashtable_policy.h:
-
-/usr/include/boost/preprocessor/variadic/size.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Ray_3.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp:
-
-/usr/include/boost/mpl/long.hpp:
-
-/usr/include/boost/mpl/list/list0.hpp:
-
-/usr/include/boost/cstdint.hpp:
+/home/toler/CGAL-5.6/include/CGAL/enum.h:
 
 /usr/include/boost/mpl/limits/list.hpp:
 
 /usr/include/c++/9/bits/hashtable.h:
 
-/usr/include/c++/9/stdlib.h:
+/usr/include/boost/mpl/empty.hpp:
 
-/usr/include/boost/parameter/aux_/set.hpp:
+/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_source/baryshift.cpp:
 
-/usr/include/boost/mpl/list/aux_/include_preprocessed.hpp:
+/usr/include/boost/type_index.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
-/usr/include/boost/math/tools/promotion.hpp:
+/usr/include/c++/9/cerrno:
 
-/usr/include/boost/predef/architecture/pyramid.h:
+/usr/include/boost/random/detail/disable_warnings.hpp:
 
-/usr/include/boost/math/special_functions/detail/round_fwd.hpp:
+/usr/include/boost/variant/variant.hpp:
 
-/usr/include/boost/mpl/push_front.hpp:
+/usr/include/boost/variant.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Named_function_parameters.h:
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_pointsH2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/fair.h:
+/home/toler/CGAL-5.6/include/CGAL/aff_transformation_tags_impl.h:
 
-/usr/include/boost/predef/version_number.h:
+/usr/include/boost/utility/addressof.hpp:
 
-/usr/include/boost/math/special_functions/math_fwd.hpp:
+/usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Algebraic_extension_traits.h:
+/usr/include/boost/type_traits/is_list_constructible.hpp:
 
-/usr/include/c++/9/cfloat:
+/home/toler/CGAL-5.6/include/CGAL/kernel_assertions.h:
 
-/usr/include/boost/container/detail/construct_in_place.hpp:
+/usr/include/boost/mpl/iterator_category.hpp:
 
-/usr/include/boost/predef/architecture/alpha.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
-/usr/include/c++/9/bits/stringfwd.h:
-
-/usr/include/boost/noncopyable.hpp:
-
-/usr/include/boost/mpl/aux_/iter_fold_impl.hpp:
-
-/usr/include/boost/preprocessor/seq/transform.hpp:
-
-/usr/include/boost/pointee.hpp:
-
-/usr/include/c++/9/cstring:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
-
-/usr/include/boost/detail/lightweight_mutex.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h:
-
-/usr/include/boost/detail/iterator.hpp:
-
-/usr/include/boost/type_traits/function_traits.hpp:
-
-/usr/include/boost/core/swap.hpp:
-
-/usr/include/boost/type_traits/has_left_shift.hpp:
-
-/usr/include/boost/integer_traits.hpp:
-
-/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp:
-
-/usr/include/unistd.h:
-
-/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
-
-/usr/include/boost/numeric/conversion/detail/bounds.hpp:
-
-/usr/include/boost/mpl/aux_/empty_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h:
-
-/usr/include/boost/mpl/aux_/config/gcc.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathinline.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Point_3.h:
-
-/usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_2/insert_constraints.h:
-
-/usr/include/boost/random/negative_binomial_distribution.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h:
-
-/usr/include/boost/mpl/vector/aux_/push_front.hpp:
-
-/usr/include/boost/type_traits/has_post_increment.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp:
-
-/usr/include/boost/mpl/times.hpp:
-
-/usr/include/boost/mpl/multiplies.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel_fwd.h:
-
-/usr/include/boost/numeric/conversion/detail/is_subranged.hpp:
-
-/usr/include/boost/mpl/integral_c.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/number_type_basic.h:
-
-/usr/include/boost/parameter/required.hpp:
-
-/usr/include/boost/mpl/size_fwd.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp:
-
-/usr/include/boost/mpl/aux_/msvc_eti_base.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_data_structure_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/mpl.h:
+/home/toler/CGAL-5.6/include/CGAL/kernel_config.h:
 
 /usr/include/boost/mpl/not_equal_to.hpp:
 
 /usr/include/boost/mpl/aux_/has_tag.hpp:
 
-/usr/include/boost/mpl/tag.hpp:
+/home/toler/CGAL-5.6/include/CGAL/gmpxx_coercion_traits.h:
 
-/usr/include/boost/mpl/aux_/numeric_op.hpp:
+/usr/include/boost/random/hyperexponential_distribution.hpp:
 
-/usr/include/boost/mpl/aux_/comparison_op.hpp:
+/usr/include/boost/type_traits/remove_all_extents.hpp:
 
-/usr/include/boost/numeric/conversion/conversion_traits.hpp:
+/usr/include/boost/optional.hpp:
 
-/usr/include/boost/numeric/conversion/converter.hpp:
+/home/toler/CGAL-5.6/include/CGAL/mpz_class.h:
+
+/usr/include/boost/predef/library/std/libcomo.h:
+
+/home/toler/CGAL-5.6/include/CGAL/gmpxx.h:
+
+/home/toler/CGAL-5.6/include/CGAL/squared_distance_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/tss.h:
+
+/usr/include/c++/9/typeinfo:
+
+/usr/include/boost/preprocessor/detail/check.hpp:
+
+/usr/include/boost/predef/language.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_directionsH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/float.h:
+
+/usr/include/boost/predef/compiler/greenhills.h:
+
+/usr/include/boost/predef/compiler/palm.h:
+
+/home/toler/CGAL-5.6/include/CGAL/test_FPU_rounding_mode_impl.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h:
+
+/usr/include/boost/mpl/set/aux_/set0.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Ray_3.h:
+
+/usr/include/x86_64-linux-gnu/bits/fenv.h:
+
+/usr/include/c++/9/bits/shared_ptr.h:
+
+/usr/include/boost/type_traits/is_array.hpp:
+
+/usr/include/boost/variant/detail/apply_visitor_delayed.hpp:
+
+/usr/include/boost/mpl/numeric_cast.hpp:
+
+/usr/include/boost/mpl/is_sequence.hpp:
+
+/usr/include/boost/preprocessor/facilities/is_empty_variadic.hpp:
+
+/usr/include/boost/mpl/iterator_tags.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_simplex_3.h:
+
+/usr/include/c++/9/fenv.h:
+
+/usr/include/boost/random/normal_distribution.hpp:
+
+/usr/include/boost/math/tools/promotion.hpp:
+
+/usr/include/boost/predef/architecture/pyramid.h:
+
+/usr/include/boost/mpl/list/aux_/include_preprocessed.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/c++/9/stdlib.h:
+
+/usr/include/boost/graph/boykov_kolmogorov_max_flow.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Object.h:
+
+/usr/include/boost/parameter/aux_/set.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/FPU.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Gmp_coercion_traits.h:
+
+/usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h:
+
+/usr/include/boost/preprocessor/iterate.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/array.h:
+
+/usr/include/boost/throw_exception.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/io.h:
+
+/usr/include/boost/fusion/container/vector/detail/value_at_impl.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/boost/type.hpp:
 
 /usr/include/boost/mpl/eval_if.hpp:
 
-/usr/include/boost/numeric/conversion/cast.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h:
-
-/usr/include/boost/move/detail/fwd_macros.hpp:
-
-/usr/include/boost/type_traits/is_base_of.hpp:
-
-/usr/include/boost/type_traits/detail/mp_defer.hpp:
-
-/usr/include/boost/fusion/algorithm/transformation/pop_front.hpp:
-
-/usr/include/boost/move/detail/to_raw_pointer.hpp:
-
-/usr/include/boost/fusion/adapted/boost_tuple/detail/at_impl.hpp:
-
-/usr/include/boost/intrusive/pack_options.hpp:
-
-/usr/include/boost/lexical_cast/detail/is_character.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Quotient.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h:
-
-/usr/include/boost/current_function.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/gmpxx.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/is_convertible.h:
-
-/usr/include/boost/type_traits/has_minus_assign.hpp:
-
-/usr/include/boost/variant/detail/forced_return.hpp:
-
-/usr/include/boost/type_traits/make_void.hpp:
-
-/usr/include/boost/type_traits/has_plus.hpp:
-
-/usr/include/boost/fusion/view/single_view/detail/end_impl.hpp:
-
-/usr/include/boost/mpl/aux_/nttp_decl.hpp:
-
-/usr/include/boost/type_traits/is_convertible.hpp:
-
-/usr/include/boost/type_traits/has_divides.hpp:
-
-/usr/include/boost/iterator/iterator_adaptor.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Triangle_3_Triangle_3.h:
-
-/usr/include/boost/container/options.hpp:
-
-/usr/include/boost/mpl/vector/aux_/vector0.hpp:
-
-/usr/include/boost/mpl/joint_view.hpp:
-
-/usr/include/boost/container/detail/advanced_insert_int.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Properties.h:
-
-/usr/include/boost/detail/indirect_traits.hpp:
-
-/usr/include/boost/core/checked_delete.hpp:
-
-/usr/include/boost/smart_ptr/detail/shared_count.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/STL.h:
-
-/usr/include/boost/iterator/filter_iterator.hpp:
-
-/usr/include/boost/type_traits/is_scalar.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF_impl.h:
-
-/usr/include/boost/iterator/transform_iterator.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/tags.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/boost/iterator/advance.hpp:
-
-/usr/include/boost/preprocessor/logical/not.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Conic_misc.h:
-
-/usr/include/boost/preprocessor/arithmetic/mod.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Needs_parens_as_product.h:
 
 /usr/include/c++/9/numeric:
 
@@ -3643,143 +4435,119 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mp11/detail/mp_is_list.hpp:
 
-/usr/include/boost/utility/binary.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Algebraic_extension_traits.h:
 
-/usr/include/boost/preprocessor/repetition/repeat_from_to.hpp:
+/usr/include/boost/numeric/conversion/detail/converter.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
+/usr/include/boost/serialization/split_member.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h:
+/usr/include/boost/type_traits/is_destructible.hpp:
 
-/usr/include/c++/9/fenv.h:
+/usr/include/boost/type_traits/add_rvalue_reference.hpp:
 
-/usr/include/boost/random/normal_distribution.hpp:
+/usr/include/boost/type_traits/add_cv.hpp:
 
-/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin.hpp:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/named_params_helper.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/MP_Float_arithmetic_kernel.h:
+/usr/include/boost/preprocessor/tuple/pop_back.hpp:
 
-/usr/include/boost/type_traits/has_divides_assign.hpp:
+/usr/include/boost/parameter/aux_/parameter_requirements.hpp:
 
-/usr/include/boost/mpl/numeric_cast.hpp:
-
-/usr/include/boost/mpl/is_sequence.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Handle_for.h:
-
-/usr/include/boost/preprocessor/facilities/is_empty_variadic.hpp:
-
-/usr/include/boost/utility.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Scalar_factor_traits.h:
 
 /usr/include/c++/9/bits/cpp_type_traits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/locate.h:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/include/boost/fusion/container/vector/detail/advance_impl.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
 
-/usr/include/boost/mpl/aux_/iter_apply.hpp:
+/usr/include/c++/9/cstring:
 
-/usr/include/boost/type_traits/make_unsigned.hpp:
+/usr/include/boost/detail/lightweight_mutex.hpp:
 
-/usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp:
+/usr/include/x86_64-linux-gnu/gmp.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Fraction_traits.h:
+/usr/include/boost/mpl/max.hpp:
 
-/usr/include/boost/fusion/adapted/boost_tuple.hpp:
+/usr/include/boost/core/addressof.hpp:
 
-/usr/include/boost/concept/detail/concept_undef.hpp:
+/usr/include/c++/9/cfloat:
 
-/usr/include/boost/preprocessor/seq/detail/is_empty.hpp:
+/usr/include/boost/container/detail/construct_in_place.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost_mp.h:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
 
-/usr/include/boost/preprocessor/list/detail/fold_right.hpp:
-
-/usr/include/boost/math/bindings/detail/big_lanczos.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/functional.h:
-
-/usr/include/boost/preprocessor/seq/seq.hpp:
-
-/usr/include/boost/preprocessor/seq/for_each_i.hpp:
-
-/usr/include/boost/type_traits/is_virtual_base_of.hpp:
-
-/usr/include/boost/mpl/vector/aux_/tag.hpp:
-
-/usr/include/boost/type_traits/conversion_traits.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Location_policy.h:
-
-/usr/include/c++/9/bits/locale_facets.h:
-
-/usr/include/boost/concept/detail/has_constraints.hpp:
-
-/usr/include/boost/mpl/vector/aux_/empty.hpp:
-
-/usr/include/boost/concept/detail/backward_compatibility.hpp:
-
-/usr/include/boost/concept/detail/general.hpp:
-
-/usr/include/boost/predef/os/irix.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Handle.h:
-
-/usr/include/boost/concept_check.hpp:
-
-/usr/include/c++/9/cstdlib:
-
-/usr/include/boost/integer/integer_mask.hpp:
-
-/usr/include/boost/range/concepts.hpp:
-
-/usr/include/boost/array.hpp:
-
-/usr/include/sched.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Splitters.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Ray_3.h:
-
-/usr/include/boost/range/has_range_iterator.hpp:
-
-/usr/include/boost/range/difference_type.hpp:
-
-/usr/include/boost/graph/property_maps/null_property_map.hpp:
-
-/usr/include/boost/range/size_type.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/tss.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/VTK/VTK_writer.h:
 
 /usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
 
-/usr/include/boost/range/end.hpp:
+/usr/include/boost/variant/detail/move.hpp:
 
-/usr/include/boost/numeric/conversion/detail/converter.hpp:
+/usr/include/boost/predef/os/vms.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/intersection_2.h:
+/usr/include/boost/fusion/container/map/map_fwd.hpp:
 
-/usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp:
+/usr/include/boost/unordered_set.hpp:
 
-/usr/include/boost/type_traits/copy_cv_ref.hpp:
+/usr/include/boost/math/special_functions/detail/round_fwd.hpp:
 
-/usr/include/boost/numeric/conversion/detail/int_float_mixture.hpp:
+/home/toler/CGAL-5.6/include/CGAL/is_convertible.h:
 
-/usr/include/boost/range/range_fwd.hpp:
+/usr/include/boost/fusion/view/single_view/detail/value_at_impl.hpp:
 
-/usr/include/boost/lambda/detail/lambda_functors.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Rational_traits.h:
+
+/usr/include/boost/mpl/aux_/config/gpu.hpp:
+
+/usr/include/boost/mpl/O1_size.hpp:
+
+/usr/include/boost/mpl/max_element.hpp:
+
+/usr/include/boost/mpl/aux_/empty_impl.hpp:
+
+/usr/include/boost/numeric/conversion/detail/bounds.hpp:
 
 /usr/include/boost/fusion/mpl/begin.hpp:
 
 /usr/include/boost/type_traits/is_base_and_derived.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Plane_3.h:
+/usr/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h:
+/usr/include/boost/math/tools/complex.hpp:
+
+/usr/include/boost/mpl/vector/aux_/back.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Triangle_2.h:
+
+/usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:
+
+/usr/include/boost/array.hpp:
+
+/usr/include/boost/type_traits/is_void.hpp:
+
+/usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp:
+
+/usr/include/boost/blank.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h:
+
+/usr/include/boost/multi_index/detail/node_type.hpp:
+
+/usr/include/boost/preprocessor/repetition/enum_binary_params.hpp:
+
+/usr/include/boost/iterator/filter_iterator.hpp:
+
+/usr/include/boost/type_traits/is_scalar.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/AABB_primitive.h:
+
+/usr/include/boost/fusion/view/transform_view/detail/deref_impl.hpp:
+
+/usr/include/boost/mpl/remove_if.hpp:
 
 /usr/include/c++/9/climits:
 
@@ -3793,29 +4561,23 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/aux_/full_lambda.hpp:
 
-/usr/include/boost/mpl/size.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/number_utils_classes.h:
-
 /usr/include/boost/random/detail/ptr_helper.hpp:
 
-/usr/include/boost/mpl/protect.hpp:
+/usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/greater.hpp:
+/usr/include/boost/preprocessor/inc.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/int.h:
+/usr/include/boost/preprocessor/array/size.hpp:
 
-/usr/include/boost/parameter/aux_/use_default.hpp:
+/usr/include/boost/type_traits/remove_bounds.hpp:
 
 /usr/include/boost/fusion/iterator/value_of_data.hpp:
 
 /usr/include/boost/mpl/aux_/config/bind.hpp:
 
-/usr/include/boost/fusion/algorithm/query/find_if_fwd.hpp:
+/usr/include/boost/optional/optional.hpp:
 
-/usr/include/boost/mpl/bind_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_search_tree.h:
+/home/toler/CGAL-5.6/include/CGAL/basic.h:
 
 /usr/include/boost/mpl/push_back.hpp:
 
@@ -3823,53 +4585,47 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/remove_cv_ref.hpp:
 
+/usr/include/boost/mpl/aux_/msvc_never_true.hpp:
+
 /usr/include/boost/predef/library/c.h:
 
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Segment_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Location_policy.h:
+
 /usr/include/boost/mpl/list/aux_/empty.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesh_shortest_path.h:
-
-/usr/include/boost/preprocessor/seq/cat.hpp:
-
-/usr/include/limits.h:
 
 /usr/include/boost/mpl/aux_/config/has_apply.hpp:
 
 /usr/include/boost/type_traits/remove_cv.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/BigFloat.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/boost/preprocessor/array/elem.hpp:
 
-/usr/include/boost/mpl/aux_/has_apply.hpp:
+/usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
 
-/usr/include/boost/mpl/insert.hpp:
+/home/toler/CGAL-5.6/include/CGAL/kernel_basic.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h:
 
 /usr/include/boost/integer/static_min_max.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessor/default_params.hpp:
 
-/usr/include/boost/fusion/adapted/boost_tuple/detail/build_cons.hpp:
-
-/usr/include/boost/range/iterator_range_core.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h:
-
 /usr/include/c++/9/math.h:
+
+/usr/include/boost/graph/filtered_graph.hpp:
 
 /usr/include/linux/limits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Wang_traits.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h:
 
 /usr/include/boost/mpl/always.hpp:
 
@@ -3893,97 +4649,51 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/multiprecision/detail/min_max.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Coercion_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OI.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/number_utils.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/algorithm.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_OFF.h:
+/usr/include/boost/swap.hpp:
 
 /usr/include/boost/integer_fwd.hpp:
 
-/usr/include/boost/swap.hpp:
+/usr/include/boost/random/detail/operators.hpp:
 
 /usr/include/boost/type_traits/is_class.hpp:
 
 /usr/include/c++/9/fstream:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/helpers.h:
+/home/toler/CGAL-5.6/include/CGAL/Interval_arithmetic.h:
+
+/home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/geometric_repair.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/mpl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Eigen_NumTraits.h:
 
 /usr/include/boost/type_traits/is_pointer.hpp:
 
 /usr/include/boost/predef/hardware/simd/x86.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE_coercion_traits.h:
+/usr/include/boost/core/checked_delete.hpp:
+
+/usr/include/boost/detail/indirect_traits.hpp:
+
+/usr/include/boost/mpl/aux_/adl_barrier.hpp:
+
+/usr/include/boost/mpl/aux_/include_preprocessed.hpp:
 
 /usr/include/boost/type_traits/is_member_pointer.hpp:
 
 /usr/include/boost/mpl/aux_/arithmetic_op.hpp:
 
+/usr/include/boost/variant/detail/apply_visitor_unary.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessor/params.hpp:
+
 /usr/include/boost/mpl/iter_fold_if.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h:
 
-/usr/include/boost/mpl/aux_/na_assert.hpp:
+/usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3.h:
-
-/usr/include/boost/mpl/aux_/arity_spec.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_features.h:
-
-/usr/include/boost/mpl/aux_/config/gpu.hpp:
-
-/usr/include/boost/mpl/aux_/config/arrays.hpp:
-
-/usr/include/c++/9/vector:
-
-/usr/include/boost/mpl/arg_fwd.hpp:
-
-/usr/include/c++/9/bits/alloc_traits.h:
-
-/usr/include/boost/mpl/has_key.hpp:
-
-/usr/include/c++/9/bits/std_mutex.h:
-
-/usr/include/boost/mpl/arg.hpp:
-
-/usr/include/boost/mpl/aux_/clear_impl.hpp:
-
-/usr/include/boost/range/rend.hpp:
-
-/usr/include/boost/type_traits/has_trivial_assign.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/boost/mpl/placeholders.hpp:
-
-/usr/include/boost/lambda/detail/lambda_config.hpp:
-
-/usr/include/boost/mpl/aux_/template_arity.hpp:
-
-/usr/include/boost/mpl/identity.hpp:
-
-/usr/include/c++/9/bits/stl_numeric.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh.h:
-
-/usr/include/boost/container_hash/hash_fwd.hpp:
-
-/usr/include/boost/range/empty.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/centroid.h:
-
-/usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
-
-/usr/include/boost/iterator/iterator_categories.hpp:
-
-/usr/include/boost/next_prior.hpp:
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_OFF.h:
 
 /usr/include/boost/type_traits/add_lvalue_reference.hpp:
 
@@ -3991,53 +4701,83 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/is_abstract.hpp:
 
-/usr/include/boost/mpl/vector/aux_/item.hpp:
-
-/usr/include/boost/variant/detail/variant_io.hpp:
-
 /usr/include/boost/type_traits/is_floating_point.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Point_3.h:
+/usr/include/boost/container/detail/std_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h:
+
+/usr/include/boost/type_traits/is_function.hpp:
+
+/usr/include/boost/move/traits.hpp:
+
+/usr/include/boost/preprocessor/array/data.hpp:
+
+/usr/include/boost/type_traits/remove_reference.hpp:
+
+/usr/include/boost/math/special_functions/gamma.hpp:
+
+/usr/include/boost/move/algo/detail/insertion_sort.hpp:
+
+/usr/include/boost/preprocessor/tuple/to_array.hpp:
+
+/usr/include/boost/mpl/vector/aux_/empty.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/BOOST_MP_arithmetic_kernel.h:
+
+/usr/include/boost/type_traits/is_reference.hpp:
+
+/usr/include/boost/type_traits/declval.hpp:
+
+/usr/include/boost/type_traits/add_reference.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/license/Triangulation_2.h:
+
+/usr/include/boost/type_traits/integral_constant.hpp:
+
+/usr/include/boost/predef/library/std/stdcpp3.h:
+
+/usr/include/boost/type_traits/intrinsics.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
+
+/usr/include/boost/mpl/aux_/na_assert.hpp:
+
+/usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/Gmp.h:
+
+/usr/include/boost/preprocessor/list.hpp:
+
+/usr/include/boost/mpl/aux_/arity_spec.hpp:
 
 /usr/include/boost/fusion/mpl/insert_range.hpp:
 
 /usr/include/c++/9/bits/algorithmfwd.h:
 
+/usr/include/boost/fusion/view/transform_view/transform_view_fwd.hpp:
+
+/usr/include/boost/parameter/value_type.hpp:
+
+/usr/include/c++/9/debug/assertions.h:
+
 /usr/include/boost/foreach_fwd.hpp:
 
 /usr/include/boost/preprocessor/empty.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Profile_timer.h:
+
 /usr/include/boost/type_traits/has_bit_or_assign.hpp:
 
-/usr/include/boost/variant/detail/visitation_impl.hpp:
+/usr/include/c++/9/bits/stl_iterator_base_types.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h:
+/usr/include/boost/predef/os/beos.h:
 
 /usr/include/boost/predef/detail/test.h:
-
-/usr/include/boost/preprocessor/variadic/elem.hpp:
-
-/usr/include/boost/type_traits/has_trivial_copy.hpp:
 
 /usr/include/boost/move/detail/config_begin.hpp:
 
 /usr/include/boost/move/detail/meta_utils.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Line_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h:
-
-/usr/include/boost/type_traits/is_const.hpp:
-
-/usr/include/boost/mpl/aux_/config/integral.hpp:
-
-/usr/include/boost/fusion/sequence/intrinsic/begin.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h:
-
-/usr/include/boost/container/detail/container_rebind.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h:
 
 /usr/include/c++/9/bits/stl_relops.h:
 
@@ -4045,11 +4785,13 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/cv_traits.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_planes_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/type_traits.h:
+/usr/include/boost/predef/version.h:
 
 /usr/include/boost/random/seed_seq.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h:
 
 /usr/include/boost/mpl/aux_/config/has_xxx.hpp:
 
@@ -4057,41 +4799,43 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/c++/9/bits/allocator.h:
 
-/usr/include/boost/predef/hardware/simd/ppc/versions.h:
+/usr/include/c++/9/bits/alloc_traits.h:
 
-/usr/include/boost/mpl/aux_/config/ttp.hpp:
+/usr/include/c++/9/vector:
 
-/usr/include/boost/any.hpp:
+/usr/include/boost/mpl/arg_fwd.hpp:
 
-/usr/include/boost/intrusive/detail/config_begin.hpp:
+/usr/include/boost/mpl/has_key.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/test_FPU_rounding_mode_impl.h:
+/usr/include/c++/9/bits/std_mutex.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Random_impl.h:
-
-/usr/include/boost/preprocessor/inc.hpp:
-
-/usr/include/boost/preprocessor/array/size.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
+/usr/include/boost/checked_delete.hpp:
 
 /usr/include/boost/mpl/aux_/numeric_cast_utils.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/disable_warnings.h:
+
+/usr/include/boost/predef.h:
+
 /usr/include/boost/mpl/list/aux_/tag.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_circulators_2.h:
+
 /usr/include/boost/predef/architecture/ptx.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Timer_impl.h:
 
 /usr/include/boost/type_traits/has_dereference.hpp:
 
 /usr/include/boost/predef/platform/windows_system.h:
 
-/usr/include/boost/predef/hardware/simd/x86/versions.h:
-
-/usr/include/boost/mpl/back_inserter.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/STL.h:
+/usr/include/boost/type_traits/is_nothrow_move_constructible.hpp:
 
 /usr/include/boost/mpl/has_xxx.hpp:
+
+/usr/include/boost/fusion/mpl/pop_back.hpp:
+
+/usr/include/boost/predef/platform/windows_server.h:
 
 /usr/include/c++/9/bits/streambuf.tcc:
 
@@ -4099,17 +4843,17 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/has_logical_not.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/IO/OI.h:
+
 /usr/include/boost/fusion/view/joint_view/detail/begin_impl.hpp:
 
 /usr/include/boost/predef/platform/mingw.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Circle_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Ray_3.h:
-
 /usr/include/boost/predef/other/endian.h:
 
-/usr/include/boost/container/detail/destroyers.hpp:
+/usr/include/boost/functional/hash_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_iterators_2.h:
 
 /usr/include/boost/predef/os/windows.h:
 
@@ -4117,23 +4861,23 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/less.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/3MF.h:
-
 /usr/include/boost/predef/platform/windows_uwp.h:
+
+/usr/include/boost/mpl/print.hpp:
 
 /usr/include/boost/range/begin.hpp:
 
 /usr/include/boost/type_traits/is_same.hpp:
 
-/usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
-
-/usr/include/boost/random/binomial_distribution.hpp:
-
 /usr/include/boost/mp11/detail/mp_count.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h:
 
 /usr/include/boost/mp11/version.hpp:
 
 /usr/include/boost/predef/os/linux.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Kd_tree_node.h:
 
 /usr/include/boost/detail/select_type.hpp:
 
@@ -4147,57 +4891,65 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/os/bsd/bsdi.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/GOCAD.h:
+/usr/include/boost/variant/detail/substitute.hpp:
 
 /usr/include/boost/predef/os/bsd.h:
 
-/usr/include/boost/predef/library/std/libcomo.h:
+/usr/include/boost/mpl/or.hpp:
 
-/usr/include/boost/mpl/list/list20.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Kernel_traits.h:
+
+/usr/include/boost/next_prior.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/predicates/kernel_ftC2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/polygon_mesh_io.h:
 
 /usr/include/boost/predef/os/bsd/net.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h:
 
-/usr/include/boost/mpl/vector/aux_/begin_end.hpp:
-
-/usr/include/c++/9/functional:
+/usr/include/boost/type_traits/has_greater.hpp:
 
 /usr/include/boost/fusion/sequence/comparison/equal_to.hpp:
 
 /usr/include/c++/9/type_traits:
 
+/usr/include/boost/type_traits/is_arithmetic.hpp:
+
+/usr/include/alloca.h:
+
+/home/toler/CGAL-5.6/include/CGAL/auto_link/auto_link.h:
+
 /usr/include/boost/lambda/detail/actions.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:
-
 /usr/include/boost/parameter/aux_/pack/deduce_tag.hpp:
-
-/usr/include/c++/9/bits/nested_exception.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Sturm.h:
-
-/usr/include/boost/heap/detail/heap_comparison.hpp:
 
 /usr/include/boost/fusion/support/segmented_fold_until.hpp:
 
 /usr/include/boost/preprocessor/repetition/enum_params.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Point_2.h:
-
 /usr/include/boost/predef/platform/windows_runtime.h:
 
-/usr/include/boost/type_traits/copy_reference.hpp:
+/usr/include/boost/predef/architecture/superh.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h:
+/usr/include/boost/math/tools/config.hpp:
+
+/usr/include/boost/predef/os/irix.h:
+
+/usr/include/boost/concept/detail/general.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/tuple.h:
 
 /usr/include/boost/mpl/int.hpp:
+
+/usr/include/boost/preprocessor/list/to_seq.hpp:
 
 /usr/include/boost/fusion/container/vector/detail/equal_to_impl.hpp:
 
 /usr/include/c++/9/new:
+
+/home/toler/CGAL-5.6/include/CGAL/Modular_traits.h:
 
 /usr/include/boost/fusion/view/single_view/detail/value_of_impl.hpp:
 
@@ -4205,41 +4957,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/c++/9/bits/locale_facets_nonio.h:
 
-/usr/include/c++/9/typeinfo:
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/VectorH2.h:
 
-/usr/include/boost/preprocessor/detail/check.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/float.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h:
-
-/usr/include/c++/9/sstream:
-
-/usr/include/boost/mpl/vector/aux_/clear.hpp:
-
-/usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Point_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/number_type_config.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/less_equal.hpp:
-
-/usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
-
-/usr/include/boost/iterator/detail/facade_iterator_category.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH3.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
+/home/toler/CGAL-5.6/include/CGAL/Hash_map/internal/chained_map.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
@@ -4251,11 +4971,13 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/library/std.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/function_objects.h:
+/home/toler/CGAL-5.6/include/CGAL/Coercion_traits.h:
+
+/usr/include/boost/mpl/integral_c.hpp:
+
+/usr/include/boost/preprocessor/seq/to_tuple.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/boost/mpl/next_prior.hpp:
 
 /usr/include/c++/9/ext/new_allocator.h:
 
@@ -4265,29 +4987,23 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/math.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Sqrt_extension_type.h:
+/usr/include/boost/math/tools/rational.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMPXX_arithmetic_kernel.h:
+/usr/include/boost/predef/library/c/uc.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Segment_2.h:
+/usr/include/boost/random/negative_binomial_distribution.hpp:
 
-/usr/include/boost/type_traits/has_nothrow_copy.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/enable_warnings.h:
-
-/usr/include/boost/type_traits/extent.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/disable_warnings.h:
+/home/toler/CGAL-5.6/include/CGAL/Named_function_parameters.h:
 
 /usr/include/c++/9/bits/stl_iterator_base_funcs.h:
 
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/Primitive_helper.h:
+
+/usr/include/boost/mpl/vector/aux_/clear.hpp:
+
+/usr/include/c++/9/sstream:
+
 /usr/include/boost/predef/platform/mingw32.h:
-
-/usr/include/boost/type_traits/add_reference.hpp:
-
-/usr/include/boost/type_traits/integral_constant.hpp:
-
-/usr/include/boost/predef/library/std/stdcpp3.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
 
@@ -4295,55 +5011,59 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/os/hpux.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/auto_link/CORE.h:
+/usr/include/boost/type_traits/copy_cv_ref.hpp:
 
 /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
 
 /usr/include/boost/predef/hardware/simd/arm.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/wmult.h:
+/usr/include/boost/multiprecision/cpp_int/comparison.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/long_double.h:
 
 /usr/include/boost/predef/library/c/_prefix.h:
 
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h:
+
 /usr/include/boost/mpl/sequence_tag.hpp:
 
-/usr/include/boost/concept/detail/concept_def.hpp:
+/usr/include/boost/fusion/view/single_view/detail/end_impl.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Constrained_triangulation_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Kernel/hash_functions.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:
+/usr/include/boost/mpl/aux_/nttp_decl.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/solve_3.h:
+/usr/include/boost/type_traits/is_convertible.hpp:
+
+/usr/include/boost/type_traits/has_plus.hpp:
+
+/usr/include/boost/type_traits/has_divides.hpp:
 
 /usr/include/boost/predef/detail/comp_detected.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Object.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Fraction_traits.h:
-
-/usr/include/ctype.h:
 
 /usr/include/boost/type_traits/is_nothrow_swappable.hpp:
 
-/usr/include/boost/preprocessor/repetition/detail/for.hpp:
+/home/toler/CGAL-5.6/include/CGAL/export/CGAL.h:
 
 /usr/include/boost/predef/compiler/sgi_mipspro.h:
 
 /usr/include/boost/random/detail/large_arithmetic.hpp:
 
-/usr/include/boost/predef/library/std/sgi.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Vector_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Interval_nt.h:
+/usr/include/boost/predef/hardware/simd/x86_amd/versions.h:
 
 /usr/include/boost/predef/compiler/metrowerks.h:
 
+/home/toler/CGAL-5.6/include/CGAL/Segment_3.h:
+
 /usr/include/boost/predef/library/std/cxx.h:
+
+/usr/include/boost/mpl/long_fwd.hpp:
+
+/usr/include/boost/preprocessor/logical/and.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
@@ -4351,41 +5071,25 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/c++/9/array:
 
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h:
+
 /usr/include/boost/predef/language/objc.h:
 
 /usr/include/boost/predef/library/c/zos.h:
 
 /usr/include/boost/predef/compiler/kai.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
 /usr/include/boost/predef/compiler.h:
 
-/usr/include/boost/fusion/sequence/convert.hpp:
+/usr/include/boost/variant/detail/visitation_impl.hpp:
 
-/usr/include/boost/preprocessor/seq/fold_left.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Simple_cartesian.h:
 
-/usr/include/boost/mpl/at_fwd.hpp:
+/usr/include/boost/type_traits/has_less_equal.hpp:
 
-/usr/include/boost/predef/os/ios.h:
+/usr/include/boost/mpl/aux_/arg_typedef.hpp:
 
-/usr/include/c++/9/bits/functional_hash.h:
-
-/usr/include/boost/type_traits/floating_point_promotion.hpp:
-
-/usr/include/boost/range/distance.hpp:
-
-/usr/include/boost/predef/os/aix.h:
-
-/usr/include/boost/preprocessor/seq/elem.hpp:
-
-/usr/include/boost/variant/detail/hash_variant.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_vertex_base_2.h:
-
-/usr/include/boost/mpl/aux_/config/pp_counter.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h:
+/usr/include/boost/predef/hardware/simd/x86_amd.h:
 
 /usr/include/boost/fusion/view/single_view/single_view.hpp:
 
@@ -4399,103 +5103,141 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/architecture/ppc.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h:
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h:
+
+/usr/include/c++/9/bits/stl_algo.h:
+
+/usr/include/c++/9/bits/shared_ptr_base.h:
+
+/usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
+
+/usr/include/boost/preprocessor/control/expr_iif.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Conic_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/Timer.h:
+
+/home/toler/CGAL-5.6/include/CGAL/cpp_float.h:
 
 /usr/include/boost/move/algo/detail/is_sorted.hpp:
 
 /usr/include/boost/mpl/list/aux_/push_back.hpp:
 
-/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin_impl.hpp:
-
-/usr/include/boost/lexical_cast/detail/inf_nan.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
+/usr/include/boost/preprocessor/seq/fold_right.hpp:
 
 /usr/include/boost/predef/architecture/parisc.h:
 
+/home/toler/CGAL-5.6/include/CGAL/GMP/Gmpfr_type.h:
+
 /usr/include/boost/mpl/list/aux_/item.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Interval_nt.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Scaling_rep_3.h:
+
 /usr/include/c++/9/cmath:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_points_2.h:
+
+/usr/include/boost/mpl/list/aux_/front.hpp:
+
+/usr/include/boost/predef/compiler/compaq.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Segment_2.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/home/toler/CGAL-5.6/include/CGAL/number_utils_classes.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/distance_predicatesH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Segment_3.h:
+
+/usr/include/boost/preprocessor/logical/bitor.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/Gmp_impl.h:
+
+/usr/include/boost/predef/compiler/tendra.h:
+
+/usr/include/sched.h:
+
+/usr/include/boost/mpl/times.hpp:
+
+/usr/include/boost/predef/compiler/iar.h:
+
+/usr/include/boost/mpl/greater.hpp:
+
+/usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp:
+
+/usr/include/c++/9/bits/unique_ptr.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Plane_3_Plane_3.h:
+
+/usr/include/boost/predef/compiler/digitalmars.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cache.h:
+
+/usr/include/features.h:
+
+/usr/include/boost/operators.hpp:
+
+/usr/include/boost/multiprecision/detail/number_base.hpp:
+
+/usr/include/boost/multi_index/detail/hash_index_node.hpp:
+
+/usr/include/boost/mpl/list/list20.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/functional.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/boost/iterator/detail/facade_iterator_category.hpp:
+
+/usr/include/boost/iterator/iterator_traits.hpp:
+
+/usr/include/c++/9/bits/exception_defines.h:
+
+/usr/include/boost/graph/detail/indexed_properties.hpp:
 
 /usr/include/boost/predef/platform/android.h:
 
 /usr/include/boost/predef/library/std/modena.h:
 
-/usr/include/boost/mpl/iterator_tags.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/export/helpers.h:
-
-/usr/include/boost/predef/compiler/greenhills.h:
-
-/usr/include/boost/predef/compiler/palm.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Segment_2.h:
-
-/usr/include/boost/preprocessor/slot/detail/def.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Installation/internal/enable_third_party_libraries.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/boost/parameter/aux_/is_tagged_argument.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/boost/range/detail/implementation_help.hpp:
-
-/usr/include/boost/mpl/aux_/lambda_spec.hpp:
-
-/usr/include/boost/multiprecision/detail/functions/trig.hpp:
-
-/usr/include/boost/predef/os/unix.h:
-
-/usr/include/boost/mpl/list/aux_/front.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_2.h:
-
-/usr/include/boost/predef/compiler/compaq.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/aff_transformation_tags_impl.h:
-
-/usr/include/boost/preprocessor/tuple/eat.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/include/boost/predef/compiler/metaware.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/NT_converter.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/boost/predef/os/cygwin.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/MP_Float.h:
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/triangulate_hole.h:
 
 /usr/include/c++/9/bits/move.h:
 
-/usr/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
-
 /usr/include/boost/optional/optional_fwd.hpp:
 
-/usr/include/boost/fusion/container/vector/detail/value_at_impl.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Point_2.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+/usr/include/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/include/boost/numeric/conversion/sign_mixture_enum.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h:
 
-/usr/include/boost/variant/detail/initializer.hpp:
+/usr/include/boost/multiprecision/detail/default_ops.hpp:
 
-/usr/include/time.h:
+/usr/include/boost/mpl/equal_to.hpp:
 
-/usr/include/boost/type_traits/has_post_decrement.hpp:
+/usr/include/boost/multiprecision/detail/big_lanczos.hpp:
+
+/usr/include/boost/fusion/adapted/boost_tuple/tag_of.hpp:
+
+/usr/include/boost/mpl/aux_/O1_size_impl.hpp:
 
 /usr/include/boost/variant/detail/apply_visitor_binary.hpp:
 
@@ -4503,21 +5245,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/multiprecision/cpp_int/import_export.hpp:
 
-/usr/include/boost/mpl/equal_to.hpp:
-
-/usr/include/boost/multiprecision/detail/big_lanczos.hpp:
+/usr/include/boost/variant/detail/initializer.hpp:
 
 /usr/include/boost/config/detail/select_stdlib_config.hpp:
-
-/usr/include/boost/fusion/view/transform_view/detail/value_of_impl.hpp:
-
-/usr/include/boost/range/detail/misc_concept.hpp:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/boost/lambda/detail/operator_actions.hpp:
-
-/usr/include/c++/9/backward/auto_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -4527,95 +5257,85 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/heap/policies.hpp:
 
-/usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
-
 /usr/include/boost/type_traits/is_copy_constructible.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/boost/limits.hpp:
 
-/usr/include/boost/range/detail/common.hpp:
+/usr/include/boost/preprocessor/seq/push_front.hpp:
 
-/usr/include/boost/math/tools/config.hpp:
+/usr/include/c++/9/cstdlib:
 
-/usr/include/boost/predef/architecture/superh.h:
+/usr/include/boost/integer/integer_mask.hpp:
 
-/usr/include/boost/config/no_tr1/complex.hpp:
+/usr/include/boost/preprocessor/list/transform.hpp:
+
+/usr/include/boost/graph/graph_mutability_traits.hpp:
+
+/usr/include/boost/concept_check.hpp:
+
+/usr/include/boost/math/special_functions/next.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Fraction_traits.h:
+
+/usr/include/boost/concept/assert.hpp:
 
 /usr/include/boost/predef/os/android.h:
 
 /usr/include/boost/preprocessor/facilities/overload.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits.h:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_2.h:
+/usr/include/boost/mpl/iter_fold.hpp:
 
-/usr/include/boost/mpl/not.hpp:
+/usr/include/boost/predef/architecture/sys390.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/utils.h:
-
-/usr/include/boost/predef/compiler/microtec.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/Color.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel.h:
-
-/usr/include/boost/numeric/conversion/detail/meta.hpp:
+/home/toler/CGAL-5.6/include/CGAL/IO/STL.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/boost/parameter/aux_/pack/parameter_requirements.hpp:
-
-/usr/include/boost/predef/os/macos.h:
-
-/usr/include/c++/9/bits/stl_queue.h:
-
-/usr/include/boost/mp11/utility.hpp:
-
-/usr/include/boost/mpl/aux_/config/intel.hpp:
-
-/usr/include/boost/predef/architecture/x86.h:
-
-/usr/include/boost/numeric/conversion/detail/udt_builtin_mixture.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_2/internal/Triangulation_line_face_circulator_2.h:
-
-/usr/include/boost/config/detail/select_platform_config.hpp:
+/home/toler/CGAL-5.6/include/CGAL/auto_link/CGAL.h:
 
 /usr/include/c++/9/debug/debug.h:
 
 /usr/include/boost/parameter/optional.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Segment_2.h:
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/float.h:
 
-/usr/include/boost/preprocessor/iterate.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP_arithmetic_kernel.h:
+/usr/include/boost/fusion/view/single_view/detail/equal_to_impl.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/internal/misc_functions.h:
+/usr/include/c++/9/bits/atomic_lockfree_defines.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+/usr/include/boost/predef/os/unix.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Point_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/assertions.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Same_uncertainty.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Plane_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h:
 
 /usr/include/boost/numeric/conversion/converter_policies.hpp:
 
 /usr/include/boost/type_traits/is_union.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
+/usr/include/stdc-predef.h:
+
+/usr/include/boost/preprocessor/tuple/reverse.hpp:
+
+/usr/include/boost/lambda/detail/operator_actions.hpp:
+
+/usr/include/c++/9/backward/auto_ptr.h:
+
+/usr/include/boost/fusion/view/transform_view/detail/value_of_impl.hpp:
+
+/usr/include/boost/range/detail/misc_concept.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h:
+
+/usr/include/boost/integer.hpp:
 
 /usr/include/boost/mpl/list/aux_/iterator.hpp:
 
@@ -4623,139 +5343,35 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/c++/9/ext/numeric_traits.h:
 
+/usr/include/boost/preprocessor/array/reverse.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h:
+
 /usr/include/boost/iterator/iterator_facade.hpp:
 
 /usr/include/c++/9/bits/sstream.tcc:
 
 /usr/include/boost/config/detail/suffix.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h:
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree.h:
 
-/usr/include/boost/iterator/reverse_iterator.hpp:
+/usr/include/boost/mpl/aux_/config/intel.hpp:
 
-/usr/include/boost/move/algorithm.hpp:
+/usr/include/boost/predef/architecture/x86.h:
 
-/usr/include/boost/core/use_default.hpp:
+/usr/include/boost/math/special_functions/trunc.hpp:
 
-/usr/include/boost/config.hpp:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/config.h:
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Line_3_Plane_3.h:
 
-/usr/include/boost/predef/hardware/simd.h:
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Homogeneous_base.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/mpq_class.h:
+/usr/include/c++/9/functional:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/boost/lexical_cast/detail/converter_lexical.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h:
-
-/usr/include/boost/multiprecision/detail/no_et_ops.hpp:
-
-/usr/include/boost/type_traits/remove_pointer.hpp:
-
-/usr/include/stdlib.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h:
-
-/usr/include/boost/preprocessor/cat.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h:
-
-/usr/include/boost/range/functions.hpp:
-
-/usr/include/boost/mpl/count_fwd.hpp:
-
-/usr/include/libintl.h:
-
-/usr/include/boost/predef/platform/ios.h:
-
-/usr/include/boost/predef/architecture/sys370.h:
-
-/usr/include/boost/predef/compiler/iar.h:
-
-/usr/include/boost/mpl/greater.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Unique_hash_map.h:
-
-/usr/include/boost/container/detail/std_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/refine_impl.h:
-
-/usr/include/boost/variant/detail/has_result_type.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Number_types/internal/Exact_type_selector.h:
-
-/usr/include/boost/predef/architecture/sys390.h:
-
-/usr/include/boost/mpl/iter_fold.hpp:
-
-/usr/include/c++/9/bits/unique_ptr.h:
-
-/usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector20.hpp:
-
-/usr/include/boost/predef/compiler/digitalmars.h:
-
-/usr/include/boost/utility/enable_if.hpp:
-
-/usr/include/c++/9/unordered_set:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/float.h:
-
-/usr/include/boost/type_traits/add_const.hpp:
-
-/usr/include/boost/type_traits/has_logical_and.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Gmp_coercion_traits.h:
-
-/usr/include/boost/iterator/detail/enable_if.hpp:
-
-/usr/include/boost/core/enable_if.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/boost/preprocessor/slot/slot.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/boost/type_traits/has_plus_assign.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/boost/mpl/bool_fwd.hpp:
-
-/usr/include/boost/config/helper_macros.hpp:
-
-/usr/include/boost/predef/compiler/sunpro.h:
-
-/usr/include/boost/random/chi_squared_distribution.hpp:
-
-/usr/include/c++/9/bits/stl_map.h:
-
-/usr/include/boost/predef/make.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h:
-
-/usr/include/boost/type_traits/is_void.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Ray_3.h:
-
-/usr/include/c++/9/bits/stl_iterator_base_types.h:
-
-/usr/include/boost/predef/os/beos.h:
+/usr/include/boost/mpl/vector/aux_/begin_end.hpp:
 
 /usr/include/boost/mpl/aux_/find_if_pred.hpp:
 
@@ -4767,121 +5383,175 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:
 
-/usr/include/boost/predef/library/c/uc.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/OBJ.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/version_macros.h:
+/usr/include/boost/type_traits/is_empty.hpp:
 
-/usr/include/boost/preprocessor/repetition/for.hpp:
+/usr/include/stdlib.h:
 
-/usr/include/c++/9/cwctype:
+/usr/include/c++/9/bits/basic_ios.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/locate.h:
 
 /usr/include/c++/9/cxxabi.h:
 
-/usr/include/boost/mpl/vector/aux_/push_back.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/FPU.h:
-
 /usr/include/boost/predef/language/cuda.h:
+
+/usr/include/boost/preprocessor/arithmetic.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/AABB_traits.h:
 
 /usr/include/boost/config/platform/linux.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/aff_transformation_tags.h:
+/home/toler/CGAL-5.6/include/CGAL/Profile_counter.h:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/c++/9/bits/stl_algo.h:
+/usr/include/boost/predef/hardware.h:
 
-/usr/include/c++/9/bits/shared_ptr_base.h:
+/home/toler/CGAL-5.6/include/CGAL/Mpzf.h:
 
-/usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
+/usr/include/boost/type_traits/has_left_shift_assign.hpp:
 
-/usr/include/boost/predef/os/vms.h:
+/usr/include/c++/9/bits/ios_base.h:
 
-/usr/include/boost/variant/detail/move.hpp:
+/usr/include/boost/preprocessor/slot/detail/def.hpp:
 
-/usr/include/boost/mpl/list/aux_/push_front.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Bbox_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Cartesian_base.h:
+/home/toler/CGAL-5.6/include/CGAL/circulator.h:
 
-/usr/include/features.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h:
+/usr/include/boost/preprocessor/repetition/deduce_z.hpp:
 
-/usr/include/boost/operators.hpp:
+/usr/include/boost/multiprecision/detail/functions/trig.hpp:
 
-/usr/include/boost/multiprecision/detail/number_base.hpp:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h:
-
-/usr/include/boost/predef/compiler/mpw.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/boost/random/piecewise_constant_distribution.hpp:
-
-/usr/include/boost/mpl/push_front_fwd.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/boost/predef/language/stdcpp.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
-
-/usr/include/boost/type_traits/rank.hpp:
-
-/usr/include/c++/9/tuple:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Lazy.h:
-
-/usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:
-
-/usr/include/c++/9/bits/exception_defines.h:
-
-/usr/include/boost/iterator/iterator_traits.hpp:
-
-/usr/include/boost/math/tools/real_cast.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/assertions_behaviour.h:
-
-/usr/include/boost/utility/base_from_member.hpp:
-
-/usr/include/boost/predef/other.h:
+/usr/include/boost/parameter/aux_/is_tagged_argument.hpp:
 
 /usr/include/c++/9/utility:
 
 /usr/include/c++/9/cassert:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Point_2.h:
+/usr/include/boost/predef/other.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/GOCAD.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/usr/include/boost/predef/detail/_exception.h:
+/usr/include/c++/9/bits/stl_algobase.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Ray_3.h:
+/usr/include/boost/utility/result_of.hpp:
+
+/usr/include/boost/multi_index/detail/modify_key_adaptor.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/home/toler/CGAL-5.6/include/CGAL/assertions_impl.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
+
+/usr/include/boost/mpl/at_fwd.hpp:
+
+/usr/include/boost/predef/os/ios.h:
+
+/usr/include/c++/9/bits/functional_hash.h:
+
+/usr/include/boost/fusion/sequence/convert.hpp:
+
+/usr/include/boost/preprocessor/seq/fold_left.hpp:
+
+/usr/include/boost/type_traits/floating_point_promotion.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Origin_impl.h:
+
+/usr/include/boost/mpl/aux_/template_arity.hpp:
+
+/usr/include/boost/mpl/identity.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/number_utils.h:
+
+/usr/include/boost/mpl/aux_/fold_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Search_traits_3.h:
+
+/usr/include/boost/mpl/less_equal.hpp:
+
+/usr/include/boost/predef/compiler/ibm.h:
+
+/usr/include/boost/move/detail/workaround.hpp:
+
+/usr/include/c++/9/bits/fstream.tcc:
+
+/usr/include/boost/version.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Direction_3.h:
+
+/usr/include/boost/type_traits/rank.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Origin.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h:
+
+/usr/include/c++/9/tuple:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/Conic_misc.h:
+
+/home/toler/CGAL-5.6/include/CGAL/mpq_class.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Point_container.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Residue.h:
+
+/usr/include/boost/predef/detail/_exception.h:
 
 /usr/include/boost/math/special_functions/powm1.hpp:
 
+/usr/include/boost/mpl/aux_/config/pp_counter.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_pointsH3.h:
+
+/usr/include/boost/numeric/conversion/conversion_traits.hpp:
+
+/usr/include/boost/type_traits/is_nothrow_move_assignable.hpp:
+
+/usr/include/boost/variant/recursive_wrapper.hpp:
+
+/usr/include/boost/predef/os.h:
+
 /usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_fold_impl.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Union_find.h:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/boost/predef/compiler/borland.h:
 
 /usr/include/boost/iterator/iterator_concepts.hpp:
 
 /usr/include/boost/predef/compiler/visualc.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h:
+/usr/include/boost/mpl/aux_/iter_fold_if_impl.hpp:
 
 /usr/include/boost/mp11/detail/mp_map_find.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/usr/include/boost/concept/assert.hpp:
+/usr/include/c++/9/bits/basic_string.h:
 
-/usr/include/boost/math/special_functions/next.hpp:
+/usr/include/boost/mpl/aux_/config/lambda.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Segment_2.h:
+/usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h:
 
@@ -4889,39 +5559,67 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type_static.h:
+/usr/include/boost/preprocessor/slot/slot.hpp:
 
-/usr/include/boost/predef/hardware.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Vector_3.h:
 
-/usr/include/boost/detail/container_fwd.hpp:
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
-/usr/include/boost/type_traits/has_left_shift_assign.hpp:
+/usr/include/boost/config/helper_macros.hpp:
 
-/usr/include/c++/9/bits/ios_base.h:
+/usr/include/boost/predef/compiler/sunpro.h:
 
-/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
+/usr/include/boost/random/chi_squared_distribution.hpp:
 
-/usr/include/boost/parameter/keyword_fwd.hpp:
+/usr/include/boost/unordered/detail/fwd.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/RealRep.h:
+/home/toler/CGAL-5.6/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:
+/usr/include/libintl.h:
 
-/usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp:
+/usr/include/boost/predef/platform/ios.h:
 
-/usr/include/boost/mpl/aux_/config/adl.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h:
 
-/usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Handle.h:
 
-/usr/include/boost/math/special_functions/atanh.hpp:
+/usr/include/boost/predef/architecture/sys370.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Ray_2.h:
+
+/usr/include/boost/fusion/iterator/deref.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/int.h:
+
+/usr/include/boost/intrusive/detail/algorithm.hpp:
+
+/usr/include/boost/predef/compiler/mpw.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/boost/random/piecewise_constant_distribution.hpp:
+
+/usr/include/boost/preprocessor/list/size.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/bounding_box.h:
+
+/usr/include/boost/predef/library.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/boost/preprocessor/tuple/size.hpp:
 
 /usr/include/boost/property_map/function_property_map.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Timer_impl.h:
 
 /usr/include/boost/intrusive/detail/workaround.hpp:
 
@@ -4933,41 +5631,33 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/parameter/deduced.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/IO/io_tags.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/boost/move/detail/pointer_element.hpp:
+
+/usr/include/boost/mpl/aux_/arity.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Iso_rectangle_2.h:
+
 /usr/include/c++/9/cstddef:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Surface_mesh.h:
+/usr/include/boost/range/iterator_range_io.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Sphere_3.h:
 
 /usr/include/c++/9/bits/basic_string.tcc:
 
 /usr/include/boost/mpl/aux_/static_cast.hpp:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/boost/predef/library.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/boost/unordered/detail/implementation.hpp:
-
-/usr/include/c++/9/bits/ptr_traits.h:
-
-/usr/include/boost/mpl/less_equal.hpp:
-
-/usr/include/boost/predef/compiler/ibm.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Quotient_fwd.h:
-
-/usr/include/boost/move/detail/workaround.hpp:
-
-/usr/include/c++/9/bits/fstream.tcc:
-
-/usr/include/boost/version.hpp:
-
 /usr/include/boost/mpl/aux_/preprocessed/gcc/list.hpp:
 
-/usr/include/boost/predef/compiler/intel.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h:
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension.h:
 
 /usr/include/boost/type_traits/type_identity.hpp:
 
@@ -4977,13 +5667,33 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/architecture/x86/64.h:
 
-/usr/include/boost/range/const_iterator.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h:
+
+/usr/include/boost/predef/hardware/simd.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/boost/type_traits/remove_pointer.hpp:
+
+/usr/include/boost/predef/architecture/mips.h:
 
 /usr/include/boost/predef/os/amigaos.h:
 
-/usr/include/boost/detail/workaround.hpp:
+/usr/include/boost/move/core.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/CoreDefs.h:
+
+/usr/include/boost/parameter/aux_/pack/parameter_requirements.hpp:
+
+/usr/include/boost/predef/os/macos.h:
+
+/usr/include/c++/9/bits/stl_queue.h:
+
+/usr/include/boost/mp11/utility.hpp:
+
+/usr/include/boost/mpl/bool_fwd.hpp:
 
 /usr/include/boost/predef/os/bsd/open.h:
 
@@ -4991,17 +5701,13 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/add_volatile.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Real_embeddable_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/determinant.h:
-
 /usr/include/c++/9/exception:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Line_3.h:
 
 /usr/include/boost/config/stdlib/libstdcpp3.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Projection_traits_3.h:
+/home/toler/CGAL-5.6/include/CGAL/aff_transformation_tags.h:
 
 /usr/include/boost/lambda/detail/operators.hpp:
 
@@ -5009,101 +5715,73 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/c++/9/bits/parse_numbers.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h:
-
 /usr/include/boost/call_traits.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h:
-
-/usr/include/boost/throw_exception.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/boost/variant/variant_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/squared_distance_2.h:
-
-/usr/include/boost/predef/platform/windows_desktop.h:
-
-/usr/include/boost/mpl/contains_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Real_embeddable_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h:
-
-/usr/include/wctype.h:
-
-/usr/include/boost/predef/detail/_cassert.h:
+/home/toler/CGAL-5.6/include/CGAL/value_type_traits.h:
 
 /usr/include/c++/9/ext/string_conversions.h:
 
 /usr/include/boost/math/special_functions/expm1.hpp:
 
-/usr/include/boost/move/algo/detail/merge_sort.hpp:
-
-/usr/include/c++/9/queue:
-
 /usr/include/boost/mpl/aux_/config/msvc.hpp:
-
-/usr/include/boost/mpl/iterator_category.hpp:
-
-/usr/include/boost/fusion/support/is_iterator.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/auto_link/CGAL.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/iterator/counting_iterator.hpp:
 
 /usr/include/boost/core/pointer_traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/usr/include/boost/type_traits/has_minus.hpp:
+/usr/include/c++/9/bits/invoke.h:
 
-/usr/include/c++/9/iomanip:
+/usr/include/boost/mpl/insert_fwd.hpp:
+
+/usr/include/boost/iterator/detail/config_undef.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/boost/mpl/placeholders.hpp:
+
+/usr/include/boost/lambda/detail/lambda_config.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Interval_traits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
 
 /usr/include/boost/mpl/aux_/reverse_fold_impl.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigRat.h:
-
 /usr/include/boost/predef/architecture/arm.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/generators.h:
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
-/usr/include/boost/predef/compiler/pgi.h:
+/usr/include/boost/preprocessor/detail/auto_rec.hpp:
+
+/usr/include/boost/preprocessor/selection.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_features.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/io.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/measure.h:
 
-/usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp:
+/usr/include/boost/utility/enable_if.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
+/usr/include/c++/9/unordered_set:
 
-/usr/include/boost/blank.hpp:
+/usr/include/boost/type_traits/add_const.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/convert_to_bfi.h:
+/usr/include/boost/type_traits/has_logical_and.hpp:
 
-/usr/include/c++/9/iterator:
+/usr/include/x86_64-linux-gnu/bits/select2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/enum.h:
-
-/usr/include/boost/mpl/vector/aux_/include_preprocessed.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Straight_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Scalar_factor_traits.h:
-
-/usr/include/boost/range/size.hpp:
+/usr/include/boost/mpl/aux_/config/arrays.hpp:
 
 /usr/include/boost/mpl/limits/arity.hpp:
 
 /usr/include/c++/9/memory:
 
-/usr/include/boost/iterator/detail/config_def.hpp:
-
-/usr/include/boost/config/user.hpp:
+/home/toler/CGAL-5.6/include/CGAL/boost/iterator/transform_iterator.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
@@ -5111,67 +5789,25 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/c++/9/ext/type_traits.h:
 
-/usr/include/boost/type_traits/is_function.hpp:
-
 /usr/include/boost/mpl/aux_/config/workaround.hpp:
 
 /usr/include/c++/9/bits/std_abs.h:
 
 /usr/include/boost/variant/detail/enable_recursive_fwd.hpp:
 
-/usr/include/boost/preprocessor/punctuation/comma_if.hpp:
-
 /usr/include/boost/multiprecision/traits/is_backend.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h:
+/usr/include/c++/9/bits/stl_pair.h:
 
-/usr/include/boost/unordered_set.hpp:
+/usr/include/c++/9/bits/nested_exception.h:
 
-/usr/include/boost/fusion/container/map/map_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/version.h:
-
-/usr/include/boost/type_traits/has_equal_to.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/boost/preprocessor/comparison/less_equal.hpp:
-
-/usr/include/boost/random/bernoulli_distribution.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/export/CGAL.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
-
-/usr/include/boost/mpl/long_fwd.hpp:
-
-/usr/include/boost/preprocessor/logical/and.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpq_type.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/auto_link/auto_link.h:
-
-/usr/include/c++/9/bits/locale_classes.tcc:
-
-/usr/include/boost/mpl/aux_/config/lambda.hpp:
-
-/usr/include/boost/mpl/vector/aux_/preprocessed/typeof_based/vector10.hpp:
-
-/usr/include/c++/9/bits/basic_string.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h:
-
-/usr/include/boost/mpl/size_t.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/rank.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH3.h:
+/usr/include/boost/heap/detail/heap_comparison.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/quadmath.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h:
 
 /usr/include/boost/math/tools/fraction.hpp:
 
@@ -5183,37 +5819,55 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/begin_end.hpp:
 
+/usr/include/boost/mpl/set/aux_/key_type_impl.hpp:
+
 /usr/include/c++/9/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/9/bits/stl_construct.h:
 
 /usr/include/boost/predef/architecture/convex.h:
 
-/usr/include/boost/static_assert.hpp:
+/usr/include/unistd.h:
 
-/usr/include/c++/9/limits:
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Triangle_3_Triangle_3.h:
 
-/usr/include/boost/container/detail/min_max.hpp:
+/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp:
+
+/usr/include/boost/detail/workaround.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h:
+
+/usr/include/boost/iterator/iterator_categories.hpp:
 
 /usr/include/assert.h:
 
 /usr/include/boost/predef/library/std/_prefix.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/poly/Poly.tcc:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polyline.h:
+/home/toler/CGAL-5.6/include/CGAL/Kernel/Same_uncertainty.h:
 
 /usr/include/c++/9/bits/predefined_ops.h:
 
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/line_constructions_2.h:
+
+/usr/include/boost/mpl/aux_/iter_push_front.hpp:
+
 /usr/include/c++/9/cctype:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h:
+/usr/include/boost/type_traits/enable_if.hpp:
 
-/usr/include/boost/type_traits/has_greater.hpp:
+/usr/include/c++/9/bits/stl_iterator.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_base.h:
+/usr/include/boost/predef/os/bsd/dragonfly.h:
 
-/usr/include/boost/predef/architecture/m68k.h:
+/usr/include/boost/iterator/interoperable.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_segment_traverser_3.h:
+
+/usr/include/boost/config/compiler/gcc.hpp:
 
 /usr/include/boost/preprocessor/control/if.hpp:
 
@@ -5221,31 +5875,39 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/architecture/ia64.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h:
+/usr/include/boost/algorithm/minmax_element.hpp:
 
-/usr/include/boost/fusion/support/detail/is_mpl_sequence.hpp:
+/usr/include/boost/predef/compiler/clang.h:
 
-/usr/include/c++/9/bits/memoryfwd.h:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/VTK.h:
 
-/usr/include/boost/mpl/min_max.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Dimension.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Reflection_rep_2.h:
+/usr/include/limits.h:
+
+/usr/include/boost/preprocessor/seq/cat.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/boost/predef/library/c/gnu.h:
+/usr/include/boost/predef/compiler/microtec.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Ray_3.h:
+/usr/include/boost/static_assert.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h:
+/usr/include/c++/9/limits:
+
+/home/toler/CGAL-5.6/include/CGAL/constant.h:
+
+/usr/include/boost/mpl/divides.hpp:
 
 /usr/include/c++/9/bits/uniform_int_dist.h:
 
-/usr/include/boost/range/mutable_iterator.hpp:
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_node.h:
 
 /usr/include/boost/variant/detail/std_hash.hpp:
 
 /usr/include/c++/9/bits/cxxabi_forced.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Simple_homogeneous.h:
 
 /usr/include/boost/predef/compiler/watcom.h:
 
@@ -5255,31 +5917,35 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/apply_fwd.hpp:
 
+/usr/include/boost/mp11/detail/mp_void.hpp:
+
+/usr/include/boost/predef/compiler/hp_acc.h:
+
 /usr/include/boost/multiprecision/detail/digits.hpp:
 
 /usr/include/c++/9/ios:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Promote.h:
-
 /usr/include/mpfr.h:
 
 /usr/include/boost/mpl/aux_/na_fwd.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h:
+/usr/include/boost/predef/compiler/pgi.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/PointH3.h:
 
 /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h:
 
+/home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions.h:
+
 /usr/include/boost/mpl/vector.hpp:
 
 /usr/include/c++/9/cwchar:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Segment_2.h:
+/usr/include/c++/9/bits/stl_numeric.h:
 
 /usr/include/c++/9/bits/exception_ptr.h:
 
@@ -5287,23 +5953,21 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/compiler/edg.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Line_2.h:
-
-/usr/include/wchar.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/solve_3.h:
 
 /usr/include/boost/is_placeholder.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h:
-
-/usr/include/boost/predef/hardware/simd/x86_amd/versions.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h:
+/usr/include/boost/preprocessor/slot.hpp:
 
 /usr/include/boost/predef/library/c/vms.h:
 
-/usr/include/boost/type_traits/conditional.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_directionsH2.h:
+/usr/include/boost/intrusive/detail/has_member_function_callable_with.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/utils_classes.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h:
 
 /usr/include/boost/predef/compiler/gcc.h:
 
@@ -5313,27 +5977,31 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/boost/parameter/aux_/pack/unmatched_argument.hpp:
-
 /usr/include/boost/math/special_functions/detail/lgamma_small.hpp:
 
 /usr/include/boost/mpl/aux_/config/ctps.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Circle_3.h:
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
+
+/usr/include/boost/preprocessor/repetition/repeat_from_to.hpp:
+
+/usr/include/boost/predef/hardware/simd/x86/versions.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Bbox_3.h:
 
 /usr/include/c++/9/bits/char_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Profile_counter.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/io.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/named_params_helper.h:
 
 /usr/include/c++/9/cstdint:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Sphere_3.h:
+
+/usr/include/boost/fusion/adapted/boost_tuple/detail/build_cons.hpp:
+
+/usr/include/boost/range/iterator_range_core.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/MP_Float.h:
 
 /usr/include/c++/9/bits/stl_tree.h:
 
@@ -5341,11 +6009,7 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/remove_volatile.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/io.h:
-
-/usr/include/boost/variant/variant.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_iterators_2.h:
+/home/toler/CGAL-5.6/include/CGAL/GMPXX_arithmetic_kernel.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h:
 
@@ -5353,23 +6017,19 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/predef/hardware/simd/arm/versions.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Sphere_3.h:
-
 /usr/include/c++/9/bits/localefwd.h:
 
-/usr/include/boost/fusion/support/detail/access.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Ray_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Coercion_traits.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Triangle_2.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h:
 
 /usr/include/boost/math/tools/series.hpp:
 
-/usr/include/boost/mpl/if.hpp:
+/home/toler/CGAL-5.6/include/CGAL/determinant.h:
 
-/usr/include/boost/random/piecewise_linear_distribution.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Tetrahedron_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Plane_3.h:
 
 /usr/include/c++/9/unordered_map:
 
@@ -5378,6 +6038,16 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 /usr/include/boost/preprocessor/enum.hpp:
 
 /usr/include/c++/9/bits/refwrap.h:
+
+/usr/include/boost/typeof/message.hpp:
+
+/usr/include/boost/variant/bad_visit.hpp:
+
+/usr/include/boost/mpl/less.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/transforming_iterator.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_median_2.h:
 
 /usr/include/boost/type_traits/is_volatile.hpp:
 
@@ -5389,81 +6059,103 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/home/toler/CGAL-5.6/include/CGAL/long_long.h:
+
+/usr/include/boost/random/uniform_int_distribution.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/c++/9/bits/stl_bvector.h:
-
-/usr/include/boost/mpl/inserter.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_utils_2.h:
 
 /usr/include/boost/preprocessor/arithmetic/dec.hpp:
 
 /usr/include/boost/container/detail/alloc_helpers.hpp:
 
+/usr/include/wctype.h:
+
+/usr/include/boost/predef/detail/_cassert.h:
+
 /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:
 
 /usr/include/boost/preprocessor/enum_params.hpp:
 
-/usr/include/c++/9/string:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/3MF.h:
-
-/usr/include/boost/preprocessor/seq/enum.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Plane_3.h:
 
 /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp:
 
 /usr/include/boost/preprocessor/facilities/expand.hpp:
 
-/usr/include/asm-generic/errno.h:
+/home/toler/CGAL-5.6/include/CGAL/Weights/utils.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_directions_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Line_2_Triangle_2.h:
+
+/usr/include/boost/multi_index/detail/serialization_version.hpp:
+
+/usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/internal/Cone_expansion_event.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Constrained_triangulation_face_base_2.h:
-
 /usr/include/boost/mpl/lambda.hpp:
+
+/usr/include/c++/9/bits/locale_classes.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
+
+/usr/include/boost/mpl/vector/aux_/pop_back.hpp:
+
+/usr/include/boost/math/special_functions/log1p.hpp:
+
+/usr/include/boost/mpl/and.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h:
 
 /usr/include/boost/mpl/aux_/config/overload_resolution.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polygon_mesh.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
 /usr/include/boost/parameter/aux_/pack/tag_template_keyword_arg.hpp:
 
-/usr/include/boost/predef/os/qnxnto.h:
+/home/toler/CGAL-5.6/include/CGAL/GMP/Gmpq_type.h:
 
 /usr/include/boost/predef/compiler/comeau.h:
 
 /usr/include/c++/9/bits/postypes.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Point_3.h:
-
 /usr/include/boost/type_traits/has_virtual_destructor.hpp:
+
+/usr/include/c++/9/bits/vector.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/misc_functions.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Splitters.h:
 
 /usr/include/c++/9/bits/std_function.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Plane_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h:
-
 /usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp:
+
+/usr/include/boost/preprocessor/seq/to_list.hpp:
 
 /usr/include/c++/9/bits/range_access.h:
 
+/usr/include/boost/property_map/shared_array_property_map.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h:
 
 /usr/include/c++/9/bits/stl_raw_storage_iter.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_writer.h:
+/home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/measure.h:
 
-/usr/include/boost/fusion/support/detail/mpl_iterator_category.hpp:
-
-/usr/include/boost/detail/lcast_precision.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_2.h:
 
 /usr/include/stdio.h:
 
@@ -5473,23 +6165,43 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/boost/mpl/find.hpp:
+
+/usr/include/boost/mpl/vector/aux_/front.hpp:
+
+/usr/include/c++/9/bits/locale_classes.tcc:
+
 /usr/include/boost/mpl/end.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Random.h:
 
 /usr/include/boost/type_traits/add_pointer.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h:
+/usr/include/boost/predef/platform/windows_desktop.h:
+
+/usr/include/boost/mpl/contains_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h:
 
 /usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/CORE.h:
+/usr/include/boost/mpl/vector/vector10.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Segment_2.h:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_face_base_2.h:
 
 /usr/include/boost/preprocessor/seq/size.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Kd_tree.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Projection_traits_3.h:
 
 /usr/include/boost/mpl/aux_/config/dtp.hpp:
 
@@ -5497,27 +6209,37 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/variant/detail/backup_holder.hpp:
 
+/usr/include/boost/mpl/if.hpp:
+
+/usr/include/boost/random/piecewise_linear_distribution.hpp:
+
 /usr/include/errno.h:
 
 /usr/include/linux/errno.h:
 
 /usr/include/boost/multiprecision/cpp_int.hpp:
 
-/usr/include/x86_64-linux-gnu/asm/errno.h:
+/usr/include/boost/math/special_functions/cbrt.hpp:
 
-/usr/include/boost/fusion/algorithm/transformation/erase_key.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h:
 
-/usr/include/asm-generic/errno-base.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/Filter.h:
+
+/home/toler/CGAL-5.6/include/CGAL/version.h:
 
 /usr/include/c++/9/system_error:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/File_writer_VRML_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Exact_kernel_selector.h:
 
-/usr/include/boost/mpl/quote.hpp:
+/usr/include/boost/mpl/aux_/insert_impl.hpp:
 
-/usr/include/boost/preprocessor/identity.hpp:
+/usr/include/boost/fusion/container/vector/detail/distance_impl.hpp:
 
-/usr/include/boost/optional/detail/optional_aligned_storage.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Ray_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Sphere_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Line_3.h:
 
 /usr/include/boost/math/policies/policy.hpp:
 
@@ -5525,35 +6247,47 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/detail/has_binary_operator.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Kernel/Return_base_tag.h:
+
+/home/toler/CGAL-5.6/include/CGAL/utils.h:
+
 /usr/include/c++/9/bits/quoted_string.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/utils_classes.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/point_constructions_3.h:
-
-/usr/include/boost/variant/detail/enable_recursive.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h:
 
 /usr/include/c++/9/cstdio:
 
 /usr/include/c++/9/stdexcept:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h:
+/usr/include/boost/type_traits/conversion_traits.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h:
 
 /usr/include/boost/predef/architecture/blackfin.h:
 
-/usr/include/boost/type_traits/is_rvalue_reference.hpp:
+/usr/include/boost/mpl/size_t_fwd.hpp:
 
-/usr/include/boost/fusion/container/list/cons.hpp:
+/usr/include/boost/random/binomial_distribution.hpp:
 
-/usr/include/boost/container/detail/is_contiguous_container.hpp:
+/usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/copy_face_graph.h:
+
+/usr/include/c++/9/cwctype:
+
+/usr/include/boost/preprocessor/repetition/for.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
+/usr/include/boost/utility/compare_pointees.hpp:
+
 /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_predicate_with_state.h:
+
+/usr/include/boost/type_traits/aligned_storage.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/gmp.h:
 
 /usr/include/c++/9/bits/streambuf_iterator.h:
 
@@ -5565,37 +6299,47 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/c++/9/bits/uses_allocator.h:
 
-/usr/include/c++/9/ext/alloc_traits.h:
-
-/usr/include/boost/detail/no_exceptions_support.hpp:
-
 /usr/include/boost/preprocessor/logical/compl.hpp:
 
 /usr/include/boost/predef/architecture.h:
 
 /usr/include/c++/9/bits/unordered_map.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h:
+/usr/include/boost/mpl/insert_range_fwd.hpp:
 
 /usr/include/c++/9/ratio:
 
 /usr/include/c++/9/ctime:
 
+/home/toler/CGAL-5.6/include/CGAL/type_traits.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h:
+
 /usr/include/boost/config/no_tr1/cmath.hpp:
 
-/usr/include/c++/9/bits/stl_uninitialized.h:
+/usr/include/boost/predef/compiler/gcc_xml.h:
+
+/usr/include/c++/9/ext/concurrence.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/internal/helpers.h:
 
 /usr/include/c++/9/bits/allocated_ptr.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/lgpl.h:
+/home/toler/CGAL-5.6/include/CGAL/license/lgpl.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license.h:
+/usr/include/boost/config/detail/posix_features.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous_converter.h:
+/usr/include/boost/preprocessor/arithmetic/add.hpp:
+
+/usr/include/boost/type_traits/has_trivial_constructor.hpp:
 
 /usr/include/boost/move/utility.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+/usr/include/boost/preprocessor/repetition/enum_trailing_binary_params.hpp:
+
+/usr/include/c++/9/bits/locale_conv.h:
+
+/usr/include/boost/container/detail/allocation_type.hpp:
 
 /usr/include/boost/fusion/view/iterator_range/detail/end_impl.hpp:
 
@@ -5605,41 +6349,51 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/preprocessor/arithmetic/inc.hpp:
 
-/usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
+/usr/include/boost/math/tools/detail/polynomial_horner3_20.hpp:
 
-/usr/include/boost/fusion/view/transform_view/detail/end_impl.hpp:
+/usr/include/boost/variant/visitor_ptr.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/function_objects.h:
+/usr/include/boost/optional/detail/optional_factory_support.hpp:
 
-/usr/include/boost/math/tools/user.hpp:
+/usr/include/boost/assert.hpp:
 
-/usr/include/boost/move/make_unique.hpp:
+/usr/include/boost/multi_index/detail/converter.hpp:
 
-/usr/include/boost/mpl/list/aux_/O1_size.hpp:
+/usr/include/boost/multi_index/detail/restore_wstrict_aliasing.hpp:
 
-/usr/include/c++/9/bits/locale_conv.h:
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/PlaneH3.h:
 
-/usr/include/boost/container/detail/allocation_type.hpp:
+/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:
 
-/usr/include/boost/range/reverse_iterator.hpp:
+/usr/include/boost/fusion/sequence/intrinsic/empty.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Triangle_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Segment_2.h:
 
-/usr/include/boost/mpl/aux_/fold_impl.hpp:
+/home/toler/CGAL-5.6/include/CGAL/license.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloat_impl.h:
+/usr/include/boost/iterator/transform_iterator.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/use.h:
+/home/toler/CGAL-5.6/include/CGAL/Kernel/solve.h:
+
+/home/toler/CGAL-5.6/include/CGAL/assertions.h:
+
+/usr/include/c++/9/initializer_list:
 
 /usr/include/boost/predef/architecture/z.h:
 
 /usr/include/c++/9/list:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_cell_base_3.h:
+/usr/include/boost/preprocessor/seq/push_back.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Handle_for_virtual.h:
 
 /usr/include/boost/type_traits/has_negate.hpp:
 
 /usr/include/c++/9/locale:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_3.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h:
 
 /usr/include/boost/math/constants/constants.hpp:
 
@@ -5647,79 +6401,95 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/pthread.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr_impl.h:
+/usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+/usr/include/boost/predef/architecture/x86/32.h:
+
+/usr/include/boost/detail/container_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/property_map.h:
+
 /usr/include/c++/9/map:
 
-/usr/include/boost/mpl/find_if.hpp:
+/usr/include/boost/type_traits/has_nothrow_assign.hpp:
 
-/usr/include/boost/random/detail/operators.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Segment_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/exceptions.h:
+/usr/include/boost/math/special_functions/lanczos.hpp:
 
-/usr/include/boost/fusion/algorithm/transformation/push_back.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Euclidean_distance.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersection_traits_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_with_info_3.h:
 
-/usr/include/boost/lexical_cast.hpp:
+/home/toler/CGAL-5.6/include/CGAL/assertions_behaviour.h:
 
-/usr/include/boost/container_hash/hash.hpp:
+/home/toler/CGAL-5.6/include/CGAL/CORE/Config.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Sphere_3.h:
-
-/usr/include/boost/mpl/list.hpp:
-
-/usr/include/boost/parameter/aux_/pack/item.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpz.h:
-
-/usr/include/boost/type_traits/enable_if.hpp:
-
-/usr/include/boost/config/compiler/gcc.hpp:
-
-/usr/include/c++/9/bits/stl_iterator.h:
-
-/usr/include/boost/predef/os/bsd/dragonfly.h:
-
-/usr/include/boost/iterator/interoperable.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH3.h:
-
-/usr/include/boost/mpl/vector/vector20.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/graph_traits_Surface_mesh.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/boost/mpl/bool.hpp:
-
-/usr/include/boost/mpl/aux_/include_preprocessed.hpp:
-
-/usr/include/boost/mpl/aux_/adl_barrier.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/copy_face_graph.h:
+/home/toler/CGAL-5.6/include/CGAL/Get_arithmetic_kernel.h:
 
 /usr/include/c++/9/bits/unordered_set.h:
 
-/usr/include/boost/random/variate_generator.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h:
 
-/usr/include/boost/smart_ptr/detail/operator_bool.hpp:
+/usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
+
+/usr/include/boost/mpl/aux_/config/gcc.hpp:
+
+/usr/include/boost/mpl/erase.hpp:
+
+/usr/include/boost/random/non_central_chi_squared_distribution.hpp:
+
+/usr/include/boost/numeric/conversion/bounds.hpp:
 
 /usr/include/boost/mpl/aux_/config/static_constant.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/GOCAD.h:
+
 /usr/include/boost/mpl/lambda_fwd.hpp:
 
-/usr/include/boost/utility/result_of.hpp:
+/usr/include/boost/multi_index/detail/index_base.hpp:
 
-/usr/include/c++/9/bits/stl_algobase.h:
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_data_structure_2.h:
 
-/usr/include/boost/mpl/or.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_predicate.h:
 
-/usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
+/usr/include/boost/math/tools/detail/rational_horner1_20.hpp:
 
-/usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+/usr/include/boost/mpl/aux_/integral_wrapper.hpp:
+
+/usr/include/boost/preprocessor/list/detail/fold_right.hpp:
+
+/usr/include/boost/preprocessor/seq/detail/is_empty.hpp:
+
+/usr/include/boost/math/bindings/detail/big_lanczos.hpp:
+
+/usr/include/boost/range/reverse_iterator.hpp:
+
+/usr/include/boost/fusion/view/single_view/detail/at_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Quotient_fwd.h:
+
+/usr/include/boost/mpl/front_fwd.hpp:
+
+/usr/include/boost/core/enable_if.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/boost/detail/call_traits.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_cell_base_3.h:
+
+/usr/include/boost/iterator/detail/enable_if.hpp:
+
+/usr/include/boost/fusion/support/detail/is_native_fusion_sequence.hpp:
+
+/usr/include/boost/iterator/zip_iterator.hpp:
+
+/usr/include/c++/9/bits/erase_if.h:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
@@ -5729,27 +6499,37 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/void_fwd.hpp:
 
-/usr/include/c++/9/initializer_list:
+/usr/include/boost/mpl/aux_/na.hpp:
 
-/usr/include/boost/preprocessor/config/config.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Weighted_point_3.h:
 
-/usr/include/boost/detail/templated_streams.hpp:
+/usr/include/boost/type_traits/copy_cv.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/STL.h:
 
-/usr/include/boost/predef/compiler/hp_acc.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
-/usr/include/boost/mp11/detail/mp_void.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h:
+/usr/include/boost/mpl/bool.hpp:
 
-/usr/include/c++/9/bits/deque.tcc:
+/usr/include/boost/mpl/aux_/has_type.hpp:
 
-/usr/include/boost/mpl/aux_/largest_int.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_1_ostream.h:
+/usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
 
 /usr/include/boost/preprocessor/control/iif.hpp:
+
+/usr/include/boost/mpl/integral_c_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel.h:
+
+/home/toler/CGAL-5.6/include/CGAL/license/TDS_3.h:
+
+/usr/include/boost/preprocessor/logical/bitxor.hpp:
+
+/usr/include/boost/preprocessor/logical/bool.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/alpha_expansion_graphcut.h:
 
 /usr/include/boost/preprocessor/facilities/empty.hpp:
 
@@ -5759,53 +6539,29 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/O1_size_fwd.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/version_macros.h:
+
 /usr/include/boost/preprocessor/tuple/elem.hpp:
 
 /usr/include/boost/preprocessor/repeat.hpp:
 
 /usr/include/boost/parameter/aux_/is_placeholder.hpp:
 
-/usr/include/boost/move/traits.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h:
-
-/usr/include/boost/preprocessor/array/data.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/assertions_impl.h:
-
-/usr/include/boost/type_traits/remove_reference.hpp:
-
-/usr/include/boost/math/special_functions/gamma.hpp:
-
-/usr/include/boost/move/algo/detail/insertion_sort.hpp:
-
-/usr/include/boost/preprocessor/debug/error.hpp:
-
-/usr/include/boost/lexical_cast/bad_lexical_cast.hpp:
-
-/usr/include/boost/optional/detail/optional_trivially_copyable_base.hpp:
-
-/usr/include/boost/multiprecision/cpp_int/value_pack.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE_Expr.h:
-
 /usr/include/boost/mpl/pop_back_fwd.hpp:
-
-/usr/include/boost/range/detail/extract_optional_type.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
 
+/usr/include/boost/mpl/pair.hpp:
+
 /usr/include/boost/type_traits/is_member_function_pointer.hpp:
 
-/usr/include/boost/predef/platform/windows_store.h:
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/refine.h:
 
 /usr/include/boost/type_traits/is_lvalue_reference.hpp:
 
-/usr/include/boost/lambda/detail/is_instance_of.hpp:
+/usr/include/boost/predef/platform/windows_store.h:
 
-/usr/include/boost/preprocessor/logical/bitand.hpp:
+/usr/include/boost/lambda/detail/is_instance_of.hpp:
 
 /usr/include/boost/preprocessor/control/while.hpp:
 
@@ -5813,405 +6569,153 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/rational.hpp:
 
-/usr/include/boost/config/detail/posix_features.hpp:
-
-/usr/include/boost/preprocessor/arithmetic/add.hpp:
-
-/usr/include/boost/predef/compiler/nvcc.h:
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO/PLY.h:
 
 /usr/include/boost/mpl/aux_/type_wrapper.hpp:
 
 /usr/include/boost/preprocessor/list/adt.hpp:
 
-/usr/include/boost/mpl/assert.hpp:
+/usr/include/boost/preprocessor/array/push_front.hpp:
 
-/usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
+/usr/include/boost/iterator/iterator_adaptor.hpp:
 
-/usr/include/boost/preprocessor/list/fold_right.hpp:
-
-/usr/include/boost/lexical_cast/try_lexical_convert.hpp:
-
-/usr/include/boost/predef/compiler/ekopath.h:
-
-/usr/include/boost/mpl/aux_/preprocessor/repeat.hpp:
+/usr/include/boost/container/options.hpp:
 
 /usr/include/boost/preprocessor/list/reverse.hpp:
 
-/usr/include/boost/preprocessor/control/detail/while.hpp:
-
 /usr/include/boost/preprocessor/tuple/rem.hpp:
-
-/usr/include/boost/type_traits/intrinsics.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h:
-
-/usr/include/boost/preprocessor/detail/auto_rec.hpp:
-
-/usr/include/boost/type_traits/is_complete.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/PLY.h:
-
-/usr/include/boost/math/policies/error_handling.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h:
-
-/usr/include/boost/type_traits/declval.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_face_base_with_info_2.h:
-
-/usr/include/boost/type_traits/is_reference.hpp:
-
-/usr/include/alloca.h:
-
-/usr/include/boost/type_traits/is_arithmetic.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/VTK.h:
-
-/usr/include/boost/mpl/aux_/preprocessor/params.hpp:
-
-/usr/include/boost/variant/detail/apply_visitor_unary.hpp:
-
-/usr/include/boost/range/config.hpp:
-
-/usr/include/boost/utility/declval.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_d.h:
-
-/usr/include/boost/type_traits/copy_cv.hpp:
-
-/usr/include/boost/functional/hash_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/internal/Cone_tree.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/license/Triangulation_2.h:
-
-/usr/include/boost/type_traits/aligned_storage.hpp:
-
-/usr/include/boost/random/linear_feedback_shift.hpp:
-
-/usr/include/boost/type_traits/alignment_of.hpp:
-
-/usr/include/boost/type_traits/type_with_alignment.hpp:
-
-/usr/include/boost/type_traits/is_empty.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Vector_2.h:
-
-/usr/include/boost/integer/integer_log2.hpp:
-
-/usr/include/boost/type_traits/has_trivial_constructor.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Point_container.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/mpz_class.h:
-
-/usr/include/boost/type_traits/has_trivial_destructor.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Segment_3.h:
-
-/usr/include/boost/config/workaround.hpp:
-
-/usr/include/boost/mp11/list.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h:
-
-/usr/include/boost/type_traits/has_nothrow_constructor.hpp:
-
-/usr/include/boost/type_traits/is_nothrow_move_assignable.hpp:
-
-/usr/include/boost/type_traits/has_trivial_move_assign.hpp:
-
-/usr/include/boost/math/special_functions/lanczos.hpp:
-
-/usr/include/boost/type_traits/has_nothrow_assign.hpp:
-
-/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_source/baryshift.cpp:
-
-/usr/include/boost/mpl/empty.hpp:
-
-/usr/include/boost/fusion/container/list/detail/value_at_impl.hpp:
-
-/usr/include/boost/intrusive/detail/iterator.hpp:
-
-/usr/include/boost/container/detail/algorithm.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Wutils.h:
-
-/usr/include/boost/mpl/front.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Ray_3.h:
-
-/usr/include/boost/mpl/insert_range.hpp:
-
-/usr/include/boost/mpl/insert_range_fwd.hpp:
-
-/usr/include/boost/mpl/erase.hpp:
-
-/usr/include/boost/numeric/conversion/bounds.hpp:
-
-/usr/include/boost/random/non_central_chi_squared_distribution.hpp:
-
-/usr/include/boost/type_traits/is_constructible.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/iterator.h:
-
-/usr/include/boost/mpl/aux_/insert_range_impl.hpp:
-
-/usr/include/boost/iterator/detail/config_undef.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/triangulation_assertions.h:
-
-/usr/include/boost/mpl/insert_fwd.hpp:
-
-/usr/include/boost/mpl/aux_/insert_impl.hpp:
-
-/usr/include/boost/mpl/aux_/joint_iter.hpp:
-
-/usr/include/boost/mpl/max_element.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH3.h:
-
-/usr/include/boost/mpl/size_t_fwd.hpp:
-
-/usr/include/boost/preprocessor/stringize.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/io.h:
-
-/usr/include/boost/type_traits/is_stateless.hpp:
-
-/usr/include/boost/mpl/sizeof.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h:
-
-/usr/include/boost/fusion/sequence/comparison/detail/equal_to.hpp:
-
-/usr/include/boost/mpl/transform.hpp:
-
-/usr/include/boost/lexical_cast/detail/converter_numeric.hpp:
-
-/usr/include/boost/mpl/pair_view.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/memory.h:
-
-/usr/include/boost/variant/detail/substitute.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Bbox_2.h:
-
-/usr/include/boost/unordered/unordered_set_fwd.hpp:
-
-/usr/include/boost/core/demangle.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h:
-
-/usr/include/boost/predef/os.h:
-
-/usr/include/boost/variant/recursive_wrapper.hpp:
-
-/usr/include/boost/checked_delete.hpp:
 
 /usr/include/boost/mpl/apply_wrap.hpp:
 
 /usr/include/boost/variant/get.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs_impl.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Triangle_3.h:
 
-/usr/include/boost/variant/detail/element_index.hpp:
+/usr/include/boost/math/tools/user.hpp:
 
-/usr/include/boost/optional/detail/optional_factory_support.hpp:
+/usr/include/boost/move/make_unique.hpp:
 
-/usr/include/boost/variant/visitor_ptr.hpp:
+/usr/include/boost/mpl/list/aux_/O1_size.hpp:
 
-/usr/include/boost/type_traits/is_complex.hpp:
+/usr/include/boost/predef/architecture/sparc.h:
 
-/usr/include/boost/container/detail/flat_tree.hpp:
+/usr/include/boost/container_hash/hash.hpp:
 
-/usr/include/boost/optional/optional.hpp:
+/usr/include/boost/mpl/list.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Ray_3.h:
+/usr/include/boost/parameter/aux_/pack/item.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Rational_traits.h:
+/usr/include/boost/random/detail/generator_seed_seq.hpp:
 
-/usr/include/boost/core/explicit_operator_bool.hpp:
+/usr/include/boost/preprocessor/arithmetic/sub.hpp:
 
-/usr/include/boost/fusion/view/transform_view/transform_view_fwd.hpp:
+/usr/include/boost/mpl/pop_front.hpp:
 
-/usr/include/c++/9/debug/assertions.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Segment_2.h:
 
-/usr/include/boost/parameter/value_type.hpp:
+/usr/include/boost/config.hpp:
 
-/usr/include/boost/optional/bad_optional_access.hpp:
+/usr/include/boost/core/use_default.hpp:
 
-/usr/include/boost/type_traits/remove_bounds.hpp:
+/usr/include/boost/container_hash/hash_fwd.hpp:
 
-/usr/include/boost/math/tools/convert_from_string.hpp:
+/usr/include/boost/container/detail/container_rebind.hpp:
 
-/usr/include/boost/none_t.hpp:
+/usr/include/boost/fusion/mpl/size.hpp:
 
-/usr/include/boost/utility/compare_pointees.hpp:
+/usr/include/boost/predef/library/std/roguewave.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/core.h:
+/usr/include/boost/mpl/aux_/preprocessed/gcc/divides.hpp:
 
-/usr/include/boost/optional/detail/optional_reference_spec.hpp:
+/usr/include/boost/mpl/arg.hpp:
 
-/usr/include/boost/fusion/iterator/equal_to.hpp:
+/usr/include/boost/mpl/aux_/clear_impl.hpp:
 
-/usr/include/boost/optional/detail/optional_relops.hpp:
+/usr/include/boost/range/rend.hpp:
 
-/usr/include/boost/container/vector.hpp:
+/usr/include/boost/type_traits/has_trivial_assign.hpp:
 
-/usr/include/boost/optional/detail/optional_swap.hpp:
+/usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_traits.h:
+/usr/include/boost/preprocessor/list/fold_right.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h:
+/usr/include/boost/mpl/assert.hpp:
 
-/usr/include/boost/lambda/detail/select_functions.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Aff_transformation_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_traits_fwd.h:
+/usr/include/boost/predef/library/c/gnu.h:
 
-/usr/include/c++/9/mutex:
+/home/toler/CGAL-5.6/include/CGAL/Weighted_point_3.h:
 
-/usr/include/boost/parameter/aux_/preprocessor/is_binary.hpp:
+/usr/include/boost/mpl/bind.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/basic_classes.h:
+/home/toler/CGAL-5.6/include/CGAL/Vector_3.h:
 
-/usr/include/boost/math/tools/precision.hpp:
+/usr/include/boost/preprocessor/seq/first_n.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/is_iterator.h:
+/usr/include/gmpxx.h:
 
-/usr/include/boost/math/special_functions/trunc.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Bbox_3.h:
+/home/toler/CGAL-5.6/include/CGAL/squared_distance_3.h:
 
-/usr/include/string.h:
+/usr/include/boost/type_traits/has_modulus_assign.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+/home/toler/CGAL-5.6/include/CGAL/Ray_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/representation_tags.h:
+/home/toler/CGAL-5.6/include/CGAL/Triangle_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/hilbert_sort.h:
+/usr/include/boost/type_traits/has_unary_plus.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions.h:
+/home/toler/CGAL-5.6/include/CGAL/Tetrahedron_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Iso_cuboid_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/user_classes.h:
+/home/toler/CGAL-5.6/include/CGAL/Sphere_3.h:
 
-/usr/include/boost/parameter/aux_/void.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Circle_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Point_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Segment_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Return_base_tag.h:
+/usr/include/ctype.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Weighted_point_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Scalar_factor_traits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Weights/utils.h:
+/usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
 
-/usr/include/boost/parameter/aux_/tagged_argument.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Aff_transformation_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Direction_2.h:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Line_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Ray_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_internal_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/locate.h:
+/usr/include/boost/mpl/aux_/preprocessed/gcc/reverse_iter_fold_impl.hpp:
 
-/usr/include/boost/fusion/view/joint_view/detail/key_of_impl.hpp:
+/usr/include/boost/type_traits/is_unsigned.hpp:
 
-/usr/include/boost/fusion/mpl/end.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Iso_rectangle_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Kernel/global_functions_internal_3.h:
 
-/usr/include/boost/math/special_functions/cbrt.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h:
 
-/usr/include/boost/mpl/aux_/integral_wrapper.hpp:
-
-/usr/include/boost/math/tools/detail/rational_horner1_20.hpp:
-
-/usr/include/boost/fusion/mpl/pop_back.hpp:
-
-/usr/include/boost/predef/platform/windows_server.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_utils_3.h:
-
-/usr/include/boost/mpl/divides.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Aff_transformation_2.h:
-
-/usr/include/boost/random/extreme_value_distribution.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/export/CORE.h:
-
-/usr/include/boost/parameter/aux_/pack/insert_tagged.hpp:
-
-/usr/include/boost/mpl/aux_/value_wknd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Vector_3.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Direction_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Segment_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangle_3.h:
-
-/usr/include/boost/random/cauchy_distribution.hpp:
-
-/usr/include/boost/predef/compiler/tendra.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Tetrahedron_3.h:
-
-/usr/include/boost/detail/basic_pointerbuf.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/license/Polygon_mesh_processing/meshing_hole_filling.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Iso_cuboid_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/transforming_iterator.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Aff_transformation_3.h:
-
-/usr/include/boost/multiprecision/traits/is_byte_container.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Weighted_point_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/bounding_box.h:
-
-/usr/include/boost/predef/language.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/hash_functions.h:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h:
 
 /usr/include/boost/predef/platform/cloudabi.h:
 
 /usr/include/boost/functional/hash.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_3.h:
-
 /usr/include/boost/optional/detail/optional_config.hpp:
 
 /usr/include/boost/container_hash/detail/hash_float.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Segment_3.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/generic_copy_OFF.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h:
 
 /usr/include/boost/type_index/type_index_facade.hpp:
 
@@ -6219,49 +6723,69 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/parameter/aux_/pack/satisfies.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Circle_2.h:
-
 /usr/include/boost/container_hash/detail/limits.hpp:
-
-/usr/include/c++/9/clocale:
-
-/usr/include/boost/integer/static_log2.hpp:
 
 /usr/include/boost/mpl/clear.hpp:
 
 /usr/include/c++/9/typeindex:
 
-/usr/include/boost/tuple/tuple.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Triangle_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h:
+/usr/include/boost/tuple/tuple.hpp:
 
 /usr/include/boost/math/special_functions/detail/igamma_inverse.hpp:
 
 /usr/include/c++/9/deque:
 
-/home/toler/CGAL-5.5.2/include/CGAL/gmp.h:
+/usr/include/boost/mpl/aux_/largest_int.hpp:
+
+/usr/include/c++/9/bits/deque.tcc:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/OI/Inventor_ostream.h:
+
+/usr/include/boost/shared_array.hpp:
 
 /usr/include/c++/9/bits/stl_list.h:
 
 /usr/include/c++/9/bits/list.tcc:
 
+/home/toler/CGAL-5.6/include/CGAL/Enum_converter.h:
+
 /usr/include/c++/9/set:
 
-/usr/include/c++/9/bits/stl_set.h:
+/usr/include/boost/type_traits/alignment_of.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h:
+/usr/include/boost/random/linear_feedback_shift.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Concurrent_compact_container.h:
+
+/usr/include/c++/9/bits/stl_set.h:
 
 /usr/include/c++/9/bits/stl_multiset.h:
 
 /usr/include/c++/9/bitset:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Point_2.h:
+/usr/include/boost/variant/detail/substitute_fwd.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Weighted_point_2.h:
+
+/usr/include/boost/multiprecision/detail/rebind.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/3MF.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Handle_for.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h:
+
+/usr/include/boost/mpl/remove.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/memory.h:
 
 /usr/include/boost/preprocessor/detail/is_binary.hpp:
 
 /usr/include/boost/ref.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/internal/Straight_2.h:
 
 /usr/include/boost/core/ref.hpp:
 
@@ -6271,31 +6795,73 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/utility/swap.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Complexity_tags.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Vector_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/constant.h:
+/usr/include/boost/parameter/aux_/pack/unmatched_argument.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Direction_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Line_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Triangle_3.h:
+/usr/include/boost/lambda/detail/operator_lambda_func_base.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/predicates/kernel_ftC2.h:
+/home/toler/CGAL-5.6/include/CGAL/algorithm.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/3MF/write_3mf.h:
+/usr/include/boost/preprocessor/seq/to_array.hpp:
+
+/usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
+
+/usr/include/boost/random/mersenne_twister.hpp:
+
+/usr/include/boost/random/random_number_generator.hpp:
 
 /usr/include/boost/fusion/view/joint_view/joint_view.hpp:
 
-/usr/include/boost/random/detail/config.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Line_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Segment_3.h:
+/usr/include/boost/random/detail/config.hpp:
 
 /usr/include/boost/random/detail/uniform_int_float.hpp:
 
 /usr/include/boost/random/detail/generator_bits.hpp:
 
+/usr/include/boost/predef/compiler/metaware.h:
+
+/home/toler/CGAL-5.6/include/CGAL/min_max_n.h:
+
 /usr/include/boost/random/detail/enable_warnings.hpp:
 
+/usr/include/boost/mpl/quote.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Point_2.h:
+
+/usr/include/boost/random/detail/signed_unsigned_tools.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Line_2.h:
+
 /usr/include/boost/random/traits.hpp:
+
+/usr/include/boost/fusion/container/list/detail/empty_impl.hpp:
+
+/usr/include/boost/mpl/distance_fwd.hpp:
+
+/usr/include/boost/type_traits/is_fundamental.hpp:
+
+/usr/include/boost/type_traits/is_signed.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h:
+
+/usr/include/boost/fusion/container/vector/detail/advance_impl.hpp:
+
+/usr/include/boost/mpl/aux_/iter_apply.hpp:
+
+/usr/include/boost/type_traits/make_unsigned.hpp:
+
+/usr/include/boost/random.hpp:
+
+/usr/include/boost/move/algo/detail/merge_sort.hpp:
+
+/usr/include/c++/9/queue:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Plane_3.h:
 
 /usr/include/boost/random/additive_combine.hpp:
 
@@ -6305,33 +6871,19 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp:
 
-/usr/include/boost/mpl/list/aux_/clear.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/BOOST_MP_arithmetic_kernel.h:
-
 /usr/include/boost/parameter/aux_/pack/make_arg_list.hpp:
 
-/usr/include/boost/range/detail/has_member_size.hpp:
-
-/usr/include/boost/random/detail/const_mod.hpp:
+/usr/include/boost/smart_ptr/scoped_ptr.hpp:
 
 /usr/include/boost/type_traits/has_pre_increment.hpp:
 
 /usr/include/boost/random/detail/integer_log2.hpp:
 
-/usr/include/boost/mpl/sequence_tag_fwd.hpp:
+/usr/include/boost/multi_index/detail/copy_map.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h:
-
-/usr/include/boost/random/detail/seed_impl.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/internal/squared_distance_utils_2.h:
 
 /usr/include/boost/random/discard_block.hpp:
-
-/usr/include/boost/random/independent_bits.hpp:
-
-/usr/include/boost/random/inversive_congruential.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Line_2.h:
 
 /usr/include/boost/random/lagged_fibonacci.hpp:
 
@@ -6339,59 +6891,83 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/random/ranlux.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/boost/random/uniform_01.hpp:
-
-/usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
-
-/usr/include/boost/random/mersenne_twister.hpp:
-
 /usr/include/boost/random/detail/polynomial.hpp:
-
-/usr/include/boost/type_traits/has_nothrow_destructor.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/binary_file_io.h:
 
 /usr/include/boost/smart_ptr/detail/spinlock_std_atomic.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/boost/iterator/counting_iterator.hpp:
+
 /usr/include/boost/random/subtract_with_carry.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/property_maps.h:
-
 /usr/include/boost/random/shuffle_order.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/SphereH3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Bigfloat_interval_traits.h:
 
 /usr/include/boost/mp11/bind.hpp:
 
 /usr/include/boost/random/shuffle_output.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpz_type.h:
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_sort_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Get_arithmetic_kernel.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Ray_3.h:
 
 /usr/include/boost/random/taus88.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Line_2.h:
+
 /usr/include/boost/random/xor_combine.hpp:
+
+/usr/include/boost/fusion/algorithm/transformation/insert_range.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Iso_rectangleH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h:
 
 /usr/include/boost/random/generate_canonical.hpp:
 
-/usr/include/boost/mpl/aux_/iter_push_front.hpp:
+/usr/include/boost/utility/declval.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h:
+/usr/include/boost/range/config.hpp:
 
-/usr/include/boost/fusion/iterator/detail/segmented_next_impl.hpp:
+/usr/include/boost/multi_index/detail/index_saver.hpp:
 
-/usr/include/boost/parameter/aux_/is_maybe.hpp:
+/usr/include/boost/detail/basic_pointerbuf.hpp:
 
-/usr/include/boost/random/beta_distribution.hpp:
+/usr/include/boost/range/iterator.hpp:
+
+/usr/include/boost/preprocessor/array/insert.hpp:
+
+/usr/include/boost/range/range_fwd.hpp:
+
+/usr/include/boost/lambda/detail/lambda_functors.hpp:
+
+/usr/include/boost/range/mutable_iterator.hpp:
+
+/usr/include/boost/range/detail/extract_optional_type.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
+
+/usr/include/boost/range/const_iterator.hpp:
+
+/usr/include/boost/range/end.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Weighted_point_2.h:
+
+/usr/include/boost/mpl/aux_/lambda_spec.hpp:
+
+/usr/include/boost/range/detail/implementation_help.hpp:
+
+/usr/include/boost/range/detail/common.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h:
+
+/usr/include/boost/parameter/parameters.hpp:
+
+/usr/include/boost/range/detail/sfinae.hpp:
+
+/usr/include/boost/smart_ptr/detail/operator_bool.hpp:
+
+/usr/include/boost/random/variate_generator.hpp:
+
+/usr/include/boost/utility.hpp:
 
 /usr/include/boost/parameter/aux_/pack/tag_deduced.hpp:
 
@@ -6399,37 +6975,97 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/random/gamma_distribution.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kd_tree_node.h:
-
 /usr/include/boost/random/exponential_distribution.hpp:
+
+/usr/include/boost/random/cauchy_distribution.hpp:
 
 /usr/include/boost/predef/architecture/rs6k.h:
 
 /usr/include/boost/random/discrete_distribution.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Ray_2.h:
-
-/usr/include/boost/fusion/container/deque/deque_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h:
-
 /usr/include/boost/container/detail/iterator.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h:
 
 /usr/include/boost/random/detail/vector_io.hpp:
 
-/usr/include/boost/type_traits/detail/has_prefix_operator.hpp:
+/usr/include/boost/io_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/border.h:
+
+/usr/include/boost/random/extreme_value_distribution.hpp:
+
+/usr/include/boost/parameter/aux_/pack/insert_tagged.hpp:
+
+/usr/include/boost/range/size.hpp:
+
+/usr/include/boost/range/size_type.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/type_traits/is_iterator.h:
+
+/usr/include/boost/range/difference_type.hpp:
+
+/usr/include/boost/graph/property_maps/null_property_map.hpp:
+
+/usr/include/boost/range/has_range_iterator.hpp:
+
+/usr/include/boost/mpl/list/aux_/push_front.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Point_2.h:
+
+/usr/include/boost/range/concepts.hpp:
+
+/usr/include/boost/concept/detail/backward_compatibility.hpp:
+
+/usr/include/boost/concept/detail/has_constraints.hpp:
+
+/usr/include/boost/concept/detail/concept_def.hpp:
+
+/usr/include/boost/preprocessor/repetition/detail/for.hpp:
 
 /usr/include/boost/io/ios_state.hpp:
 
-/usr/include/boost/io_fwd.hpp:
+/usr/include/boost/type_traits/detail/has_prefix_operator.hpp:
 
-/usr/include/boost/random/hyperexponential_distribution.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h:
 
-/usr/include/boost/random/student_t_distribution.hpp:
+/usr/include/boost/multi_index/detail/do_not_copy_elements_tag.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Sphere_3.h:
+/usr/include/boost/preprocessor/seq/seq.hpp:
 
-/usr/include/boost/type_traits/remove_all_extents.hpp:
+/usr/include/boost/variant/detail/hash_variant.hpp:
+
+/usr/include/boost/preprocessor/seq/elem.hpp:
+
+/usr/include/boost/graph/named_graph.hpp:
+
+/usr/include/boost/preprocessor/seq/enum.hpp:
+
+/usr/include/boost/concept/detail/concept_undef.hpp:
+
+/usr/include/boost/random/detail/const_mod.hpp:
+
+/usr/include/boost/range/detail/has_member_size.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/number_type_config.h:
+
+/usr/include/boost/utility/base_from_member.hpp:
+
+/usr/include/boost/utility/binary.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/mod.hpp:
+
+/usr/include/boost/random/bernoulli_distribution.hpp:
+
+/usr/include/boost/preprocessor/comparison/less_equal.hpp:
+
+/usr/include/boost/preprocessor/logical/not.hpp:
+
+/usr/include/boost/mpl/aux_/push_back_impl.hpp:
+
+/usr/include/boost/utility/identity_type.hpp:
+
+/usr/include/boost/type_traits/make_void.hpp:
 
 /usr/include/boost/random/laplace_distribution.hpp:
 
@@ -6441,15 +7077,21 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/random/uniform_real_distribution.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/LineH2.h:
-
 /usr/include/boost/range/rbegin.hpp:
 
 /usr/include/boost/random/uniform_real.hpp:
 
+/usr/include/boost/random/student_t_distribution.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Line_2.h:
+
+/usr/include/boost/mpl/set/aux_/clear_impl.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/boost/random/triangle_distribution.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/DirectionH2.h:
 
 /usr/include/c++/9/ext/atomicity.h:
 
@@ -6457,667 +7099,877 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/random/uniform_int.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Circle_2.h:
-
 /usr/include/boost/random/uniform_on_sphere.hpp:
 
 /usr/include/boost/random/uniform_smallint.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h:
+
 /usr/include/boost/random/weibull_distribution.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hash_map/internal/chained_map.h:
+/usr/include/c++/9/iomanip:
 
-/home/toler/CGAL-5.5.2/include/CGAL/predicates/sign_of_determinant.h:
+/home/toler/CGAL-5.6/include/CGAL/predicates/sign_of_determinant.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Ray_2.h:
+/home/toler/CGAL-5.6/include/CGAL/constructions/kernel_ftC2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Segment_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Ray_2.h:
 
-/usr/include/boost/parameter/aux_/pack/as_parameter_requirements.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_2.h:
+/usr/include/boost/numeric/conversion/detail/int_float_mixture.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_2.h:
+/usr/include/boost/config/detail/select_platform_config.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Circle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Iso_rectangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Handle_for_virtual.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h:
-
-/usr/include/boost/random/uniform_int_distribution.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Rotation_rep_2.h:
-
-/usr/include/boost/type_traits/detail/has_postfix_operator.hpp:
-
-/usr/include/boost/type_traits/is_signed.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/rational_rotation.h:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Data_accessor_2.h:
-
-/usr/include/boost/random/fisher_f_distribution.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/extended_euclidean_algorithm.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ConicCPA2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/line_constructions_2.h:
-
-/usr/include/boost/type_traits/has_trivial_move_constructor.hpp:
-
-/usr/include/boost/optional.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Vector_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Direction_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/constructions/kernel_ftC3.h:
-
-/usr/include/c++/9/bits/locale_classes.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Line_3.h:
-
-/usr/include/boost/preprocessor/control/expr_iif.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Multiscale_sort.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Plane_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/solve.h:
-
-/usr/include/c++/9/bits/unique_lock.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kd_tree_rectangle.h:
-
-/usr/include/boost/preprocessor/facilities/is_empty.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/plane_constructions_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/predicates_on_points_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/array.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Aff_transformation_rep_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_3.h:
-
-/usr/include/boost/fusion/mpl/pop_front.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/basic_constructions_3.h:
-
-/usr/include/boost/fusion/view/joint_view/detail/next_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/ft_constructions_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/function_objects.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_primitive.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/function_objects.h:
-
-/usr/include/boost/mpl/remove.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Line_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Segment_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/internal/squared_distance_utils_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_with_info_2.h:
-
-/usr/include/boost/predef/compiler/clang.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Ray_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Line_2.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h:
-
-/usr/include/boost/fusion/support/sequence_base.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Point_2_Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Line_2.h:
-
-/usr/include/boost/type_traits/has_new_operator.hpp:
-
-/usr/include/boost/parameter/aux_/result_of0.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Segment_2_Triangle_2.h:
-
-/usr/include/boost/fusion/view/single_view/detail/equal_to_impl.hpp:
-
-/usr/include/c++/9/bits/atomic_lockfree_defines.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Ray_2.h:
-
-/usr/include/boost/fusion/sequence/intrinsic/segments.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Ray_2_Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Line_2_Triangle_2.h:
-
-/usr/include/boost/type_traits/decay.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Sphere_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_2/Triangle_2_Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/internal/squared_distance_utils_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/ExprRep.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h:
-
-/usr/include/boost/intrusive/detail/minimal_less_equal_header.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Line_3.h:
-
-/usr/include/boost/intrusive/pointer_rebind.hpp:
-
-/usr/include/boost/random/detail/generator_seed_seq.hpp:
-
-/usr/include/boost/preprocessor/arithmetic/sub.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Plane_3.h:
-
-/usr/include/boost/move/algo/detail/heap_sort.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polygon_mesh.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Segment_3.h:
-
-/usr/include/boost/algorithm/clamp.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/Surface_mesh_fwd.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Segment_3_Line_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Plane_3.h:
-
-/usr/include/boost/predef/compiler/gcc_xml.h:
-
-/usr/include/c++/9/ext/concurrence.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Modular_traits.h:
-
-/usr/include/boost/fusion/mpl/size.hpp:
-
-/usr/include/boost/predef/library/std/roguewave.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/divides.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Line_3.h:
-
-/usr/include/boost/multiprecision/detail/default_ops.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Line_3_Plane_3.h:
-
-/usr/include/boost/predef/architecture/mips.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Plane_3_Plane_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Time_stamper.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp_impl.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Origin_impl.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Line_2.h:
-
-/usr/include/boost/type_traits/common_type.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Bbox_2_Ray_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Circle_2.h:
-
-/usr/include/boost/fusion/algorithm/iteration/detail/segmented_for_each.hpp:
-
-/usr/include/boost/fusion/adapted/boost_tuple/detail/size_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Line_2.h:
-
-/usr/include/boost/range/detail/safe_bool.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Ray_2.h:
-
-/usr/include/boost/mpl/aux_/has_type.hpp:
-
-/usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Point_2.h:
-
-/usr/include/boost/preprocessor/repetition/enum_binary_params.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h:
-
-/usr/include/boost/detail/numeric_traits.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Circle_2_Ray_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/generic_copy_OFF.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Ray_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Line_2_Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Point_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Segment_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Point_2_Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Ray_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Ray_2_Triangle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Origin.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/Segment_2_Triangle_2.h:
-
-/usr/include/boost/fusion/container/list/detail/value_of_impl.hpp:
-
-/usr/include/c++/9/bits/ostream_insert.h:
-
-/usr/include/boost/parameter/aux_/preprocessor/qualifier.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/io_tags.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/intersection_3.h:
-
-/usr/include/c++/9/bits/basic_ios.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h:
-
-/usr/include/boost/math/special_functions/detail/fp_traits.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h:
-
-/usr/include/c++/9/bits/invoke.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/kernel_basic.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OI/File_writer_inventor.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/K_neighbor_search.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h:
-
-/usr/include/boost/random/random_number_generator.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/intersections.h:
-
-/usr/include/boost/fusion/container/list/cons_iterator.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/utility.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Point_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h:
-
-/usr/include/boost/unordered/unordered_map_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Dummy_tds_2.h:
-
-/usr/include/boost/mpl/and.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
-
-/usr/include/boost/mpl/vector/aux_/pop_back.hpp:
-
-/usr/include/boost/math/special_functions/log1p.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h:
-
-/usr/include/boost/utility/addressof.hpp:
-
-/usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp:
-
-/usr/include/boost/type_traits/is_list_constructible.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/double.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h:
-
-/usr/include/boost/fusion/container/list/detail/empty_impl.hpp:
-
-/usr/include/boost/mpl/distance_fwd.hpp:
-
-/usr/include/boost/type_traits/is_fundamental.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VTK.h:
-
-/usr/include/boost/core/addressof.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h:
-
-/usr/include/boost/preprocessor/logical/bool.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/PLY/PLY_reader.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Line_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h:
-
-/usr/include/boost/mpl/aux_/push_back_impl.hpp:
-
-/usr/include/boost/utility/identity_type.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h:
-
-/usr/include/boost/type_traits/has_unary_plus.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Sphere_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h:
-
-/usr/include/boost/predef/architecture/x86/32.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/license/Spatial_searching.h:
-
-/usr/include/boost/predef/compiler/borland.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_structural_filtering_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h:
-
-/usr/include/boost/type_traits/is_nothrow_move_constructible.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h:
-
-/usr/include/boost/fusion/container/vector/vector_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h:
-
-/usr/include/boost/mpl/logical.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h:
-
-/usr/include/c++/9/bits/stl_pair.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Segment_3.h:
-
-/usr/include/boost/math/special_functions/sqrt1pm1.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h:
-
-/usr/include/boost/fusion/view/transform_view/detail/value_at_impl.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Triangle_3.h:
-
-/usr/include/c++/9/bits/shared_ptr.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/mutex.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/value_type_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Point_3.h:
-
-/usr/include/boost/mpl/less.hpp:
-
-/usr/include/boost/variant/bad_visit.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Homogeneous_base.h:
-
-/usr/include/boost/mpl/pair.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Segment_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Point_3_Triangle_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Plane_3_Point_3.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Segment_3.h:
-
-/usr/include/boost/mpl/integral_c_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h:
-
-/usr/include/boost/multiprecision/detail/generic_interconvert.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_circulators_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Triangle_3.h:
-
-/usr/include/boost/mpl/aux_/msvc_never_true.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Segment_3_Triangle_3.h:
-
-/usr/include/boost/type_traits/is_unsigned.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h:
-
-/usr/include/boost/multiprecision/gmp.hpp:
-
-/usr/include/boost/fusion/sequence/intrinsic/has_key.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h:
-
-/usr/include/boost/multiprecision/traits/is_variable_precision.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Triangle_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path/barycentric.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Type_equality_wrapper.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/interface_macros.h:
-
-/usr/include/boost/move/core.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_predicate.h:
-
-/usr/include/boost/parameter/aux_/arg_list.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian_converter.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian_converter_fwd.h:
-
-/usr/include/boost/predef/version.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Enum_converter.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/Type_mapper.h:
-
-/usr/include/boost/core/empty_value.hpp:
-
-/usr/include/boost/mpl/aux_/arg_typedef.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel/global_functions_internal_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Exact_kernel_selector.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Simple_homogeneous.h:
-
-/usr/include/boost/mpl/minus.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Aff_transformationH2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/DirectionH2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h:
-
-/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/predicates_on_pointsH2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_rectangleH2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Weighted_point_2.h:
-
-/usr/include/boost/mp11/integer_sequence.hpp:
-
-/usr/include/boost/container/detail/is_container.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Data_accessorH2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/ConicHPA2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/Iso_cuboidH3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PointH3.h:
-
-/usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH2.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/basic_constructionsH3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Interval_arithmetic.h:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h:
-
-/usr/include/boost/math/special_functions/detail/igamma_large.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension_fwd.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h:
-
-/usr/include/boost/preprocessor/facilities/detail/is_empty.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/VectorH2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Scalar_factor_traits.h:
-
-/usr/include/boost/math/tools/rational.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Chinese_remainder_traits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cache.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/Eigen_NumTraits.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/MP_Float_impl.h:
-
-/usr/include/boost/predef.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/min_max_n.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Default.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/tuple.h:
-
-/usr/include/boost/math/special_functions/hypot.hpp:
+/home/toler/CGAL-5.6/include/CGAL/license/Spatial_searching.h:
 
 /usr/include/boost/multiprecision/detail/functions/constants.hpp:
 
+/usr/include/boost/predef/compiler/nvcc.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/INP.h:
+
+/usr/include/boost/parameter/aux_/pack/make_parameter_spec_items.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_rep_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/license/Triangulation_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Translation_rep_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/rational_rotation.h:
+
+/usr/include/boost/fusion/algorithm/iteration/fold_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Reflection_rep_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Data_accessor_2.h:
+
+/usr/include/boost/preprocessor/tuple/eat.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/ConicCPA2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_directions_2.h:
+
+/usr/include/boost/random/fisher_f_distribution.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/basic_constructions_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/point_constructions_2.h:
+
+/usr/include/boost/parameter/aux_/pack/tag_type.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/ft_constructions_2.h:
+
+/usr/include/boost/type_traits/has_bit_or.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Point_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Weighted_point_3.h:
+
+/usr/include/c++/9/bits/stl_tempbuf.h:
+
+/home/toler/CGAL-5.6/include/CGAL/hilbert_sort.h:
+
+/usr/include/boost/indirect_reference.hpp:
+
+/usr/include/boost/mpl/aux_/numeric_op.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Direction_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_structural_filtering_traits.h:
+
+/usr/include/boost/parameter/required.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/constructions/kernel_ftC3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Plane_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/plane_constructions_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Ray_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Segment_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Triangle_3.h:
+
+/usr/include/boost/mpl/set/aux_/item.hpp:
+
+/usr/include/boost/multiprecision/cpp_int/add.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Hilbert_policy_tags.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Tetrahedron_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Iso_cuboid_3.h:
+
+/usr/include/boost/mpl/vector/vector20.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_utils_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Circle_3.h:
+
+/usr/include/boost/detail/reference_content.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_rep_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Translation_rep_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/point_constructions_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/ft_constructions_3.h:
+
+/usr/include/boost/container/detail/destroyers.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/function_objects.h:
+
+/usr/include/boost/integer_traits.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/function_objects.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/wmult.h:
+
+/usr/include/boost/type_traits/is_compound.hpp:
+
+/usr/include/boost/mpl/aux_/value_wknd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/intersections.h:
+
+/usr/include/boost/lambda/detail/member_ptr.hpp:
+
+/usr/include/boost/preprocessor/seq/remove.hpp:
+
+/usr/include/boost/fusion/container/list/cons.hpp:
+
+/usr/include/boost/container/detail/is_contiguous_container.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Line_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/Scanner_OFF.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Triangle_2.h:
+
+/usr/include/boost/fusion/algorithm/query/find.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Line_2_Line_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Triangle_2_Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Point_3.h:
+
+/usr/include/c++/9/bits/stl_deque.h:
+
+/usr/include/boost/shared_ptr.hpp:
+
+/usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h:
+
+/usr/include/boost/none_t.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Weighted_point_3.h:
+
+/usr/include/boost/type_traits/has_nothrow_destructor.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Segment_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/internal/squared_distance_utils_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Triangle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h:
+
+/usr/include/boost/heap/heap_concepts.hpp:
+
+/usr/include/boost/algorithm/clamp.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Ray_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Plane_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Line_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Line_3_Line_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_2/Polygon_2_simplicity.h:
+
+/home/toler/CGAL-5.6/include/CGAL/intersection_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Circle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Direction_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/double.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h:
+
+/usr/include/boost/numeric/conversion/cast.hpp:
+
+/usr/include/boost/move/detail/fwd_macros.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Point_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Ray_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Segment_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE_BigRat.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Ray_2.h:
+
+/usr/include/boost/multiprecision/traits/is_byte_container.hpp:
+
+/usr/include/boost/fusion/adapted/mpl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/predicates_on_points_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Segment_2_Segment_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Ray_2.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/not_equal_to.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Triangle_2.h:
+
+/usr/include/boost/mpl/push_front_fwd.hpp:
+
+/usr/include/boost/predef/language/stdcpp.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersection_traits.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Point_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Ray_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Line_2.h:
+
+/usr/include/boost/parameter/aux_/lambda_tag.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Ray_2.h:
+
+/usr/include/boost/move/detail/iterator_to_raw_pointer.hpp:
+
+/usr/include/boost/move/algo/detail/set_difference.hpp:
+
+/usr/include/c++/9/bits/locale_facets.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Segment_2.h:
+
+/usr/include/c++/9/bits/functexcept.h:
+
+/usr/include/boost/intrusive/detail/mpl.hpp:
+
+/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin.hpp:
+
+/usr/include/boost/type_traits/has_divides_assign.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Segment_2_Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h:
+
+/usr/include/boost/dynamic_bitset/dynamic_bitset.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/intersection_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp:
+
+/usr/include/boost/mp11/detail/mp_min_element.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Line_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_member_visited.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h:
+
+/usr/include/boost/preprocessor/punctuation/comma_if.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h:
+
+/usr/include/c++/9/bits/atomic_base.h:
+
+/usr/include/boost/mp11/integral.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_ray_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/utility.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Point_3.h:
+
+/usr/include/boost/optional/detail/optional_swap.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/MP_Float_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/GMP_arithmetic_kernel.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Plane_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/license/AABB_tree.h:
+
+/usr/include/boost/preprocessor/list/for_each.hpp:
+
+/usr/include/boost/mpl/protect.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h:
+
+/usr/include/boost/move/detail/config_end.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/extended_euclidean_algorithm.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h:
+
+/usr/include/boost/mpl/not.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO/OFF.h:
+
+/usr/include/boost/fusion/container/list/detail/end_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h:
+
+/usr/include/boost/range/empty.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h:
+
+/usr/include/boost/type_traits/has_trivial_move_constructor.hpp:
+
+/usr/include/boost/type_traits/conditional.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h:
+
+/usr/include/boost/preprocessor/seq/for_each_i.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Random_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Segment_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/function_objects.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/boost/random/uniform_01.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h:
+
+/usr/include/boost/fusion/algorithm/iteration/detail/segmented_fold.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/distance_predicatesH3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h:
+
+/usr/include/boost/math/tools/convert_from_string.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h:
+
+/usr/include/boost/lexical_cast/detail/is_character.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/basic_constructionsH3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/io.h:
+
+/usr/include/boost/fusion/view/iterator_range/detail/begin_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h:
+
+/usr/include/boost/preprocessor/variadic.hpp:
+
+/usr/include/boost/fusion/support/detail/mpl_iterator_category.hpp:
+
+/usr/include/boost/detail/lcast_precision.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Plane_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Point_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/OBJ.h:
+
+/usr/include/boost/mpl/sequence_tag_fwd.hpp:
+
+/usr/include/boost/random/detail/seed_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Ray_3.h:
+
+/usr/include/boost/predef/compiler/intel.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h:
+
+/usr/include/boost/type_traits/object_traits.hpp:
+
+/usr/include/boost/math/special_functions/sin_pi.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Segment_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous_converter.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h:
+
+/usr/include/boost/config/no_tr1/complex.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h:
+
+/usr/include/boost/predef/make.h:
+
+/usr/include/c++/9/bits/stl_map.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Triangle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h:
+
+/usr/include/boost/lambda/detail/function_adaptors.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Constrained_triangulation_face_base_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h:
+
+/usr/include/c++/9/clocale:
+
+/usr/include/boost/integer/static_log2.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Point_3.h:
+
+/usr/include/boost/preprocessor/logical/bitnor.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/K_neighbor_search.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_scanner_OFF.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Triangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Ray_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h:
+
+/usr/include/c++/9/bits/stl_uninitialized.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Sphere_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/ExprRep.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h:
+
+/usr/include/boost/multi_index/detail/archive_constructed.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Triangle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost_mp.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Point_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_traversal_traits.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h:
+
+/usr/include/boost/multi_index/detail/base_type.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h:
+
+/usr/include/boost/preprocessor/logical/bitand.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Segment_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Sphere_3.h:
+
+/usr/include/boost/serialization/void_cast_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/export/CORE.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Circle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h:
+
+/usr/include/boost/fusion/adapted/mpl/detail/is_sequence_impl.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Triangle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Segment_3.h:
+
+/usr/include/boost/mpl/front_inserter.hpp:
+
+/usr/include/boost/type_traits/detail/bool_trait_undef.hpp:
+
+/usr/include/boost/lambda/core.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h:
+
+/usr/include/boost/parameter/aux_/void.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Sphere_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h:
+
+/usr/include/boost/fusion/algorithm/transformation/erase_key.hpp:
+
+/usr/include/asm-generic/errno-base.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Triangle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Point_2_Line_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h:
+
+/usr/include/boost/mpl/integral_c_tag.hpp:
+
+/usr/include/boost/math/constants/calculate_constants.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h:
+
+/usr/include/boost/multiprecision/cpp_int/checked.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h:
+
+/usr/include/boost/type_traits/has_plus_assign.hpp:
+
+/usr/include/boost/type_traits/has_minus.hpp:
+
+/usr/include/boost/iterator/advance.hpp:
+
+/usr/include/boost/move/algorithm.hpp:
+
+/usr/include/boost/iterator/reverse_iterator.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/Type_equality_wrapper.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/interface_macros.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel_fwd.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Segment_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/barycentric.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian_converter.h:
+
+/usr/include/boost/preprocessor/control/detail/while.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/NT_converter.h:
+
+/usr/include/boost/mpl/aux_/inserter_algorithm.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/Type_mapper.h:
+
+/usr/include/boost/multiprecision/cpp_int/serialize.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Aff_transformationH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/PointH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/LineH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Data_accessorH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE_Expr.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/ConicHPA2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/GMP/Gmpzf_type.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/DirectionH3.h:
+
+/usr/include/boost/container/detail/next_capacity.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Iso_cuboidH3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/SphereH3.h:
+
+/usr/include/boost/graph/detail/set_adaptor.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/basic_constructionsH2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Sqrt_extension_type.h:
+
+/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_end.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension_fwd.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h:
+
+/usr/include/boost/mpl/aux_/preprocessor/repeat.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Real_embeddable_traits.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Coercion_traits.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Modular_traits.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Chinese_remainder_traits.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/convert_to_bfi.h:
+
+/home/toler/CGAL-5.6/include/CGAL/convert_to_bfi.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Wang_traits.h:
+
+/usr/include/boost/preprocessor/comparison/greater.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO.h:
+
+/home/toler/CGAL-5.6/include/CGAL/MP_Float_arithmetic_kernel.h:
+
+/usr/include/boost/multi_index/tag.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Lazy_exact_nt.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Default.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h:
+
+/usr/include/c++/9/mutex:
+
+/usr/include/boost/multi_index/ordered_index_fwd.hpp:
+
+/usr/include/boost/multi_index/detail/vartempl_support.hpp:
+
+/usr/include/boost/parameter/aux_/preprocessor/is_binary.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/predicates/kernel_ftC3.h:
+
+/usr/include/c++/9/bits/unique_lock.h:
+
+/usr/include/boost/preprocessor/facilities/is_empty.hpp:
+
+/usr/include/boost/container/detail/flat_tree.hpp:
+
+/usr/include/boost/type_traits/is_complex.hpp:
+
+/usr/include/boost/type_traits/has_right_shift.hpp:
+
+/usr/include/boost/parameter/aux_/pack/deduced_item.hpp:
+
+/usr/include/boost/multiprecision/detail/precision.hpp:
+
+/usr/include/boost/range/functions.hpp:
+
+/usr/include/boost/mpl/count_fwd.hpp:
+
+/usr/include/boost/fusion/algorithm/transformation/push_back.hpp:
+
+/usr/include/boost/lexical_cast.hpp:
+
+/usr/include/boost/predef/os/aix.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Plane_3.h:
+
+/usr/include/boost/range/distance.hpp:
+
+/usr/include/boost/math/special_functions/detail/lanczos_sse2.hpp:
+
+/usr/include/boost/range/algorithm/equal.hpp:
+
+/usr/include/boost/optional/detail/optional_trivially_copyable_base.hpp:
+
+/usr/include/boost/lexical_cast/bad_lexical_cast.hpp:
+
+/usr/include/boost/predef/compiler/ekopath.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h:
+
+/usr/include/boost/lexical_cast/try_lexical_convert.hpp:
+
+/usr/include/boost/mpl/pair_view.hpp:
+
+/usr/include/boost/lexical_cast/detail/converter_numeric.hpp:
+
+/usr/include/boost/fusion/adapted/boost_tuple/detail/at_impl.hpp:
+
+/usr/include/boost/intrusive/pack_options.hpp:
+
+/usr/include/boost/type_traits/is_float.hpp:
+
+/usr/include/c++/9/bits/ptr_traits.h:
+
+/usr/include/boost/unordered/detail/implementation.hpp:
+
+/usr/include/boost/numeric/conversion/converter.hpp:
+
+/usr/include/boost/numeric/conversion/detail/meta.hpp:
+
+/usr/include/boost/fusion/iterator/detail/segmented_next_impl.hpp:
+
+/usr/include/boost/random/beta_distribution.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_3.h:
+
+/usr/include/boost/parameter/aux_/is_maybe.hpp:
+
+/usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
+
+/usr/include/boost/predef/hardware/simd/ppc/versions.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/Expr_impl.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/less_equal.hpp:
+
+/usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
+
+/usr/include/boost/numeric/conversion/detail/udt_builtin_mixture.hpp:
+
+/usr/include/boost/preprocessor/facilities/apply.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h:
+
+/usr/include/boost/numeric/conversion/detail/is_subranged.hpp:
+
+/usr/include/boost/mpl/multiplies.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:
+
+/usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp:
+
+/usr/include/boost/mpl/aux_/config/adl.hpp:
+
+/usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
+
+/usr/include/boost/dynamic_bitset/config.hpp:
+
+/usr/include/boost/math/special_functions/atanh.hpp:
+
+/usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
+
+/usr/include/boost/lexical_cast/detail/converter_lexical.hpp:
+
+/usr/include/boost/multiprecision/detail/no_et_ops.hpp:
+
+/usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
+
+/usr/include/boost/noncopyable.hpp:
+
+/usr/include/boost/fusion/sequence/intrinsic/detail/segmented_begin_impl.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
+
+/usr/include/boost/lexical_cast/detail/inf_nan.hpp:
+
+/usr/include/boost/multiprecision/detail/generic_interconvert.hpp:
+
+/usr/include/boost/math/special_functions/hypot.hpp:
+
 /usr/include/boost/multiprecision/detail/functions/pow.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_2.h:
 
 /usr/include/boost/multiprecision/detail/et_ops.hpp:
 
@@ -7133,33 +7985,21 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/multiprecision/detail/ublas_interop.hpp:
 
-/usr/include/boost/random/geometric_distribution.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_face_base_2.h:
 
-/usr/include/boost/multiprecision/detail/integer_ops.hpp:
+/usr/include/boost/type_traits/common_type.hpp:
 
-/usr/include/boost/multiprecision/detail/rebind.hpp:
+/usr/include/boost/core/empty_value.hpp:
 
 /usr/include/boost/multiprecision/rational_adaptor.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h:
 
 /usr/include/boost/integer/common_factor_rt.hpp:
 
 /usr/include/boost/mpl/advance.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Search_traits_3.h:
-
 /usr/include/boost/type_traits/make_signed.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Scaling_rep_2.h:
-
-/usr/include/boost/multiprecision/cpp_int/checked.hpp:
-
-/usr/include/boost/multiprecision/cpp_int/add.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_segment_traverser_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Point_3.h:
 
 /usr/include/boost/multiprecision/cpp_int/multiply.hpp:
 
@@ -7169,11 +8009,13 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/fusion/mpl/insert.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/Aff_transformationH3.h:
+
 /usr/include/boost/multiprecision/cpp_int/bitwise.hpp:
 
 /usr/include/boost/multiprecision/cpp_int/misc.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sqrt_extension/convert_to_bfi.h:
+/home/toler/CGAL-5.6/include/CGAL/Real_embeddable_traits.h:
 
 /usr/include/boost/multiprecision/detail/bitscan.hpp:
 
@@ -7181,7 +8023,11 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/container/detail/placement_new.hpp:
 
+/usr/include/boost/serialization/tracking.hpp:
+
 /usr/include/boost/multiprecision/cpp_int/limits.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Bigfloat_interval_traits.h:
 
 /usr/include/boost/container_hash/detail/float_functions.hpp:
 
@@ -7189,33 +8035,37 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/lambda/detail/operator_return_type_traits.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h:
-
-/usr/include/boost/multiprecision/cpp_int/serialize.hpp:
-
 /usr/include/boost/multiprecision/debug_adaptor.hpp:
 
 /usr/include/boost/multiprecision/traits/extract_exponent_type.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Line_3.h:
+/usr/include/boost/preprocessor/cat.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/CoreAux.h:
+
+/usr/include/boost/graph/detail/edge.hpp:
 
 /usr/include/boost/math/tools/big_constant.hpp:
 
-/usr/include/boost/range/algorithm/equal.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/Cone_tree.h:
 
-/usr/include/boost/math/special_functions/detail/lanczos_sse2.hpp:
+/usr/include/boost/math/special_functions/sqrt1pm1.hpp:
 
-/usr/include/boost/mpl/integral_c_tag.hpp:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h:
 
-/usr/include/boost/math/constants/calculate_constants.hpp:
+/usr/include/boost/preprocessor/array/detail/get_data.hpp:
 
 /usr/include/boost/math/special_functions/acosh.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h:
+
+/usr/include/boost/math/special_functions/detail/igamma_large.hpp:
+
+/usr/include/boost/multi_index/detail/is_transparent.hpp:
 
 /usr/include/boost/math/special_functions/bernoulli.hpp:
 
 /usr/include/boost/math/special_functions/detail/unchecked_bernoulli.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/circulator.h:
 
 /usr/include/boost/detail/is_incrementable.hpp:
 
@@ -7227,10 +8077,6 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/smart_ptr/bad_weak_ptr.hpp:
 
-/usr/include/boost/predef/architecture/sparc.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h:
-
 /usr/include/boost/math/tools/atomic.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
@@ -7241,113 +8087,61 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/math/special_functions/factorials.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_face_base_2.h:
-
-/usr/include/boost/container/detail/version_type.hpp:
-
-/usr/include/boost/math/tools/roots.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Quotient.h:
 
 /usr/include/boost/math/special_functions/detail/gamma_inva.hpp:
 
 /usr/include/boost/range/value_type.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/distance_predicatesH2.h:
-
 /usr/include/boost/math/special_functions/erf.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Line_3_Segment_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Gmpz.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpzf_type.h:
+/usr/include/boost/predef/os/cygwin.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Real.h:
+/home/toler/CGAL-5.6/include/CGAL/GMP/Gmpz_type.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/GMP/Gmpfr_type.h:
+/usr/include/boost/type_traits/has_bit_and.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Mpzf.h:
+/home/toler/CGAL-5.6/include/CGAL/ipower.h:
 
-/usr/include/boost/random.hpp:
+/home/toler/CGAL-5.6/include/CGAL/GMP/Gmpfr_type_static.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h:
+/home/toler/CGAL-5.6/include/CGAL/Gmpq.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Gmpzf.h:
 
-/usr/include/boost/fusion/support/detail/is_native_fusion_sequence.hpp:
+/usr/include/boost/parameter/aux_/pack/make_deduced_items.hpp:
 
-/usr/include/c++/9/bits/erase_if.h:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h:
 
-/usr/include/boost/iterator/zip_iterator.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h:
 
-/usr/include/boost/intrusive/detail/has_member_function_callable_with.hpp:
+/home/toler/CGAL-5.6/include/CGAL/CORE/CoreDefs_impl.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/Verbose_ostream.h:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h:
 
-/usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree.h:
+/home/toler/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kd_tree.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h:
-
-/usr/include/boost/parameter/aux_/lambda_tag.hpp:
-
-/usr/include/boost/range/iterator.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Gmpq.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h:
-
-/usr/include/boost/mpl/aux_/advance_backward.hpp:
-
-/usr/include/boost/blank_fwd.hpp:
-
-/usr/include/boost/container/new_allocator.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/STL_Extension/internal/parameters_interface.h:
-
-/usr/include/boost/mpl/bind.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/helpers.h:
-
-/usr/include/boost/fusion/iterator/deref.hpp:
-
-/usr/include/boost/intrusive/detail/algorithm.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h:
-
-/usr/include/boost/preprocessor/repetition/enum.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h:
+/home/toler/CGAL-5.6/include/CGAL/rank.h:
 
 /usr/include/boost/type_traits.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/function_objects.h:
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/RayH3.h:
 
-/usr/include/boost/type_traits/has_bit_and.hpp:
+/usr/include/boost/type_traits/extent.hpp:
 
 /usr/include/boost/numeric/conversion/detail/conversion_traits.hpp:
 
 /usr/include/boost/type_traits/has_bit_and_assign.hpp:
-
-/usr/include/boost/type_traits/has_bit_or.hpp:
 
 /usr/include/boost/type_traits/has_bit_xor.hpp:
 
@@ -7355,21 +8149,19 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/has_complement.hpp:
 
+/usr/include/boost/type_traits/has_equal_to.hpp:
+
 /usr/include/boost/type_traits/has_greater_equal.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/locate.h:
 
 /usr/include/boost/type_traits/has_less.hpp:
 
-/usr/include/boost/type_traits/has_less_equal.hpp:
-
-/usr/include/boost/type_traits/has_logical_or.hpp:
+/usr/include/boost/mpl/aux_/config/compiler.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/usr/include/boost/mpl/aux_/config/compiler.hpp:
-
 /usr/include/boost/type_traits/has_modulus.hpp:
-
-/usr/include/boost/type_traits/has_modulus_assign.hpp:
 
 /usr/include/boost/type_traits/has_multiplies.hpp:
 
@@ -7377,7 +8169,13 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/has_multiplies_assign.hpp:
 
+/usr/include/boost/type_traits/has_new_operator.hpp:
+
 /usr/include/boost/type_traits/has_not_equal_to.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_ds_vertex_base_3.h:
+
+/usr/include/boost/type_traits/detail/has_postfix_operator.hpp:
 
 /usr/include/boost/type_traits/has_pre_decrement.hpp:
 
@@ -7385,21 +8183,13 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/type_traits/has_unary_minus.hpp:
 
-/usr/include/boost/type_traits/is_compound.hpp:
-
 /usr/include/boost/type_traits/is_copy_assignable.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Triangle_3.h:
-
 /usr/include/boost/type_traits/is_noncopyable.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h:
 
 /usr/include/boost/type_traits/is_final.hpp:
 
 /usr/include/boost/type_traits/is_member_object_pointer.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Modular_arithmetic/Residue_type.h:
 
 /usr/include/boost/type_traits/is_object.hpp:
 
@@ -7407,115 +8197,77 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/variant/recursive_variant.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_OFF_impl.h:
+
 /usr/include/boost/type_traits/is_polymorphic.hpp:
 
 /usr/include/boost/type_traits/integral_promotion.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Ray_3.h:
 
 /usr/include/boost/iterator/distance.hpp:
 
 /usr/include/boost/type_traits/promote.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/OFF.h:
+/home/toler/CGAL-5.6/include/CGAL/Converting_construction.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h:
+/home/toler/CGAL-5.6/include/CGAL/Installation/internal/enable_third_party_libraries.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreDefs.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/CoreIO_impl.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/extLong.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Impl.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Is_trivial_construction.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h:
+/usr/include/boost/fusion/adapted/mpl/detail/empty_impl.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Config.h:
+/home/toler/CGAL-5.6/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Sphere_3.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE_coercion_traits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/MemoryPool.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/CORE.h:
 
-/usr/include/boost/fusion/view/transform_view/detail/deref_impl.hpp:
+/usr/include/boost/fusion/sequence/intrinsic/at_c.hpp:
 
-/usr/include/boost/mpl/remove_if.hpp:
+/usr/include/boost/lambda/detail/arity_code.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/CoreAux_impl.h:
+/usr/include/boost/heap/heap_merge.hpp:
 
-/usr/include/boost/math/tools/detail/polynomial_horner3_20.hpp:
+/home/toler/CGAL-5.6/include/CGAL/CORE/extLong.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Expr.h:
+/usr/include/boost/predef/os/qnxnto.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigFloatRep.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/Impl.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/BigInt.h:
+/home/toler/CGAL-5.6/include/CGAL/Time_stamper.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h:
+/home/toler/CGAL-5.6/include/CGAL/auto_link/CORE.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Gmp.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/VTK/VTK_reader.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/RefCount.h:
+/usr/include/boost/fusion/sequence/comparison/enable_comparison.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Real_impl.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/MemoryPool.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Filter.h:
+/usr/include/boost/mpl/apply.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CC_safe_handle.h:
+/usr/include/boost/lambda/detail/lambda_functor_base.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE_BigInt.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE_BigRat.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/CoreAux_impl.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/squared_distance_3.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/extLong_impl.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/Expr.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE_arithmetic_kernel.h:
+/usr/include/boost/predef/architecture/m68k.h:
 
-/usr/include/c++/9/bits/vector.tcc:
+/home/toler/CGAL-5.6/include/CGAL/Has_timestamp.h:
 
-/usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/BigRat.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/3MF.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/3MF/read_3mf.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Container_helper.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Has_member.h:
-
-/usr/include/boost/fusion/support/void.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/long_long.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/iterator.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/TDS_3/internal/Dummy_tds_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h:
-
-/usr/include/boost/move/detail/placement_new.hpp:
-
-/usr/include/boost/graph/graph_traits.hpp:
-
-/usr/include/boost/pending/property.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Plane_3.h:
-
-/usr/include/boost/pending/detail/property.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Iterator_range.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/circulator_bases.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/OFF.h:
-
-/usr/include/boost/mpl/aux_/na.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_scanner_OFF.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/BigInt.h:
 
 /usr/include/boost/predef/library/std/stlport.h:
 
@@ -7523,27 +8275,95 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/container/small_vector.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Random.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/RefCount.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_writer_OFF.h:
+/usr/include/boost/predef/library/std/sgi.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/Generic_writer.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/Real.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h:
+/usr/include/boost/fusion/iterator/key_of.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/property_map.h:
+/home/toler/CGAL-5.6/include/CGAL/CORE/RealRep.h:
+
+/usr/include/wchar.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/Real_impl.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/poly/Sturm.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/poly/Poly.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/Promote.h:
+
+/usr/include/boost/math/tools/roots.hpp:
+
+/usr/include/boost/container/detail/version_type.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE/poly/Poly.tcc:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE_BigInt.h:
+
+/home/toler/CGAL-5.6/include/CGAL/CORE_arithmetic_kernel.h:
+
+/home/toler/CGAL-5.6/include/CGAL/use.h:
+
+/usr/include/boost/type_traits/has_post_decrement.hpp:
+
+/usr/include/time.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh.h:
+
+/usr/include/boost/mpl/aux_/has_apply.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/license/Surface_mesh.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh/Surface_mesh_fwd.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh/Surface_mesh.h:
+
+/usr/include/boost/numeric/conversion/sign_mixture_enum.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh/IO/3MF.h:
+
+/usr/include/boost/preprocessor/config/limits.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/3MF/read_3mf.h:
+
+/usr/include/boost/mpl/next_prior.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/3MF/write_3mf.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/helpers.h:
+
+/usr/include/boost/pending/property.hpp:
+
+/usr/include/boost/type_traits/has_nothrow_constructor.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Has_member.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/iterator.h:
+
+/usr/include/boost/graph/graph_traits.hpp:
+
+/usr/include/boost/pending/detail/property.hpp:
+
+/usr/include/boost/random/independent_bits.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Iterator_range.h:
+
+/home/toler/CGAL-5.6/include/CGAL/circulator_bases.h:
+
+/home/toler/CGAL-5.6/include/CGAL/iterator.h:
+
+/usr/include/boost/fusion/view/transform_view/detail/at_impl.hpp:
+
+/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:
 
 /usr/include/boost/property_map/property_map.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/basic.h:
-
 /usr/include/boost/property_map/vector_property_map.hpp:
-
-/usr/include/c++/9/bits/stl_deque.h:
-
-/usr/include/boost/shared_ptr.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/polygon_mesh_io.h:
 
 /usr/include/boost/type_traits/has_right_shift_assign.hpp:
 
@@ -7555,9 +8375,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/variant/detail/cast_storage.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE/Timer.h:
-
 /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h:
 
 /usr/include/boost/smart_ptr/detail/sp_counted_base_std_atomic.hpp:
 
@@ -7565,103 +8385,129 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp:
 
+/usr/include/boost/random/geometric_distribution.hpp:
+
+/usr/include/boost/multiprecision/detail/integer_ops.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/internal/Has_member_clear.h:
+
 /usr/include/boost/lambda/lambda.hpp:
 
 /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
 
 /usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
 
-/usr/include/boost/fusion/view/transform_view/detail/at_impl.hpp:
-
-/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h:
 
 /usr/include/boost/smart_ptr/detail/yield_k.hpp:
 
+/usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
+
 /usr/include/boost/iterator/counting_iterator.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Dynamic_property_map.h:
+/usr/include/boost/detail/numeric_traits.hpp:
 
-/usr/include/boost/graph/properties.hpp:
+/home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/mesh_option_classes.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_reader.h:
+/home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/parameters_interface.h:
 
-/usr/include/boost/graph/property_maps/constant_property_map.hpp:
+/usr/include/boost/parameter/aux_/result_of0.hpp:
 
-/usr/include/boost/mpl/pop_front.hpp:
+/home/toler/CGAL-5.6/include/CGAL/STL_Extension/internal/mesh_parameters_interface.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/File_header_extended_OFF.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/Euler_operations.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/helpers.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/Has_nested_type_Shared_data.h:
-
-/usr/include/boost/parameter/aux_/always_true_predicate.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/internal/Has_member_clear.h:
-
-/usr/include/boost/container/detail/config_begin.hpp:
-
-/usr/include/boost/container/detail/workaround.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h:
-
-/usr/include/boost/container/allocator_traits.hpp:
-
-/usr/include/boost/move/algo/detail/basic_op.hpp:
-
-/usr/include/boost/container/detail/mpl.hpp:
-
-/usr/include/c++/9/bits/functexcept.h:
-
-/usr/include/boost/intrusive/detail/mpl.hpp:
-
-/usr/include/boost/intrusive/detail/config_end.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polyline.h:
 
 /usr/include/boost/iterator/function_output_iterator.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/iterator/transform_iterator.hpp:
+/usr/include/boost/intrusive/detail/config_end.hpp:
 
-/usr/include/c++/9/algorithm:
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/binary_file_io.h:
+
+/usr/include/boost/dynamic_bitset_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_header_extended_OFF.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/OFF/File_writer_OFF.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/Generic_writer.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/properties.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian_converter_fwd.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Dynamic_property_map.h:
+
+/usr/include/boost/graph/properties.hpp:
+
+/usr/include/boost/graph/property_maps/constant_property_map.hpp:
+
+/usr/include/boost/type_traits/has_logical_or.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/Euler_operations.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/helpers.h:
+
+/home/toler/CGAL-5.6/include/CGAL/IO/Verbose_ostream.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh/Properties.h:
+
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/generators.h:
+
+/usr/include/boost/container/detail/config_begin.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/predicates_on_points_2.h:
+
+/usr/include/boost/container/detail/workaround.hpp:
+
+/usr/include/boost/container/allocator_traits.hpp:
 
 /usr/include/boost/type_traits/remove_extent.hpp:
+
+/usr/include/c++/9/algorithm:
 
 /usr/include/boost/container/detail/config_end.hpp:
 
 /usr/include/boost/container/detail/type_traits.hpp:
 
-/usr/include/boost/mpl/aux_/config/eti.hpp:
+/usr/include/boost/intrusive/pointer_rebind.hpp:
 
-/usr/include/boost/intrusive/pointer_traits.hpp:
+/usr/include/boost/mpl/aux_/advance_backward.hpp:
+
+/usr/include/boost/blank_fwd.hpp:
+
+/usr/include/boost/container/new_allocator.hpp:
 
 /usr/include/boost/container/throw_exception.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Interval_traits.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h:
 
 /usr/include/boost/container/detail/container_or_allocator_rebind.hpp:
 
 /usr/include/fenv.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h:
+/home/toler/CGAL-5.6/include/CGAL/export/helpers.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Iso_rectangle_2.h:
 
 /usr/include/boost/container/detail/copy_move_algo.hpp:
 
-/usr/include/boost/container/detail/iterators.hpp:
+/usr/include/boost/preprocessor/tuple.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/properties_Surface_mesh.h:
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/Has_nested_type_Shared_data.h:
+
+/usr/include/boost/container/detail/iterators.hpp:
 
 /usr/include/c++/9/backward/binders.h:
 
 /usr/include/boost/container/detail/value_init.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/ipower.h:
+/home/toler/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Ray_2.h:
 
 /usr/include/boost/intrusive/detail/reverse_iterator.hpp:
 
 /usr/include/boost/container/detail/variadic_templates_tools.hpp:
-
-/usr/include/boost/container/detail/next_capacity.hpp:
 
 /usr/include/boost/container/detail/value_functors.hpp:
 
@@ -7669,9 +8515,9 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/move/algo/detail/adaptive_sort_merge.hpp:
 
-/usr/include/boost/mpl/begin_end_fwd.hpp:
-
 /usr/include/boost/exception/exception.hpp:
+
+/usr/include/boost/mpl/begin_end_fwd.hpp:
 
 /usr/include/boost/parameter/aux_/unwrap_cv_reference.hpp:
 
@@ -7679,21 +8525,23 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/move/algo/detail/merge.hpp:
 
+/usr/include/boost/container/detail/mpl.hpp:
+
+/usr/include/boost/move/algo/detail/basic_op.hpp:
+
 /usr/include/boost/move/detail/destruct_n.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/RayH3.h:
-
 /usr/include/boost/move/algo/predicate.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h:
+
+/usr/include/boost/move/detail/placement_new.hpp:
+
+/usr/include/boost/move/algo/detail/heap_sort.hpp:
 
 /usr/include/boost/container_hash/extensions.hpp:
 
 /usr/include/boost/move/algo/unique.hpp:
-
-/usr/include/boost/move/detail/iterator_to_raw_pointer.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Translation_rep_2.h:
-
-/usr/include/boost/move/algo/detail/set_difference.hpp:
 
 /usr/include/boost/container/flat_map.hpp:
 
@@ -7701,13 +8549,19 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/intrusive/detail/minimal_pair_header.hpp:
 
+/usr/include/boost/preprocessor/list/at.hpp:
+
 /usr/include/boost/container/detail/is_sorted.hpp:
 
 /usr/include/boost/move/unique_ptr.hpp:
 
+/home/toler/CGAL-5.6/include/CGAL/IO/OBJ/File_writer_wavefront.h:
+
 /usr/include/boost/parameter/aux_/pack/make_items.hpp:
 
 /usr/include/boost/move/detail/unique_ptr_meta_utils.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Line_3.h:
 
 /usr/include/boost/move/default_delete.hpp:
 
@@ -7715,83 +8569,87 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/move/algo/detail/pdqsort.hpp:
 
-/usr/include/boost/preprocessor/facilities/intercept.hpp:
+/usr/include/boost/intrusive/detail/minimal_less_equal_header.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO/PLY.h:
+/home/toler/CGAL-5.6/include/CGAL/Uncertain.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/PLY.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/PLY.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h:
+/usr/include/boost/type_traits/is_rvalue_reference.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/GOCAD.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/PLY/PLY_reader.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/Triangulation_3.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/PLY/PLY_writer.h:
 
-/usr/include/boost/utility/detail/result_of_iterate.hpp:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh_features.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Weighted_point_3.h:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/3MF.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/Ray_3_Sphere_3.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/STL/STL_reader.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/INP.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/VTK.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/OBJ.h:
+/usr/include/boost/mpl/size_t.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OBJ.h:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/WRL.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OBJ/File_writer_wavefront.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/VRML.h:
 
-/usr/include/boost/mpl/vector/vector10.hpp:
+/home/toler/CGAL-5.6/include/CGAL/IO/VRML/File_writer_VRML_2.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/STL/STL_reader.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/VRML/VRML_2_ostream.h:
 
-/usr/include/boost/parameter/aux_/yesno.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Homogeneous/VectorH3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/boost/graph/IO/WRL.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/VRML/VRML_1_ostream.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML/VRML_2_ostream.h:
+/usr/include/boost/parameter/aux_/tag.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OI/Inventor_ostream.h:
+/usr/include/boost/mp11/list.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Uncertain.h:
+/usr/include/boost/config/workaround.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Handle_hash_function.h:
+/home/toler/CGAL-5.6/include/CGAL/IO/OI/File_writer_inventor.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh_shortest_path.h:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh.h:
 
-/usr/include/boost/mpl/find.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Handle_hash_function.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/AABB_tree.h:
+/home/toler/CGAL-5.6/include/CGAL/Intersection_traits_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_traversal_traits.h:
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Plane_separator.h:
+/usr/include/boost/mpl/aux_/config/eti.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Compact_container.h:
+/usr/include/boost/intrusive/pointer_traits.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Has_timestamp.h:
+/home/toler/CGAL-5.6/include/CGAL/license/Surface_mesh_shortest_path.h:
 
-/usr/include/boost/move/detail/std_ns_end.hpp:
+/home/toler/CGAL-5.6/include/CGAL/number_type_basic.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_searching/internal/Search_helpers.h:
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_search_tree.h:
 
-/usr/include/boost/preprocessor/repeat_2nd.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Orthogonal_k_neighbor_search.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Plane_separator.h:
+
+/usr/include/boost/preprocessor/config/config.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Compact_container.h:
+
+/usr/include/boost/mp11/function.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/Search_helpers.h:
 
 /usr/include/boost/container/deque.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h:
+/home/toler/CGAL-5.6/include/CGAL/mutex.h:
 
-/usr/include/boost/predef/hardware/simd/x86_amd.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_tree/internal/AABB_node.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Euclidean_distance.h:
-
-/usr/include/boost/mpl/front_inserter.hpp:
-
-/usr/include/boost/type_traits/detail/bool_trait_undef.hpp:
-
-/usr/include/boost/lambda/core.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h:
 
 /usr/include/boost/type_traits/transform_traits.hpp:
 
@@ -7803,111 +8661,71 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/lambda/detail/lambda_fwd.hpp:
 
-/usr/include/boost/fusion/sequence/intrinsic/at_c.hpp:
-
-/usr/include/boost/lambda/detail/arity_code.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h:
-
-/usr/include/boost/heap/heap_merge.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Distance_3/Ray_3_Line_3.h:
-
-/usr/include/boost/math/special_functions/sin_pi.hpp:
-
-/usr/include/boost/type_traits/object_traits.hpp:
-
-/usr/include/boost/lambda/detail/function_adaptors.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Cartesian/Weighted_point_3.h:
-
-/usr/include/boost/iterator/minimum_category.hpp:
-
 /usr/include/boost/lambda/detail/return_type_traits.hpp:
 
-/usr/include/boost/mpl/apply.hpp:
+/usr/include/boost/lambda/detail/select_functions.hpp:
 
-/usr/include/boost/lambda/detail/lambda_functor_base.hpp:
+/usr/include/boost/preprocessor/repeat_2nd.hpp:
 
-/usr/include/boost/mp11/set.hpp:
+/usr/include/boost/heap/detail/stable_heap.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Constrained_Delaunay_triangulation_2.h:
+/home/toler/CGAL-5.6/include/CGAL/Cartesian/Scaling_rep_2.h:
 
-/usr/include/boost/lambda/detail/operator_lambda_func_base.hpp:
-
-/usr/include/c++/9/bits/stl_tempbuf.h:
-
-/usr/include/boost/indirect_reference.hpp:
-
-/usr/include/boost/lambda/detail/member_ptr.hpp:
-
-/usr/include/boost/heap/heap_concepts.hpp:
-
-/usr/include/boost/parameter/name.hpp:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/IO/PLY.h:
 
 /usr/include/boost/parameter/aux_/name.hpp:
 
 /usr/include/boost/parameter/config.hpp:
 
-/usr/include/c++/9/bits/atomic_base.h:
-
-/usr/include/boost/mp11/integral.hpp:
-
 /usr/include/boost/mp11/detail/mp_list.hpp:
 
 /usr/include/boost/mp11/detail/config.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/OFF/Scanner_OFF.h:
+/home/toler/CGAL-5.6/include/CGAL/tags.h:
 
 /usr/include/boost/mp11/algorithm.hpp:
 
-/usr/include/boost/mp11/function.hpp:
+/usr/include/boost/mp11/set.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/boost/mp11/detail/mp_plus.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp:
-
-/usr/include/boost/mp11/detail/mp_min_element.hpp:
-
 /usr/include/boost/mp11/detail/mp_fold.hpp:
 
 /usr/include/boost/mp11/detail/mp_copy_if.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_d.h:
 
 /usr/include/boost/mpl/aux_/msvc_type.hpp:
 
 /usr/include/c++/9/bits/codecvt.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VRML.h:
-
 /usr/include/boost/mp11/detail/mp_remove_if.hpp:
+
+/usr/include/boost/mp11/integer_sequence.hpp:
+
+/usr/include/boost/dynamic_bitset.hpp:
 
 /usr/include/boost/parameter/aux_/use_default_tag.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/CORE_BigFloat.h:
-
 /usr/include/boost/parameter/binding.hpp:
 
-/usr/include/boost/parameter/aux_/tag.hpp:
+/usr/include/boost/parameter/aux_/yesno.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Line_3.h:
 
 /usr/include/boost/parameter/aux_/preprocessor/nullptr.hpp:
 
+/usr/include/boost/parameter/aux_/tagged_argument.hpp:
+
 /usr/include/boost/parameter/aux_/tagged_argument_fwd.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Homogeneous/PlaneH3.h:
+/usr/include/boost/parameter/aux_/arg_list.hpp:
 
 /usr/include/boost/parameter/aux_/augment_predicate.hpp:
 
 /usr/include/boost/integer/common_factor_ct.hpp:
 
 /usr/include/boost/mpl/has_key_fwd.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Surface_mesh/IO.h:
 
 /usr/include/boost/mpl/key_type_fwd.hpp:
 
@@ -7917,90 +8735,94 @@ CMakeFiles/test_intersection.dir/baryshift.cpp.o: /home/toler/projects/CGAL_curv
 
 /usr/include/boost/mpl/value_type_fwd.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/IO/VTK/VTK_writer.h:
+/usr/include/boost/fusion/container/list/detail/value_of_impl.hpp:
+
+/usr/include/c++/9/bits/ostream_insert.h:
+
+/usr/include/boost/parameter/aux_/preprocessor/qualifier.hpp:
 
 /usr/include/boost/preprocessor/punctuation/is_begin_parens.hpp:
 
 /usr/include/boost/preprocessor/punctuation/detail/is_begin_parens.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Orthogonal_k_neighbor_search.h:
-
 /usr/include/boost/parameter/template_keyword.hpp:
 
-/usr/include/boost/range/detail/sfinae.hpp:
+/usr/include/boost/parameter/aux_/use_default.hpp:
 
-/usr/include/boost/parameter/parameters.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/predicates_on_points_2.h:
-
-/usr/include/boost/parameter/aux_/pack/tag_type.hpp:
+/usr/include/boost/preprocessor/array/to_tuple.hpp:
 
 /usr/include/boost/parameter/aux_/pack/is_named_argument.hpp:
 
-/usr/include/boost/parameter/aux_/pack/make_parameter_spec_items.hpp:
+/usr/include/boost/graph/detail/adj_list_edge_iterator.hpp:
 
-/usr/include/boost/parameter/aux_/pack/make_deduced_items.hpp:
-
-/usr/include/boost/multiprecision/detail/precision.hpp:
-
-/usr/include/boost/parameter/aux_/pack/deduced_item.hpp:
+/usr/include/boost/parameter/aux_/pack/as_parameter_requirements.hpp:
 
 /usr/include/boost/parameter/aux_/pack/predicate.hpp:
+
+/usr/include/boost/graph/named_function_params.hpp:
+
+/usr/include/boost/parameter/aux_/always_true_predicate.hpp:
 
 /usr/include/boost/lambda/detail/lambda_traits.hpp:
 
 /usr/include/boost/parameter/aux_/pack/tag_keyword_arg.hpp:
 
-/usr/include/boost/fusion/iterator/iterator_facade.hpp:
+/home/toler/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/function_objects.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/AABB_face_graph_triangle_primitive.h:
+/home/toler/CGAL-5.6/include/CGAL/AABB_face_graph_triangle_primitive.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Kernel_23/internal/Has_boolean_tags.h:
+/usr/include/boost/preprocessor/array/push_back.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/internal/named_params_helper.h:
+/usr/include/boost/type_traits/is_const.hpp:
 
-/usr/include/boost/mpl/vector/aux_/front.hpp:
+/usr/include/boost/mpl/aux_/config/integral.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Polygon_mesh_processing/triangulate_faces.h:
+/home/toler/CGAL-5.6/include/CGAL/boost/graph/property_maps.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_vertex_base_2.h:
+/usr/include/boost/serialization/type_info_implementation.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/license/TDS_2.h:
+/home/toler/CGAL-5.6/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Triangulation_ds_face_base_2.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel_23/internal/Has_boolean_tags.h:
+
+/usr/include/boost/parameter/keyword_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Polygon_mesh_processing/triangulate_faces.h:
+
+/usr/include/boost/fusion/algorithm/query/find_if_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Modular_arithmetic/Residue_type.h:
+
+/usr/include/boost/mpl/bind_fwd.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Kernel/Dimension_utils.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Delaunay_triangulation_3.h:
+
+/usr/include/boost/preprocessor/facilities/detail/is_empty.hpp:
+
+/home/toler/CGAL-5.6/include/CGAL/Delaunay_triangulation_cell_base_3.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Unique_hash_map.h:
+
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_data_structure_3.h:
 
 /usr/include/boost/predef/library/std/dinkumware.h:
 
 /usr/include/c++/9/stack:
 
-/usr/include/boost/type_traits/has_right_shift.hpp:
+/usr/include/boost/mpl/aux_/at_impl.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/spatial_sort.h:
+/usr/include/boost/unordered/unordered_set.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_policy_tags.h:
+/usr/include/boost/core/demangle.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_2.h:
+/usr/include/boost/unordered/unordered_set_fwd.hpp:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_base.h:
+/home/toler/CGAL-5.6/include/CGAL/Small_unordered_map.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/gmpxx_coercion_traits.h:
+/home/toler/CGAL-5.6/include/CGAL/Triangulation_vertex_base_3.h:
 
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_3.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_middle_3.h:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Hilbert_sort_median_d.h:
-
-/usr/include/boost/assert.hpp:
-
-/home/toler/CGAL-5.5.2/include/CGAL/Spatial_sort_traits_adapter_2.h:
-
-/usr/include/boost/fusion/support/config.hpp:
-
-/usr/include/boost/mpl/aux_/O1_size_impl.hpp:
-
-/usr/include/boost/fusion/adapted/boost_tuple/tag_of.hpp:
+/home/toler/CGAL-5.6/include/CGAL/spatial_sort.h:
