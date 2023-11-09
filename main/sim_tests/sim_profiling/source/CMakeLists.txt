@@ -36,9 +36,9 @@ endif()
 # Creating entries for target: simulate
 # ############################
 
-add_executable( simulate  get_force.cpp shift.cpp simulate.cpp )
+add_executable( simulate  get_force.cpp shift.cpp utils.cpp simulate.cpp )
 add_executable( force_test force_dist_test.cpp get_force.cpp ) 
-add_executable( random_simulate get_force.cpp shift.cpp random_pos_simulate.cpp)
+add_executable( random_simulate get_force.cpp shift.cpp utils.cpp random_pos_simulate.cpp)
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS simulate )
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS force_test )

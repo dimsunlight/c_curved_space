@@ -31,6 +31,7 @@
 #include <ratio>
 #include <thread>
 #include <random>
+#include "utils.h" 
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             Kernel;
 typedef CGAL::Exact_predicates_exact_constructions_kernel_with_sqrt     KernelWithSqrt;
@@ -52,26 +53,12 @@ typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tre
 //utility functions
 
 float distBetween(Point_3 point1,Point_3 point2) {
-  //I could (should) use geodesic distance for this, but euclidean distance
-  //is
-  //  1) easier to debug
-  //  2) faster for now
-  //so for prototyping, I'm going to stick with this. 
-
-  //vector between p1 and p2, using v because I have to use accessors 
+ //vector between p1 and p2, using v because I have to use accessors 
   Vector_3 v = Vector_3(point1,point2);
   float slength = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
   
   return sqrt(slength);
 }
-
-
-auto vmOther(Vector_3 v)
-{
-  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
-  return CGAL::approximate_sqrt(slen);
-}
-
 
 float random_in_range(float range_min, float range_max, int seed)
 {
@@ -274,7 +261,7 @@ int main (int argc, char* argv[]) {
         particle_and_neighbors = particles_with_neighbors[i];
         f_on_p = force_on_source(mesh,particle_and_neighbors.first,particle_and_neighbors.second,
 		    particle_and_neighbors.second.size());
-        forceMagnitudes.push_back(vmOther(f_on_p));	
+        forceMagnitudes.push_back(vectorMagnitude(f_on_p));	
         location_buffer.push_back(shift(mesh, particle_and_neighbors.first, stepsize*f_on_p));
       }
       //location buffer housekeeping
