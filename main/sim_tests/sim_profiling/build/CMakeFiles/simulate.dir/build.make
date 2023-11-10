@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source
+CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build
+CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/simulate.dir/depend.make
@@ -58,48 +58,62 @@ include CMakeFiles/simulate.dir/progress.make
 include CMakeFiles/simulate.dir/flags.make
 
 CMakeFiles/simulate.dir/get_force.cpp.o: CMakeFiles/simulate.dir/flags.make
-CMakeFiles/simulate.dir/get_force.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulate.dir/get_force.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulate.dir/get_force.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp
+CMakeFiles/simulate.dir/get_force.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulate.dir/get_force.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulate.dir/get_force.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp
 
 CMakeFiles/simulate.dir/get_force.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulate.dir/get_force.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp > CMakeFiles/simulate.dir/get_force.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp > CMakeFiles/simulate.dir/get_force.cpp.i
 
 CMakeFiles/simulate.dir/get_force.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulate.dir/get_force.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp -o CMakeFiles/simulate.dir/get_force.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp -o CMakeFiles/simulate.dir/get_force.cpp.s
 
 CMakeFiles/simulate.dir/shift.cpp.o: CMakeFiles/simulate.dir/flags.make
-CMakeFiles/simulate.dir/shift.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/shift.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulate.dir/shift.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulate.dir/shift.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/shift.cpp
+CMakeFiles/simulate.dir/shift.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/shift.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulate.dir/shift.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulate.dir/shift.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/shift.cpp
 
 CMakeFiles/simulate.dir/shift.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulate.dir/shift.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/shift.cpp > CMakeFiles/simulate.dir/shift.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/shift.cpp > CMakeFiles/simulate.dir/shift.cpp.i
 
 CMakeFiles/simulate.dir/shift.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulate.dir/shift.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/shift.cpp -o CMakeFiles/simulate.dir/shift.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/shift.cpp -o CMakeFiles/simulate.dir/shift.cpp.s
+
+CMakeFiles/simulate.dir/utils.cpp.o: CMakeFiles/simulate.dir/flags.make
+CMakeFiles/simulate.dir/utils.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulate.dir/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulate.dir/utils.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp
+
+CMakeFiles/simulate.dir/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulate.dir/utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp > CMakeFiles/simulate.dir/utils.cpp.i
+
+CMakeFiles/simulate.dir/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulate.dir/utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp -o CMakeFiles/simulate.dir/utils.cpp.s
 
 CMakeFiles/simulate.dir/simulate.cpp.o: CMakeFiles/simulate.dir/flags.make
-CMakeFiles/simulate.dir/simulate.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/simulate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulate.dir/simulate.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulate.dir/simulate.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/simulate.cpp
+CMakeFiles/simulate.dir/simulate.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/simulate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simulate.dir/simulate.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulate.dir/simulate.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/simulate.cpp
 
 CMakeFiles/simulate.dir/simulate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulate.dir/simulate.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/simulate.cpp > CMakeFiles/simulate.dir/simulate.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/simulate.cpp > CMakeFiles/simulate.dir/simulate.cpp.i
 
 CMakeFiles/simulate.dir/simulate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulate.dir/simulate.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/simulate.cpp -o CMakeFiles/simulate.dir/simulate.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/simulate.cpp -o CMakeFiles/simulate.dir/simulate.cpp.s
 
 # Object files for target simulate
 simulate_OBJECTS = \
 "CMakeFiles/simulate.dir/get_force.cpp.o" \
 "CMakeFiles/simulate.dir/shift.cpp.o" \
+"CMakeFiles/simulate.dir/utils.cpp.o" \
 "CMakeFiles/simulate.dir/simulate.cpp.o"
 
 # External object files for target simulate
@@ -107,13 +121,14 @@ simulate_EXTERNAL_OBJECTS =
 
 simulate: CMakeFiles/simulate.dir/get_force.cpp.o
 simulate: CMakeFiles/simulate.dir/shift.cpp.o
+simulate: CMakeFiles/simulate.dir/utils.cpp.o
 simulate: CMakeFiles/simulate.dir/simulate.cpp.o
 simulate: CMakeFiles/simulate.dir/build.make
 simulate: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 simulate: /usr/lib/x86_64-linux-gnu/libmpfr.so
 simulate: /usr/lib/x86_64-linux-gnu/libgmp.so
 simulate: CMakeFiles/simulate.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable simulate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable simulate"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulate.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +141,6 @@ CMakeFiles/simulate.dir/clean:
 .PHONY : CMakeFiles/simulate.dir/clean
 
 CMakeFiles/simulate.dir/depend:
-	cd /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles/simulate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles/simulate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/simulate.dir/depend
 

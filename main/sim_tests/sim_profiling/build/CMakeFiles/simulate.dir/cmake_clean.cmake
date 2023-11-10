@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/simulate.dir/get_force.cpp.o"
   "CMakeFiles/simulate.dir/shift.cpp.o"
   "CMakeFiles/simulate.dir/simulate.cpp.o"
+  "CMakeFiles/simulate.dir/utils.cpp.o"
   "simulate"
   "simulate.pdb"
 )

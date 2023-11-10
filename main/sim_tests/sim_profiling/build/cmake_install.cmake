@@ -1,4 +1,4 @@
-# Install script for directory: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source
+# Install script for directory: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

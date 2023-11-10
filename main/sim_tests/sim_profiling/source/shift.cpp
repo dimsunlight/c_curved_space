@@ -48,8 +48,15 @@ Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vec
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
 
  bool throughVertex = intersected.size() == 1;
+
  if (throughVertex) {
    std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
+   const std::string errors_filename = "throughverts" + std::to_string(source_face) + ".txt";
+
+   std::ofstream error_log(errors_filename);
+
+   error_log << source_face << "\n";
+   error_log << pos; 
    double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
    return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
                                                                  //But it should identify things just fine most of the time.
@@ -147,7 +154,6 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   }
   //if we don't have an intersection -- FIX CONDITIONALS LATER IN THE CODE
   else {
-    std::cout << "No intersection. Returning filler point.";
     return std::make_pair(Point_3(1000,1000,1000),fillerVector);
   }
   return std::make_pair(Point_3(10000,1000,1000),fillerVector); //default return
@@ -199,13 +205,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   std::size_t counter = 0;
   //find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vector<Point_3> faceVertices) finds the intersection point on an edge
 
-  const std::string intersections_filename = "r_intersections.txt";
-  const std::string vertices_filename = "r_faces_visited.txt";
-  const std::string cmove_filename = "current_move_list.txt"; 
-  std::ofstream intersections_file(intersections_filename);
-  std::ofstream vertices_file(vertices_filename);
-  std::ofstream cmove_file(cmove_filename); 
-
   //assuming we've fed in a vector tangent to the source face, we can use
   //its level of normal overlap as the baseline of normal overlap for rotations
   Vector_3 currentSourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
@@ -213,26 +212,9 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
   while(intersection){
     counter += 1;
-    std::cout << "" << std::endl;
-    std::cout << "ITERATION: " << counter << std::endl;
     //vertexList = getVertexPositions(mesh,currentSourceFace);
     vertexList = getVertexIndices(mesh,currentSourceFace);
 
-    if (intersections_file.is_open()){
-      intersections_file << "{" << source_point.x() << ", " << source_point.y() << ", " << source_point.z() << "}";
-      intersections_file << "\n";
-    }
-    if (vertices_file.is_open()) {
-      for (Vertex_index vert: vertexList) {
-        Point_3 vPoint = mesh.point(vert);
-        vertices_file << "{" << vPoint.x() << ", " << vPoint.y() << ", " << vPoint.z() << "}" << "\n";
-      }
-      vertices_file << "\n";
-    }
-    if (cmove_file.is_open()) {
-      cmove_file << "{" << current_move.x() << ", " << current_move.y() << ", " << current_move.z() << "}";
-      cmove_file << "\n";
-    }
 
     std::pair<Point_3, std::vector<Vertex_index>> intersection_info = find_intersection(mesh, currentSourceFace, source_point, source_point+current_move, vertexList);
     Point_3 intersection_point = intersection_info.first;
@@ -240,8 +222,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     
     if (intersection_point == Point_3(1000,1000,1000)) {
       intersection = false;
-
-      std::cout << "no intersection, breaking loop" << std::endl;
       break;
     }
 
@@ -290,13 +270,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   
   //declare final point & write it to file -- there is always one more path point than move vectors 
   Point_3 fTarget = source_point+current_move;
-  if (intersections_file.is_open()){
-    intersections_file << "{" << fTarget.x() << ", " << fTarget.y() << ", " << fTarget.z() << "}";
-    intersections_file << "\n";
-  }
-  intersections_file.close();
-  vertices_file.close();
-  cmove_file.close();
   return fTarget; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
 }
       

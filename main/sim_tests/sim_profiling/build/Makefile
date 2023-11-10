@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source
+CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build
+CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -293,6 +293,39 @@ simulate.cpp.s:
 	$(MAKE) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/simulate.cpp.s
 .PHONY : simulate.cpp.s
 
+utils.o: utils.cpp.o
+
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/utils.cpp.o
+	$(MAKE) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/utils.cpp.o
+	$(MAKE) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/utils.cpp.i
+	$(MAKE) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/utils.cpp.i
+	$(MAKE) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/utils.cpp.s
+	$(MAKE) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/utils.cpp.s
+	$(MAKE) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/utils.cpp.s
+.PHONY : utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -319,6 +352,9 @@ help:
 	@echo "... simulate.o"
 	@echo "... simulate.i"
 	@echo "... simulate.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 

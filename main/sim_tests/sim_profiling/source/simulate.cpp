@@ -27,6 +27,7 @@
 #include <math.h>
 #include "shift.h"
 #include "get_force.h"
+#include "utils.h" 
 #include <chrono>
 #include <ratio>
 #include <thread>
@@ -49,7 +50,7 @@ typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_fac
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
 
-//utility functions
+//unique utility functions
 
 float distBetween(Point_3 point1,Point_3 point2) {
   //I could (should) use geodesic distance for this, but euclidean distance
@@ -111,6 +112,7 @@ std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
   //I use std::vectors of point_3 objects for positions, so we loop
   //to create a similar vector for n random positions
   std::vector<Point_3> sample_points = {};
+  sample_points.reserve(n);
   for (std::size_t i; i < n; i++) {
     sample_points.push_back(torus_sample(a,c));
   }
@@ -121,7 +123,7 @@ std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
 std::vector<Point_3> create_particles_from_xyz(std::string locations_file) {
   Point_set_3 locations;
   CGAL::IO::read_XYZ(locations_file,locations);
-  std::vector<Point_3> outputPoints; //I should probably be using
+  std::vector<Point_3> outputPoints = {}; //I should probably be using
                                     //Point_set_3 objects throughout my code; cleanup for later
   for (Point_set_3::const_iterator it = locations.begin(); it != locations.end(); ++ it) {
     outputPoints.push_back(locations.point(*it));
@@ -190,11 +192,12 @@ int main (int argc, char* argv[]) {
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
   //simulation time parameters -- too-large step sizes can break shift!
-  std::size_t timesteps = 100; //hard defining this now rather than input-defining to avoid extra debugging 
-  double      stepsize = .01; //slightly larger stepsize so it's more likely we run into weird scenarios
+  std::size_t timesteps = 10000; //hard defining this now rather than input-defining to avoid extra debugging 
+  double      stepsize = .00001; //smaller stepsize for standard behavior
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
   std::vector<Point_3> location_buffer;
+  location_buffer.reserve(particle_locations.size());
   std::cout << "Running simulation with " << particle_locations.size() << " particles and " << timesteps << " timesteps." << std::endl;
   std::cout << "Timestep size " << stepsize << std::endl;
   double neighbor_cutoff = 5;
@@ -203,11 +206,15 @@ int main (int argc, char* argv[]) {
   Vector_3 f_on_p;
   
   //write trajectory data to file
-  const std::string trajectory_filename = "positions.txt";
+  const std::string trajectory_filename = "long_sim.txt";
   std::ofstream trajectory_file(trajectory_filename);
   if (trajectory_file.is_open()){
     trajectory_file << particle_locations.size();
     trajectory_file << "\n";
+    for (Point_3 location: particle_locations) {
+      trajectory_file << location;
+      trajectory_file << "\n"; 
+    }
   }
 
 

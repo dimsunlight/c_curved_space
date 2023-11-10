@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source
+CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build
+CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/force_test.dir/depend.make
@@ -58,47 +58,62 @@ include CMakeFiles/force_test.dir/progress.make
 include CMakeFiles/force_test.dir/flags.make
 
 CMakeFiles/force_test.dir/force_dist_test.cpp.o: CMakeFiles/force_test.dir/flags.make
-CMakeFiles/force_test.dir/force_dist_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/force_dist_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/force_test.dir/force_dist_test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/force_test.dir/force_dist_test.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/force_dist_test.cpp
+CMakeFiles/force_test.dir/force_dist_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/force_dist_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/force_test.dir/force_dist_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/force_test.dir/force_dist_test.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/force_dist_test.cpp
 
 CMakeFiles/force_test.dir/force_dist_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/force_test.dir/force_dist_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/force_dist_test.cpp > CMakeFiles/force_test.dir/force_dist_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/force_dist_test.cpp > CMakeFiles/force_test.dir/force_dist_test.cpp.i
 
 CMakeFiles/force_test.dir/force_dist_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/force_test.dir/force_dist_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/force_dist_test.cpp -o CMakeFiles/force_test.dir/force_dist_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/force_dist_test.cpp -o CMakeFiles/force_test.dir/force_dist_test.cpp.s
 
 CMakeFiles/force_test.dir/get_force.cpp.o: CMakeFiles/force_test.dir/flags.make
-CMakeFiles/force_test.dir/get_force.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/force_test.dir/get_force.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/force_test.dir/get_force.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp
+CMakeFiles/force_test.dir/get_force.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/force_test.dir/get_force.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/force_test.dir/get_force.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp
 
 CMakeFiles/force_test.dir/get_force.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/force_test.dir/get_force.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp > CMakeFiles/force_test.dir/get_force.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp > CMakeFiles/force_test.dir/get_force.cpp.i
 
 CMakeFiles/force_test.dir/get_force.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/force_test.dir/get_force.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source/get_force.cpp -o CMakeFiles/force_test.dir/get_force.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/get_force.cpp -o CMakeFiles/force_test.dir/get_force.cpp.s
+
+CMakeFiles/force_test.dir/utils.cpp.o: CMakeFiles/force_test.dir/flags.make
+CMakeFiles/force_test.dir/utils.cpp.o: /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/force_test.dir/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/force_test.dir/utils.cpp.o -c /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp
+
+CMakeFiles/force_test.dir/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/force_test.dir/utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp > CMakeFiles/force_test.dir/utils.cpp.i
+
+CMakeFiles/force_test.dir/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/force_test.dir/utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source/utils.cpp -o CMakeFiles/force_test.dir/utils.cpp.s
 
 # Object files for target force_test
 force_test_OBJECTS = \
 "CMakeFiles/force_test.dir/force_dist_test.cpp.o" \
-"CMakeFiles/force_test.dir/get_force.cpp.o"
+"CMakeFiles/force_test.dir/get_force.cpp.o" \
+"CMakeFiles/force_test.dir/utils.cpp.o"
 
 # External object files for target force_test
 force_test_EXTERNAL_OBJECTS =
 
 force_test: CMakeFiles/force_test.dir/force_dist_test.cpp.o
 force_test: CMakeFiles/force_test.dir/get_force.cpp.o
+force_test: CMakeFiles/force_test.dir/utils.cpp.o
 force_test: CMakeFiles/force_test.dir/build.make
 force_test: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 force_test: /usr/lib/x86_64-linux-gnu/libmpfr.so
 force_test: /usr/lib/x86_64-linux-gnu/libgmp.so
 force_test: CMakeFiles/force_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable force_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable force_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/force_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -111,6 +126,6 @@ CMakeFiles/force_test.dir/clean:
 .PHONY : CMakeFiles/force_test.dir/clean
 
 CMakeFiles/force_test.dir/depend:
-	cd /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling_fullshift/build/CMakeFiles/force_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles/force_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/force_test.dir/depend
 

@@ -15,6 +15,7 @@
 #include <fstream>
 #include <cmath>
 #include <ctime>
+#include "utils.h"
 
 //typedefs:
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             Kernel;
@@ -34,24 +35,11 @@ typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_fac
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
 
-//utilities
-auto normalize(Vector_3 v)
-{
-  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
-  auto const d = CGAL::approximate_sqrt(slen);
-  return v / d;
-}
-
-auto vectorMag(Vector_3 v) 
-{
-  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
-  return CGAL::approximate_sqrt(slen);
-}
 
 //primary functions
 std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
 		Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
-  std::cout << "calculating tangents and distances for source "<< source << std::endl;
+  //std::cout << "calculating tangents and distances for source "<< source << std::endl;
   Surface_mesh_shortest_path shortest_paths(mesh);
   AABB_tree tree;
   shortest_paths.build_aabb_tree(tree);
@@ -64,7 +52,7 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
   std::vector<Vector_3> tangents;
   std::vector<Point_3> points; 
   for (std::size_t i = 0; i < num_targets; i++) {
-    std::cout << "iteration point " << i+1 << ", at position " << targets[i] <<  "; calling locate" << std::endl;
+    // std::cout << "iteration point " << i+1 << ", at position " << targets[i] <<  "; calling locate" << std::endl;
     Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
     //std::cout << "target loc elements: " << target_loc.first << "--" << target_loc.second[0] << " " << target_loc.second[1] << " " << target_loc.second[2] << std::endl;
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
@@ -81,9 +69,9 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
 }
 
 
-Vector_3 forceFunction (float dist, Vector_3 tangent, double epsilon, double sigma) { 
+Vector_3 LJForce (float dist, Vector_3 tangent, double epsilon, double sigma) { 
   //once again, a=1 and c=3
-  Vector_3 normalizedTangent = normalize(tangent);
+  Vector_3 normalizedTangent = normalizer(tangent);
 
   //lennard-jones potential is 
   //4 epsilon((sigma/r)^12 - (sigma/r)^6) 
@@ -96,6 +84,26 @@ Vector_3 forceFunction (float dist, Vector_3 tangent, double epsilon, double sig
   return force;
 }
 
+
+Vector_3 simpleRepulsion(float dist, Vector_3 tangent, double sigma) {
+  //simple repulsive force from a Gaussian potential for easy checking.  
+  
+  //for me, writing below as literally negative gradient of Gaussian potential. 
+  //maximum value is (2^(3/2))/sigma)e^(-2). 
+
+  Vector_3 normalizedTangent = normalizer(tangent); 
+  Vector_3 force = -(-2*dist/pow(sigma,2))*exp(-pow(dist,2)/pow(sigma,2))*normalizedTangent;
+
+  return force;
+
+}
+
+
+Vector_3 inversePowerLaw(float dist, Vector_3 tangent, double sigma) {
+ //fill in later
+ return Vector_3(0,0,0);
+}
+
 Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
   //create list of distances and path tangents between the source particle and the targets
   std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcTangentsAndDistances(mesh, source, targets, num_targets);   
@@ -105,14 +113,14 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = .0002;
+  double sigma = 1.1;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   
   for (std::size_t i = 0; i < distances.size(); i++) {
-    force+= forceFunction(distances[i],tangents[i], epsilon, sigma);    
+    force+= LJForce(distances[i],tangents[i], epsilon, sigma);    
   } 
-  std::cout << "Calculated force magnitude is " << vectorMag(force) << std::endl; 
+  std::cout << "Calculated force magnitude is " << vectorMagnitude(force) << std::endl; 
   return force;
 }
 
