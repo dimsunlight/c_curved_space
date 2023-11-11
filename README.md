@@ -39,4 +39,14 @@ collection of test files. Nothing here is guaranteed to be stable.
 **How you should use this repo** 
 
 If you're curious about my work (or if you're my advisor), a CGAL installation should be enough to let you run
-the simulation routine in src. I'll put some instructions there, because it's straightforward to repeat but nontrivial. Otherwise, I'll indicate here parts of test that might need attention. 
+the simulation routine in src. I'll put some instructions there & in test, because it's straightforward to repeat but nontrivial. Otherwise, I'll indicate here parts of test that might need attention. 
+
+
+TODO: 
+-Clean up src/simulate's files so that it's only the stable simulate that can run a simulation on a mesh. 
+-Clean up simulate files within test. 
+-Fix MT sampling within random_pos_simulate (within test file -- unnecessary, for now, in src) so that we get 
+sample that's actually random. 
+-Create some examples. 
+-Make code more user friendly (not having to vim into force function to change what force we use, for example, or
+vim into simulate function to change timesteps)
