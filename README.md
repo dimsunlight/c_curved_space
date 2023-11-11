@@ -3,16 +3,16 @@
 
 This repo stores code meant to execute curved space simulations primarily with the help of CGAL. 
 
-##**Main**
+## main
 
 Main is a replica of the old filestructure, in case I've made any mistakes reorganizing. It has both copies of the
 code I'm currently working on and deprecated files from when I was first writing the repository. I'll know where to find things in there, but there's no reason anyone looking at the repository should need to look at it. 
 
-##**ex** 
+## ex 
 
 Placeholder folder for examples, once I write some. 
 
-##**src**
+## src
 
 Main executable folder for the most recent stable version of the code. 
   - classes is a (mostly) empty folder for when/if I restructure the code to be object-oriented (and thereby more
@@ -25,7 +25,7 @@ Main executable folder for the most recent stable version of the code.
   this, it has testing files in it. I'll clean up the src version when I clean up the mesher so extraneous files are 
   deleted. 
 
-##**test** 
+## test
 
 collection of test files. Nothing here is guaranteed to be stable. 
 - cgal_distance is a record of my toying with CGAL's Xin and Wang distance algorithm. 
@@ -37,7 +37,7 @@ different from what's in src.
 - timing_pieces has its own ReadMe. It's meant to provide a bunch of functions to time and test the subordinate 
 components of the simulation routine. 
 
-##**How you should use this repo** 
+## How you should use this repo 
 
 If you're curious about my work (or if you're my advisor), a CGAL installation should be enough to let you run
 the simulation routine in src. I'll put some instructions there & in test, because it's straightforward to repeat but nontrivial. Otherwise, I'll indicate here parts of test that might need attention. 
