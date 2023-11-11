@@ -1,0 +1,280 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_88efc/fast && /usr/bin/make -f CMakeFiles/cmTC_88efc.dir/build.make CMakeFiles/cmTC_88efc.dir/build
+make[1]: Entering directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_88efc.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_88efc.dir/src.c.o   -c /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_88efc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88efc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_88efc.dir/src.c.o  -o cmTC_88efc 
+/usr/bin/ld: CMakeFiles/cmTC_88efc.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_88efc.dir/build.make:87: cmTC_88efc] Error 1
+make[1]: Leaving directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_88efc/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d0e08/fast && /usr/bin/make -f CMakeFiles/cmTC_d0e08.dir/build.make CMakeFiles/cmTC_d0e08.dir/build
+make[1]: Entering directory '/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0e08.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d0e08.dir/src.c.o   -c /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d0e08
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0e08.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_d0e08.dir/src.c.o  -o cmTC_d0e08 
+/usr/bin/ld: CMakeFiles/cmTC_d0e08.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d0e08.dir/build.make:87: cmTC_d0e08] Error 1
+make[1]: Leaving directory '/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d0e08/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b2e56/fast && /usr/bin/make -f CMakeFiles/cmTC_b2e56.dir/build.make CMakeFiles/cmTC_b2e56.dir/build
+make[1]: Entering directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b2e56.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b2e56.dir/src.c.o   -c /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b2e56
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2e56.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b2e56.dir/src.c.o  -o cmTC_b2e56 
+/usr/bin/ld: CMakeFiles/cmTC_b2e56.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b2e56.dir/build.make:87: cmTC_b2e56] Error 1
+make[1]: Leaving directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b2e56/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_13921/fast && /usr/bin/make -f CMakeFiles/cmTC_13921.dir/build.make CMakeFiles/cmTC_13921.dir/build
+make[1]: Entering directory '/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13921.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_13921.dir/src.c.o   -c /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_13921
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13921.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_13921.dir/src.c.o  -o cmTC_13921 
+/usr/bin/ld: CMakeFiles/cmTC_13921.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_13921.dir/build.make:87: cmTC_13921] Error 1
+make[1]: Leaving directory '/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_13921/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a1807/fast && /usr/bin/make -f CMakeFiles/cmTC_a1807.dir/build.make CMakeFiles/cmTC_a1807.dir/build
+make[1]: Entering directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a1807.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a1807.dir/src.c.o   -c /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a1807
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1807.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_a1807.dir/src.c.o  -o cmTC_a1807 
+/usr/bin/ld: CMakeFiles/cmTC_a1807.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a1807.dir/build.make:87: cmTC_a1807] Error 1
+make[1]: Leaving directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a1807/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_13889/fast && /usr/bin/make -f CMakeFiles/cmTC_13889.dir/build.make CMakeFiles/cmTC_13889.dir/build
+make[1]: Entering directory '/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13889.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_13889.dir/src.c.o   -c /home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_13889
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13889.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_13889.dir/src.c.o  -o cmTC_13889 
+/usr/bin/ld: CMakeFiles/cmTC_13889.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_13889.dir/build.make:87: cmTC_13889] Error 1
+make[1]: Leaving directory '/home/twebb8/projects/cgal/c_curved_space/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_13889/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_eaa33/fast && /usr/bin/make -f CMakeFiles/cmTC_eaa33.dir/build.make CMakeFiles/cmTC_eaa33.dir/build
+make[1]: Entering directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eaa33.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_eaa33.dir/src.c.o   -c /home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_eaa33
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eaa33.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_eaa33.dir/src.c.o  -o cmTC_eaa33 
+/usr/bin/ld: CMakeFiles/cmTC_eaa33.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_eaa33.dir/build.make:87: cmTC_eaa33] Error 1
+make[1]: Leaving directory '/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_eaa33/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

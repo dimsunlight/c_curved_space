@@ -1,0 +1,6 @@
+/home/toler/projects/CGAL_curvature/main/component_tests/tests_build/CMakeFiles/edit_cache.dir
+/home/toler/projects/CGAL_curvature/main/component_tests/tests_build/CMakeFiles/test_shift.dir
+/home/toler/projects/CGAL_curvature/main/component_tests/tests_build/CMakeFiles/rebuild_cache.dir
+/home/toler/projects/CGAL_curvature/main/component_tests/tests_build/CMakeFiles/cgal_check_build_system.dir
+/home/toler/projects/CGAL_curvature/main/component_tests/tests_build/CMakeFiles/ALL_CGAL_TARGETS.dir
+/home/toler/projects/CGAL_curvature/main/component_tests/tests_build/CMakeFiles/test_force.dir

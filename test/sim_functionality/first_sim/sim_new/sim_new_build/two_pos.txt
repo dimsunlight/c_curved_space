@@ -1,0 +1,3 @@
+cmake -DCMAKE_BUILD_TYPE="Debug" ../sim_ssc_source
+make
+./simulate 'torusrb20.off' 'default_pos.xyz'
