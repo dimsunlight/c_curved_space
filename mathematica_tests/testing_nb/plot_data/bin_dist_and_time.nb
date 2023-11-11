@@ -1,0 +1,175 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6071,        165]
+NotebookOptionsPosition[      5114,        143]
+NotebookOutlinePosition[      5524,        159]
+CellTagsIndexPosition[      5481,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"distancesAndTimes", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\Users\\\\Toler\\\\OneDrive - Emory \
+University\\\\sussmangroup_research\\\\code\\\\cgal_project\\\\testing\\\\\
+plot_data\\\\force_and_time_to_calc.csv\>\"", ",", "\"\<Data\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.9051957956888466`*^9, 3.9051958173754263`*^9}, {
+  3.9051958616598644`*^9, 3.90519589269795*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"93cf3f7c-e0b3-48e3-b9b6-cd2b4558e032"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tableOfDistances", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"distancesAndTimes", "[", 
+      RowBox[{"[", 
+       RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "distancesAndTimes", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.9051958719902315`*^9, 3.9051959268998814`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"7c7440a4-627e-4d4d-90a5-70bdf9572e98"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"binnedDistances", "=", 
+    RowBox[{"BinLists", "[", 
+     RowBox[{"tableOfDistances", ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "10", ",", ".5"}], "}"}]}], "]"}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "this", " ", "is", " ", "the", " ", "binning", " ", "of", " ", "the", " ",
+      "distances"}], ",", " ", 
+    RowBox[{"but", " ", 
+     RowBox[{"doesn", "'"}], "t", " ", "retain", " ", "the", " ", "time", " ", 
+     RowBox[{"information", " ", "--"}], " ", "we", " ", "need", " ", "to", 
+     " ", "get", " ", "indices", " ", "to", " ", "make", " ", "this", " ", 
+     "work"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.905195933770727*^9, 3.9051959487313347`*^9}, {
+  3.905195996371073*^9, 3.9051960218841076`*^9}, {3.9051960557475185`*^9, 
+  3.9051960690777855`*^9}},ExpressionUUID->"e836410f-f1ab-4109-9ce4-\
+8e4ca06fa55f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tableOfDistancesIndices", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{"tableOfDistances", ",", 
+          RowBox[{"binnedDistances", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", ",", "i"}], "]"}], "]"}], ",", "3"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", 
+           RowBox[{"binnedDistances", "[", 
+            RowBox[{"[", "j", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", 
+       RowBox[{"Length", "[", "binnedDistances", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.9051960762874136`*^9, 3.905196115407197*^9}, {
+  3.905196218903982*^9, 3.9051962816054025`*^9}, {3.9051963497456493`*^9, 
+  3.90519635212897*^9}, {3.9051964562854824`*^9, 3.9051964692704782`*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"3ee41b21-b8f3-4650-9e82-6c32474d80d6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tableOfTimes", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"distancesAndTimes", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"tableOfDistancesIndices", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", ",", "i"}], "]"}], "]"}], ",", "2"}], "]"}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "[", 
+          RowBox[{"tableOfDistancesIndices", "[", 
+           RowBox[{"[", "j", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", 
+       RowBox[{"Length", "[", "tableOfDistancesIndices", "]"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9051963272911024`*^9, 3.9051964399499617`*^9}, 
+   3.905196520480384*^9},
+ CellLabel->"In[40]:=",ExpressionUUID->"7498227a-2ab8-4ea1-92c1-6fc39aaec057"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"distancesAndTimes", "[", 
+  RowBox[{"[", 
+   RowBox[{"314", ",", "2"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.905196452924365*^9, 3.9051964898149776`*^9}, {
+  3.9051965245440235`*^9, 3.905196545738665*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"14457b91-ceb3-4e13-b31a-e186123cc57d"],
+
+Cell[BoxData["79"], "Output",
+ CellChangeTimes->{
+  3.9051963286837873`*^9, 3.905196440652542*^9, 3.905196490300089*^9, {
+   3.905196525515585*^9, 3.9051965461452613`*^9}},
+ CellLabel->"Out[45]=",ExpressionUUID->"284b635a-49ca-4dbd-b6fb-d6a03919fed2"]
+}, Open  ]]
+},
+WindowSize->{569.25, 624.75},
+WindowMargins->{{Automatic, 125.25}, {21, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"83b6f3c3-42e0-4e16-b24a-2d06ecd3cf04"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 524, 11, 124, "Input",ExpressionUUID->"93cf3f7c-e0b3-48e3-b9b6-cd2b4558e032"],
+Cell[1085, 33, 510, 13, 48, "Input",ExpressionUUID->"7c7440a4-627e-4d4d-90a5-70bdf9572e98"],
+Cell[1598, 48, 906, 21, 86, "Input",ExpressionUUID->"e836410f-f1ab-4109-9ce4-8e4ca06fa55f"],
+Cell[2507, 71, 1065, 26, 124, "Input",ExpressionUUID->"3ee41b21-b8f3-4650-9e82-6c32474d80d6"],
+Cell[3575, 99, 927, 25, 105, "Input",ExpressionUUID->"7498227a-2ab8-4ea1-92c1-6fc39aaec057"],
+Cell[CellGroupData[{
+Cell[4527, 128, 317, 6, 28, "Input",ExpressionUUID->"14457b91-ceb3-4e13-b31a-e186123cc57d"],
+Cell[4847, 136, 251, 4, 55, "Output",ExpressionUUID->"284b635a-49ca-4dbd-b6fb-d6a03919fed2"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
