@@ -1,5 +1,0 @@
-/home/toler/projects/CGAL_curvature/main/sim_debug/simulate_build/CMakeFiles/edit_cache.dir
-/home/toler/projects/CGAL_curvature/main/sim_debug/simulate_build/CMakeFiles/rebuild_cache.dir
-/home/toler/projects/CGAL_curvature/main/sim_debug/simulate_build/CMakeFiles/cgal_check_build_system.dir
-/home/toler/projects/CGAL_curvature/main/sim_debug/simulate_build/CMakeFiles/ALL_CGAL_TARGETS.dir
-/home/toler/projects/CGAL_curvature/main/sim_debug/simulate_build/CMakeFiles/simulate.dir

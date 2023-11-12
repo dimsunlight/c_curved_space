@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/new_shift.dir/u_shift.cpp.o  -o new_shift  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 

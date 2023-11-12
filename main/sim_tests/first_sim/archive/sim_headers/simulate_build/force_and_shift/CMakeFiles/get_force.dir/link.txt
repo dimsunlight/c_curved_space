@@ -1,2 +1,0 @@
-/usr/bin/ar qc libget_force.a  CMakeFiles/get_force.dir/get_force.cpp.o
-/usr/bin/ranlib libget_force.a

@@ -1,6 +1,0 @@
-/home/toler/projects/CGAL_curvature/main/header_build/CMakeFiles/rebuild_cache.dir
-/home/toler/projects/CGAL_curvature/main/header_build/CMakeFiles/edit_cache.dir
-/home/toler/projects/CGAL_curvature/main/header_build/CMakeFiles/base.dir
-/home/toler/projects/CGAL_curvature/main/header_build/function/CMakeFiles/rebuild_cache.dir
-/home/toler/projects/CGAL_curvature/main/header_build/function/CMakeFiles/edit_cache.dir
-/home/toler/projects/CGAL_curvature/main/header_build/function/CMakeFiles/function.dir

@@ -1,4 +1,0 @@
-/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/rebuild_cache.dir
-/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/edit_cache.dir
-/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/test_intersection.dir
-/home/toler/projects/CGAL_curvature/main/shift_tests/baryshift_build/CMakeFiles/baryshift.dir
