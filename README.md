@@ -3,11 +3,6 @@
 
 This repo stores code meant to execute curved space simulations primarily with the help of CGAL. 
 
-## main
-
-Main is a replica of the old filestructure, in case I've made any mistakes reorganizing. It has both copies of the
-code I'm currently working on and deprecated files from when I was first writing the repository. I'll know where to find things in there, but there's no reason anyone looking at the repository should need to look at it. 
-
 ## ex 
 
 Placeholder folder for examples, once I write some. 
