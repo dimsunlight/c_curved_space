@@ -39,7 +39,6 @@ typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tre
 //primary functions
 std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
 		Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
-  //std::cout << "calculating tangents and distances for source "<< source << std::endl;
   Surface_mesh_shortest_path shortest_paths(mesh);
   AABB_tree tree;
   shortest_paths.build_aabb_tree(tree);
@@ -52,13 +51,9 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
   std::vector<Vector_3> tangents;
   std::vector<Point_3> points; 
   for (std::size_t i = 0; i < num_targets; i++) {
-    // std::cout << "iteration point " << i+1 << ", at position " << targets[i] <<  "; calling locate" << std::endl;
     Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
-    //std::cout << "target loc elements: " << target_loc.first << "--" << target_loc.second[0] << " " << target_loc.second[1] << " " << target_loc.second[2] << std::endl;
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
-    //std::cout << "calculating shortest distance" << std::endl;
     distances.push_back(std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)));
-    //std::cout << "distance calculated." << std::endl;
     //path goes from target to source -- so if we want to know path tangent at 
     //source for force calculation, we must use the *end* of points[]
     tangents.push_back(Vector_3(points[points.size()-2],points[points.size()-1]));
@@ -119,8 +114,9 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
 				   
   for (std::size_t i = 0; i < distances.size(); i++) {
     force+= LJForce(distances[i],tangents[i], epsilon, sigma);    
-  } 
-  std::cout << "Calculated force magnitude is " << vectorMagnitude(force) << std::endl; 
+  }
+  
+  //std::cout << "calculated force magnitude at (" << source << ") is " << vectorMagnitude(force) << std::endl;
   return force;
 }
 

@@ -1,6 +1,6 @@
 /* Author: Toler H. Webb
  * Description: CGAL-based routine for simulating the interaction of a 
- * small number of particles.  
+ * many particles in curved space.  
  */
 
 //includes
@@ -66,60 +66,6 @@ float distBetween(Point_3 point1,Point_3 point2) {
   return sqrt(slength);
 }
 
-
-float random_in_range(float range_min, float range_max)
-{
-  //uses mersenne twister to get a random real #
-  std::random_device                   rand_dev;
-  std::mt19937                         generator(rand_dev());
-  std::uniform_real_distribution<float>  distr(range_min, range_max);
-
-  return distr(generator);
-}
-
-float torus_weight(float a, float c, float u, float v) {
-  //get torus weight for sampling against [0,1] distribution --
-  //so we divide by radius to compare to ``unit'' torus
-  return (c+a*cos(v))/(c+a);
-}
-
-//float sinplane_weight --- look up what differential geometric aspects are needed for rejections ampling
-
-Point_3 torus_sample(float a, float c) {
-  //rejection method sample on a torus; that is, reject anything without the appropriate weight
-  float U;
-  float V;
-  float W;
-  float weight;
-  Point_3 returnPoint = Point_3(NULL,NULL,NULL);
-  while (returnPoint == Point_3(NULL,NULL,NULL)) {
-    U = random_in_range(0.0, 2*M_PI);
-    V = random_in_range(0.0, 2*M_PI);
-    W = random_in_range(0.0, 1.0);
-    weight = torus_weight(a,c,U,V);
-    if (W <= weight) {
-      returnPoint = Point_3((c+a*cos(V))*cos(U), (c+a*cos(V))*sin(U), a*sin(V));
-      return returnPoint;
-    }
-  }
-  //this should never happen, but just to avoid false error messages
-  return Point_3(NULL,NULL,NULL);//filler point to check if we have sampled at all
-}
-
-//Point_3 sinplane_sample() {} ; once weight is defined, write as above
-
-std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
-  //I use std::vectors of point_3 objects for positions, so we loop
-  //to create a similar vector for n random positions
-  std::vector<Point_3> sample_points = {};
-  sample_points.reserve(n);
-  for (std::size_t i; i < n; i++) {
-    sample_points.push_back(torus_sample(a,c));
-  }
-  return sample_points;  
-}
-
-
 std::vector<Point_3> create_particles_from_xyz(std::string locations_file) {
   Point_set_3 locations;
   CGAL::IO::read_XYZ(locations_file,locations);
@@ -167,7 +113,6 @@ std::chrono::milliseconds averageTime(std::vector<std::chrono::milliseconds> tim
     sum += element;
     n+=1;
   }
-
   return sum/n;
 }
 
@@ -192,7 +137,7 @@ int main (int argc, char* argv[]) {
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
   //simulation time parameters -- too-large step sizes can break shift!
-  std::size_t timesteps = 10000; //hard defining this now rather than input-defining to avoid extra debugging 
+  std::size_t timesteps = 1000; //hard defining this now rather than input-defining to avoid extra debugging 
   double      stepsize = .00001; //smaller stepsize for standard behavior
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
@@ -206,7 +151,7 @@ int main (int argc, char* argv[]) {
   Vector_3 f_on_p;
   
   //write trajectory data to file
-  const std::string trajectory_filename = "long_sim.txt";
+  const std::string trajectory_filename = "sim_trajectory.txt";
   std::ofstream trajectory_file(trajectory_filename);
   if (trajectory_file.is_open()){
     trajectory_file << particle_locations.size();
@@ -216,7 +161,7 @@ int main (int argc, char* argv[]) {
       trajectory_file << "\n"; 
     }
   }
-
+  //file form is unique to this simulation. I would like to move to a standard file type when appropriate. 
 
   std::chrono::steady_clock::time_point end_time = std::chrono::steady_clock::now();
   

@@ -1,5 +1,3 @@
 /home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles/rebuild_cache.dir
 /home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles/edit_cache.dir
-/home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles/random_simulate.dir
-/home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles/force_test.dir
 /home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles/simulate.dir

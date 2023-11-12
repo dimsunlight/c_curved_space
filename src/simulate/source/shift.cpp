@@ -143,12 +143,6 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
 
     Face_location newPosition = std::make_pair(sourceFace,newBaryCoords);
     Point_3 xyz_intersection = PMP::construct_point(newPosition,mesh);
-    /*
-    //manual reconstruction  
-    Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + 
-	                        min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z()) +
-			       	min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); 
-    */
 
     return std::make_pair(xyz_intersection,intersected); // this version returns the barycentric intersection point
   }
@@ -238,30 +232,23 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
     Face_location newMoveLocation = rotateIntoNewFace(mesh, currentSourceFace, currentTargetFace, source_point, target);
     Point_3 rotatedTarget = PMP::construct_point(newMoveLocation,mesh);
-    std::cout << "rotated target to " << rotatedTarget << std::endl;
 
     //check that we've rotated in the right direction via overlap
     current_move = Vector_3(source_point, rotatedTarget);//source is now intersection
 
     overlap = current_move*currentTargetFaceNormal;
     if (overlap > baseAgreement+.01) {
-    //PLACEHOLDER to see if sign convention is breaking
-      std::cout << "reversing rotation angle!" << std::endl;
+    //unit test to see if sign convention is breaking
+      std::cout << "rotation angle appears to be wrong -- attempting reversal!" << std::endl;
       rotatedTarget = rotateAboutAxis(forRotation, sharedEdge, -rotationAngle)[0];
       current_move = Vector_3(source_point, rotatedTarget);
     }
     overlap = current_move*currentTargetFaceNormal;
     if (overlap > baseAgreement +.01) {
       //unit test to see if we've got the shift right
-      std::cout << "overlap too high to continue. " << std::endl;
-      std::cout << "final target location " << rotatedTarget <<std::endl;
       break;
     }
-    std::cout << "final target location " << rotatedTarget << std::endl;
-
     //check length of current_move before and after rotation
-    std::cout << "overlap of current_move with target face normal: " << overlap  << std::endl;
-
     currentSourceFace = currentTargetFace;
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 
