@@ -113,14 +113,14 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = 1.1;
+  double sigma = 1;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   
   for (std::size_t i = 0; i < distances.size(); i++) {
-    force+= LJForce(distances[i],tangents[i], epsilon, sigma);    
+    force+= simpleRepulsion(distances[i],tangents[i], sigma);    
   } 
-  std::cout << "Calculated force magnitude is " << vectorMagnitude(force) << std::endl; 
+  //std::cout << "Calculated force magnitude is " << vectorMagnitude(force) << std::endl; 
   return force;
 }
 

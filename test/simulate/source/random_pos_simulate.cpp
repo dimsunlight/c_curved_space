@@ -49,6 +49,9 @@ typedef typename Surface_mesh_shortest_path::Face_location              Face_loc
 typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_face_graph_primitive;
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
+typedef std::mt19937                                                    MTgenerator; //mersenne-twister generator
+typedef std::uniform_real_distribution<float>                           distribution;
+
 
 //utility functions
 
@@ -60,16 +63,20 @@ float distBetween(Point_3 point1,Point_3 point2) {
   return sqrt(slength);
 }
 
-float random_in_range(float range_min, float range_max, int seed)
+MTgenerator make_generator(int seed)
 {
-  //uses mersenne twister to get a random real # 
+  //create random number generator using seed parameter. 
 
-  std::random_device                   rand_dev;
-  std::mt19937                         generator(rand_dev());
+  std::random_device                  rand_dev;
+  MTgenerator                         generator(rand_dev());
   generator.seed(seed); //seeded for reproducibility -- make sure we use the same sequence every time :)  
-  std::uniform_real_distribution<float>  distr(range_min, range_max);
 
-  return distr(generator);
+  return generator;
+}
+
+distribution distribution_of_range(float range_min, float range_max) {
+  distribution distro(range_min, range_max);
+  return distro; 
 }
 
 float sinplane_weight(float x, float y) {
@@ -82,16 +89,22 @@ float torus_weight(float a, float c, float u, float v) {
   return (c+a*cos(v))/(c+a);
 }
 
-Point_3 sinplane_sample(int seed) {
+Point_3 sinplane_sample(MTgenerator& gen) {
+  //pass by address above to ensure that we sequentially sample 
+  //from the generator without using the same starting point.
+  distribution SPdistro = distribution_of_range(-1.0,1.0);
+  distribution weightDistro = distribution_of_range(0.0,1.0); 
   float X;
   float Y;
   float W;
   float weight;
   Point_3 returnPoint = Point_3(NULL,NULL,NULL);
   while (returnPoint == Point_3(NULL,NULL,NULL)) {
-    X = random_in_range(-1.0,1.0,seed);
-    Y = random_in_range(-1.0,1.0,seed);
-    W = random_in_range(0,1.0,seed);
+    //goal -- reference gen by address so each call to gen advances the 
+    //rng forward once
+    X = SPdistro(gen);
+    Y = SPdistro(gen);
+    W = weightDistro(gen);
     weight = sinplane_weight(X,Y);
     if (W <= weight) {
       returnPoint = Point_3(X,Y,sin(X));
@@ -101,46 +114,50 @@ Point_3 sinplane_sample(int seed) {
   return returnPoint;
 }
 
-Point_3 torus_sample(float a, float c, int seed) {
-  //rejection method sample on a torus; that is, reject anything without the appropriate weight
+Point_3 torus_sample(float a, float c, MTgenerator& gen) {
+  //rejection method sample on a torus; that is, reject anything above the corresponding weight. 
+  //we pass a mersenne-twister generator by reference 
+  distribution angularDistro = distribution_of_range(0.0, 2*M_PI);
+  distribution weightDistro = distribution_of_range(0.0,1.0); 
   float U;
   float V;
   float W;
   float weight;
   Point_3 returnPoint = Point_3(NULL,NULL,NULL);
-  int seedChanger = 11; //modifies the seed to avoid infinite loops with no sample
-  		        //without sacrificing repeatability. 
   while (returnPoint == Point_3(NULL,NULL,NULL)) {
-    U = random_in_range(0.0, 2*M_PI, seed*seedChanger);
-    V = random_in_range(0.0, 2*M_PI, seed*seedChanger);
-    W = random_in_range(0.0, 1.0, seed*seedChanger);
+    U = angularDistro(gen);
+    V = angularDistro(gen);
+    W = weightDistro(gen);
     weight = torus_weight(a,c,U,V);
     if (W <= weight) {
       returnPoint = Point_3((c+a*cos(V))*cos(U), (c+a*cos(V))*sin(U), a*sin(V));
       return returnPoint;
     }
-    seedChanger++;
   }
   //this should never happen, but just to avoid false error messages
   return Point_3(NULL,NULL,NULL);//filler point to check if we have sampled at all
 }
 
-std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
+std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c, int seed=1997) {
   //I use std::vectors of point_3 objects for positions, so we loop
   //to create a similar vector for n random positions
   std::vector<Point_3> sample_points = {};
-  int seedStart = 1997;
+  sample_points.reserve(n);
+  MTgenerator gen = make_generator(seed); 
+  
   for (std::size_t i=0; i < n; i++) {
-    sample_points.push_back(torus_sample(a,c, seedStart+i));
+    sample_points.push_back(torus_sample(a,c, gen));
   }
   return sample_points;  
 }
 
-std::vector<Point_3> n_sinplane_sample_points(std::size_t n) {
+std::vector<Point_3> n_sinplane_sample_points(std::size_t n, int seed = 1997) {
   std::vector<Point_3> sample_points = {};
-  int seedStart = 1997;
+  sample_points.reserve(n);
+  MTgenerator gen = make_generator(seed); 
+
   for (std::size_t i=0; i < n; i++) {
-    sample_points.push_back(sinplane_sample(seedStart+i));
+    sample_points.push_back(sinplane_sample(gen));
   }
   return sample_points;
 }
@@ -197,6 +214,7 @@ float averageTime(std::vector<std::chrono::milliseconds> times,std::size_t times
   return sum/n;
 }
 
+
 int main (int argc, char* argv[]) {
 
   std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
@@ -208,8 +226,8 @@ int main (int argc, char* argv[]) {
     return EXIT_FAILURE;
   }
 
-  std::size_t timesteps = 2;
-  double      stepsize  =.001;
+  std::size_t timesteps = 50;
+  double      stepsize  =.0001;
   double  neighbor_cutoff = 8;
   std::size_t n_simulations = 50;
 
@@ -228,16 +246,21 @@ int main (int argc, char* argv[]) {
 
   const std::string times_filename = "torus_times.txt";
   std::ofstream times_file(times_filename);
-  std::cout << "Making simulations, timestep size " << stepsize << " for " << timesteps << "timesteps." <<  std::endl;
-  /*
+  std::cout << "Making simulations, timestep size " << stepsize << " for " << timesteps << " timesteps." <<  std::endl;
+  
   for (std::size_t iter = 0; iter < n_simulations; iter++) {
+    if (iter > 0) std::cout << "\n" << std::endl;
+    forceMagnitudes.clear();
     std::cout << "run number: " << iter << std::endl;
-    num_particles = 2+iter*4;  
+    num_particles = 2+iter*4;
+    std::cout << num_particles << " sample points." << std::endl;
+    forceMagnitudes.reserve(num_particles*timesteps);
+
     particle_locations = n_torus_sample_points(num_particles, 1, 3);
-  */
-    //std::cout << "printing locations: " << std::endl;
-    //for (Point_3 location: particle_locations) std::cout << "(" <<location << ")"  << std::endl;
-    num_particles = 198;
+    std::cout << "sample points are: " << std::endl; 
+    for (Point_3 entry: particle_locations) std::cout << "{" << entry.x() << ", " << entry.y() << ", " << entry.z()  << "}, ";
+    std::cout << "\n" << std::endl;
+    
     particle_locations = n_torus_sample_points(num_particles,1,3);
     const std::string trajectory_filename = "random_position_trajectory.txt";
     std::ofstream trajectory_file(trajectory_filename);
@@ -284,15 +307,29 @@ int main (int argc, char* argv[]) {
     std::cout << "Average time taken per timestep: " << averageTime(timestep_costs,timesteps)/timesteps << "ms" <<  std::endl;
     times_file << num_particles << ", " << averageTime(timestep_costs,timesteps)/timesteps << std::endl;
     timestep_costs.clear();
-    std::cout << "outputting force magnitudes from simulation." << std::endl;
-    for (double item: forceMagnitudes) std::cout << item << ", ";
-
-  //}
+    //std::cout << "outputting force magnitudes from simulation." << std::endl;
+    // for (double item: forceMagnitudes) std::cout << item << ", ";
+    //std::cout << std::endl; 
+  }
 
   return 0;
 }
 
 
 
+/*
+int main () {
+  //testing main function for random sample generation -- just to see how well the generator does... 
+  std::size_t numpoints = 1000;
+  
+  std::vector<Point_3> sin_sample = n_sinplane_sample_points(numpoints);
+  std::vector<Point_3> torus_sample = n_torus_sample_points(numpoints,1,3);
+ 
+  std::cout << "printing random samples" << std::endl;
+  for (Point_3 entry: sin_sample) std::cout << "{" << entry.x() << ", " << entry.y() << ", " << entry.z()  << "}, "; 
+  std::cout << "\n" << std::endl;
+  for (Point_3 entry: torus_sample) std::cout << "{" << entry.x() << ", " << entry.y() << ", " << entry.z()  << "}, ";
 
-
+  return 0;
+}
+*/

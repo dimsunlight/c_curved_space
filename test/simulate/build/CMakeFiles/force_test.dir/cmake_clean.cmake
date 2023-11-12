@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/force_test.dir/force_dist_test.cpp.o"
+  "CMakeFiles/force_test.dir/force_dist_test.cpp.o.d"
   "CMakeFiles/force_test.dir/get_force.cpp.o"
+  "CMakeFiles/force_test.dir/get_force.cpp.o.d"
   "CMakeFiles/force_test.dir/utils.cpp.o"
+  "CMakeFiles/force_test.dir/utils.cpp.o.d"
   "force_test"
   "force_test.pdb"
 )

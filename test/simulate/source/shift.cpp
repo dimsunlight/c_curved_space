@@ -47,25 +47,25 @@ typedef PMP::Face_location<Triangle_mesh, FT>                           Face_loc
 Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
 
- bool throughVertex = intersected.size() == 1;
+  bool throughVertex = intersected.size() == 1;
 
- if (throughVertex) {
-   std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
-   const std::string errors_filename = "throughverts" + std::to_string(source_face) + ".txt";
+  if (throughVertex) {
+    std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
+    const std::string errors_filename = "throughverts" + std::to_string(source_face) + ".txt";
 
-   std::ofstream error_log(errors_filename);
+    std::ofstream error_log(errors_filename);
 
-   error_log << source_face << "\n";
-   error_log << pos; 
-   double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
-   return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
+    error_log << source_face << "\n";
+    error_log << pos; 
+    double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
+    return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
                                                                  //But it should identify things just fine most of the time.
- }
+  }
  
- Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
- Face_index provisional_target_face = mesh.face(intersected_edge);
- if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
- return provisional_target_face;
+  Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
+  Face_index provisional_target_face = mesh.face(intersected_edge);
+  if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
+  return provisional_target_face;
 }
 
 std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices) {
@@ -212,6 +212,9 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
   while(intersection){
     counter += 1;
+    if (counter < 1) {
+      std::cout < "shift iteration " << counter << std::endl;
+    }
     //vertexList = getVertexPositions(mesh,currentSourceFace);
     vertexList = getVertexIndices(mesh,currentSourceFace);
 
@@ -238,7 +241,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
     Face_location newMoveLocation = rotateIntoNewFace(mesh, currentSourceFace, currentTargetFace, source_point, target);
     Point_3 rotatedTarget = PMP::construct_point(newMoveLocation,mesh);
-    std::cout << "rotated target to " << rotatedTarget << std::endl;
 
     //check that we've rotated in the right direction via overlap
     current_move = Vector_3(source_point, rotatedTarget);//source is now intersection
@@ -257,10 +259,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
       std::cout << "final target location " << rotatedTarget <<std::endl;
       break;
     }
-    std::cout << "final target location " << rotatedTarget << std::endl;
-
-    //check length of current_move before and after rotation
-    std::cout << "overlap of current_move with target face normal: " << overlap  << std::endl;
 
     currentSourceFace = currentTargetFace;
   }
