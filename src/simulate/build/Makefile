@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/source
+CMAKE_SOURCE_DIR = /home/toler/projects/CGAL_curvature/src/simulate/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build
+CMAKE_BINARY_DIR = /home/toler/projects/CGAL_curvature/src/simulate/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles /home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/main/sim_tests/sim_profiling/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/toler/projects/CGAL_curvature/src/simulate/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
