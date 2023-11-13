@@ -39,10 +39,7 @@ the simulation routine in src. I'll put some instructions there & in test, becau
 
 
 ## TODO: 
-- Clean up src/simulate's files so that it's only the stable simulate that can run a simulation on a mesh. 
 - Clean up simulate files within test. 
-- Fix MT sampling within random_pos_simulate (within test file -- unnecessary, for now, in src) so that we get 
-sample that's actually random. 
 - Create some examples. 
 - Make code more user friendly (not having to vim into force function to change what force we use, for example, or
 vim into simulate function to change timesteps)
