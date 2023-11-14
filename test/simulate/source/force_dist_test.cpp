@@ -75,7 +75,8 @@ float torus_weight(float a, float c, float u, float v) {
 Point_3 sinplane_sample(MTgenerator& gen) {
   //pass by address above to ensure that we sequentially sample 
   //from the generator without using the same starting point.
-  distribution SPdistro = distribution_of_range(-1.0,1.0);
+  float sp_ext = 5.0;
+  distribution SPdistro = distribution_of_range(-sp_ext,sp_ext);
   distribution weightDistro = distribution_of_range(0.0,1.0); 
   float X;
   float Y;
@@ -148,8 +149,8 @@ std::vector<Point_3> n_sinplane_sample_points(std::size_t n, int seed = 1997) {
 
 int main(int argc, char* argv[]) {
   std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
-  const std::string t_filename = (argc > 1) ? argv[1] : CGAL::data_file_path("torus_isotropic_remesh.off");
-  const std::string sp_filename = (argc >2) ? argv[2] : CGAL::data_file_path("heightmesh_isotropic_remesh.off"); 
+  const std::string t_filename = (argc > 1) ? argv[1] : CGAL::data_file_path("torus_isotropic.off");
+  const std::string sp_filename = (argc >2) ? argv[2] : CGAL::data_file_path("sp_isotropic_remesh.off"); 
   Triangle_mesh tor_mesh;
   Triangle_mesh sp_mesh;
   if(!CGAL::IO::read_polygon_mesh(t_filename,tor_mesh) || !CGAL::is_triangle_mesh(tor_mesh))
@@ -162,8 +163,6 @@ int main(int argc, char* argv[]) {
     std::cerr << "Invalid input file." << std::endl;
     return EXIT_FAILURE;
   }
-
-  //for (int i = 0; i < 100; i++) std::cout << torus_sample(1,3) << std::endl; //check sampling for accuracy
   
   //now: get two random points on the torus, calculate distance between them, see how long it took to 
   //calculate, and place time to calculate in a bin based on how far apart they were. The binning
@@ -175,9 +174,9 @@ int main(int argc, char* argv[]) {
   std::size_t targetcount = 1;
   
   const std::string tor_filename = "torus_distance_and_time.csv";
-  const std::string sp_filename = "sp_distance_and_time.csv";
+  const std::string sin_filename = "sp_distance_and_time.csv";
   std::ofstream torusdt_file(tor_filename);
-  std::ofstream spdt_file(sp_filename); 
+  std::ofstream spdt_file(sin_filename); 
   
   MTgenerator gen = make_generator(2019); //seed here is not particular, just picked a random year 
 
@@ -189,7 +188,7 @@ int main(int argc, char* argv[]) {
     Vector_3 f_on_p = force_on_source(tor_mesh, point1, point2, targetcount);
     auto end = std::chrono::high_resolution_clock::now();
     f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-    dist_and_tang = calcTangentsAndDistances (mesh, point1, point2, targetcount);
+    dist_and_tang = calcTangentsAndDistances (tor_mesh, point1, point2, targetcount);
     if (torusdt_file.is_open()){
       torusdt_file << dist_and_tang.first[0] << ", " <<  f_time.count();
       torusdt_file << "\n";
@@ -204,7 +203,7 @@ int main(int argc, char* argv[]) {
     Vector_3 f_on_p = force_on_source(sp_mesh, point1, point2, targetcount);
     auto end = std::chrono::high_resolution_clock::now();
     f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-    dist_and_tang = calcTangentsAndDistances (mesh, point1, point2, targetcount);
+    dist_and_tang = calcTangentsAndDistances (sp_mesh, point1, point2, targetcount);
     if (spdt_file.is_open()){
       spdt_file << dist_and_tang.first[0] << ", " <<  f_time.count();
       spdt_file << "\n";

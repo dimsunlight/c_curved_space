@@ -51,6 +51,11 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
   std::vector<double> distances;
   std::vector<Vector_3> tangents;
   std::vector<Point_3> points; 
+  //"distances" and "tangents" will both store data from a path between a 
+  // pair of particles, so we can directly reserve # of pairs
+  distances.reserve(num_targets);
+  tangents.reserve(num_targets);
+
   for (std::size_t i = 0; i < num_targets; i++) {
     // std::cout << "iteration point " << i+1 << ", at position " << targets[i] <<  "; calling locate" << std::endl;
     Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);

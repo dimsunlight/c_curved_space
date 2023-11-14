@@ -1,8 +1,8 @@
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/edit_cache.dir
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/torus_mesh.dir
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/heightmap_mesh_remesh.dir
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/rebuild_cache.dir
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/cgal_check_build_system.dir
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/compute_normals.dir
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/ALL_CGAL_TARGETS.dir
-/home/toler/projects/CGAL_curvature/main/simple_mesh_build/CMakeFiles/heightmap_mesh.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/edit_cache.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/torus_mesh.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/sinplane_isotropic.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/rebuild_cache.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/cgal_check_build_system.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/compute_normals.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/ALL_CGAL_TARGETS.dir
+/home/twebb8/projects/cgal/c_curved_space/test/mesher/build/CMakeFiles/heightmap_mesh.dir

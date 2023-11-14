@@ -25,6 +25,7 @@ typedef CGAL::Complex_2_in_triangulation_3<Tr> C2t3;
 typedef Tr::Geom_traits GT;
 typedef GT::Sphere_3 Sphere_3;
 typedef GT::Point_3 Point_3;
+typedef GT::Vector_3 Vector_3;
 typedef GT::FT FT;
 typedef FT (*Function)(Point_3);
 typedef CGAL::Implicit_surface_3<GT, Function> Surface_3;
@@ -32,6 +33,7 @@ typedef CGAL::Surface_mesh<Point_3>            Surface_mesh;
 typedef Surface_mesh::Vertex_index             Vertex_index;
 typedef Surface_mesh::Edge_index               Edge_index;
 typedef Surface_mesh::Halfedge_index           Halfedge_index;
+typedef Surface_mesh::Face_index               Face_index;
 typedef Surface_mesh::Face_range               Face_range;
 
 typedef boost::graph_traits<Surface_mesh>::vertex_descriptor Vertex_descriptor;
@@ -43,7 +45,6 @@ typedef boost::graph_traits<Surface_mesh>::edge_descriptor   Edge_descriptor;
 namespace SMS = CGAL::Surface_mesh_simplification;
 namespace PMP = CGAL::Polygon_mesh_processing;
 
-
 FT torus_function(Point_3 p) {
   //eqn: (c-sqrt(x^2+y^2))^2 + z^2 = a^2
   //for now, defining c and a here so they'll be well-behaved for tests
@@ -52,6 +53,29 @@ FT torus_function(Point_3 p) {
   const FT x2 = p.x()*p.x(), y2 = p.y()*p.y(), z2 = p.z()*p.z();
   return (c-sqrt(x2+y2))*(c-sqrt(x2+y2))+z2 - a*a;
 }
+
+double vectorMagnitude(Vector_3 v) {
+  auto const slen = v.x()*v.x() + v.y()*v.y()+v.z()*v.z();
+  auto d = CGAL::approximate_sqrt(slen);
+  return d;
+}
+
+//standard vertex position finder from utils file 
+std::vector<Point_3> getVertexPositions(Surface_mesh mesh, Face_index fIndex) {
+
+  Surface_mesh::Halfedge_index hf = mesh.halfedge(fIndex);
+  std::vector<Point_3> vertices;
+
+  for(Surface_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh))
+  {
+    Surface_mesh::Vertex_index vi = source(hi, mesh);
+    vertices.push_back( mesh.point(vi)); //working with xyz points rather than indices --
+                                         //don't need to alter base mesh, so points fine
+  }
+
+  return vertices;
+}
+
 
 float meanEdgeLength(Surface_mesh mesh){
   float mean = 0, min, max, length;
@@ -80,6 +104,25 @@ float meanEdgeLength(Surface_mesh mesh){
   return mean;
 }
 
+double triangle_area(Point_3 v1, Point_3 v2, Point_3 v3) {
+  Vector_3 side1 = Vector_3(v1, v2);
+  Vector_3 side2 = Vector_3(v1, v3);
+  return vectorMagnitude(CGAL::cross_product(side1,side2))/2;
+}
+
+float meanTriangleArea(Surface_mesh mesh) {
+  float mean = 0;
+  int count = 0;
+  auto facelist = mesh.faces();
+  for (Face_index face: facelist) {
+    ++count;
+    std::vector<Point_3> vs = getVertexPositions(mesh,face);
+    mean += triangle_area(vs[0],vs[1],vs[2]);
+  }
+  return mean/count;
+}
+
+
 int main() {
   Tr tr;            // 3D-Delaunay triangulation
   C2t3 c2t3 (tr);   // 2D-complex in 3D-Delaunay triangulation
@@ -107,7 +150,8 @@ int main() {
 
   Face_range smFaces = sm.faces();
   PMP::isotropic_remeshing(smFaces, meanLength, sm);
-  CGAL::IO::write_polygon_mesh("torus_isotropic_remesh.off", sm, CGAL::parameters::stream_precision(17));
+  CGAL::IO::write_polygon_mesh("torus_isotropic.off", sm, CGAL::parameters::stream_precision(17));
 
   std::cout << "# points after iso remesh " << tr.number_of_vertices() << "\n";
+  std::cout << "mean triangle area after iso remesh: " << meanTriangleArea(sm) << std::endl;
 }

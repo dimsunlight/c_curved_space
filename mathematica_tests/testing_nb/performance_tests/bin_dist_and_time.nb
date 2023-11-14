@@ -1,0 +1,459 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17426,        451]
+NotebookOptionsPosition[     15971,        422]
+NotebookOutlinePosition[     16364,        438]
+CellTagsIndexPosition[     16321,        435]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"torDistancesAndTimes", "=", 
+   RowBox[{
+   "Import", "[", 
+    "\"\</home/twebb8/projects/cgal/c_curved_space/mathematica_tests/data_\
+files/performance_data/torus_distance_and_time.csv\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.9051957956888466`*^9, 3.9051958173754263`*^9}, {
+   3.9051958616598644`*^9, 3.90519589269795*^9}, {3.905252557341139*^9, 
+   3.905252582004065*^9}, 3.905252670329687*^9, 3.905252765524331*^9, {
+   3.9089754322855053`*^9, 3.9089755363747387`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"93cf3f7c-e0b3-48e3-b9b6-cd2b4558e032"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tableOfDistances", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"torDistancesAndTimes", "[", 
+      RowBox[{"[", 
+       RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "torDistancesAndTimes", "]"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9051958719902315`*^9, 3.9051959268998814`*^9}, {
+  3.908975475879586*^9, 3.908975496169976*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"7c7440a4-627e-4d4d-90a5-70bdf9572e98"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"binnedDistances", "=", 
+    RowBox[{"BinLists", "[", 
+     RowBox[{"tableOfDistances", ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "10", ",", ".5"}], "}"}]}], "]"}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "this", " ", "is", " ", "the", " ", "binning", " ", "of", " ", "the", " ",
+      "distances"}], ",", " ", 
+    RowBox[{"but", " ", 
+     RowBox[{"doesn", "'"}], "t", " ", "retain", " ", "the", " ", "time", " ", 
+     RowBox[{"information", " ", "--"}], " ", "we", " ", "need", " ", "to", 
+     " ", "get", " ", "indices", " ", "to", " ", "make", " ", "this", " ", 
+     "work"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.905195933770727*^9, 3.9051959487313347`*^9}, {
+  3.905195996371073*^9, 3.9051960218841076`*^9}, {3.9051960557475185`*^9, 
+  3.9051960690777855`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"e836410f-f1ab-4109-9ce4-8e4ca06fa55f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tableOfDistancesIndices", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{"tableOfDistances", ",", 
+          RowBox[{"binnedDistances", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", ",", "i"}], "]"}], "]"}], ",", "3"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", 
+           RowBox[{"binnedDistances", "[", 
+            RowBox[{"[", "j", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", 
+       RowBox[{"Length", "[", "binnedDistances", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.9051960762874136`*^9, 3.905196115407197*^9}, {
+  3.905196218903982*^9, 3.9051962816054025`*^9}, {3.9051963497456493`*^9, 
+  3.90519635212897*^9}, {3.9051964562854824`*^9, 3.9051964692704782`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"3ee41b21-b8f3-4650-9e82-6c32474d80d6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tableOfTimes", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"torDistancesAndTimes", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"tableOfDistancesIndices", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", ",", "i"}], "]"}], "]"}], ",", "2"}], "]"}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "[", 
+          RowBox[{"tableOfDistancesIndices", "[", 
+           RowBox[{"[", "j", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", 
+       RowBox[{"Length", "[", "tableOfDistancesIndices", "]"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9051963272911024`*^9, 3.9051964399499617`*^9}, 
+   3.905196520480384*^9, {3.9052526606450777`*^9, 3.905252666747305*^9}, {
+   3.905253360184409*^9, 3.905253363160283*^9}, {3.9089754758811817`*^9, 
+   3.9089754961708403`*^9}, {3.90897554212017*^9, 3.908975548557708*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"7498227a-2ab8-4ea1-92c1-6fc39aaec057"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"timeAverages", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", 
+      RowBox[{"tableOfTimes", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{
+        RowBox[{"Length", "[", "tableOfTimes", "]"}], "-", "1"}]}], "}"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"timeBins", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{".25", "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"i", "-", "1"}], ")"}], "/", "2"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "timeAverages", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"averagesWithBins", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"timeBins", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], ",", 
+       RowBox[{"timeAverages", "[", 
+        RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "timeAverages", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"logAveragesWithBins", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"timeBins", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"timeAverages", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "timeAverages", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.905253385734304*^9, 3.905253444955653*^9}, {
+  3.905253772874432*^9, 3.905253804618709*^9}, {3.905254893980916*^9, 
+  3.905254932858255*^9}, {3.905254973858789*^9, 3.905255049065812*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"d8ca1392-fae5-44e6-8b3d-2bd41f104bd9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"fitModel", "=", " ", 
+   RowBox[{"LinearModelFit", "[", 
+    RowBox[{"averagesWithBins", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "x"}], "}"}], ",", "x"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nonLinearFitModel", " ", "=", " ", 
+   RowBox[{"NonlinearModelFit", "[", 
+    RowBox[{"averagesWithBins", ",", 
+     RowBox[{
+      RowBox[{"x", "^", "a"}], "+", "b"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}], ",", "x"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"r2line", " ", "=", " ", 
+  RowBox[{"fitModel", "[", "\"\<RSquared\>\"", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"r2power", "=", 
+  RowBox[{"nonLinearFitModel", "[", "\"\<RSquared\>\"", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.905254004242029*^9, 3.9052540106393538`*^9}, {
+  3.905254041105214*^9, 3.905254041863225*^9}, {3.905254143720104*^9, 
+  3.905254168438528*^9}, {3.905254365845779*^9, 3.905254433860896*^9}, {
+  3.905254945469545*^9, 3.9052549467465353`*^9}, {3.905255069464818*^9, 
+  3.9052550970245256`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"8a9e7884-b45b-47ae-8d8f-3857c8949614"],
+
+Cell[BoxData["0.6168854665818853`"], "Output",
+ CellChangeTimes->{
+  3.905254011087695*^9, {3.905254042319569*^9, 3.9052540466225777`*^9}, {
+   3.905254147791883*^9, 3.905254168950838*^9}, {3.905254419357253*^9, 
+   3.9052544341749983`*^9}, 3.9052549473554077`*^9, {3.905254978284391*^9, 
+   3.905255000139727*^9}, 3.9052550315713587`*^9, 3.9052550973383636`*^9, 
+   3.9052551937151623`*^9, 3.908975562310409*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"41fba846-0b43-4627-9bec-92538a82a8b3"],
+
+Cell[BoxData["0.9997207740271016`"], "Output",
+ CellChangeTimes->{
+  3.905254011087695*^9, {3.905254042319569*^9, 3.9052540466225777`*^9}, {
+   3.905254147791883*^9, 3.905254168950838*^9}, {3.905254419357253*^9, 
+   3.9052544341749983`*^9}, 3.9052549473554077`*^9, {3.905254978284391*^9, 
+   3.905255000139727*^9}, 3.9052550315713587`*^9, 3.9052550973383636`*^9, 
+   3.9052551937151623`*^9, 3.908975562311555*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"7849c8bc-d855-4d3f-a574-be559f67da98"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"{", 
+  RowBox[{
+  "fitModel", ",", "r2line", ",", "nonLinearFitModel", ",", "r2power"}], 
+  "}"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"forceFit", " ", "=", " ", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"fitModel", "[", "x", "]"}], ",", 
+       RowBox[{"nonLinearFitModel", "[", "x", "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ttcDataPlot", " ", "=", " ", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"averagesWithBins", ",", 
+     RowBox[{
+     "PlotLabel", "->", "\"\<Time vs. Distance, Torus Avg Area .025\>\""}], 
+     ",", " ", 
+     RowBox[{"AxesLabel", "->", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Distance (.5 width bins)\>\"", ",", "\"\<Time (ms)\>\""}],
+        "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "ttcDataPlot", "]"}]}], "Input",
+ CellChangeTimes->{{3.905254053816326*^9, 3.905254104617782*^9}, {
+  3.9052544430956717`*^9, 3.90525449732474*^9}, {3.9052551872662573`*^9, 
+  3.9052552009919577`*^9}, {3.9089756100702543`*^9, 3.908975700427449*^9}, {
+  3.9089757333232403`*^9, 3.9089757659589157`*^9}},
+ NumberMarks->False,
+ CellLabel->"In[56]:=",ExpressionUUID->"afa43ae1-ce5c-460e-afb3-5717dae7471a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"FittedModel", "[", 
+     TagBox[
+      PanelBox[
+       TagBox[
+        RowBox[{"49.982225353970236`", "\[VeryThinSpace]", "+", 
+         RowBox[{"0.3625604035386073`", " ", "x"}]}],
+        Short[#, 2]& ],
+       FrameMargins->5],
+      Editable -> False], "]"}],
+    InterpretTemplate[
+    FittedModel[{
+      "Linear", {49.982225353970236`, 
+       0.3625604035386073}, {{$CellContext`x}, {1, $CellContext`x}}, {0, 
+       0}}, {{1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 
+      1., 1., 1.}}, {{0.25, 
+        Rational[254, 5]}, {0.75, 
+        Rational[251, 5]}, {1.25, 
+        Rational[962, 19]}, {1.75, 
+        Rational[2281, 45]}, {2.25, 
+        Rational[3259, 63]}, {2.75, 
+        Rational[3023, 59]}, {3.25, 
+        Rational[4001, 78]}, {3.75, 
+        Rational[3954, 77]}, {4.25, 
+        Rational[2915, 57]}, {4.75, 
+        Rational[3539, 69]}, {5.25, 
+        Rational[4018, 79]}, {5.75, 
+        Rational[1574, 31]}, {6.25, 
+        Rational[4893, 95]}, {6.75, 
+        Rational[3536, 69]}, {7.25, 
+        Rational[1947, 37]}, {7.75, 
+        Rational[2695, 51]}, {8.25, 
+        Rational[1630, 31]}, {8.75, 
+        Rational[1034, 19]}, {9.25, 
+        Rational[331, 6]}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEf7CH0BXtU/gs0/hc0/h80PpMDKp8Njc+FxudD
+4wui8YXR+KJofHE0viQaXxqNL4vGl0flNyig8RXR+EoOAKx5I2U=
+      "], 
+      Function[Null, 
+       Internal`LocalizedBlock[{$CellContext`x}, #], {HoldAll}]]& ],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->True], ",", "0.6168854665818853`", ",", 
+   TagBox[
+    RowBox[{"FittedModel", "[", 
+     TagBox[
+      PanelBox[
+       TagBox[
+        RowBox[{"49.25270672022136`", "\[VeryThinSpace]", "+", 
+         SuperscriptBox["x", "0.609386635000119`"]}],
+        Short[#, 2]& ],
+       FrameMargins->5],
+      Editable -> False], "]"}],
+    InterpretTemplate[
+    FittedModel[{
+      "Nonlinear", {$CellContext`a -> 0.609386635000119, $CellContext`b -> 
+        49.25270672022136}, {{$CellContext`x}, $CellContext`b + \
+$CellContext`x^$CellContext`a}}, {1}, {{0.25, 
+        Rational[254, 5]}, {0.75, 
+        Rational[251, 5]}, {1.25, 
+        Rational[962, 19]}, {1.75, 
+        Rational[2281, 45]}, {2.25, 
+        Rational[3259, 63]}, {2.75, 
+        Rational[3023, 59]}, {3.25, 
+        Rational[4001, 78]}, {3.75, 
+        Rational[3954, 77]}, {4.25, 
+        Rational[2915, 57]}, {4.75, 
+        Rational[3539, 69]}, {5.25, 
+        Rational[4018, 79]}, {5.75, 
+        Rational[1574, 31]}, {6.25, 
+        Rational[4893, 95]}, {6.75, 
+        Rational[3536, 69]}, {7.25, 
+        Rational[1947, 37]}, {7.75, 
+        Rational[2695, 51]}, {8.25, 
+        Rational[1630, 31]}, {8.75, 
+        Rational[1034, 19]}, {9.25, 
+        Rational[331, 6]}}, 
+      Function[Null, 
+       Internal`LocalizedBlock[{$CellContext`a, $CellContext`b, \
+$CellContext`x}, #], {HoldAll}]]& ],
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->True], ",", "0.9997207740271016`"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9052541050417013`*^9, {3.905254449189892*^9, 3.905254498184795*^9}, {
+   3.905254979668645*^9, 3.9052550013407593`*^9}, 3.905255032633068*^9, 
+   3.905255201367347*^9, 3.908975567489356*^9, 3.908975610731779*^9, 
+   3.9089756938684053`*^9, {3.908975748180204*^9, 3.908975768139729*^9}},
+ CellLabel->"Out[56]=",ExpressionUUID->"d3bca124-3cb6-49a7-be0e-27c11ec04e4c"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`], 
+    AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQBmIQDQEX7NPAwNMBwn9hP2smEEjC+F/seZ+aTrkeAOP/
+sW/WvdGkGwHjMzlcL429XnoXxmdzYOFVL42fB+NzOcTsexq9bymMz+fQsfmT
+8KM1ML6gg/zBWpbvE2F8YYdH6VN+SMLVizrcafkZq5sH44s7JPcYHpNIhvEl
+HbhbJpatOQDjSztIqda5dc6H8WUdfq6R9pno7wXlyzu8eQ0E2VB+g4KDl+bS
+KUFeML6iQ5xzJdDL3lC+kkMoCEz1dgAAS6lPHg==
+     "]]}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["\"Distance (.5 width bins)\"", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox["\"Time (ms)\"", HoldForm], TraditionalForm]},
+  AxesOrigin->{0, 49.9240740740742},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}},
+  PlotLabel->FormBox[
+   "\"Time vs. Distance, Torus Avg Area .025\"", TraditionalForm],
+  PlotRange->{{0, 9.25}, {49.9240740740742, 55.166666666666664`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.9052541050417013`*^9, {3.905254449189892*^9, 3.905254498184795*^9}, {
+   3.905254979668645*^9, 3.9052550013407593`*^9}, 3.905255032633068*^9, 
+   3.905255201367347*^9, 3.908975567489356*^9, 3.908975610731779*^9, 
+   3.9089756938684053`*^9, {3.908975748180204*^9, 3.908975768190255*^9}},
+ CellLabel->"Out[59]=",ExpressionUUID->"1553ca11-1b12-4f85-a855-830815e4c9d2"]
+}, Open  ]]
+},
+WindowSize->{709.5, 732.75},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"13.1 for Linux x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"83b6f3c3-42e0-4e16-b24a-2d06ecd3cf04"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 604, 12, 92, "Input",ExpressionUUID->"93cf3f7c-e0b3-48e3-b9b6-cd2b4558e032"],
+Cell[1165, 34, 567, 14, 52, "Input",ExpressionUUID->"7c7440a4-627e-4d4d-90a5-70bdf9572e98"],
+Cell[1735, 50, 927, 21, 94, "Input",ExpressionUUID->"e836410f-f1ab-4109-9ce4-8e4ca06fa55f"],
+Cell[2665, 73, 1064, 26, 73, "Input",ExpressionUUID->"3ee41b21-b8f3-4650-9e82-6c32474d80d6"],
+Cell[3732, 101, 1127, 27, 93, "Input",ExpressionUUID->"7498227a-2ab8-4ea1-92c1-6fc39aaec057"],
+Cell[4862, 130, 1980, 57, 138, "Input",ExpressionUUID->"d8ca1392-fae5-44e6-8b3d-2bd41f104bd9"],
+Cell[CellGroupData[{
+Cell[6867, 191, 1160, 26, 95, "Input",ExpressionUUID->"8a9e7884-b45b-47ae-8d8f-3857c8949614"],
+Cell[8030, 219, 492, 7, 33, "Output",ExpressionUUID->"41fba846-0b43-4627-9bec-92538a82a8b3"],
+Cell[8525, 228, 492, 7, 33, "Output",ExpressionUUID->"7849c8bc-d855-4d3f-a574-be559f67da98"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9054, 240, 1339, 33, 139, "Input",ExpressionUUID->"afa43ae1-ce5c-460e-afb3-5717dae7471a"],
+Cell[10396, 275, 3467, 91, 48, "Output",ExpressionUUID->"d3bca124-3cb6-49a7-be0e-27c11ec04e4c"],
+Cell[13866, 368, 2089, 51, 196, "Output",ExpressionUUID->"1553ca11-1b12-4f85-a855-830815e4c9d2"]
+}, Open  ]]
+}
+]
+*)
+
