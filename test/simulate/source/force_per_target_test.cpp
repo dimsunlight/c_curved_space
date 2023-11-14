@@ -151,7 +151,7 @@ int main(int argc, char* argv[]) {
   const std::string read_filename = (argc > 1) ? argv[1] : CGAL::data_file_path("torus_isotropic.off");
   Triangle_mesh mesh;
   
-  if(!CGAL::IO::read_polygon_mesh(read_filename,mesh) || !CGAL::is_triangle_mesh(tor_mesh))
+  if(!CGAL::IO::read_polygon_mesh(read_filename,mesh) || !CGAL::is_triangle_mesh(mesh))
   {
     std::cerr << "Invalid input file." << std::endl;
     return EXIT_FAILURE;
@@ -171,8 +171,8 @@ int main(int argc, char* argv[]) {
   
   MTgenerator gen = make_generator(2019); //seed here is not particular, just picked a random year 
 
-  for (int i = 1; i < 100; i++) {
-    std::cout << "sampling from new particle arrangement" << std::endl;
+  for (int i = 1; i < 10000; i++) {
+    // std::cout << "sampling from new particle arrangement" << std::endl;
     point2.clear();
     point2.reserve(i);
     point1 = torus_sample(1,3, gen);
@@ -184,12 +184,14 @@ int main(int argc, char* argv[]) {
       point2.push_back(torus_sample(1,3,gen));
     }
 
+    /*
     //quick unit test to see if we're getting varied target points as expected
     std::cout << "printing target points." << std::endl;
     for (Point_3 point: point2) {
       std::cout << point << ", ";  
     }
     std::cout << std::endl;
+    */
 
     auto start = std::chrono::high_resolution_clock::now();
     Vector_3 f_on_p = force_on_source(mesh, point1, point2, i);

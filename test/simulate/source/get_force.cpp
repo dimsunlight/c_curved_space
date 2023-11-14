@@ -123,7 +123,7 @@ Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_
                                    //also handles case of no neighbors
 				   
   for (std::size_t i = 0; i < distances.size(); i++) {
-    force+= simpleRepulsion(distances[i],tangents[i], sigma);    
+    force+= simpleRepulsion(distances[i],tangents[i], sigma);
   } 
   //std::cout << "Calculated force magnitude is " << vectorMagnitude(force) << std::endl; 
   return force;
