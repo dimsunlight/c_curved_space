@@ -227,9 +227,9 @@ int main (int argc, char* argv[]) {
   }
 
   std::size_t timesteps = 50;
-  double      stepsize  =.0001;
+  double      stepsize  =.001;
   double  neighbor_cutoff = 8;
-  std::size_t n_simulations = 50;
+  std::size_t n_simulations = 100;
 
   std::size_t num_particles;
   std::vector<Point_3> particle_locations;
