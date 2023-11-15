@@ -1,0 +1,12 @@
+torusrb30.off,  0.0503395
+torusrb25.off,  0.0383892
+torusrb20.off,  0.026378
+torusrb18.off,  0.0197283
+torusrb15.off,  0.0146936
+torusrb12.off,  0.00928168
+torusrb10.off,  0.00636965
+torusrb08.off,  0.00409796
+
+
+
+

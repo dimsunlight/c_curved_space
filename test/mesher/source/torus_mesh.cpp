@@ -131,11 +131,12 @@ int main() {
                     Sphere_3(CGAL::ORIGIN, 20.)); // bounding sphere
   // Note that "20." above is the *squared* radius of the bounding sphere!
   // defining meshing criteria
-  int abound = 30.;
-  int rbound = 0.2;
-  std::string output_file_name = "torusrb" + std::to_string(rbound) + "ab" + std::to_string(abound) + ".off";  
+  float abound = 30.;
+  float rbound = 0.30;
+  int fancyrbound = rbound*100;
+  std::string output_file_name = "torusrb" + std::to_string(fancyrbound) + ".off";  
   CGAL::Surface_mesh_default_criteria_3<Tr> criteria(abound,  // angular bound
-                                                     0.2,  // radius bound
+                                                     rbound,  // radius bound
                                                      0.1); // distance bound
   // meshing surface
   CGAL::make_surface_mesh(c2t3, surface, criteria, CGAL::Non_manifold_tag());
@@ -150,8 +151,10 @@ int main() {
 
   Face_range smFaces = sm.faces();
   PMP::isotropic_remeshing(smFaces, meanLength, sm);
-  CGAL::IO::write_polygon_mesh("torus_isotropic.off", sm, CGAL::parameters::stream_precision(17));
-
+  
   std::cout << "# points after iso remesh " << tr.number_of_vertices() << "\n";
   std::cout << "mean triangle area after iso remesh: " << meanTriangleArea(sm) << std::endl;
-}
+  std::cout << "output file name " << output_file_name << std::endl;
+  CGAL::IO::write_polygon_mesh(output_file_name, sm, CGAL::parameters::stream_precision(17));
+
+  }
