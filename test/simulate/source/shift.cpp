@@ -188,7 +188,6 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   //initializations
   std::vector<Vertex_index> vertexList;
   std::vector<Point_3> targetVertices;
-  std::vector<Point_3> sharedEdge;
   std::vector<Point_3> forRotation;
   Point_3 target;
   Point_3 rotatedTarget;
@@ -208,8 +207,8 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
   //assuming we've fed in a vector tangent to the source face, we can use
   //its level of normal overlap as the baseline of normal overlap for rotations
   Vector_3 currentSourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
-  double baseAgreement = currentSourceNormal*move;
-
+  //double baseAgreement = currentSourceNormal*move;
+  //std::cout << "base agreement is " << baseAgreement << std::endl;
   while(intersection){
     counter += 1;
     if (counter > 1) {
@@ -246,12 +245,23 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
     current_move = Vector_3(source_point, rotatedTarget);//source is now intersection
 
     overlap = current_move*currentTargetFaceNormal;
-    if (overlap > baseAgreement+.01) {
+    //std::cout << "overlap is " << overlap << std::endl; //if your shifts get weird, uncomment this; if the 
+    //numbers are significantly deviating from zero, fix the below test and try that to see if angle 
+    //conventions are getting broken. 
+
+    //below unit test can cause spurious failures if the base overlap is the worst (which it often is
+    //when feeding in testing moves). sharedEdge doesn't exist at present -- can rewrite to use 
+    //face normals to create a rotation axis. 
+    /*
+    if (overlap > baseAgreement+.001) {
     //PLACEHOLDER to see if sign convention is breaking
+      std::cout << "overlap is " << overlap << std::endl;
       std::cout << "reversing rotation angle!" << std::endl;
+      //in below, sharededge doesn't exist -- this is actually just  a debug message
       rotatedTarget = rotateAboutAxis(forRotation, sharedEdge, -rotationAngle)[0];
       current_move = Vector_3(source_point, rotatedTarget);
     }
+    
     overlap = current_move*currentTargetFaceNormal;
     if (overlap > baseAgreement +.01) {
       //unit test to see if we've got the shift right
@@ -259,6 +269,7 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
       std::cout << "final target location " << rotatedTarget <<std::endl;
       break;
     }
+    */
 
     currentSourceFace = currentTargetFace;
   }

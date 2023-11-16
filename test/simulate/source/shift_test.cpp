@@ -86,13 +86,15 @@ int main(int argc, char* argv[]) {
  Vector_3 dummyDisplacement = normalizer(Vector_3(dummyPt,newTarget)); 
 
  //now loop over a few sizes relative to the average length scale of the mesh and see how long it takes 
- std::string times_filename = "shift_t_vs_distance.txt"; 
+ std::string times_filename = filename.substr(0,9) + "shift.csv"; 
  std::ofstream times_file(times_filename);
- times_file << filename << "\n"; 
+ times_file << filename << ", Mean Triangle Area " << meanTriangleArea(tmesh) << "\n"; 
+ 
 
  std::chrono::duration<long, std::milli> s_time;
 
  for (int i = 0; i < 20; i++) {
+   std::cout << "iteration " << i << " shift length " << i*sqrtMTA <<  std::endl;
    auto start = std::chrono::high_resolution_clock::now();
    Point_3 np = shift(tmesh, dummyPt, i*sqrtMTA*dummyDisplacement);
    auto end = std::chrono::high_resolution_clock::now();
