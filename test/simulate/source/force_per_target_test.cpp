@@ -166,12 +166,14 @@ int main(int argc, char* argv[]) {
   std::chrono::duration<long, std::milli> f_time;
   std::size_t targetcount;
   
-  const std::string filename = "force_per_target.csv";
+  const std::string filename = "fpt.csv";
   std::ofstream ftime_file(filename);
   
   MTgenerator gen = make_generator(2019); //seed here is not particular, just picked a random year 
 
-  for (int i = 1; i < 1000; i++) {
+  int maxNeighbors = 100;
+
+  for (int i = 1; i < maxNeighbors; i++) {
     // std::cout << "sampling from new particle arrangement" << std::endl;
     point2.clear();
     point2.reserve(i);

@@ -91,14 +91,14 @@ int main(int argc, char* argv[]) {
  times_file << filename << ", Mean Triangle Area " << meanTriangleArea(tmesh) << "\n"; 
  
 
- std::chrono::duration<long, std::milli> s_time;
+ std::chrono::duration<long, std::micro> s_time;
 
  for (int i = 0; i < 20; i++) {
    std::cout << "iteration " << i << " shift length " << i*sqrtMTA <<  std::endl;
    auto start = std::chrono::high_resolution_clock::now();
    Point_3 np = shift(tmesh, dummyPt, i*sqrtMTA*dummyDisplacement);
    auto end = std::chrono::high_resolution_clock::now();
-   s_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+   s_time = std::chrono::duration_cast<std::chrono::microseconds>(end-start);
    times_file << i*sqrtMTA << ", " << s_time.count() << "\n"; 
  }
 

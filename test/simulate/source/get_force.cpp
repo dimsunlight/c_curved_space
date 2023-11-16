@@ -38,20 +38,26 @@ typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tre
 
 //primary functions
 std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
-		Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
+		const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {
   //std::cout << "calculating tangents and distances for source "<< source << std::endl;
-  
+ 
+  std::chrono::duration<long, std::milli> f_time;
+
   Surface_mesh_shortest_path shortest_paths(mesh);
   AABB_tree tree;
   shortest_paths.build_aabb_tree(tree);
-
-
   
   //convert source point to barycentric coordinates via locate
   const Point_3 source_pt = source;
   Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt,tree);
   shortest_paths.add_source_point(source_loc.first,source_loc.second);
   
+  auto start = std::chrono::high_resolution_clock::now();
+  shortest_paths.build_sequence_tree();
+  auto end = std::chrono::high_resolution_clock::now();
+  f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+  std::cout << "time to build sequence tree: " << f_time.count() << std::endl;
+
   std::vector<double> distances;
   std::vector<Vector_3> tangents;
   std::vector<Point_3> points; 
@@ -62,7 +68,13 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
 
   for (std::size_t i = 0; i < num_targets; i++) {
     Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
+    
+    start = std::chrono::high_resolution_clock::now();
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
+    end = std::chrono::high_resolution_clock::now();
+    f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+    std::cout << "time to compute path: " << f_time.count() << std::endl;
+
     distances.push_back(std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)));
     //path goes from target to source -- so if we want to know path tangent at 
     //source for force calculation, we must use the *end* of points[]
@@ -109,9 +121,15 @@ Vector_3 inversePowerLaw(float dist, Vector_3 tangent, double sigma) {
  return Vector_3(0,0,0);
 }
 
-Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
+Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {
   //create list of distances and path tangents between the source particle and the targets
+  std::chrono::duration<long, std::milli> f_time;
+  auto start = std::chrono::high_resolution_clock::now();
   std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcTangentsAndDistances(mesh, source, targets, num_targets);   
+  auto end = std::chrono::high_resolution_clock::now();
+  f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+  std::cout << "time to calc dist & tang:  " << f_time.count() << std::endl;
+  
   std::vector<double> distances = distancesAndTangents.first;
   std::vector<Vector_3> tangents = distancesAndTangents.second;
   //we could either do this loop within forceFunction or here -- shouldn't be hugely different
