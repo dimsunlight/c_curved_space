@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named seq_test
+
+# Build rule for target.
+seq_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 seq_test
+.PHONY : seq_test
+
+# fast build rule for target.
+seq_test/fast:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/build
+.PHONY : seq_test/fast
+
+#=============================================================================
 # Target rules for targets named shift_test
 
 # Build rule for target.
@@ -235,6 +248,7 @@ get_force.o: get_force.cpp.o
 
 # target to build an object file
 get_force.cpp.o:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/get_force.cpp.o
 	$(MAKE) -f CMakeFiles/f_v_n_test.dir/build.make CMakeFiles/f_v_n_test.dir/get_force.cpp.o
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/get_force.cpp.o
 	$(MAKE) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/get_force.cpp.o
@@ -247,6 +261,7 @@ get_force.i: get_force.cpp.i
 
 # target to preprocess a source file
 get_force.cpp.i:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/get_force.cpp.i
 	$(MAKE) -f CMakeFiles/f_v_n_test.dir/build.make CMakeFiles/f_v_n_test.dir/get_force.cpp.i
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/get_force.cpp.i
 	$(MAKE) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/get_force.cpp.i
@@ -259,6 +274,7 @@ get_force.s: get_force.cpp.s
 
 # target to generate assembly for a file
 get_force.cpp.s:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/get_force.cpp.s
 	$(MAKE) -f CMakeFiles/f_v_n_test.dir/build.make CMakeFiles/f_v_n_test.dir/get_force.cpp.s
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/get_force.cpp.s
 	$(MAKE) -f CMakeFiles/force_test.dir/build.make CMakeFiles/force_test.dir/get_force.cpp.s
@@ -291,6 +307,33 @@ random_pos_simulate.s: random_pos_simulate.cpp.s
 random_pos_simulate.cpp.s:
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/random_pos_simulate.cpp.s
 .PHONY : random_pos_simulate.cpp.s
+
+seq_test.o: seq_test.cpp.o
+
+.PHONY : seq_test.o
+
+# target to build an object file
+seq_test.cpp.o:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/seq_test.cpp.o
+.PHONY : seq_test.cpp.o
+
+seq_test.i: seq_test.cpp.i
+
+.PHONY : seq_test.i
+
+# target to preprocess a source file
+seq_test.cpp.i:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/seq_test.cpp.i
+.PHONY : seq_test.cpp.i
+
+seq_test.s: seq_test.cpp.s
+
+.PHONY : seq_test.s
+
+# target to generate assembly for a file
+seq_test.cpp.s:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/seq_test.cpp.s
+.PHONY : seq_test.cpp.s
 
 shift.o: shift.cpp.o
 
@@ -385,6 +428,7 @@ utils.o: utils.cpp.o
 
 # target to build an object file
 utils.cpp.o:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/utils.cpp.o
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.o
 	$(MAKE) -f CMakeFiles/f_v_n_test.dir/build.make CMakeFiles/f_v_n_test.dir/utils.cpp.o
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/utils.cpp.o
@@ -398,6 +442,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/utils.cpp.i
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.i
 	$(MAKE) -f CMakeFiles/f_v_n_test.dir/build.make CMakeFiles/f_v_n_test.dir/utils.cpp.i
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/utils.cpp.i
@@ -411,6 +456,7 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
+	$(MAKE) -f CMakeFiles/seq_test.dir/build.make CMakeFiles/seq_test.dir/utils.cpp.s
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.s
 	$(MAKE) -f CMakeFiles/f_v_n_test.dir/build.make CMakeFiles/f_v_n_test.dir/utils.cpp.s
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/utils.cpp.s
@@ -425,6 +471,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... seq_test"
 	@echo "... shift_test"
 	@echo "... rebuild_cache"
 	@echo "... f_v_n_test"
@@ -443,6 +490,9 @@ help:
 	@echo "... random_pos_simulate.o"
 	@echo "... random_pos_simulate.i"
 	@echo "... random_pos_simulate.s"
+	@echo "... seq_test.o"
+	@echo "... seq_test.i"
+	@echo "... seq_test.s"
 	@echo "... shift.o"
 	@echo "... shift.i"
 	@echo "... shift.s"

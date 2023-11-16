@@ -36,6 +36,27 @@ typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_fac
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
 
 
+int time_big_sequence_tree ( const Triangle_mesh &mesh, const std::vector<Point_3> &source) {
+  std::chrono::duration<long, std::milli> seq_time;
+  Surface_mesh_shortest_path shortest_paths(mesh);
+  AABB_tree tree;
+  shortest_paths.build_aabb_tree(tree);
+  Face_location source_loc;
+
+  for (Point_3 sp: source) {
+    source_loc = shortest_paths.locate<AABB_face_graph_traits>(sp,tree);
+    shortest_paths.add_source_point(source_loc.first,source_loc.second);
+  }  	  
+
+  auto start = std::chrono::high_resolution_clock::now();
+  shortest_paths.build_sequence_tree();
+  auto end = std::chrono::high_resolution_clock::now();
+  seq_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+  std::cout << "time to make tree with " << source.size() << " source particles: " << seq_time.count() << "ms" << std::endl;
+
+  return seq_time.count();
+}
+
 //primary functions
 std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
 		const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {

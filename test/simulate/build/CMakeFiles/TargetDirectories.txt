@@ -1,4 +1,5 @@
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/edit_cache.dir
+/home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/seq_test.dir
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/shift_test.dir
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/rebuild_cache.dir
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/f_v_n_test.dir
