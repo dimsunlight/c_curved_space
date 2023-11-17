@@ -206,7 +206,6 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
       intersection = true; 
     }
   }
-  std::cout << std::endl;
   if (intersection == false) {
      return source_point + current_move; 
   }
@@ -228,7 +227,6 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
   while(intersection){
     counter += 1;
     if (counter > 1) {
-      std::cout << "shift iteration " << counter << std::endl;
     }
     //vertexList = getVertexPositions(mesh,currentSourceFace);
     vertexList = getVertexIndices(mesh,currentSourceFace);

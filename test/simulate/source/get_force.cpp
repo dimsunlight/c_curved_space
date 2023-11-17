@@ -147,7 +147,7 @@ Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, cons
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = 0.1;
+  double sigma = 0.025; //approx average area of a triangle on torusrb20.off 
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   

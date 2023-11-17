@@ -277,8 +277,8 @@ int main (int argc, char* argv[]) {
   std::chrono::steady_clock::time_point sim_start = std::chrono::steady_clock::now();
   //main simulation loop
   for (std::size_t j = 0; j < timesteps; j++) {
-    std::cout << "timestep " << j << " locations: " << std::endl;
-    for (Point_3 location: particle_locations) std::cout << location << std::endl;
+    std::cout << "timestep " << j << "first ten locations: " << std::endl;
+    for (int i = 0; i < 10; i++) std::cout << particle_locations[i] << std::endl;
     particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
     
     //find forces and do shift
