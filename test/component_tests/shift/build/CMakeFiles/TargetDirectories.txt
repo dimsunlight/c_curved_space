@@ -1,0 +1,3 @@
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/build/CMakeFiles/rebuild_cache.dir
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/build/CMakeFiles/edit_cache.dir
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/build/CMakeFiles/shift_test.dir

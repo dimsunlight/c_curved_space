@@ -49,6 +49,8 @@ typedef typename Surface_mesh_shortest_path::Face_location              Face_loc
 typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_face_graph_primitive;
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
+typedef std::mt19937                                                    MTgenerator; //mersenne-twister generator
+typedef std::uniform_real_distribution<float>                           distribution;
 
 //unique utility functions
 
@@ -66,15 +68,24 @@ float distBetween(Point_3 point1,Point_3 point2) {
   return sqrt(slength);
 }
 
-
-float random_in_range(float range_min, float range_max)
+MTgenerator make_generator(int seed)
 {
-  //uses mersenne twister to get a random real #
-  std::random_device                   rand_dev;
-  std::mt19937                         generator(rand_dev());
-  std::uniform_real_distribution<float>  distr(range_min, range_max);
+  //create random number generator using seed parameter. 
 
-  return distr(generator);
+  std::random_device                  rand_dev;
+  MTgenerator                         generator(rand_dev());
+  generator.seed(seed); //seeded for reproducibility -- make sure we use the same sequence every time :)  
+
+  return generator;
+}
+
+distribution distribution_of_range(float range_min, float range_max) {
+  distribution distro(range_min, range_max);
+  return distro; 
+}
+
+float sinplane_weight(float x, float y) {
+  return 1/sqrt(1+cos(x)*cos(x)/4.0 + cos(y)*cos(y)/4.0);
 }
 
 float torus_weight(float a, float c, float u, float v) {
@@ -83,19 +94,45 @@ float torus_weight(float a, float c, float u, float v) {
   return (c+a*cos(v))/(c+a);
 }
 
-//float sinplane_weight --- look up what differential geometric aspects are needed for rejections ampling
+Point_3 sinplane_sample(MTgenerator& gen) {
+  //pass by address above to ensure that we sequentially sample 
+  //from the generator without using the same starting point.
+  distribution SPdistro = distribution_of_range(-1.0,1.0);
+  distribution weightDistro = distribution_of_range(0.0,1.0); 
+  float X;
+  float Y;
+  float W;
+  float weight;
+  Point_3 returnPoint = Point_3(NULL,NULL,NULL);
+  while (returnPoint == Point_3(NULL,NULL,NULL)) {
+    //goal -- reference gen by address so each call to gen advances the 
+    //rng forward once
+    X = SPdistro(gen);
+    Y = SPdistro(gen);
+    W = weightDistro(gen);
+    weight = sinplane_weight(X,Y);
+    if (W <= weight) {
+      returnPoint = Point_3(X,Y,sin(X));
+      return returnPoint;
+    }
+  }
+  return returnPoint;
+}
 
-Point_3 torus_sample(float a, float c) {
-  //rejection method sample on a torus; that is, reject anything without the appropriate weight
+Point_3 torus_sample(float a, float c, MTgenerator& gen) {
+  //rejection method sample on a torus; that is, reject anything above the corresponding weight. 
+  //we pass a mersenne-twister generator by reference 
+  distribution angularDistro = distribution_of_range(0.0, 2*M_PI);
+  distribution weightDistro = distribution_of_range(0.0,1.0); 
   float U;
   float V;
   float W;
   float weight;
   Point_3 returnPoint = Point_3(NULL,NULL,NULL);
   while (returnPoint == Point_3(NULL,NULL,NULL)) {
-    U = random_in_range(0.0, 2*M_PI);
-    V = random_in_range(0.0, 2*M_PI);
-    W = random_in_range(0.0, 1.0);
+    U = angularDistro(gen);
+    V = angularDistro(gen);
+    W = weightDistro(gen);
     weight = torus_weight(a,c,U,V);
     if (W <= weight) {
       returnPoint = Point_3((c+a*cos(V))*cos(U), (c+a*cos(V))*sin(U), a*sin(V));
@@ -106,19 +143,29 @@ Point_3 torus_sample(float a, float c) {
   return Point_3(NULL,NULL,NULL);//filler point to check if we have sampled at all
 }
 
-//Point_3 sinplane_sample() {} ; once weight is defined, write as above
-
-std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c) {
+std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c, int seed=1997) {
   //I use std::vectors of point_3 objects for positions, so we loop
   //to create a similar vector for n random positions
   std::vector<Point_3> sample_points = {};
   sample_points.reserve(n);
-  for (std::size_t i; i < n; i++) {
-    sample_points.push_back(torus_sample(a,c));
+  MTgenerator gen = make_generator(seed); 
+  
+  for (std::size_t i=0; i < n; i++) {
+    sample_points.push_back(torus_sample(a,c, gen));
   }
   return sample_points;  
 }
 
+std::vector<Point_3> n_sinplane_sample_points(std::size_t n, int seed = 1997) {
+  std::vector<Point_3> sample_points = {};
+  sample_points.reserve(n);
+  MTgenerator gen = make_generator(seed); 
+
+  for (std::size_t i=0; i < n; i++) {
+    sample_points.push_back(sinplane_sample(gen));
+  }
+  return sample_points;
+}
 
 std::vector<Point_3> create_particles_from_xyz(std::string locations_file) {
   Point_set_3 locations;
@@ -174,7 +221,7 @@ std::chrono::milliseconds averageTime(std::vector<std::chrono::milliseconds> tim
 int main (int argc, char* argv[]) {
 
   std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
-  const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("sims_project/torusrb20.off");
+  const std::string filename = (argc > 1) ? argv[1] : CGAL::data_file_path("torusrb20.off");
   Triangle_mesh mesh;
   if(!CGAL::IO::read_polygon_mesh(filename, mesh) || !CGAL::is_triangle_mesh(mesh))
   {
@@ -182,31 +229,34 @@ int main (int argc, char* argv[]) {
     return EXIT_FAILURE;
   }
 
-  const std::string loc_filename = (argc > 2) ? argv[2] : CGAL::data_file_path("sims_project/default_pos.xyz");
-  //it would be nice to be able to either feed in a locations file name or a # of sample points n for below
-  //std::vector<Point_3> torus_sample = n_torus_sample_points(n, 1, 3);
-
+  const std::string loc_filename = (argc > 2) ? argv[2] : "FILLER.xyz";
+  
+  std::vector<Point_3> particle_locations; 
+  if (loc_filename == "FILLER.xyz") {
+    particle_locations = n_torus_sample_points(1000, 1, 3); 
+  } else { 
+    particle_locations = create_particles_from_xyz(loc_filename);
+  }
   //have defaults for both loading functionalities below
-  std::vector<Point_3> particle_locations = create_particles_from_xyz(loc_filename);
   std::cout << "Original locations:" << std::endl;
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
   //simulation time parameters -- too-large step sizes can break shift!
   std::size_t timesteps = 10000; //hard defining this now rather than input-defining to avoid extra debugging 
-  double      stepsize = .00001; //smaller stepsize for standard behavior
+  double      stepsize = .001;   //smaller stepsize for lj (.00001) -- larger for gaussian repulsion
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
   std::vector<Point_3> location_buffer;
   location_buffer.reserve(particle_locations.size());
   std::cout << "Running simulation with " << particle_locations.size() << " particles and " << timesteps << " timesteps." << std::endl;
   std::cout << "Timestep size " << stepsize << std::endl;
-  double neighbor_cutoff = 5;
+  double neighbor_cutoff = 3;
   std::vector<std::pair<Point_3,std::vector<Point_3>>> particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
   std::pair<Point_3,std::vector<Point_3>> particle_and_neighbors;
   Vector_3 f_on_p;
   
   //write trajectory data to file
-  const std::string trajectory_filename = "long_sim.txt";
+  const std::string trajectory_filename = "torus_GR_1000pts_sim.txt";
   std::ofstream trajectory_file(trajectory_filename);
   if (trajectory_file.is_open()){
     trajectory_file << particle_locations.size();

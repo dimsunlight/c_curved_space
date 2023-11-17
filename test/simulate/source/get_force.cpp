@@ -58,41 +58,21 @@ int time_big_sequence_tree ( const Triangle_mesh &mesh, const std::vector<Point_
 }
 
 //primary functions
-std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
+std::pair<std::vector<double>,std::vector<Vector_3>> calcDistancesAndTangents (
 		const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {
  
-  std::chrono::duration<long, std::milli> f_time;
-  auto overstart = std::chrono::high_resolution_clock::now();
-
-  auto start = std::chrono::high_resolution_clock::now();
   Surface_mesh_shortest_path shortest_paths(mesh);
   AABB_tree tree;
   shortest_paths.build_aabb_tree(tree);
-  auto end = std::chrono::high_resolution_clock::now();
-  f_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "instantiate shortest paths & build aabb tree: " << f_time.count() << "ms" <<  std::endl;
   
   //convert source point to barycentric coordinates via locate
-  start = std::chrono::high_resolution_clock::now();
   const Point_3 source_pt = source;
   Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt,tree);
-  end = std::chrono::high_resolution_clock::now();
-  f_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "initial locate: " << f_time.count() << "ms" <<  std::endl;
   
-  start = std::chrono::high_resolution_clock::now();
   shortest_paths.add_source_point(source_loc.first,source_loc.second);
-  end = std::chrono::high_resolution_clock::now();
-  f_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "time to add source point: " << f_time.count() << "ms" << std::endl;
 
-  start = std::chrono::high_resolution_clock::now();
   shortest_paths.build_sequence_tree();
-  end = std::chrono::high_resolution_clock::now();
-  f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "time to build sequence tree: " << f_time.count() << "ms" << std::endl;
 
-  start = std::chrono::high_resolution_clock::now();
   std::vector<double> distances;
   std::vector<Vector_3> tangents;
   std::vector<Point_3> points; 
@@ -100,12 +80,7 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
   // pair of particles, so we can directly reserve # of pairs
   distances.reserve(num_targets);
   tangents.reserve(num_targets);
-  end = std::chrono::high_resolution_clock::now();
-  f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "instantiate storage vectors: " << f_time.count() << "ms" <<  std::endl;
 
-
-  start = std::chrono::high_resolution_clock::now();
   for (std::size_t i = 0; i < num_targets; i++) {
     Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
     
@@ -121,20 +96,8 @@ std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
     tangents.push_back(Vector_3(points[points.size()-2],points[points.size()-1]));
     points.clear();
   }
-  end = std::chrono::high_resolution_clock::now();
-  f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "for loop: " << f_time.count() << "ms" <<  std::endl;
 
-  auto overend = std::chrono::high_resolution_clock::now();
-  f_time = std::chrono::duration_cast<std::chrono::milliseconds>(overend-overstart);
-  std::cout << "in-function total time: " << f_time.count() << "ms" << std::endl;
-
-  start = std::chrono::high_resolution_clock::now(); 
   std::pair<std::vector<double>,std::vector<Vector_3>> pairforreturn = std::make_pair(distances,tangents);
-  end = std::chrono::high_resolution_clock::now();
-  f_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "make_pair at the end: " << f_time.count() << "ms" << std::endl;
-
 
   return pairforreturn;
 }
@@ -166,7 +129,6 @@ Vector_3 simpleRepulsion(float dist, Vector_3 tangent, double sigma) {
   Vector_3 force = -(-2*dist/pow(sigma,2))*exp(-pow(dist,2)/pow(sigma,2))*normalizedTangent;
 
   return force;
-
 }
 
 
@@ -177,13 +139,7 @@ Vector_3 inversePowerLaw(float dist, Vector_3 tangent, double sigma) {
 
 Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {
   //create list of distances and path tangents between the source particle and the targets
-  std::chrono::duration<long, std::milli> f_time;
-  auto start = std::chrono::high_resolution_clock::now();
-  std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcTangentsAndDistances(mesh, source, targets, num_targets);   
-  auto end = std::chrono::high_resolution_clock::now();
-  f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "time to calc dist & tang:  " << f_time.count() << std::endl;
-  std::cout << "" << std::endl;
+  std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcDistancesAndTangents(mesh, source, targets, num_targets);   
 
   std::vector<double> distances = distancesAndTangents.first;
   std::vector<Vector_3> tangents = distancesAndTangents.second;
@@ -191,7 +147,7 @@ Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, cons
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = 1;
+  double sigma = 0.1;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   

@@ -1,0 +1,5 @@
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/force/build/CMakeFiles/edit_cache.dir
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/force/build/CMakeFiles/seq_test.dir
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/force/build/CMakeFiles/rebuild_cache.dir
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/force/build/CMakeFiles/f_v_n_test.dir
+/home/twebb8/projects/cgal/c_curved_space/test/component_tests/force/build/CMakeFiles/force_test.dir
