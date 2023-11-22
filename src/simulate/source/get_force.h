@@ -29,10 +29,11 @@ typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_fac
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
 
+int time_big_sequence_tree ( const Triangle_mesh &mesh, const std::vector<Point_3> &source);
 std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
-                Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets);
-Vector_3 forceFunction (float dist, Vector_3 tangent, double epsilon, double sigma);
-Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets);
+                const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets);
+Vector_3 forceFunction (const float &dist, const Vector_3 &tangent, const double &epsilon, const double &sigma);
+Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets);
 
 
 #endif
