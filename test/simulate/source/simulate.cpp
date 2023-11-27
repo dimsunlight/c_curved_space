@@ -233,7 +233,7 @@ int main (int argc, char* argv[]) {
   
   std::vector<Point_3> particle_locations; 
   if (loc_filename == "FILLER.xyz") {
-    particle_locations = n_torus_sample_points(1000, 1, 3); 
+    particle_locations = n_torus_sample_points(100, 1, 3); 
   } else { 
     particle_locations = create_particles_from_xyz(loc_filename);
   }
@@ -242,7 +242,7 @@ int main (int argc, char* argv[]) {
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
   //simulation time parameters -- too-large step sizes can break shift!
-  std::size_t timesteps = 10000; //hard defining this now rather than input-defining to avoid extra debugging 
+  std::size_t timesteps = 1000; //hard defining this now rather than input-defining to avoid extra debugging 
   double      stepsize = .001;   //smaller stepsize for lj (.00001) -- larger for gaussian repulsion
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
@@ -281,7 +281,8 @@ int main (int argc, char* argv[]) {
     for (int i = 0; i < 10; i++) std::cout << particle_locations[i] << std::endl;
     particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
     
-    //find forces and do shift
+    //find forces and do shift -- this is the step that most needs to be parallelized,
+    //so we can build many sequence trees simultaneously 
     for (std::size_t i = 0; i < particle_locations.size();i++) {
       particle_and_neighbors = particles_with_neighbors[i];
       //std::cout << "current particle: " <<particle_and_neighbors.first << std::endl;
@@ -299,15 +300,17 @@ int main (int argc, char* argv[]) {
       auto s_end   = std::chrono::high_resolution_clock::now(); 
       std::chrono::duration<long, std::milli> shifttime =  std::chrono::duration_cast<std::chrono::milliseconds>(s_end-s_start);
       shiftTimes.push_back(shifttime);
-
     }
     //location buffer housekeeping
     particle_locations.clear();
     
     for (Point_3 location: location_buffer) {
       particle_locations.push_back(location);
-      trajectory_file << location;
-      trajectory_file << "\n"; 
+      //write every ten steps
+      if (j%10 == 0) { 
+      	trajectory_file << location;
+      	trajectory_file << "\n";
+      }	
     }
     location_buffer.clear();
     trajectory_file << "\n";
