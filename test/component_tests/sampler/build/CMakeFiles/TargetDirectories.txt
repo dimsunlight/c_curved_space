@@ -1,0 +1,4 @@
+/home/toler/projects/CGAL_curvature/test/component_tests/sampler/build/CMakeFiles/rebuild_cache.dir
+/home/toler/projects/CGAL_curvature/test/component_tests/sampler/build/CMakeFiles/edit_cache.dir
+/home/toler/projects/CGAL_curvature/test/component_tests/sampler/build/CMakeFiles/torus_sample.dir
+/home/toler/projects/CGAL_curvature/test/component_tests/sampler/build/CMakeFiles/sp_sample.dir

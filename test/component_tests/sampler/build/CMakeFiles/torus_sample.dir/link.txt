@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/torus_sample.dir/tor_sample.cpp.o CMakeFiles/torus_sample.dir/utils.cpp.o  -o torus_sample  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 
