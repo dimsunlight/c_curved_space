@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/parallel_simulate.dir/get_force.cpp.o CMakeFiles/parallel_simulate.dir/shift.cpp.o CMakeFiles/parallel_simulate.dir/utils.cpp.o CMakeFiles/parallel_simulate.dir/parallel_simulate.cpp.o  -o parallel_simulate  /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 
+=======
+/usr/bin/c++ -g CMakeFiles/parallel_simulate.dir/get_force.cpp.o CMakeFiles/parallel_simulate.dir/shift.cpp.o CMakeFiles/parallel_simulate.dir/utils.cpp.o CMakeFiles/parallel_simulate.dir/parallel_simulate.cpp.o -o parallel_simulate  /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 
+>>>>>>> 93ee3b9897db288da10b7d0375fadedb78889a03

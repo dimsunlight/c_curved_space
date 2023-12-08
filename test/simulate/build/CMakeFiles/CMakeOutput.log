@@ -4964,6 +4964,7 @@ Parsed CXX OpenMP implicit link information from above output:
   implicit fwks: []
 
 
+<<<<<<< HEAD
 The system is: Linux - 5.15.0-88-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
@@ -5823,3 +5824,5 @@ Parsed CXX OpenMP implicit link information from above output:
   implicit fwks: []
 
 
+=======
+>>>>>>> 93ee3b9897db288da10b7d0375fadedb78889a03

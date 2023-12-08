@@ -138,7 +138,7 @@ int main (int argc, char* argv[]) {
  
   //simulation time parameters -- too-large step sizes can break shift!
   std::size_t timesteps = 1000; //hard defining this now rather than input-defining to avoid extra debugging 
-  double      stepsize = .00001; //smaller stepsize for standard behavior
+  double      stepsize = .001; //smaller stepsize for standard behavior
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
   std::vector<Point_3> location_buffer;
@@ -198,12 +198,16 @@ int main (int argc, char* argv[]) {
     }
     //location buffer housekeeping
     particle_locations.clear();
-    
     for (Point_3 location: location_buffer) {
       particle_locations.push_back(location);
-      trajectory_file << location;
-      trajectory_file << "\n"; 
+      
+      //write every 10 steps 
+      if (j % 10 == 0) { 
+      	trajectory_file << location;
+        trajectory_file << "\n";
+      }	
     }
+    
     location_buffer.clear();
     trajectory_file << "\n";
   }

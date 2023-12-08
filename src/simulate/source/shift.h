@@ -49,7 +49,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
 
 Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface, Face_index tface, Point_3 source, Point_3 target);
 
-Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move);
+Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &move);
 
 
 #endif

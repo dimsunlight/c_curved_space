@@ -318,6 +318,7 @@ int main(void)
   return 0;
 }
 
+<<<<<<< HEAD
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/CMakeTmp
 
@@ -358,3 +359,5 @@ int main(void)
   return 0;
 }
 
+=======
+>>>>>>> 93ee3b9897db288da10b7d0375fadedb78889a03

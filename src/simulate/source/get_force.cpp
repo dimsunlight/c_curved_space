@@ -35,32 +35,49 @@ typedef CGAL::AABB_face_graph_triangle_primitive<Triangle_mesh>         AABB_fac
 typedef CGAL::AABB_traits<Kernel, AABB_face_graph_primitive>            AABB_face_graph_traits;
 typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tree;
 
-
 //primary functions
-std::pair<std::vector<double>,std::vector<Vector_3>> calcTangentsAndDistances (
-		Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
+std::pair<std::vector<double>,std::vector<Vector_3>> calcDistancesAndTangents (
+		const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {
+ 
   Surface_mesh_shortest_path shortest_paths(mesh);
   AABB_tree tree;
   shortest_paths.build_aabb_tree(tree);
+  
   //convert source point to barycentric coordinates via locate
   const Point_3 source_pt = source;
   Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source_pt,tree);
-  shortest_paths.add_source_point(source_loc.first,source_loc.second);
   
+  shortest_paths.add_source_point(source_loc.first,source_loc.second);
+
+  shortest_paths.build_sequence_tree();
+
   std::vector<double> distances;
   std::vector<Vector_3> tangents;
   std::vector<Point_3> points; 
+  //"distances" and "tangents" will both store data from a path between a 
+  // pair of particles, so we can directly reserve # of pairs
+  distances.reserve(num_targets);
+  tangents.reserve(num_targets);
+
   for (std::size_t i = 0; i < num_targets; i++) {
     Face_location target_loc = shortest_paths.locate<AABB_face_graph_traits>(targets[i],tree);
+    
+    //start = std::chrono::high_resolution_clock::now();
     shortest_paths.shortest_path_points_to_source_points(target_loc.first, target_loc.second, std::back_inserter(points));
+    //end = std::chrono::high_resolution_clock::now();
+    //f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+    //std::cout << "time to compute path: " << f_time.count() << std::endl;
+
     distances.push_back(std::get<0>( shortest_paths.shortest_distance_to_source_points(target_loc.first, target_loc.second)));
     //path goes from target to source -- so if we want to know path tangent at 
     //source for force calculation, we must use the *end* of points[]
     tangents.push_back(Vector_3(points[points.size()-2],points[points.size()-1]));
     points.clear();
   }
- 
-  return std::make_pair(distances,tangents);
+
+  std::pair<std::vector<double>,std::vector<Vector_3>> pairforreturn = std::make_pair(distances,tangents);
+
+  return pairforreturn;
 }
 
 
@@ -90,7 +107,6 @@ Vector_3 simpleRepulsion(float dist, Vector_3 tangent, double sigma) {
   Vector_3 force = -(-2*dist/pow(sigma,2))*exp(-pow(dist,2)/pow(sigma,2))*normalizedTangent;
 
   return force;
-
 }
 
 
@@ -99,24 +115,24 @@ Vector_3 inversePowerLaw(float dist, Vector_3 tangent, double sigma) {
  return Vector_3(0,0,0);
 }
 
-Vector_3 force_on_source (Triangle_mesh mesh, Point_3 source, std::vector<Point_3> targets, std::size_t num_targets) {
+Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {
   //create list of distances and path tangents between the source particle and the targets
-  std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcTangentsAndDistances(mesh, source, targets, num_targets);   
+  std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcDistancesAndTangents(mesh, source, targets, num_targets);   
+
   std::vector<double> distances = distancesAndTangents.first;
   std::vector<Vector_3> tangents = distancesAndTangents.second;
   //we could either do this loop within forceFunction or here -- shouldn't be hugely different
   
   //L-J parameters
   double epsilon = 1;
-  double sigma = 1.1;
+  double sigma = 0.025; //approx average area of a triangle on torusrb20.off 
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
                                    //also handles case of no neighbors
 				   
   for (std::size_t i = 0; i < distances.size(); i++) {
-    force+= LJForce(distances[i],tangents[i], epsilon, sigma);    
-  }
-  
-  //std::cout << "calculated force magnitude at (" << source << ") is " << vectorMagnitude(force) << std::endl;
+    force+= simpleRepulsion(distances[i],tangents[i], sigma);
+  } 
+  //std::cout << "Calculated force magnitude is " << vectorMagnitude(force) << std::endl; 
   return force;
 }
 

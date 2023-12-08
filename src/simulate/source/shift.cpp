@@ -47,25 +47,25 @@ typedef PMP::Face_location<Triangle_mesh, FT>                           Face_loc
 Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
 
- bool throughVertex = intersected.size() == 1;
+  bool throughVertex = intersected.size() == 1;
 
- if (throughVertex) {
-   std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
-   const std::string errors_filename = "throughverts" + std::to_string(source_face) + ".txt";
+  if (throughVertex) {
+    std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
+    const std::string errors_filename = "throughverts" + std::to_string(source_face) + ".txt";
 
-   std::ofstream error_log(errors_filename);
+    std::ofstream error_log(errors_filename);
 
-   error_log << source_face << "\n";
-   error_log << pos; 
-   double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
-   return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
+    error_log << source_face << "\n";
+    error_log << pos; 
+    double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
+    return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
                                                                  //But it should identify things just fine most of the time.
- }
+  }
  
- Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
- Face_index provisional_target_face = mesh.face(intersected_edge);
- if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
- return provisional_target_face;
+  Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
+  Face_index provisional_target_face = mesh.face(intersected_edge);
+  if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
+  return provisional_target_face;
 }
 
 std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices) {
@@ -143,6 +143,12 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
 
     Face_location newPosition = std::make_pair(sourceFace,newBaryCoords);
     Point_3 xyz_intersection = PMP::construct_point(newPosition,mesh);
+    /*
+    //manual reconstruction  
+    Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + 
+	                        min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z()) +
+			       	min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); 
+    */
 
     return std::make_pair(xyz_intersection,intersected); // this version returns the barycentric intersection point
   }
@@ -171,41 +177,57 @@ Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface,
   return rotatedPosition; 
 }
 
-Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
+Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &move) {
   double travelLength = vectorMagnitude(move);
 
-  //we will eventually draw all vertex/edge segments of current face and store in lists; 
+  //short pseudo-projection routine in case we're slightly off the face (so code is general to arbitrary starting point) 
   Face_location sourceLocation = PMP::locate(pos, mesh);
   Point_3 source_point = PMP::construct_point(sourceLocation, mesh); //xyz point representing current source
-  Vector_3 current_move = move;
-  Face_index currentSourceFace = sourceLocation.first;
-  //initializations
+
+  Face_index currentSourceFace = sourceLocation.first;  
+  Vector_3 currentSourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
+ 
+  Point_3 target = source_point+move;
+
   std::vector<Vertex_index> vertexList;
+  std::vector<Point_3> vertexPos = getVertexPositions(mesh, sourceLocation.first);
+
+  //if the movement vector isn't quite in the tangent plane, put it there. 
+  if (abs(currentSourceNormal*move) > 0) {
+    target = project_to_face(vertexPos, pos+move);
+  }
+  Vector_3 current_move = Vector_3(source_point, target); 
+  
+  //if there is no intersection, avoid initalizing any of the intersection code
+  auto targetBary = PMP::barycentric_coordinates(vertexPos[0],vertexPos[1],vertexPos[2],target);
+  bool intersection = false;
+  for (double bc: targetBary) {
+    if (bc < 0) {
+      intersection = true; 
+    }
+  }
+  if (intersection == false) {
+     return source_point + current_move; 
+  }
+
+  //initializations if there *is* an intersection
   std::vector<Point_3> targetVertices;
-  std::vector<Point_3> sharedEdge;
   std::vector<Point_3> forRotation;
-  Point_3 target;
   Point_3 rotatedTarget;
-  std::vector<Segment_3> edgesList;
   Face_index currentTargetFace;
-  Vector_3 currentTargetFaceNormal;
+  //Vector_3 currentTargetFaceNormal;
   double lengthToSharedElement;
   double rotationAngle;
   double overlap;
-  std::vector<Face_index> faceIndexList; //store face indices here so we know where to look later
 
   //useful items for loop w/definition
-  bool intersection = true; // true until we have checked all the edges/vertex and verified there's no intersection
   std::size_t counter = 0;
   //find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vector<Point_3> faceVertices) finds the intersection point on an edge
 
-  //assuming we've fed in a vector tangent to the source face, we can use
-  //its level of normal overlap as the baseline of normal overlap for rotations
-  Vector_3 currentSourceNormal = PMP::compute_face_normal(currentSourceFace,mesh);
-  double baseAgreement = currentSourceNormal*move;
-
   while(intersection){
     counter += 1;
+    if (counter > 1) {
+    }
     //vertexList = getVertexPositions(mesh,currentSourceFace);
     vertexList = getVertexIndices(mesh,currentSourceFace);
 
@@ -235,28 +257,43 @@ Point_3 shift(Triangle_mesh mesh, const Point_3 pos, const Vector_3 move) {
 
     //check that we've rotated in the right direction via overlap
     current_move = Vector_3(source_point, rotatedTarget);//source is now intersection
-
-    overlap = current_move*currentTargetFaceNormal;
-    if (overlap > baseAgreement+.01) {
-    //unit test to see if sign convention is breaking
-      std::cout << "rotation angle appears to be wrong -- attempting reversal!" << std::endl;
-      rotatedTarget = rotateAboutAxis(forRotation, sharedEdge, -rotationAngle)[0];
-      current_move = Vector_3(source_point, rotatedTarget);
-    }
-    overlap = current_move*currentTargetFaceNormal;
-    if (overlap > baseAgreement +.01) {
-      //unit test to see if we've got the shift right
-      break;
-    }
-    //check length of current_move before and after rotation
     currentSourceFace = currentTargetFace;
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 
   //be the location in the unfolded mesh if there were intersections (from an edge intersection to a spot
   //within a face)
   
-  //declare final point & write it to file -- there is always one more path point than move vectors 
   Point_3 fTarget = source_point+current_move;
-  return fTarget; //might need some locating/more closely tying this to the mesh, but this should in principle be correct 
+  return fTarget;  
 }
-      
+
+
+//unit test code that can be thrown back in 
+    //overlap = current_move*currentTargetFaceNormal;
+    //std::cout << "overlap is " << overlap << std::endl; //if your shifts get weird, uncomment this; if the 
+    //numbers are significantly deviating from zero, fix the below test and try that to see if angle 
+    //conventions are getting broken. 
+
+    //below unit test can cause spurious failures if the base overlap is the worst (which it often is
+    //when feeding in testing moves). sharedEdge doesn't exist at present -- can rewrite to use 
+    //face normals to create a rotation axis. 
+    /*
+    if (overlap > baseAgreement+.001) {
+    //PLACEHOLDER to see if sign convention is breaking
+      std::cout << "overlap is " << overlap << std::endl;
+      std::cout << "reversing rotation angle!" << std::endl;
+      //in below, sharededge doesn't exist -- this is actually just  a debug message
+      rotatedTarget = rotateAboutAxis(forRotation, sharedEdge, -rotationAngle)[0];
+      current_move = Vector_3(source_point, rotatedTarget);
+    }
+    
+    overlap = current_move*currentTargetFaceNormal;
+    if (overlap > baseAgreement +.01) {
+      //unit test to see if we've got the shift right
+      std::cout << "overlap too high to continue. " << std::endl;
+      std::cout << "final target location " << rotatedTarget <<std::endl;
+      break;
+    }
+    */
+
+
