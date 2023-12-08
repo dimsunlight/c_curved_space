@@ -47,7 +47,7 @@ namespace PMP = CGAL::Polygon_mesh_processing;
 
 //height function acting as utility to define the underlying surface
 double height(double x, double y) {
-  return (sin(x)+sin(y))/2.0;
+  return (sin(x)+sin(y))/2.0+1.0;
 }
 
 double vectorMagnitude(Vector_3 v) {
@@ -132,7 +132,7 @@ int main() {
   // Note that "25." above is the *squared* radius of the bounding sphere, which
   // I believe defines the domain of the surface
   CGAL::Surface_mesh_default_criteria_3<Tr> criteria(30.,  // angular bound
-                                                     0.26,  // radius bound
+                                                     0.2,  // radius bound
                                                      0.1); // distance bound
   // meshing surface
   CGAL::make_surface_mesh(c2t3, surface, criteria, CGAL::Non_manifold_tag());
@@ -143,16 +143,16 @@ int main() {
   std::cout << "Final number of points pre-simplification: " << tr.number_of_vertices() << "\n";
 
   //simplify mesh
-  std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
+  //std::chrono::steady_clock::time_point start_time = std::chrono::steady_clock::now();
   // In this example, the simplification stops when the number of undirected edges
   // drops below 75% of the initial count
-  double stop_ratio = 0.60;
-  SMS::Edge_count_ratio_stop_predicate<Surface_mesh> stop(stop_ratio);
-  int r = SMS::edge_collapse(sm, stop);
-  std::chrono::steady_clock::time_point end_time = std::chrono::steady_clock::now();
-  std::cout << "\nFinished!\n" << r << " edges removed.\n" << sm.number_of_edges() << " final edges.\n";
-  std::cout << "Time elapsed: " << std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count() << "ms" << std::endl;
-  CGAL::IO::write_polygon_mesh("simplified.off", sm, CGAL::parameters::stream_precision(17));
+  //double stop_ratio = 0.60;
+  //SMS::Edge_count_ratio_stop_predicate<Surface_mesh> stop(stop_ratio);
+  //int r = SMS::edge_collapse(sm, stop);
+  //std::chrono::steady_clock::time_point end_time = std::chrono::steady_clock::now();
+  //std::cout << "\nFinished!\n" << r << " edges removed.\n" << sm.number_of_edges() << " final edges.\n";
+  //std::cout << "Time elapsed: " << std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count() << "ms" << std::endl;
+  //CGAL::IO::write_polygon_mesh("simplified.off", sm, CGAL::parameters::stream_precision(17));
 
   //remake surface mesh for testing so we don't use a pre-simplified version
   Tr tr2;

@@ -43,6 +43,8 @@ namespace PMP = CGAL::Polygon_mesh_processing;
 typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 
+Face_index selectFaceFromVertex(Vertex_index intersectedVertex, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh);
+
 Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh);
 
 std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices);

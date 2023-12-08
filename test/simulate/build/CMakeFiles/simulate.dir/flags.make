@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG   -frounding-math -pthread
 
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1
 
-CXX_INCLUDES = -isystem /home/twebb8/projects/cgal/c_curved_space/CGAL-5.6/include 
+CXX_INCLUDES = -isystem /home/twebb8/projects/cgal/CGAL-5.6/include 
 

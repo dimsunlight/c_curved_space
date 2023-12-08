@@ -41,7 +41,7 @@ CGAL_CTEST_DISPLAY_MEM_AND_TIME:BOOL=OFF
 CGAL_DEV_MODE:BOOL=OFF
 
 //The directory containing a CMake configuration file for CGAL.
-CGAL_DIR:PATH=/home/twebb8/projects/cgal/c_curved_space/CGAL-5.6
+CGAL_DIR:PATH=/home/twebb8/projects/cgal/CGAL-5.6
 
 //If set, the ctest command will not skip the tests of the draw
 // functions.
@@ -246,9 +246,6 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
-//git command line client
-GIT_EXECUTABLE:FILEPATH=/usr/bin/git
-
 //The directory containing the GMPXX include files
 GMPXX_INCLUDE_DIR:PATH=/usr/include
 
@@ -272,6 +269,24 @@ MPFR_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libmpfr.so
 
 MPFR_LIBRARIES_DIR:FILEPATH=/usr/lib/x86_64-linux-gnu
 
+//CXX compiler flags for OpenMP parallelization
+OpenMP_CXX_FLAGS:STRING=-fopenmp
+
+//CXX compiler libraries for OpenMP parallelization
+OpenMP_CXX_LIB_NAMES:STRING=gomp;pthread
+
+//C compiler flags for OpenMP parallelization
+OpenMP_C_FLAGS:STRING=-fopenmp
+
+//C compiler libraries for OpenMP parallelization
+OpenMP_C_LIB_NAMES:STRING=gomp;pthread
+
+//Path to the gomp library for OpenMP
+OpenMP_gomp_LIBRARY:FILEPATH=/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so
+
+//Path to the pthread library for OpenMP
+OpenMP_pthread_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
+
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
 
@@ -294,7 +309,7 @@ Boost_DIR-ADVANCED:INTERNAL=1
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
 //STRINGS property for variable: CGAL_CMAKE_EXACT_NT_BACKEND
 CGAL_CMAKE_EXACT_NT_BACKEND-STRINGS:INTERNAL=GMP_BACKEND;GMPXX_BACKEND;BOOST_GMP_BACKEND;BOOST_BACKEND;LEDA_BACKEND;MP_FLOAT_BACKEND;Default
-CGAL_EXECUTABLE_TARGETS:INTERNAL=simulate;force_test;random_simulate;simulate;force_test;random_simulate;simulate;force_test;random_simulate;simulate;force_test;random_simulate;simulate;force_test;random_simulate;f_v_n_test;simulate;force_test;random_simulate;f_v_n_test;simulate;force_test;random_simulate;f_v_n_test;simulate;force_test;random_simulate;f_v_n_test;simulate;force_test;random_simulate;f_v_n_test;shift_test;simulate;force_test;random_simulate;f_v_n_test;shift_test;simulate;force_test;random_simulate;f_v_n_test;shift_test;simulate;force_test;random_simulate;f_v_n_test;shift_test;simulate;force_test;random_simulate;f_v_n_test;shift_test;simulate;force_test;random_simulate;f_v_n_test;shift_test;simulate;force_test;random_simulate;f_v_n_test;shift_test;seq_test;simulate;random_simulate
+CGAL_EXECUTABLE_TARGETS:INTERNAL=simulate;random_simulate;simulate;random_simulate;simulate;random_simulate;simulate;random_simulate;simulate;random_simulate;simulate;random_simulate;simulate;random_simulate
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR
@@ -454,8 +469,38 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boo
 FIND_PACKAGE_MESSAGE_DETAILS_GMP:INTERNAL=[/usr/lib/x86_64-linux-gnu/libgmp.so][/usr/include/x86_64-linux-gnu][v()]
 //Details about finding MPFR
 FIND_PACKAGE_MESSAGE_DETAILS_MPFR:INTERNAL=[/usr/lib/x86_64-linux-gnu/libmpfr.so][/usr/include][v()]
+//Details about finding OpenMP
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
+//Details about finding OpenMP_C
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v()]
+//Details about finding OpenMP_CXX
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Result of TRY_COMPILE
+OpenMP_COMPILE_RESULT_CXX_fopenmp:INTERNAL=TRUE
+//Result of TRY_COMPILE
+OpenMP_COMPILE_RESULT_C_fopenmp:INTERNAL=TRUE
+//ADVANCED property for variable: OpenMP_CXX_FLAGS
+OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_CXX_LIB_NAMES
+OpenMP_CXX_LIB_NAMES-ADVANCED:INTERNAL=1
+//CXX compiler's OpenMP specification date
+OpenMP_CXX_SPEC_DATE:INTERNAL=201511
+//ADVANCED property for variable: OpenMP_C_FLAGS
+OpenMP_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_C_LIB_NAMES
+OpenMP_C_LIB_NAMES-ADVANCED:INTERNAL=1
+//C compiler's OpenMP specification date
+OpenMP_C_SPEC_DATE:INTERNAL=201511
+//Result of TRY_COMPILE
+OpenMP_SPECTEST_CXX_:INTERNAL=TRUE
+//Result of TRY_COMPILE
+OpenMP_SPECTEST_C_:INTERNAL=TRUE
+//ADVANCED property for variable: OpenMP_gomp_LIBRARY
+OpenMP_gomp_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_pthread_LIBRARY
+OpenMP_pthread_LIBRARY-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 THREADS_HAVE_PTHREAD_ARG:INTERNAL=TRUE
 //ADVANCED property for variable: boost_headers_DIR

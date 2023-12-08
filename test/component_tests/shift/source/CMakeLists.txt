@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( simulate )
+project( shift )
 
 
 # CGAL and its components
@@ -28,19 +28,19 @@ if ( NOT Boost_FOUND )
 
 endif()
 
-# include for local directory
 
-# include for local package
-
-
-# Creating entries for target: simulate
+# Creating entries for target: shift
 # ############################
 
 add_executable( shift_test shift_test.cpp shift.cpp utils.cpp )  
+add_executable( vert_test vert_test.cpp shift.cpp utils.cpp ) 
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS shift_test ) 
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS vert_test ) 
 
 # Link the executable to CGAL and third-party libraries
 
-target_link_libraries(shift_test PRIVATE CGAL::CGAL ) 
+target_link_libraries(shift_test PRIVATE CGAL::CGAL )
+
+target_link_libraries(vert_test PRIVATE CGAL::CGAL ) 
 

@@ -1,0 +1,2 @@
+This folder contains a hodgepodge of things -- either old tests, old test *code*, or first attempts at problem solutions. Most of it is buildable/runnable 
+in much the same way that the rest of the code in the repository is, but do so at your own risk!

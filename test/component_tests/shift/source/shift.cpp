@@ -14,6 +14,7 @@
 #include <CGAL/Polygon_mesh_processing/triangulate_faces.h>
 #include <CGAL/boost/graph/helpers.h>
 #include <CGAL/Dynamic_property_map.h>
+#include <CGAL/boost/graph/iterator.h>
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
@@ -43,6 +44,41 @@ namespace CP = CGAL::parameters;
 namespace PMP = CGAL::Polygon_mesh_processing;
 typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
+typedef CGAL::Face_around_target_circulator<Triangle_mesh>              Face_circulator;
+
+Face_index selectFaceFromVertex(Vertex_index intersectedVertex, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
+  //key piece here is the "face_around_target" circulator from CGAL
+
+  std::vector<Face_index> candidateFaces; 
+  candidateFaces.reserve(6); 
+
+  Face_circulator vbegin(tmesh.halfedge(intersectedVertex),tmesh), done(vbegin); //maybe vbegin isn't the right function for this? fbegin? (lol)
+  do {
+      candidateFaces.push_back(*vbegin++);
+    } while(vbegin != done);
+
+  std::vector<Point_3> faceVertices;
+
+  Face_location intersectedBary = PMP::locate_vertex(intersectedVertex,mesh); 
+
+  //now -- check every candidate face to see if the path falls within it after bending. 
+  //We can do this by extending the path out infinitely and seeing if it intersects any part of the face 
+  //in question at a point other than the vertex.  
+  for (Face_index candidate_face: candidateFaces) {
+    faceVertices = {}; //re-initialize it as clear to keep just the trio of the current candidate face at work 
+    
+    std::vector<Point_3> faceVertices = getVertexPositions(mesh, candidate_face); 
+    Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face, intersectedCoordinates, intersectedCoordinates +  toIntersection);
+    
+    std::array<double, 3> source_bary = intersectedBary.second;
+    std::array<double, 3> cand_bary = candidateLocation.second; 
+    //now do the intersection check on the edges of the face to see if one exists aside from this vertex.   
+  }
+ 
+	
+	
+  return filler;
+}
 
 Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
@@ -72,7 +108,6 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //use the barycentric coordinates of a point in order to determine the R3 coordinates of its intersection with an edge of the current face, if such an intersection exists.
   //takes only the r3 positions of the source and prospective target along with the vertices of the current face; intersection test exists independent of the mesh.
   
-  //need to update this to find the intersected edge. (as a vertex pair) 
   std::vector<Point_3> faceVertices;
   for (Vertex_index vi: vertexIndices) faceVertices.push_back(mesh.point(vi));
    
@@ -95,7 +130,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = 0.0001; //checking for equivalence to zero within reasonable error
+  double tol = pow(10,-8); //checking for equivalence to zero within reasonable error
 
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 
@@ -206,7 +241,6 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
       intersection = true; 
     }
   }
-  std::cout << std::endl;
   if (intersection == false) {
      return source_point + current_move; 
   }
@@ -228,7 +262,6 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
   while(intersection){
     counter += 1;
     if (counter > 1) {
-      std::cout << "shift iteration " << counter << std::endl;
     }
     //vertexList = getVertexPositions(mesh,currentSourceFace);
     vertexList = getVertexIndices(mesh,currentSourceFace);

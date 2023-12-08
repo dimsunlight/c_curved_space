@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /home/twebb8/projects/cgal/c_curved_space/test/simulate/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/parallel_simulate.dir/all
 all: CMakeFiles/random_simulate.dir/all
 all: CMakeFiles/simulate.dir/all
 
@@ -64,10 +65,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/parallel_simulate.dir/clean
 clean: CMakeFiles/random_simulate.dir/clean
 clean: CMakeFiles/simulate.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/parallel_simulate.dir
+
+# All Build rule for target.
+CMakeFiles/parallel_simulate.dir/all:
+	$(MAKE) -f CMakeFiles/parallel_simulate.dir/build.make CMakeFiles/parallel_simulate.dir/depend
+	$(MAKE) -f CMakeFiles/parallel_simulate.dir/build.make CMakeFiles/parallel_simulate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target parallel_simulate"
+.PHONY : CMakeFiles/parallel_simulate.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/parallel_simulate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/parallel_simulate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles 0
+.PHONY : CMakeFiles/parallel_simulate.dir/rule
+
+# Convenience name for target.
+parallel_simulate: CMakeFiles/parallel_simulate.dir/rule
+
+.PHONY : parallel_simulate
+
+# clean rule for target.
+CMakeFiles/parallel_simulate.dir/clean:
+	$(MAKE) -f CMakeFiles/parallel_simulate.dir/build.make CMakeFiles/parallel_simulate.dir/clean
+.PHONY : CMakeFiles/parallel_simulate.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/random_simulate.dir
@@ -76,7 +105,7 @@ clean: CMakeFiles/simulate.dir/clean
 CMakeFiles/random_simulate.dir/all:
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/depend
 	$(MAKE) -f CMakeFiles/random_simulate.dir/build.make CMakeFiles/random_simulate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target random_simulate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target random_simulate"
 .PHONY : CMakeFiles/random_simulate.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,7 +132,7 @@ CMakeFiles/random_simulate.dir/clean:
 CMakeFiles/simulate.dir/all:
 	$(MAKE) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/depend
 	$(MAKE) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target simulate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles --progress-num=11,12,13,14,15 "Built target simulate"
 .PHONY : CMakeFiles/simulate.dir/all
 
 # Build rule for subdir invocation for target.

@@ -1726,6 +1726,7 @@ CMakeFiles/shift_test.dir/shift_test.cpp.o: /home/twebb8/projects/cgal/c_curved_
 CMakeFiles/shift_test.dir/shift_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/CGAL-5.6/include/CGAL/version.h
 CMakeFiles/shift_test.dir/shift_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/CGAL-5.6/include/CGAL/version_macros.h
 CMakeFiles/shift_test.dir/shift_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/CGAL-5.6/include/CGAL/wmult.h
+CMakeFiles/shift_test.dir/shift_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/source/shift.h
 CMakeFiles/shift_test.dir/shift_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/source/shift_test.cpp
 CMakeFiles/shift_test.dir/shift_test.cpp.o: /home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/source/utils.h
 

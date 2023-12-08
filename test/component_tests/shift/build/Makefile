@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named vert_test
+
+# Build rule for target.
+vert_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vert_test
+.PHONY : vert_test
+
+# fast build rule for target.
+vert_test/fast:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/build
+.PHONY : vert_test/fast
+
+#=============================================================================
 # Target rules for targets named shift_test
 
 # Build rule for target.
@@ -129,6 +142,7 @@ shift.o: shift.cpp.o
 
 # target to build an object file
 shift.cpp.o:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/shift.cpp.o
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/shift.cpp.o
 .PHONY : shift.cpp.o
 
@@ -138,6 +152,7 @@ shift.i: shift.cpp.i
 
 # target to preprocess a source file
 shift.cpp.i:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/shift.cpp.i
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/shift.cpp.i
 .PHONY : shift.cpp.i
 
@@ -147,6 +162,7 @@ shift.s: shift.cpp.s
 
 # target to generate assembly for a file
 shift.cpp.s:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/shift.cpp.s
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/shift.cpp.s
 .PHONY : shift.cpp.s
 
@@ -183,6 +199,7 @@ utils.o: utils.cpp.o
 
 # target to build an object file
 utils.cpp.o:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/utils.cpp.o
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.o
 .PHONY : utils.cpp.o
 
@@ -192,6 +209,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/utils.cpp.i
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.i
 .PHONY : utils.cpp.i
 
@@ -201,8 +219,36 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/utils.cpp.s
 	$(MAKE) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.s
 .PHONY : utils.cpp.s
+
+vert_test.o: vert_test.cpp.o
+
+.PHONY : vert_test.o
+
+# target to build an object file
+vert_test.cpp.o:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/vert_test.cpp.o
+.PHONY : vert_test.cpp.o
+
+vert_test.i: vert_test.cpp.i
+
+.PHONY : vert_test.i
+
+# target to preprocess a source file
+vert_test.cpp.i:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/vert_test.cpp.i
+.PHONY : vert_test.cpp.i
+
+vert_test.s: vert_test.cpp.s
+
+.PHONY : vert_test.s
+
+# target to generate assembly for a file
+vert_test.cpp.s:
+	$(MAKE) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/vert_test.cpp.s
+.PHONY : vert_test.cpp.s
 
 # Help Target
 help:
@@ -212,6 +258,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... vert_test"
 	@echo "... shift_test"
 	@echo "... shift.o"
 	@echo "... shift.i"
@@ -222,6 +269,9 @@ help:
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
+	@echo "... vert_test.o"
+	@echo "... vert_test.i"
+	@echo "... vert_test.s"
 .PHONY : help
 
 

@@ -21,7 +21,7 @@ typedef CGAL::Surface_mesh<Point_3> Surface_mesh;
 
 //height function acting as utility to define the underlying surface
 double height(double x, double y) {
-  return (sin(x)+sin(y))/2.0;
+  return (sin(x)+sin(y))/2.0+1;
 }
 
 //we can define our surface implicitly via a constraint -- mirroring sphere example

@@ -1,10 +1,6 @@
-# Created by the script cgal_create_CMakeLists
-# This is the CMake script for compiling a set of CGAL applications.
-
 cmake_minimum_required(VERSION 3.1...3.23)
 
-project( simulate )
-
+project( force )
 
 # CGAL and its components
 find_package( CGAL QUIET COMPONENTS  )
@@ -27,14 +23,6 @@ if ( NOT Boost_FOUND )
   return()  
 
 endif()
-
-# include for local directory
-
-# include for local package
-
-
-# Creating entries for target: simulate
-# ############################
 
 add_executable( force_test force_dist_test.cpp get_force.cpp utils.cpp ) 
 add_executable( f_v_n_test force_per_target_test.cpp get_force.cpp utils.cpp ) 

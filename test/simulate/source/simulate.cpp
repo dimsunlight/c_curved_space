@@ -112,7 +112,7 @@ Point_3 sinplane_sample(MTgenerator& gen) {
     W = weightDistro(gen);
     weight = sinplane_weight(X,Y);
     if (W <= weight) {
-      returnPoint = Point_3(X,Y,sin(X));
+      returnPoint = Point_3(X,Y,(sin(X)+sin(Y))/2+1);
       return returnPoint;
     }
   }
@@ -143,7 +143,7 @@ Point_3 torus_sample(float a, float c, MTgenerator& gen) {
   return Point_3(NULL,NULL,NULL);//filler point to check if we have sampled at all
 }
 
-std::vector<Point_3> n_torus_sample_points(std::size_t n, float a, float c, int seed=1997) {
+std::vector<Point_3> n_torus_sample_points(std::size_t n, float a = 1.0, float c= 3.0, int seed=1997) {
   //I use std::vectors of point_3 objects for positions, so we loop
   //to create a similar vector for n random positions
   std::vector<Point_3> sample_points = {};
@@ -233,7 +233,7 @@ int main (int argc, char* argv[]) {
   
   std::vector<Point_3> particle_locations; 
   if (loc_filename == "FILLER.xyz") {
-    particle_locations = n_torus_sample_points(1000, 1, 3); 
+    particle_locations = n_torus_sample_points(100); 
   } else { 
     particle_locations = create_particles_from_xyz(loc_filename);
   }
@@ -243,7 +243,7 @@ int main (int argc, char* argv[]) {
  
   //simulation time parameters -- too-large step sizes can break shift!
   std::size_t timesteps = 10000; //hard defining this now rather than input-defining to avoid extra debugging 
-  double      stepsize = .001;   //smaller stepsize for lj (.00001) -- larger for gaussian repulsion
+  double      stepsize = .001;   //smaller stepsize for lj (.0001) -- larger for gaussian repulsion
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
   std::vector<Point_3> location_buffer;
@@ -256,15 +256,16 @@ int main (int argc, char* argv[]) {
   Vector_3 f_on_p;
   
   //write trajectory data to file
-  const std::string trajectory_filename = "torus_GR_1000pts_sim.txt";
+  const std::string trajectory_filename = "torus_crystallization_100pts_sim.csv";
   std::ofstream trajectory_file(trajectory_filename);
   if (trajectory_file.is_open()){
     trajectory_file << particle_locations.size();
     trajectory_file << "\n";
     for (Point_3 location: particle_locations) {
-      trajectory_file << location;
-      trajectory_file << "\n"; 
+      trajectory_file << location.x() << ", " << location.y() << ", " << location.z();
+      trajectory_file << "\n";  
     }
+    trajectory_file << "\n"; 
   }
 
 
@@ -277,11 +278,12 @@ int main (int argc, char* argv[]) {
   std::chrono::steady_clock::time_point sim_start = std::chrono::steady_clock::now();
   //main simulation loop
   for (std::size_t j = 0; j < timesteps; j++) {
-    std::cout << "timestep " << j << "first ten locations: " << std::endl;
+    std::cout << "timestep " << j << " first ten locations: " << std::endl;
     for (int i = 0; i < 10; i++) std::cout << particle_locations[i] << std::endl;
     particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
     
-    //find forces and do shift
+    //find forces and do shift -- this is the step that most needs to be parallelized,
+    //so we can build many sequence trees simultaneously 
     for (std::size_t i = 0; i < particle_locations.size();i++) {
       particle_and_neighbors = particles_with_neighbors[i];
       //std::cout << "current particle: " <<particle_and_neighbors.first << std::endl;
@@ -299,20 +301,25 @@ int main (int argc, char* argv[]) {
       auto s_end   = std::chrono::high_resolution_clock::now(); 
       std::chrono::duration<long, std::milli> shifttime =  std::chrono::duration_cast<std::chrono::milliseconds>(s_end-s_start);
       shiftTimes.push_back(shifttime);
-
     }
     //location buffer housekeeping
     particle_locations.clear();
     
     for (Point_3 location: location_buffer) {
       particle_locations.push_back(location);
-      trajectory_file << location;
-      trajectory_file << "\n"; 
+      //write every ten steps
+      if (j%10 == 0) { 
+      	trajectory_file << location.x() << ", " << location.y() << ", " << location.z();
+        trajectory_file << "\n";
+      }	
     }
     location_buffer.clear();
-    trajectory_file << "\n";
+    if (j%10 == 0) {
+	trajectory_file << "\n";
+    }
   }
   trajectory_file.close();
+  std::cout << "Final particle locations: " << std::endl; //this is really a safeguard so the simulator notices if there are NaNs or other weirdness
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
   std::chrono::steady_clock::time_point sim_end = std::chrono::steady_clock::now();
   std::cout << "Time taken for simulation: " << std::chrono::duration_cast<std::chrono::milliseconds>(sim_end - sim_start).count() << "ms" << std::endl;
