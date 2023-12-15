@@ -64,16 +64,36 @@ int main(int argc, char* argv[]) {
  for(Vertex_index vd: tmesh.vertices()){
    vs.push_back(vd);
  } 
- //just check to see if we're iterating over the faces correctly
+ //now -- build out mesh information necessary to create a test case. 
+ //	1) vertex & vertex location (to be intersected on purpose) 
+ //	2) all the faces around said vertex 
+ //	3) create outside a mathematica drawing with vertex, faces, and 
+ //	   path information to port back in here! 
  Vertex_index intersectedVertex = vs[40];
  
- Face_circulator vbegin(tmesh.halfedge(intersectedVertex),tmesh), done(vbegin); //maybe vbegin isn't the right function for this? fbegin? (lol)
-  do {
-      std::cout << *vbegin++ << std::endl;
-    } while(vbegin != done);
+ std::cout << "Vertex location: " << tmesh.point(intersectedVertex) << std::endl;
+
+ Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); //fbegin? (lol)
+ std::vector<Face_index> facesToPrint;
+ facesToPrint.reserve(6);
+ do {
+    facesToPrint.push_back(*fbegin++);
+ } while(fbegin != done);
  
- //selectFaceFromVertex(intersectedVertex, pos, toIntersection, source_face, mesh);
+ std::vector<Point_3> vertPos; 
+ vertPos.reserve(3); 
  
+ std::cout << "Faces: " << std::endl;
+ for (Face_index fIndex: facesToPrint) {
+   vertPos = getVertexPositions(tmesh, fIndex);
+   for (Point_3 vert: vertPos) {
+     std::cout << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}, ";      
+   }
+   std::cout << std::endl;
+ }
+
+ 
+ //selectFaceFromVertex(intersectedVertex, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) 
 
  return 0;
 }

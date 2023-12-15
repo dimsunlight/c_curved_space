@@ -51,33 +51,68 @@ Face_index selectFaceFromVertex(Vertex_index intersectedVertex, Point_3 pos, Vec
 
   std::vector<Face_index> candidateFaces; 
   candidateFaces.reserve(6); 
-
-  Face_circulator vbegin(tmesh.halfedge(intersectedVertex),tmesh), done(vbegin); //maybe vbegin isn't the right function for this? fbegin? (lol)
+  
+  //get all possible faces that we could walk into. 
+  Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); //fbegin is the name of the Face_circulator type object, things 
+  										 //in the parentheses are declaration arguments for Face_circulators
+  faceIndex cand; 
   do {
-      candidateFaces.push_back(*vbegin++);
+      cand = *fbegin++; //the next face to add is the face pointed to by the next
+      			//iteration of the iterator 
+      if (cand == source_face) continue; //don't need to consider the face we're coming from
+      else {
+        candidateFaces.push_back(cand);
+      }
     } while(vbegin != done);
 
   std::vector<Point_3> faceVertices;
 
-  Face_location intersectedBary = PMP::locate_vertex(intersectedVertex,mesh); 
+  Face_location intersectedBary = PMP::locate_vertex(intersectedVertex,mesh); //gives (findex,barycentric) pair of intersected vertex for comparison 
+  Point_3 source_r3 = PMP::construct_point(intersectedBary, mesh);
 
   //now -- check every candidate face to see if the path falls within it after bending. 
-  //We can do this by extending the path out infinitely and seeing if it intersects any part of the face 
-  //in question at a point other than the vertex.  
-  for (Face_index candidate_face: candidateFaces) {
-    faceVertices = {}; //re-initialize it as clear to keep just the trio of the current candidate face at work 
-    
-    std::vector<Point_3> faceVertices = getVertexPositions(mesh, candidate_face); 
+  //hypothesis: the path will only fall within the candidate face if that face is the *correct* face, most of the time -- 
+  //pathological meshes where two faces are at an extreme angle relative to each other & very thin can break this. 
+  //But if that happens, we're probably getting very nearly best possible behavior anyway. See through_vertex.nb notebook
+  //for simple tests of this hypothesis.
+  //We can check by extending the path out and seeing if its endpoint either intersects the candidate face or falls within
+  //that face. If either are true, this is the correct face and we can break the loop.
+  Face_index correctFace = -1;
+
+  for (Face_index candidateFace: candidateFaces) {
+    std::vector<Point_3> faceVertices = getVertexIndices(mesh, candidate_face); 
     Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face, intersectedCoordinates, intersectedCoordinates +  toIntersection);
     
     std::array<double, 3> source_bary = intersectedBary.second;
-    std::array<double, 3> cand_bary = candidateLocation.second; 
-    //now do the intersection check on the edges of the face to see if one exists aside from this vertex.   
+    std::array<double, 3> cand_bary = candidateLocation.second;
+
+    outOfTriangle = false;
+    for (int i = 0; i < 3; i++) { 
+      if (cand_bary[i] < 0) outFlag = true;
+    } 
+    
+    if (!outOfTriangle) {
+      correctFace = candidateFace;
+      break;
+    }
+
+    if (outFlag) {      
+      Point_3 cand_r3 = PMP::construct_point(candidateLocation, mesh); 
+      std::pair<Point_3,std::vector<Vertex_index>> ifIntersect = find_intersection(mesh, source_face, source_r3, cand_r3, faceVertices);
+      if (ifIntersect != Point_3(1000,1000,1000)) { 
+	correctFace = candidateFace;
+	break; 
+    }
+     
   }
- 
+  
+  //we should always find the right face here, given that we're staying on the mesh. 
+  //If we don't find one, something's wrong, and I want to know
+  if (correctFace == -1) {
+    std::cout << "No correct face, DEBUG" << std::endl;
+  }	
 	
-	
-  return filler;
+  return correctFace;
 }
 
 Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
