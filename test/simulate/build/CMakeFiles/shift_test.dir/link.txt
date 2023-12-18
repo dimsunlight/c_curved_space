@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/shift_test.dir/shift_test.cpp.o CMakeFiles/shift_test.dir/shift.cpp.o CMakeFiles/shift_test.dir/utils.cpp.o  -o shift_test  /usr/lib/x86_64-linux-gnu/libgmpxx.so /usr/lib/x86_64-linux-gnu/libmpfr.so /usr/lib/x86_64-linux-gnu/libgmp.so -pthread 

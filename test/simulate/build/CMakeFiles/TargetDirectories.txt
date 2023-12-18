@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/rebuild_cache.dir
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/edit_cache.dir
-/home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/parallel_simulate.dir
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/random_simulate.dir
 /home/twebb8/projects/cgal/c_curved_space/test/simulate/build/CMakeFiles/simulate.dir
-=======
-/home/toler/projects/CGAL_curvature/test/simulate/build/CMakeFiles/rebuild_cache.dir
-/home/toler/projects/CGAL_curvature/test/simulate/build/CMakeFiles/edit_cache.dir
-/home/toler/projects/CGAL_curvature/test/simulate/build/CMakeFiles/parallel_simulate.dir
-/home/toler/projects/CGAL_curvature/test/simulate/build/CMakeFiles/random_simulate.dir
-/home/toler/projects/CGAL_curvature/test/simulate/build/CMakeFiles/simulate.dir
->>>>>>> 93ee3b9897db288da10b7d0375fadedb78889a03

@@ -43,14 +43,17 @@ endif()
 # ############################
 
 add_executable( simulate  get_force.cpp shift.cpp utils.cpp simulate.cpp )
+
 add_executable( random_simulate get_force.cpp shift.cpp utils.cpp random_pos_simulate.cpp)
-add_executable( parallel_simulate get_force.cpp shift.cpp utils.cpp parallel_simulate.cpp)
+#add_executable( parallel_simulate get_force.cpp shift.cpp utils.cpp parallel_simulate.cpp)
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS simulate )
+
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS random_simulate )
 
 # Link the executable to CGAL and third-party libraries
 target_link_libraries(simulate PRIVATE CGAL::CGAL )
 target_link_libraries(random_simulate PRIVATE CGAL::CGAL )
-target_link_libraries(parallel_simulate PUBLIC OpenMP::OpenMP_CXX)
-target_link_libraries(parallel_simulate PRIVATE CGAL::CGAL ) 
+
+#target_link_libraries(parallel_simulate PUBLIC OpenMP::OpenMP_CXX)
+#target_link_libraries(parallel_simulate PRIVATE CGAL::CGAL ) 

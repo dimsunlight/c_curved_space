@@ -233,11 +233,8 @@ int main (int argc, char* argv[]) {
   
   std::vector<Point_3> particle_locations; 
   if (loc_filename == "FILLER.xyz") {
-<<<<<<< HEAD
     particle_locations = n_torus_sample_points(100); 
-=======
     particle_locations = n_torus_sample_points(100, 1, 3); 
->>>>>>> 93ee3b9897db288da10b7d0375fadedb78889a03
   } else { 
     particle_locations = create_particles_from_xyz(loc_filename);
   }
@@ -246,13 +243,8 @@ int main (int argc, char* argv[]) {
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
   //simulation time parameters -- too-large step sizes can break shift!
-<<<<<<< HEAD
-  std::size_t timesteps = 10000; //hard defining this now rather than input-defining to avoid extra debugging 
-  double      stepsize = .001;   //smaller stepsize for lj (.0001) -- larger for gaussian repulsion
-=======
   std::size_t timesteps = 1000; //hard defining this now rather than input-defining to avoid extra debugging 
-  double      stepsize = .001;   //smaller stepsize for lj (.00001) -- larger for gaussian repulsion
->>>>>>> 93ee3b9897db288da10b7d0375fadedb78889a03
+  double      stepsize = .01;   //smaller stepsize for lj (.0001) -- larger for gaussian repulsion
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
   std::vector<Point_3> location_buffer;
@@ -317,14 +309,10 @@ int main (int argc, char* argv[]) {
     for (Point_3 location: location_buffer) {
       particle_locations.push_back(location);
       //write every ten steps
-      if (j%10 == 0) { 
-<<<<<<< HEAD
+      if (j%10 == 0) {
+	//formatted for csv file 
       	trajectory_file << location.x() << ", " << location.y() << ", " << location.z();
         trajectory_file << "\n";
-=======
-      	trajectory_file << location;
-      	trajectory_file << "\n";
->>>>>>> 93ee3b9897db288da10b7d0375fadedb78889a03
       }	
     }
     location_buffer.clear();

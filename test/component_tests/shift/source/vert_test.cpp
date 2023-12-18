@@ -92,8 +92,19 @@ int main(int argc, char* argv[]) {
    std::cout << std::endl;
  }
 
+ // having gone into mathematica and figured out a point within a face (src_point),
+ // then moved it through the vertex (mid_point), to end up at a target (end_point) 
+ // for rotation... 
+ Point_3 src_point = Point_3(-2.45268, -0.523961, 0.853549);
+ Point_3 mid_point = tmesh.point(intersectedVertex);
+ Point_3 end_point = Point_3(-2.30864, -0.461563, 0.784361);
  
- //selectFaceFromVertex(intersectedVertex, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) 
+ printf("\n");
+ std::cout << "Correct faces are: " << facesToPrint[1] << " and " << facesToPrint[4] << std::endl;
+ std::cout << "(second and fifth vertex trios from above)" << std::endl;
+ 
+ Face_index newTarget = selectFaceFromVertex(intersectedVertex, Vector_3(mid_point,end_point), facesToPrint[1], tmesh); 
 
+ std::cout << "Routine found the correct face to be: " << newTarget << std::endl;
  return 0;
 }
