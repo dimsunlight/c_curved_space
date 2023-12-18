@@ -45,99 +45,8 @@ namespace PMP = CGAL::Polygon_mesh_processing;
 typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 typedef CGAL::Face_around_target_circulator<Triangle_mesh>              Face_circulator;
-
-Face_index selectFaceFromVertex(Vertex_index intersectedVertex, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
-  //key piece here is the "face_around_target" circulator from CGAL
-
-  std::vector<Face_index> candidateFaces; 
-  candidateFaces.reserve(6); 
-  
-  //get all possible faces that we could walk into. 
-  Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); //fbegin is the name of the Face_circulator type object, things 
-  										 //in the parentheses are declaration arguments for Face_circulators
-  faceIndex cand; 
-  do {
-      cand = *fbegin++; //the next face to add is the face pointed to by the next
-      			//iteration of the iterator 
-      if (cand == source_face) continue; //don't need to consider the face we're coming from
-      else {
-        candidateFaces.push_back(cand);
-      }
-    } while(vbegin != done);
-
-  std::vector<Point_3> faceVertices;
-
-  Face_location intersectedBary = PMP::locate_vertex(intersectedVertex,mesh); //gives (findex,barycentric) pair of intersected vertex for comparison 
-  Point_3 source_r3 = PMP::construct_point(intersectedBary, mesh);
-
-  //now -- check every candidate face to see if the path falls within it after bending. 
-  //hypothesis: the path will only fall within the candidate face if that face is the *correct* face, most of the time -- 
-  //pathological meshes where two faces are at an extreme angle relative to each other & very thin can break this. 
-  //But if that happens, we're probably getting very nearly best possible behavior anyway. See through_vertex.nb notebook
-  //for simple tests of this hypothesis.
-  //We can check by extending the path out and seeing if its endpoint either intersects the candidate face or falls within
-  //that face. If either are true, this is the correct face and we can break the loop.
-  Face_index correctFace = -1;
-
-  for (Face_index candidateFace: candidateFaces) {
-    std::vector<Point_3> faceVertices = getVertexIndices(mesh, candidate_face); 
-    Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face, intersectedCoordinates, intersectedCoordinates +  toIntersection);
-    
-    std::array<double, 3> source_bary = intersectedBary.second;
-    std::array<double, 3> cand_bary = candidateLocation.second;
-
-    outOfTriangle = false;
-    for (int i = 0; i < 3; i++) { 
-      if (cand_bary[i] < 0) outFlag = true;
-    } 
-    
-    if (!outOfTriangle) {
-      correctFace = candidateFace;
-      break;
-    }
-
-    if (outFlag) {      
-      Point_3 cand_r3 = PMP::construct_point(candidateLocation, mesh); 
-      std::pair<Point_3,std::vector<Vertex_index>> ifIntersect = find_intersection(mesh, source_face, source_r3, cand_r3, faceVertices);
-      if (ifIntersect != Point_3(1000,1000,1000)) { 
-	correctFace = candidateFace;
-	break; 
-    }
-     
-  }
-  
-  //we should always find the right face here, given that we're staying on the mesh. 
-  //If we don't find one, something's wrong, and I want to know
-  if (correctFace == -1) {
-    std::cout << "No correct face, DEBUG" << std::endl;
-  }	
-	
-  return correctFace;
-}
-
-Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
- //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
-
-  bool throughVertex = intersected.size() == 1;
-
-  if (throughVertex) {
-    std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
-    const std::string errors_filename = "throughverts" + std::to_string(source_face) + ".txt";
-
-    std::ofstream error_log(errors_filename);
-
-    error_log << source_face << "\n";
-    error_log << pos; 
-    double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
-    return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
-                                                                 //But it should identify things just fine most of the time.
-  }
- 
-  Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
-  Face_index provisional_target_face = mesh.face(intersected_edge);
-  if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
-  return provisional_target_face;
-}
+typedef typename boost::graph_traits<Triangle_mesh>::vertex_descriptor           vertex_descriptor;
+typedef typename boost::graph_traits<Triangle_mesh>::face_descriptor             face_descriptor;
 
 std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mesh, Face_index sourceFace, Point_3 source, Point_3 target,  std::vector<Vertex_index> vertexIndices) {
   //use the barycentric coordinates of a point in order to determine the R3 coordinates of its intersection with an edge of the current face, if such an intersection exists.
@@ -246,6 +155,108 @@ Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface,
   Face_location rotatedPosition = std::make_pair(tface,rotated_barycentric);
   return rotatedPosition; 
 }
+
+Face_index selectFaceFromVertex(Vertex_index intersectedVertex, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
+  //key piece here is the "face_around_target" circulator from CGAL
+
+  std::vector<Face_index> candidateFaces; 
+  candidateFaces.reserve(6); 
+  
+  //get all possible faces that we could walk into. 
+  Face_circulator fbegin(mesh.halfedge(intersectedVertex),mesh), done(fbegin); //fbegin is the name of the Face_circulator type object, things 
+  										 //in the parentheses are declaration arguments for Face_circulators
+  Face_index cand; 
+  do {
+      cand = *fbegin++; //the next face to add is the face pointed to by the next
+      			//iteration of the iterator 
+      if (cand == source_face) continue; //don't need to consider the face we're coming from
+      else {
+        candidateFaces.push_back(cand);
+      }
+    } while(fbegin != done);
+
+  std::vector<Point_3> faceVertices;
+
+   
+  Point_3 source_r3 = mesh.point(intersectedVertex);
+  //small bandaid -- because pmp::locate_vertex only works with boost graph vertex_descriptors, 
+  //and we're using Vertex_index objects for type consistency, I first get the exact r3 location 
+  //of the vetex above and then find its mesh location using PMP::locate. If we had written
+  //the whole code with vertex_descriptors I wouldn't have to do this, but that would mess up 
+  //ranging in other places.   
+  Face_location intersectedBary = PMP::locate(source_r3,mesh);  
+
+  //now -- check every candidate face to see if the path falls within it after bending. 
+  //hypothesis: the path will only fall within the candidate face if that face is the *correct* face, most of the time -- 
+  //pathological meshes where two faces are at an extreme angle relative to each other & very thin can break this. 
+  //But if that happens, we're probably getting very nearly best possible behavior anyway. See through_vertex.nb notebook
+  //for simple tests of this hypothesis.
+  //We can check by extending the path out and seeing if its endpoint either intersects the candidate face or falls within
+  //that face. If either are true, this is the correct face and we can break the loop.
+  Face_index correctFace = source_face;
+  bool outOfTriangle;
+
+  for (Face_index candidate_face: candidateFaces) {
+    std::vector<Vertex_index> faceVertices = getVertexIndices(mesh, candidate_face); 
+    Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face, source_r3, source_r3 +  toIntersection);
+    
+    std::array<double, 3> source_bary = intersectedBary.second;
+    std::array<double, 3> cand_bary = candidateLocation.second;
+
+    outOfTriangle = false;
+    for (int i = 0; i < 3; i++) { 
+      if (cand_bary[i] < 0) outOfTriangle = true;
+    } 
+    
+    if (!outOfTriangle) {
+      correctFace = candidate_face;
+      break;
+    }
+
+    if (outOfTriangle) {      
+      Point_3 cand_r3 = PMP::construct_point(candidateLocation, mesh); 
+      std::pair<Point_3,std::vector<Vertex_index>> ifIntersect = find_intersection(mesh, source_face, source_r3, cand_r3, faceVertices);
+      Point_3 intersection_point = ifIntersect.first; 
+      if (intersection_point != Point_3(1000,1000,1000)) { 
+	correctFace = candidate_face;
+	break; 
+    }
+    } 
+  }
+  
+  //we should always find the right face here, given that we're staying on the mesh. 
+  //If we don't find one, something's wrong, and I want to know
+  if (correctFace == source_face) {
+    std::cout << "Found correct face to be source face, DEBUG" << std::endl;
+  }	
+	
+  return correctFace;
+}
+
+Face_index getTargetFace(std::vector<Vertex_index> intersected, Point_3 pos, Vector_3 toIntersection, Face_index source_face, Triangle_mesh mesh) {
+ //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
+
+  bool throughVertex = intersected.size() == 1;
+
+  if (throughVertex) {
+    std::cout << "Only one vertex intersected. Calling placeholder routine." << std::endl;
+    const std::string errors_filename = "throughverts" + std::to_string(source_face) + ".txt";
+
+    std::ofstream error_log(errors_filename);
+
+    error_log << source_face << "\n";
+    error_log << pos; 
+    double moveEpsilon = 1.05; //using a tiny movement in the direction of the intersection vector to determine which face we're moving into
+    return PMP::locate(pos+moveEpsilon*toIntersection,mesh).first;//this is really, genuinely, just an approximation so i can debug the rest. 
+                                                                 //But it should identify things just fine most of the time.
+  }
+ 
+  Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
+  Face_index provisional_target_face = mesh.face(intersected_edge);
+  if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
+  return provisional_target_face;
+}
+
 
 Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &move) {
   double travelLength = vectorMagnitude(move);
