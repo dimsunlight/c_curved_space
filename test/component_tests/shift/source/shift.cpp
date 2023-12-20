@@ -54,7 +54,9 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   
   std::vector<Point_3> faceVertices;
   for (Vertex_index vi: vertexIndices) faceVertices.push_back(mesh.point(vi));
-   
+  std::cout << "original vertex indices for intersection routine: " << std::endl;
+  for (Vertex_index vi: vertexIndices) std::cout << vi << ",";
+  std::cout << std::endl;  
   Point_3 sourceDown = project_to_face(faceVertices, source);
   Point_3 query = project_to_face(faceVertices, target);
   std::array<double, 3> source_bary = PMP::barycentric_coordinates(faceVertices[0],faceVertices[1],faceVertices[2], sourceDown);
@@ -74,25 +76,29 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = pow(10,-8); //checking for equivalence to zero within reasonable error
+  double tol = pow(10,-6); //checking for equivalence to zero within reasonable error
 
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 
   if (toIntersect < tol) toIntersect = 2;//just needs to be some # greater than 1. 
 
-  //min function with a max of 1. if we don't find something less than 1, no intersection.  
+  //min function with a max of 1. if we don't find something less than 1, no intersection. 
+   
   for(double val: intersection_values) {
     if (val < toIntersect and val > tol) toIntersect = val;
-  }
-    
+  }  
   std::vector<Vertex_index> fillerVector = {}; //for null return later
-  
+ 
+
   if (toIntersect < 1 and toIntersect > tol) {
     Point_3 min_intersection;
     min_intersection = Point_3(b11,b12,b13);
     min_intersection = min_intersection+toIntersect*displacement;
     std::array<double,3> newBaryCoords = {min_intersection.x(),min_intersection.y(),min_intersection.z()};
-    
+    for (double val: newBaryCoords) {
+      std::cout << val << ",";	
+    }
+    std::cout << std::endl; 
     //off vertices tell us what vertices are *not* part of the intersected edge
     int vertexIndicator = 0;
     std::vector<int> offVertices = {}; //indices of vertices with bary coordinate zero at the intersection
@@ -104,19 +110,18 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
       }
       vertexIndicator+=1;
     }
-
     std::vector<Vertex_index> intersected = {};
     bool flag = false;
-    for (int i; i < vertexIndices.size(); i++) {
 
+    for (int i=0; i < vertexIndices.size(); i++) {
       for (int off: offVertices) {
         if (i==off) flag = true;
       }
+
       if (flag == true) {
         flag = false;
 	continue;
       }
-
       intersected.push_back(vertexIndices[i]);
     }
 
@@ -178,11 +183,12 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
 
   std::vector<Point_3> faceVertices;
 
-   
+  std::cout << "selecting face given intersected vertex! " << intersectedVertex << std::endl;
+
   Point_3 source_r3 = mesh.point(intersectedVertex);
   // small bandaid -- because pmp::locate_vertex only works with boost graph vertex_descriptors, 
   // and we're using Vertex_index objects for type consistency, I first get the exact r3 location 
-  // of the vetex above and then find its mesh location using PMP::locate. If we had written
+  // of the vertex above and then find its mesh location using PMP::locate. If we had written
   // the whole code with vertex_descriptors I wouldn't have to do this, but that would mess up 
   // ranging in other places.   
   Face_location intersectedBary = PMP::locate(source_r3,mesh);  
@@ -222,7 +228,7 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
       if (intersection_point != Point_3(1000,1000,1000)) { 
 	correctFace = candidate_face;
 	break; 
-    }
+      }
     } 
   }
   
@@ -231,7 +237,7 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
   if (correctFace == source_face) {
     std::cout << "Found correct face to be source face, DEBUG" << std::endl;
   }	
-	
+  std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
   return correctFace;
 }
 
@@ -249,14 +255,14 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
 Face_index getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
 
-  bool throughVertex = intersected.size() == 1;
-
+  std::cout << "printing intersected size: " << intersected.size() << std::endl;
+  bool throughVertex = (intersected.size() == 1);
+  std::cout << "through vertex? " << throughVertex << std::endl;
   if (throughVertex) {
     Vertex_index intersectedVertex = intersected[0];
     // usually, below picks from six possible faces. 
     return selectFaceFromVertex(intersectedVertex, toIntersection, source_face, mesh);   
   }
- 
   Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
   Face_index provisional_target_face = mesh.face(intersected_edge);
   if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
@@ -286,13 +292,15 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
   Vector_3 current_move = Vector_3(source_point, target); 
   
   //if there is no intersection, avoid initalizing any of the intersection code
-  auto targetBary = PMP::barycentric_coordinates(vertexPos[0],vertexPos[1],vertexPos[2],target);
+  std::array<double,3> targetBary = PMP::barycentric_coordinates(vertexPos[0],vertexPos[1],vertexPos[2],target);
   bool intersection = false;
-  for (double bc: targetBary) {
+  
+  for (double bc: targetBary) {  
     if (bc < 0) {
       intersection = true; 
     }
   }
+
   if (intersection == false) {
      return source_point + current_move; 
   }
@@ -307,14 +315,7 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
   double rotationAngle;
   double overlap;
 
-  //useful items for loop w/definition
-  std::size_t counter = 0;
-  //find_intersection_baryroutine(Point_3 source, Point_3 target,  std::vector<Point_3> faceVertices) finds the intersection point on an edge
-
   while(intersection){
-    counter += 1;
-    if (counter > 1) {
-    }
     //vertexList = getVertexPositions(mesh,currentSourceFace);
     vertexList = getVertexIndices(mesh,currentSourceFace);
 
@@ -334,9 +335,9 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
                                                                             //effectively the step where we "walk" to that intersection
     
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
-
+    
     currentTargetFace = getTargetFace(intersected_elements, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
-
+    
     source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there
 
     Face_location newMoveLocation = rotateIntoNewFace(mesh, currentSourceFace, currentTargetFace, source_point, target);
