@@ -54,9 +54,9 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   
   std::vector<Point_3> faceVertices;
   for (Vertex_index vi: vertexIndices) faceVertices.push_back(mesh.point(vi));
-  std::cout << "original vertex indices for intersection routine: " << std::endl;
-  for (Vertex_index vi: vertexIndices) std::cout << vi << ",";
-  std::cout << std::endl;  
+  // std::cout << "original vertex indices for intersection routine: " << std::endl;
+  // for (Vertex_index vi: vertexIndices) std::cout << vi << ",";
+  // std::cout << std::endl;  
   Point_3 sourceDown = project_to_face(faceVertices, source);
   Point_3 query = project_to_face(faceVertices, target);
   std::array<double, 3> source_bary = PMP::barycentric_coordinates(faceVertices[0],faceVertices[1],faceVertices[2], sourceDown);
@@ -161,10 +161,16 @@ Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface,
   return rotatedPosition; 
 }
 
-Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
+Face_index selectFaceFromVertex(const Point_3 spoint, const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
 	       const Triangle_mesh &mesh) {
   //key piece here is the "face_around_target" circulator from CGAL
-
+  std::cout << std::endl;
+  std::cout << "Selecting target face given intersected vertex." << std::endl;
+  std::cout << "Source point: " << spoint << std::endl;
+  std::cout << "toIntersection: " << toIntersection  << std::endl;
+  std::cout << "intersected vertex: " << intersectedVertex << std::endl;
+  std::cout << "source face: " << source_face << std::endl;
+  std::cout << std::endl;
   std::vector<Face_index> candidateFaces; 
   candidateFaces.reserve(6); 
   
@@ -182,8 +188,6 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
     } while(fbegin != done);
 
   std::vector<Point_3> faceVertices;
-
-  std::cout << "selecting face given intersected vertex! " << intersectedVertex << std::endl;
 
   Point_3 source_r3 = mesh.point(intersectedVertex);
   // small bandaid -- because pmp::locate_vertex only works with boost graph vertex_descriptors, 
@@ -236,6 +240,7 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
   // If we don't find one, something's wrong, and I want to know
   if (correctFace == source_face) {
     std::cout << "Found correct face to be source face, DEBUG" << std::endl;
+    std::exit(EXIT_FAILURE);
   }	
   std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
   return correctFace;
@@ -252,16 +257,17 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
  * 	
  */
 
-Face_index getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh) {
+Face_index getTargetFace(const Point_3 &spoint, std::vector<Vertex_index> &intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
 
-  std::cout << "printing intersected size: " << intersected.size() << std::endl;
+  std::cout << "Found intersection. Intersected size: " << intersected.size() << std::endl;
   bool throughVertex = (intersected.size() == 1);
   std::cout << "through vertex? " << throughVertex << std::endl;
   if (throughVertex) {
+    std::cout << "calling through vertex routine: " << std::endl; 
     Vertex_index intersectedVertex = intersected[0];
     // usually, below picks from six possible faces. 
-    return selectFaceFromVertex(intersectedVertex, toIntersection, source_face, mesh);   
+    return selectFaceFromVertex(spoint, intersectedVertex, toIntersection, source_face, mesh);   
   }
   Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
   Face_index provisional_target_face = mesh.face(intersected_edge);
@@ -336,7 +342,7 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
     
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
     
-    currentTargetFace = getTargetFace(intersected_elements, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
+    currentTargetFace = getTargetFace(source_point, intersected_elements, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
     
     source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there
 
