@@ -20,6 +20,7 @@
 #include <ctime>
 #include <math.h>
 #include "get_force.h"
+#include "utils.h"
 #include <chrono>
 #include <ratio>
 #include <thread>
@@ -44,6 +45,7 @@ typedef CGAL::AABB_tree<AABB_face_graph_traits>                         AABB_tre
 typedef std::mt19937                                                    MTgenerator; //mersenne twister generator
 typedef std::uniform_real_distribution<float>                           distribution;
 
+namespace PMP = CGAL::Polygon_mesh_processing; 
 
 
 MTgenerator make_generator(int seed)
@@ -158,14 +160,11 @@ int main(int argc, char* argv[]) {
   }
 
   // basic test of submeshing, agnostic of other dependencies, force calculation itself, 
-  //  
+  std::cout <<  "Testing submeshing routine with mesh file " << read_filename << std::endl; 
   Point_3 point1;
   std::vector<Point_3> point2; 
   std::chrono::duration<long, std::milli> f_time;
   std::size_t targetcount;
-  
-  const std::string filename = "yes_submesh.csv";
-  std::ofstream ftime_file(filename);
   
   int npoints = 1000;
   
@@ -174,16 +173,35 @@ int main(int argc, char* argv[]) {
   double cutoff_rad = .5;
   Point_3 source_pt = particle_xyz_locations[0];
   Face_location source_loc = PMP::locate(source_pt, mesh);
+  printf("Source pt: "); 
+  std::cout << source_pt << std::endl;
 
+  printf("target points: ");
   for (Point_3 pt: particle_xyz_locations) {
-    if (pt != source_pt) { 
-      if (vectorMagnitude(Vector_3(source_pt, pt)) < cutoff_rad) target_locs.push_back(PMP::locate(pt, mesh)); 
+    if (pt != source_pt) {
+      if (vectorMagnitude(Vector_3(source_pt, pt)) < cutoff_rad) {
+	std::cout << pt << std::endl;      
+        target_locs.push_back(PMP::locate(pt, mesh));
+      } 
     }
   }
+
+  printf("trying to build submesh: "); 
+  
+  auto start = std::chrono::high_resolution_clock::now();
   Triangle_mesh submesh = build_minimum_submesh(source_loc, target_locs, cutoff_rad, mesh); 
+  auto end = std::chrono::high_resolution_clock::now();
+  auto submesh_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+  std::cout << "time to make submesh: " << submesh_time.count() << "ms" << std::endl;
+ 
+  std::vector<Point_3> source_vec = {source_pt};
+  time_big_sequence_tree(submesh, source_vec);
+  time_big_sequence_tree(mesh, source_vec);
 
+  std::ofstream out("submesh.off");
+  out << submesh << std::endl;
 
-
+  return 0; 
   
 }
 

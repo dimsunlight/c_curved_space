@@ -208,9 +208,9 @@ Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, cons
  * we would need to look through *all* the vertices) but, in principle, it shouldn't get big enough
  * to matter.  
  */
-Vertex_index unique_vertex_to_mesh(Surface_mesh& mesh, const Point_3 new_vertex) {
+Vertex_index unique_vertex_to_mesh(Triangle_mesh& mesh, const Point_3 new_vertex) {
     // Check if the vertex already exists in the mesh
-    Vertex_index vi = -1;
+    Vertex_index vi = Triangle_mesh::null_vertex();
     for (Vertex_index v : mesh.vertices()) {
         if (mesh.point(v) == new_vertex) {
 	    vi = v;
@@ -218,7 +218,7 @@ Vertex_index unique_vertex_to_mesh(Surface_mesh& mesh, const Point_3 new_vertex)
         }
     }
     // If the vertex wasn't found in the above loop, create a new vertex and add it to the mesh
-    if (vi == -1) {
+    if (vi == Triangle_mesh::null_vertex()) {
       vi = mesh.add_vertex(new_vertex); 
     } 
 
@@ -227,7 +227,7 @@ Vertex_index unique_vertex_to_mesh(Surface_mesh& mesh, const Point_3 new_vertex)
 }  
 
 Triangle_mesh create_submesh_from_visited(std::set<Face_index> visited, const Triangle_mesh& mesh) { 
-  Surface_mesh submesh; 
+  Triangle_mesh submesh; 
   
   Vertex_index u; 
   Vertex_index v;
@@ -238,17 +238,17 @@ Triangle_mesh create_submesh_from_visited(std::set<Face_index> visited, const Tr
   // Thus, we shouldn't need to check for duplicate face additions. However, there's no 
   // such guarantee for the vertices.  
   for (Face_index face: visited) { 
-    face_vertices = getVertexPositions(face,mesh);
-    Vertex_index u = submesh.unique_vertex_to_mesh(submesh, face_vertices[0]);
-    Vertex_index v = submesh.unique_vertex_to_mesh(submesh, face_vertices[1]);
-    Vertex_index w = submesh.unique_vertex_to_mesh(submesh, face_vertices[2]);
+    face_vertices = getVertexPositions(mesh, face);
+    Vertex_index u = unique_vertex_to_mesh(submesh, face_vertices[0]);
+    Vertex_index v = unique_vertex_to_mesh(submesh, face_vertices[1]);
+    Vertex_index w = unique_vertex_to_mesh(submesh, face_vertices[2]);
     added_face = submesh.add_face(u,v,w); 
     // below to make sure we haven't borked the mesh to start with
-    if(added_face == Surface_mesh::null_face())
+    if(added_face == CGAL::Surface_mesh<Kernel>::null_face())
     {
       std::cerr<<"Orientation error in vertices"<<std::endl;
-      f = submesh.add_face(u,w,v);
-      assert(f != Surface_mesh::null_face());
+      added_face = submesh.add_face(u,w,v);
+      assert(added_face != Triangle_mesh::null_face());
     }
   }
 
@@ -262,7 +262,7 @@ Triangle_mesh create_submesh_from_visited(std::set<Face_index> visited, const Tr
 Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vector<Face_location>& targets,
                                     const double& cutoff_dist, const Triangle_mesh& mesh) {
   // Face_location objects are std::pairs of face indices and barycentric coordinates
-  Surface_mesh submesh; 
+  Triangle_mesh submesh; 
   Point_3 source_r3 = PMP::construct_point(source,mesh); 
 
   Face_index source_face = source.first;
@@ -289,11 +289,11 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   for(Halfedge_index hi : halfedges_around_face(hf, mesh)){
     // Access the neighboring face through the opposite halfedge of the current halfedge
     neighboring_face = mesh.face(mesh.opposite(hi));
-    face_verts = getVertexPositions(neighboring_face, mesh);
+    face_verts = getVertexPositions(mesh, neighboring_face);
     visited.insert(neighboring_face); 
-    exploration_stack.push_back(neighboringFace);
+    exploration_stack.push_back(neighboring_face);
     
-    if(goal_faces.contains(neighboring_face)) {
+    if(goal_faces.count(neighboring_face)) {
       goal_faces.erase(neighboring_face);
       // since we know there can't be holes in a mesh with only faces that are directly connected 
       // to the source face: 
@@ -314,13 +314,13 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
     // redefining hf since it will be serving the same purpose
     hf = mesh.halfedge(current_face); 
 
-    for (Halfedge_index hi : halfedges_around_face(hf, mesh) {
+    for (Halfedge_index hi : halfedges_around_face(hf, mesh)) {
       neighboring_face = mesh.face(mesh.opposite(hi));
       // if we've seen this face before, continue so we don't create a loop
-      if(visited.contains(neighboring_face)) continue;
+      if(visited.count(neighboring_face)) continue;
       // otherwise, say we've been here before
       
-      face_verts = getVertexPositions(neighboring_face, mesh);
+      face_verts = getVertexPositions(mesh,neighboring_face);
       // if all our vertices are outside the cutoff radius, we're out of bounds
       // and shouldn't add this face to the exploration stack
       bool allOut = true;
@@ -341,7 +341,7 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
       // for now, this is just a debug statement -- make sure that we've
       // visited all goal faces later... but we should be able to continue
       // to reduce the submesh size, no? I'm worried about holes, but that's it. 
-      if(goal_faces.contains(neighboring_face)) {
+      if(goal_faces.count(neighboring_face)) {
         goal_faces.erase(neighboring_face); 
 	continue;
       }
