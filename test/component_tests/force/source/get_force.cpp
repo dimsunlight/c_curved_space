@@ -262,6 +262,8 @@ Triangle_mesh create_submesh_from_visited(std::set<Face_index> visited, const Tr
 Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vector<Face_location>& targets,
                                     const double& cutoff_dist, const Triangle_mesh& mesh) {
   // Face_location objects are std::pairs of face indices and barycentric coordinates
+  auto start = std::chrono::high_resolution_clock::now();
+	
   Triangle_mesh submesh; 
   Point_3 source_r3 = PMP::construct_point(source,mesh); 
 
@@ -356,6 +358,15 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
     std::cout << "All goal faces not found, debug!" << std::endl;	
   }
 
+  auto end = std::chrono::high_resolution_clock::now(); 
+  auto  traversal_time = std::chrono::duration_cast<std::chrono::microseconds>(end-start); 
+  std::cout << "time to execute mesh traversal for submesh generation: " << traversal_time.count() << " microseconds" << std::endl;
+
+  start = std::chrono::high_resolution_clock::now();
+  submesh = create_submesh_from_visited(visited,mesh); 
+  end = std::chrono::high_resolution_clock::now();
+  auto submesh_time = std::chrono::duration_cast<std::chrono::microseconds>(end-start);
+  std::cout << "time to create submesh from visited: "  << submesh_time.count() << " microseconds" << std::endl;
   return create_submesh_from_visited(visited,mesh); 
 }
 

@@ -192,7 +192,7 @@ int main(int argc, char* argv[]) {
   Triangle_mesh submesh = build_minimum_submesh(source_loc, target_locs, cutoff_rad, mesh); 
   auto end = std::chrono::high_resolution_clock::now();
   auto submesh_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "time to make submesh: " << submesh_time.count() << "ms" << std::endl;
+  std::cout << "time to traverse logic & make submesh: " << submesh_time.count() << "ms" << std::endl;
  
   std::vector<Point_3> source_vec = {source_pt};
   time_big_sequence_tree(submesh, source_vec);
