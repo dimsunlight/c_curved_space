@@ -76,7 +76,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = pow(10,-6); //checking for equivalence to zero within reasonable error
+  double tol = pow(10,-3); //checking for equivalence to zero within reasonable error
 
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 

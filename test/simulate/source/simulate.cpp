@@ -243,7 +243,7 @@ int main (int argc, char* argv[]) {
   for (Point_3 location: particle_locations) std::cout << location << std::endl;
  
   //simulation time parameters -- too-large step sizes can break shift!
-  std::size_t timesteps = 1000; //hard defining this now rather than input-defining to avoid extra debugging 
+  std::size_t timesteps = 2000; //hard defining this now rather than input-defining to avoid extra debugging 
   double      stepsize = .01;   //smaller stepsize for lj (.0001) -- larger for gaussian repulsion
 
   //define location buffer to ensure simultaneous position update, define neighbor lists, initalize loop variables
@@ -251,7 +251,7 @@ int main (int argc, char* argv[]) {
   location_buffer.reserve(particle_locations.size());
   std::cout << "Running simulation with " << particle_locations.size() << " particles and " << timesteps << " timesteps." << std::endl;
   std::cout << "Timestep size " << stepsize << std::endl;
-  double neighbor_cutoff = 3;
+  double neighbor_cutoff = 6;
   std::vector<std::pair<Point_3,std::vector<Point_3>>> particles_with_neighbors = get_neighbors(particle_locations,neighbor_cutoff);
   std::pair<Point_3,std::vector<Point_3>> particle_and_neighbors;
   Vector_3 f_on_p;
