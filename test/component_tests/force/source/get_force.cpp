@@ -276,10 +276,12 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   
   std::set<Face_index> visited; 
   visited.insert(source_face);
-
+  
+  std::cout << "source point: " << source_r3 << std::endl;
   // first: add to the list of goal faces all the faces which contain 
   // a target but are not the source face
-  for (Face_location target: targets) { 
+  for (Face_location target: targets) {
+    //std::cout << PMP::construct_point(target, mesh) << " in face " << target.first << std::endl;  
     if (target.first != source_face) goal_faces.insert(target.first); 
   }
   if (goal_faces.empty()) return create_submesh_from_visited(visited,mesh); // early return if all our targets are in one face
@@ -313,6 +315,8 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   }
 
   Face_index current_face;
+  Triangle_3 comp_triangle;
+
   printf("Exploring faces to create a submesh... \n"); 
   // now: breadth-first search, checking every connected face and trying to make a complete patch
   // while (!exploration_stack.empty() && !goal_faces.empty()) { // early stop condition 
@@ -337,23 +341,21 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
     for (Halfedge_index hi : halfedges_around_face(hf, mesh)) {
       neighboring_face = mesh.face(mesh.opposite(hi));
       // if we've seen this face before, continue so we don't create a closed loop
+      
+      // std::cout << "\n checking face " << neighboring_face;
       if(visited.count(neighboring_face)) { 
-        //std::cout << "already seen " << neighboring_face << std::endl;
+        // std::cout << " already seen ";
         continue;
       }
       
       face_verts = getVertexPositions(mesh,neighboring_face);
       // if all our vertices are outside the cutoff radius, we're out of bounds
       // and shouldn't add this face to the exploration stack
-      bool allOut = true;
-      for (Point_3 v : face_verts) {
-         if (vectorMagnitude(Vector_3(source_r3,v)) < cutoff_dist) {
-           allOut = false;
-	   break;
-	   }
-      }
-      if (allOut) {
-        // std::cout << " all vertices out ";
+      bool out = false;
+      comp_triangle = Triangle_3(face_verts[0],face_verts[1],face_verts[2]);
+
+      if (sqrt(CGAL::squared_distance(source_r3, comp_triangle)) > cutoff_dist) {
+        std::cout << ", triangle out of bounds";
        	continue;
       }
        
@@ -380,8 +382,11 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   if (!goal_faces.empty()) {
     printf("remaining goal faces: \n");
     for (Face_index face: goal_faces) std::cout << face << " ";
-    std::cout << "All goal faces not found, debug!" << std::endl;	
+    std::cout << "All goal faces not found, debug!" << std::endl;
+    std::cout << "visited faces: " << std::endl;
+    for (Face_index f: visited) std::cout << f << " ";    
   }
+  printf("\n");
 
   auto end = std::chrono::high_resolution_clock::now(); 
   auto  traversal_time = std::chrono::duration_cast<std::chrono::microseconds>(end-start); 

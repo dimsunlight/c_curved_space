@@ -175,16 +175,19 @@ int main(int argc, char* argv[]) {
   Face_location source_loc = PMP::locate(source_pt, mesh);
   printf("Source pt: "); 
   std::cout << source_pt << std::endl;
-
-  printf("target points: ");
+  std::cout << "source vertices " << std::endl;
+  for (Point_3 point: getVertexPositions(mesh, source_loc.first)) std::cout << point << std::endl;
+ 
+  //printf("target points: ");
   for (Point_3 pt: particle_xyz_locations) {
     if (pt != source_pt) {
       if (vectorMagnitude(Vector_3(source_pt, pt)) < cutoff_rad) {
-	std::cout << pt << std::endl;      
+	//std::cout << pt << std::endl;      
         target_locs.push_back(PMP::locate(pt, mesh));
       } 
     }
   }
+  
 
   printf("trying to build submesh: \n"); 
   
