@@ -166,7 +166,7 @@ int main(int argc, char* argv[]) {
   std::chrono::duration<long, std::milli> f_time;
   std::size_t targetcount;
   
-  int npoints = 1000;
+  int npoints = 100000;
   
   std::vector<Point_3> particle_xyz_locations = n_torus_sample_points(npoints, 1, 3);
   std::vector<Face_location> target_locs; 
@@ -186,7 +186,7 @@ int main(int argc, char* argv[]) {
     }
   }
 
-  printf("trying to build submesh: "); 
+  printf("trying to build submesh: \n"); 
   
   auto start = std::chrono::high_resolution_clock::now();
   Triangle_mesh submesh = build_minimum_submesh(source_loc, target_locs, cutoff_rad, mesh); 

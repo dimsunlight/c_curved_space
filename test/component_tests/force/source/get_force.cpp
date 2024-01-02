@@ -203,10 +203,10 @@ Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, cons
 }
 
 /**
- * Protective function to ensure that we don't add duplicate vertices to the mesh. 
+ * Protective function to ensure that we don't add duplicate vertices to a submesh. 
  * This would be really costly if submesh got really large (as every time we added a new vertex,
  * we would need to look through *all* the vertices) but, in principle, it shouldn't get big enough
- * to matter.  
+ * to matter very much.   
  */
 Vertex_index unique_vertex_to_mesh(Triangle_mesh& mesh, const Point_3 new_vertex) {
     // Check if the vertex already exists in the mesh
@@ -226,6 +226,9 @@ Vertex_index unique_vertex_to_mesh(Triangle_mesh& mesh, const Point_3 new_vertex
     return vi; 
 }  
 
+/* Constructor function to generate a submesh from a list of visited faces visited and the 
+ * original mesh which contains those faces mesh. 
+ */
 Triangle_mesh create_submesh_from_visited(std::set<Face_index> visited, const Triangle_mesh& mesh) { 
   Triangle_mesh submesh; 
   
@@ -280,6 +283,9 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
     if (target.first != source_face) goal_faces.insert(target.first); 
   }
   if (goal_faces.empty()) return create_submesh_from_visited(visited,mesh); // early return if all our targets are in one face
+  printf("goal faces: \n"); 
+  for (Face_index face: goal_faces) std::cout << face << " "; 
+  std::cout << std::endl;
 
   std::vector<Face_index> exploration_stack; 
   std::vector<Point_3> face_verts; 
@@ -307,20 +313,34 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   }
 
   Face_index current_face;
+  printf("Exploring faces to create a submesh... \n"); 
   // now: breadth-first search, checking every connected face and trying to make a complete patch
-  while (!exploration_stack.empty() && !goal_faces.empty()) { 
+  // while (!exploration_stack.empty() && !goal_faces.empty()) { // early stop condition 
+  while (!exploration_stack.empty()) {   
     // get the current face we're "standing" in
+    
+    /*
+    printf("exploration stack of current iteration: \n");
+    for (Face_index f: exploration_stack) std::cout << f << " "; 
+    std::cout << std::endl;
+    printf("visited set of current iteration: \n");
+    for (Face_index f: visited) std::cout << f << " "; 
+    std::cout << std::endl;
+    */
+
     current_face = exploration_stack.back(); 
     exploration_stack.pop_back(); 
-
+    //std::cout << current_face << " ";
     // redefining hf since it will be serving the same purpose
     hf = mesh.halfedge(current_face); 
 
     for (Halfedge_index hi : halfedges_around_face(hf, mesh)) {
       neighboring_face = mesh.face(mesh.opposite(hi));
-      // if we've seen this face before, continue so we don't create a loop
-      if(visited.count(neighboring_face)) continue;
-      // otherwise, say we've been here before
+      // if we've seen this face before, continue so we don't create a closed loop
+      if(visited.count(neighboring_face)) { 
+        //std::cout << "already seen " << neighboring_face << std::endl;
+        continue;
+      }
       
       face_verts = getVertexPositions(mesh,neighboring_face);
       // if all our vertices are outside the cutoff radius, we're out of bounds
@@ -332,7 +352,10 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
 	   break;
 	   }
       }
-      if (allOut) continue;
+      if (allOut) {
+        // std::cout << " all vertices out ";
+       	continue;
+      }
        
       // the two statements above guarantee closure, although closed surfaces 
       // with small internal "radii"/large cutoff radii can lead to delayed closure/
@@ -344,17 +367,19 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
       // visited all goal faces later... but we should be able to continue
       // to reduce the submesh size, no? I'm worried about holes, but that's it. 
       if(goal_faces.count(neighboring_face)) {
+        // std::cout << "found goal face: " << neighboring_face << std::endl; 
         goal_faces.erase(neighboring_face); 
-	continue;
       }
       
-      //finally, if we absolutely need to keep looking down this path (it is not a goal,
-      //it is not past an edge, we haven't seen it before), we do. 
-      exploration_stack.push_back(neighboring_face); 
+      //finally, if we absolutely need to keep looking down this path (
+      //it is not past the neighbor range, we haven't seen it before), we do. 
+      exploration_stack.push_back(neighboring_face);
     }    
 
   }
   if (!goal_faces.empty()) {
+    printf("remaining goal faces: \n");
+    for (Face_index face: goal_faces) std::cout << face << " ";
     std::cout << "All goal faces not found, debug!" << std::endl;	
   }
 
