@@ -286,8 +286,8 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   }
   if (goal_faces.empty()) return create_submesh_from_visited(visited,mesh); // early return if all our targets are in one face
   printf("goal faces: \n"); 
-  for (Face_index face: goal_faces) std::cout << face << " "; 
-  std::cout << std::endl;
+  for (Face_index face: goal_faces) std::cout << face << " ";
+  std::cout << "\n Number of goal faces: " << goal_faces.size() << std::endl; 
 
   std::vector<Face_index> exploration_stack; 
   std::vector<Point_3> face_verts; 
@@ -319,8 +319,8 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
 
   printf("Exploring faces to create a submesh... \n"); 
   // now: breadth-first search, checking every connected face and trying to make a complete patch
-  // while (!exploration_stack.empty() && !goal_faces.empty()) { // early stop condition 
-  while (!exploration_stack.empty()) {   
+  while (!exploration_stack.empty() && !goal_faces.empty()) { // early stop condition 
+  //while (!exploration_stack.empty()) {   
     // get the current face we're "standing" in
     
     /*

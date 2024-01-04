@@ -166,7 +166,7 @@ int main(int argc, char* argv[]) {
   std::chrono::duration<long, std::milli> f_time;
   std::size_t targetcount;
   
-  int npoints = 100000;
+  int npoints = 1000;
   
   std::vector<Point_3> particle_xyz_locations = n_torus_sample_points(npoints, 1, 3);
   std::vector<Face_location> target_locs; 
@@ -187,7 +187,8 @@ int main(int argc, char* argv[]) {
       } 
     }
   }
-  
+  printf("number of targets: ");
+  std::cout << target_locs.size() << std::endl; 
 
   printf("trying to build submesh: \n"); 
   
