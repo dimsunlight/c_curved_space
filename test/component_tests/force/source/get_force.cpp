@@ -177,19 +177,19 @@ Vector_3 inversePowerLaw(float dist, Vector_3 tangent, double sigma) {
 
 Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets) {
   //create list of distances and path tangents between the source particle and the targets
-  std::chrono::duration<long, std::milli> f_time;
-  auto start = std::chrono::high_resolution_clock::now();
+  // std::chrono::duration<long, std::milli> f_time;
+  // auto start = std::chrono::high_resolution_clock::now();
   std::pair<std::vector<double>, std::vector<Vector_3>> distancesAndTangents = calcTangentsAndDistances(mesh, source, targets, num_targets);   
-  auto end = std::chrono::high_resolution_clock::now();
-  f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-  std::cout << "time to calc dist & tang:  " << f_time.count() << std::endl;
-  std::cout << "" << std::endl;
+  // auto end = std::chrono::high_resolution_clock::now();
+  // f_time =  std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+  // std::cout << "time to calc dist & tang:  " << f_time.count() << std::endl;
+  // std::cout << "" << std::endl;
 
   std::vector<double> distances = distancesAndTangents.first;
   std::vector<Vector_3> tangents = distancesAndTangents.second;
   //we could either do this loop within forceFunction or here -- shouldn't be hugely different
   
-  //L-J parameters
+  //force parameters -- make these passable later, rather than manual rewrite every time 
   double epsilon = 1;
   double sigma = 1;
   Vector_3 force= Vector_3(0,0,0); //initialize to zero to avoid redefinition --
@@ -319,8 +319,8 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
 
   printf("Exploring faces to create a submesh... \n"); 
   // now: breadth-first search, checking every connected face and trying to make a complete patch
-  while (!exploration_stack.empty() && !goal_faces.empty()) { // early stop condition 
-  //while (!exploration_stack.empty()) {   
+  // while (!exploration_stack.empty() && !goal_faces.empty()) { // early stop condition 
+  while (!exploration_stack.empty()) {   
     // get the current face we're "standing" in
     
     /*
@@ -400,3 +400,30 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   return create_submesh_from_visited(visited,mesh); 
 }
 
+
+/* force calculation in a bounded subregion of the original mesh. 
+ * This is written to be straightforward to convert into a function that takes as input only
+ * Face_location objects, just by cutting out some of the conversion lines.  
+ * However, be mindful that the force_on_source function will also need to be converted
+ * to use Face_locations. 
+ */
+Vector_3 bounded_region_force(const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets, cutoff_rad) {
+  // this is copy and paste code from ``calc tangents and distances,'' which we can avoid when rewriting to use face locations...
+  Surface_mesh_shortest_path shortest_paths(mesh);
+  AABB_tree tree;
+  shortest_paths.build_aabb_tree(tree);
+  Face_location source_loc = shortest_paths.locate<AABB_face_graph_traits>(source, tree);
+  
+  std::vector<Face_location> target_locs;
+  target_locs.reserve(targets.size()); 
+
+  for (Point_3 target: targets) {
+    target_locs.push_back(shortest_paths.locate<AABB_face_graph_traits>(target, tree); 
+  }
+  
+  Triangle_mesh submesh = build_minimum_submesh(source_loc, target_locs,
+                                                cutoff_dist,  mesh) 
+
+
+  return force_on_source (submesh, source, targets, num_targets); 
+}
