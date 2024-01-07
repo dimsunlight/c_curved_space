@@ -36,6 +36,8 @@ Vector_3 forceFunction (const float &dist, const Vector_3 &tangent, const double
 Vector_3 force_on_source (const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, const std::size_t &num_targets);
 Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vector<Face_location>& targets,
                                     const double& cutoff_dist, const Triangle_mesh& mesh);
+Vector_3 bounded_region_force(const Triangle_mesh &mesh, const Point_3 &source, const std::vector<Point_3> &targets, 
+		              const std::size_t &num_targets, double cutoff_rad);
 
 #endif
 

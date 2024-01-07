@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     82991,       1461]
-NotebookOptionsPosition[     82060,       1436]
-NotebookOutlinePosition[     82453,       1452]
-CellTagsIndexPosition[     82410,       1449]
+NotebookDataLength[     88900,       1599]
+NotebookOptionsPosition[     87473,       1565]
+NotebookOutlinePosition[     87908,       1582]
+CellTagsIndexPosition[     87865,       1579]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1261,38 +1261,35 @@ Cell[BoxData[
  RowBox[{"subMesh", " ", "=", " ", 
   RowBox[{
   "Import", "[", 
-   "\"\</home/twebb8/projects/cgal/c_curved_space/test/component_tests/force/\
-build/submesh.off\>\"", "]"}]}]], "Input",
- CellChangeTimes->{{3.912164671872344*^9, 3.912164698374906*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"e850b4d6-9434-4dda-942a-b2bdbc0d415c"],
+   "\"\<\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\toler\\\\projects\\\\CGAL_\
+curvature\\\\test\\\\component_tests\\\\force\\\\build\\\\submesh.off\>\"", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.912164671872344*^9, 3.912164698374906*^9}, {
+  3.913291515397814*^9, 3.913291531484783*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"e850b4d6-9434-4dda-942a-b2bdbc0d415c"],
 
 Cell[BoxData[
  Graphics3DBox[
   TagBox[
    DynamicModuleBox[{Typeset`mesh = {MeshRegion, {}}}, 
     TagBox[GraphicsComplex3DBox[CompressedData["
-1:eJwlklsog2Ecxl+b8+FCamRkciEulEhkZRQuSXZDMqJIrBzSkrwuUGpCMdz4
-bigloRxy6PtyyKEozaFI+7Y5jDHKITmUvc/71frXr+d7/s//+RZfbSypVRBC
-Yrw/JcFDk9rcOd6pqzcqJQbe3p9E75Cqyp2Ma2as4IbEIXDDXOg943R72Ydx
-2jl5z7gwkOViXOju92Ncqle9MK6bz7QxLmv1/vCRhsGJouYUPl2Vvtj7a4W/
-kKe8YpwENykY182GuhiXIy2H4B+N2CuN9zugN+ePYg6poJcKS26x98eygDtM
-ydAL2hYZPvaZVeytaiaMyyfmM3DRtAv/ikHkpOEdyKkZfOwB751FTvn5m/cg
-hojgBQr0I1M3cpLW4DvcG1UcgL0hx7yHCKMDfY6cBkJfOgpuSOvbZ5Pqtdyn
-+OgBvGj9lfc/z3uO7nlEznHLM/Yac5GfmMpu8L56xQ59yxq40K634/7YjAvG
-pbFscE3fNe6lB45z6CcakEfYsyMPTY9bwpwq4t9rrwBcXni3grtT8H01Owke
-3JUaNs172sS95OeT+1z+bcF/ow7+hnUbuFC7yP8/ajPPc5nlhJ56DpA3zYV7
-dV9Bt+I/SDDfAA==
+1:eJxTTMoPSmViYGAQA2JmBjBo0Cx9bQ+kHTLzmQ+ABD5/ebMfSB1IjH4MEldY
+eRksnqA+ESyesI7nOUi84fA2RpB4Q+385yDxBX2WL0DiCxq7WEHiBzLF3oPE
+HTZY3AeJP7AJZQObc2ASWJyBKeUK2Jz6eBawvX8ug81f4MR8GyTOwJXHBBJ3
+WMPzAiT+YH/lUbB47ASwOQ2C1WBzFCa8agWLt60Bm/Pg7S+IO/dz7weLuzGB
+3f+g4TXYHIYSrmdg90gEsIPEF3Cfg7hTOP8R2L9Tr3CA1YdMA4s/EJ9+CmzO
+11ywfw/M7HoENt+4/QSIbgi1gZgfcPYl2P29rtPA9EQxsPsPuAc9Bav33/0B
+Ep4bIOEm1foKLH7DDCzOYC0MCbfqIrC9DScfXQOrn5UNds+C4w8h4ibyW8H0
+Un9IeB53g7hz45fLYPHXemBzFI4ovwP7y5B3GSSc9oL9y/D7G8ScW38Pgc3f
+kwE2P2H3/ff7ATC1rZk=
       "], 
       {Hue[0.6, 0.3, 0.85], EdgeForm[Hue[0.6, 0.3, 0.75]], 
        TagBox[
-        Polygon3DBox[{{1, 2, 3}, {1, 4, 2}, {5, 6, 2}, {6, 7, 2}, {8, 9, 
-         10}, {10, 11, 8}, {12, 13, 6}, {6, 13, 14}, {15, 16, 5}, {8, 7, 
-         14}, {14, 7, 6}, {14, 17, 9}, {18, 1, 3}, {3, 19, 18}, {7, 8, 20}, {
-         8, 21, 20}, {2, 7, 3}, {7, 20, 3}, {4, 5, 2}, {4, 15, 5}, {22, 12, 
-         5}, {5, 12, 6}, {23, 24, 13}, {13, 24, 17}, {25, 23, 12}, {12, 23, 
-         13}, {26, 12, 22}, {5, 16, 22}, {27, 3, 20}, {11, 21, 8}, {9, 8, 
-         14}, {9, 17, 28}, {12, 26, 25}, {10, 9, 28}, {17, 14, 13}, {3, 27, 
-         19}}],
+        Polygon3DBox[{{1, 2, 3}, {1, 4, 2}, {5, 6, 2}, {6, 7, 2}, {8, 9, 6}, {
+         6, 9, 10}, {11, 12, 5}, {13, 7, 10}, {10, 7, 6}, {10, 14, 15}, {16, 
+         1, 3}, {2, 7, 3}, {17, 4, 1}, {4, 5, 2}, {4, 11, 5}, {18, 8, 5}, {5, 
+         8, 6}, {19, 20, 9}, {9, 20, 14}, {21, 19, 8}, {8, 19, 9}, {22, 8, 
+         18}, {5, 12, 18}, {8, 22, 21}, {14, 10, 9}}],
         Annotation[#, "Geometry"]& ]}],
      MouseAppearanceTag["LinkHand"]],
     AllowKernelInitialization->False],
@@ -1312,11 +1309,13 @@ dV9Bt+I/SDDfAA==
      GrayLevel[0.3], 
      ImageScaled[{0, 2, 2}]}},
   Method->{"ShrinkWrap" -> True},
-  ViewPoint->{-0.7381994153627421, 0.8762288081218451, -3.183910284379174},
-  ViewVertical->{-0.17343703834142035`, -0.45516402392922906`, \
--0.8733529097975851}]], "Output",
- CellChangeTimes->{3.912164699506982*^9},
- CellLabel->"Out[2]=",ExpressionUUID->"9559aa34-3883-4aa3-8d79-5707a9f9640b"]
+  ViewPoint->{0.42301970232351443`, 1.7785174209898302`, -2.8474427324674703`},
+  ViewVertical->{0.04918758228757197, 0.988374391027336, 
+   0.14386328548328842`}]], "Output",
+ CellChangeTimes->{
+  3.912164699506982*^9, {3.913291510130432*^9, 3.9132915319550486`*^9}, 
+   3.9132916876414022`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"3880922e-9589-439d-807d-1663f3f8bd6e"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1432,11 +1431,142 @@ dV9Bt+I/SDDfAA==
   3.9121649659339647`*^9, {3.9121650206422663`*^9, 3.9121650459113703`*^9}, 
    3.912165080121468*^9},
  CellLabel->"Out[52]=",ExpressionUUID->"567389ee-c578-4e0c-87d6-e98a87ca1fcd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"biggerSubmeshGreedy", " ", "=", " ", 
+  RowBox[{
+  "Import", "[", 
+   "\"\<\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\toler\\\\projects\\\\CGAL_\
+curvature\\\\meshes\\\\greedy_submesh.off\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.913291009074005*^9, 3.9132910324361296`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"cd7fa50c-675b-4dcb-9fd2-63501cfec87b"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  TagBox[
+   DynamicModuleBox[{Typeset`mesh = {MeshRegion, {}}}, 
+    TagBox[GraphicsComplex3DBox[CompressedData["
+1:eJwlklkoRFEYx48Z+/IghWgy8iAelEhkylB4HMm8kNwRRWJqkKZJrgeUGqEY
+vLgvlJJQlizdmyVLURpbJHfGNowZypIsZc7/nLp99es7/+///c9NrDaW1ioI
+ISrfpyQ4fEqrO89XtfVGpUTB2/uz6CuSoeKGcvWUHZxLHgDnZsIfKOc3F/0o
+59vHHygX+nJclAudvQGUS/XRL5RrZ7OvKZc1+kDoSIPgRFFzDJ2OKn/M/bVD
+XyhQXlJOQpsUlGunw12UyzG2ffCPRsyVRnud6LcWDqMORKNfKi69w9wf2xz2
+MKeiX9A0y9BxTC1jrsFEKJePrCfgonkb+pX98MlHWuBT3f/UBd49DZ+y55vl
+IIaJ4EUK5CPzbvgkLaH32De2JAhzww5ZDlFGJ/IcOg5Gf9kwOJfRs0srr9cw
+nZKDR3Dd6ivLf5blHNf1BJ+jNg/mGvPhn5jLb3E/fsmB/uYVcKFN78D+qqwz
+yqWRXHB1zxX25c6zoE9yo9h7WUzww+85T6Ez1gCfwo6D8cyEBdQJHXvHnSJw
+ee7dDu5Og456K8mLfdMjJll+68iB/HwynYu/Deiv1UGfW70GF2rn2X8Vb2U+
+L3Ju0M9797BHhgs5aL9C7sR/i8PmDA==
+      "], 
+      {Hue[0.6, 0.3, 0.85], EdgeForm[Hue[0.6, 0.3, 0.75]], 
+       TagBox[
+        Polygon3DBox[{{1, 2, 3}, {1, 4, 2}, {5, 6, 2}, {6, 7, 2}, {8, 9, 
+         10}, {10, 11, 8}, {12, 13, 6}, {6, 13, 14}, {15, 16, 5}, {8, 7, 
+         14}, {14, 7, 6}, {14, 17, 9}, {18, 1, 3}, {3, 19, 18}, {7, 8, 20}, {
+         8, 21, 20}, {2, 7, 3}, {7, 20, 3}, {22, 4, 1}, {4, 5, 2}, {4, 15, 
+         5}, {23, 12, 5}, {5, 12, 6}, {24, 25, 13}, {13, 25, 17}, {26, 24, 
+         12}, {12, 24, 13}, {27, 12, 23}, {5, 16, 23}, {28, 3, 20}, {11, 21, 
+         8}, {9, 8, 14}, {9, 17, 29}, {12, 27, 26}, {10, 9, 29}, {17, 14, 
+         13}, {3, 28, 19}}],
+        Annotation[#, "Geometry"]& ]}],
+     MouseAppearanceTag["LinkHand"]],
+    AllowKernelInitialization->False],
+   "MeshGraphics3D",
+   AutoDelete->True,
+   Editable->False,
+   Selectable->False],
+  Boxed->False,
+  DefaultBaseStyle->{
+   "MeshGraphics3D", FrontEnd`GraphicsHighlightColor -> Hue[0.1, 1, 0.7]},
+  Lighting->{{"Ambient", 
+     GrayLevel[0.45]}, {"Directional", 
+     GrayLevel[0.3], 
+     ImageScaled[{2, 0, 2}]}, {"Directional", 
+     GrayLevel[0.33], 
+     ImageScaled[{2, 2, 2}]}, {"Directional", 
+     GrayLevel[0.3], 
+     ImageScaled[{0, 2, 2}]}},
+  Method->{"ShrinkWrap" -> True},
+  ViewPoint->{-0.8562963901983822, 1.1314301962921447`, -3.0719085603337124`},
+  
+  ViewVertical->{
+   0.2664525030998295, -0.12490235921369022`, -0.9557209133709954}]], "Output",\
+
+ CellChangeTimes->{3.913291033266362*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"aae45d9d-0b59-4442-a3df-24e03951a708"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"biggerSubmeshThorough", " ", "=", " ", 
+  RowBox[{
+  "Import", "[", 
+   "\"\<\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\toler\\\\projects\\\\CGAL_\
+curvature\\\\meshes\\\\thorough_submesh.off\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.913291044887534*^9, 3.913291064564475*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"83d9c0b1-13e4-4815-81b9-cfb3b0be4d50"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  TagBox[
+   DynamicModuleBox[{Typeset`mesh = {MeshRegion, {}}}, 
+    TagBox[GraphicsComplex3DBox[CompressedData["
+1:eJwlklkoRFEYx48Z+/IghWgy8iAelEhkylB4HMm8kNwRRWJqkKZJrgeUGqEY
+vLgvlJJQlizdmyVLURpbJHfGNowZypIsZc7/nLp99es7/+///c9NrDaW1ioI
+ISrfpyQ4fEqrO89XtfVGpUTB2/uz6CuSoeKGcvWUHZxLHgDnZsIfKOc3F/0o
+59vHHygX+nJclAudvQGUS/XRL5RrZ7OvKZc1+kDoSIPgRFFzDJ2OKn/M/bVD
+XyhQXlJOQpsUlGunw12UyzG2ffCPRsyVRnud6LcWDqMORKNfKi69w9wf2xz2
+MKeiX9A0y9BxTC1jrsFEKJePrCfgonkb+pX98MlHWuBT3f/UBd49DZ+y55vl
+IIaJ4EUK5CPzbvgkLaH32De2JAhzww5ZDlFGJ/IcOg5Gf9kwOJfRs0srr9cw
+nZKDR3Dd6ivLf5blHNf1BJ+jNg/mGvPhn5jLb3E/fsmB/uYVcKFN78D+qqwz
+yqWRXHB1zxX25c6zoE9yo9h7WUzww+85T6Ez1gCfwo6D8cyEBdQJHXvHnSJw
+ee7dDu5Og456K8mLfdMjJll+68iB/HwynYu/Deiv1UGfW70GF2rn2X8Vb2U+
+L3Ju0M9797BHhgs5aL9C7sR/i8PmDA==
+      "], 
+      {Hue[0.6, 0.3, 0.85], EdgeForm[Hue[0.6, 0.3, 0.75]], 
+       TagBox[
+        Polygon3DBox[{{1, 2, 3}, {1, 4, 2}, {5, 6, 2}, {6, 7, 2}, {8, 9, 
+         10}, {10, 11, 8}, {12, 13, 6}, {6, 13, 14}, {15, 16, 5}, {8, 7, 
+         14}, {14, 7, 6}, {14, 17, 9}, {18, 1, 3}, {3, 19, 18}, {7, 8, 20}, {
+         8, 21, 20}, {2, 7, 3}, {7, 20, 3}, {22, 4, 1}, {4, 5, 2}, {4, 15, 
+         5}, {23, 12, 5}, {5, 12, 6}, {24, 25, 13}, {13, 25, 17}, {26, 24, 
+         12}, {12, 24, 13}, {27, 12, 23}, {5, 16, 23}, {28, 3, 20}, {11, 21, 
+         8}, {9, 8, 14}, {9, 17, 29}, {12, 27, 26}, {10, 9, 29}, {17, 14, 
+         13}, {3, 28, 19}}],
+        Annotation[#, "Geometry"]& ]}],
+     MouseAppearanceTag["LinkHand"]],
+    AllowKernelInitialization->False],
+   "MeshGraphics3D",
+   AutoDelete->True,
+   Editable->False,
+   Selectable->False],
+  Boxed->False,
+  DefaultBaseStyle->{
+   "MeshGraphics3D", FrontEnd`GraphicsHighlightColor -> Hue[0.1, 1, 0.7]},
+  Lighting->{{"Ambient", 
+     GrayLevel[0.45]}, {"Directional", 
+     GrayLevel[0.3], 
+     ImageScaled[{2, 0, 2}]}, {"Directional", 
+     GrayLevel[0.33], 
+     ImageScaled[{2, 2, 2}]}, {"Directional", 
+     GrayLevel[0.3], 
+     ImageScaled[{0, 2, 2}]}},
+  Method->{"ShrinkWrap" -> True},
+  ViewPoint->{-0.9808459259060097, 1.844462384656603, -2.661935345048872},
+  ViewVertical->{0.24734396024995117`, 
+   0.03649160562803822, -0.9682403255631106}]], "Output",
+ CellChangeTimes->{3.9132910664293823`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"1d2a0a16-36a0-474d-9140-9c5191287a15"]
 }, Open  ]]
 },
-WindowSize->{889.5, 659.25},
-WindowMargins->{{363., 133.5}, {48, Automatic}},
-FrontEndVersion->"13.1 for Linux x86 (64-bit) (June 16, 2022)",
+WindowSize->{1440., 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"697318c7-3f8b-44a3-a6f1-62c9b74d2d59"
 ]
@@ -1452,16 +1582,24 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 347, 7, 73, "Input",ExpressionUUID->"de428c64-c617-45f0-99d4-7fc08d52c75f"],
-Cell[930, 31, 73684, 1223, 267, "Output",ExpressionUUID->"45fbe86a-ac8f-4655-a5e6-fa8bf9f9798f"]
+Cell[580, 22, 347, 7, 26, "Input",ExpressionUUID->"de428c64-c617-45f0-99d4-7fc08d52c75f"],
+Cell[930, 31, 73684, 1223, 240, "Output",ExpressionUUID->"45fbe86a-ac8f-4655-a5e6-fa8bf9f9798f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74651, 1259, 344, 7, 52, "Input",ExpressionUUID->"e850b4d6-9434-4dda-942a-b2bdbc0d415c"],
-Cell[74998, 1268, 2309, 50, 367, "Output",ExpressionUUID->"9559aa34-3883-4aa3-8d79-5707a9f9640b"]
+Cell[74651, 1259, 449, 9, 26, "Input",ExpressionUUID->"e850b4d6-9434-4dda-942a-b2bdbc0d415c"],
+Cell[75103, 1270, 2090, 47, 248, "Output",ExpressionUUID->"3880922e-9589-439d-807d-1663f3f8bd6e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[77344, 1323, 2328, 61, 235, "Input",ExpressionUUID->"54c5db91-2f87-4985-bdf7-31e88c3c1e8f"],
-Cell[79675, 1386, 2369, 47, 623, "Output",ExpressionUUID->"567389ee-c578-4e0c-87d6-e98a87ca1fcd"]
+Cell[77230, 1322, 2328, 61, 180, "Input",ExpressionUUID->"54c5db91-2f87-4985-bdf7-31e88c3c1e8f"],
+Cell[79561, 1385, 2369, 47, 540, "Output",ExpressionUUID->"567389ee-c578-4e0c-87d6-e98a87ca1fcd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81967, 1437, 382, 7, 26, "Input",ExpressionUUID->"cd7fa50c-675b-4dcb-9fd2-63501cfec87b"],
+Cell[82352, 1446, 2344, 52, 322, "Output",ExpressionUUID->"aae45d9d-0b59-4442-a3df-24e03951a708"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84733, 1503, 384, 7, 26, "Input",ExpressionUUID->"83d9c0b1-13e4-4815-81b9-cfb3b0be4d50"],
+Cell[85120, 1512, 2337, 50, 315, "Output",ExpressionUUID->"1d2a0a16-36a0-474d-9140-9c5191287a15"]
 }, Open  ]]
 }
 ]

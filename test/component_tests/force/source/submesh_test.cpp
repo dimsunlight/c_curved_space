@@ -166,23 +166,25 @@ int main(int argc, char* argv[]) {
   std::chrono::duration<long, std::milli> f_time;
   std::size_t targetcount;
   
-  int npoints = 1000;
+  int npoints = 10000;
   
   std::vector<Point_3> particle_xyz_locations = n_torus_sample_points(npoints, 1, 3);
   std::vector<Face_location> target_locs; 
+  std::vector<Point_3> targets_r3;
   double cutoff_rad = .5;
   Point_3 source_pt = particle_xyz_locations[0];
   Face_location source_loc = PMP::locate(source_pt, mesh);
   printf("Source pt: "); 
   std::cout << source_pt << std::endl;
-  std::cout << "source vertices " << std::endl;
-  for (Point_3 point: getVertexPositions(mesh, source_loc.first)) std::cout << point << std::endl;
+  //std::cout << "source vertices " << std::endl;
+  //for (Point_3 point: getVertexPositions(mesh, source_loc.first)) std::cout << point << std::endl;
  
   //printf("target points: ");
   for (Point_3 pt: particle_xyz_locations) {
     if (pt != source_pt) {
       if (vectorMagnitude(Vector_3(source_pt, pt)) < cutoff_rad) {
-	//std::cout << pt << std::endl;      
+	//std::cout << pt << std::endl;  
+	targets_r3.push_back(pt);    
         target_locs.push_back(PMP::locate(pt, mesh));
       } 
     }
@@ -190,7 +192,6 @@ int main(int argc, char* argv[]) {
   printf("number of targets: ");
   std::cout << target_locs.size() << std::endl; 
 
-  printf("trying to build submesh: \n"); 
   
   auto start = std::chrono::high_resolution_clock::now();
   Triangle_mesh submesh = build_minimum_submesh(source_loc, target_locs, cutoff_rad, mesh); 
@@ -199,11 +200,77 @@ int main(int argc, char* argv[]) {
   std::cout << "time to traverse logic & make submesh: " << submesh_time.count() << "ms" << std::endl;
  
   std::vector<Point_3> source_vec = {source_pt};
+  std::cout << "for submesh: "; 
   time_big_sequence_tree(submesh, source_vec);
+  std::cout << "for full mesh: "; 
   time_big_sequence_tree(mesh, source_vec);
 
   std::ofstream out("submesh.off");
   out << submesh << std::endl;
+  out.close(); 
+
+  std::cout << "\nFor the same set of source and target particles:" << std::endl; 
+  start = std::chrono::high_resolution_clock::now();
+  Vector_3 slow_f_on_source = force_on_source (mesh, source_pt, targets_r3, targets_r3.size());
+  end = std::chrono::high_resolution_clock::now();
+  auto slow_f_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+  std::cout << "\ntime to calculate force (no submesh): " << slow_f_time.count() << ", force found " << slow_f_on_source << std::endl;
+
+  start = std::chrono::high_resolution_clock::now();
+  Vector_3 fast_f_on_source = bounded_region_force(mesh, source_pt, targets_r3, targets_r3.size(), cutoff_rad);
+  end = std::chrono::high_resolution_clock::now();
+  auto fast_f_time = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
+  std::cout << "time to calculate force w/submesh: " << fast_f_time.count() << ", force found " << fast_f_on_source << std::endl;
+
+  //loop to calculate quantity of speedup over many target numbers and configurations/stress test
+  std::ofstream speedups("speedups.csv");
+  cutoff_rad = 0.5;  
+  int iterpoints;
+  for (int i = 1; i < 1001; i++) {
+    iterpoints = 100*i;
+    std::cout << "with " << iterpoints << " particles..." << std::endl;
+    
+    
+    particle_xyz_locations = n_torus_sample_points(iterpoints, 1, 3);
+    source_pt = particle_xyz_locations[0];
+    source_loc = PMP::locate(source_pt, mesh);
+
+    targets_r3.clear();
+    target_locs.clear();
+    for (Point_3 pt: particle_xyz_locations) {
+      if (pt != source_pt) {
+        if (vectorMagnitude(Vector_3(source_pt, pt)) < cutoff_rad) {
+	  targets_r3.push_back(pt);    
+	  target_locs.push_back(PMP::locate(pt, mesh));
+        } 
+      }
+    }
+
+    start = std::chrono::high_resolution_clock::now();
+    slow_f_on_source = force_on_source (mesh, source_pt, targets_r3, targets_r3.size());
+    end = std::chrono::high_resolution_clock::now();
+    double slow_f = std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count()/1.0;
+    std::cout << "base force calculation time: " << slow_f << "ms" << std::endl; 
+   
+    std::cout << "with " << targets_r3.size() << " targets:" << std::endl;
+    start = std::chrono::high_resolution_clock::now();
+    submesh = build_minimum_submesh(source_loc, target_locs, cutoff_rad, mesh); 
+    end = std::chrono::high_resolution_clock::now();
+    auto submesh_time_count = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
+    std::cout << "submesh_time: " << submesh_time_count << std::endl;
+    std::cout << "make submesh sequence tree: "; 
+    time_big_sequence_tree(submesh, source_vec);
+
+    start = std::chrono::high_resolution_clock::now();
+    fast_f_on_source = bounded_region_force(mesh, source_pt, targets_r3, targets_r3.size(), cutoff_rad);
+    end = std::chrono::high_resolution_clock::now();
+    double fast_f = std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count()/1.0;
+    std::cout << "submeshed force calculation time: " << fast_f << "ms" << std::endl;
+   
+    speedups << "\n" << targets_r3.size() << ", " << fast_f/slow_f << ", " << submesh_time_count; 
+  
+  }
+
 
   return 0; 
   
