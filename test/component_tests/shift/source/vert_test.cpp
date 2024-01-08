@@ -48,6 +48,35 @@ namespace PMP = CGAL::Polygon_mesh_processing;
 typedef PMP::Barycentric_coordinates<FT>                                Barycentric_coordinates;
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 typedef CGAL::Face_around_target_circulator<Triangle_mesh>              Face_circulator;
+typedef std::mt19937                                                    MTgenerator; //mersenne twister generator
+typedef std::uniform_real_distribution<float>                           distribution;
+
+MTgenerator make_generator(int seed)
+{
+  //create random number generator using seed parameter. 
+
+  std::random_device                  rand_dev;
+  MTgenerator                         generator(rand_dev());
+  generator.seed(seed); //seeded for reproducibility -- make sure we use the same sequence every time :)  
+
+  return generator;
+}
+
+distribution distribution_of_range(float range_min, float range_max) {
+  distribution distro(range_min, range_max);
+  return distro;
+}
+
+double rand_weight(MTgenerator& gen) {
+  //pass by address above to ensure that we sequentially sample
+  //from the generator without using the same starting point.
+  distribution distro = distribution_of_range(.001, 1); //no points on edges or verts
+  double b;
+  // reference gen by address so each call to gen advances the
+  // rng forward once
+  return distro(gen);
+}
+
 
 int main(int argc, char* argv[]) {
 
@@ -65,10 +94,55 @@ int main(int argc, char* argv[]) {
    vs.push_back(vd);
  } 
  //now -- build out mesh information necessary to create a test case. 
- //	1) vertex & vertex location (to be intersected on purpose) 
- //	2) all the faces around said vertex 
- //	3) create outside a mathematica drawing with vertex, faces, and 
- //	   path information to port back in here! 
+ //	1) generate a random bary  point on one of the faces adjoining vertex v.  
+ //	2) get the vector from the random point to the vertex location. 
+ //	3) test throughvertex from the barypoint to the vertex exactly. 
+ //	for each vertex.
+ Point_3 vpoint;
+ double b1; 
+ double b2; 
+ double b3; 
+ double rand_weights [3]; 
+
+ Point_3 rand_source;
+ Face_location rand_loc;
+ Point_3 rand_end; 
+
+ Vector_3 to_v;
+ MTGenerator gen = make_generator(1997); 
+ std::vector<Face_index> v_faces; 
+ v_faces.reserve(6); 
+
+ Face_index found_target; 
+
+ for (Vertex_index v: vd) { 
+   vpoint = tmesh.point(v); 
+   Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); //fbegin? (lol)
+   v_faces.clear(); 
+   do {
+     v_faces.push_back(*fbegin++);
+   } while(fbegin != done);
+   //defining weights outside of loop/array definition explicitly for later
+   b1 = rand_weight(gen); 
+   b2 = rand_weight(gen); 
+   b3 = rand_weight(gen); 
+   rand_weights = {b1, b2, b3};
+   rand_loc = std::make_pair(v_faces[0], rand_weights);
+   rand_point = PMP::construct_point(rand_loc, tmesh); 
+   to_v = Vector_3(rand_point, vpoint); 
+   rand_end = rand_source + 2*to_v;   
+ 
+
+   found_target = selectFaceFromVertex(v, to_v, v_faces[0], tmesh);
+   std::cout << "For vertex " << v << ":" << std::endl;
+   std::cout << "random point: " << rand_point << std::endl;  
+   std::cout << "Source face: " << v_faces[0] << std::endl; 
+   std::cout << "Found target at: " << found_target << std::endl;
+   std::cout << "\n";  
+ }
+
+
+
  Vertex_index intersectedVertex = vs[40];
  
  std::cout << "Vertex location: " << tmesh.point(intersectedVertex) << std::endl;

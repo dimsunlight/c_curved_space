@@ -76,7 +76,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = pow(10,-6); //checking for equivalence to zero within reasonable error
+  double tol = pow(10,-h); //checking for equivalence to zero within reasonable error
 
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 
@@ -127,14 +127,8 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
 
     Face_location newPosition = std::make_pair(sourceFace,newBaryCoords);
     Point_3 xyz_intersection = PMP::construct_point(newPosition,mesh);
-    /*
-    //manual reconstruction  
-    Vector_3 xyz_intersection = min_intersection[0]*Vector_3(faceVertices[0].x(),faceVertices[0].y(),faceVertices[0].z()) + 
-	                        min_intersection[1]*Vector_3(faceVertices[1].x(),faceVertices[1].y(),faceVertices[1].z()) +
-			       	min_intersection[2]*Vector_3(faceVertices[2].x(),faceVertices[2].y(),faceVertices[2].z()); 
-    */
 
-    return std::make_pair(xyz_intersection,intersected); // this version returns the barycentric intersection point
+    return std::make_pair(xyz_intersection,intersected); // this version returns the xyz intersection point
   }
   //if we don't have an intersection -- FIX CONDITIONALS LATER IN THE CODE
   else {
