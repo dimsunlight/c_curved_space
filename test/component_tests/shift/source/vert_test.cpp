@@ -24,7 +24,8 @@
 #include "utils.h" 
 #include "shift.h"
 #include <chrono>
-#include <ratio> 
+#include <ratio>
+#include <random> 
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel             K;
 typedef K::FT                                                           FT;
@@ -49,7 +50,7 @@ typedef PMP::Barycentric_coordinates<FT>                                Barycent
 typedef PMP::Face_location<Triangle_mesh, FT>                           Face_location;
 typedef CGAL::Face_around_target_circulator<Triangle_mesh>              Face_circulator;
 typedef std::mt19937                                                    MTgenerator; //mersenne twister generator
-typedef std::uniform_real_distribution<float>                           distribution;
+typedef std::uniform_real_distribution<double>                           distribution;
 
 MTgenerator make_generator(int seed)
 {
@@ -62,7 +63,7 @@ MTgenerator make_generator(int seed)
   return generator;
 }
 
-distribution distribution_of_range(float range_min, float range_max) {
+distribution distribution_of_range(double range_min, double range_max) {
   distribution distro(range_min, range_max);
   return distro;
 }
@@ -102,22 +103,20 @@ int main(int argc, char* argv[]) {
  double b1; 
  double b2; 
  double b3; 
- double rand_weights [3]; 
 
  Point_3 rand_source;
- Face_location rand_loc;
  Point_3 rand_end; 
 
  Vector_3 to_v;
- MTGenerator gen = make_generator(1997); 
+ MTgenerator gen = make_generator(1997); 
  std::vector<Face_index> v_faces; 
  v_faces.reserve(6); 
 
  Face_index found_target; 
 
- for (Vertex_index v: vd) { 
+ for (Vertex_index v: vs) { 
    vpoint = tmesh.point(v); 
-   Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); //fbegin? (lol)
+   Face_circulator fbegin(tmesh.halfedge(v),tmesh), done(fbegin); //fbegin? (lol)
    v_faces.clear(); 
    do {
      v_faces.push_back(*fbegin++);
@@ -125,24 +124,39 @@ int main(int argc, char* argv[]) {
    //defining weights outside of loop/array definition explicitly for later
    b1 = rand_weight(gen); 
    b2 = rand_weight(gen); 
-   b3 = rand_weight(gen); 
-   rand_weights = {b1, b2, b3};
-   rand_loc = std::make_pair(v_faces[0], rand_weights);
-   rand_point = PMP::construct_point(rand_loc, tmesh); 
-   to_v = Vector_3(rand_point, vpoint); 
+   b3 = rand_weight(gen);
+   std::array<double,3> rand_weights = {b1, b2, b3}; 
+   Face_location rand_loc = std::make_pair(v_faces[0], rand_weights);
+   rand_source = PMP::construct_point(rand_loc, tmesh); 
+   to_v = Vector_3(rand_source, vpoint); 
    rand_end = rand_source + 2*to_v;   
  
 
    found_target = selectFaceFromVertex(v, to_v, v_faces[0], tmesh);
    std::cout << "For vertex " << v << ":" << std::endl;
-   std::cout << "random point: " << rand_point << std::endl;  
-   std::cout << "Source face: " << v_faces[0] << std::endl; 
    std::cout << "Found target at: " << found_target << std::endl;
-   std::cout << "\n";  
+   std::cout << "\n";
+
+   if (v_faces[0] == found_target) {
+     //need to see vertex positions for the faces and whatnot 
+     std::cout << "Faces: " << std::endl;
+     for (Face_index fIndex: v_faces) {
+       std::vector<Point_3> vertPos = getVertexPositions(tmesh, fIndex);
+       std::cout << fIndex << ": "; 
+       for (Point_3 vert: vertPos) {
+         std::cout << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}, ";      
+       }
+       std::cout << std::endl;
+     }
+     std::cout << "vertex point " << vpoint << std::endl;
+     std::cout << "source point " << rand_source << std::endl;   
+     std::cout << "Source face: " << v_faces[0] << std::endl; 
+     break; 
+   } 
  }
 
 
-
+/*
  Vertex_index intersectedVertex = vs[40];
  
  std::cout << "Vertex location: " << tmesh.point(intersectedVertex) << std::endl;
@@ -180,5 +194,6 @@ int main(int argc, char* argv[]) {
  Face_index newTarget = selectFaceFromVertex(intersectedVertex, Vector_3(mid_point,end_point), facesToPrint[1], tmesh); 
 
  std::cout << "Routine found the correct face to be: " << newTarget << std::endl;
+ */
  return 0;
 }

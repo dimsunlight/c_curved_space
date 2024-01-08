@@ -76,7 +76,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = pow(10,-h); //checking for equivalence to zero within reasonable error
+  double tol = pow(10,-8); //checking for equivalence to zero within reasonable error
 
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 
@@ -177,7 +177,7 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
 
   std::vector<Point_3> faceVertices;
 
-  std::cout << "selecting face given intersected vertex! " << intersectedVertex << std::endl;
+  //std::cout << "selecting face given intersected vertex! " << intersectedVertex << std::endl;
 
   Point_3 source_r3 = mesh.point(intersectedVertex);
   // small bandaid -- because pmp::locate_vertex only works with boost graph vertex_descriptors, 
@@ -185,7 +185,7 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
   // of the vertex above and then find its mesh location using PMP::locate. If we had written
   // the whole code with vertex_descriptors I wouldn't have to do this, but that would mess up 
   // ranging in other places.   
-  Face_location intersectedBary = PMP::locate(source_r3,mesh);  
+  Face_location intersectedBary = PMP::locate(source_r3, mesh);  
 
   // now -- check every candidate face to see if the path falls within it after bending. 
   // hypothesis: the path will only fall within the candidate face if that face is the *correct* face, most of the time -- 
