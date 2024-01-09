@@ -83,7 +83,6 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   if (toIntersect < tol) toIntersect = 2;//just needs to be some # greater than 1. 
 
   //min function with a max of 1. if we don't find something less than 1, no intersection. 
-   
   for(double val: intersection_values) {
     if (val < toIntersect and val > tol) toIntersect = val;
   }  
@@ -94,34 +93,59 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
     Point_3 min_intersection;
     min_intersection = Point_3(b11,b12,b13);
     min_intersection = min_intersection+toIntersect*displacement;
+    
+    // new bary coords indicates a trio of solutions to linear equations where one of the barycentric coords 
+    // should be zero along the set displacement "displacement". Using point_3 object for convenience
     std::array<double,3> newBaryCoords = {min_intersection.x(),min_intersection.y(),min_intersection.z()};
+    //print bary coordinates for check
     for (double val: newBaryCoords) {
       std::cout << val << ",";	
     }
     std::cout << std::endl; 
-    //off vertices tell us what vertices are *not* part of the intersected edge
+    // off vertices tell us what vertices are *not* part of the intersected edge -- they will have value 0 
     int vertexIndicator = 0;
-    std::vector<int> offVertices = {}; //indices of vertices with bary coordinate zero at the intersection
-    //would use more economical "erase" for the below, but removing entries will mess up the indices if we have to erase twice, 
-    //and we don't know a priori which index is being removed/in what order. 
+    std::vector<int> offVertices = {}; // indices of vertices with bary coordinate zero at the intersection
+    // would use more economical "erase" for the below, but removing entries will mess up the indices if we have to erase twice, 
+    // and we don't know a priori which index is being removed/in what order. 
+    
+    // below logic: We figure out which vertices have zero barycentric weight, then exclude them 
+    // from the list of intersected vertices, which will collectively define an edge (two nonzero) 
+    // or vertex (one nonzero) object. Way of working around index and position info not being
+    // in the same object, and not stored the same way in this fxn 
+
+    // if the barycentric coordinate that we found using minimal intersection is 0, that means 
+    // it is not part of the intersected object (edge or vertex). Below finds which bary coords 
+    // are zero so we can exclude them later. vertexIndicator is a standard counter so I can use
+    // comprehension for the loop -- could have just as easily done a (for(int ii = 0)... ) style 
+    // loop instead
     for (double b: newBaryCoords) {
       if (b < tol) {
         offVertices.push_back(vertexIndicator);
       }
       vertexIndicator+=1;
     }
+
+    // now -- for the vertices that did *not* have barycentric weights = 0, we need to 
+    // fill the intersected vector 
     std::vector<Vertex_index> intersected = {};
     bool flag = false;
 
+    // loop through all the vertex indices 
     for (int i=0; i < vertexIndices.size(); i++) {
+      // search the list of vertices which are not intersected (via 0,1,2 array indices) 
+      // and see if this is one of them
       for (int off: offVertices) {
         if (i==off) flag = true;
       }
 
+      // if it was one of the vertices that wasn't intersected (which is what we 
+      // actually track), reset the flag and move to the next iteration
       if (flag == true) {
         flag = false;
 	continue;
       }
+      // if this vertex was intersected (nonzero bary weight), add it to the list
+      // of intersected objects 
       intersected.push_back(vertexIndices[i]);
     }
 
@@ -130,7 +154,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
 
     return std::make_pair(xyz_intersection,intersected); // this version returns the xyz intersection point
   }
-  //if we don't have an intersection -- FIX CONDITIONALS LATER IN THE CODE
+  //if we don't have an intersection, return filler point; for later, CGAL i think also has special Point_3 null types
   else {
     return std::make_pair(Point_3(1000,1000,1000),fillerVector);
   }
@@ -157,14 +181,12 @@ Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface,
 
 Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
 	       const Triangle_mesh &mesh) {
-  //key piece here is the "face_around_target" circulator from CGAL
-
   std::vector<Face_index> candidateFaces; 
-  candidateFaces.reserve(6); 
+  candidateFaces.reserve(10); // usually six, but it can be more  
   
-  //get all possible faces that we could walk into. 
-  Face_circulator fbegin(mesh.halfedge(intersectedVertex),mesh), done(fbegin); //fbegin is the name of the Face_circulator type object, things 
-  										 //in the parentheses are declaration arguments for Face_circulators
+  // get all possible faces that we could walk into: 
+  Face_circulator fbegin(mesh.halfedge(intersectedVertex),mesh), done(fbegin); // fbegin is the name of the Face_circulator type object, things 
+  									       // in the parentheses are declaration arguments for Face_circulators
   Face_index cand; 
   do {
       cand = *fbegin++; //the next face to add is the face pointed to by the next
@@ -180,18 +202,28 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
   //std::cout << "selecting face given intersected vertex! " << intersectedVertex << std::endl;
 
   Point_3 source_r3 = mesh.point(intersectedVertex);
-  // small bandaid -- because pmp::locate_vertex only works with boost graph vertex_descriptors, 
-  // and we're using Vertex_index objects for type consistency, I first get the exact r3 location 
-  // of the vertex above and then find its mesh location using PMP::locate. If we had written
-  // the whole code with vertex_descriptors I wouldn't have to do this, but that would mess up 
-  // ranging in other places.   
-  Face_location intersectedBary = PMP::locate(source_r3, mesh);  
+  
+  // below -- we're getting the barycentric coordinates of the vertex by assigning a 1 to the 
+  // associated position in an array of otherwise 0s. There is a CGAL function that outputs this, 
+  // but it requires me to use a boost graph descriptor wrapper instead of a vertex_index wrapper
+  Triangle_mesh::Halfedge_index hf = mesh.halfedge(source_face);
+  std::array<double, 3> vert_bary_weights = {0,0,0}; 
+  
+  int counter = 0; 
+  for(Triangle_mesh::Halfedge_index hi : halfedges_around_face(hf, mesh))
+  {
+    if (source(hi, mesh)==intersectedVertex) {
+	vert_bary_weights[counter] = 1;
+	break; 
+    }
+    counter++;  
+  }
+
+  Face_location intersectedBary = std::make_pair(source_face, vert_bary_weights); // the face_location of a vertex will be a 1 and two 0 s   
 
   // now -- check every candidate face to see if the path falls within it after bending. 
   // hypothesis: the path will only fall within the candidate face if that face is the *correct* face, most of the time -- 
   // pathological meshes where two faces are at an extreme angle relative to each other & very thin can break this. 
-  // But if that happens, we're probably getting very nearly best possible behavior anyway. See through_vertex.nb notebook
-  // for simple tests of this hypothesis.
   // We can check by extending the path out and seeing if its endpoint either intersects the candidate face or falls within
   // that face. If either are true, this is the correct face and we can break the loop.
   Face_index correctFace = source_face;
@@ -206,7 +238,11 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
     std::array<double, 3> cand_bary = candidateLocation.second;
 
     outOfTriangle = false;
-    for (int i = 0; i < 3; i++) { 
+    // one way we can resolve the issue of being on an edge: we might pick whichever face was the closest to having all > 0 
+    // target bary coords and use that as the target face. Might require rewriting elsewhere. 
+    std::cout << "cand_bary: "; 
+    for (int i = 0; i < 3; i++) {
+      std::cout <<  cand_bary[i]; 
       if (cand_bary[i] < 0) outOfTriangle = true;
     } 
     
