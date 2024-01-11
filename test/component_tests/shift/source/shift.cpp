@@ -54,7 +54,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   
   std::vector<Point_3> faceVertices;
   for (Vertex_index vi: vertexIndices) faceVertices.push_back(mesh.point(vi));
-  std::cout << "original vertex indices for intersection routine: " << std::endl;
+  std::cout << "original vertex indices for intersection routine: ";
   for (Vertex_index vi: vertexIndices) std::cout << vi << ",";
   std::cout << std::endl;  
   Point_3 sourceDown = project_to_face(faceVertices, source);
@@ -233,26 +233,29 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
   // we could while loop instead of using break;, but for loop guaranteed terminates
   for (Face_index candidate_face: candidateFaces) {
     std::vector<Vertex_index> faceVertices = getVertexIndices(mesh, candidate_face); 
-    Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face, source_r3, source_r3 +  toIntersection);
-    
+    Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face, source_r3, source_r3 +  toIntersection); 
     std::array<double, 3> cand_bary = candidateLocation.second;
+    
+    std::cout << "\nCandidate Face: " << candidate_face << std::endl;
+    Point_3 cand_r3 = PMP::construct_point(candidateLocation, mesh); 
+    std::cout << "candidate target: " << cand_r3 << std::endl;
 
     outOfTriangle = false;
     // one way we can resolve the issue of being on an edge: we might pick whichever face was the closest to having all > 0 
     // target bary coords and use that as the target face. Might require rewriting elsewhere. 
     std::cout << "cand_bary: "; 
     for (int i = 0; i < 3; i++) {
-      std::cout <<  cand_bary[i]; 
+      std::cout <<  cand_bary[i] << ", " ; 
       if (cand_bary[i] < 0) outOfTriangle = true;
     } 
-    
+    std::cout << std::endl; 
+     
     if (!outOfTriangle) {
       correctFace = candidate_face;
       break;
     }
 
     if (outOfTriangle) {      
-      Point_3 cand_r3 = PMP::construct_point(candidateLocation, mesh); 
       std::pair<Point_3,std::vector<Vertex_index>> ifIntersect = find_intersection(mesh, source_face, source_r3, cand_r3, faceVertices);
       Point_3 intersection_point = ifIntersect.first; 
       if (intersection_point != Point_3(1000,1000,1000)) { 

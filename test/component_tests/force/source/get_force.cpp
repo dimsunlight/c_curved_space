@@ -220,15 +220,9 @@ Triangle_mesh create_submesh_from_visited(std::set<Face_index> visited, const Tr
 Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vector<Face_location>& targets,
                                     const double& cutoff_dist, const Triangle_mesh& mesh) {
   // Face_location objects are std::pairs of face indices and barycentric coordinates
-  auto start = std::chrono::high_resolution_clock::now();
-	
-  Triangle_mesh submesh; 
   Point_3 source_r3 = PMP::construct_point(source,mesh); 
-
   Face_index source_face = source.first;
-   
   std::set<Face_index> goal_faces; 
-  
   std::set<Face_index> visited; 
   visited.insert(source_face);
   
@@ -286,11 +280,8 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
       }
       
       face_verts = getVertexPositions(mesh,neighboring_face);
-      // if all our vertices are outside the cutoff radius, we're out of bounds
-      // and shouldn't add this face to the exploration stack
-      bool out = false;
+      //if no point on the triangle is in range, we should exclude the triangle from exploration
       comp_triangle = Triangle_3(face_verts[0],face_verts[1],face_verts[2]);
-
       if (sqrt(CGAL::squared_distance(source_r3, comp_triangle)) > cutoff_dist) {
        	continue;
       }
@@ -319,8 +310,6 @@ Triangle_mesh build_minimum_submesh(const Face_location& source, const std::vect
   }
   printf("\n");
 
-
-  submesh = create_submesh_from_visited(visited,mesh); 
   return create_submesh_from_visited(visited,mesh); 
 }
 

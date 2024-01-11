@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29836,        665]
-NotebookOptionsPosition[     28720,        640]
-NotebookOutlinePosition[     29130,        656]
-CellTagsIndexPosition[     29087,        653]
+NotebookDataLength[     30247,        674]
+NotebookOptionsPosition[     29105,        648]
+NotebookOutlinePosition[     29540,        665]
+CellTagsIndexPosition[     29497,        662]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -103,7 +103,11 @@ Cell[BoxData[{
    RowBox[{
    "PlotLabel", "->", 
     "\"\<Relative Speedup of Submesher with Increasing Target Number, \
-Raw\>\""}]}], "]"}], "\[IndentingNewLine]", 
+Raw\>\""}], ",", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<# Targets\>\"", ",", "\"\<Proportional Speedup\>\""}], 
+     "}"}]}]}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"ListPlot", "[", 
   RowBox[{"ttVnn", ",", " ", 
    RowBox[{
@@ -116,8 +120,8 @@ Raw\>\""}]}], "]"}], "\[IndentingNewLine]",
      "}"}]}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.9134770629498205`*^9, 3.913477078589452*^9}, {
   3.9134801239913206`*^9, 3.913480213700288*^9}, {3.913480747693801*^9, 
-  3.9134807523310738`*^9}},
- CellLabel->"In[79]:=",ExpressionUUID->"26fef074-de9c-4ce0-a06c-ce64e7cae6c1"],
+  3.9134807523310738`*^9}, {3.9136411591255426`*^9, 3.9136411862609797`*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"26fef074-de9c-4ce0-a06c-ce64e7cae6c1"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -192,7 +196,11 @@ t7wHnHVZ8lve/8bFT/T5v0ieL6hnEDwE/wg8DC7A/wz4tP7xBP8HKSMxTQ==
      "]]}, {{}, {}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     TagBox["\"# Targets\"", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox["\"Proportional Speedup\"", HoldForm], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -201,7 +209,7 @@ t7wHnHVZ8lve/8bFT/T5v0ieL6hnEDwE/wg8DC7A/wz4tP7xBP8HKSMxTQ==
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{388.5, Automatic},
+  ImageSize->{462.75, Automatic},
   Method->{
    "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
     "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
@@ -225,8 +233,8 @@ t7wHnHVZ8lve/8bFT/T5v0ieL6hnEDwE/wg8DC7A/wz4tP7xBP8HKSMxTQ==
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{3.913477079036514*^9, 3.9134801822728906`*^9, 
-  3.9134802141483183`*^9, 3.913480755267666*^9},
- CellLabel->"Out[79]=",ExpressionUUID->"34270852-4f2f-4284-b4c5-8ecef5df6c37"],
+  3.9134802141483183`*^9, 3.913480755267666*^9, 3.9136412023591866`*^9},
+ CellLabel->"Out[81]=",ExpressionUUID->"8f3d9a47-4f8f-487e-b119-f272dde433a3"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -320,7 +328,7 @@ f/T37SOZ8fZQ5v3wRL5Kf7HnP5P53jOx+p/Y9SfW3njRHPnJ+YfF/wAgT32X
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{388.5, Automatic},
+  ImageSize->{502.875, Automatic},
   Method->{
    "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
     "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
@@ -344,8 +352,8 @@ f/T37SOZ8fZQ5v3wRL5Kf7HnP5P53jOx+p/Y9SfW3njRHPnJ+YfF/wAgT32X
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{3.913477079036514*^9, 3.9134801822728906`*^9, 
-  3.9134802141483183`*^9, 3.913480755320848*^9},
- CellLabel->"Out[80]=",ExpressionUUID->"3cf6c8ac-5e2f-4ac2-bded-4f9d0648f6f1"]
+  3.9134802141483183`*^9, 3.913480755267666*^9, 3.913641202423353*^9},
+ CellLabel->"Out[82]=",ExpressionUUID->"d8c6a4e1-2888-4f06-bff5-08a57d2b4b1c"]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -638,8 +646,9 @@ wHbo5euT+cDfH/20D1r/A9w7MDM=
   3.913480776947357*^9}},ExpressionUUID->"864db085-f836-444c-b67f-\
 f22c6871fad8"]
 },
-WindowSize->{839.25, 624.75},
-WindowMargins->{{Automatic, 159.75}, {42, Automatic}},
+WindowSize->{1440., 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+Magnification:>1.2 Inherited,
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"0e78b6e1-68a5-4924-abd6-cf8d62f4c43b"
@@ -655,18 +664,18 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2567, 75, 200, "Input",ExpressionUUID->"afc360ff-35a4-4017-ac07-23224759b20f"],
+Cell[558, 20, 2567, 75, 195, "Input",ExpressionUUID->"afc360ff-35a4-4017-ac07-23224759b20f"],
 Cell[CellGroupData[{
-Cell[3150, 99, 808, 20, 67, "Input",ExpressionUUID->"26fef074-de9c-4ce0-a06c-ce64e7cae6c1"],
-Cell[3961, 121, 5461, 107, 297, "Output",ExpressionUUID->"34270852-4f2f-4284-b4c5-8ecef5df6c37"],
-Cell[9425, 230, 5989, 117, 223, "Output",ExpressionUUID->"3cf6c8ac-5e2f-4ac2-bded-4f9d0648f6f1"]
+Cell[3150, 99, 1001, 24, 57, "Input",ExpressionUUID->"26fef074-de9c-4ce0-a06c-ce64e7cae6c1"],
+Cell[4154, 125, 5629, 111, 364, "Output",ExpressionUUID->"8f3d9a47-4f8f-487e-b119-f272dde433a3"],
+Cell[9786, 238, 6013, 117, 348, "Output",ExpressionUUID->"d8c6a4e1-2888-4f06-bff5-08a57d2b4b1c"]
 }, Open  ]],
-Cell[15429, 350, 1851, 53, 124, "Input",ExpressionUUID->"c708a723-ba4d-43dd-aac9-4922d8bd064f"],
+Cell[15814, 358, 1851, 53, 103, "Input",ExpressionUUID->"c708a723-ba4d-43dd-aac9-4922d8bd064f"],
 Cell[CellGroupData[{
-Cell[17305, 407, 713, 18, 67, "Input",ExpressionUUID->"92582535-b1fc-493b-839b-1bfd2944f4f9"],
-Cell[18021, 427, 5744, 111, 257, "Output",ExpressionUUID->"d5b47f2c-ca33-4cf3-8a32-02164233267b"]
+Cell[17690, 415, 713, 18, 57, "Input",ExpressionUUID->"92582535-b1fc-493b-839b-1bfd2944f4f9"],
+Cell[18406, 435, 5744, 111, 327, "Output",ExpressionUUID->"d5b47f2c-ca33-4cf3-8a32-02164233267b"]
 }, Open  ]],
-Cell[23780, 541, 4936, 97, 354, InheritFromParent,ExpressionUUID->"864db085-f836-444c-b67f-f22c6871fad8"]
+Cell[24165, 549, 4936, 97, 423, InheritFromParent,ExpressionUUID->"864db085-f836-444c-b67f-f22c6871fad8"]
 }
 ]
 *)

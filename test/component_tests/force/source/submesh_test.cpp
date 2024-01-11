@@ -191,8 +191,7 @@ int main(int argc, char* argv[]) {
   }
   printf("number of targets: ");
   std::cout << target_locs.size() << std::endl; 
-
-  
+ 
   auto start = std::chrono::high_resolution_clock::now();
   Triangle_mesh submesh = build_minimum_submesh(source_loc, target_locs, cutoff_rad, mesh); 
   auto end = std::chrono::high_resolution_clock::now();
@@ -226,8 +225,8 @@ int main(int argc, char* argv[]) {
   std::ofstream speedups("speedups.csv");
   cutoff_rad = 0.5;  
   int iterpoints;
-  for (int i = 1; i < 1001; i++) {
-    iterpoints = 100*i;
+  for (int i = 1; i < 11; i++) {
+    iterpoints = 1000000*i;
     std::cout << "with " << iterpoints << " particles..." << std::endl;
     
     
