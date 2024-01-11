@@ -1,6 +1,17 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.11...3.23)
 
-project(ccs_test LANGUAGES cxx)
+set(CMAKE_BUILD_TYPE "Release")
+
+find_package(CGAL REQUIRED)
+find_package(Boost REQUIRED)
+include_directories(
+	${CMAKE_CURRENT_SOURCE_DIR}/testsrc
+	${CMAKE_CURRENT_SOURCE_DIR}/util
+   )
+
+add_library(src STATIC get_force.cpp shift.cpp)
+add_library(util STATIC utils.cpp)
+
 
 add_subdirectory(testsrc)
 add_subdirectory(utils)
