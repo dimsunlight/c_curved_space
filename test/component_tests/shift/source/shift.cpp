@@ -105,8 +105,8 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
     // off vertices tell us what vertices are *not* part of the intersected edge -- they will have value 0 
     int vertexIndicator = 0;
     std::vector<int> offVertices = {}; // indices of vertices with bary coordinate zero at the intersection
-    // would use more economical "erase" for the below, but removing entries will mess up the indices if we have to erase twice, 
-    // and we don't know a priori which index is being removed/in what order. 
+    // would use more economical "erase" for the below, but removing entries will mess up the indices 
+    // if we have to erase twice, and we don't know a priori which index is being removed/in what order. 
     
     // below logic: We figure out which vertices have zero barycentric weight, then exclude them 
     // from the list of intersected vertices, which will collectively define an edge (two nonzero) 
@@ -219,7 +219,8 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
     counter++;  
   }
 
-  Face_location intersectedBary = std::make_pair(source_face, vert_bary_weights); // the face_location of a vertex will be a 1 and two 0 s   
+  Face_location intersectedBary = std::make_pair(source_face, vert_bary_weights); // the face_location of a 
+  										  //vertex will be a 1 and two 0 s   
 
   // now -- check every candidate face to see if the path falls within it after bending. 
   // hypothesis: the path will only fall within the candidate face if that face is the *correct* face, most of the time -- 
@@ -228,21 +229,36 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
   // that face. If either are true, this is the correct face and we can break the loop.
   Face_index correctFace = source_face;
   bool outOfTriangle;
+  Triangle_3 f_triangle; 
   std::array<double, 3> source_bary = intersectedBary.second;
- 
+  double closest = 1;
+  double near_dist;  
+  Face_index closestFace = correctFace;
+
   // we could while loop instead of using break;, but for loop guaranteed terminates
   for (Face_index candidate_face: candidateFaces) {
-    std::vector<Vertex_index> faceVertices = getVertexIndices(mesh, candidate_face); 
-    Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face, source_r3, source_r3 +  toIntersection); 
+    std::vector<Vertex_index> faceVertices = getVertexIndices(mesh, candidate_face);
+    std::vector<Point_3> fPositions = getVertexPositions(mesh, candidate_face);  
+    Face_location candidateLocation = rotateIntoNewFace(mesh, source_face, candidate_face,
+		   		    source_r3, source_r3 +  toIntersection);
+    f_triangle = Triangle_3(fPositions[0],fPositions[1],fPositions[2]);
+
     std::array<double, 3> cand_bary = candidateLocation.second;
     
     std::cout << "\nCandidate Face: " << candidate_face << std::endl;
     Point_3 cand_r3 = PMP::construct_point(candidateLocation, mesh); 
     std::cout << "candidate target: " << cand_r3 << std::endl;
+ 
+    near_dist = CGAL::squared_distance(cand_r3,f_triangle); 
+    if (near_dist < closest) { 
+      closest = near_dist; 
+      closestFace = candidate_face;
+      std::cout << "updating closest to " << closest << std::endl; 
+    }
 
     outOfTriangle = false;
-    // one way we can resolve the issue of being on an edge: we might pick whichever face was the closest to having all > 0 
-    // target bary coords and use that as the target face. Might require rewriting elsewhere. 
+    // if we have points that rotate to be exceptionally close to an edge, we sometimes need 
+    // to pick the target that was closest to its candidate face
     std::cout << "cand_bary: "; 
     for (int i = 0; i < 3; i++) {
       std::cout <<  cand_bary[i] << ", " ; 
@@ -256,7 +272,8 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
     }
 
     if (outOfTriangle) {      
-      std::pair<Point_3,std::vector<Vertex_index>> ifIntersect = find_intersection(mesh, source_face, source_r3, cand_r3, faceVertices);
+      std::pair<Point_3,std::vector<Vertex_index>> ifIntersect = find_intersection(mesh, source_face, 
+		      						    source_r3, cand_r3, faceVertices);
       Point_3 intersection_point = ifIntersect.first; 
       if (intersection_point != Point_3(1000,1000,1000)) { 
 	correctFace = candidate_face;
@@ -268,7 +285,11 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
   // we should always find the right face here, given that we're staying on the mesh. 
   // If we don't find one, something's wrong, and I want to know
   if (correctFace == source_face) {
-    std::cout << "Found correct face to be source face, DEBUG" << std::endl;
+    correctFace = closestFace; 
+    std::cout << "No perfectly correct face found, using closest face instead. ";
+    std::cout << "\nClosest face: " << closestFace; 
+    std::cout << "\nTarget distance to closest face: " << closest;
+    exit(EXIT_SUCCESS); 
   }	
   std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
   return correctFace;
@@ -353,7 +374,8 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
     vertexList = getVertexIndices(mesh,currentSourceFace);
 
 
-    std::pair<Point_3, std::vector<Vertex_index>> intersection_info = find_intersection(mesh, currentSourceFace, source_point, source_point+current_move, vertexList);
+    std::pair<Point_3, std::vector<Vertex_index>> intersection_info = find_intersection(mesh, currentSourceFace, source_point,
+		                                                                        source_point+current_move, vertexList);
     Point_3 intersection_point = intersection_info.first;
     std::vector<Vertex_index> intersected_elements = intersection_info.second;
     
@@ -374,6 +396,46 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
     source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there
 
     Face_location newMoveLocation = rotateIntoNewFace(mesh, currentSourceFace, currentTargetFace, source_point, target);
+
+    std::array<double,3> newBarys = newMoveLocation.second;  
+	    
+    // if we happen to have rotated into a face without actually being in that face 
+    // (which can happen if we had to call selectFaceFromVertex AND the rotation candidate is 
+    // going to rotate to a point very, very close to an edge), we must move the point to be on the target face. 
+    if (std::any_of(newBarys.cbegin(), newBarys.cend(), [](int i) { return i < 0; })) {
+      // IF I WAS WRITING THIS FOR PRODUCTION CODE: i would include a little if statement that triggers if debug flags are on
+      // eg:
+      // if (debugflag == on) { 
+      /*   Triangle_3 f_triangle = Triangle_3(mesh.point(vertexList[0]), mesh.point(vertexList[1]), mesh.point(vertexList[2]));
+       *   double cutoff = 1; // for example
+       *   if (CGAL::squared_distance(PMP::construct_point(newMoveLocation,mesh), f_triangle) > cutoff ) {
+       *     printf("shift malfunctioned, target point was over %f away from face", cutoff); 
+       *     exit(EXIT_FAILURE);
+       *   }
+       * }
+       */
+      //with above, we could make sure this little "wiggle us into the face" move is never used for evil (misapproximation)
+      Vector_3 tf_normal = PMP::compute_face_normal(currentTargetFace,mesh); 
+      Vector_3 toQuery = Vector_3(mesh.point(vertexList[0], PMP::construct_point(newMoveLocation,mesh));
+      Point_3 projectedQuery = vertices[0] + (toQuery-CGAL::scalar_product(toQuery,tf_normal)*tf_normal);    
+      Barycentric_coordinates projected_barys = PMP::barycentric_coordinates(mesh.point(vertexList[0]), 
+	                                            mesh.point(vertexList[1]), mesh.point(vertexList[2], projectedQuery); 
+      
+      // effectively a clamp, forcing negative bary coords to 0 						    
+      int loopIndex = 0;
+      double total; 
+      // could maybe use fewer lines of code passing weight by address 
+      for (double weight: projected_barys) { 
+        if (weight < 0) projected_barys[loopIndex] = 0;
+        total += projected_barys[loopIndex]; 
+	loopIndex++; 
+      } 
+      for (int i = 0; i < 3; i++) {       
+        projected_barys[i] = projected_barys[i]/total; 
+      }
+      newMoveLocation = std::make_pair(currentTargetFace,projected_barys);
+    }
+
     Point_3 rotatedTarget = PMP::construct_point(newMoveLocation,mesh);
 
     //check that we've rotated in the right direction via overlap
