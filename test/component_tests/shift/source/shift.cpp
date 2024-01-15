@@ -288,8 +288,7 @@ Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vec
     correctFace = closestFace; 
     std::cout << "No perfectly correct face found, using closest face instead. ";
     std::cout << "\nClosest face: " << closestFace; 
-    std::cout << "\nTarget distance to closest face: " << closest;
-    exit(EXIT_SUCCESS); 
+    std::cout << "\nTarget distance to closest face: " << closest; 
   }	
   std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
   return correctFace;
@@ -416,10 +415,10 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
        */
       //with above, we could make sure this little "wiggle us into the face" move is never used for evil (misapproximation)
       Vector_3 tf_normal = PMP::compute_face_normal(currentTargetFace,mesh); 
-      Vector_3 toQuery = Vector_3(mesh.point(vertexList[0], PMP::construct_point(newMoveLocation,mesh));
-      Point_3 projectedQuery = vertices[0] + (toQuery-CGAL::scalar_product(toQuery,tf_normal)*tf_normal);    
+      Vector_3 toQuery = Vector_3(mesh.point(vertexList[0]), PMP::construct_point(newMoveLocation,mesh));
+      Point_3 projectedQuery = mesh.point(vertexList[0]) + (toQuery-CGAL::scalar_product(toQuery,tf_normal)*tf_normal);    
       Barycentric_coordinates projected_barys = PMP::barycentric_coordinates(mesh.point(vertexList[0]), 
-	                                            mesh.point(vertexList[1]), mesh.point(vertexList[2], projectedQuery); 
+	                                            mesh.point(vertexList[1]), mesh.point(vertexList[2]), projectedQuery); 
       
       // effectively a clamp, forcing negative bary coords to 0 						    
       int loopIndex = 0;
