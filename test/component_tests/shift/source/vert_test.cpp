@@ -1,4 +1,3 @@
-
 //Author: Toler H. Webb
 //Description: code which takes as input a position on a mesh and a 
 //displacement and returns as output a new position on the mesh. 
@@ -35,7 +34,7 @@ typedef K::Point_3                                                      Point_3;
 typedef K::Vector_3                                                     Vector_3;
 typedef K::Ray_3                                                        Ray_3;
 typedef K::Segment_3                                                    Segment_3;
-typedef K::Intersect_3                                                  Intersect_3;
+typedef K::Intersect_3                                                  Intersect;
 typedef K::Triangle_3                                                   Triangle_3;
 typedef K::Segment_2                                                    Segment_2;
 typedef K::Point_2                                                      Point_2;
@@ -111,12 +110,14 @@ int main(int argc, char* argv[]) {
  MTgenerator gen = make_generator(1997); 
  std::vector<Face_index> v_faces; 
  v_faces.reserve(6); 
-
  Face_index found_target; 
+ std::array<double,3> rand_weights;
+ Point_3 shift_output;
+ double to_dist; 
 
  for (Vertex_index v: vs) { 
    vpoint = tmesh.point(v); 
-   Face_circulator fbegin(tmesh.halfedge(v),tmesh), done(fbegin); //fbegin? (lol)
+   Face_circulator fbegin(tmesh.halfedge(v),tmesh), done(fbegin); 
    v_faces.clear(); 
    do {
      v_faces.push_back(*fbegin++);
@@ -124,8 +125,10 @@ int main(int argc, char* argv[]) {
    //defining weights outside of loop/array definition explicitly for later
    b1 = rand_weight(gen); 
    b2 = rand_weight(gen); 
-   b3 = rand_weight(gen);
-   std::array<double,3> rand_weights = {b1, b2, b3}; 
+   b3 = rand_weight(gen); 
+   rand_weights[0] = b1; 
+   rand_weights[1] = b2; 
+   rand_weights[2] = b3; 
    Face_location rand_loc = std::make_pair(v_faces[0], rand_weights);
    rand_source = PMP::construct_point(rand_loc, tmesh); 
    to_v = Vector_3(rand_source, vpoint); 
@@ -134,9 +137,13 @@ int main(int argc, char* argv[]) {
 
    found_target = selectFaceFromVertex(v, to_v, v_faces[0], tmesh);
    std::cout << "For vertex " << v << ":" << std::endl;
-   std::cout << "Found target at: " << found_target << std::endl;
-   std::cout << "\n";
+   std::cout << "Found target face at: " << found_target << std::endl;
+   std::cout << "---STARTING SHIFT---" << std::endl; 
+   shift_output = shift(tmesh, rand_source, 2*to_v);  
+   std::cout << "Shifted to: " << shift_output << std::endl;
+   std::cout << "\n"; 
 
+ 
    if (v_faces[0] == found_target) {
      //need to see vertex positions for the faces and whatnot 
      std::cout << "Faces: " << std::endl;
@@ -152,10 +159,13 @@ int main(int argc, char* argv[]) {
      std::cout << "source point " << rand_source << std::endl;   
      std::cout << "Source face: " << v_faces[0] << std::endl; 
      break; 
-   } 
+   }
+   if (v == vs[414]) break; 
  }
 
+ return 0;
 
+}
 /*
  Vertex_index intersectedVertex = vs[40];
  
@@ -195,5 +205,4 @@ int main(int argc, char* argv[]) {
 
  std::cout << "Routine found the correct face to be: " << newTarget << std::endl;
  */
- return 0;
-}
+
