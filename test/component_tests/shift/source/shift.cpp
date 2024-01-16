@@ -174,7 +174,7 @@ Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface,
   return rotatedPosition; 
 }
 
-std::pair<Face_index,bool> selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
+std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
 	       const Triangle_mesh &mesh) {
   std::vector<Face_index> candidateFaces; 
   candidateFaces.reserve(10); // usually six, but it can be more  
@@ -293,7 +293,7 @@ std::pair<Face_index,bool> selectFaceFromVertex(const Vertex_index &intersectedV
  * 	
  */
 
-std::pair<Face_index,bool> getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh) {
+std::pair<Face_index,Vector_3> getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
   
   bool throughVertex = (intersected.size() == 1);
@@ -400,44 +400,7 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
     // if we happen to have rotated into a face without actually being in that face and we know we were supposed to... well, this is difficult. Because
     // then in the error case, for the longest possible shift, we will accidentally cut the shift much, much too short. So just bumping the apparent target 
     // into the face doesn't work. Maybe I can tilt the move vector a little bit to be in the proper face.  
-    if (offFaceFlag) {
-      // IF I WAS WRITING THIS FOR PRODUCTION CODE: i would include a little if statement that triggers if debug flags are on
-      // eg:
-      // if (debugflag == on) { 
-      /*   Triangle_3 f_triangle = Triangle_3(mesh.point(vertexList[0]), mesh.point(vertexList[1]), mesh.point(vertexList[2]));
-       *   double cutoff = 1; // for example
-       *   if (CGAL::squared_distance(PMP::construct_point(newMoveLocation,mesh), f_triangle) > cutoff ) {
-       *     printf("shift malfunctioned, target point was over %f away from face", cutoff); 
-       *     exit(EXIT_FAILURE);
-       *   }
-       * }
-       */
-      //with above, we could make sure this little "wiggle us into the face" move is never used for evil (misapproximation)
-      std::cout << "approximating position into face" << std::endl;
-      Vector_3 tf_normal = PMP::compute_face_normal(currentTargetFace,mesh); 
-      Vector_3 toQuery = Vector_3(mesh.point(vertexList[0]), PMP::construct_point(newMoveLocation,mesh));
-      Point_3 projectedQuery = mesh.point(vertexList[0]) + (toQuery-CGAL::scalar_product(toQuery,tf_normal)*tf_normal);    
-      Barycentric_coordinates projected_barys = PMP::barycentric_coordinates(mesh.point(vertexList[0]), 
-	                                            mesh.point(vertexList[1]), mesh.point(vertexList[2]), projectedQuery); 
-      
-      // effectively a clamp, forcing negative bary coords to 0 						    
-      int loopIndex = 0;
-      double total; 
-      // could maybe use fewer lines of code passing weight by address 
-      for (double weight: projected_barys) { 
-        if (weight < 0) projected_barys[loopIndex] = 0;
-        total += projected_barys[loopIndex]; 
-	loopIndex++; 
-      } 
-      for (int i = 0; i < 3; i++) {       
-        projected_barys[i] = projected_barys[i]/total; 
-      }
-      newMoveLocation = std::make_pair(currentTargetFace,projected_barys);
-      std::cout << "had to approximate location in new face. Found point in face " << newMoveLocation.first << std::endl;
-      std::cout << "Barycentric coordinates: " << "{" << newMoveLocation.second[0] <<", " << newMoveLocation.second[1] << ", " << newMoveLocation.second[2] << "}" << std::endl;
-      std::cout << "R3 coordinates: " << PMP::construct_point(newMoveLocation,mesh); 
-      exit(EXIT_SUCCESS);  
-    }
+    
 
     Point_3 rotatedTarget = PMP::construct_point(newMoveLocation,mesh);
 
