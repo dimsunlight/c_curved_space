@@ -174,6 +174,29 @@ Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface,
   return rotatedPosition; 
 }
 
+void clampBary(const Triangle_mesh &mesh, const Face_index &face, Barycentric_coordinates &baryCoords) {
+  // modify a set of bary coordinates in place by clamping them into a face. 	
+  std::vector<Point_3> vList = getVertexPositions(mesh, face); 
+  Face_location floc = std::make_pair(face, baryCoords);
+  Vector_3 f_normal = PMP::compute_face_normal(face,mesh);
+  Vector_3 toQuery = Vector_3(vList[0], PMP::construct_point(floc,mesh));
+  Point_3 projectedQuery = vList[0] + (toQuery - CGAL::scalar_product(toQuery,f_normal)*f_normal);
+  Barycentric_coordinates projected_barys = PMP::barycentric_coordinates(vList[0],
+                                                    vList[1], vList[2], projectedQuery);
+  // effectively a clamp, forcing negative bary coords to 0
+  int loopIndex = 0;
+  double total;
+  // could maybe use fewer lines of code passing weight by address
+  for (double weight: projected_barys) {
+    if (weight < 0) projected_barys[loopIndex] = 0;
+    total += projected_barys[loopIndex];
+    loopIndex++;
+  }
+  for (int i = 0; i < 3; i++) {
+    baryCoords[i] = projected_barys[i]/total;
+  }
+}
+
 std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
 	       const Triangle_mesh &mesh) {
   std::vector<Face_index> candidateFaces; 
@@ -227,6 +250,7 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
   double closest = 1;
   double near_dist;  
   Face_index closestFace = correctFace;
+  Barycentric_coordinates storeCoords;
 
   // we could while loop instead of using break;, but for loop guaranteed terminates
   for (Face_index candidate_face: candidateFaces) {
@@ -244,6 +268,7 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
     if (near_dist < closest) { 
       closest = near_dist; 
       closestFace = candidate_face;
+      storeCoords = cand_bary;
     }
 
     outOfTriangle = false;
@@ -270,16 +295,26 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
   }
   
   // we should always find the right face here, given that we're staying on the mesh.
-  bool offFaceFlag = false; 
+  Vector_3 bump = Vector_3(0,0,0); 
   if (correctFace == source_face) {
     correctFace = closestFace; 
     std::cout << "No perfectly correct face found, using closest face instead. ";
     std::cout << "\nClosest face: " << closestFace; 
     std::cout << "\nTarget distance to closest face: " << closest << std::endl; 
-    offFaceFlag = true;
+    /*UNFINISHED: write get two locations in the face as normalized headings, then define bump as their differece  
+    */
+    Face_location finalFLoc = std::make_pair(correctFace,storeCoords);
+    Point_3 p1 = PMP::construct_point(finalFLoc,mesh); 
+    clampBary(mesh, correctFace, storeCoords);
+    Face_location clampedFLoc = std::make_pair(correctFace, storeCoords); 
+    Point_3 p2 = PMP::construct_point(clampedFLoc, mesh); 
+    Vector_3 v1 = normalizer(Vector_3(source_r3, p1));
+    Vector_3 v2 = normalizer(Vector_3(source_r3, p2)); 
+    bump = v2-v1; 
   }	
+
   std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
-  return std::make_pair(correctFace,offFaceFlag);
+  return std::make_pair(correctFace,bump);
 }
 
 /**
@@ -296,9 +331,9 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
 std::pair<Face_index,Vector_3> getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
   
-  bool throughVertex = (intersected.size() == 1);
   std::string printvar;
   std::cout << "through vertex? ";
+  bool throughVertex = (intersected.size() == 1); 
   if (throughVertex) {
     printf("true\n");
     Vertex_index intersectedVertex = intersected[0];
@@ -309,9 +344,9 @@ std::pair<Face_index,Vector_3> getTargetFace(std::vector<Vertex_index> intersect
   Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
   Face_index provisional_target_face = mesh.face(intersected_edge);
   if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
-  bool offFaceFlag = false;
+  Vector_3 bump = Vector_3(0,0,0);  
   // ``false'' is a flag to indicate where we're going to go into a face that the rotation will land us outside of
-  return std::make_pair(provisional_target_face, offFaceFlag);
+  return std::make_pair(provisional_target_face, bump);
 }
 
 
@@ -354,9 +389,9 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
   std::vector<Point_3> targetVertices;
   std::vector<Point_3> forRotation;
   Point_3 rotatedTarget;
-  std::pair<Face_index, bool> targetOffPair;
+  std::pair<Face_index, Vector_3> targetBumpPair;
   Face_index currentTargetFace;
-  bool offFaceFlag;
+  Vector_3 bump;
   //Vector_3 currentTargetFaceNormal;
   double lengthToSharedElement;
   double rotationAngle;
@@ -384,11 +419,11 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
     
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
     
-    targetOffPair = getTargetFace(intersected_elements, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
-    currentTargetFace = targetOffPair.first;
-    offFaceFlag = targetOffPair.second;
+    targetBumpPair = getTargetFace(intersected_elements, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
+    currentTargetFace = targetBumpPair.first;
+    bump = targetBumpPair.second;
 
-    source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there
+    source_point = intersection_point;//update source to be the most recent intersection point -- finish walking there 
 
     Face_location newMoveLocation = rotateIntoNewFace(mesh, currentSourceFace, currentTargetFace, source_point, target);
 
@@ -402,10 +437,17 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
     // into the face doesn't work. Maybe I can tilt the move vector a little bit to be in the proper face.  
     
 
-    Point_3 rotatedTarget = PMP::construct_point(newMoveLocation,mesh);
+    Point_3 rotatedTarget = PMP::construct_point(newMoveLocation,mesh); 
 
-    //check that we've rotated in the right direction via overlap
     current_move = Vector_3(source_point, rotatedTarget);//source is now intersection
+    // in the very rare instance we're rotating imperfectly into a face -- i.e., the move vector won't 
+    // be in it -- we bump the vector into it based on what we learned in face identifier
+    if (bump != Vector_3(0,0,0)) { 
+      double moveLength = vectorMagnitude(currentMove);
+      Vector_3 normedMove = normalizer(current_move); 
+      current_move = moveLength(normedMove+bump);
+    }
+
     currentSourceFace = currentTargetFace;
   }
   //source_point+move is the location in the original face if there were no intersections, and it will 
