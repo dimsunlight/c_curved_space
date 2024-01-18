@@ -47,7 +47,7 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
 
 Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface, Face_index tface, Point_3 source, Point_3 target);
 
-Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
+std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
                const Triangle_mesh &mesh); 
 
 Face_index getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh);

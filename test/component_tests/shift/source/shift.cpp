@@ -251,7 +251,6 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
   double near_dist;  
   Face_index closestFace = correctFace;
   Barycentric_coordinates storeCoords;
-
   // we could while loop instead of using break;, but for loop guaranteed terminates
   for (Face_index candidate_face: candidateFaces) {
     std::vector<Vertex_index> faceVertices = getVertexIndices(mesh, candidate_face);
@@ -310,7 +309,10 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
     Point_3 p2 = PMP::construct_point(clampedFLoc, mesh); 
     Vector_3 v1 = normalizer(Vector_3(source_r3, p1));
     Vector_3 v2 = normalizer(Vector_3(source_r3, p2)); 
-    bump = v2-v1; 
+    bump = v2-v1;
+    std::cout << "bump is " << bump << std::endl; 
+    // end here to check what bump is, since this event happens extremely rarely
+    // exit(EXIT_SUCCESS);  
   }	
 
   std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
@@ -331,7 +333,6 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
 std::pair<Face_index,Vector_3> getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh) {
  //Find the face we're moving into by evaluating the other face attached to the edge made of vertex indices "intersected."
   
-  std::string printvar;
   std::cout << "through vertex? ";
   bool throughVertex = (intersected.size() == 1); 
   if (throughVertex) {
@@ -340,7 +341,7 @@ std::pair<Face_index,Vector_3> getTargetFace(std::vector<Vertex_index> intersect
     // usually, below picks from six possible faces. 
     return selectFaceFromVertex(intersectedVertex, toIntersection, source_face, mesh);   
   }
-  else printf("false"); 
+  else printf("false\n"); 
   Halfedge_index intersected_edge = mesh.halfedge(intersected[0],intersected[1]);
   Face_index provisional_target_face = mesh.face(intersected_edge);
   if (provisional_target_face == source_face) provisional_target_face = mesh.face(mesh.opposite(intersected_edge));
@@ -418,7 +419,7 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
                                                                             //effectively the step where we "walk" to that intersection
     
     target = intersection_point+current_move; //storage of where the move vector currently points for rotation later
-    
+    std::cout << "making target bump pair" << std::endl; 
     targetBumpPair = getTargetFace(intersected_elements, vector_to_intersection, currentSourceFace, mesh); //face we're about to walk into;
     currentTargetFace = targetBumpPair.first;
     bump = targetBumpPair.second;
@@ -443,9 +444,9 @@ Point_3 shift(const Triangle_mesh &mesh, const Point_3 &pos, const Vector_3 &mov
     // in the very rare instance we're rotating imperfectly into a face -- i.e., the move vector won't 
     // be in it -- we bump the vector into it based on what we learned in face identifier
     if (bump != Vector_3(0,0,0)) { 
-      double moveLength = vectorMagnitude(currentMove);
+      double moveLength = vectorMagnitude(current_move);
       Vector_3 normedMove = normalizer(current_move); 
-      current_move = moveLength(normedMove+bump);
+      current_move = moveLength*(normedMove+bump);
     }
 
     currentSourceFace = currentTargetFace;

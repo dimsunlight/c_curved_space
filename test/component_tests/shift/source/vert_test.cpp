@@ -114,7 +114,7 @@ int main(int argc, char* argv[]) {
  std::array<double,3> rand_weights;
  Point_3 shift_output;
  double to_dist; 
-
+ printf("starting vertex test loop...\n"); 
  for (Vertex_index v: vs) { 
    vpoint = tmesh.point(v); 
    Face_circulator fbegin(tmesh.halfedge(v),tmesh), done(fbegin); 
@@ -134,12 +134,14 @@ int main(int argc, char* argv[]) {
    to_v = Vector_3(rand_source, vpoint); 
    rand_end = rand_source + 2*to_v;   
  
+   double bigShiftMod = 15; // make this number >> 1 to test against very large shifts  
 
-   found_target = selectFaceFromVertex(v, to_v, v_faces[0], tmesh);
+   std::cout << "selectFaceFromVertex for vertex " << v << "..." << std::endl; 
+   found_target = selectFaceFromVertex(v, to_v, v_faces[0], tmesh).first;
    std::cout << "For vertex " << v << ":" << std::endl;
    std::cout << "Found target face at: " << found_target << std::endl;
    std::cout << "---STARTING SHIFT---" << std::endl; 
-   shift_output = shift(tmesh, rand_source, 2*to_v);  
+   shift_output = shift(tmesh, rand_source, bigShiftMod*to_v);   
    std::cout << "Shifted to: " << shift_output << std::endl;
    std::cout << "\n"; 
 
