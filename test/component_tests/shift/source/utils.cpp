@@ -161,6 +161,13 @@ double angleBetween(Face_index f1, Face_index f2, Triangle_mesh mesh) {
   return angle;
 }
 
+double angleBetween(Vector_3 v1, Vector_3 v2) { 
+    v1 = normalizer(v1);
+    v2 = normalizer(v2);
+    double oneDotTwo = CGAL::scalar_product(v1,v2); 
+    return acos(oneDotTwo); 
+}
+
 std::vector<double> baryCoords(Point_3 a, Point_3 b, Point_3 c, Point_3 p) {
   //use cramer's rule to determine the barycentric coordinates of p within the face described by a, b, c.
   //can also just use PMP::barycentric_coordinates, but I like having this on file.  

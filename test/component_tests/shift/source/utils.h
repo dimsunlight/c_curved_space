@@ -45,22 +45,31 @@ typedef PMP::Face_location<Triangle_mesh, FT>                           Face_loc
 
 std::vector<Point_3> getVertexPositions(Triangle_mesh mesh, Face_index fIndex);
 std::vector<Vertex_index> getVertexIndices(Triangle_mesh mesh, Face_index fIndex); 
+
 double vectorMagnitude(Vector_3 v);
 double vectorMagnitude(Vector_2 v);
+
 Vector_3 normalizer(Vector_3 v);
 Vector_2 normalizer(Vector_2 v); 
+
 int findIndex(Point_3 loc,std::vector<Point_3> vec);
 auto getSharedElements(std::vector<Point_3> vs1, std::vector<Point_3> vs2);
 auto getUnsharedElements(std::vector<Point_3> vertices, std::vector<Point_3> shared);
+
 double angleBetween(Face_index f1, Face_index f2, Triangle_mesh mesh);
+double angleBetween(Vector_3 v1, Vector_3 v2); 
+
 std::vector<Point_3> rotateAboutAxis(std::vector<Point_3> targets, std::vector<Point_3> axis, double rotAngle);
 Point_3 rotateAboutAxis(Point_3 target, std::vector<Point_3> axis, double rotAngle);
+
 auto createTemporaryMesh(std::vector<Point_3> vertexTrio);
 Point_3 getNewXYZLocation(Point_3 flatLocation, Triangle_mesh originalMesh, Triangle_mesh tempMesh, Face_index f2); 
 std::vector<Segment_3> createEdgeSegments(std::vector<Point_3> vs);
 Face_index getTargetFace(Point_3 pos, Vector_3 toIntersection, Face_index currentSourceFace, Triangle_mesh mesh);
+
 Vector_3 reduceVector(Vector_3 moveVector, double reduceLengthBy);
 Vector_3 projectMoveDown(Point_3 source, Vector_3 targetFaceNormal, Vector_3 moveDirection, double remainingDistance);
+
 double triangle_area(Point_3 v1, Point_3 v2, Point_3 v3);
 Point_3 project_to_face(std::vector<Point_3> vertices, Point_3 query);
 

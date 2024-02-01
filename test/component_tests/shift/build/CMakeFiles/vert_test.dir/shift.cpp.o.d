@@ -1,11 +1,10 @@
 CMakeFiles/vert_test.dir/shift.cpp.o: \
  /home/toler/projects/CGAL_curvature/test/component_tests/shift/source/shift.cpp \
  /usr/include/stdc-predef.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Simple_cartesian.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Cartesian_base.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/basic.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/config.h \
+ /usr/local/include/CGAL/Exact_predicates_inexact_constructions_kernel.h \
+ /usr/local/include/CGAL/Simple_cartesian.h \
+ /usr/local/include/CGAL/Cartesian/Cartesian_base.h \
+ /usr/local/include/CGAL/basic.h /usr/local/include/CGAL/config.h \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
  /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/9/cstddef \
@@ -70,15 +69,14 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/config/detail/posix_features.hpp \
  /usr/include/boost/config/detail/suffix.hpp \
  /usr/include/boost/config/helper_macros.hpp \
- /usr/include/boost/version.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/version.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/version_macros.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Installation/internal/enable_third_party_libraries.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/export/CGAL.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/export/helpers.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/functional.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/auto_link/CGAL.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/auto_link/auto_link.h \
+ /usr/include/boost/version.hpp /usr/local/include/CGAL/version.h \
+ /usr/local/include/CGAL/version_macros.h \
+ /usr/local/include/CGAL/Installation/internal/enable_third_party_libraries.h \
+ /usr/local/include/CGAL/export/CGAL.h \
+ /usr/local/include/CGAL/export/helpers.h \
+ /usr/local/include/CGAL/functional.h \
+ /usr/local/include/CGAL/auto_link/CGAL.h \
+ /usr/local/include/CGAL/auto_link/auto_link.h \
  /usr/include/boost/predef.h /usr/include/boost/predef/language.h \
  /usr/include/boost/predef/language/stdc.h \
  /usr/include/boost/predef/version_number.h \
@@ -331,22 +329,18 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/c++/9/bits/atomic_base.h \
  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
  /usr/include/c++/9/backward/auto_ptr.h /usr/include/c++/9/atomic \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/lgpl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license.h \
+ /usr/local/include/CGAL/license/lgpl.h /usr/local/include/CGAL/license.h \
  /usr/include/c++/9/fstream /usr/include/c++/9/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
  /usr/include/c++/9/bits/fstream.tcc /usr/include/c++/9/iostream \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/assertions.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Uncertain.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/enum.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/Same_uncertainty.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Origin.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Origin_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Profile_counter.h \
- /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
- /usr/include/c++/9/iomanip /usr/include/c++/9/locale \
- /usr/include/c++/9/bits/locale_facets_nonio.h \
+ /usr/local/include/CGAL/assertions.h /usr/local/include/CGAL/Uncertain.h \
+ /usr/local/include/CGAL/enum.h \
+ /usr/local/include/CGAL/Kernel/Same_uncertainty.h \
+ /usr/local/include/CGAL/Origin.h /usr/local/include/CGAL/Origin_impl.h \
+ /usr/local/include/CGAL/Profile_counter.h /usr/include/c++/9/sstream \
+ /usr/include/c++/9/bits/sstream.tcc /usr/include/c++/9/iomanip \
+ /usr/include/c++/9/locale /usr/include/c++/9/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/9/bits/locale_facets_nonio.tcc \
@@ -354,13 +348,12 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/c++/9/bits/quoted_string.h /usr/include/c++/9/map \
  /usr/include/c++/9/bits/stl_tree.h /usr/include/c++/9/bits/stl_map.h \
  /usr/include/c++/9/bits/stl_multimap.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/disable_warnings.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/enable_warnings.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/assertions_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/assertions_behaviour.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/exceptions.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/tags.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/io_tags.h \
+ /usr/local/include/CGAL/disable_warnings.h \
+ /usr/local/include/CGAL/enable_warnings.h \
+ /usr/local/include/CGAL/assertions_impl.h \
+ /usr/local/include/CGAL/assertions_behaviour.h \
+ /usr/local/include/CGAL/exceptions.h /usr/local/include/CGAL/tags.h \
+ /usr/local/include/CGAL/IO/io_tags.h \
  /usr/include/boost/mpl/integral_c.hpp \
  /usr/include/boost/mpl/integral_c_fwd.hpp \
  /usr/include/boost/mpl/aux_/config/workaround.hpp \
@@ -380,12 +373,12 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/mpl/aux_/config/nttp.hpp \
  /usr/include/boost/preprocessor/cat.hpp \
  /usr/include/boost/preprocessor/config/config.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/number_type_basic.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/number_type_config.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Quotient_fwd.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/mpl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Coercion_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/iterator/transform_iterator.hpp \
+ /usr/local/include/CGAL/number_type_basic.h \
+ /usr/local/include/CGAL/number_type_config.h \
+ /usr/local/include/CGAL/Quotient_fwd.h \
+ /usr/local/include/CGAL/Kernel/mpl.h \
+ /usr/local/include/CGAL/Coercion_traits.h \
+ /usr/local/include/CGAL/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/iterator/detail/enable_if.hpp \
  /usr/include/boost/mpl/identity.hpp \
@@ -576,16 +569,15 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/preprocessor/slot/detail/shared.hpp \
  /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp \
  /usr/include/boost/utility/detail/result_of_iterate.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Algebraic_structure_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/type_traits.h \
+ /usr/local/include/CGAL/Algebraic_structure_traits.h \
+ /usr/local/include/CGAL/type_traits.h \
  /usr/include/boost/type_traits/is_base_and_derived.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/use.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Real_embeddable_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Fraction_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Rational_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/is_convertible.h \
- /usr/include/gmpxx.h /usr/include/c++/9/cstring /usr/include/string.h \
- /usr/include/strings.h \
+ /usr/local/include/CGAL/use.h \
+ /usr/local/include/CGAL/Real_embeddable_traits.h \
+ /usr/local/include/CGAL/Fraction_traits.h \
+ /usr/local/include/CGAL/Rational_traits.h \
+ /usr/local/include/CGAL/is_convertible.h /usr/include/gmpxx.h \
+ /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/c++/9/cfloat \
@@ -599,15 +591,13 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Scalar_factor_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Algebraic_extension_traits.h \
+ /usr/local/include/CGAL/Scalar_factor_traits.h \
+ /usr/local/include/CGAL/Algebraic_extension_traits.h \
  /usr/include/c++/9/numeric /usr/include/c++/9/bits/stl_numeric.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Needs_parens_as_product.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/io.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/Color.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/array.h \
- /usr/include/c++/9/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/local/include/CGAL/Needs_parens_as_product.h \
+ /usr/local/include/CGAL/IO/io.h /usr/local/include/CGAL/IO/Color.h \
+ /usr/local/include/CGAL/array.h /usr/include/c++/9/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -617,50 +607,40 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/utils_classes.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/utils.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/FPU.h \
- /usr/include/c++/9/fenv.h /usr/include/fenv.h \
- /usr/include/x86_64-linux-gnu/bits/fenv.h \
+ /usr/local/include/CGAL/utils_classes.h /usr/local/include/CGAL/utils.h \
+ /usr/local/include/CGAL/FPU.h /usr/include/c++/9/fenv.h \
+ /usr/include/fenv.h /usr/include/x86_64-linux-gnu/bits/fenv.h \
  /usr/include/x86_64-linux-gnu/bits/fenvinline.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
  /usr/include/c++/9/stdlib.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/test_FPU_rounding_mode_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/float.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/double.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/number_utils.h \
- /usr/include/c++/9/math.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/long_double.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Interval_nt.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Interval_traits.h \
- /usr/include/boost/operators.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/int.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Modular_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Modular_arithmetic/Residue_type.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/tss.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/long_long.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/gmpxx.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/mpz_class.h \
- /usr/include/mpfr.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/gmpxx_coercion_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Residue.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Quotient.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/mpq_class.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/GMPXX_arithmetic_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Get_arithmetic_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/number_utils_classes.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/kernel_basic.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/kernel_config.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/kernel_assertions.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/aff_transformation_tags.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/aff_transformation_tags_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Object.h \
- /usr/include/boost/variant.hpp /usr/include/boost/variant/variant.hpp \
- /usr/include/boost/type_index.hpp \
+ /usr/local/include/CGAL/test_FPU_rounding_mode_impl.h \
+ /usr/local/include/CGAL/float.h /usr/local/include/CGAL/double.h \
+ /usr/local/include/CGAL/number_utils.h /usr/include/c++/9/math.h \
+ /usr/local/include/CGAL/long_double.h \
+ /usr/local/include/CGAL/Interval_nt.h \
+ /usr/local/include/CGAL/Interval_traits.h \
+ /usr/include/boost/operators.hpp /usr/local/include/CGAL/int.h \
+ /usr/local/include/CGAL/Modular_traits.h \
+ /usr/local/include/CGAL/Modular_arithmetic/Residue_type.h \
+ /usr/local/include/CGAL/tss.h /usr/local/include/CGAL/long_long.h \
+ /usr/local/include/CGAL/gmpxx.h /usr/local/include/CGAL/mpz_class.h \
+ /usr/include/mpfr.h /usr/local/include/CGAL/gmpxx_coercion_traits.h \
+ /usr/local/include/CGAL/Residue.h /usr/local/include/CGAL/Quotient.h \
+ /usr/local/include/CGAL/mpq_class.h \
+ /usr/local/include/CGAL/GMPXX_arithmetic_kernel.h \
+ /usr/local/include/CGAL/Arithmetic_kernel/Arithmetic_kernel_base.h \
+ /usr/local/include/CGAL/Get_arithmetic_kernel.h \
+ /usr/local/include/CGAL/number_utils_classes.h \
+ /usr/local/include/CGAL/kernel_basic.h \
+ /usr/local/include/CGAL/kernel_config.h \
+ /usr/local/include/CGAL/kernel_assertions.h \
+ /usr/local/include/CGAL/aff_transformation_tags.h \
+ /usr/local/include/CGAL/aff_transformation_tags_impl.h \
+ /usr/local/include/CGAL/Object.h /usr/include/boost/variant.hpp \
+ /usr/include/boost/variant/variant.hpp /usr/include/boost/type_index.hpp \
  /usr/include/boost/type_index/stl_type_index.hpp \
  /usr/include/boost/type_index/type_index_facade.hpp \
  /usr/include/boost/container_hash/hash_fwd.hpp \
@@ -905,12 +885,10 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/optional/detail/optional_reference_spec.hpp \
  /usr/include/boost/optional/detail/optional_relops.hpp \
  /usr/include/boost/optional/detail/optional_swap.hpp \
- /usr/include/boost/any.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel_traits_fwd.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/basic_classes.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Bbox_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Dimension.h \
+ /usr/include/boost/any.hpp /usr/local/include/CGAL/Kernel_traits.h \
+ /usr/local/include/CGAL/Kernel_traits_fwd.h \
+ /usr/local/include/CGAL/basic_classes.h /usr/local/include/CGAL/Bbox_2.h \
+ /usr/local/include/CGAL/Dimension.h \
  /usr/include/boost/math/special_functions/next.hpp \
  /usr/include/boost/math/special_functions/math_fwd.hpp \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_vector.h \
@@ -977,24 +955,19 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/quadmath.h \
  /usr/include/boost/math/special_functions/sign.hpp \
  /usr/include/boost/math/special_functions/trunc.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Bbox_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/representation_tags.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/global_functions.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/global_functions_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/user_classes.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/Return_base_tag.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Weighted_point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Vector_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Direction_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Iso_rectangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Circle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Conic_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/Conic_misc.h \
+ /usr/local/include/CGAL/Bbox_3.h \
+ /usr/local/include/CGAL/representation_tags.h \
+ /usr/local/include/CGAL/Kernel/global_functions.h \
+ /usr/local/include/CGAL/Kernel/global_functions_2.h \
+ /usr/local/include/CGAL/user_classes.h /usr/local/include/CGAL/Point_2.h \
+ /usr/local/include/CGAL/Kernel/Return_base_tag.h \
+ /usr/local/include/CGAL/Weighted_point_2.h \
+ /usr/local/include/CGAL/Vector_2.h /usr/local/include/CGAL/Direction_2.h \
+ /usr/local/include/CGAL/Line_2.h /usr/local/include/CGAL/Ray_2.h \
+ /usr/local/include/CGAL/Segment_2.h /usr/local/include/CGAL/Triangle_2.h \
+ /usr/local/include/CGAL/Iso_rectangle_2.h \
+ /usr/local/include/CGAL/Circle_2.h /usr/local/include/CGAL/Conic_2.h \
+ /usr/local/include/CGAL/Kernel/Conic_misc.h \
  /usr/include/boost/math/special_functions/cbrt.hpp \
  /usr/include/boost/math/tools/rational.hpp /usr/include/boost/array.hpp \
  /usr/include/boost/swap.hpp /usr/include/boost/detail/iterator.hpp \
@@ -1002,25 +975,21 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/math/tools/detail/rational_horner1_20.hpp \
  /usr/include/boost/mpl/divides.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/divides.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Aff_transformation_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Weighted_point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Vector_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Direction_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Iso_cuboid_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Circle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Aff_transformation_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/global_functions_internal_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/global_functions_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/global_functions_internal_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/hash_functions.h \
+ /usr/local/include/CGAL/Aff_transformation_2.h \
+ /usr/local/include/CGAL/Point_3.h \
+ /usr/local/include/CGAL/Weighted_point_3.h \
+ /usr/local/include/CGAL/Plane_3.h /usr/local/include/CGAL/Vector_3.h \
+ /usr/local/include/CGAL/Direction_3.h /usr/local/include/CGAL/Line_3.h \
+ /usr/local/include/CGAL/Ray_3.h /usr/local/include/CGAL/Segment_3.h \
+ /usr/local/include/CGAL/Triangle_3.h \
+ /usr/local/include/CGAL/Tetrahedron_3.h \
+ /usr/local/include/CGAL/Iso_cuboid_3.h \
+ /usr/local/include/CGAL/Sphere_3.h /usr/local/include/CGAL/Circle_3.h \
+ /usr/local/include/CGAL/Aff_transformation_3.h \
+ /usr/local/include/CGAL/Kernel/global_functions_internal_2.h \
+ /usr/local/include/CGAL/Kernel/global_functions_3.h \
+ /usr/local/include/CGAL/Kernel/global_functions_internal_3.h \
+ /usr/local/include/CGAL/Kernel/hash_functions.h \
  /usr/include/boost/functional/hash.hpp \
  /usr/include/boost/container_hash/hash.hpp \
  /usr/include/boost/container_hash/detail/hash_float.hpp \
@@ -1033,11 +1002,9 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/c++/9/list /usr/include/c++/9/bits/stl_list.h \
  /usr/include/c++/9/bits/list.tcc /usr/include/c++/9/set \
  /usr/include/c++/9/bits/stl_set.h /usr/include/c++/9/bits/stl_multiset.h \
- /usr/include/c++/9/bitset \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Weighted_point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Handle_for.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/memory.h \
+ /usr/include/c++/9/bitset /usr/local/include/CGAL/Cartesian/Point_2.h \
+ /usr/local/include/CGAL/Cartesian/Weighted_point_2.h \
+ /usr/local/include/CGAL/Handle_for.h /usr/local/include/CGAL/memory.h \
  /usr/include/boost/tuple/tuple.hpp /usr/include/boost/ref.hpp \
  /usr/include/boost/core/ref.hpp \
  /usr/include/boost/tuple/detail/tuple_basic.hpp \
@@ -1045,12 +1012,12 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/type_traits/add_cv.hpp \
  /usr/include/boost/type_traits/remove_volatile.hpp \
  /usr/include/boost/utility/swap.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Vector_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/constant.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Direction_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/predicates/kernel_ftC2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/algorithm.h \
+ /usr/local/include/CGAL/Cartesian/Vector_2.h \
+ /usr/local/include/CGAL/constant.h \
+ /usr/local/include/CGAL/Cartesian/Direction_2.h \
+ /usr/local/include/CGAL/Cartesian/Line_2.h \
+ /usr/local/include/CGAL/predicates/kernel_ftC2.h \
+ /usr/local/include/CGAL/algorithm.h \
  /usr/include/boost/random/random_number_generator.hpp \
  /usr/include/boost/random/uniform_int_distribution.hpp \
  /usr/include/boost/random/detail/config.hpp \
@@ -1177,300 +1144,299 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/random/uniform_on_sphere.hpp \
  /usr/include/boost/random/uniform_smallint.hpp \
  /usr/include/boost/random/weibull_distribution.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/predicates/sign_of_determinant.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/determinant.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/constructions/kernel_ftC2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/predicates_on_points_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Circle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Iso_rectangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Handle_for_virtual.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_rep_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Translation_rep_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Rotation_rep_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/rational_rotation.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Scaling_rep_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Reflection_rep_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Data_accessor_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/ConicCPA2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/predicates_on_directions_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/basic_constructions_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/point_constructions_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/line_constructions_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/ft_constructions_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Weighted_point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Vector_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Direction_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/predicates/kernel_ftC3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/constructions/kernel_ftC3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/solve_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/solve.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/plane_constructions_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Iso_cuboid_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/predicates_on_points_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Circle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Aff_transformation_rep_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Translation_rep_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Scaling_rep_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/predicates_on_planes_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/basic_constructions_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/point_constructions_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/ft_constructions_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/function_objects.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/function_objects.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/squared_distance_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Point_2_Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Point_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/internal/squared_distance_utils_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/wmult.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/Wutils.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Point_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Point_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Point_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Segment_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Ray_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Line_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Line_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_2/Triangle_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/squared_distance_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Weighted_point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/internal/squared_distance_utils_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Segment_3.h \
+ /usr/local/include/CGAL/predicates/sign_of_determinant.h \
+ /usr/local/include/CGAL/determinant.h \
+ /usr/local/include/CGAL/constructions/kernel_ftC2.h \
+ /usr/local/include/CGAL/Cartesian/Ray_2.h \
+ /usr/local/include/CGAL/Cartesian/Segment_2.h \
+ /usr/local/include/CGAL/Cartesian/predicates_on_points_2.h \
+ /usr/local/include/CGAL/Cartesian/Triangle_2.h \
+ /usr/local/include/CGAL/Cartesian/Circle_2.h \
+ /usr/local/include/CGAL/Cartesian/Iso_rectangle_2.h \
+ /usr/local/include/CGAL/Cartesian/Aff_transformation_2.h \
+ /usr/local/include/CGAL/Handle_for_virtual.h \
+ /usr/local/include/CGAL/Cartesian/Aff_transformation_rep_2.h \
+ /usr/local/include/CGAL/Cartesian/Translation_rep_2.h \
+ /usr/local/include/CGAL/Cartesian/Rotation_rep_2.h \
+ /usr/local/include/CGAL/rational_rotation.h \
+ /usr/local/include/CGAL/Cartesian/Scaling_rep_2.h \
+ /usr/local/include/CGAL/Cartesian/Reflection_rep_2.h \
+ /usr/local/include/CGAL/Cartesian/Data_accessor_2.h \
+ /usr/local/include/CGAL/Cartesian/ConicCPA2.h \
+ /usr/local/include/CGAL/Cartesian/predicates_on_directions_2.h \
+ /usr/local/include/CGAL/Cartesian/basic_constructions_2.h \
+ /usr/local/include/CGAL/Cartesian/point_constructions_2.h \
+ /usr/local/include/CGAL/Cartesian/line_constructions_2.h \
+ /usr/local/include/CGAL/Cartesian/ft_constructions_2.h \
+ /usr/local/include/CGAL/Cartesian/Point_3.h \
+ /usr/local/include/CGAL/Cartesian/Weighted_point_3.h \
+ /usr/local/include/CGAL/Cartesian/Vector_3.h \
+ /usr/local/include/CGAL/Cartesian/Direction_3.h \
+ /usr/local/include/CGAL/predicates/kernel_ftC3.h \
+ /usr/local/include/CGAL/constructions/kernel_ftC3.h \
+ /usr/local/include/CGAL/Cartesian/Line_3.h \
+ /usr/local/include/CGAL/Cartesian/Plane_3.h \
+ /usr/local/include/CGAL/Cartesian/solve_3.h \
+ /usr/local/include/CGAL/Kernel/solve.h \
+ /usr/local/include/CGAL/Cartesian/plane_constructions_3.h \
+ /usr/local/include/CGAL/Cartesian/Ray_3.h \
+ /usr/local/include/CGAL/Cartesian/Segment_3.h \
+ /usr/local/include/CGAL/Cartesian/Triangle_3.h \
+ /usr/local/include/CGAL/Cartesian/Tetrahedron_3.h \
+ /usr/local/include/CGAL/Cartesian/Iso_cuboid_3.h \
+ /usr/local/include/CGAL/Cartesian/predicates_on_points_3.h \
+ /usr/local/include/CGAL/Cartesian/Sphere_3.h \
+ /usr/local/include/CGAL/Cartesian/Circle_3.h \
+ /usr/local/include/CGAL/Cartesian/Aff_transformation_3.h \
+ /usr/local/include/CGAL/Cartesian/Aff_transformation_rep_3.h \
+ /usr/local/include/CGAL/Cartesian/Translation_rep_3.h \
+ /usr/local/include/CGAL/Cartesian/Scaling_rep_3.h \
+ /usr/local/include/CGAL/Cartesian/predicates_on_planes_3.h \
+ /usr/local/include/CGAL/Cartesian/basic_constructions_3.h \
+ /usr/local/include/CGAL/Cartesian/point_constructions_3.h \
+ /usr/local/include/CGAL/Cartesian/ft_constructions_3.h \
+ /usr/local/include/CGAL/Cartesian/function_objects.h \
+ /usr/local/include/CGAL/Kernel/function_objects.h \
+ /usr/local/include/CGAL/squared_distance_2.h \
+ /usr/local/include/CGAL/Distance_2/Point_2_Point_2.h \
+ /usr/local/include/CGAL/Distance_2/Point_2_Segment_2.h \
+ /usr/local/include/CGAL/Distance_2/internal/squared_distance_utils_2.h \
+ /usr/local/include/CGAL/wmult.h /usr/local/include/CGAL/Kernel/Wutils.h \
+ /usr/local/include/CGAL/Distance_2/Point_2_Ray_2.h \
+ /usr/local/include/CGAL/Distance_2/Point_2_Line_2.h \
+ /usr/local/include/CGAL/Distance_2/Point_2_Triangle_2.h \
+ /usr/local/include/CGAL/Distance_2/Segment_2_Segment_2.h \
+ /usr/local/include/CGAL/Distance_2/Segment_2_Ray_2.h \
+ /usr/local/include/CGAL/Distance_2/Segment_2_Line_2.h \
+ /usr/local/include/CGAL/Distance_2/Segment_2_Triangle_2.h \
+ /usr/local/include/CGAL/Distance_2/Ray_2_Ray_2.h \
+ /usr/local/include/CGAL/Distance_2/Ray_2_Line_2.h \
+ /usr/local/include/CGAL/Distance_2/Ray_2_Triangle_2.h \
+ /usr/local/include/CGAL/Distance_2/Line_2_Line_2.h \
+ /usr/local/include/CGAL/Distance_2/Line_2_Triangle_2.h \
+ /usr/local/include/CGAL/Distance_2/Triangle_2_Triangle_2.h \
+ /usr/local/include/CGAL/squared_distance_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Point_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Weighted_point_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Segment_3.h \
+ /usr/local/include/CGAL/Distance_3/internal/squared_distance_utils_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Ray_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Line_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Triangle_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Plane_3.h \
+ /usr/local/include/CGAL/Distance_3/Point_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Distance_3/Weighted_point_3_Weighted_point_3.h \
+ /usr/local/include/CGAL/Distance_3/Segment_3_Segment_3.h \
  /usr/include/boost/algorithm/clamp.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Segment_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Ray_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Line_3_Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Line_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Triangle_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Distance_3/Plane_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/intersection_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Circle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersection_traits_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersection_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Bbox_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Circle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Circle_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Segment_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/predicates_on_points_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Line_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Line_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/internal/Straight_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Point_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Ray_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Segment_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Ray_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Segment_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/intersection_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersection_traits_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/intersections.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/utility.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Line_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Line_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/rank.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Plane_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Point_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Ray_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Ray_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Segment_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Segment_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Distance_3/Segment_3_Ray_3.h \
+ /usr/local/include/CGAL/Distance_3/Segment_3_Line_3.h \
+ /usr/local/include/CGAL/Distance_3/Segment_3_Plane_3.h \
+ /usr/local/include/CGAL/Distance_3/Ray_3_Ray_3.h \
+ /usr/local/include/CGAL/Distance_3/Ray_3_Line_3.h \
+ /usr/local/include/CGAL/Distance_3/Ray_3_Plane_3.h \
+ /usr/local/include/CGAL/Distance_3/Line_3_Line_3.h \
+ /usr/local/include/CGAL/Distance_3/Line_3_Plane_3.h \
+ /usr/local/include/CGAL/Distance_3/Triangle_3_Triangle_3.h \
+ /usr/local/include/CGAL/Distance_3/Plane_3_Plane_3.h \
+ /usr/local/include/CGAL/intersection_2.h \
+ /usr/local/include/CGAL/Intersections_2/Bbox_2_Circle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Circle_2_Iso_rectangle_2.h \
+ /usr/local/include/CGAL/Intersection_traits_2.h \
+ /usr/local/include/CGAL/Intersection_traits.h \
+ /usr/local/include/CGAL/Intersections_2/Bbox_2_Line_2.h \
+ /usr/local/include/CGAL/Intersections_2/Iso_rectangle_2_Line_2.h \
+ /usr/local/include/CGAL/Intersections_2/Bbox_2_Point_2.h \
+ /usr/local/include/CGAL/Intersections_2/Iso_rectangle_2_Point_2.h \
+ /usr/local/include/CGAL/Intersections_2/Bbox_2_Ray_2.h \
+ /usr/local/include/CGAL/Intersections_2/Iso_rectangle_2_Ray_2.h \
+ /usr/local/include/CGAL/Intersections_2/Circle_2_Circle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Circle_2_Line_2.h \
+ /usr/local/include/CGAL/Intersections_2/Circle_2_Point_2.h \
+ /usr/local/include/CGAL/Intersections_2/Circle_2_Segment_2.h \
+ /usr/local/include/CGAL/Intersections_2/Circle_2_Ray_2.h \
+ /usr/local/include/CGAL/Intersections_2/Circle_2_Triangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Iso_rectangle_2_Iso_rectangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Iso_rectangle_2_Segment_2.h \
+ /usr/local/include/CGAL/Intersections_2/Iso_rectangle_2_Triangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Segment_2_Segment_2.h \
+ /usr/local/include/CGAL/predicates_on_points_2.h \
+ /usr/local/include/CGAL/Intersections_2/Line_2_Line_2.h \
+ /usr/local/include/CGAL/Intersections_2/Line_2_Point_2.h \
+ /usr/local/include/CGAL/Intersections_2/Line_2_Ray_2.h \
+ /usr/local/include/CGAL/Intersections_2/Line_2_Segment_2.h \
+ /usr/local/include/CGAL/Intersections_2/Line_2_Triangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/internal/Straight_2.h \
+ /usr/local/include/CGAL/Intersections_2/Point_2_Point_2.h \
+ /usr/local/include/CGAL/Intersections_2/Point_2_Ray_2.h \
+ /usr/local/include/CGAL/Intersections_2/Point_2_Segment_2.h \
+ /usr/local/include/CGAL/Intersections_2/Point_2_Triangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Ray_2_Ray_2.h \
+ /usr/local/include/CGAL/Intersections_2/Ray_2_Segment_2.h \
+ /usr/local/include/CGAL/Intersections_2/Ray_2_Triangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Segment_2_Triangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/Triangle_2_Triangle_2.h \
+ /usr/local/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_do_intersect_impl.h \
+ /usr/local/include/CGAL/Intersections_2/internal/Triangle_2_Triangle_2_intersection_impl.h \
+ /usr/local/include/CGAL/intersection_3.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Bbox_3.h \
+ /usr/local/include/CGAL/Intersection_traits_3.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Iso_cuboid_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Iso_cuboid_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Line_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Line_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Plane_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Plane_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Plane_3_intersection.h \
+ /usr/local/include/CGAL/intersections.h \
+ /usr/local/include/CGAL/utility.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Point_3.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Point_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Point_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Ray_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Segment_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Ray_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Segment_3.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Bbox_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Bbox_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Iso_cuboid_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Iso_cuboid_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Line_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Line_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Plane_3.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Ray_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Ray_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Segment_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Segment_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Tetrahedron_3_Bounded_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Iso_cuboid_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Sphere_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Iso_cuboid_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Line_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Line_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Line_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Plane_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Plane_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Plane_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Point_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Point_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Point_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Ray_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Ray_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Ray_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Ray_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Segment_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Segment_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Segment_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Tetrahedron_3_Unbounded_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Tetrahedron_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/internal/tetrahedron_lines_intersections_3.h \
+ /usr/local/include/CGAL/Intersections_3/Line_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Line_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Plane_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Plane_3_Plane_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_do_intersect.h \
+ /usr/local/include/CGAL/rank.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Plane_3_Plane_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Point_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Point_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Point_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Ray_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Ray_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Segment_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Segment_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Sphere_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Tetrahedron_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Plane_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Plane_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Point_3_Point_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Point_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Point_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Point_3_Ray_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Ray_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Point_3_Segment_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Segment_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Segment_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Point_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Sphere_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Point_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Tetrahedron_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Point_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Point_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Ray_3_Ray_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Ray_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Ray_3_Segment_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Segment_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Ray_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Ray_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Tetrahedron_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Ray_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Ray_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Segment_3_Segment_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Segment_3_Segment_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Segment_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Segment_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Segment_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Segment_3_Tetrahedron_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Segment_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Segment_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Sphere_3_Sphere_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Sphere_3_Sphere_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Sphere_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Sphere_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Sphere_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/Tetrahedron_3_Tetrahedron_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Tetrahedron_3_Tetrahedron_3_do_intersect.h \
+ /usr/local/include/CGAL/Intersections_3/Tetrahedron_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Tetrahedron_3_Triangle_3_intersection.h \
+ /usr/local/include/CGAL/Intersections_3/Triangle_3_Triangle_3.h \
+ /usr/local/include/CGAL/Intersections_3/internal/Triangle_3_Triangle_3_intersection.h \
  /usr/include/boost/next_prior.hpp \
  /usr/include/boost/type_traits/has_plus.hpp \
  /usr/include/boost/type_traits/detail/has_binary_operator.hpp \
@@ -1479,83 +1445,79 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/type_traits/has_minus_assign.hpp \
  /usr/include/boost/iterator/advance.hpp \
  /usr/include/boost/iterator/reverse_iterator.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/Type_equality_wrapper.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/interface_macros.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel_fwd.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_predicate.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian_converter.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian_converter_fwd.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/NT_converter.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Enum_converter.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/Type_mapper.h \
+ /usr/local/include/CGAL/Kernel/Type_equality_wrapper.h \
+ /usr/local/include/CGAL/Kernel/interface_macros.h \
+ /usr/local/include/CGAL/Filtered_kernel.h \
+ /usr/local/include/CGAL/Filtered_kernel_fwd.h \
+ /usr/local/include/CGAL/Filtered_predicate.h \
+ /usr/local/include/CGAL/Cartesian_converter.h \
+ /usr/local/include/CGAL/Cartesian_converter_fwd.h \
+ /usr/local/include/CGAL/NT_converter.h \
+ /usr/local/include/CGAL/Enum_converter.h \
+ /usr/local/include/CGAL/Kernel/Type_mapper.h \
  /usr/include/boost/mpl/remove.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Exact_kernel_selector.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Simple_homogeneous.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Homogeneous_base.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Aff_transformationH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/DirectionH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_directionsH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/PointH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/VectorH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Iso_rectangleH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/LineH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Weighted_point_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Data_accessorH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/ConicHPA2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Aff_transformationH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/DirectionH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Iso_cuboidH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/PlaneH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/PointH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/Weighted_point_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/RayH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/SphereH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/predicates_on_pointsH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/VectorH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/basic_constructionsH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/distance_predicatesH2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/basic_constructionsH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/distance_predicatesH3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous/function_objects.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Number_types/internal/Exact_type_selector.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/MP_Float.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Sqrt_extension_type.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Interval_arithmetic.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension_fwd.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Real_embeddable_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Fraction_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Coercion_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Modular_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Chinese_remainder_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/extended_euclidean_algorithm.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/io.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/convert_to_bfi.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/convert_to_bfi.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cache.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/function_objects.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Wang_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/MP_Float_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/MP_Float_arithmetic_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Lazy_exact_nt.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Handle.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Lazy.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/min_max_n.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Default.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/type_traits/is_iterator.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/transforming_iterator.h \
- /usr/include/c++/9/mutex /usr/include/c++/9/bits/std_mutex.h \
- /usr/include/c++/9/bits/unique_lock.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost_mp.h \
+ /usr/local/include/CGAL/Exact_kernel_selector.h \
+ /usr/local/include/CGAL/Simple_homogeneous.h \
+ /usr/local/include/CGAL/Homogeneous/Homogeneous_base.h \
+ /usr/local/include/CGAL/Homogeneous/Aff_transformationH2.h \
+ /usr/local/include/CGAL/Homogeneous/DirectionH2.h \
+ /usr/local/include/CGAL/Homogeneous/predicates_on_directionsH2.h \
+ /usr/local/include/CGAL/Homogeneous/PointH2.h \
+ /usr/local/include/CGAL/Homogeneous/VectorH2.h \
+ /usr/local/include/CGAL/Kernel_d/Cartesian_const_iterator_d.h \
+ /usr/local/include/CGAL/Homogeneous/predicates_on_pointsH2.h \
+ /usr/local/include/CGAL/Homogeneous/Iso_rectangleH2.h \
+ /usr/local/include/CGAL/Homogeneous/LineH2.h \
+ /usr/local/include/CGAL/Homogeneous/Weighted_point_2.h \
+ /usr/local/include/CGAL/Homogeneous/Data_accessorH2.h \
+ /usr/local/include/CGAL/Homogeneous/ConicHPA2.h \
+ /usr/local/include/CGAL/Homogeneous/Aff_transformationH3.h \
+ /usr/local/include/CGAL/Homogeneous/DirectionH3.h \
+ /usr/local/include/CGAL/Homogeneous/Iso_cuboidH3.h \
+ /usr/local/include/CGAL/Homogeneous/PlaneH3.h \
+ /usr/local/include/CGAL/Homogeneous/PointH3.h \
+ /usr/local/include/CGAL/Homogeneous/Weighted_point_3.h \
+ /usr/local/include/CGAL/Homogeneous/RayH3.h \
+ /usr/local/include/CGAL/Homogeneous/SphereH3.h \
+ /usr/local/include/CGAL/Homogeneous/predicates_on_pointsH3.h \
+ /usr/local/include/CGAL/Homogeneous/VectorH3.h \
+ /usr/local/include/CGAL/Homogeneous/basic_constructionsH2.h \
+ /usr/local/include/CGAL/Homogeneous/distance_predicatesH2.h \
+ /usr/local/include/CGAL/Homogeneous/basic_constructionsH3.h \
+ /usr/local/include/CGAL/Homogeneous/distance_predicatesH3.h \
+ /usr/local/include/CGAL/Homogeneous/function_objects.h \
+ /usr/local/include/CGAL/Number_types/internal/Exact_type_selector.h \
+ /usr/local/include/CGAL/MP_Float.h \
+ /usr/local/include/CGAL/Sqrt_extension.h \
+ /usr/local/include/CGAL/Sqrt_extension/Sqrt_extension_type.h \
+ /usr/local/include/CGAL/Interval_arithmetic.h \
+ /usr/local/include/CGAL/Sqrt_extension_fwd.h \
+ /usr/local/include/CGAL/Sqrt_extension/Algebraic_structure_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Real_embeddable_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Fraction_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Coercion_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Modular_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Scalar_factor_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Algebraic_extension_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Chinese_remainder_traits.h \
+ /usr/local/include/CGAL/Chinese_remainder_traits.h \
+ /usr/local/include/CGAL/extended_euclidean_algorithm.h \
+ /usr/local/include/CGAL/Sqrt_extension/io.h \
+ /usr/local/include/CGAL/Sqrt_extension/Get_arithmetic_kernel.h \
+ /usr/local/include/CGAL/Sqrt_extension/convert_to_bfi.h \
+ /usr/local/include/CGAL/convert_to_bfi.h /usr/local/include/CGAL/Cache.h \
+ /usr/local/include/CGAL/function_objects.h \
+ /usr/local/include/CGAL/Sqrt_extension/Wang_traits.h \
+ /usr/local/include/CGAL/Sqrt_extension/Eigen_NumTraits.h \
+ /usr/local/include/CGAL/MP_Float_impl.h \
+ /usr/local/include/CGAL/MP_Float_arithmetic_kernel.h \
+ /usr/local/include/CGAL/Lazy_exact_nt.h /usr/local/include/CGAL/Handle.h \
+ /usr/local/include/CGAL/Lazy.h /usr/local/include/CGAL/min_max_n.h \
+ /usr/local/include/CGAL/Default.h \
+ /usr/local/include/CGAL/type_traits/is_iterator.h \
+ /usr/local/include/CGAL/transforming_iterator.h /usr/include/c++/9/mutex \
+ /usr/include/c++/9/bits/std_mutex.h \
+ /usr/include/c++/9/bits/unique_lock.h /usr/local/include/CGAL/boost_mp.h \
  /usr/include/boost/multiprecision/number.hpp \
  /usr/include/boost/mpl/max.hpp \
  /usr/include/boost/type_traits/is_complex.hpp \
@@ -1695,44 +1657,41 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/math/special_functions/detail/gamma_inva.hpp \
  /usr/include/boost/math/special_functions/erf.hpp \
  /usr/include/boost/math/special_functions/detail/erf_inv.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/BOOST_MP_arithmetic_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/cpp_float.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Gmpz.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Gmp_coercion_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/GMP/Gmpz_type.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/gmp.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/GMP/Gmpzf_type.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/GMP/Gmpfr_type.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/ipower.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/GMP/Gmpfr_type_static.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/GMP/Gmpq_type.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Gmpq.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Gmpzf.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/GMP_arithmetic_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Mpzf.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Homogeneous_converter.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h \
+ /usr/local/include/CGAL/BOOST_MP_arithmetic_kernel.h \
+ /usr/local/include/CGAL/cpp_float.h /usr/local/include/CGAL/Gmpz.h \
+ /usr/local/include/CGAL/Gmp_coercion_traits.h \
+ /usr/local/include/CGAL/GMP/Gmpz_type.h /usr/local/include/CGAL/gmp.h \
+ /usr/local/include/CGAL/GMP/Gmpzf_type.h \
+ /usr/local/include/CGAL/GMP/Gmpfr_type.h \
+ /usr/local/include/CGAL/ipower.h \
+ /usr/local/include/CGAL/GMP/Gmpfr_type_static.h \
+ /usr/local/include/CGAL/GMP/Gmpq_type.h /usr/local/include/CGAL/Gmpq.h \
+ /usr/local/include/CGAL/Gmpzf.h \
+ /usr/local/include/CGAL/GMP_arithmetic_kernel.h \
+ /usr/local/include/CGAL/Mpzf.h \
+ /usr/local/include/CGAL/Homogeneous_converter.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filters.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/tools.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Static_filter_error.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Orientation_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Collinear_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Equal_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_x_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Is_degenerate_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Angle_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Do_intersect_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Coplanar_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_y_at_x_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_circle_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Side_of_oriented_sphere_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_squared_radius_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_weighted_squared_radius_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Power_side_of_oriented_power_sphere_3.h \
+ /usr/local/include/CGAL/Filtered_kernel/internal/Static_filters/Compare_distance_3.h \
  /usr/include/boost/type_traits.hpp \
  /usr/include/boost/type_traits/extent.hpp \
  /usr/include/boost/type_traits/floating_point_promotion.hpp \
@@ -1790,82 +1749,78 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/type_traits/remove_cv_ref.hpp \
  /usr/include/boost/type_traits/integral_promotion.hpp \
  /usr/include/boost/type_traits/promote.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Converting_construction.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Cartesian/Is_trivial_construction.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_structural_filtering_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE_Expr.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE_coercion_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/CORE.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/CoreDefs.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/extLong.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Config.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/auto_link/CORE.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/export/CORE.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/MemoryPool.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/CoreAux.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/CoreAux_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/extLong_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/CoreDefs_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Timer.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Expr.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/BigFloat.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/BigFloatRep.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/BigRat.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/BigInt.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Gmp.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Gmp_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/RefCount.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/BigFloat_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/ExprRep.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Real.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/RealRep.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/BigFloat.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Real_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Filter.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/poly/Sturm.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/poly/Poly.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Promote.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/poly/Poly.tcc \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/Expr_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE/CoreIO_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE_BigInt.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE_BigRat.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE_BigFloat.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Bigfloat_interval_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CORE_arithmetic_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Lazy_kernel.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Static_filtered_predicate.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Epic_converter.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Surface_mesh.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh/Surface_mesh.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh/IO.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh/IO/3MF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/3MF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/3MF/read_3mf.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/3MF/write_3mf.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/helpers.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Container_helper.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Has_member.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/iterator.h \
+ /usr/local/include/CGAL/Converting_construction.h \
+ /usr/local/include/CGAL/Cartesian/Is_trivial_construction.h \
+ /usr/local/include/CGAL/Triangulation_structural_filtering_traits.h \
+ /usr/local/include/CGAL/Exact_predicates_exact_constructions_kernel_with_sqrt.h \
+ /usr/local/include/CGAL/CORE_Expr.h \
+ /usr/local/include/CGAL/CORE_coercion_traits.h \
+ /usr/local/include/CGAL/CORE/CORE.h \
+ /usr/local/include/CGAL/CORE/CoreDefs.h \
+ /usr/local/include/CGAL/CORE/extLong.h \
+ /usr/local/include/CGAL/CORE/Impl.h \
+ /usr/local/include/CGAL/CORE/Config.h \
+ /usr/local/include/CGAL/auto_link/CORE.h \
+ /usr/local/include/CGAL/export/CORE.h \
+ /usr/local/include/CGAL/CORE/MemoryPool.h \
+ /usr/local/include/CGAL/CORE/CoreAux.h \
+ /usr/local/include/CGAL/CORE/CoreAux_impl.h \
+ /usr/local/include/CGAL/CORE/extLong_impl.h \
+ /usr/local/include/CGAL/CORE/CoreDefs_impl.h \
+ /usr/local/include/CGAL/CORE/Timer.h /usr/local/include/CGAL/CORE/Expr.h \
+ /usr/local/include/CGAL/CORE/BigFloat.h \
+ /usr/local/include/CGAL/CORE/BigFloatRep.h \
+ /usr/local/include/CGAL/CORE/BigRat.h \
+ /usr/local/include/CGAL/CORE/BigInt.h /usr/local/include/CGAL/CORE/Gmp.h \
+ /usr/local/include/CGAL/CORE/Gmp_impl.h \
+ /usr/local/include/CGAL/CORE/RefCount.h \
+ /usr/local/include/CGAL/CORE/BigFloat_impl.h \
+ /usr/local/include/CGAL/CORE/ExprRep.h \
+ /usr/local/include/CGAL/CORE/Real.h \
+ /usr/local/include/CGAL/CORE/RealRep.h \
+ /usr/local/include/CGAL/CORE/BigFloat.h \
+ /usr/local/include/CGAL/CORE/Real_impl.h \
+ /usr/local/include/CGAL/CORE/Filter.h \
+ /usr/local/include/CGAL/CORE/poly/Sturm.h \
+ /usr/local/include/CGAL/CORE/poly/Poly.h \
+ /usr/local/include/CGAL/CORE/Promote.h \
+ /usr/local/include/CGAL/CORE/poly/Poly.tcc \
+ /usr/local/include/CGAL/CORE/Expr_impl.h \
+ /usr/local/include/CGAL/CORE/CoreIO_impl.h \
+ /usr/local/include/CGAL/CORE_BigInt.h \
+ /usr/local/include/CGAL/CORE_BigRat.h \
+ /usr/local/include/CGAL/CORE_BigFloat.h \
+ /usr/local/include/CGAL/Bigfloat_interval_traits.h \
+ /usr/local/include/CGAL/CORE_arithmetic_kernel.h \
+ /usr/local/include/CGAL/Exact_predicates_exact_constructions_kernel.h \
+ /usr/local/include/CGAL/Lazy_kernel.h \
+ /usr/local/include/CGAL/Static_filtered_predicate.h \
+ /usr/local/include/CGAL/Epic_converter.h \
+ /usr/local/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_2.h \
+ /usr/local/include/CGAL/Filtered_kernel/Cartesian_coordinate_iterator_3.h \
+ /usr/local/include/CGAL/Surface_mesh.h \
+ /usr/local/include/CGAL/license/Surface_mesh.h \
+ /usr/local/include/CGAL/Surface_mesh/Surface_mesh_fwd.h \
+ /usr/local/include/CGAL/Surface_mesh/Surface_mesh.h \
+ /usr/local/include/CGAL/Surface_mesh/IO.h \
+ /usr/local/include/CGAL/Surface_mesh/IO/3MF.h \
+ /usr/local/include/CGAL/IO/3MF.h \
+ /usr/local/include/CGAL/IO/3MF/read_3mf.h \
+ /usr/local/include/CGAL/IO/3MF/write_3mf.h \
+ /usr/local/include/CGAL/IO/helpers.h \
+ /usr/local/include/CGAL/Container_helper.h \
+ /usr/local/include/CGAL/Has_member.h \
+ /usr/local/include/CGAL/boost/graph/iterator.h \
  /usr/include/boost/graph/graph_traits.hpp \
  /usr/include/boost/pending/property.hpp \
  /usr/include/boost/pending/detail/property.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Iterator_range.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/tuple.h \
+ /usr/local/include/CGAL/Iterator_range.h /usr/local/include/CGAL/tuple.h \
  /usr/include/boost/foreach.hpp /usr/include/boost/foreach_fwd.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/circulator_bases.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/internal/helpers.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/iterator.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/circulator.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/property_map.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/value_type_traits.h \
+ /usr/local/include/CGAL/circulator_bases.h \
+ /usr/local/include/CGAL/boost/graph/internal/helpers.h \
+ /usr/local/include/CGAL/iterator.h /usr/local/include/CGAL/circulator.h \
+ /usr/local/include/CGAL/property_map.h \
+ /usr/local/include/CGAL/value_type_traits.h \
  /usr/include/boost/property_map/property_map.hpp \
  /usr/include/boost/concept_archetype.hpp \
  /usr/include/boost/property_map/vector_property_map.hpp \
@@ -1890,43 +1845,42 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/iterator/counting_iterator.hpp \
+ /usr/local/include/CGAL/boost/iterator/counting_iterator.hpp \
  /usr/include/boost/iterator/counting_iterator.hpp \
  /usr/include/boost/detail/numeric_traits.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Named_function_parameters.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/STL_Extension/internal/mesh_option_classes.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_features.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/STL_Extension/internal/parameters_interface.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/STL_Extension/internal/mesh_parameters_interface.h \
+ /usr/local/include/CGAL/Named_function_parameters.h \
+ /usr/local/include/CGAL/STL_Extension/internal/mesh_option_classes.h \
+ /usr/local/include/CGAL/STL_Extension/internal/Has_features.h \
+ /usr/local/include/CGAL/STL_Extension/internal/parameters_interface.h \
+ /usr/local/include/CGAL/STL_Extension/internal/mesh_parameters_interface.h \
  /usr/include/boost/iterator/function_output_iterator.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh/IO/OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/Scanner_OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/File_scanner_OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/binary_file_io.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/File_header_OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/File_header_extended_OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/File_header_OFF_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/File_writer_OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OFF/generic_copy_OFF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/Generic_writer.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/named_params_helper.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/properties.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Dynamic_property_map.h \
+ /usr/local/include/CGAL/Surface_mesh/IO/OFF.h \
+ /usr/local/include/CGAL/boost/graph/IO/OFF.h \
+ /usr/local/include/CGAL/IO/OFF.h \
+ /usr/local/include/CGAL/IO/OFF/Scanner_OFF.h \
+ /usr/local/include/CGAL/IO/OFF/File_scanner_OFF.h \
+ /usr/local/include/CGAL/IO/binary_file_io.h \
+ /usr/local/include/CGAL/IO/OFF/File_header_OFF.h \
+ /usr/local/include/CGAL/IO/OFF/File_header_extended_OFF.h \
+ /usr/local/include/CGAL/IO/OFF/File_header_extended_OFF_impl.h \
+ /usr/local/include/CGAL/IO/OFF/File_header_OFF_impl.h \
+ /usr/local/include/CGAL/IO/OFF/File_writer_OFF.h \
+ /usr/local/include/CGAL/IO/OFF/generic_copy_OFF.h \
+ /usr/local/include/CGAL/IO/Generic_writer.h \
+ /usr/local/include/CGAL/boost/graph/named_params_helper.h \
+ /usr/local/include/CGAL/boost/graph/internal/initialized_index_maps_helpers.h \
+ /usr/local/include/CGAL/boost/graph/properties.h \
+ /usr/local/include/CGAL/Dynamic_property_map.h \
  /usr/include/boost/graph/properties.hpp \
  /usr/include/boost/graph/property_maps/constant_property_map.hpp \
  /usr/include/boost/graph/property_maps/null_property_map.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/Euler_operations.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/helpers.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/internal/Has_member_clear.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/Verbose_ostream.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/generators.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Random.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Random_impl.h \
+ /usr/local/include/CGAL/boost/graph/IO/Generic_facegraph_builder.h \
+ /usr/local/include/CGAL/boost/graph/Euler_operations.h \
+ /usr/local/include/CGAL/boost/graph/helpers.h \
+ /usr/local/include/CGAL/boost/graph/internal/Has_member_clear.h \
+ /usr/local/include/CGAL/IO/Verbose_ostream.h \
+ /usr/local/include/CGAL/boost/graph/generators.h \
+ /usr/local/include/CGAL/Random.h /usr/local/include/CGAL/Random_impl.h \
  /usr/include/boost/container/small_vector.hpp \
  /usr/include/boost/container/detail/config_begin.hpp \
  /usr/include/boost/container/detail/workaround.hpp \
@@ -1982,7 +1936,7 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/move/algo/detail/is_sorted.hpp \
  /usr/include/boost/move/algo/unique.hpp \
  /usr/include/boost/move/algo/detail/set_difference.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h \
+ /usr/local/include/CGAL/boost/graph/IO/Generic_facegraph_printer.h \
  /usr/include/boost/container/flat_map.hpp \
  /usr/include/boost/container/detail/flat_tree.hpp \
  /usr/include/boost/container/detail/pair.hpp \
@@ -1999,76 +1953,75 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/container/detail/container_or_allocator_rebind.hpp \
  /usr/include/boost/container/detail/container_rebind.hpp \
  /usr/include/boost/intrusive/detail/minimal_less_equal_header.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh/IO/PLY.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/PLY.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/PLY/PLY_reader.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/PLY/PLY_writer.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/io.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/3MF.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/GOCAD.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/GOCAD.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/INP.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/OBJ.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OBJ.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OBJ/File_writer_wavefront.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/PLY.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/STL.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/STL.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/STL/STL_reader.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/VTK.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/VTK.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/VTK/VTK_reader.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/VTK/VTK_writer.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/WRL.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/VRML.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/VRML/File_writer_VRML_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/VRML/VRML_2_ostream.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/VRML/VRML_1_ostream.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OI.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OI/File_writer_inventor.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/OI/Inventor_ostream.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/IO/polygon_mesh_io.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh/Properties.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/copy_face_graph.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/graph_traits_Surface_mesh.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/properties_Surface_mesh_features.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Handle_hash_function.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Surface_mesh_shortest_path.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/barycentric.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/Cone_tree.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/Cone_expansion_event.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/internal/misc_functions.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/AABB_tree.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_traversal_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_node.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_search_tree.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Orthogonal_k_neighbor_search.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Spatial_searching.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kd_tree_node.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Splitters.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Point_container.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kd_tree_rectangle.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Plane_separator.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Compact_container.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/CC_safe_handle.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Time_stamper.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Has_timestamp.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Spatial_searching/internal/Search_helpers.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kd_tree.h \
- /usr/include/boost/container/deque.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/mutex.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Euclidean_distance.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Search_traits_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree/internal/Has_nested_type_Shared_data.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree/internal/Primitive_helper.h \
+ /usr/local/include/CGAL/Surface_mesh/IO/PLY.h \
+ /usr/local/include/CGAL/IO/PLY.h \
+ /usr/local/include/CGAL/IO/PLY/PLY_reader.h \
+ /usr/local/include/CGAL/IO/PLY/PLY_writer.h \
+ /usr/local/include/CGAL/boost/graph/io.h \
+ /usr/local/include/CGAL/boost/graph/IO/3MF.h \
+ /usr/local/include/CGAL/boost/graph/IO/GOCAD.h \
+ /usr/local/include/CGAL/IO/GOCAD.h \
+ /usr/local/include/CGAL/boost/graph/IO/INP.h \
+ /usr/local/include/CGAL/boost/graph/IO/OBJ.h \
+ /usr/local/include/CGAL/IO/OBJ.h \
+ /usr/local/include/CGAL/IO/OBJ/File_writer_wavefront.h \
+ /usr/local/include/CGAL/boost/graph/IO/PLY.h \
+ /usr/local/include/CGAL/boost/graph/IO/STL.h \
+ /usr/local/include/CGAL/IO/STL.h \
+ /usr/local/include/CGAL/IO/STL/STL_reader.h \
+ /usr/local/include/CGAL/boost/graph/IO/VTK.h \
+ /usr/local/include/CGAL/IO/VTK.h \
+ /usr/local/include/CGAL/IO/VTK/VTK_reader.h \
+ /usr/local/include/CGAL/IO/VTK/VTK_writer.h \
+ /usr/local/include/CGAL/boost/graph/IO/WRL.h \
+ /usr/local/include/CGAL/IO/VRML.h \
+ /usr/local/include/CGAL/IO/VRML/File_writer_VRML_2.h \
+ /usr/local/include/CGAL/IO/VRML/VRML_2_ostream.h \
+ /usr/local/include/CGAL/IO/VRML/VRML_1_ostream.h \
+ /usr/local/include/CGAL/IO/OI.h \
+ /usr/local/include/CGAL/IO/OI/File_writer_inventor.h \
+ /usr/local/include/CGAL/IO/OI/Inventor_ostream.h \
+ /usr/local/include/CGAL/boost/graph/IO/polygon_mesh_io.h \
+ /usr/local/include/CGAL/Surface_mesh/Properties.h \
+ /usr/local/include/CGAL/boost/graph/copy_face_graph.h \
+ /usr/local/include/CGAL/boost/graph/graph_traits_Surface_mesh.h \
+ /usr/local/include/CGAL/boost/graph/properties_Surface_mesh.h \
+ /usr/local/include/CGAL/boost/graph/properties_Surface_mesh_time_stamp.h \
+ /usr/local/include/CGAL/boost/graph/properties_Surface_mesh_features.h \
+ /usr/local/include/CGAL/Handle_hash_function.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path.h \
+ /usr/local/include/CGAL/license/Surface_mesh_shortest_path.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path/barycentric.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path/internal/Cone_tree.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path/internal/Cone_expansion_event.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path/internal/misc_functions.h \
+ /usr/local/include/CGAL/AABB_tree.h \
+ /usr/local/include/CGAL/license/AABB_tree.h \
+ /usr/local/include/CGAL/AABB_tree/internal/AABB_traversal_traits.h \
+ /usr/local/include/CGAL/AABB_tree/internal/AABB_node.h \
+ /usr/local/include/CGAL/AABB_tree/internal/AABB_search_tree.h \
+ /usr/local/include/CGAL/Orthogonal_k_neighbor_search.h \
+ /usr/local/include/CGAL/license/Spatial_searching.h \
+ /usr/local/include/CGAL/Spatial_searching/internal/K_neighbor_search.h \
+ /usr/local/include/CGAL/Kd_tree_node.h \
+ /usr/local/include/CGAL/Splitters.h \
+ /usr/local/include/CGAL/Point_container.h \
+ /usr/local/include/CGAL/Kd_tree_rectangle.h \
+ /usr/local/include/CGAL/Spatial_searching/internal/Get_dimension_tag.h \
+ /usr/local/include/CGAL/Plane_separator.h \
+ /usr/local/include/CGAL/Compact_container.h \
+ /usr/local/include/CGAL/CC_safe_handle.h \
+ /usr/local/include/CGAL/Time_stamper.h \
+ /usr/local/include/CGAL/Has_timestamp.h \
+ /usr/local/include/CGAL/Spatial_searching/internal/Search_helpers.h \
+ /usr/local/include/CGAL/Kd_tree.h /usr/include/boost/container/deque.hpp \
+ /usr/local/include/CGAL/mutex.h \
+ /usr/local/include/CGAL/Euclidean_distance.h \
+ /usr/local/include/CGAL/Spatial_searching/internal/bounded_priority_queue.h \
+ /usr/local/include/CGAL/Search_traits_3.h \
+ /usr/local/include/CGAL/AABB_tree/internal/Has_nested_type_Shared_data.h \
+ /usr/local/include/CGAL/AABB_tree/internal/Primitive_helper.h \
  /usr/include/boost/lambda/lambda.hpp /usr/include/boost/lambda/core.hpp \
  /usr/include/boost/type_traits/transform_traits.hpp \
  /usr/include/boost/lambda/detail/lambda_config.hpp \
@@ -2095,7 +2048,7 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/pointee.hpp \
  /usr/include/boost/lambda/detail/operators.hpp \
  /usr/include/boost/lambda/detail/member_ptr.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree/internal/AABB_ray_intersection.h \
+ /usr/local/include/CGAL/AABB_tree/internal/AABB_ray_intersection.h \
  /usr/include/boost/heap/priority_queue.hpp /usr/include/c++/9/queue \
  /usr/include/c++/9/bits/stl_queue.h \
  /usr/include/boost/heap/detail/heap_comparison.hpp \
@@ -2186,37 +2139,37 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/parameter/aux_/pack/tag_keyword_arg.hpp \
  /usr/include/boost/parameter/aux_/pack/tag_template_keyword_arg.hpp \
  /usr/include/boost/heap/heap_merge.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Surface_mesh_shortest_path/function_objects.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_face_graph_triangle_primitive.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_primitive.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/property_maps.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_traits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel_23/internal/Has_boolean_tags.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/compute_normal.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/Compute_normal.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/locate.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/locate.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/triangulate_faces.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/meshing_hole_filling.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/triangulate_hole.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/bounding_box.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel/Dimension_utils.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polygon_mesh.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polyline.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Delaunay_triangulation_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Triangulation_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Delaunay_triangulation_cell_base_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_cell_base_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_ds_cell_base_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/TDS_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/TDS_3/internal/Dummy_tds_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Unique_hash_map.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hash_map/internal/chained_map.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_utils_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_data_structure_3.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path/Surface_mesh_shortest_path_traits.h \
+ /usr/local/include/CGAL/Surface_mesh_shortest_path/function_objects.h \
+ /usr/local/include/CGAL/AABB_face_graph_triangle_primitive.h \
+ /usr/local/include/CGAL/AABB_primitive.h \
+ /usr/local/include/CGAL/boost/graph/property_maps.h \
+ /usr/local/include/CGAL/AABB_traits.h \
+ /usr/local/include/CGAL/AABB_tree/internal/Is_ray_intersection_geomtraits.h \
+ /usr/local/include/CGAL/Kernel_23/internal/Has_boolean_tags.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/compute_normal.h \
+ /usr/local/include/CGAL/license/Polygon_mesh_processing/Compute_normal.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/locate.h \
+ /usr/local/include/CGAL/license/Polygon_mesh_processing/locate.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/triangulate_faces.h \
+ /usr/local/include/CGAL/license/Polygon_mesh_processing/meshing_hole_filling.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/triangulate_hole.h \
+ /usr/local/include/CGAL/bounding_box.h \
+ /usr/local/include/CGAL/Kernel/Dimension_utils.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polygon_mesh.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/internal/Hole_filling/Triangulate_hole_polyline.h \
+ /usr/local/include/CGAL/Delaunay_triangulation_3.h \
+ /usr/local/include/CGAL/license/Triangulation_3.h \
+ /usr/local/include/CGAL/Delaunay_triangulation_cell_base_3.h \
+ /usr/local/include/CGAL/Triangulation_cell_base_3.h \
+ /usr/local/include/CGAL/Triangulation_ds_cell_base_3.h \
+ /usr/local/include/CGAL/license/TDS_3.h \
+ /usr/local/include/CGAL/TDS_3/internal/Dummy_tds_3.h \
+ /usr/local/include/CGAL/Triangulation_3.h \
+ /usr/local/include/CGAL/Unique_hash_map.h \
+ /usr/local/include/CGAL/Hash_map/internal/chained_map.h \
+ /usr/local/include/CGAL/Triangulation_utils_3.h \
+ /usr/local/include/CGAL/Triangulation_data_structure_3.h \
  /usr/include/c++/9/stack /usr/include/c++/9/bits/stl_stack.h \
  /usr/include/boost/unordered_set.hpp \
  /usr/include/boost/unordered/unordered_set.hpp \
@@ -2225,40 +2178,40 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/core/pointer_traits.hpp \
  /usr/include/boost/unordered/detail/fwd.hpp \
  /usr/include/boost/unordered/unordered_set_fwd.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_member_visited.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Concurrent_compact_container.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Small_unordered_map.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_ds_vertex_base_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_simplex_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_vertex_base_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/spatial_sort.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/hilbert_sort.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_policy_tags.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_median_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_base.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_middle_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_middle_base.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_median_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_middle_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_d.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_median_d.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Hilbert_sort_middle_d.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Multiscale_sort.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Spatial_sort_traits_adapter_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_segment_traverser_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Iterator_project.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Spatial_lock_grid_3.h \
+ /usr/local/include/CGAL/STL_Extension/internal/Has_member_visited.h \
+ /usr/local/include/CGAL/Concurrent_compact_container.h \
+ /usr/local/include/CGAL/Small_unordered_map.h \
+ /usr/local/include/CGAL/Triangulation_ds_vertex_base_3.h \
+ /usr/local/include/CGAL/Triangulation_simplex_3.h \
+ /usr/local/include/CGAL/TDS_3/internal/Triangulation_ds_iterators_3.h \
+ /usr/local/include/CGAL/TDS_3/internal/Triangulation_ds_circulators_3.h \
+ /usr/local/include/CGAL/Triangulation_vertex_base_3.h \
+ /usr/local/include/CGAL/spatial_sort.h \
+ /usr/local/include/CGAL/hilbert_sort.h \
+ /usr/local/include/CGAL/Hilbert_policy_tags.h \
+ /usr/local/include/CGAL/Hilbert_sort_2.h \
+ /usr/local/include/CGAL/Hilbert_sort_median_2.h \
+ /usr/local/include/CGAL/Hilbert_sort_base.h \
+ /usr/local/include/CGAL/Hilbert_sort_middle_2.h \
+ /usr/local/include/CGAL/Hilbert_sort_middle_base.h \
+ /usr/local/include/CGAL/Hilbert_sort_3.h \
+ /usr/local/include/CGAL/Hilbert_sort_median_3.h \
+ /usr/local/include/CGAL/Hilbert_sort_middle_3.h \
+ /usr/local/include/CGAL/Hilbert_sort_d.h \
+ /usr/local/include/CGAL/Hilbert_sort_median_d.h \
+ /usr/local/include/CGAL/Hilbert_sort_middle_d.h \
+ /usr/local/include/CGAL/Multiscale_sort.h \
+ /usr/local/include/CGAL/Spatial_sort_traits_adapter_3.h \
+ /usr/local/include/CGAL/Triangulation_segment_traverser_3.h \
+ /usr/local/include/CGAL/Triangulation_3/internal/Triangulation_segment_traverser_3_impl.h \
+ /usr/local/include/CGAL/Iterator_project.h \
+ /usr/local/include/CGAL/Spatial_lock_grid_3.h \
  /usr/include/boost/property_map/function_property_map.hpp \
  /usr/include/boost/unordered_map.hpp \
  /usr/include/boost/unordered/unordered_map.hpp \
  /usr/include/boost/unordered/detail/map.hpp \
  /usr/include/boost/unordered/unordered_map_fwd.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/STL_Extension/internal/info_check.h \
+ /usr/local/include/CGAL/STL_Extension/internal/info_check.h \
  /usr/include/boost/iterator/zip_iterator.hpp \
  /usr/include/boost/iterator/minimum_category.hpp \
  /usr/include/boost/fusion/adapted/boost_tuple.hpp \
@@ -2495,59 +2448,58 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/fusion/sequence/comparison/detail/equal_to.hpp \
  /usr/include/boost/fusion/support/as_const.hpp \
  /usr/include/boost/fusion/sequence/comparison/enable_comparison.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Location_policy.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Complexity_tags.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_hierarchy_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_hierarchy_vertex_base_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_vertex_base_with_info_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/centroid.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_vertex_base_with_info_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Triangulation_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_vertex_base_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_ds_vertex_base_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/TDS_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Dummy_tds_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_face_base_with_info_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_face_base_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_ds_face_base_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_utils_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Constrained_Delaunay_triangulation_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Constrained_triangulation_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_data_structure_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_ds_iterators_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_ds_circulators_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_2/internal/Triangulation_line_face_circulator_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Spatial_sort_traits_adapter_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Constrained_triangulation_face_base_2.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Exact_rational.h \
+ /usr/local/include/CGAL/Location_policy.h \
+ /usr/local/include/CGAL/Complexity_tags.h \
+ /usr/local/include/CGAL/Triangulation_3/internal/Delaunay_triangulation_hierarchy_3.h \
+ /usr/local/include/CGAL/Triangulation_hierarchy_3.h \
+ /usr/local/include/CGAL/STL_Extension/internal/Has_nested_type_Bare_point.h \
+ /usr/local/include/CGAL/Triangulation_hierarchy_vertex_base_3.h \
+ /usr/local/include/CGAL/Triangulation_vertex_base_with_info_3.h \
+ /usr/local/include/CGAL/centroid.h \
+ /usr/local/include/CGAL/Triangulation_vertex_base_with_info_2.h \
+ /usr/local/include/CGAL/license/Triangulation_2.h \
+ /usr/local/include/CGAL/Triangulation_vertex_base_2.h \
+ /usr/local/include/CGAL/Triangulation_ds_vertex_base_2.h \
+ /usr/local/include/CGAL/license/TDS_2.h \
+ /usr/local/include/CGAL/Dummy_tds_2.h \
+ /usr/local/include/CGAL/Triangulation_face_base_with_info_2.h \
+ /usr/local/include/CGAL/Triangulation_face_base_2.h \
+ /usr/local/include/CGAL/Triangulation_ds_face_base_2.h \
+ /usr/local/include/CGAL/Triangulation_utils_2.h \
+ /usr/local/include/CGAL/Constrained_Delaunay_triangulation_2.h \
+ /usr/local/include/CGAL/Constrained_triangulation_2.h \
+ /usr/local/include/CGAL/Triangulation_2.h \
+ /usr/local/include/CGAL/Triangulation_data_structure_2.h \
+ /usr/local/include/CGAL/Triangulation_ds_iterators_2.h \
+ /usr/local/include/CGAL/Triangulation_ds_circulators_2.h \
+ /usr/local/include/CGAL/Triangulation_2/internal/Triangulation_line_face_circulator_2.h \
+ /usr/local/include/CGAL/Spatial_sort_traits_adapter_2.h \
+ /usr/local/include/CGAL/Constrained_triangulation_face_base_2.h \
+ /usr/local/include/CGAL/Exact_rational.h \
  /usr/include/boost/iterator/filter_iterator.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Triangulation_2/insert_constraints.h \
+ /usr/local/include/CGAL/Triangulation_2/insert_constraints.h \
  /usr/include/boost/container/flat_set.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Projection_traits_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel_23/internal/Filtered_projection_traits_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Kernel_23/internal/Projection_traits_base_3.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Profile_timer.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Timer.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Timer_impl.h \
+ /usr/local/include/CGAL/Projection_traits_3.h \
+ /usr/local/include/CGAL/Kernel_23/internal/Filtered_projection_traits_3.h \
+ /usr/local/include/CGAL/Kernel_23/internal/Projection_traits_base_3.h \
+ /usr/local/include/CGAL/Profile_timer.h /usr/local/include/CGAL/Timer.h \
+ /usr/local/include/CGAL/Timer_impl.h \
  /usr/include/x86_64-linux-gnu/sys/resource.h \
  /usr/include/x86_64-linux-gnu/bits/resource.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Filtered_predicate_with_state.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_2_algorithms.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/refine.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/refine_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/repair_degeneracies.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/geometric_repair.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/shape_predicates.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/measure.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/measure.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/border.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/license/Polygon_mesh_processing/core.h \
+ /usr/local/include/CGAL/Filtered_predicate_with_state.h \
+ /usr/local/include/CGAL/Polygon_2_algorithms.h \
+ /usr/local/include/CGAL/Polygon_2/Polygon_2_algorithms_impl.h \
+ /usr/local/include/CGAL/Polygon_2/Polygon_2_simplicity.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/refine.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/internal/refine_impl.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/repair_degeneracies.h \
+ /usr/local/include/CGAL/license/Polygon_mesh_processing/geometric_repair.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/shape_predicates.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/measure.h \
+ /usr/local/include/CGAL/license/Polygon_mesh_processing/measure.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/border.h \
+ /usr/local/include/CGAL/license/Polygon_mesh_processing/core.h \
  /usr/include/boost/dynamic_bitset.hpp \
  /usr/include/boost/dynamic_bitset/dynamic_bitset.hpp \
  /usr/include/boost/dynamic_bitset/config.hpp \
@@ -2555,13 +2507,13 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/dynamic_bitset/detail/dynamic_bitset.hpp \
  /usr/include/boost/dynamic_bitset/detail/lowest_bit.hpp \
  /usr/include/boost/functional/hash/hash.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/selection.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/Dual.h \
+ /usr/local/include/CGAL/boost/graph/selection.h \
+ /usr/local/include/CGAL/boost/graph/Dual.h \
  /usr/include/boost/graph/filtered_graph.hpp \
  /usr/include/boost/graph/adjacency_iterator.hpp \
  /usr/include/boost/graph/detail/set_adaptor.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/boost/graph/alpha_expansion_graphcut.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/IO/trace.h \
+ /usr/local/include/CGAL/boost/graph/alpha_expansion_graphcut.h \
+ /usr/local/include/CGAL/IO/trace.h \
  /usr/include/boost/graph/adjacency_list.hpp \
  /usr/include/boost/scoped_ptr.hpp \
  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
@@ -2812,11 +2764,11 @@ CMakeFiles/vert_test.dir/shift.cpp.o: \
  /usr/include/boost/smart_ptr/shared_array.hpp \
  /usr/include/boost/property_map/shared_array_property_map.hpp \
  /usr/include/boost/graph/lookup_edge.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Union_find.h \
+ /usr/local/include/CGAL/Union_find.h \
  /usr/include/boost/algorithm/minmax_element.hpp \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/fair.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Polygon_mesh_processing/internal/fair_impl.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Weights/cotangent_weights.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Weights/utils.h \
- /home/toler/projects/CGAL_curvature/CGAL-5.6/include/CGAL/Weights/internal/utils.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/fair.h \
+ /usr/local/include/CGAL/Polygon_mesh_processing/internal/fair_impl.h \
+ /usr/local/include/CGAL/Weights/cotangent_weights.h \
+ /usr/local/include/CGAL/Weights/utils.h \
+ /usr/local/include/CGAL/Weights/internal/utils.h \
  /home/toler/projects/CGAL_curvature/test/component_tests/shift/source/utils.h

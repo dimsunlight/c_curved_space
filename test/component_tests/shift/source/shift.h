@@ -49,6 +49,9 @@ Face_location rotateIntoNewFace(Triangle_mesh mesh, Face_index sface, Face_index
 
 Face_index selectFaceFromVertex(const Vertex_index &intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
                const Triangle_mesh &mesh); 
+void throughVertexByAngle(const Vertex_index intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
+               const Triangle_mesh &mesh);
+
 
 Face_index getTargetFace(std::vector<Vertex_index> intersected, const Vector_3 &toIntersection, const Face_index &source_face, const Triangle_mesh &mesh);
 

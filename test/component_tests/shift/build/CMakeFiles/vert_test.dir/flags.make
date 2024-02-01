@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1
 
-CXX_INCLUDES = -isystem /home/toler/projects/CGAL_curvature/CGAL-5.6/include
+CXX_INCLUDES = 
 
 CXX_FLAGS = -O3 -DNDEBUG -frounding-math -pthread
 

@@ -77,8 +77,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named angle_test
+
+# Build rule for target.
+angle_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 angle_test
+.PHONY : angle_test
+
+# fast build rule for target.
+angle_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/build
+.PHONY : angle_test/fast
+
+#=============================================================================
 # Target rules for targets named vert_test
 
 # Build rule for target.
@@ -142,11 +155,36 @@ shift_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/build
 .PHONY : shift_test/fast
 
+angle_test.o: angle_test.cpp.o
+.PHONY : angle_test.o
+
+# target to build an object file
+angle_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/angle_test.cpp.o
+.PHONY : angle_test.cpp.o
+
+angle_test.i: angle_test.cpp.i
+.PHONY : angle_test.i
+
+# target to preprocess a source file
+angle_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/angle_test.cpp.i
+.PHONY : angle_test.cpp.i
+
+angle_test.s: angle_test.cpp.s
+.PHONY : angle_test.s
+
+# target to generate assembly for a file
+angle_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/angle_test.cpp.s
+.PHONY : angle_test.cpp.s
+
 shift.o: shift.cpp.o
 .PHONY : shift.o
 
 # target to build an object file
 shift.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/shift.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/shift.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/shift.cpp.o
 .PHONY : shift.cpp.o
@@ -156,6 +194,7 @@ shift.i: shift.cpp.i
 
 # target to preprocess a source file
 shift.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/shift.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/shift.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/shift.cpp.i
 .PHONY : shift.cpp.i
@@ -165,6 +204,7 @@ shift.s: shift.cpp.s
 
 # target to generate assembly for a file
 shift.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/shift.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/shift.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/shift.cpp.s
 .PHONY : shift.cpp.s
@@ -198,6 +238,7 @@ utils.o: utils.cpp.o
 
 # target to build an object file
 utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/utils.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/utils.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.o
 .PHONY : utils.cpp.o
@@ -207,6 +248,7 @@ utils.i: utils.cpp.i
 
 # target to preprocess a source file
 utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/utils.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/utils.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.i
 .PHONY : utils.cpp.i
@@ -216,6 +258,7 @@ utils.s: utils.cpp.s
 
 # target to generate assembly for a file
 utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/angle_test.dir/build.make CMakeFiles/angle_test.dir/utils.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vert_test.dir/build.make CMakeFiles/vert_test.dir/utils.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shift_test.dir/build.make CMakeFiles/shift_test.dir/utils.cpp.s
 .PHONY : utils.cpp.s
@@ -252,8 +295,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... angle_test"
 	@echo "... shift_test"
 	@echo "... vert_test"
+	@echo "... angle_test.o"
+	@echo "... angle_test.i"
+	@echo "... angle_test.s"
 	@echo "... shift.o"
 	@echo "... shift.i"
 	@echo "... shift.s"
