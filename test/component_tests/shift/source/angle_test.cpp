@@ -105,7 +105,6 @@ int main(int argc, char* argv[]) {
  Point_3 vPoint = tmesh.point(intersectedVertex); 
 
  std::cout << "Vertex location: " << vPoint << std::endl;
- std::cout << "vertex id: " << intersectedVertex << std::endl;
  Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); 
  std::vector<Face_index> facesToPrint;
  facesToPrint.reserve(6);
@@ -123,7 +122,6 @@ int main(int argc, char* argv[]) {
  to_v = Vector_3(inFace, vPoint); //placeholder to check basic functionality 
  Face_index sface = facesToPrint[0]; 
  
- std::cout << "later, vertex id: " << intersectedVertex << std::endl;
  throughVertexByAngle(intersectedVertex, to_v, sface, tmesh);
  
  return 0;
