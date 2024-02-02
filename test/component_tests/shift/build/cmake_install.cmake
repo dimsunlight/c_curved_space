@@ -1,4 +1,4 @@
-# Install script for directory: /home/toler/projects/CGAL_curvature/test/component_tests/shift/source
+# Install script for directory: /home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/toler/projects/CGAL_curvature/test/component_tests/shift/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/twebb8/projects/cgal/c_curved_space/test/component_tests/shift/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

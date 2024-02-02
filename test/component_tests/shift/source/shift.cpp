@@ -428,7 +428,7 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
 
     Point_3 prospPoint = rotateAboutAxis(rotationTarget, rotAxis, angleDifference);
     Vector_3 prospHeading = normalizer(Vector_3(vi_r3,prospPoint));
-    std::cout << "prospective heading is " << prospHeading;
+    std::cout << "prospective heading is " << prospHeading << std::endl;
     std::cout << "angle between prospective heading and first edge: " << angleBetween(edgeVectors[counter-1],prospHeading) << std::endl;
     std::cout << "and second edge: " << angleBetween(prospHeading,edgeVectors[counter]) << std::endl;
     // now -- need to select target face as face subtended by e1 and e2
@@ -473,8 +473,9 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
 	    break;
 	    }
     } 
-    std::cout << "for source face " << source_face << "found target face " << targetFace << std::endl;
+    std::cout << "for source face " << source_face << " found target face " << targetFace << std::endl; 
     std::cout << "final heading " << prospHeading << std::endl;
+    if (source_face == targetFace) throw std::exception(); 
     return std::make_pair(targetFace,prospHeading); 
 }
 

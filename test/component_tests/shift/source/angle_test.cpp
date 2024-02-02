@@ -98,31 +98,28 @@ int main(int argc, char* argv[]) {
  Vector_3 to_v;
  std::vector<Face_index> v_faces; 
  v_faces.reserve(6); 
- Face_index found_target; 
- Point_3 shift_output;
+ for (Vertex_index intersectedVertex: vs) {
+     printf("\n");
+     Point_3 vPoint = tmesh.point(intersectedVertex); 
 
- Vertex_index intersectedVertex = vs[414];
- Point_3 vPoint = tmesh.point(intersectedVertex); 
+     std::cout << "Vertex location: " << vPoint << std::endl;
+     Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); 
+     v_faces.clear();
+     do {
+        v_faces.push_back(*fbegin++);
+     } while(fbegin != done);
+ 
+     std::vector<Point_3> vertPos; 
+     vertPos.reserve(3); 
+ 
+     std::array<double,3> arbibary = {.3,.4,.3}; 
 
- std::cout << "Vertex location: " << vPoint << std::endl;
- Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); 
- std::vector<Face_index> facesToPrint;
- facesToPrint.reserve(6);
- do {
-    facesToPrint.push_back(*fbegin++);
- } while(fbegin != done);
+     Face_index sface = v_faces[0]; 
+     Face_location testPoint = std::make_pair(sface, arbibary); 
+     Point_3 inFace = PMP::construct_point(testPoint, tmesh); 
+     to_v = Vector_3(inFace, vPoint); //placeholder to check basic functionality 
  
- std::vector<Point_3> vertPos; 
- vertPos.reserve(3); 
- 
- std::array<double,3> arbibary = {.3,.4,.3}; 
-
- Face_location testPoint = std::make_pair(facesToPrint[0], arbibary); 
- Point_3 inFace = PMP::construct_point(testPoint, tmesh); 
- to_v = Vector_3(inFace, vPoint); //placeholder to check basic functionality 
- Face_index sface = facesToPrint[0]; 
- 
- throughVertexByAngle(intersectedVertex, to_v, sface, tmesh);
- 
+     throughVertexByAngle(intersectedVertex, to_v, sface, tmesh);
+ }
  return 0;
 }
