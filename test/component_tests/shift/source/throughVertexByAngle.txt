@@ -1,0 +1,158 @@
+std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
+               const Triangle_mesh &mesh) {
+    
+    std::cout << "vertices around vertex " << intersectedVertex << std::endl;
+    
+    Point_3 vi_r3 = mesh.point(intersectedVertex);
+   
+    //determine what vertex should be the starting vertex for the angle measurement as 
+    //the next vertex from the intersected one (guaranteeing it's in the original face)
+    Vertex_index startingVertex;
+    
+    //if we know what the source face is, this guarantees the first edge
+    //we consider will be part of the source face. 
+    Halfedge_index hf = mesh.halfedge(source_face);
+    for(Halfedge_index hi : halfedges_around_face(hf, mesh))
+    {
+      if(source(hi, mesh) == intersectedVertex) startingVertex = target(hi,mesh);
+    }
+
+    std::vector<Vertex_index> neighborIndices; 
+    neighborIndices.reserve(8); 
+
+    Vertex_circulator vbegin(mesh.halfedge(intersectedVertex),mesh), done(vbegin);
+    do {
+      neighborIndices.push_back(*vbegin++);
+    } while(vbegin != done);
+
+    // get vertices as r3 positions starting from intended starting vertex
+    std::vector<Point_3> neighborVertices;  
+    std::vector<Vertex_index> neighborIndicesCopy; //going to sort this one by starting point first 
+    neighborVertices.reserve(neighborIndices.size());
+    neighborIndicesCopy.reserve(neighborIndices.size());
+    Vertex_index currentVert;
+    bool started = false;
+    bool atStartPoint = false; 
+    bool unfinished = true;
+    int ii = -1;  
+    while (unfinished) {
+      //ii used to iterate through list   
+      ii = (ii+1)%neighborIndices.size(); 
+      currentVert = neighborIndices[ii];
+      atStartPoint = (currentVert == startingVertex);
+      if (started && atStartPoint) unfinished=false; 
+      else {
+        if (atStartPoint) started=true;
+        if (started) {
+		neighborIndicesCopy.push_back(currentVert); 
+		neighborVertices.push_back(mesh.point(currentVert));
+        };
+      };
+    }
+    // neighborIndicesCopy stores the vertices in edge traversal order --  
+    // coincidentally, therefore, it also stores the ``edges'' as vertex index
+    // pairs with the intersected vertex
+
+    // write std::vector of vector objects pointing from the vertex to 
+    // each of its neighbors in sequence
+    std::vector<Vector_3> edgeVectors;   
+    int numNeighbors = neighborVertices.size(); 
+    edgeVectors.reserve(numNeighbors); 
+    
+    for (int i; i < numNeighbors; i++) { 	
+	Point_3 v = neighborVertices[i];
+        edgeVectors.push_back(normalizer(Vector_3(vi_r3, v)));
+    }
+
+    double totalAngle = 0;
+    for (int i =0; i < numNeighbors; i++)
+        { 
+        Vector_3 v1 = edgeVectors[i];
+        Vector_3 v2 = edgeVectors[(i+1)%numNeighbors];
+        totalAngle += angleBetween(v1,v2);
+	} 
+    std::cout << "total angle " << totalAngle << std::endl;
+
+    //now -- pick the vector in a target face that corresponds to having 
+    //exactly half of the total angle of the vertex between it and the 
+    //vector from the original source to the vertex itself. 
+    double angleToTravel = totalAngle/2.0;
+    Vector_3 queryHeading = normalizer(-toIntersection); // negative so it matches heading of edge vectors
+    double firstAngle = angleBetween(queryHeading,edgeVectors[0]); 
+    double angleTraveled = firstAngle;
+    int counter = 0; 
+    std::cout << "query heading: " << queryHeading << std::endl;
+    std::cout << "first edge: " << edgeVectors[0] << std::endl;
+    std::cout << "first angle to travel is: " << firstAngle << std::endl; 
+    // below should always terminate well  
+    while (angleTraveled < angleToTravel) { 
+	Vector_3 e1 = edgeVectors[counter]; 
+	Vector_3 e2 = edgeVectors[(counter+1)%numNeighbors]; //leaving this here for instances where one face is gigantic and the others are miniscule
+        angleTraveled += angleBetween(e1, e2);
+        counter ++; // counter will always finish on the e2 index
+        if (counter >= numNeighbors) { 
+            printf("did not find an angular halfway when picking heading from a vertex, debug!");
+	    break;  
+	}	
+    }
+    double angleDifference = angleToTravel - angleTraveled; 
+    std::cout << "after angle traversal, angular distance remaining is " << angleDifference << " and counter is at " << counter << "." << std::endl;
+    std::cout << "angle between last two edges was " << angleBetween(edgeVectors[counter-1],edgeVectors[counter]) << std::endl;
+    Vector_3 rotAxisVec = normalizer(CGAL::cross_product(edgeVectors[counter-1], edgeVectors[counter]));
+    std::vector<Point_3> rotAxis; 
+    rotAxis.reserve(2); 
+    rotAxis.push_back(vi_r3);
+    rotAxis.push_back(vi_r3 + rotAxisVec); 
+    Point_3 rotationTarget = vi_r3 + edgeVectors[counter];  
+
+    Point_3 prospPoint = rotateAboutAxis(rotationTarget, rotAxis, angleDifference);
+    Vector_3 prospHeading = normalizer(Vector_3(vi_r3,prospPoint));
+    std::cout << "prospective heading is " << prospHeading;
+    std::cout << "angle between prospective heading and first edge: " << angleBetween(edgeVectors[counter-1],prospHeading) << std::endl;
+    std::cout << "and second edge: " << angleBetween(prospHeading,edgeVectors[counter]) << std::endl;
+    // now -- need to select target face as face subtended by e1 and e2
+    std::vector<Face_index> candidateFaces;
+    candidateFaces.reserve(8); // should be six, but managing pathological cases
+    Face_circulator fbegin(mesh.halfedge(intersectedVertex),mesh), fdone(fbegin); 
+    Face_index cand;
+    do {
+      cand = *fbegin++; //the next face to add is the face pointed to by the next
+                        //iteration of the iterator
+      if (cand == source_face) continue; //don't need to consider the face we're coming from
+      else {
+        candidateFaces.push_back(cand);
+      }
+    } while(fbegin != fdone);    
+    
+    Face_index targetFace = source_face;
+    std::set<Vertex_index> targetFaceVerts;  
+    targetFaceVerts.insert(intersectedVertex);
+    targetFaceVerts.insert(neighborIndicesCopy[counter-1]);
+    targetFaceVerts.insert(neighborIndicesCopy[counter]);  
+    std::cout << "Target face verts size: " << targetFaceVerts.size() << std::endl;
+
+    for (Face_index face: candidateFaces) { 
+        std::vector<Vertex_index> currentFaceVs = getVertexIndices(mesh, face);
+        std::set<Vertex_index> currentVsSet; 
+	currentVsSet.insert(currentFaceVs[0]);
+	currentVsSet.insert(currentFaceVs[1]); 
+	currentVsSet.insert(currentFaceVs[2]);
+        bool allThere = true;
+        for (Vertex_index vert: targetFaceVerts) { 
+            auto it = currentVsSet.find(vert);
+	    if (it == currentVsSet.end()) 
+	        {  
+		allThere = false;
+		break;
+		};
+            };
+        if (allThere == true)
+	    {  
+	    targetFace=face;
+	    break;
+	    }
+    } 
+    std::cout << "for source face " << source_face << "found target face " << targetFace << std::endl;
+    std::cout << "final heading " << prospHeading << std::endl;
+    return std::make_pair(targetFace,prospHeading); 
+}

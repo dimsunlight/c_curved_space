@@ -476,7 +476,6 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
     std::cout << "for source face " << source_face << "found target face " << targetFace << std::endl;
     std::cout << "final heading " << prospHeading << std::endl;
     return std::make_pair(targetFace,prospHeading); 
-
 }
 
 

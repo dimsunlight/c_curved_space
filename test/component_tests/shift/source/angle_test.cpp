@@ -89,91 +89,24 @@ int main(int argc, char* argv[]) {
    std::cerr << "Invalid input file." << std::endl;
    return EXIT_FAILURE;
  }
+ 
  std::vector<Vertex_index> vs; 
  for(Vertex_index vd: tmesh.vertices()){
    vs.push_back(vd);
  } 
- //now -- build out mesh information necessary to create a test case. 
- //	1) generate a random bary  point on one of the faces adjoining vertex v.  
- //	2) get the vector from the random point to the vertex location. 
- //	3) test throughvertex from the barypoint to the vertex exactly. 
- //	for each vertex.
- Point_3 vpoint;
- double b1; 
- double b2; 
- double b3; 
-
- Point_3 rand_source;
- Point_3 rand_end; 
 
  Vector_3 to_v;
- MTgenerator gen = make_generator(1997); 
  std::vector<Face_index> v_faces; 
  v_faces.reserve(6); 
  Face_index found_target; 
- std::array<double,3> rand_weights;
  Point_3 shift_output;
- double to_dist; 
- printf("starting vertex test loop...\n"); 
- for (Vertex_index v: vs) { 
-   vpoint = tmesh.point(v); 
-   Face_circulator fbegin(tmesh.halfedge(v),tmesh), done(fbegin); 
-   v_faces.clear(); 
-   do {
-     v_faces.push_back(*fbegin++);
-   } while(fbegin != done);
-   //defining weights outside of loop/array definition explicitly for later
-   b1 = rand_weight(gen); 
-   b2 = rand_weight(gen); 
-   b3 = rand_weight(gen); 
-   rand_weights[0] = b1; 
-   rand_weights[1] = b2; 
-   rand_weights[2] = b3; 
-   Face_location rand_loc = std::make_pair(v_faces[0], rand_weights);
-   rand_source = PMP::construct_point(rand_loc, tmesh); 
-   to_v = Vector_3(rand_source, vpoint); 
-   rand_end = rand_source + 2*to_v;   
- 
-   double bigShiftMod = 15; // make this number >> 1 to test against very large shifts  
 
-   std::cout << "selectFaceFromVertex for vertex " << v << "..." << std::endl; 
-   found_target = selectFaceFromVertex(v, to_v, v_faces[0], tmesh).first;
-   std::cout << "For vertex " << v << ":" << std::endl;
-   std::cout << "Found target face at: " << found_target << std::endl;
-   std::cout << "---STARTING SHIFT---" << std::endl; 
-   shift_output = shift(tmesh, rand_source, bigShiftMod*to_v);   
-   std::cout << "Shifted to: " << shift_output << std::endl;
-   std::cout << "\n"; 
+ Vertex_index intersectedVertex = vs[414];
+ Point_3 vPoint = tmesh.point(intersectedVertex); 
 
- 
-   if (v_faces[0] == found_target) {
-     //need to see vertex positions for the faces and whatnot 
-     std::cout << "Faces: " << std::endl;
-     for (Face_index fIndex: v_faces) {
-       std::vector<Point_3> vertPos = getVertexPositions(tmesh, fIndex);
-       std::cout << fIndex << ": "; 
-       for (Point_3 vert: vertPos) {
-         std::cout << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}, ";      
-       }
-       std::cout << std::endl;
-     }
-     std::cout << "vertex point " << vpoint << std::endl;
-     std::cout << "source point " << rand_source << std::endl;   
-     std::cout << "Source face: " << v_faces[0] << std::endl; 
-     break; 
-   }
-   if (v == vs[414]) break; 
- }
-
- return 0;
-
-}
-/*
- Vertex_index intersectedVertex = vs[40];
- 
- std::cout << "Vertex location: " << tmesh.point(intersectedVertex) << std::endl;
-
- Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); //fbegin? (lol)
+ std::cout << "Vertex location: " << vPoint << std::endl;
+ std::cout << "vertex id: " << intersectedVertex << std::endl;
+ Face_circulator fbegin(tmesh.halfedge(intersectedVertex),tmesh), done(fbegin); 
  std::vector<Face_index> facesToPrint;
  facesToPrint.reserve(6);
  do {
@@ -183,28 +116,15 @@ int main(int argc, char* argv[]) {
  std::vector<Point_3> vertPos; 
  vertPos.reserve(3); 
  
- std::cout << "Faces: " << std::endl;
- for (Face_index fIndex: facesToPrint) {
-   vertPos = getVertexPositions(tmesh, fIndex);
-   for (Point_3 vert: vertPos) {
-     std::cout << "{" << vert.x() << ", " << vert.y() << ", " << vert.z() << "}, ";      
-   }
-   std::cout << std::endl;
- }
+ std::array<double,3> arbibary = {.3,.4,.3}; 
 
- // having gone into mathematica and figured out a point within a face (src_point),
- // then moved it through the vertex (mid_point), to end up at a target (end_point) 
- // for rotation... 
- Point_3 src_point = Point_3(-2.45268, -0.523961, 0.853549);
- Point_3 mid_point = tmesh.point(intersectedVertex);
- Point_3 end_point = Point_3(-2.30864, -0.461563, 0.784361);
+ Face_location testPoint = std::make_pair(facesToPrint[0], arbibary); 
+ Point_3 inFace = PMP::construct_point(testPoint, tmesh); 
+ to_v = Vector_3(inFace, vPoint); //placeholder to check basic functionality 
+ Face_index sface = facesToPrint[0]; 
  
- printf("\n");
- std::cout << "Correct faces are: " << facesToPrint[1] << " and " << facesToPrint[4] << std::endl;
- std::cout << "(second and fifth vertex trios from above)" << std::endl;
+ std::cout << "later, vertex id: " << intersectedVertex << std::endl;
+ throughVertexByAngle(intersectedVertex, to_v, sface, tmesh);
  
- Face_index newTarget = selectFaceFromVertex(intersectedVertex, Vector_3(mid_point,end_point), facesToPrint[1], tmesh); 
-
- std::cout << "Routine found the correct face to be: " << newTarget << std::endl;
- */
-
+ return 0;
+}
