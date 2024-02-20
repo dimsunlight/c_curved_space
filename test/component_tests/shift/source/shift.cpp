@@ -254,6 +254,8 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
   Face_index closestFace = correctFace;
   Barycentric_coordinates storeCoords;
 
+  Vector_3 bump; 
+  
   // we could while loop instead of using break;, but for loop guaranteed terminates
   for (Face_index candidate_face: candidateFaces) {
     std::vector<Vertex_index> faceVertices = getVertexIndices(mesh, candidate_face);
@@ -282,6 +284,7 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
      
     if (!outOfTriangle) {
       correctFace = candidate_face;
+      bump = normalizer(Vector_3(source_r3, cand_r3)); 
       break;
     }
 
@@ -291,13 +294,13 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
       Point_3 intersection_point = ifIntersect.first; 
       if (intersection_point != Point_3(1000,1000,1000)) { 
 	correctFace = candidate_face;
+        bump = normalizer(Vector_3(source_r3, cand_r3)); 
 	break; 
       }
     } 
   }
   
   // we should always find the right face here, given that we're staying on the mesh.
-  Vector_3 bump = Vector_3(0,0,0); 
   if (correctFace == source_face) {
     correctFace = closestFace; 
     std::cout << "No perfectly correct face found, using closest face instead. ";
@@ -311,10 +314,10 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
     Point_3 p2 = PMP::construct_point(clampedFLoc, mesh); 
     Vector_3 v1 = normalizer(Vector_3(source_r3, p1));
     Vector_3 v2 = normalizer(Vector_3(source_r3, p2)); 
-    bump = v2-v1; 
+    bump = v2; // this should be v2-v1, but for now, want to compare with by angle approach 
   }	
 
-  std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
+  //std::cout << "Using throughvertex routine, found target face: " << correctFace << std::endl;
   return std::make_pair(correctFace,bump);
 }
 
@@ -322,7 +325,7 @@ std::pair<Face_index,Vector_3> selectFaceFromVertex(const Vertex_index &intersec
 std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersectedVertex, const Vector_3 &toIntersection, const Face_index &source_face,
                const Triangle_mesh &mesh) {
     
-    std::cout << "vertices around vertex " << intersectedVertex << std::endl;
+    //std::cout << "vertices around vertex " << intersectedVertex << std::endl;
     
     Point_3 vi_r3 = mesh.point(intersectedVertex);
    
@@ -392,7 +395,7 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
         Vector_3 v2 = edgeVectors[(i+1)%numNeighbors];
         totalAngle += angleBetween(v1,v2);
 	} 
-    std::cout << "total angle " << totalAngle << std::endl;
+    //std::cout << "total angle " << totalAngle << std::endl;
 
     //now -- pick the vector in a target face that corresponds to having 
     //exactly half of the total angle of the vertex between it and the 
@@ -402,9 +405,9 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
     double firstAngle = angleBetween(queryHeading,edgeVectors[0]); 
     double angleTraveled = firstAngle;
     int counter = 0; 
-    std::cout << "query heading: " << queryHeading << std::endl;
-    std::cout << "first edge: " << edgeVectors[0] << std::endl;
-    std::cout << "first angle to travel is: " << firstAngle << std::endl; 
+    //std::cout << "query heading: " << queryHeading << std::endl;
+    //std::cout << "first edge: " << edgeVectors[0] << std::endl;
+    //std::cout << "first angle to travel is: " << firstAngle << std::endl; 
     // below should always terminate well  
     while (angleTraveled < angleToTravel) { 
 	Vector_3 e1 = edgeVectors[counter]; 
@@ -417,8 +420,8 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
 	}	
     }
     double angleDifference = angleToTravel - angleTraveled; 
-    std::cout << "after angle traversal, angular distance remaining is " << angleDifference << " and counter is at " << counter << "." << std::endl;
-    std::cout << "angle between last two edges was " << angleBetween(edgeVectors[counter-1],edgeVectors[counter]) << std::endl;
+    //std::cout << "after angle traversal, angular distance remaining is " << angleDifference << " and counter is at " << counter << "." << std::endl;
+    //std::cout << "angle between last two edges was " << angleBetween(edgeVectors[counter-1],edgeVectors[counter]) << std::endl;
     Vector_3 rotAxisVec = normalizer(CGAL::cross_product(edgeVectors[counter-1], edgeVectors[counter]));
     std::vector<Point_3> rotAxis; 
     rotAxis.reserve(2); 
@@ -428,9 +431,9 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
 
     Point_3 prospPoint = rotateAboutAxis(rotationTarget, rotAxis, angleDifference);
     Vector_3 prospHeading = normalizer(Vector_3(vi_r3,prospPoint));
-    std::cout << "prospective heading is " << prospHeading << std::endl;
-    std::cout << "angle between prospective heading and first edge: " << angleBetween(edgeVectors[counter-1],prospHeading) << std::endl;
-    std::cout << "and second edge: " << angleBetween(prospHeading,edgeVectors[counter]) << std::endl;
+    //std::cout << "prospective heading is " << prospHeading << std::endl;
+    //std::cout << "angle between prospective heading and first edge: " << angleBetween(edgeVectors[counter-1],prospHeading) << std::endl;
+    //std::cout << "and second edge: " << angleBetween(prospHeading,edgeVectors[counter]) << std::endl;
     // now -- need to select target face as face subtended by e1 and e2
     std::vector<Face_index> candidateFaces;
     candidateFaces.reserve(8); // should be six, but managing pathological cases
@@ -450,7 +453,7 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
     targetFaceVerts.insert(intersectedVertex);
     targetFaceVerts.insert(neighborIndicesCopy[counter-1]);
     targetFaceVerts.insert(neighborIndicesCopy[counter]);  
-    std::cout << "Target face verts size: " << targetFaceVerts.size() << std::endl;
+    //std::cout << "Target face verts size: " << targetFaceVerts.size() << std::endl;
 
     for (Face_index face: candidateFaces) { 
         std::vector<Vertex_index> currentFaceVs = getVertexIndices(mesh, face);
@@ -473,8 +476,8 @@ std::pair<Face_index, Vector_3> throughVertexByAngle(const Vertex_index intersec
 	    break;
 	    }
     } 
-    std::cout << "for source face " << source_face << " found target face " << targetFace << std::endl; 
-    std::cout << "final heading " << prospHeading << std::endl;
+    //std::cout << "for source face " << source_face << " found target face " << targetFace << std::endl; 
+    //std::cout << "final heading " << prospHeading << std::endl;
     if (source_face == targetFace) throw std::exception(); 
     return std::make_pair(targetFace,prospHeading); 
 }

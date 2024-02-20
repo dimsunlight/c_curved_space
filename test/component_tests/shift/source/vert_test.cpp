@@ -110,10 +110,12 @@ int main(int argc, char* argv[]) {
  MTgenerator gen = make_generator(1997); 
  std::vector<Face_index> v_faces; 
  v_faces.reserve(6); 
- Face_index found_target; 
+ Face_index found_target;
+ Vector_3 found_heading;  
  std::array<double,3> rand_weights;
  Point_3 shift_output;
- double to_dist; 
+ double to_dist;
+ std::ofstream ab_agreements("agreements.csv"); 
  printf("starting vertex test loop...\n"); 
  for (Vertex_index v: vs) { 
    vpoint = tmesh.point(v); 
@@ -135,15 +137,29 @@ int main(int argc, char* argv[]) {
    rand_end = rand_source + 2*to_v;   
  
    double bigShiftMod = 15; // make this number >> 1 to test against very large shifts  
-
-   std::cout << "selectFaceFromVertex for vertex " << v << "..." << std::endl; 
-   found_target = selectFaceFromVertex(v, to_v, v_faces[0], tmesh).first;
-   std::cout << "For vertex " << v << ":" << std::endl;
-   std::cout << "Found target face at: " << found_target << std::endl;
-   std::cout << "---STARTING SHIFT---" << std::endl; 
-   shift_output = shift(tmesh, rand_source, bigShiftMod*to_v);   
-   std::cout << "Shifted to: " << shift_output << std::endl;
-   std::cout << "\n"; 
+   //printf("\n");
+   //std::cout << "selectFaceFromVertex for vertex " << v << "..." << std::endl; 
+   std::pair<Face_index, Vector_3> found_t_h = selectFaceFromVertex(v,to_v, v_faces[0], tmesh); 
+   found_target = found_t_h.first;
+   found_heading = found_t_h.second;
+   
+   bool faceAgreement = false;
+   double vectorAgreement;   
+   //std::cout << "for vertex " << v << ":" << std::endl;
+   //std::cout << "w/bump found target face at: " << found_target << std::endl;
+   //std::cout << "w/bump found heading to be: " << found_heading << std::endl;
+   found_t_h = throughVertexByAngle(v, to_v, v_faces[0], tmesh);
+   faceAgreement = (found_target == found_t_h.first); 
+   vectorAgreement = CGAL::scalar_product(found_heading, found_t_h.second); 
+   found_target = found_t_h.first;
+   found_heading = found_t_h.second;
+   //std::cout << "w/angle found target face at: " << found_target << std::endl;
+   //std::cout << "w/angle found heading to be: " << found_heading << std::endl;
+   ab_agreements << found_target << ", " << faceAgreement << ", " << found_heading << ", " << vectorAgreement << "\n"; 
+   //std::cout << "---STARTING SHIFT---" << std::endl; 
+   //shift_output = shift(tmesh, rand_source, bigShiftMod*to_v);   
+   //std::cout << "Shifted to: " << shift_output << std::endl;
+   //std::cout << "\n"; 
 
  
    if (v_faces[0] == found_target) {
@@ -162,7 +178,7 @@ int main(int argc, char* argv[]) {
      std::cout << "Source face: " << v_faces[0] << std::endl; 
      break; 
    }
-   if (v == vs[414]) break; 
+   //if (v == vs[415]) break; 
  }
 
  return 0;
