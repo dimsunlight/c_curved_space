@@ -47,8 +47,17 @@ namespace PMP = CGAL::Polygon_mesh_processing;
 
 FT torus_function(Point_3 p) {
   //eqn: (c-sqrt(x^2+y^2))^2 + z^2 = a^2
-  //for now, defining c and a here so they'll be well-behaved for tests
+  //for now, defining c and a here so they'll be well-behaved for testing
   double c = 3.0;
+  double a = 1.0;
+  const FT x2 = p.x()*p.x(), y2 = p.y()*p.y(), z2 = p.z()*p.z();
+  return (c-sqrt(x2+y2))*(c-sqrt(x2+y2))+z2 - a*a;
+}
+
+FT big_torus_function(Point_3 p) {
+  //eqn: (c-sqrt(x^2+y^2))^2 + z^2 = a^2
+  //for now, defining c and a here so they'll be well-behaved for testing
+  double c = 20.0;
   double a = 1.0;
   const FT x2 = p.x()*p.x(), y2 = p.y()*p.y(), z2 = p.z()*p.z();
   return (c-sqrt(x2+y2))*(c-sqrt(x2+y2))+z2 - a*a;
@@ -127,19 +136,22 @@ int main() {
   Tr tr;            // 3D-Delaunay triangulation
   C2t3 c2t3 (tr);   // 2D-complex in 3D-Delaunay triangulation
   // defining the surface
-  Surface_3 surface(torus_function,             // pointer to function
-                    Sphere_3(CGAL::ORIGIN, 20.)); // bounding sphere
+  Surface_3 surface(big_torus_function,             // pointer to function
+                    Sphere_3(CGAL::ORIGIN, 500.)); // bounding sphere
   // Note that "20." above is the *squared* radius of the bounding sphere!
   // defining meshing criteria
   float abound = 30.;
-  float rbound = 0.30;
+  float rbound = 1.0;
   int fancyrbound = rbound*100;
-  std::string output_file_name = "torusrb" + std::to_string(fancyrbound) + ".off";  
+
+  std::string output_file_name = "big_torusrb" + std::to_string(fancyrbound) + ".off";  
   CGAL::Surface_mesh_default_criteria_3<Tr> criteria(abound,  // angular bound
                                                      rbound,  // radius bound
                                                      0.1); // distance bound
+  std::cout << "Meshing surface" << std::endl;
   // meshing surface
   CGAL::make_surface_mesh(c2t3, surface, criteria, CGAL::Non_manifold_tag());
+  std::cout << "made base mesh" << std::endl;
   Surface_mesh sm;
   CGAL::facets_in_complex_2_to_triangle_mesh(c2t3, sm);
   std::cout << "Writing to output file " << output_file_name << std::endl;

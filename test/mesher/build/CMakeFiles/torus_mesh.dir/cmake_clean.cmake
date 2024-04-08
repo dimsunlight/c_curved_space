@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/torus_mesh.dir/torus_mesh.cpp.o"
+  "CMakeFiles/torus_mesh.dir/torus_mesh.cpp.o.d"
   "torus_mesh"
   "torus_mesh.pdb"
 )

@@ -54,6 +54,11 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //use the barycentric coordinates of a point in order to determine the R3 coordinates of its intersection with an edge of the current face, if such an intersection exists.
   //takes only the r3 positions of the source and prospective target along with the vertices of the current face; intersection test exists independent of the mesh.
   
+  double tol = pow(10,-16); //checking for equivalence to zero within reasonable error
+  //what do we do if we're heading onto another face but we're currently on an edge? We only want to log 
+  //the intersection if we're specifically on the edge that is shared with the new face, 
+  //but we do need to log that intersection automatically... 
+
   std::vector<Point_3> faceVertices;
   for (Vertex_index vi: vertexIndices) faceVertices.push_back(mesh.point(vi));
   //std::cout << "original vertex indices for intersection routine: ";
@@ -77,15 +82,16 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
   //Entries are positive unless we'd never make a barycentric weight 0 by traveling along the displacement; we discard the negative
   //results which correspond to that.
   double toIntersect = intersection_values[0];
-  double tol = pow(10,-8); //checking for equivalence to zero within reasonable error
-
+  
   //the first value is the only one not checked against tol in the main minimum-value-finding routine, so. 
   //we check it now. 
-  if (toIntersect < tol) toIntersect = 2;//just needs to be some # greater than 1. 
+  if (toIntersect < -tol) toIntersect = 2;//just needs to be some # greater than 1. 
 
   //min function with a max of 1. if we don't find something less than 1, no intersection. 
+  printf("printing vals from toIntersect:\n");
   for(double val: intersection_values) {
-    if (val < toIntersect and val > tol) toIntersect = val;
+    std::cout << val << std::endl; 
+    if (val < toIntersect and val > -tol) toIntersect = val;
   }  
   std::vector<Vertex_index> fillerVector = {}; //for null return later
  
@@ -115,12 +121,16 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
     // are zero so we can exclude them later. vertexIndicator is a standard counter so I can use
     // comprehension for the loop -- could have just as easily done a (for(int ii = 0)... ) style 
     // loop instead
+    
+    std::cout << "Barycentric intersection coordinates: "; 
     for (double b: newBaryCoords) {
+      std::cout << b << ", "; 
       if (b < tol) {
         offVertices.push_back(vertexIndicator);
       }
       vertexIndicator+=1;
     }
+    printf("\n"); 
 
     // now -- for the vertices that did *not* have barycentric weights = 0, we need to 
     // fill the intersected vector 
@@ -148,7 +158,6 @@ std::pair<Point_3,std::vector<Vertex_index>> find_intersection(Triangle_mesh mes
 
     Face_location newPosition = std::make_pair(sourceFace,newBaryCoords);
     Point_3 xyz_intersection = PMP::construct_point(newPosition,mesh);
-
     return std::make_pair(xyz_intersection,intersected); // this version returns the xyz intersection point
   }
   //if we don't have an intersection, return filler point; for later, CGAL i think also has special Point_3 null types

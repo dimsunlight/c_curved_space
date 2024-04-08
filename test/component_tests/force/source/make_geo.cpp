@@ -45,9 +45,40 @@ typedef std::mt19937                                                    MTgenera
 typedef std::uniform_real_distribution<float>                           distribution;
 
 int main(int argc, char* argv[]) {
-
+    const std::string read_filename = (argc > 1) ? argv[1] : CGAL::data_file_path("torus_isotropic.off");
+    Triangle_mesh mesh;
+    if(!CGAL::IO::read_polygon_mesh(read_filename,mesh) || !CGAL::is_triangle_mesh(mesh))
+    {
+      std::cerr << "Invalid input file." << std::endl;
+      return EXIT_FAILURE;
+    }
     Point_3 p1 = Point_3(3.52,1.15,0.71);
     Point_3 p2 = Point_3(1.08, 3.33, 0.87);
+   
+    Surface_mesh_shortest_path shortest_paths(mesh);
+    AABB_tree tree;
+    shortest_paths.build_aabb_tree(tree);
+    
+    Face_location loc1 = shortest_paths.locate<AABB_face_graph_traits>(p1,tree);
+    Face_location loc2 = shortest_paths.locate<AABB_face_graph_traits>(p2,tree);
 
+    std::cout << "face locations" << std::endl;
+    std::cout << loc1.first << ", " << loc1.second[0] << " " << loc1.second[1] << " " << loc1.second[2] << std::endl;
+    std::cout << loc2.first << ", " << loc2.second[0] << " " << loc2.second[1] << " " << loc2.second[2] << std::endl;
+
+    shortest_paths.add_source_point(loc1);
+
+    shortest_paths.build_sequence_tree();
+
+    std::vector<Point_3> points;
+    shortest_paths.shortest_path_points_to_source_points(loc2.first, loc2.second, std::back_inserter(points)); 
+
+    std::ofstream ps("example_geodesic.txt");
+    ps << "{";  
+    for (Point_3 p: points) { 
+        ps << "{" << p.x() << ", " << p.y() << ", " << p.z() << "}, "; 
+    }
+    ps << "}"; 
+    return 0; 
 
 }

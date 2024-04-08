@@ -28,14 +28,17 @@ add_executable( force_test force_dist_test.cpp get_force.cpp utils.cpp )
 add_executable( f_v_n_test force_per_target_test.cpp get_force.cpp utils.cpp ) 
 add_executable( seq_test seq_test.cpp get_force.cpp utils.cpp ) 
 add_executable( submesh_test submesh_test.cpp get_force.cpp utils.cpp )
+add_executable( make_geo make_geo.cpp get_force.cpp utils.cpp ) 
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS force_test )
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS f_v_n_test ) 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS seq_test ) 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS submesh_test ) 
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS make_geo )
 
 # Link the executable to CGAL and third-party libraries
 target_link_libraries(force_test PRIVATE CGAL::CGAL )
 target_link_libraries(f_v_n_test PRIVATE CGAL::CGAL ) 
 target_link_libraries(seq_test PRIVATE CGAL::CGAL ) 
-target_link_libraries(submesh_test PRIVATE CGAL::CGAL ) 
+target_link_libraries(submesh_test PRIVATE CGAL::CGAL )
+target_link_libraries(make_geo PRIVATE CGAL::CGAL ) 

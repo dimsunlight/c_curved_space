@@ -34,15 +34,18 @@ endif()
 
 add_executable( shift_test shift_test.cpp shift.cpp utils.cpp )  
 add_executable( vert_test vert_test.cpp shift.cpp utils.cpp ) 
-add_executable( angle_test angle_test.cpp shift.cpp utils.cpp ) 
+add_executable( angle_test angle_test.cpp shift.cpp utils.cpp )
+add_executable( intersect_test intersect_test.cpp shift.cpp utils.cpp ) 
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS shift_test ) 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS vert_test ) 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS angle_test ) 
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS intersect_test ) 
 
 # Link the executable to CGAL and third-party libraries
 
 target_link_libraries(shift_test PRIVATE CGAL::CGAL )
 target_link_libraries(vert_test PRIVATE CGAL::CGAL ) 
 target_link_libraries(angle_test PRIVATE CGAL::CGAL ) 
+target_link_libraries(intersect_test PRIVATE CGAL::CGAL ) 
 
